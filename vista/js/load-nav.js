@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
         try {
             let query = await fetch(url);
             let navHTML = await query.text();
-            if(!query.ok) throw query ;
+            if(!query.ok) throw query;
             elemento.outerHTML = navHTML;
         } catch (err) {
             console.log(err)
