@@ -37,7 +37,7 @@
                     <img src="../imagenes/productos-icono.svg" alt="">
                 </div>
                 <button class="card__button boton">
-                    <a href="">Ingresar</a>
+                    <a href="productos.php">Ingresar</a>
                 </button>
             </section>
             <section class="card">
@@ -46,7 +46,7 @@
                     <img src="../imagenes/inventario-icono.svg" />
                 </div>
                 <button class="card__button boton">
-                    <a href="">Ingresar</a>
+                    <a href="inventario.php">Ingresar</a>
                 </button>
             </section>
             <section class="card">
@@ -55,7 +55,7 @@
                     <img src="../imagenes/ventas-icono.svg" alt="">
                 </div>
                 <button class="card__button boton">
-                    <a href="">Ingresar</a>
+                    <a href="ventas.php">Ingresar</a>
                 </button>
             </section>
             <section class="card">
@@ -64,7 +64,7 @@
                     <img src="../imagenes/proveedores-icono.svg" alt="">
                 </div>
                 <button class="card__button boton">
-                    <a href="">Ingresar</a>
+                    <a href="proveedores.php">Ingresar</a>
                 </button>
             </section>
             <section class="card">
@@ -73,7 +73,7 @@
                     <img src="../imagenes/clientes-icono.svg" alt="">
                 </div>
                 <button class="card__button boton">
-                    <a href="">Ingresar</a>
+                    <a href="clientes.php">Ingresar</a>
                 </button>
             </section>
             <section class="card">
@@ -82,7 +82,7 @@
                     <img src="../imagenes/gestion-usuarios-icono.svg" alt="">
                 </div>
                 <button class="card__button boton">
-                    <a href="">Ingresar</a>
+                    <a href="usuarios.php">Ingresar</a>
                 </button>
             </section>
             <section class="card">
@@ -100,7 +100,7 @@
                     <img src="../imagenes/reportes-icono.svg" alt="">
                 </div>
                 <button class="card__button boton">
-                    <a href="">Ingresar</a>
+                    <a href="reportes.php">Ingresar</a>
                 </button>
             </section>
         </article>
