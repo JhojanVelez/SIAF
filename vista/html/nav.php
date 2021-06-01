@@ -5,13 +5,13 @@
     </div>
     <nav>
         <ul class="nav__ul">
-            <li class="nav__li" ><a class="nav__a" href="">Menu</a></li>
-            <li class="nav__li" ><a class="nav__a" href="">Gestion de productos</a></li>
-            <li class="nav__li" ><a class="nav__a" href="">Inventario</a></li>
-            <li class="nav__li" ><a class="nav__a" href="">Gestion de ventas</a></li>
-            <li class="nav__li" ><a class="nav__a" href="">Nuestros Proveedores</a></li>
-            <li class="nav__li" ><a class="nav__a" href="">Gestion de usuarios</a></li>
-            <li class="nav__li" ><a class="nav__a" href="">Reportes</a></li>
+            <li class="nav__li" ><a class="nav__a" href="menu.php">Menu</a></li>
+            <li class="nav__li" ><a class="nav__a" href="productos.php">Gestion de productos</a></li>
+            <li class="nav__li" ><a class="nav__a" href="inventario.php">Inventario</a></li>
+            <li class="nav__li" ><a class="nav__a" href="ventas.php">Gestion de ventas</a></li>
+            <li class="nav__li" ><a class="nav__a" href="proveedores.php">Nuestros Proveedores</a></li>
+            <li class="nav__li" ><a class="nav__a" href="usuarios.php">Gestion de usuarios</a></li>
+            <li class="nav__li" ><a class="nav__a" href="reportes.php">Reportes</a></li>
         </ul>
     </nav>
     <div class="boton-cerrar-sesion-container">

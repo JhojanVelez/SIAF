@@ -9,6 +9,8 @@
     <script src="../js/load-nav.js"></script>
 </head>
 <body>
-    <div data-src="nav.html"></div>
+    <?php
+    require("nav.php")
+    ?>
 </body>
 </html>
