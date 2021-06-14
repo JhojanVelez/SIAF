@@ -42,7 +42,7 @@
         <section class="gestionar-productos__container-filter">
             <div class="gestionar-productos_filtro">
                 <h2 class="gestionar-productos_filtro-titulo">Busca un Producto</h2>
-                <form action="">
+                <form class="gestionar-productos_filtro-form" action="">
                     <label for="product-id">Por codigo de barras del producto</label>
                     <br>
                     <input type="text" class="gestionar-productos_filtro-id" id="product-id">
@@ -65,8 +65,27 @@
                         <option value="Pre">Pre4</option>
                     </select>
                 </form>
-                <div></div>
+                <div class="gestionar-productos_filtro-gen-repo">
+                    <img src="" alt="">
+                    <a href="">Generar reporte</a>
+                </div>
             </div>
+        </section>
+
+
+        <section class="gestionar-productos__botones">
+            <section class="gestionar-productos__container-boton">
+                <input type="button" value="Inhabilitar">
+            </section>
+            <section class="gestionar-productos__container-boton">
+                <input type="button" value="Editar">
+            </section>
+            <section class="gestionar-productos__container-boton">
+                <input type="button" value="Añadir">
+            </section>
+            <section class="gestionar-productos__container-boton">
+                <input type="button" value="Ver productos inhabilitados">
+            </section>
         </section>
     </main>
 </body>
