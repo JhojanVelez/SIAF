@@ -6,24 +6,25 @@
     <nav>
         <ul class="nav__ul">
             <li class="nav__li" ><a class="nav__a" href="menu.php">Menu</a></li>
-            <li class="nav__li" ><a class="nav__a" href="productos.php">Gestion de productos</a></li>
+            <li class="nav__li" ><a class="nav__a" href="productos.php">Productos</a></li>
             <li class="nav__li" ><a class="nav__a" href="inventario.php">Inventario</a></li>
-            <li class="nav__li" ><a class="nav__a" href="ventas.php">Gestion de ventas</a></li>
-            <li class="nav__li" ><a class="nav__a" href="proveedores.php">Nuestros Proveedores</a></li>
-            <li class="nav__li" ><a class="nav__a" href="usuarios.php">Gestion de usuarios</a></li>
-            <li class="nav__li" ><a class="nav__a" href="reportes.php">Reportes</a></li>
+            <li class="nav__li" ><a class="nav__a" href="ventas.php">Ventas</a></li>
+            <li class="nav__li" ><a class="nav__a" href="proveedores.php">Proveedores</a></li>
+            <li class="nav__li" ><a class="nav__a" href="usuarios.php">Usuarios</a></li>
         </ul>
     </nav>
     <div class="boton-cerrar-sesion-container">
-        <button class="boton-cerrar-sesion-container__boton boton">
-            <div class="sign-out-container">
-                <section class="sign-out-container__img">
-                    <img src="../imagenes/sign-out.png" alt="sign out">
-                </section>
-                <section class="sign-out-container__text" >
-                    CERRAR SESION
-                </section>
-            </div>
-        </button>
+        <a href="../../index.php">
+            <button class="boton-cerrar-sesion-container__boton boton">
+                <div class="sign-out-container">
+                    <section class="sign-out-container__img">
+                        <img src="../imagenes/sign-out.png" alt="sign out">
+                    </section>
+                    <section class="sign-out-container__text" >
+                        CERRAR SESION
+                    </section>
+                </div>
+            </button>
+        </a>
     </div>
 </header>

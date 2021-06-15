@@ -1,0 +1,36 @@
+@import url(main.css);
+
+.grid-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 150px 1fr 150px;
+    grid-template-areas:"titulo  titulo"
+                        "tabla   filtro"
+                        "botones botones";
+                        
+}
+
+.productos__container-title {
+    text-align: center;
+    line-height: 150px;
+    font-size: 2.3rem;
+    border: 1px solid black;
+    grid-area: titulo;
+}
+
+.productos__container-table {
+    border: 1px solid black;
+    grid-area: tabla;
+}
+
+.productos__container-filter {
+    border: 1px solid black;
+    grid-area: filtro;
+}
+
+.productos__container-botones {
+    border: 1px solid black;
+    grid-area: botones;
+}

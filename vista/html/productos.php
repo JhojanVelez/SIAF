@@ -5,21 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion de productos</title>
-    <link rel="stylesheet" href="../css/gestion-productos.css">
+    <link rel="stylesheet" href="../css/productos.css">
     <script src="../js/load-nav.js"></script>
 </head>
 <body>
     <?php
-    require("nav.php")
+    require("nav.php");
     ?>
-    <main class="gestionar-productos grid-container">
-        <section class="gestionar-productos__container-title">
-            <h1 class="gestionar-productos__titulo">Gestiona Tus Productos</h1>
+    <main class="productos grid-container">
+        <section class="productos__container-title">
+            <h1 class="productos__titulo">Gestiona Tus Productos</h1>
         </section>
 
 
-        <section class="gestionar-productos__container-table">
-            <table class="gestionar-productos__table tabla">
+        <section class="productos__container-table">
+            <table class="productos__table tabla">
                 <thead class="table-thead">
                     <tr class="table-tr">
                         <td class="table-td">ProCodBarr</td>
@@ -39,25 +39,25 @@
         </section>
 
 
-        <section class="gestionar-productos__container-filter">
-            <div class="gestionar-productos_filtro">
-                <h2 class="gestionar-productos_filtro-titulo">Busca un Producto</h2>
-                <form class="gestionar-productos_filtro-form" action="">
+        <section class="productos__container-filter">
+            <div class="productos_filtro">
+                <h2 class="productos_filtro-titulo">Busca un Producto</h2>
+                <form class="productos_filtro-form" action="">
                     <label for="product-id">Por codigo de barras del producto</label>
                     <br>
-                    <input type="text" class="gestionar-productos_filtro-id" id="product-id">
+                    <input type="text" class="productos_filtro-id" id="product-id">
                     <br>
                     <label for="product-nombre">Por nombre del producto</label>
                     <br>
-                    <input type="text" class="gestionar-productos_filtro-nombre" id="product-nombre">
+                    <input type="text" class="productos_filtro-nombre" id="product-nombre">
                     <br>
                     <label for="product-proveedor">Por nombre del proveedor</label>
                     <br>
-                    <input type="text" class="gestionar-productos_filtro-proveedor" id="product-proveedor">
+                    <input type="text" class="productos_filtro-proveedor" id="product-proveedor">
                     <br>
                     <label for="product-id">Por codigo de barras del producto</label>
                     <br>
-                    <select name="presentacion" class="gestionar-productos_filtro-presentacion" id="product-presentacion">
+                    <select name="presentacion" class="productos_filtro-presentacion" id="product-presentacion">
                         <option value="null">Presentacion</option>
                         <option value="Pre">Pre1</option>
                         <option value="Pre">Pre2</option>
@@ -65,7 +65,7 @@
                         <option value="Pre">Pre4</option>
                     </select>
                 </form>
-                <div class="gestionar-productos_filtro-gen-repo">
+                <div class="productos_filtro-gen-repo">
                     <img src="" alt="">
                     <a href="">Generar reporte</a>
                 </div>
@@ -73,18 +73,18 @@
         </section>
 
 
-        <section class="gestionar-productos__botones">
-            <section class="gestionar-productos__container-boton">
-                <input type="button" value="Inhabilitar">
+        <section class="productos__container-botones">
+            <section class="productos__container-boton">
+                <input type="button" class="productos__boton-agregar" value="Inhabilitar">
             </section>
-            <section class="gestionar-productos__container-boton">
-                <input type="button" value="Editar">
+            <section class="productos__container-boton">
+                <input type="button" class="productos__boton-editar" value="Editar">
             </section>
-            <section class="gestionar-productos__container-boton">
-                <input type="button" value="Añadir">
+            <section class="productos__container-boton">
+                <input type="button" class="productos__boton-ver-inhabilitados" value="Agregar">
             </section>
-            <section class="gestionar-productos__container-boton">
-                <input type="button" value="Ver productos inhabilitados">
+            <section class="productos__container-boton">
+                <input type="button" class="productos__boton-inhabilitar" value="Ver productos inhabilitados">
             </section>
         </section>
     </main>

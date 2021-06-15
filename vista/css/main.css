@@ -58,7 +58,7 @@ body {
 
 .nav-container {
   max-width: 100%;
-  min-width: 1920px;
+  min-width: 1400px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -72,7 +72,7 @@ body {
   grid-template-columns: repeat(1, max-content);
   grid-template-rows: 60px 30px;
   grid-template-areas: "img"
-                       "usu";
+                      "usu";
   justify-items: center;
   align-items: center;
   color: white;
@@ -89,7 +89,7 @@ body {
 
 .nav__ul {
   display: grid;
-  grid-template-columns: repeat(7, minmax(170px,max-content));
+  grid-template-columns: repeat(6, minmax(130px,max-content));
   grid-template-rows: 40px;
   text-align: center;
   grid-gap: 20px;
