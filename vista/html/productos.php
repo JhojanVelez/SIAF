@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion de productos</title>
     <link rel="stylesheet" href="../css/productos.css">
-    <script src="../js/load-nav.js"></script>
 </head>
 <body>
     <?php
@@ -40,22 +39,22 @@
 
 
         <section class="productos__container-filter">
-            <div class="productos_filtro">
-                <h2 class="productos_filtro-titulo">Busca un Producto</h2>
-                <form class="productos_filtro-form" action="">
-                    <label for="product-id">Por codigo de barras del producto</label>
+            <div class="productos__filtro">
+                <h2 class="productos__filtro-titulo">Busca un Producto</h2>
+                <form class="productos__filtro-form" action="">
+                    <label class="productos__filtro-label" for="product-id">Por codigo de barras del producto</label>
                     <br>
                     <input type="text" class="productos_filtro-id" id="product-id">
                     <br>
-                    <label for="product-nombre">Por nombre del producto</label>
+                    <label class="productos__filtro-label" for="product-nombre">Por nombre del producto</label>
                     <br>
                     <input type="text" class="productos_filtro-nombre" id="product-nombre">
                     <br>
-                    <label for="product-proveedor">Por nombre del proveedor</label>
+                    <label class="productos__filtro-label" for="product-proveedor">Por nombre del proveedor</label>
                     <br>
                     <input type="text" class="productos_filtro-proveedor" id="product-proveedor">
                     <br>
-                    <label for="product-id">Por codigo de barras del producto</label>
+                    <label class="productos__filtro-label" for="product-id">Por codigo de barras del producto</label>
                     <br>
                     <select name="presentacion" class="productos_filtro-presentacion" id="product-presentacion">
                         <option value="null">Presentacion</option>
@@ -66,8 +65,10 @@
                     </select>
                 </form>
                 <div class="productos_filtro-gen-repo">
-                    <img src="" alt="">
-                    <a href="">Generar reporte</a>
+                    <div class="productos_filtro-gen-repo-img">
+                        <img src="../imagenes/informe.svg" alt="">
+                    </div>
+                    <a class="productos__filtro-subtitulo-reporte" href="">Generar reporte</a>
                 </div>
             </div>
         </section>
@@ -75,16 +76,16 @@
 
         <section class="productos__container-botones">
             <section class="productos__container-boton">
-                <input type="button" class="productos__boton-agregar" value="Inhabilitar">
+                <input type="button" class="productos__boton-agregar boton" value="Inhabilitar">
             </section>
             <section class="productos__container-boton">
-                <input type="button" class="productos__boton-editar" value="Editar">
+                <input type="button" class="productos__boton-editar boton" value="Editar">
             </section>
             <section class="productos__container-boton">
-                <input type="button" class="productos__boton-ver-inhabilitados" value="Agregar">
+                <input type="button" class="productos__boton-ver-inhabilitados boton" value="Agregar">
             </section>
             <section class="productos__container-boton">
-                <input type="button" class="productos__boton-inhabilitar" value="Ver productos inhabilitados">
+                <input type="button" class="productos__boton-inhabilitar boton" value="Ver productos inhabilitados">
             </section>
         </section>
     </main>
