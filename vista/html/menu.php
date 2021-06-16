@@ -17,22 +17,24 @@
             <h2>SIAF</h2>
         </div>
         <div class="boton-cerrar-sesion-container">
-            <button class="boton-cerrar-sesion-container__boton boton">
-                <div class="sign-out-container">
-                    <section class="sign-out-container__img">
-                        <img src="../imagenes/sign-out.png" alt="sign out">
-                    </section>
-                    <section class="sign-out-container__text" >
-                        CERRAR SESION
-                    </section>
-                </div>
-            </button>
+            <a href="../../index.php">
+                <button class="boton-cerrar-sesion-container__boton boton">
+                    <div class="sign-out-container">
+                        <section class="sign-out-container__img">
+                            <img src="../imagenes/sign-out.png" alt="sign out">
+                        </section>
+                        <section class="sign-out-container__text" >
+                            CERRAR SESION
+                        </section>
+                    </div>
+                </button>
+            </a>
         </div>
     </header>
     <main>
         <article class="cards-grid">
             <section class="card">
-                <h2 class="card__title">GESTION DE PRODUCTOS</h2>
+                <h2 class="card__title">PRODUCTOS</h2>
                 <div class="card__img">
                     <img src="../imagenes/productos-icono.svg" alt="">
                 </div>
@@ -50,7 +52,7 @@
                 </button>
             </section>
             <section class="card">
-                <h2 class="card__title">GESTION DE VENTAS</h2>
+                <h2 class="card__title">VENTAS</h2>
                 <div class="card__img">
                     <img src="../imagenes/ventas-icono.svg" alt="">
                 </div>
@@ -59,7 +61,7 @@
                 </button>
             </section>
             <section class="card">
-                <h2 class="card__title">NUESTROS PROVEEDORES</h2>
+                <h2 class="card__title">PROVEEDORES</h2>
                 <div class="card__img">
                     <img src="../imagenes/proveedores-icono.svg" alt="">
                 </div>
@@ -68,7 +70,7 @@
                 </button>
             </section>
             <section class="card">
-                <h2 class="card__title">NUESTROS CLIENTES</h2>
+                <h2 class="card__title">CLIENTES</h2>
                 <div class="card__img">
                     <img src="../imagenes/clientes-icono.svg" alt="">
                 </div>
@@ -77,7 +79,7 @@
                 </button>
             </section>
             <section class="card">
-                <h2 class="card__title">GESTION DE USUARIOS</h2>
+                <h2 class="card__title">USUARIOS</h2>
                 <div class="card__img">
                     <img src="../imagenes/gestion-usuarios-icono.svg" alt="">
                 </div>
@@ -92,15 +94,6 @@
                 </div>
                 <button class="card__button boton">
                     <a href="">Ingresar</a>
-                </button>
-            </section>
-            <section class="card">
-                <h2 class="card__title">REPORTES</h2>
-                <div class="card__img">
-                    <img src="../imagenes/reportes-icono.svg" alt="">
-                </div>
-                <button class="card__button boton">
-                    <a href="reportes.php">Ingresar</a>
                 </button>
             </section>
         </article>

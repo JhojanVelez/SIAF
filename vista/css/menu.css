@@ -13,14 +13,20 @@ main {
 
 .cards-grid {
     margin: auto;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* display: grid;
     grid-template-columns: repeat(4, minmax(200px, 300px));
-    grid-gap: 30px;
-    width: 1200px;
+    grid-gap: 30px; */
+    width: 1500px;
     text-align: center;
 }
 
 .card {
+    min-width: 300px;
+    max-width: 20%;
+    margin: 15px;
     display: grid;
     grid-template-rows: 20% 60% 20%;
     justify-items: center;
