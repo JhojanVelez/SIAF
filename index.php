@@ -18,7 +18,7 @@
             </section>
 
             <section class="iniciar-sesion__container">
-                <div class="iniciar-sesion__flex-container">
+                <div class="iniciar-sesion__flex-container box-shadow">
                     <div class="iniciar-sesion__container-form">
                         <h1 class="iniciar-sesion__titulo">Inicia Sesion</h1>
                         <form class="iniciar-sesion__form" action="vista/html/menu.php" method="POST">

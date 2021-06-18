@@ -32,8 +32,8 @@
         </div>
     </header>
     <main>
-        <article class="cards-grid">
-            <section class="card">
+        <article class="cards-flex-container">
+            <section class="card box-shadow">
                 <h2 class="card__title">PRODUCTOS</h2>
                 <div class="card__img">
                     <img src="../imagenes/productos-icono.svg" alt="">
@@ -42,16 +42,16 @@
                     <a href="productos.php">Ingresar</a>
                 </button>
             </section>
-            <section class="card">
+            <section class="card box-shadow">
                 <h2 class="card__title">INVENTARIO</h2>
                 <div class="card__img">
                     <img src="../imagenes/inventario-icono.svg" />
                 </div>
                 <button class="card__button boton">
-                    <a href="inventario.php">Ingresar</a>
+                    <a href="inventario-menu-cards.php">Ingresar</a>
                 </button>
             </section>
-            <section class="card">
+            <section class="card box-shadow">
                 <h2 class="card__title">VENTAS</h2>
                 <div class="card__img">
                     <img src="../imagenes/ventas-icono.svg" alt="">
@@ -60,7 +60,7 @@
                     <a href="ventas.php">Ingresar</a>
                 </button>
             </section>
-            <section class="card">
+            <section class="card box-shadow">
                 <h2 class="card__title">PROVEEDORES</h2>
                 <div class="card__img">
                     <img src="../imagenes/proveedores-icono.svg" alt="">
@@ -69,7 +69,7 @@
                     <a href="proveedores.php">Ingresar</a>
                 </button>
             </section>
-            <section class="card">
+            <section class="card box-shadow">
                 <h2 class="card__title">CLIENTES</h2>
                 <div class="card__img">
                     <img src="../imagenes/clientes-icono.svg" alt="">
@@ -78,7 +78,7 @@
                     <a href="clientes.php">Ingresar</a>
                 </button>
             </section>
-            <section class="card">
+            <section class="card box-shadow">
                 <h2 class="card__title">USUARIOS</h2>
                 <div class="card__img">
                     <img src="../imagenes/gestion-usuarios-icono.svg" alt="">
@@ -87,7 +87,7 @@
                     <a href="usuarios.php">Ingresar</a>
                 </button>
             </section>
-            <section class="card">
+            <section class="card box-shadow">
                 <h2 class="card__title">CONSULTAR TUS DATOS</h2>
                 <div class="card__img">
                     <img src="../imagenes/consultar-datos-icono.svg" alt="">
