@@ -17,7 +17,7 @@
   --color-button-background: #6c63ff;
   --color-button-background-hover: #5b52ffca;
   --color-button-text: rgb(255, 255, 255);
-  --color-main-background: #6b63ff23;
+  --color-main-background: #6b63ff25;
   --color-nav-background: #6c63ff;
 }
 
@@ -40,12 +40,18 @@ body {
 }
 
 input, select {
-  margin-bottom: 1.2rem;
-  padding: 12px 0 12px 25px;
   border-radius: 50px;
   border: 0.2px solid rgba(32, 32, 32, 0.205);
   outline: none;
   font-size: 1rem;
+}
+
+select {
+  cursor: pointer;
+}
+
+input:focus, select:focus {
+  border: 1px solid var(--color-nav-background);
 }
 
 .boton {
@@ -63,7 +69,26 @@ input, select {
   background-color: var(--color-button-background-hover);
 }
 
+.box-shadow {
+    background-color: white;
+    box-shadow: 0px 7px 20px -7px #6c63ff3d;
+    border-radius: 10px;
+}
 
+.grid-container-main {
+  width: 95%;
+  height: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: minmax(1000px, 70%) minmax(400px, 30%);
+  grid-template-rows: 150px max-content 150px;
+  grid-template-areas:"titulo  titulo"
+                      "tabla   filtro"
+                      "botones botones";
+  grid-gap: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
 
 /* ESTILOS DEL NAV */
 
@@ -100,7 +125,7 @@ input, select {
 
 .nav__ul {
   display: grid;
-  grid-template-columns: repeat(6, minmax(130px,max-content));
+  grid-template-columns: repeat(7, minmax(130px,max-content));
   grid-template-rows: 40px;
   text-align: center;
   grid-gap: 20px;

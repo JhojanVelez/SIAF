@@ -13,6 +13,12 @@
 .iniciar-sesion__container {
   max-width: 50%;
   min-width: 500px;
+  height: 600px;
+}
+
+.iniciar-sesion__flex-container {
+  height: 100%;
+  display: flex;
 }
 
 .iniciar-sesion__titulo {
@@ -31,21 +37,14 @@
 
 .iniciar-sesion__form > *:not(input[type="submit"]) {
   margin-bottom: 1.2rem;
-  width: 75%;
+  width: 90%;
   padding: 12px 0 12px 25px;
-  border-radius: 50px;
-  border: 0.2px solid rgba(32, 32, 32, 0.205);
-  outline: none;
   font-size: 1rem;
 }
 
 .iniciar-sesion__boton-ingresar {
   width: 75%;
   margin-bottom: 1.2rem;
-}
-
-.inicio-sesion__select-rol-usuario {
-  cursor: pointer;
 }
 
 .inicio-sesion__a-olvidaste-contrasenia {
