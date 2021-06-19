@@ -13,20 +13,18 @@
     ?>
 
 <main class="salidas grid-container-main">
-        <section class="salidas__container-title box-shadow">
+        <section class="salidas__container-title container-title box-shadow">
             <h1 class="salidas__titulo">Gestiona Tus Salidas</h1>
         </section>
 
 
-        <section class="salidas__container-filter box-shadow">
+        <section class="salidas__container-filter container-filter box-shadow">
             <div class="salidas__filtro">
                 <h2 class="salidas__filtro-titulo">Filtros de busqueda</h2>
                 <form class="salidas__filtro-form" action="">
-                    <label class="salidas__filtro-label" for="producto-id"></label>
-                    <input type="text" class="salidas_filtro-producto-id" id="producto-id" placeholder="Por codigo de barras del producto">
-                    <label class="salidas__filtro-label" for="producto-nombre"></label>
-                    <input type="text" class="salidas_filtro-producto-nombre" id="producto-nombre" placeholder="Nombre Producto">
-                    <input type="text" class="salidas_filtro-proveedor-nombre" id="proveedor-nombre" placeholder="Nombre Proveedor">
+                    <input type="text" class="salidas__filtro-producto-id" id="producto-id" placeholder="Codigo de Barras">
+                    <input type="text" class="salidas__filtro-producto-nombre" id="producto-nombre" placeholder="Nombre Producto">
+                    <input type="text" class="salidas__filtro-proveedor-nombre" id="proveedor-nombre" placeholder="Nombre Proveedor">
                     <select name="presentacion" class="salidas_filtro-tipo-salida" id="salida-tipo-salida">
                         <option value="null">Por tipo de salida</option>
                         <option value="Pre">Sal1</option>
@@ -36,26 +34,24 @@
                     </select>
                     <article class="salidas_filtro-container-desde-hasta">
                         <h3 class="salidas_filtro-container-desde-hasta__title">Por periodo de tiempo</h3>
-                        <section class="salidas_filtro-container-desde-hasta__inputs">
-                            <label class="salidas_filtro-container-desde-hasta__label" for="salida-desde">Desde</label>
+                        <div class="salidas_filtro-container-desde-hasta__inputs">
                             <input type="date" class="salidas_filtro-desde" id="salida-desde">
-                            <label class="salidas_filtro-container-desde-hasta__label" for="salida-hasta">Hasta</label>
                             <input type="date" class="salidas_filtro-hasta" id="salida-hasta">
-                        </section>
+                        </div>
                     </article>
                 </form>
-                <div class="salidas_container-filter-gen-repo">
-                    <div class="salidas_container-filter-gen-repo-img">
+                <div class="salidas__filtro-gen-repo filtro-gen-repo">
+                    <div class="salidas__filtro-gen-repo-img filtro-gen-repo-img">
                         <img src="../imagenes/informe.svg" alt="">
                     </div>
-                    <a class="salidas__container-filter-subtitulo-reporte" href="">Generar reporte</a>
+                    <a class="salidas__filtro-subtitulo-reporte filtro-subtitulo-reporte" href="">Generar reporte</a>
                 </div>
             </div>
         </section>
 
 
-        <section class="salidas__container-table box-shadow">
-            <table class="salidas__table tabla">
+        <section class="salidas__container-table container-table box-shadow">
+            <table class="salidas__table">
                 <thead class="table-thead">
                     <tr class="table-tr">
                         <td class="table-td">SalCodigo</td>
@@ -67,14 +63,17 @@
                         <td class="table-td">ProCodBarras</td>
                     </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody>
+                </tbody>
             </table>
         </section>
 
 
-        <section class="salidas__container-botones box-shadow">
+        <section class="salidas__container-botones container-botones box-shadow">
             <section class="salidas__container-boton">
-                <input type="button" class="salidas__boton-agregar boton" value="A&ntilde;adir">
+                <button class="salidas__boton-agregar boton">
+                    A&ntilde;adir
+                </button>
             </section>
         </section>
     </main>

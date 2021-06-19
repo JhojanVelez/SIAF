@@ -1,36 +1,25 @@
 @import url(main.css);
 
+.grid-container-main {
+    width: 90%;
+    height: 100%;
+    grid-template-columns: minmax(1000px, 70%) minmax(400px, 30%);
+    grid-template-rows: 150px 700px 150px;
+    grid-template-areas:"titulo  titulo"
+                        "tabla   filtro"
+                        "botones botones";
+}
+
 .productos__container-title {
-    text-align: center;
-    line-height: 150px;
-    font-size: 2.3rem;
     grid-area: titulo;
-    color: var(--color-title-h1);
 }
 
 .productos__container-table {
     grid-area: tabla;
-    text-align: center;
-    padding: 10px 5px;
-    overflow: scroll;
-}
-
-.tabla {
-    width: 200%;
-    margin: auto;
-    border-spacing: 0;
-}
-
-.table-td {
-    border: 1px solid black;
-    padding: 5px 5px;
 }
 
 .productos__container-filter {
     grid-area: filtro;
-    width: 100%;
-    justify-self: center;
-    padding: 2rem;
 }
 
 .productos__filtro {
@@ -64,19 +53,9 @@
     margin: 0;
 }
 
-.productos_filtro-gen-repo {
-    display: flex;
-    align-items: center;
-    font-size: 1.6rem;
-}
 
-.productos__filtro-subtitulo-reporte:hover {
-    text-decoration: underline;
-}
-
-.productos_filtro-gen-repo-img {
-    width: 4rem;
-    height: 4rem;
+.productos__table {
+    width: 200%;
 }
 
 .productos__container-botones {
