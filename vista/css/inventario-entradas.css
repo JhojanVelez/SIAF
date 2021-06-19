@@ -1,0 +1,95 @@
+@import url(main.css);
+
+.entradas__filtro {
+    color: var(--color-title-h1);
+    display: grid;
+    grid-template-columns: 75% 1fr;
+    grid-template-rows: min-content min-content;
+    grid-template-areas:"filter-titulo filter-titulo"
+                        "filter-inputs filter-gen-repo";
+    grid-gap: 2rem;
+}
+
+.entradas__filtro-titulo {
+    font-size: 2.2rem;
+    grid-area: filter-titulo;
+}
+
+.entradas__filtro-form {
+    grid-area: filter-inputs;
+    display: grid;
+    grid-template-columns: repeat(2, 25%) 1fr;
+    grid-template-areas:"inp-prod-id inp-prov-name date-des-has"
+                        "inp-prod-name sel-tipo-sal date-des-has";
+    grid-gap: 2rem;
+}
+
+.entradas__filtro-producto-id {
+    grid-area: inp-prod-id;
+}
+
+.entradas__filtro-producto-nombre {
+    grid-area: inp-prod-name;
+}
+
+.entradas__filtro-proveedor-nombre {
+    grid-area: inp-prov-name;
+}
+
+.entradas_filtro-tipo-salida {
+    grid-area: sel-tipo-sal;
+}
+
+.entradas_filtro-container-desde-hasta{
+    height: 100%;
+    grid-area: date-des-has;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.entradas_filtro-container-desde-hasta__title {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.entradas_filtro-container-desde-hasta__inputs {
+    display: flex;
+    justify-content: space-around;
+}
+
+.entradas_filtro-desde,
+.entradas_filtro-hasta {
+    width: 45%;
+    height: 41px;
+    position: relative;
+}
+.entradas_filtro-desde::before,
+.entradas_filtro-hasta::before {
+    content: '';
+    position: absolute;
+    right: 25%;
+}
+
+.entradas_filtro-desde::before{
+    content: 'Desde';
+}
+.entradas_filtro-hasta::before{
+    content: 'Hasta';
+}
+
+
+.entradas__filtro-gen-repo {
+    grid-area: filter-gen-repo;
+}
+
+
+.entradas__container-botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.entradas__boton-agregar{
+    width: 400px;
+}

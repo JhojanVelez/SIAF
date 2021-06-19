@@ -248,10 +248,11 @@ tbody tr:nth-child(even) {
   height: 50px;
   overflow-y: hidden;
 }
-/* .boton-cerrar-sesion-container__boton:hover {
+
+.boton-cerrar-sesion-container__boton:hover {
   background-color: white;
   color: var(--color-nav-background);
-} */
+}
 
 
 .sign-out-container {

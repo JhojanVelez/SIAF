@@ -27,7 +27,7 @@
                     <img src="../imagenes/inventario-entradas.svg" />
                 </div>
                 <button class="card__button boton">
-                    <a href="inventario.php">Ingresar</a>
+                    <a href="inventario-entradas.php">Ingresar</a>
                 </button>
             </section>
             <section class="card box-shadow">
