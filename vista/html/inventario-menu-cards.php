@@ -18,7 +18,7 @@
                     <img src="../imagenes/inventario-salidas.svg" alt="">
                 </div>
                 <button class="card__button boton">
-                    <a href="productos.php">Ingresar</a>
+                    <a href="inventario-salidas.php">Ingresar</a>
                 </button>
             </section>
             <section class="card box-shadow">

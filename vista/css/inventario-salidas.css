@@ -1,0 +1,106 @@
+@import url(main.css);
+
+.grid-container-main {
+    max-width: 80%;
+    min-width: 1300px;
+    height: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: minmax(1000px, 100%);
+    grid-template-rows: 150px min-content minmax(600px, max-content)  150px;
+    grid-template-areas:"titulo"
+                        "filtro"
+                        "tabla"
+                        "boton";
+    grid-gap: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+
+.salidas__container-title {
+    text-align: center;
+    line-height: 150px;
+    font-size: 2.3rem;
+    grid-area: titulo;
+    color: var(--color-title-h1);
+}
+
+
+.salidas__container-filter {
+    grid-area: filtro;
+    width: 100%;
+    padding: 2rem;
+}
+
+.salidas__filtro {
+    color: var(--color-title-h1);
+    display: grid;
+    grid-template-columns: 75% 1fr;
+    grid-template-rows: min-content 7rem;
+    grid-template-areas:"filter-titulo filter-titulo"
+                        "filter-inputs filter-gen-repo";
+    grid-gap: 2rem;
+}
+
+.salidas__filtro-titulo {
+    font-size: 2.2rem;
+    grid-area: filter-titulo;
+}
+
+.salidas-filtro-form {
+    grid-area: filter-inputs;
+}
+
+
+.salidas_container-filter-gen-repo {
+    grid-area: filter-gen-repo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+}
+
+.salidas__container-filter-subtitulo-reporte:hover {
+    text-decoration: underline;
+}
+
+.salidas_container-filter-gen-repo-img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.salidas__container-table {
+    grid-area: tabla;
+    text-align: center;
+    padding: 10px 5px;
+}
+
+.tabla {
+    width: 100%;
+    margin: auto;
+    border-spacing: 0;
+}
+
+.table-td {
+    border: 1px solid black;
+    padding: 5px 5px;
+}
+
+
+.salidas__container-botones {
+    grid-area: boton;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
+
+.salidas__container-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton:not(.boton-cerrar-sesion-container__boton) {
+    margin: 0;
+    width: 80%;
+}
