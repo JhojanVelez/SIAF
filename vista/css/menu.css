@@ -16,13 +16,12 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 1500px;
+    max-width: 1400px;
     text-align: center;
 }
 
 .card {
-    min-width: 300px;
-    max-width: 20%;
+    width: 300px;
     margin: 15px;
     display: grid;
     grid-template-rows: 20% 60% 20%;

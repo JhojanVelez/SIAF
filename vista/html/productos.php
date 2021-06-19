@@ -12,12 +12,12 @@
     require("nav.php");
     ?>
     <main class="productos grid-container-main">
-        <section class="productos__container-title box-shadow">
+        <section class="productos__container-title container-title box-shadow">
             <h1 class="productos__titulo">Gestiona Tus Productos</h1>
         </section>
 
 
-        <section class="productos__container-table box-shadow">
+        <section class="productos__container-table container-table box-shadow">
             <table class="productos__table tabla">
                 <thead class="table-thead">
                     <tr class="table-tr">
@@ -33,12 +33,13 @@
                         <td class="table-td">CodInvt</td>
                     </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody>
+                </tbody>
             </table>
         </section>
 
 
-        <section class="productos__container-filter box-shadow">
+        <section class="productos__container-filter container-filter  box-shadow">
             <div class="productos__filtro">
                 <h2 class="productos__filtro-titulo">Busca un Producto</h2>
                 <form class="productos__filtro-form" action="">
@@ -64,17 +65,17 @@
                         <option value="Pre">Pre4</option>
                     </select>
                 </form>
-                <div class="productos_filtro-gen-repo">
-                    <div class="productos_filtro-gen-repo-img">
+                <div class="productos_filtro-gen-repo filtro-gen-repo">
+                    <div class="productos_filtro-gen-repo-img filtro-gen-repo-img">
                         <img src="../imagenes/informe.svg" alt="">
                     </div>
-                    <a class="productos__filtro-subtitulo-reporte" href="">Generar reporte</a>
+                    <a class="productos__filtro-subtitulo-reporte filtro-subtitulo-reporte" href="">Generar reporte</a>
                 </div>
             </div>
         </section>
 
 
-        <section class="productos__container-botones box-shadow">
+        <section class="productos__container-botones container-botones box-shadow">
             <section class="productos__container-boton">
                 <input type="button" class="productos__boton-agregar boton" value="Inhabilitar">
             </section>
