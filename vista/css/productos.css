@@ -53,6 +53,10 @@
     margin: 0;
 }
 
+.filtro-gen-repo {
+    flex-direction: row;
+}
+
 table {
     min-width: 200%;
 }

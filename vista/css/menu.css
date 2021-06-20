@@ -2,7 +2,7 @@
 
 .menu-nav-title {
     color: var(--color-button-text);
-    font-size: 2rem;
+    font-size: 3rem;
     letter-spacing: 1rem;
     font-weight: bold;
 }
@@ -31,6 +31,9 @@ main {
     padding: 20px 10px;
     border-radius: 10px;
     transition: background-image 1s;
+}
+
+.card__title {
     color: var(--color-nav-background);
 }
 

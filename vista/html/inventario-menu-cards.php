@@ -36,7 +36,7 @@
                     <img src="../imagenes/inventario-kardex.svg" />
                 </div>
                 <button class="card__button boton">
-                    <a href="inventario.php">Ingresar</a>
+                    <a href="inventario-kardex.php">Ingresar</a>
                 </button>
             </section>
         </article>

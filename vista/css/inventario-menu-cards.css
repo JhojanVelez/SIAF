@@ -26,6 +26,9 @@ main {
     padding: 20px 10px;
     border-radius: 10px;
     transition: background-image 1s;
+}
+
+.card__title {
     color: var(--color-nav-background);
 }
 

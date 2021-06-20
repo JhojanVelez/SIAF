@@ -13,9 +13,7 @@
             <img class="user-icon-container__img" src="https://cdnb.20m.es/sites/112/2019/04/cara6-620x618.jpg" alt="usuario IMG">
             <p class="user-icon-container__nombre-usu" >Antonia Gomez</p>
         </div>
-        <div class="menu-nav-title">
-            <h2>SIAF</h2>
-        </div>
+        <h2 class="menu-nav-title">SIAF</h2>
         <div class="boton-cerrar-sesion-container">
             <a href="../../index.php">
                 <button class="boton-cerrar-sesion-container__boton boton">

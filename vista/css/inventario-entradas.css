@@ -1,7 +1,6 @@
 @import url(main.css);
 
 .entradas__filtro {
-    color: var(--color-title-h1);
     display: grid;
     grid-template-columns: 75% 1fr;
     grid-template-rows: min-content min-content;
