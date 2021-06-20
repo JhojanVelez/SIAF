@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php
-        require("nav.php");
+        require_once("nav.php");
     ?>
 
 <main class="kardex grid-container-main">

@@ -14,14 +14,14 @@
 </head>
 <body>
     <?php
-    require("nav.php");
+    require_once("nav.php");
     ?>
     <main>
         <article class="cards-flex-container">
                 <section class="card box-shadow">
                     <h2 class="card__title">REGISTRAR VENTAS</h2>
                     <div class="card__img">
-                        <img src="../imagenes/inventario-salidas.svg" alt="">
+                        <img src="../imagenes/ventas-registrar-ventas.svg" alt="">
                     </div>
                     <button class="card__button boton">
                         <a href="inventario-salidas.php">Ingresar</a>
@@ -30,10 +30,10 @@
                 <section class="card box-shadow">
                     <h2 class="card__title">CONSULTAR VENTAS</h2>
                     <div class="card__img">
-                        <img src="../imagenes/inventario-entradas.svg" />
+                        <img src="../imagenes/ventas-consultar-ventas.svg" />
                     </div>
                     <button class="card__button boton">
-                        <a href="inventario-entradas.php">Ingresar</a>
+                        <a href="ventas-consultar-ventas.php">Ingresar</a>
                     </button>
                 </section>
         </article>

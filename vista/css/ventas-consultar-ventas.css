@@ -1,0 +1,91 @@
+@import url(main.css);
+
+.grid-container-main {
+    grid-template-rows: 150px min-content 700px;
+    grid-template-areas:"titulo"
+                        "filtro"
+                        "contenido";
+}
+
+.ventas__filtro {
+    display: grid;
+    grid-template-columns: 75% 1fr;
+    grid-template-rows: min-content min-content;
+    grid-template-areas:"filter-titulo filter-titulo"
+                        "filter-inputs filter-gen-repo";
+    grid-gap: 2rem;
+}
+
+.ventas__filtro-titulo {
+    font-size: 2.2rem;
+    grid-area: filter-titulo;
+}
+
+.ventas__filtro-form {
+    grid-area: filter-inputs;
+    display: grid;
+    grid-template-columns: repeat(2, 25%) 1fr;
+    grid-template-areas:"inp-prod-id   inp-prov-id date-des-has"
+                        "inp-prod-name inp-prov-name date-des-has";
+    grid-gap: 2rem;
+}
+
+.ventas__filtro-producto-id {
+    grid-area: inp-prod-id;
+}
+
+.ventas__filtro-producto-nombre {
+    grid-area: inp-prod-name;
+}
+
+.ventas__filtro-proveedor-id {
+    grid-area: inp-prov-id;
+}
+
+.ventas__filtro-proveedor-nombre {
+    grid-area: inp-prov-name;
+}
+
+
+.ventas_filtro-container-desde-hasta{
+    height: 100%;
+    grid-area: date-des-has;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ventas_filtro-container-desde-hasta__title {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.ventas_filtro-container-desde-hasta__inputs {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ventas_filtro-desde,
+.ventas_filtro-hasta {
+    width: 45%;
+    height: 41px;
+    position: relative;
+}
+.ventas_filtro-desde::before,
+.ventas_filtro-hasta::before {
+    content: '';
+    position: absolute;
+    right: 25%;
+}
+
+.ventas_filtro-desde::before{
+    content: 'Desde';
+}
+.ventas_filtro-hasta::before{
+    content: 'Hasta';
+}
+
+
+.ventas__filtro-gen-repo {
+    grid-area: filter-gen-repo;
+}
