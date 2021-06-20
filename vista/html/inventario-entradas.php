@@ -24,14 +24,8 @@
                 <form class="entradas__filtro-form" action="">
                     <input type="text" class="entradas__filtro-producto-id" id="producto-id" placeholder="Codigo de Barras">
                     <input type="text" class="entradas__filtro-producto-nombre" id="producto-nombre" placeholder="Nombre Producto">
+                    <input type="text" class="entradas__filtro-proveedor-id" id="proveedor-id" placeholder="NIT Proveedor">
                     <input type="text" class="entradas__filtro-proveedor-nombre" id="proveedor-nombre" placeholder="Nombre Proveedor">
-                    <select name="presentacion" class="entradas_filtro-tipo-salida" id="salida-tipo-salida">
-                        <option value="null">Por tipo de salida</option>
-                        <option value="Pre">Sal1</option>
-                        <option value="Pre">Sal2</option>
-                        <option value="Pre">Sal3</option>
-                        <option value="Pre">Sal4</option>
-                    </select>
                     <article class="entradas_filtro-container-desde-hasta">
                         <h3 class="entradas_filtro-container-desde-hasta__title">Por periodo de tiempo</h3>
                         <div class="entradas_filtro-container-desde-hasta__inputs">
@@ -54,16 +48,17 @@
             <table class="entradas__table">
                 <thead class="table-thead">
                     <tr class="table-tr">
-                        <td class="table-td">SalCodigo</td>
-                        <td class="table-td">FechaSalida</td>
+                        <td class="table-td">EntCodigo</td>
+                        <td class="table-td">FechaEntrada</td>
                         <td class="table-td">Cantidad</td>
-                        <td class="table-td">TipoSalida</td>
-                        <td class="table-td">Comentarios</td>
+                        <td class="table-td">CostoProducto</td>
+                        <td class="table-td ">Comentarios</td>
                         <td class="table-td">InvCodigo</td>
                         <td class="table-td">ProCodBarras</td>
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- table-td--comentarios clase -->
                 </tbody>
             </table>
         </section>

@@ -19,8 +19,8 @@
     grid-area: filter-inputs;
     display: grid;
     grid-template-columns: repeat(2, 25%) 1fr;
-    grid-template-areas:"inp-prod-id inp-prov-name date-des-has"
-                        "inp-prod-name sel-tipo-sal date-des-has";
+    grid-template-areas:"inp-prod-id   inp-prov-id date-des-has"
+                        "inp-prod-name inp-prov-name date-des-has";
     grid-gap: 2rem;
 }
 
@@ -32,13 +32,14 @@
     grid-area: inp-prod-name;
 }
 
+.entradas__filtro-proveedor-id {
+    grid-area: inp-prov-id;
+}
+
 .entradas__filtro-proveedor-nombre {
     grid-area: inp-prov-name;
 }
 
-.entradas_filtro-tipo-salida {
-    grid-area: sel-tipo-sal;
-}
 
 .entradas_filtro-container-desde-hasta{
     height: 100%;
