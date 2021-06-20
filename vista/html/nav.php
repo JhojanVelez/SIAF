@@ -8,7 +8,7 @@
             <li class="nav__li" ><a class="nav__a" href="menu.php">Menu</a></li>
             <li class="nav__li" ><a class="nav__a" href="productos.php">Productos</a></li>
             <li class="nav__li" ><a class="nav__a" href="inventario-menu-cards.php">Inventario</a></li>
-            <li class="nav__li" ><a class="nav__a" href="ventas.php">Ventas</a></li>
+            <li class="nav__li" ><a class="nav__a" href="ventas-menu-cards.php">Ventas</a></li>
             <li class="nav__li" ><a class="nav__a" href="proveedores.php">Proveedores</a></li>
             <li class="nav__li" ><a class="nav__a" href="usuarios.php">Usuarios</a></li>
             <li class="nav__li" ><a class="nav__a" href="clientes.php">Clientes</a></li>

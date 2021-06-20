@@ -4,8 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/main.css">
     <title>Menu Pricipal</title>
+    <style>
+        .menu-nav-title {
+            color: var(--color-button-text);
+            font-size: 3rem;
+            letter-spacing: 1rem;
+            font-weight: bold;
+        }
+        .cards-flex-container { 
+            justify-content: center;
+            max-width: 1400px;
+        }
+        .card {
+            width: 300px;
+            max-height: 350px;
+        }
+    </style>
 </head>
 <body>
     <header class="nav-container">
@@ -55,7 +71,7 @@
                     <img src="../imagenes/ventas-icono.svg" alt="">
                 </div>
                 <button class="card__button boton">
-                    <a href="ventas.php">Ingresar</a>
+                    <a href="ventas-menu-cards.php">Ingresar</a>
                 </button>
             </section>
             <section class="card box-shadow">
