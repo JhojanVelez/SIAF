@@ -4,8 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/main.css">
     <title>Menu Pricipal</title>
+    <style>
+        .menu-nav-title {
+            color: var(--color-button-text);
+            font-size: 3rem;
+            letter-spacing: 1rem;
+            font-weight: bold;
+        }
+        .cards-flex-container { 
+            justify-content: center;
+            max-width: 1400px;
+        }
+        .card {
+            width: 300px;
+            max-height: 350px;
+        }
+    </style>
 </head>
 <body>
     <header class="nav-container">
@@ -13,9 +29,7 @@
             <img class="user-icon-container__img" src="https://cdnb.20m.es/sites/112/2019/04/cara6-620x618.jpg" alt="usuario IMG">
             <p class="user-icon-container__nombre-usu" >Antonia Gomez</p>
         </div>
-        <div class="menu-nav-title">
-            <h2>SIAF</h2>
-        </div>
+        <h2 class="menu-nav-title">SIAF</h2>
         <div class="boton-cerrar-sesion-container">
             <a href="../../index.php">
                 <button class="boton-cerrar-sesion-container__boton boton">
@@ -57,7 +71,7 @@
                     <img src="../imagenes/ventas-icono.svg" alt="">
                 </div>
                 <button class="card__button boton">
-                    <a href="ventas.php">Ingresar</a>
+                    <a href="ventas-menu-cards.php">Ingresar</a>
                 </button>
             </section>
             <section class="card box-shadow">

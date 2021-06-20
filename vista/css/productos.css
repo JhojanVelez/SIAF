@@ -53,10 +53,21 @@
     margin: 0;
 }
 
-
-.productos__table {
-    width: 200%;
+.filtro-gen-repo {
+    flex-direction: row;
 }
+
+table {
+    min-width: 200%;
+}
+
+tbody tr:hover {
+    background-color: var(--color-button-background);
+    color: var(--color-button-text);
+    cursor: pointer;
+}
+
+
 
 .productos__container-botones {
     grid-area: botones;
