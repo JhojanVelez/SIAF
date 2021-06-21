@@ -24,7 +24,7 @@
                         <img src="../imagenes/ventas-registrar-ventas.svg" alt="">
                     </div>
                     <button class="card__button boton">
-                        <a href="inventario-salidas.php">Ingresar</a>
+                        <a href="ventas-registrar.php">Ingresar</a>
                     </button>
                 </section>
                 <section class="card box-shadow">
