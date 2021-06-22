@@ -54,8 +54,7 @@
                         name="emailRestablecerContrasenia" type="email">
                     <br>
                 </form>
-                <button
-                    class="restablecer-contrasenia__boton-verificar restablecer-contrasenia__boton-verificar--correo">Verificar</button>
+                <button class="restablecer-contrasenia__boton-verificar restablecer-contrasenia__boton-verificar--correo boton">Verificar</button>
                 <p class="restablecer-contrasenia__parrafo"><b>NOTA:</b> El correo debe estar registrado en el sistema
                 </p>
             </dialog>
@@ -81,7 +80,7 @@
                 <p class="restablecer-contrasenia__parrafo">Se te ha enviado un código de verificación a
                     tu correo, ingrésalo para poder restablecer tu contraseña de acceso</p>
                 <button
-                    class="restablecer-contrasenia__boton-verificar restablecer-contrasenia__boton-verificar--codigo">Verificar</button>
+                    class="restablecer-contrasenia__boton-verificar restablecer-contrasenia__boton-verificar--codigo boton">Verificar</button>
             </dialog>
 
 
@@ -100,7 +99,7 @@
                         placeholder="Confirmar Contraseña" type="password">
                 </form>
                 <button
-                    class="restablecer-contrasenia__boton-verificar restablecer-contrasenia__boton-verificar--restablecer-contraseña">Restablecer</button>
+                    class="restablecer-contrasenia__boton-verificar restablecer-contrasenia__boton-verificar--restablecer-contraseña boton">Restablecer</button>
             </dialog>
         </div>
     </main>

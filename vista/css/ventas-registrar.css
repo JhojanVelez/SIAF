@@ -19,10 +19,6 @@
     grid-area: titulo;
 }
 
-.registrar-ventas__container-table {
-    grid-area: lista;
-}
-
 .registrar-ventas__container-registro {
     grid-area: registro;
     height: 65vh;
@@ -41,9 +37,9 @@
     grid-template-columns: repeat(2,50%);
     grid-template-rows: repeat(3,20%) 30%;
     grid-template-areas:"lbl-1       inp-id"
-                        "lbl-2       inp-nom"
-                        "box-cant    btn-prod"
-                        "btn-agregar btn-agregar";
+    "lbl-2       inp-nom"
+    "box-cant    btn-prod"
+    "btn-agregar btn-agregar";
     justify-items: center;
     align-items: center;
     grid-row-gap: 10px;
@@ -116,15 +112,54 @@ tbody tr:hover {
 
 .registrar-ventas__container-botones {
     grid-area: botones;
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
+    display: flex;
+    justify-content: space-around;
 }
 
 .registrar-ventas__container-boton {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 45%;
 }
 
+.registrar-ventas__container-lista-productos {
+    grid-area: lista;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 70% 1fr;
+    background-color: var(--color-nav-background);
+    padding-bottom: 0;
+}
 
+.registrar-ventas__lista-productos-title {
+    font-size: 1.8rem;
+    text-align: center;
+    border-bottom: 1px solid;
+}
+
+.registrar-ventas__lista-productos-title > h2 {
+    color: var(--color-button-text);
+}
+
+.registrar-ventas__lista-productos-contenido {
+    background-color: var(--color-card-background);
+}
+
+.registrar-ventas__lista-productos-totales {
+    display: flex;
+}
+
+.registrar-ventas__total {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.registrar-ventas__total * {
+    flex-grow: 1;
+    color: var(--color-button-text);
+}
 

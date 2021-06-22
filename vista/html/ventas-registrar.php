@@ -16,25 +16,21 @@
             <h1 class="registrar-ventas__titulo">Registra tus Ventas</h1>
         </section>
 
-        <section class="registrar-ventas__container-table container-table box-shadow">
-            <table class="registrar-ventas__table tabla">
-                <thead class="table-thead">
-                    <tr class="table-tr">
-                        <td class="table-td">ProCodBarr</td>
-                        <td class="table-td">Descripcion</td>
-                        <td class="table-td">UbicacionFisica</td>
-                        <td class="table-td">Presentacion</td>
-                        <td class="table-td">UnidadMedida</td>
-                        <td class="table-td">PrecioVenta</td>
-                        <td class="table-td">FechaVenc</td>
-                        <td class="table-td">Laboratorio</td>
-                        <td class="table-td">CodPro</td>
-                        <td class="table-td">CodInvt</td>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
+        <section class="registrar-ventas__container-lista-productos  box-shadow">
+            <div class="registrar-ventas__lista-productos-title">
+                <h2>Productos Para Vender</h2>
+            </div>
+            <div class="registrar-ventas__lista-productos-contenido"></div>
+            <div class="registrar-ventas__lista-productos-totales">
+                <section class="registrar-ventas__total">
+                    <h3>Cantidad Total</h3>
+                    <p>58</p>
+                </section>
+                <section class="registrar-ventas__total">
+                    <h3>Precio Total</h3>
+                    <p>$ 56000</p>
+                </section>
+            </div>
         </section>
 
 
@@ -61,10 +57,14 @@
 
         <section class="registrar-ventas__container-botones container-botones box-shadow">
             <section class="registrar-ventas__container-boton">
-                <input type="button" class="registrar-ventas__boton-ver-inhabilitados boton" value="Agregar">
+                <button class="registrar-ventas__boton-ver-inhabilitados boton" >
+                    Cancelar Venta
+                </button>
             </section>
             <section class="registrar-ventas__container-boton">
-                <input type="button" class="registrar-ventas__boton-inhabilitar boton" value="Ver inhabilitados">
+                <button type="button" class="registrar-ventas__boton-inhabilitar boton" value="Vender">
+                    Vender
+                </button>
             </section>
         </section>
     </main>
