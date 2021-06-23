@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php
-    require("nav.php");
+    require_once("nav.php");
     ?>
     <main>
         <article class="cards-flex-container">
