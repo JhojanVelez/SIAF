@@ -13,6 +13,7 @@
     grid-template-areas:"titulo   lista"
                         "registro lista"
                         "registro botones";
+    
 }
 
 .registrar-ventas__container-title {
@@ -127,7 +128,7 @@ tbody tr:hover {
     grid-area: lista;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 1fr 70% 1fr;
+    grid-template-rows: 1fr 73% 1fr;
     background-color: var(--color-nav-background);
     padding-bottom: 0;
 }
@@ -135,7 +136,6 @@ tbody tr:hover {
 .registrar-ventas__lista-productos-title {
     font-size: 1.8rem;
     text-align: center;
-    border-bottom: 1px solid;
 }
 
 .registrar-ventas__lista-productos-title > h2 {
@@ -143,10 +143,60 @@ tbody tr:hover {
 }
 
 .registrar-ventas__lista-productos-contenido {
-    padding: 1rem;
+    max-height: 450px;
+    padding: 0 1rem 1rem;
     background-image:linear-gradient(var(--color-main-background),var(--color-main-background)), 
                         linear-gradient(white,white);
+    overflow-y: scroll;
+    scroll-snap-type: y proximity;
 }
+
+.registrar-ventas__lista-producto {
+    display: grid;
+    grid-template-columns: 20% 1fr 35% 10%;
+    margin-top: 1rem;
+    padding: 2rem;
+    padding-left: 0;
+    scroll-snap-align: center;
+}
+
+.registrar-ventas__lista-producto-img {
+    height: 80px;
+    align-self: center;
+    justify-self: center;
+}
+
+.registrar-ventas__lista-producto-precios {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.registrar-ventas__lista-producto-precio {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.registrar-ventas__lista-producto-precio * {
+    width: 50%;
+}
+
+.registrar-ventas__lista-producto-botones {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.registrar-ventas__lista-producto-boton {
+    width: 30px;
+    height: 30px;
+}
+
+.registrar-ventas__lista-producto-boton:hover {
+    cursor: pointer;
+}
+
 
 .registrar-ventas__lista-productos-totales {
     display: flex;
@@ -165,7 +215,7 @@ tbody tr:hover {
     color: var(--color-button-text);
 }
 
-.registrar-ventas__lista-producto {
-    display: grid;
-    grid-template-columns: 20% 1fr 30% 10%;
-}
+
+
+
+

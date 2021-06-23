@@ -20,10 +20,10 @@
             <div class="registrar-ventas__lista-productos-title">
                 <h2>Productos Para Vender</h2>
             </div>
-            <div class="registrar-ventas__lista-productos-contenido">
+            <div class="registrar-ventas__lista-productos-contenido box-shadow">
                 <figure class="registrar-ventas__lista-producto box-shadow">
                     <div class="registrar-ventas__lista-producto-img">
-                        <img src="" alt="">
+                        <img src="../imagenes/corazon-icono.svg" alt="">
                     </div>
                     <div class="registrar-ventas__lista-producto-info">
                         <h4 class="registrar-ventas__lista-producto-info-title">CODIGO</h4>
@@ -34,22 +34,22 @@
                         <p class="registrar-ventas__lista-producto-data">56</p>
                     </div>
                     <div class="registrar-ventas__lista-producto-precios">
-                        <section class="registrar-ventas__lista-producto-precio-uni">
+                        <section class="registrar-ventas__lista-producto-precio">
                             <h4>PRECIO UNIDAD</h4>
-                            <p>$0000</p>
+                            <p> <strong>$0000</strong></p>
                         </section>
-                        <section class="registrar-ventas__lista-producto-precio-uni">
+                        <section class="registrar-ventas__lista-producto-precio">
                             <h4>PRECIO TOTAL</h4>
-                            <p>$0000</p>
+                            <p><strong>$0000</strong></p>
                         </section>
                     </div>
                     <div class="registrar-ventas__lista-producto-botones">
-                        <button class="registrar-ventas__lista-producto-eliminar">
-                            <img src="" alt="">
-                        </button>
-                        <button class="registrar-ventas__lista-producto-editar">
-                            <img src="" alt="">
-                        </button>
+                        <section class="registrar-ventas__lista-producto-boton">
+                            <img src="../imagenes/editar-icono.svg" alt="">
+                        </section>
+                        <section class="registrar-ventas__lista-producto-boton">
+                            <img src="../imagenes/delete-icono.svg" alt="">
+                        </section>
                     </div>
                 </figure>
             </div>
