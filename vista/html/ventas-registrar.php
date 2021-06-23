@@ -20,7 +20,39 @@
             <div class="registrar-ventas__lista-productos-title">
                 <h2>Productos Para Vender</h2>
             </div>
-            <div class="registrar-ventas__lista-productos-contenido"></div>
+            <div class="registrar-ventas__lista-productos-contenido">
+                <figure class="registrar-ventas__lista-producto box-shadow">
+                    <div class="registrar-ventas__lista-producto-img">
+                        <img src="" alt="">
+                    </div>
+                    <div class="registrar-ventas__lista-producto-info">
+                        <h4 class="registrar-ventas__lista-producto-info-title">CODIGO</h4>
+                        <p class="registrar-ventas__lista-producto-data">5236548548</p>
+                        <h4 class="registrar-ventas__lista-producto-info-title">NOMBRE DE PRODUCTO</h4>
+                        <p class="registrar-ventas__lista-producto-data">Acetaminofen del carmen</p>
+                        <h4 class="registrar-ventas__lista-producto-info-title">CANTIDAD</h4>
+                        <p class="registrar-ventas__lista-producto-data">56</p>
+                    </div>
+                    <div class="registrar-ventas__lista-producto-precios">
+                        <section class="registrar-ventas__lista-producto-precio-uni">
+                            <h4>PRECIO UNIDAD</h4>
+                            <p>$0000</p>
+                        </section>
+                        <section class="registrar-ventas__lista-producto-precio-uni">
+                            <h4>PRECIO TOTAL</h4>
+                            <p>$0000</p>
+                        </section>
+                    </div>
+                    <div class="registrar-ventas__lista-producto-botones">
+                        <button class="registrar-ventas__lista-producto-eliminar">
+                            <img src="" alt="">
+                        </button>
+                        <button class="registrar-ventas__lista-producto-editar">
+                            <img src="" alt="">
+                        </button>
+                    </div>
+                </figure>
+            </div>
             <div class="registrar-ventas__lista-productos-totales">
                 <section class="registrar-ventas__total">
                     <h3>Cantidad Total</h3>
