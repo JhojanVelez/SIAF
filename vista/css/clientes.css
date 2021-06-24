@@ -1,0 +1,206 @@
+@import url(main.css);
+
+.grid-container-main {
+    min-width: 1500px;
+    max-width: 90%;
+}
+
+.clientes__filtro {
+    display: grid;
+    grid-template-columns: 75% 1fr;
+    grid-template-rows: min-content min-content;
+    grid-template-areas:"filter-titulo filter-titulo"
+                        "filter-inputs filter-gen-repo";
+    grid-gap: 2rem;
+}
+
+.clientes__filtro-titulo {
+    font-size: 2.2rem;
+    grid-area: filter-titulo;
+}
+
+.clientes__filtro-form {
+    grid-area: filter-inputs;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    align-content: center;
+    grid-gap: 2rem;
+}
+
+.clientes__filtro-input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.clientes__filtro-input-label {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+.clientes__filtro-gen-repo {
+    grid-area: filter-gen-repo;
+}
+
+
+
+.clientes__container-table {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 1fr;
+    background-color: var(--color-nav-background);
+}
+
+.clientes__lista-title {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.clientes__lista-title > h2 {
+    color: var(--color-button-text);
+}
+
+.clientes__lista-contenido {
+    height: 100%;
+    padding: 0 1rem 1rem;
+    background-image:linear-gradient(var(--color-main-background),var(--color-main-background)), 
+                        linear-gradient(white,white);
+    overflow-y: scroll;
+    scroll-snap-type: y proximity;
+}
+
+.clientes__lista-cliente {
+    display: grid;
+    grid-template-columns: 15% 1fr 12%;
+    margin-top: 1rem;
+    padding: 2rem 0;
+    scroll-snap-align: center;
+    overflow-x: hidden;
+}
+
+.clientes__lista-cliente-info-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:"doc nom cor"
+                        "tel ape dir";
+    grid-row-gap: 10px;
+}
+
+.clientes__lista-cliente-info.documento {
+    grid-area: doc;
+}
+.clientes__lista-cliente-info.telefono {
+    grid-area: tel;
+}
+.clientes__lista-cliente-info.nombres {
+    grid-area: nom;
+}
+.clientes__lista-cliente-info.apellidos {
+    grid-area: ape;
+}
+.clientes__lista-cliente-info.correo {
+    grid-area: cor;
+}
+.clientes__lista-cliente-info.direccion {
+    grid-area: dir;
+}
+
+.clientes__lista-cliente-img {
+    height: 80px;
+    align-self: center;
+    justify-self: center;
+}
+
+.clientes__lista-cliente-botones {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.clientes__lista-cliente-boton {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    transform: translateX(70%);
+    transition: .5s transform;
+}
+
+.clientes__lista-cliente-boton:hover {
+    background-color: var(--color-button-background);
+    transform: translateX(0);
+}
+
+.clientes__lista-cliente-boton:active {
+    background-color: var(--color-button-background-hover);
+}
+
+.clientes__lista-cliente-boton span {
+    flex-grow: 1;
+}
+
+.clientes__lista-cliente-boton-img{
+    height: 30px;
+    filter: invert();
+}
+
+.clientes__lista-cliente-boton:hover {
+    cursor: pointer;
+}
+
+
+.clientes__lista-productos-totales {
+    display: flex;
+}
+
+.clientes__total {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.clientes__total * {
+    flex-grow: 1;
+    color: var(--color-button-text);
+}
+
+
+.clientes__container-botones {
+    grid-area: botones;
+    display: flex;
+    justify-content: space-around;
+}
+
+.clientes__container-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+}
+
+
+.clientes__container-botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clientes__container-boton {
+    width: 20%;
+    margin: 0 4rem;
+}
+
+.clientes__boton-agregar{
+    width: 100%;
+}
