@@ -1,0 +1,206 @@
+@import url(main.css);
+
+.grid-container-main {
+    min-width: 1500px;
+    max-width: 90%;
+}
+
+.proveedores__filtro {
+    display: grid;
+    grid-template-columns: 75% 1fr;
+    grid-template-rows: min-content min-content;
+    grid-template-areas:"filter-titulo filter-titulo"
+                        "filter-inputs filter-gen-repo";
+    grid-gap: 2rem;
+}
+
+.proveedores__filtro-titulo {
+    font-size: 2.2rem;
+    grid-area: filter-titulo;
+}
+
+.proveedores__filtro-form {
+    grid-area: filter-inputs;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    align-content: center;
+    grid-gap: 2rem;
+}
+
+.proveedores__filtro-input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.proveedores__filtro-input-label {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+.proveedores__filtro-gen-repo {
+    grid-area: filter-gen-repo;
+}
+
+
+
+.proveedores__container-table {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 1fr;
+    background-color: var(--color-nav-background);
+}
+
+.proveedores__lista-title {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.proveedores__lista-title > h2 {
+    color: var(--color-button-text);
+}
+
+.proveedores__lista-contenido {
+    height: 100%;
+    padding: 0 1rem 1rem;
+    background-image:linear-gradient(var(--color-main-background),var(--color-main-background)), 
+                        linear-gradient(white,white);
+    overflow-y: scroll;
+    scroll-snap-type: y proximity;
+}
+
+.proveedores__lista-proveedor {
+    display: grid;
+    grid-template-columns: 15% 1fr 12%;
+    margin-top: 1rem;
+    padding: 2rem 0;
+    scroll-snap-align: center;
+    overflow-x: hidden;
+}
+
+.proveedores__lista-proveedor-info-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:"nit tel dir"
+                        "nom cor ciu";
+    grid-row-gap: 10px;
+}
+
+.proveedores__lista-proveedor-info.nit {
+    grid-area: nit;
+}
+.proveedores__lista-proveedor-info.nombre {
+    grid-area: nom;
+}
+.proveedores__lista-proveedor-info.telefono {
+    grid-area: tel;
+}
+.proveedores__lista-proveedor-info.correo {
+    grid-area: cor;
+}
+.proveedores__lista-proveedor-info.direccion {
+    grid-area: dir;
+}
+.proveedores__lista-proveedor-info.ciudad {
+    grid-area: ciu;
+}
+
+.proveedores__lista-proveedor-img {
+    height: 80px;
+    align-self: center;
+    justify-self: center;
+}
+
+.proveedores__lista-proveedor-botones {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.proveedores__lista-proveedor-boton {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    transform: translateX(70%);
+    transition: .5s transform;
+}
+
+.proveedores__lista-proveedor-boton:hover {
+    background-color: var(--color-button-background);
+    transform: translateX(0);
+}
+
+.proveedores__lista-proveedor-boton:active {
+    background-color: var(--color-button-background-hover);
+}
+
+.proveedores__lista-proveedor-boton span {
+    flex-grow: 1;
+}
+
+.proveedores__lista-proveedor-boton-img{
+    height: 30px;
+    filter: invert();
+}
+
+.proveedores__lista-proveedor-boton:hover {
+    cursor: pointer;
+}
+
+
+.proveedores__lista-productos-totales {
+    display: flex;
+}
+
+.proveedores__total {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.proveedores__total * {
+    flex-grow: 1;
+    color: var(--color-button-text);
+}
+
+
+.proveedores__container-botones {
+    grid-area: botones;
+    display: flex;
+    justify-content: space-around;
+}
+
+.proveedores__container-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+}
+
+
+.proveedores__container-botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.proveedores__container-boton {
+    width: 20%;
+    margin: 0 4rem;
+}
+
+.proveedores__boton-agregar{
+    width: 100%;
+}
