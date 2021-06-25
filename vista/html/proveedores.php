@@ -19,19 +19,19 @@
 
 
         <section class="proveedores__container-filter container-filter box-shadow">
-            <div class="proveedores__filtro">
-                <h2 class="proveedores__filtro-titulo">Filtros de busqueda</h2>
-                <form class="proveedores__filtro-form" action="">
+            <div class="proveedores__filtro filtro">
+                <h2 class="proveedores__filtro-titulo filtro-title">Filtros de busqueda</h2>
+                <form class="proveedores__filtro-form filtro-form" action="">
                     <section class="proveedores__filtro-input-container">
-                        <label class="proveedores__filtro-input-label" for="proveedor-id">Por el NIT</label>
+                        <label class="proveedores__filtro-input-label filtro-label" for="proveedor-id">Por el NIT</label>
                         <input type="text" class="proveedores__filtro-proveedor-id" id="proveedor-id" placeholder="NIT">
                     </section>
                     <section class="proveedores__filtro-input-container">
-                        <label class="proveedores__filtro-input-label" for="proveedor-nombre">Por su nombre</label>
+                        <label class="proveedores__filtro-input-label filtro-label" for="proveedor-nombre">Por su nombre</label>
                         <input type="text" class="proveedores__filtro-proveedor-nombre" id="proveedor-nombre" placeholder="Nombre">
                     </section>
                         <section class="proveedores__filtro-input-container">
-                        <label class="proveedores__filtro-input-label" for="proveedor-ciudad">Por ciudad</label>
+                        <label class="proveedores__filtro-input-label filtro-label" for="proveedor-ciudad">Por ciudad</label>
                         <input type="text" class="proveedores__filtro-proveedor-nombre" id="proveedor-ciudad" placeholder="Ciudad">
                     </section>
                 </form>
@@ -45,13 +45,13 @@
         </section>
 
 
-        <section class="proveedores__container-table  box-shadow">
-            <div class="proveedores__lista-title">
+        <section class="proveedores__container-table contenedor-objetos  box-shadow">
+            <div class="proveedores__lista-title contenedor-objetos__title">
                 <h2>Proveedores Registrados</h2>
             </div>
-            <div class="proveedores__lista-contenido box-shadow">
-                <figure class="proveedores__lista-proveedor box-shadow">
-                    <div class="proveedores__lista-proveedor-img">
+            <div class="proveedores__lista-contenido contenedor-objetos__contenido box-shadow">
+                <figure class="proveedores__lista-proveedor contenedor-objetos__objeto box-shadow">
+                    <div class="proveedores__lista-proveedor-img contenedor-objetos__objeto-img">
                         <img src="../imagenes/proveedor-icono.svg" alt="">
                     </div>
                     <div class="proveedores__lista-proveedor-info-container">
@@ -80,194 +80,14 @@
                             <p class="proveedores__lista-proveedor-data">____________________________________</p>
                         </section>
                     </div>
-                    <div class="proveedores__lista-proveedor-botones">
-                        <button class="proveedores__lista-proveedor-boton boton">
+                    <div class="proveedores__lista-proveedor-botones contenedor-objetos__objeto-botones">
+                        <button class="proveedores__lista-proveedor-boton boton contenedor-objetos__objeto-boton">
                             <div class="proveedores__lista-proveedor-boton-img">
                                 <img src="../imagenes/editar-icono.svg" alt="">
                             </div>
                             <span>Editar</span>
                         </button>
-                        <button class="proveedores__lista-proveedor-boton boton">
-                            <div class="proveedores__lista-proveedor-boton-img">
-                                <img src="../imagenes/delete-icono.svg" alt="">
-                            </div>
-                            <span>Inhabilitar</span>
-                        </button>
-                    </div>
-                </figure>
-                <figure class="proveedores__lista-proveedor box-shadow">
-                    <div class="proveedores__lista-proveedor-img">
-                        <img src="../imagenes/proveedor-icono.svg" alt="">
-                    </div>
-                    <div class="proveedores__lista-proveedor-info-container">
-                        <section class="proveedores__lista-proveedor-info nit">
-                            <h4 class="proveedores__lista-proveedor-info-title">NIT</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
-                        </section>
-                        <section class="proveedores__lista-proveedor-info nombre">
-                            <h4 class="proveedores__lista-proveedor-info-title">NOMBRE</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
-                        </section>
-                        <section class="proveedores__lista-proveedor-info telefono">
-                            <h4 class="proveedores__lista-proveedor-info-title">TELEFONO</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
-                        </section>
-                        <section class="proveedores__lista-proveedor-info correo">
-                            <h4 class="proveedores__lista-proveedor-info-title">CORREO</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
-                        </section>
-                        <section class="proveedores__lista-proveedor-info direccion">
-                            <h4 class="proveedores__lista-proveedor-info-title">DIRECCION</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
-                        </section>
-                        <section class="proveedores__lista-proveedor-info ciudad">
-                            <h4 class="proveedores__lista-proveedor-info-title">CIUDAD</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
-                        </section>
-                    </div>
-                    <div class="proveedores__lista-proveedor-botones">
-                        <button class="proveedores__lista-proveedor-boton boton">
-                            <div class="proveedores__lista-proveedor-boton-img">
-                                <img src="../imagenes/editar-icono.svg" alt="">
-                            </div>
-                            <span>Editar</span>
-                        </button>
-                        <button class="proveedores__lista-proveedor-boton boton">
-                            <div class="proveedores__lista-proveedor-boton-img">
-                                <img src="../imagenes/delete-icono.svg" alt="">
-                            </div>
-                            <span>Inhabilitar</span>
-                        </button>
-                    </div>
-                </figure>
-                <figure class="proveedores__lista-proveedor box-shadow">
-                    <div class="proveedores__lista-proveedor-img">
-                        <img src="../imagenes/proveedor-icono.svg" alt="">
-                    </div>
-                    <div class="proveedores__lista-proveedor-info-container">
-                        <section class="proveedores__lista-proveedor-info nit">
-                            <h4 class="proveedores__lista-proveedor-info-title">NIT</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
-                        </section>
-                        <section class="proveedores__lista-proveedor-info nombre">
-                            <h4 class="proveedores__lista-proveedor-info-title">NOMBRE</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
-                        </section>
-                        <section class="proveedores__lista-proveedor-info telefono">
-                            <h4 class="proveedores__lista-proveedor-info-title">TELEFONO</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
-                        </section>
-                        <section class="proveedores__lista-proveedor-info correo">
-                            <h4 class="proveedores__lista-proveedor-info-title">CORREO</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
-                        </section>
-                        <section class="proveedores__lista-proveedor-info direccion">
-                            <h4 class="proveedores__lista-proveedor-info-title">DIRECCION</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
-                        </section>
-                        <section class="proveedores__lista-proveedor-info ciudad">
-                            <h4 class="proveedores__lista-proveedor-info-title">CIUDAD</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
-                        </section>
-                    </div>
-                    <div class="proveedores__lista-proveedor-botones">
-                        <button class="proveedores__lista-proveedor-boton boton">
-                            <div class="proveedores__lista-proveedor-boton-img">
-                                <img src="../imagenes/editar-icono.svg" alt="">
-                            </div>
-                            <span>Editar</span>
-                        </button>
-                        <button class="proveedores__lista-proveedor-boton boton">
-                            <div class="proveedores__lista-proveedor-boton-img">
-                                <img src="../imagenes/delete-icono.svg" alt="">
-                            </div>
-                            <span>Inhabilitar</span>
-                        </button>
-                    </div>
-                </figure>
-                <figure class="proveedores__lista-proveedor box-shadow">
-                    <div class="proveedores__lista-proveedor-img">
-                        <img src="../imagenes/proveedor-icono.svg" alt="">
-                    </div>
-                    <div class="proveedores__lista-proveedor-info-container">
-                        <section class="proveedores__lista-proveedor-info nit">
-                            <h4 class="proveedores__lista-proveedor-info-title">NIT</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
-                        </section>
-                        <section class="proveedores__lista-proveedor-info nombre">
-                            <h4 class="proveedores__lista-proveedor-info-title">NOMBRE</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
-                        </section>
-                        <section class="proveedores__lista-proveedor-info telefono">
-                            <h4 class="proveedores__lista-proveedor-info-title">TELEFONO</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
-                        </section>
-                        <section class="proveedores__lista-proveedor-info correo">
-                            <h4 class="proveedores__lista-proveedor-info-title">CORREO</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
-                        </section>
-                        <section class="proveedores__lista-proveedor-info direccion">
-                            <h4 class="proveedores__lista-proveedor-info-title">DIRECCION</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
-                        </section>
-                        <section class="proveedores__lista-proveedor-info ciudad">
-                            <h4 class="proveedores__lista-proveedor-info-title">CIUDAD</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
-                        </section>
-                    </div>
-                    <div class="proveedores__lista-proveedor-botones">
-                        <button class="proveedores__lista-proveedor-boton boton">
-                            <div class="proveedores__lista-proveedor-boton-img">
-                                <img src="../imagenes/editar-icono.svg" alt="">
-                            </div>
-                            <span>Editar</span>
-                        </button>
-                        <button class="proveedores__lista-proveedor-boton boton">
-                            <div class="proveedores__lista-proveedor-boton-img">
-                                <img src="../imagenes/delete-icono.svg" alt="">
-                            </div>
-                            <span>Inhabilitar</span>
-                        </button>
-                    </div>
-                </figure>
-                <figure class="proveedores__lista-proveedor box-shadow">
-                    <div class="proveedores__lista-proveedor-img">
-                        <img src="../imagenes/proveedor-icono.svg" alt="">
-                    </div>
-                    <div class="proveedores__lista-proveedor-info-container">
-                        <section class="proveedores__lista-proveedor-info nit">
-                            <h4 class="proveedores__lista-proveedor-info-title">NIT</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
-                        </section>
-                        <section class="proveedores__lista-proveedor-info nombre">
-                            <h4 class="proveedores__lista-proveedor-info-title">NOMBRE</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
-                        </section>
-                        <section class="proveedores__lista-proveedor-info telefono">
-                            <h4 class="proveedores__lista-proveedor-info-title">TELEFONO</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
-                        </section>
-                        <section class="proveedores__lista-proveedor-info correo">
-                            <h4 class="proveedores__lista-proveedor-info-title">CORREO</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
-                        </section>
-                        <section class="proveedores__lista-proveedor-info direccion">
-                            <h4 class="proveedores__lista-proveedor-info-title">DIRECCION</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
-                        </section>
-                        <section class="proveedores__lista-proveedor-info ciudad">
-                            <h4 class="proveedores__lista-proveedor-info-title">CIUDAD</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
-                        </section>
-                    </div>
-                    <div class="proveedores__lista-proveedor-botones">
-                        <button class="proveedores__lista-proveedor-boton boton">
-                            <div class="proveedores__lista-proveedor-boton-img">
-                                <img src="../imagenes/editar-icono.svg" alt="">
-                            </div>
-                            <span>Editar</span>
-                        </button>
-                        <button class="proveedores__lista-proveedor-boton boton">
+                        <button class="proveedores__lista-proveedor-boton boton contenedor-objetos__objeto-boton">
                             <div class="proveedores__lista-proveedor-boton-img">
                                 <img src="../imagenes/delete-icono.svg" alt="">
                             </div>
@@ -280,13 +100,13 @@
 
 
         <section class="proveedores__container-botones container-botones box-shadow">
-            <section class="proveedores__container-boton">
+            <section class="proveedores__container-boton contenedor-objetos__objeto-boton">
                 <button class="proveedores__boton-agregar boton">
                     A&ntilde;adir
                 </button>
             </section>
-            <section class="proveedores__container-boton">
-                <button class="proveedores__boton-agregar boton">
+            <section class="proveedores__container-boton contenedor-objetos__objeto-boton">
+                <button class="proveedores__boton-inhabilitar boton">
                     Ver proveedores inhabilitados
                 </button>
             </section>

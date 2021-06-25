@@ -19,19 +19,19 @@
 
 
         <section class="clientes__container-filter container-filter box-shadow">
-            <div class="clientes__filtro">
-                <h2 class="clientes__filtro-titulo">Filtros de busqueda</h2>
-                <form class="clientes__filtro-form" action="">
+            <div class="clientes__filtro filtro">
+                <h2 class="clientes__filtro-titulo filtro-title">Filtros de busqueda</h2>
+                <form class="clientes__filtro-form filtro-form" action="">
                     <section class="clientes__filtro-input-container">
-                        <label class="clientes__filtro-input-label" for="cliente-id">Por el documento de identidad</label>
+                        <label class="clientes__filtro-input-label filtro-label" for="cliente-id">Por el documento de identidad</label>
                         <input type="text" class="clientes__filtro-cliente-id" id="cliente-id" placeholder="Documento">
                     </section>
                     <section class="clientes__filtro-input-container">
-                        <label class="clientes__filtro-input-label" for="cliente-nombre">Por su nombre</label>
+                        <label class="clientes__filtro-input-label filtro-label" for="cliente-nombre">Por su nombre</label>
                         <input type="text" class="clientes__filtro-cliente-nombre" id="cliente-nombre" placeholder="Nombre">
                     </section>
                         <section class="clientes__filtro-input-container">
-                        <label class="clientes__filtro-input-label" for="cliente-ciudad">Por su apellido</label>
+                        <label class="clientes__filtro-input-label filtro-label" for="cliente-ciudad">Por su apellido</label>
                         <input type="text" class="clientes__filtro-cliente-nombre" id="cliente-ciudad" placeholder="Apellido">
                     </section>
                 </form>
@@ -45,13 +45,13 @@
         </section>
 
 
-        <section class="clientes__container-table  box-shadow">
-            <div class="clientes__lista-title">
+        <section class="clientes__container-table contenedor-objetos  box-shadow">
+            <div class="clientes__lista-title contenedor-objetos__title">
                 <h2>Clientes Registrados</h2>
             </div>
-            <div class="clientes__lista-contenido box-shadow">
-                <figure class="clientes__lista-cliente box-shadow">
-                    <div class="clientes__lista-cliente-img">
+            <div class="clientes__lista-contenido contenedor-objetos__contenido box-shadow">
+                <figure class="clientes__lista-cliente contenedor-objetos__objeto box-shadow">
+                    <div class="clientes__lista-cliente-img contenedor-objetos__objeto-img">
                         <img src="../imagenes/cliente-icono.svg" alt="">
                     </div>
                     <div class="clientes__lista-cliente-info-container">
@@ -80,329 +80,14 @@
                             <p class="clientes__lista-cliente-data">____________________________________</p>
                         </section>
                     </div>
-                    <div class="clientes__lista-cliente-botones">
-                        <button class="clientes__lista-cliente-boton boton">
+                    <div class="clientes__lista-cliente-botones contenedor-objetos__objeto-botones">
+                        <button class="clientes__lista-cliente-boton  boton">
                             <div class="clientes__lista-cliente-boton-img">
                                 <img src="../imagenes/editar-icono.svg" alt="">
                             </div>
                             <span>Editar</span>
                         </button>
-                        <button class="clientes__lista-cliente-boton boton">
-                            <div class="clientes__lista-cliente-boton-img">
-                                <img src="../imagenes/delete-icono.svg" alt="">
-                            </div>
-                            <span>Inhabilitar</span>
-                        </button>
-                    </div>
-                </figure>
-                <figure class="clientes__lista-cliente box-shadow">
-                    <div class="clientes__lista-cliente-img">
-                        <img src="../imagenes/cliente-icono.svg" alt="">
-                    </div>
-                    <div class="clientes__lista-cliente-info-container">
-                        <section class="clientes__lista-cliente-info documento">
-                            <h4 class="clientes__lista-cliente-info-title">DOCUMENTO DE IDENTIDAD</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info telefono">
-                            <h4 class="clientes__lista-cliente-info-title">TELEFONO</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info nombres">
-                            <h4 class="clientes__lista-cliente-info-title">NOMBRES</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info apellidos">
-                            <h4 class="clientes__lista-cliente-info-title">APELLIDOS</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info correo">
-                            <h4 class="clientes__lista-cliente-info-title">CORREO</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info direccion">
-                            <h4 class="clientes__lista-cliente-info-title">DIRECCION</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                    </div>
-                    <div class="clientes__lista-cliente-botones">
-                        <button class="clientes__lista-cliente-boton boton">
-                            <div class="clientes__lista-cliente-boton-img">
-                                <img src="../imagenes/editar-icono.svg" alt="">
-                            </div>
-                            <span>Editar</span>
-                        </button>
-                        <button class="clientes__lista-cliente-boton boton">
-                            <div class="clientes__lista-cliente-boton-img">
-                                <img src="../imagenes/delete-icono.svg" alt="">
-                            </div>
-                            <span>Inhabilitar</span>
-                        </button>
-                    </div>
-                </figure>
-                <figure class="clientes__lista-cliente box-shadow">
-                    <div class="clientes__lista-cliente-img">
-                        <img src="../imagenes/cliente-icono.svg" alt="">
-                    </div>
-                    <div class="clientes__lista-cliente-info-container">
-                        <section class="clientes__lista-cliente-info documento">
-                            <h4 class="clientes__lista-cliente-info-title">DOCUMENTO DE IDENTIDAD</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info telefono">
-                            <h4 class="clientes__lista-cliente-info-title">TELEFONO</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info nombres">
-                            <h4 class="clientes__lista-cliente-info-title">NOMBRES</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info apellidos">
-                            <h4 class="clientes__lista-cliente-info-title">APELLIDOS</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info correo">
-                            <h4 class="clientes__lista-cliente-info-title">CORREO</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info direccion">
-                            <h4 class="clientes__lista-cliente-info-title">DIRECCION</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                    </div>
-                    <div class="clientes__lista-cliente-botones">
-                        <button class="clientes__lista-cliente-boton boton">
-                            <div class="clientes__lista-cliente-boton-img">
-                                <img src="../imagenes/editar-icono.svg" alt="">
-                            </div>
-                            <span>Editar</span>
-                        </button>
-                        <button class="clientes__lista-cliente-boton boton">
-                            <div class="clientes__lista-cliente-boton-img">
-                                <img src="../imagenes/delete-icono.svg" alt="">
-                            </div>
-                            <span>Inhabilitar</span>
-                        </button>
-                    </div>
-                </figure>
-                <figure class="clientes__lista-cliente box-shadow">
-                    <div class="clientes__lista-cliente-img">
-                        <img src="../imagenes/cliente-icono.svg" alt="">
-                    </div>
-                    <div class="clientes__lista-cliente-info-container">
-                        <section class="clientes__lista-cliente-info documento">
-                            <h4 class="clientes__lista-cliente-info-title">DOCUMENTO DE IDENTIDAD</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info telefono">
-                            <h4 class="clientes__lista-cliente-info-title">TELEFONO</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info nombres">
-                            <h4 class="clientes__lista-cliente-info-title">NOMBRES</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info apellidos">
-                            <h4 class="clientes__lista-cliente-info-title">APELLIDOS</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info correo">
-                            <h4 class="clientes__lista-cliente-info-title">CORREO</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info direccion">
-                            <h4 class="clientes__lista-cliente-info-title">DIRECCION</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                    </div>
-                    <div class="clientes__lista-cliente-botones">
-                        <button class="clientes__lista-cliente-boton boton">
-                            <div class="clientes__lista-cliente-boton-img">
-                                <img src="../imagenes/editar-icono.svg" alt="">
-                            </div>
-                            <span>Editar</span>
-                        </button>
-                        <button class="clientes__lista-cliente-boton boton">
-                            <div class="clientes__lista-cliente-boton-img">
-                                <img src="../imagenes/delete-icono.svg" alt="">
-                            </div>
-                            <span>Inhabilitar</span>
-                        </button>
-                    </div>
-                </figure>
-                <figure class="clientes__lista-cliente box-shadow">
-                    <div class="clientes__lista-cliente-img">
-                        <img src="../imagenes/cliente-icono.svg" alt="">
-                    </div>
-                    <div class="clientes__lista-cliente-info-container">
-                        <section class="clientes__lista-cliente-info documento">
-                            <h4 class="clientes__lista-cliente-info-title">DOCUMENTO DE IDENTIDAD</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info telefono">
-                            <h4 class="clientes__lista-cliente-info-title">TELEFONO</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info nombres">
-                            <h4 class="clientes__lista-cliente-info-title">NOMBRES</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info apellidos">
-                            <h4 class="clientes__lista-cliente-info-title">APELLIDOS</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info correo">
-                            <h4 class="clientes__lista-cliente-info-title">CORREO</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info direccion">
-                            <h4 class="clientes__lista-cliente-info-title">DIRECCION</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                    </div>
-                    <div class="clientes__lista-cliente-botones">
-                        <button class="clientes__lista-cliente-boton boton">
-                            <div class="clientes__lista-cliente-boton-img">
-                                <img src="../imagenes/editar-icono.svg" alt="">
-                            </div>
-                            <span>Editar</span>
-                        </button>
-                        <button class="clientes__lista-cliente-boton boton">
-                            <div class="clientes__lista-cliente-boton-img">
-                                <img src="../imagenes/delete-icono.svg" alt="">
-                            </div>
-                            <span>Inhabilitar</span>
-                        </button>
-                    </div>
-                </figure>
-                <figure class="clientes__lista-cliente box-shadow">
-                    <div class="clientes__lista-cliente-img">
-                        <img src="../imagenes/cliente-icono.svg" alt="">
-                    </div>
-                    <div class="clientes__lista-cliente-info-container">
-                        <section class="clientes__lista-cliente-info documento">
-                            <h4 class="clientes__lista-cliente-info-title">DOCUMENTO DE IDENTIDAD</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info telefono">
-                            <h4 class="clientes__lista-cliente-info-title">TELEFONO</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info nombres">
-                            <h4 class="clientes__lista-cliente-info-title">NOMBRES</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info apellidos">
-                            <h4 class="clientes__lista-cliente-info-title">APELLIDOS</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info correo">
-                            <h4 class="clientes__lista-cliente-info-title">CORREO</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info direccion">
-                            <h4 class="clientes__lista-cliente-info-title">DIRECCION</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                    </div>
-                    <div class="clientes__lista-cliente-botones">
-                        <button class="clientes__lista-cliente-boton boton">
-                            <div class="clientes__lista-cliente-boton-img">
-                                <img src="../imagenes/editar-icono.svg" alt="">
-                            </div>
-                            <span>Editar</span>
-                        </button>
-                        <button class="clientes__lista-cliente-boton boton">
-                            <div class="clientes__lista-cliente-boton-img">
-                                <img src="../imagenes/delete-icono.svg" alt="">
-                            </div>
-                            <span>Inhabilitar</span>
-                        </button>
-                    </div>
-                </figure>
-                <figure class="clientes__lista-cliente box-shadow">
-                    <div class="clientes__lista-cliente-img">
-                        <img src="../imagenes/cliente-icono.svg" alt="">
-                    </div>
-                    <div class="clientes__lista-cliente-info-container">
-                        <section class="clientes__lista-cliente-info documento">
-                            <h4 class="clientes__lista-cliente-info-title">DOCUMENTO DE IDENTIDAD</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info telefono">
-                            <h4 class="clientes__lista-cliente-info-title">TELEFONO</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info nombres">
-                            <h4 class="clientes__lista-cliente-info-title">NOMBRES</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info apellidos">
-                            <h4 class="clientes__lista-cliente-info-title">APELLIDOS</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info correo">
-                            <h4 class="clientes__lista-cliente-info-title">CORREO</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info direccion">
-                            <h4 class="clientes__lista-cliente-info-title">DIRECCION</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                    </div>
-                    <div class="clientes__lista-cliente-botones">
-                        <button class="clientes__lista-cliente-boton boton">
-                            <div class="clientes__lista-cliente-boton-img">
-                                <img src="../imagenes/editar-icono.svg" alt="">
-                            </div>
-                            <span>Editar</span>
-                        </button>
-                        <button class="clientes__lista-cliente-boton boton">
-                            <div class="clientes__lista-cliente-boton-img">
-                                <img src="../imagenes/delete-icono.svg" alt="">
-                            </div>
-                            <span>Inhabilitar</span>
-                        </button>
-                    </div>
-                </figure>
-                <figure class="clientes__lista-cliente box-shadow">
-                    <div class="clientes__lista-cliente-img">
-                        <img src="../imagenes/cliente-icono.svg" alt="">
-                    </div>
-                    <div class="clientes__lista-cliente-info-container">
-                        <section class="clientes__lista-cliente-info documento">
-                            <h4 class="clientes__lista-cliente-info-title">DOCUMENTO DE IDENTIDAD</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info telefono">
-                            <h4 class="clientes__lista-cliente-info-title">TELEFONO</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info nombres">
-                            <h4 class="clientes__lista-cliente-info-title">NOMBRES</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info apellidos">
-                            <h4 class="clientes__lista-cliente-info-title">APELLIDOS</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info correo">
-                            <h4 class="clientes__lista-cliente-info-title">CORREO</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info direccion">
-                            <h4 class="clientes__lista-cliente-info-title">DIRECCION</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                    </div>
-                    <div class="clientes__lista-cliente-botones">
-                        <button class="clientes__lista-cliente-boton boton">
-                            <div class="clientes__lista-cliente-boton-img">
-                                <img src="../imagenes/editar-icono.svg" alt="">
-                            </div>
-                            <span>Editar</span>
-                        </button>
-                        <button class="clientes__lista-cliente-boton boton">
+                        <button class="clientes__lista-cliente-boton  boton">
                             <div class="clientes__lista-cliente-boton-img">
                                 <img src="../imagenes/delete-icono.svg" alt="">
                             </div>
