@@ -16,13 +16,13 @@
             <h1 class="registrar-ventas__titulo">Registra tus Ventas</h1>
         </section>
 
-        <section class="registrar-ventas__container-lista-productos  box-shadow">
-            <div class="registrar-ventas__lista-productos-title">
+        <section class="registrar-ventas__container-lista-productos contenedor-objetos box-shadow">
+            <div class="registrar-ventas__lista-productos-title contenedor-objetos__title">
                 <h2>Productos Para Vender</h2>
             </div>
-            <div class="registrar-ventas__lista-productos-contenido box-shadow">
-                <figure class="registrar-ventas__lista-producto box-shadow">
-                    <div class="registrar-ventas__lista-producto-img">
+            <div class="registrar-ventas__lista-productos-contenido contenedor-objetos__contenido box-shadow">
+                <figure class="registrar-ventas__lista-producto contenedor-objetos__objeto box-shadow">
+                    <div class="registrar-ventas__lista-producto-img contenedor-objetos__objeto-img">
                         <img src="../imagenes/corazon-icono.svg" alt="">
                     </div>
                     <div class="registrar-ventas__lista-producto-info">
@@ -43,11 +43,11 @@
                             <p><strong>$0000</strong></p>
                         </section>
                     </div>
-                    <div class="registrar-ventas__lista-producto-botones">
-                        <section class="registrar-ventas__lista-producto-boton">
+                    <div class="registrar-ventas__lista-producto-botones contenedor-objetos__objeto-botones">
+                        <section class="registrar-ventas__lista-producto-boton contenedor-objetos__objeto-boton">
                             <img src="../imagenes/editar-icono.svg" alt="">
                         </section>
-                        <section class="registrar-ventas__lista-producto-boton">
+                        <section class="registrar-ventas__lista-producto-boton contenedor-objetos__objeto-boton">
                             <img src="../imagenes/delete-icono.svg" alt="">
                         </section>
                     </div>

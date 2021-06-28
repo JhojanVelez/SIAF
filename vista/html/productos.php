@@ -365,7 +365,7 @@
                         <option value="Pre">Pre4</option>
                     </select>
                 </form>
-                <div class="productos_filtro-gen-repo filtro-gen-repo">
+                <div class="productos_filtro-gen-repo">
                     <div class="productos_filtro-gen-repo-img filtro-gen-repo-img">
                         <img src="../imagenes/informe.svg" alt="">
                     </div>

@@ -38,9 +38,9 @@
     grid-template-columns: repeat(2,50%);
     grid-template-rows: repeat(3,20%) 30%;
     grid-template-areas:"lbl-1       inp-id"
-    "lbl-2       inp-nom"
-    "box-cant    btn-prod"
-    "btn-agregar btn-agregar";
+                        "lbl-2       inp-nom"
+                        "box-cant    btn-prod"
+                        "btn-agregar btn-agregar";
     justify-items: center;
     align-items: center;
     grid-row-gap: 10px;
@@ -95,75 +95,23 @@
     transform: rotate(360deg);
 }
 
-.registro-gen-repo {
-    flex-direction: row;
-}
 
-table {
-    min-width: 200%;
-}
-
-tbody tr:hover {
-    background-color: var(--color-button-background);
-    color: var(--color-button-text);
-    cursor: pointer;
-}
-
-
-
-.registrar-ventas__container-botones {
-    grid-area: botones;
-    display: flex;
-    justify-content: space-around;
-}
-
-.registrar-ventas__container-boton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 45%;
-}
 
 .registrar-ventas__container-lista-productos {
     grid-area: lista;
-    display: grid;
-    grid-template-columns: 100%;
     grid-template-rows: 1fr 73% 1fr;
-    background-color: var(--color-nav-background);
     padding-bottom: 0;
-}
-
-.registrar-ventas__lista-productos-title {
-    font-size: 1.8rem;
-    text-align: center;
-}
-
-.registrar-ventas__lista-productos-title > h2 {
-    color: var(--color-button-text);
 }
 
 .registrar-ventas__lista-productos-contenido {
     max-height: 450px;
-    padding: 0 1rem 1rem;
-    background-image:linear-gradient(var(--color-main-background),var(--color-main-background)), 
-                        linear-gradient(white,white);
-    overflow-y: scroll;
-    scroll-snap-type: y proximity;
 }
 
 .registrar-ventas__lista-producto {
     display: grid;
     grid-template-columns: 20% 1fr 35% 10%;
-    margin-top: 1rem;
-    padding: 2rem;
+    padding-right: 2rem;
     padding-left: 0;
-    scroll-snap-align: center;
-}
-
-.registrar-ventas__lista-producto-img {
-    height: 80px;
-    align-self: center;
-    justify-self: center;
 }
 
 .registrar-ventas__lista-producto-precios {
@@ -182,15 +130,8 @@ tbody tr:hover {
 }
 
 .registrar-ventas__lista-producto-botones {
-    display: flex;
-    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-}
-
-.registrar-ventas__lista-producto-boton {
-    width: 30px;
-    height: 30px;
 }
 
 .registrar-ventas__lista-producto-boton:hover {
@@ -214,6 +155,21 @@ tbody tr:hover {
     flex-grow: 1;
     color: var(--color-button-text);
 }
+
+
+.registrar-ventas__container-botones {
+    grid-area: botones;
+    display: flex;
+    justify-content: space-around;
+}
+
+.registrar-ventas__container-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+}
+
 
 
 

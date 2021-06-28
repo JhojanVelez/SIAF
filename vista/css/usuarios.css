@@ -1,0 +1,66 @@
+@import url(main.css);
+
+.usuarios__lista-usuario {
+    grid-template-columns: 20% 1fr 12%;
+}
+
+.usuarios__lista-usuario-info-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:"doc tel rol"
+                        "nom cor rol"
+                        "ape dir pas"
+                        "eps rh  pas";
+}
+
+.usuarios__lista-usuario-info.documento {
+    grid-area: doc;
+}
+.usuarios__lista-usuario-info.nombres {
+    grid-area: nom;
+}
+.usuarios__lista-usuario-info.apellidos {
+    grid-area: ape;
+}
+.usuarios__lista-usuario-info.eps {
+    grid-area: eps;
+}
+.usuarios__lista-usuario-info.telefono {
+    grid-area: tel;
+}
+.usuarios__lista-usuario-info.correo {
+    grid-area: cor;
+}
+.usuarios__lista-usuario-info.direccion {
+    grid-area: dir;
+}
+.usuarios__lista-usuario-info.rh {
+    grid-area: rh;
+}
+.usuarios__lista-usuario-info.rol,
+.usuarios__lista-usuario-info.password {
+    display: flex;
+    flex-direction: column;
+}
+.usuarios__lista-usuario-info.rol {
+    grid-area: rol;
+    justify-content: flex-end;
+}
+.usuarios__lista-usuario-info.password {
+    grid-area: pas;
+    justify-content: flex-start;
+}
+
+.usuarios__lista-usuario-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.usuarios__lista-usuario-botones {
+    justify-content: space-around;
+}
+
+
+

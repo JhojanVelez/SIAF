@@ -1,0 +1,33 @@
+@import url(main.css);
+
+
+.proveedores__lista-proveedor {
+    grid-template-columns: 15% 1fr 12%;
+}
+
+.proveedores__lista-proveedor-info-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:"nit tel dir"
+                        "nom cor ciu";
+    grid-row-gap: 10px;
+}
+
+.proveedores__lista-proveedor-info.nit {
+    grid-area: nit;
+}
+.proveedores__lista-proveedor-info.nombre {
+    grid-area: nom;
+}
+.proveedores__lista-proveedor-info.telefono {
+    grid-area: tel;
+}
+.proveedores__lista-proveedor-info.correo {
+    grid-area: cor;
+}
+.proveedores__lista-proveedor-info.direccion {
+    grid-area: dir;
+}
+.proveedores__lista-proveedor-info.ciudad {
+    grid-area: ciu;
+}

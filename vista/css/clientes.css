@@ -1,0 +1,32 @@
+@import url(main.css);
+
+.clientes__lista-cliente {
+    grid-template-columns: 15% 1fr 12%;
+}
+
+.clientes__lista-cliente-info-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:"doc nom cor"
+                        "tel ape dir";
+    grid-row-gap: 10px;
+}
+
+.clientes__lista-cliente-info.documento {
+    grid-area: doc;
+}
+.clientes__lista-cliente-info.telefono {
+    grid-area: tel;
+}
+.clientes__lista-cliente-info.nombres {
+    grid-area: nom;
+}
+.clientes__lista-cliente-info.apellidos {
+    grid-area: ape;
+}
+.clientes__lista-cliente-info.correo {
+    grid-area: cor;
+}
+.clientes__lista-cliente-info.direccion {
+    grid-area: dir;
+}
