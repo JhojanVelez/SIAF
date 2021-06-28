@@ -52,7 +52,7 @@
             <div class="usuarios__lista-contenido contenedor-objetos__contenido box-shadow">
                 <figure class="usuarios__lista-usuario contenedor-objetos__objeto box-shadow">
                     <div class="usuarios__lista-usuario-img contenedor-objetos__objeto-img">
-                        <img src="https://idehpucp.pucp.edu.pe/wp-content/uploads/2015/02/IMG_5233.jpg" alt="">
+                        <img src="https://cdn.forbes.com.mx/2019/04/blackrrock-invertir-1-640x360.jpg" alt="">
                     </div>
                     <div class="usuarios__lista-usuario-info-container">
                         <section class="usuarios__lista-usuario-info documento">
