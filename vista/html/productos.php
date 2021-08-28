@@ -27,10 +27,8 @@
                         <td class="table-td">Presentacion</td>
                         <td class="table-td">UnidadMedida</td>
                         <td class="table-td">PrecioVenta</td>
-                        <td class="table-td">FechaVenc</td>
                         <td class="table-td">Laboratorio</td>
                         <td class="table-td">CodPro</td>
-                        <td class="table-td">CodInvt</td>
                     </tr>
                 </thead>
                 <tbody>
