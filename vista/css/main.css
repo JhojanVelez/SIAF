@@ -1,3 +1,12 @@
+/*
+Este main.css tiene como objetivo crear clases CSS reutilizables, es decir, si un componente se repite en mas de 3 
+paginas diferentes, se creara un estilo general, el cual simplifique los estilos y simplemente solo colocando
+el nombre de la clase, use los estilos por defecto.
+
+Y si deseas crear estilos unicos que son irrepetibles, pudes ir a los estilos individuales y crear una clase 
+respetando la metodologia "BEM".
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
 *,
@@ -12,7 +21,7 @@
 }
 
 :root {
-
+/*Este es el color del background que va en todas las interfaces*/
   --color-main-background: #6b63ff25;
 
   --color-title-h1: #020029;
@@ -26,6 +35,7 @@
 
   --color-tr-background: #6b63ff48;
 
+/*Estos son los colores y estilos generales de cada card*/
   --color-card-background: white;
   --color-card-box-shadow: 0px 7px 20px -7px #6c63ff3d;
   --border-card-radius: 10px;
@@ -74,6 +84,7 @@ input:focus, select:focus {
   border: 1px solid var(--color-nav-background);
 }
 
+/*Estilos para todos los botones de la pagina*/
 
 .boton {
   width: 100%;
@@ -97,6 +108,8 @@ input:focus, select:focus {
     border-radius: var(--border-card-radius);
     padding: 2rem;
 }
+
+/*Con estos estilos, dividimos nuestra pagina en 4 secciones el titulo, los filtros, el contenido principal y los botones*/
 
 .grid-container-main {
   min-width: 1700px;
@@ -282,7 +295,7 @@ tbody tr:hover {
 
 
 /* Estos son los estilos para las cajas que tienen fondo morado y que guardan la lista de productos a vender,
-usuarios, clientes, proveedores */
+usuarios, clientes y proveedores */
 
 .contenedor-objetos {
   height: 100%;
