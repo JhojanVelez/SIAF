@@ -389,6 +389,70 @@
                 <input type="button" class="productos__boton-inhabilitar boton" value="Ver productos inhabilitados">
             </section>
         </section>
+
+
+
+        
+        <section class="productos__container-modal">
+            <dialog open="" class="productos__modal-inhabilitar-producto">
+                <h2 class="productos__modal-inhabilitar-producto-title">¡Ten cuidado!</h2>
+                <p class="productos__modal-inhabilitar-producto-text">
+                    ¿Estas seguro de inhabilitar este producto?<br>
+                    Recuerda que una vez inhabilitado, no lo podras volver a habilitar
+                </p>
+                <div class="productos__modal-inhabilitar-producto-info">
+                    <section class="productos__modal-inhabilitar-producto-info-item">
+                        <h3>CODIGO DE BARRAS</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="productos__modal-inhabilitar-producto-info-item">
+                        <h3>NIT DEL PROVEEDOR</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="productos__modal-inhabilitar-producto-info-item">
+                        <h3>REGISTRO SANITARIO INVIMA</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="productos__modal-inhabilitar-producto-info-item">
+                        <h3>NOMBRE DEL PROVEEDOR</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="productos__modal-inhabilitar-producto-info-item">
+                        <h3>UBICACION FISICA</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="productos__modal-inhabilitar-producto-info-item">
+                        <h3>LABORATORIO</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="productos__modal-inhabilitar-producto-info-item">
+                        <h3>UNIDAD DE MEDIDA</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="productos__modal-inhabilitar-producto-info-item">
+                        <h3>PRECIO DE VENTA</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="productos__modal-inhabilitar-producto-info-item">
+                        <h3>DESCRIPCION</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="productos__modal-inhabilitar-producto-info-item">
+                        <h3>PRESENTACION</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                </div>
+                <div class="productos__modal-inhabilitar-producto-btns-container">
+                    <button class="productos__modal-inhabilitar-producto-btn-confirmar boton">Confirmar</button>
+                    <button class="productos__modal-inhabilitar-producto-btn-cancelar boton">Cancelar</button>
+                </div>
+            </dialog>
+
+
+            <dialog class="">
+
+            </dialog>
+        </section>
     </main>
 </body>
 </html>

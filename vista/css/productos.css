@@ -84,3 +84,62 @@ table {
     width: 80%;
 }
 
+/*-------------------------Estilos del modal de inhabilitar producto----------------------------------*/
+
+.productos__container-modal {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-background-modal);
+    display: flex;
+    align-items: center;
+}
+
+.productos__modal-inhabilitar-producto {
+    margin: auto;
+    min-width: 800px;
+    max-width: 900px;
+    padding: 2rem;  
+}
+.productos__modal-inhabilitar-producto-title {
+    font-size: 3rem;
+    margin-bottom: .8rem;
+    text-align: center;
+}
+
+.productos__modal-inhabilitar-producto-text {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.productos__modal-inhabilitar-producto-info {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2,minmax(200px,400px));
+    grid-gap: 1rem 3rem;
+}
+
+.productos__modal-inhabilitar-producto-info-item {
+    word-break: break-all;
+}
+
+.productos__modal-inhabilitar-producto-btns-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.productos__modal-inhabilitar-producto-btns-container .boton {
+    width: 40%;
+}
+
+
+
+
