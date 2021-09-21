@@ -1,5 +1,9 @@
 @import url(main.css);
 
+.nav__li:nth-child(6) {
+    border-bottom: 2px solid var(--color-button-text);
+}
+
 .clientes__lista-cliente {
     grid-template-columns: 15% 1fr 12%;
 }

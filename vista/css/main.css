@@ -446,7 +446,7 @@ usuarios, clientes, proveedores */
                       "usu";
   justify-items: center;
   align-items: center;
-  color: white;
+  color: var(--color-button-text);
 }
 
 .user-icon-container__img {
@@ -478,7 +478,7 @@ usuarios, clientes, proveedores */
   display: block;
   line-height: 40px;
   transition: color .3s;
-  color: white;
+  color: var(--color-button-text);
   font-weight: 500;
   width: 100%;
 }

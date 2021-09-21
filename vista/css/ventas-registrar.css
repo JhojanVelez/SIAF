@@ -1,5 +1,9 @@
 @import url(main.css);
 
+.nav__li:nth-child(4) {
+    border-bottom: 2px solid var(--color-button-text);
+}
+
 .boton:not(.boton-cerrar-sesion-container__boton) {
     margin: 0;
     width: 80%;

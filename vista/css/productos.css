@@ -1,5 +1,9 @@
 @import url(main.css);
 
+.nav__li:nth-child(2) {
+    border-bottom: 2px solid white;
+}
+
 .grid-container-main {
     width: 90%;
     height: 100%;

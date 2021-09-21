@@ -1,5 +1,9 @@
 @import url(main.css);
 
+.nav__li:nth-child(3) {
+    border-bottom: 2px solid var(--color-button-text);
+}
+
 .entradas__filtro {
     display: grid;
     grid-template-columns: 75% 1fr;

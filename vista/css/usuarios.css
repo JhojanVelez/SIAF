@@ -1,5 +1,9 @@
 @import url(main.css);
 
+.nav__li:nth-child(7) {
+    border-bottom: 2px solid var(--color-button-text);
+}
+
 .usuarios__lista-usuario {
     grid-template-columns: 20% 1fr 12%;
 }

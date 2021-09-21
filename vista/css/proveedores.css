@@ -1,5 +1,8 @@
 @import url(main.css);
 
+.nav__li:nth-child(5) {
+    border-bottom: 2px solid var(--color-button-text);
+}
 
 .proveedores__lista-proveedor {
     grid-template-columns: 15% 1fr 12%;
