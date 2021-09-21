@@ -99,6 +99,9 @@ table {
     background-color: var(--color-background-modal);
     display: flex;
     align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s;
 }
 
 .productos__modal-inhabilitar-producto {

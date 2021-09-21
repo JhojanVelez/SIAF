@@ -377,16 +377,16 @@
 
         <section class="productos__container-botones container-botones box-shadow">
             <section class="productos__container-boton">
-                <input type="button" class="productos__boton-agregar boton" value="Inhabilitar">
+                <input type="button" class="productos__boton-inhabilitar boton" value="Inhabilitar">
             </section>
             <section class="productos__container-boton">
                 <input type="button" class="productos__boton-editar boton" value="Editar">
             </section>
             <section class="productos__container-boton">
-                <input type="button" class="productos__boton-ver-inhabilitados boton" value="Agregar">
+                <input type="button" class="productos__boton-agregar boton" value="Agregar">
             </section>
             <section class="productos__container-boton">
-                <input type="button" class="productos__boton-inhabilitar boton" value="Ver productos inhabilitados">
+                <input type="button" class="productos__boton-ver-inhabilitados boton" value="Ver productos inhabilitados">
             </section>
         </section>
 
@@ -449,18 +449,19 @@
             </dialog>
 
 
-            <dialog open="" class="productos__modal-inhabilitacion-exitosa">
+            <dialog class="productos__modal-inhabilitacion-exitosa">
                 <h2>¡Exelente!</h2>
                 <p>Has inhabilitado un producto exitosamente</p>
                 <button class="productos__modal-inhabilitacion-exitosa-btn boton" >Ok</button>
             </dialog>
             
-            <dialog open="" class="productos__modal-inhabilitacion-fallo">
+            <dialog class="productos__modal-inhabilitacion-fallo">
                 <h2>¡Algo salio mal!</h2>
                 <p>Este producto no pudo ser inhabilitado, porque posiblemente hay registros de este en otras partes del sistema</p>
                 <button class="productos__modal-inhabilitacion-fallo-btn boton" >Ok</button>
             </dialog>
         </section>
     </main>
+    <script src="../js/manejo_de_inhabilitacion.js"></script>
 </body>
 </html>
