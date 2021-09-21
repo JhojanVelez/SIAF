@@ -449,8 +449,9 @@
             </dialog>
 
 
-            <dialog class="">
-
+            <dialog class="productos__modal-inhabilitacion-exitosa">
+                <h2>¡Exelente!</h2>
+                <p>Has inhabilitado un producto exitosamente</p>
             </dialog>
         </section>
     </main>

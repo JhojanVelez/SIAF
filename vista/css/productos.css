@@ -99,10 +99,8 @@ table {
 }
 
 .productos__modal-inhabilitar-producto {
-    margin: auto;
     min-width: 800px;
     max-width: 900px;
-    padding: 2rem;  
 }
 .productos__modal-inhabilitar-producto-title {
     font-size: 3rem;

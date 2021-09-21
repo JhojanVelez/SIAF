@@ -101,13 +101,6 @@ input, select {
   width: 50%;
 }
 
-/* .restablecer-contrasenia__input-email,
-.restablecer-contrasenia__boton-verificar {
-  outline: none;
-  font-size: 1rem;
-  width: 100%;
-} */
-
 .restablecer-contrasenia__boton-verificar {
   width: 50%;
   background-color: var(--color-button-background);
@@ -132,6 +125,7 @@ input, select {
   right: 5px;
   top: 5px;
   user-select: none;
+  color: var(--color-nav-background);
 }
 
 .restablecer-contrasenia__dialog-cerrar:hover {
@@ -157,6 +151,7 @@ input, select {
   left: 5px;
   top: 5px;
   user-select: none;
+  color: var(--color-nav-background);
 }
 
 .restablecer-contrasenia__dialog--2 {

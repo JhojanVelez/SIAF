@@ -77,6 +77,16 @@ input:focus, select:focus {
 }
 
 
+
+dialog {
+  margin: auto;
+  padding: 2rem;  
+  border-radius: var(--border-card-radius);
+  border: none;
+  border-top: 5px solid var(--color-nav-background);
+}
+
+
 .boton {
   width: 100%;
   padding: 12px 12px;
