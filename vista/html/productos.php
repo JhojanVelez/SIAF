@@ -394,7 +394,7 @@
 
         
         <section class="productos__container-modal">
-            <dialog open="" class="productos__modal-inhabilitar-producto">
+            <dialog class="productos__modal-inhabilitar-producto">
                 <h2 class="productos__modal-inhabilitar-producto-title">¡Ten cuidado!</h2>
                 <p class="productos__modal-inhabilitar-producto-text">
                     ¿Estas seguro de inhabilitar este producto?<br>
@@ -449,9 +449,16 @@
             </dialog>
 
 
-            <dialog class="productos__modal-inhabilitacion-exitosa">
+            <dialog open="" class="productos__modal-inhabilitacion-exitosa">
                 <h2>¡Exelente!</h2>
                 <p>Has inhabilitado un producto exitosamente</p>
+                <button class="productos__modal-inhabilitacion-exitosa-btn boton" >Ok</button>
+            </dialog>
+            
+            <dialog open="" class="productos__modal-inhabilitacion-fallo">
+                <h2>¡Algo salio mal!</h2>
+                <p>Este producto no pudo ser inhabilitado, porque posiblemente hay registros de este en otras partes del sistema</p>
+                <button class="productos__modal-inhabilitacion-fallo-btn boton" >Ok</button>
             </dialog>
         </section>
     </main>

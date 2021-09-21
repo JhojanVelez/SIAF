@@ -80,7 +80,6 @@ table {
 }
 
 .boton:not(.boton-cerrar-sesion-container__boton) {
-    margin: 0;
     width: 80%;
 }
 
@@ -137,6 +136,18 @@ table {
 .productos__modal-inhabilitar-producto-btns-container .boton {
     width: 40%;
 }
+
+.productos__modal-inhabilitacion-exitosa,
+.productos__modal-inhabilitacion-fallo {
+    max-width: 500px;
+}
+
+.productos__modal-inhabilitacion-exitosa-btn.boton,
+.productos__modal-inhabilitacion-fallo-btn.boton {
+    margin-top: 1rem;
+    width: 20%;
+}
+
 
 
 
