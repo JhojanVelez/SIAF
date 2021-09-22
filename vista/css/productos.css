@@ -94,17 +94,6 @@ table {
     max-width: 900px;
 }
 
-.productos__modal-inhabilitacion-exitosa,
-.productos__modal-inhabilitacion-fallo {
-    max-width: 500px;
-}
-
-.productos__modal-inhabilitacion-exitosa-btn.boton,
-.productos__modal-inhabilitacion-fallo-btn.boton {
-    margin-top: 1rem;
-    width: 20%;
-}
-
 /*-------------------------Estilos del modal de agregar productos----------------------------------*/
 
 .productos__modal-agregar-producto {

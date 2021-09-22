@@ -577,6 +577,15 @@ dialog {
   word-break: break-all;
 }
 
+.dialog-process-result {
+  max-width: 500px;
+}
+.dialog-process-result__btn {
+  margin-top: 1rem;
+  width: 20%;
+}
+
+
 
 
 

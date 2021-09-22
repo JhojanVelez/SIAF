@@ -396,7 +396,7 @@
         <section class="productos__container-modal transparent-container-modal">
 
             <!-- Estos son los modales para inhabilitar un producto -->
-            <dialog class="productos__modal-inhabilitar-producto">
+            <dialog open="" class="productos__modal-inhabilitar-producto">
                 <h2 class="productos__modal-inhabilitar-producto-title dialog-title">¡Ten cuidado!</h2>
                 <p class="productos__modal-inhabilitar-producto-text dialog-text">
                     ¿Estas seguro de inhabilitar este producto?<br>
@@ -450,21 +450,21 @@
                 </div>
             </dialog>
 
-            <dialog class="productos__modal-inhabilitacion-exitosa">
+            <dialog class="productos__modal-inhabilitacion-exitosa dialog-process-result">
                 <h2>¡Exelente!</h2>
                 <p>Has inhabilitado un producto exitosamente</p>
-                <button class="productos__modal-inhabilitacion-exitosa-btn boton" >Ok</button>
+                <button class="productos__modal-inhabilitacion-exitosa-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
             
-            <dialog class="productos__modal-inhabilitacion-fallo">
+            <dialog class="productos__modal-inhabilitacion-fallo dialog-process-result">
                 <h2>¡Algo salio mal!</h2>
                 <p>Este producto no pudo ser inhabilitado, porque posiblemente hay registros de este en otras partes del sistema</p>
-                <button class="productos__modal-inhabilitacion-fallo-btn boton" >Ok</button>
+                <button class="productos__modal-inhabilitacion-fallo-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
 
             <!-- Estos son los modales para agregar un producto -->
 
-            <dialog open class="productos__modal-agregar-producto">
+            <dialog class="productos__modal-agregar-producto">
                 <h2 class="productos__modal-agregar-producto-title dialog-title">Registra Nuevos Productos</h2>
 
                 <form class="productos__modal-agregar-producto-form dialog-main-content">
@@ -491,7 +491,7 @@
                 </div>
             </dialog>
 
-            <dialog open class="productos__modal-agregar-producto">
+            <dialog class="productos__modal-agregar-producto">
                 <h2 class="productos__modal-agregar-producto-title dialog-title">Verifica los Datos</h2>
                 <p class="productos__modal-agregar-producto-text dialog-text">
                     ¿Estas seguro de registrar este producto?<br>
@@ -543,6 +543,18 @@
                     <button class="productos__modal-agregar-producto-btn-confirmar dialog-btn boton">Confirmar</button>
                     <button class="productos__modal-agregar-producto-btn-cancelar dialog-btn boton">Cancelar</button>
                 </div>
+            </dialog>
+
+            <dialog class="productos__modal-agregacion-exitosa dialog-process-result">
+                <h2>¡Exelente!</h2>
+                <p>Has registrado un nuevo producto exitosamente</p>
+                <button class="productos__modal-agregacion-exitosa-btn dialog-process-result__btn boton" >Ok</button>
+            </dialog>
+            
+            <dialog class="productos__modal-agregacion-fallo dialog-process-result">
+                <h2>¡Algo salio mal!</h2>
+                <p>Este producto no pudo ser registrado, porque posiblemente ya esta registrado en el sistema</p>
+                <button class="productos__modal-agregacion-fallo-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
         </section>
     </main>
