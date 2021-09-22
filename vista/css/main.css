@@ -561,4 +561,22 @@ dialog {
   grid-gap: 1rem 3rem;
 }
 
+.dialog-container-bts {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.dialog-btn {
+  width: 40%;
+}
+
+.dialog-main-content section {
+  word-break: break-all;
+}
+
+
+
 

@@ -83,7 +83,7 @@ table {
     align-items: center;
 }
 
-.boton:not(.boton-cerrar-sesion-container__boton) {
+.productos__container-boton input[type="button"] {
     width: 80%;
 }
 
@@ -92,31 +92,6 @@ table {
 .productos__modal-inhabilitar-producto {
     min-width: 800px;
     max-width: 900px;
-}
-
-.productos__modal-inhabilitar-producto-info {
-    width: 90%;
-    margin: auto;
-    margin-bottom: 4rem;
-    display: grid;
-    grid-template-columns: repeat(2,minmax(200px,400px));
-    grid-gap: 1rem 3rem;
-}
-
-.productos__modal-inhabilitar-producto-info-item {
-    word-break: break-all;
-}
-
-.productos__modal-inhabilitar-producto-btns-container {
-    width: 80%;
-    margin: auto;
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 1rem;
-}
-
-.productos__modal-inhabilitar-producto-btns-container .boton {
-    width: 40%;
 }
 
 .productos__modal-inhabilitacion-exitosa,
@@ -132,6 +107,10 @@ table {
 
 /*-------------------------Estilos del modal de agregar productos----------------------------------*/
 
+.productos__modal-agregar-producto {
+    min-width: 800px;
+    max-width: 900px;
+}
 
 
 
