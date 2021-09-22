@@ -377,10 +377,10 @@
 
         <section class="productos__container-botones container-botones box-shadow">
             <section class="productos__container-boton">
-                <input type="button" class="productos__boton-inhabilitar boton" value="Inhabilitar">
+                <input disabled type="button" class="productos__boton-inhabilitar boton" value="Inhabilitar" title="Recuerda seleccionar un producto de la lista para poder inhabilitarlo">
             </section>
             <section class="productos__container-boton">
-                <input type="button" class="productos__boton-editar boton" value="Editar">
+                <input disabled type="button" class="productos__boton-editar boton" value="Editar" title="Recuerda seleccionar un producto de la lista para poder editar">
             </section>
             <section class="productos__container-boton">
                 <input type="button" class="productos__boton-agregar boton" value="Agregar">
@@ -581,7 +581,7 @@
                     <input type="text" title="Hola" placeholder="Registro sanitario INVIMA">
                 </form>
                 <div class="productos__modal-editar-producto-btns-container dialog-container-bts">
-                    <button class="productos__modal-editar-producto-btn-añadir boton dialog-btn">A&ntilde;adir</button>
+                    <button class="productos__modal-editar-producto-btn-editar boton dialog-btn">Editar</button>
                     <button class="productos__modal-editar-producto-btn-cancelar boton dialog-btn">Cancelar</button>
                 </div>
             </dialog>
@@ -589,8 +589,8 @@
             <dialog class="productos__modal-editar-producto-confirmacion">
                 <h2 class="productos__modal-editar-producto-title-confirmacion dialog-title">Verifica los Datos</h2>
                 <p class="productos__modal-editar-producto-text-confirmacion dialog-text">
-                    ¿Estas seguro de registrar este producto?<br>
-                    Recuerda revisar detenidamente la informacion del producto que estas registrando.
+                    ¿Estas seguro de editar la informacion este producto?<br>
+                    Recuerda revisar detenidamente la informacion del producto que estas editando.
                 </p>
                 <div class="productos__modal-editar-producto-info-confirmacion dialog-main-content">
                     <section class="productos__modal-editar-producto-info-item-confirmacion">
@@ -640,20 +640,21 @@
                 </div>
             </dialog>
 
-            <dialog class="productos__modal-modificacion-exitosa dialog-process-result">
+            <dialog class="productos__modal-edicion-exitosa dialog-process-result">
                 <h2>¡Exelente!</h2>
                 <p>Has registrado un nuevo producto exitosamente</p>
-                <button class="productos__modal-modificacion-exitosa-btn dialog-process-result__btn boton" >Ok</button>
+                <button class="productos__modal-edicion-exitosa-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
             
-            <dialog class="productos__modal-modificacion-fallo dialog-process-result">
+            <dialog class="productos__modal-edicion-fallo dialog-process-result">
                 <h2>¡Algo salio mal!</h2>
                 <p>Este producto no pudo ser registrado, porque posiblemente ya esta registrado en el sistema</p>
-                <button class="productos__modal-modificacion-fallo-btn dialog-process-result__btn boton" >Ok</button>
+                <button class="productos__modal-edicion-fallo-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
         </section>
     </main>
     <script src="../js/modulo_productos_inhabilitar_productos.js"></script>
+    <script src="../js/modulo_productos_editar_productos.js"></script>
     <script src="../js/modulo_productos_agregar_productos.js"></script>
 </body>
 </html>

@@ -108,11 +108,11 @@ table {
 /*-------------------------Estilos del modal de agregar productos----------------------------------*/
 
 
-.productos__modal-modificar-producto {
+.productos__modal-editar-producto {
     min-width: 700px;
     max-width: 800px;
 }
 
-.productos__modal-modificar-producto-title {
+.productos__modal-editar-producto-title {
     margin-bottom: 3rem;
 }

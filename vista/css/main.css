@@ -94,6 +94,14 @@ input:focus, select:focus {
   background-color: var(--color-button-background-hover);
 }
 
+input:disabled {
+  background-color: #201f3a83;
+  cursor: help;
+}
+input:disabled:hover {
+  background-color: #201f3a83;
+}
+
 .box-shadow {
     background-color: var(--color-card-background);
     box-shadow: var(--color-card-box-shadow);

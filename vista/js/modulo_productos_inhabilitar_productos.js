@@ -15,6 +15,13 @@
             $modal_1.toggleAttribute("open");
             $modal_2.toggleAttribute("open");
         }
+
+        if(e.target.matches(".productos__modal-inhabilitar-producto-btn-cancelar")){
+            $modal_1.toggleAttribute("open");
+            $transparentBackgroundModal.style.visibility = "hidden";
+            $transparentBackgroundModal.style.opacity = "0";
+        }
+
         if(e.target.matches(".productos__modal-inhabilitacion-exitosa-btn")) {
             $modal_2.toggleAttribute("open");
             $transparentBackgroundModal.style.visibility = "hidden";
