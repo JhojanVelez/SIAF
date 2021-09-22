@@ -395,7 +395,7 @@
         
         <section class="productos__container-modal transparent-container-modal">
 
-            <!-- Estos son los modales para inhabilitar un producto -->
+            <!-- Estos son los modals para inhabilitar un producto -->
             <dialog class="productos__modal-inhabilitar-producto">
                 <h2 class="productos__modal-inhabilitar-producto-title dialog-title">¡Ten cuidado!</h2>
                 <p class="productos__modal-inhabilitar-producto-text dialog-text">
@@ -462,7 +462,7 @@
                 <button class="productos__modal-inhabilitacion-fallo-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
 
-            <!-- Estos son los modales para agregar un producto -->
+            <!-- Estos son los modals para agregar un producto -->
 
             <dialog class="productos__modal-agregar-producto">
                 <h2 class="productos__modal-agregar-producto-title dialog-title">Registra Nuevos Productos</h2>
@@ -555,6 +555,101 @@
                 <h2>¡Algo salio mal!</h2>
                 <p>Este producto no pudo ser registrado, porque posiblemente ya esta registrado en el sistema</p>
                 <button class="productos__modal-agregacion-fallo-btn dialog-process-result__btn boton" >Ok</button>
+            </dialog>
+
+            <!-- Estos son los modals para editar un producto -->
+
+            <dialog class="productos__modal-editar-producto">
+                <h2 class="productos__modal-editar-producto-title dialog-title">Modifica Tus Productos</h2>
+
+                <form class="productos__modal-editar-producto-form dialog-main-content">
+                    <input type="text" placeholder="Codigo de barras del producto" id="codigoBarrasProducto">
+                    <input type="text" placeholder="NIT del proveedor">
+                    <input type="text" placeholder="Descripcion">
+                    <select>
+                        <option value="">Elige el proveedor</option>
+                    </select>
+                    <input type="text" placeholder="Ubicacion fisica">
+                    <input type="text" placeholder="Ingresa el laboratorio">
+                    <select>
+                        <option value="">Unidad de medida</option>
+                    </select>
+                    <select>
+                        <option value="">Presentacion</option>
+                    </select>
+                    <input type="text" placeholder="Precio de venta">
+                    <input type="text" title="Hola" placeholder="Registro sanitario INVIMA">
+                </form>
+                <div class="productos__modal-editar-producto-btns-container dialog-container-bts">
+                    <button class="productos__modal-editar-producto-btn-añadir boton dialog-btn">A&ntilde;adir</button>
+                    <button class="productos__modal-editar-producto-btn-cancelar boton dialog-btn">Cancelar</button>
+                </div>
+            </dialog>
+
+            <dialog class="productos__modal-editar-producto-confirmacion">
+                <h2 class="productos__modal-editar-producto-title-confirmacion dialog-title">Verifica los Datos</h2>
+                <p class="productos__modal-editar-producto-text-confirmacion dialog-text">
+                    ¿Estas seguro de registrar este producto?<br>
+                    Recuerda revisar detenidamente la informacion del producto que estas registrando.
+                </p>
+                <div class="productos__modal-editar-producto-info-confirmacion dialog-main-content">
+                    <section class="productos__modal-editar-producto-info-item-confirmacion">
+                        <h3>CODIGO DE BARRAS</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="productos__modal-editar-producto-info-item-confirmacion">
+                        <h3>NIT DEL PROVEEDOR</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="productos__modal-editar-producto-info-item-confirmacion">
+                        <h3>DESCRIPCION</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="productos__modal-editar-producto-info-item-confirmacion">
+                        <h3>NOMBRE DEL PROVEEDOR</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="productos__modal-editar-producto-info-item-confirmacion">
+                        <h3>UBICACION FISICA</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="productos__modal-editar-producto-info-item-confirmacion">
+                        <h3>LABORATORIO</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="productos__modal-editar-producto-info-item-confirmacion">
+                        <h3>UNIDAD DE MEDIDA</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="productos__modal-editar-producto-info-item-confirmacion">
+                        <h3>PRECIO DE VENTA</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="productos__modal-editar-producto-info-item-confirmacion">
+                        <h3>PRESENTACION</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="productos__modal-editar-producto-info-item-confirmacion">
+                        <h3>REGISTRO SANITARIO INVIMA</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                </div>
+                <div class="productos__modal-editar-producto-confirmacion-btns-container dialog-container-bts">
+                    <button class="productos__modal-editar-producto-confirmacion-btn-confirmar dialog-btn boton">Confirmar</button>
+                    <button class="productos__modal-editar-producto-confirmacion-btn-cancelar dialog-btn boton">Cancelar</button>
+                </div>
+            </dialog>
+
+            <dialog class="productos__modal-modificacion-exitosa dialog-process-result">
+                <h2>¡Exelente!</h2>
+                <p>Has registrado un nuevo producto exitosamente</p>
+                <button class="productos__modal-modificacion-exitosa-btn dialog-process-result__btn boton" >Ok</button>
+            </dialog>
+            
+            <dialog class="productos__modal-modificacion-fallo dialog-process-result">
+                <h2>¡Algo salio mal!</h2>
+                <p>Este producto no pudo ser registrado, porque posiblemente ya esta registrado en el sistema</p>
+                <button class="productos__modal-modificacion-fallo-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
         </section>
     </main>
