@@ -394,9 +394,11 @@
 
         
         <section class="productos__container-modal transparent-container-modal">
+
+            <!-- Estos son los modales para inhabilitar un producto -->
             <dialog class="productos__modal-inhabilitar-producto">
-                <h2 class="productos__modal-inhabilitar-producto-title">¡Ten cuidado!</h2>
-                <p class="productos__modal-inhabilitar-producto-text">
+                <h2 class="productos__modal-inhabilitar-producto-title dialog-title">¡Ten cuidado!</h2>
+                <p class="productos__modal-inhabilitar-producto-text dialog-text">
                     ¿Estas seguro de inhabilitar este producto?<br>
                     Recuerda que una vez inhabilitado, no lo podras volver a habilitar
                 </p>
@@ -448,7 +450,6 @@
                 </div>
             </dialog>
 
-
             <dialog class="productos__modal-inhabilitacion-exitosa">
                 <h2>¡Exelente!</h2>
                 <p>Has inhabilitado un producto exitosamente</p>
@@ -459,6 +460,35 @@
                 <h2>¡Algo salio mal!</h2>
                 <p>Este producto no pudo ser inhabilitado, porque posiblemente hay registros de este en otras partes del sistema</p>
                 <button class="productos__modal-inhabilitacion-fallo-btn boton" >Ok</button>
+            </dialog>
+
+            <!-- Estos son los modales para agregar un producto -->
+
+            <dialog open class="productos__modal-agregar-producto">
+                <h2 class="productos__modal-agregar-producto-title dialog-title">Registra Nuevos Productos</h2>
+
+                <form class="productos__modal-agregar-producto-form">
+                    <input type="text" placeholder="Codigo de barras del producto">
+                    <input type="text" placeholder="NIT del proveedor">
+                    <input type="text" placeholder="Descripcion">
+                    <select>
+                        <option value="">Elige el proveedor</option>
+                    </select>
+                    <input type="text" placeholder="Ubicacion fisica">
+                    <input type="text" placeholder="Ingresa el laboratorio">
+                    <select>
+                        <option value="">Unidad de medida</option>
+                    </select>
+                    <select>
+                        <option value="">Presentacion</option>
+                    </select>
+                    <input type="text" placeholder="Precio de venta">
+                    <input type="text" title="Hola" placeholder="Registro sanitario INVIMA">
+                </form>
+                <div class="productos__modal-agregar-producto-btns-container">
+                    <button class="productos__modal-agregar-producto-btn-añadir boton">A&ntilde;adir</button>
+                    <button class="productos__modal-agregar-producto-btn-cancelar boton">Cancelar</button>
+                </div>
             </dialog>
         </section>
     </main>

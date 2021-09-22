@@ -89,20 +89,9 @@ table {
 
 /*-------------------------Estilos del modal de inhabilitar producto----------------------------------*/
 
-
 .productos__modal-inhabilitar-producto {
     min-width: 800px;
     max-width: 900px;
-}
-.productos__modal-inhabilitar-producto-title {
-    font-size: 3rem;
-    margin-bottom: .8rem;
-    text-align: center;
-}
-
-.productos__modal-inhabilitar-producto-text {
-    margin-bottom: 4rem;
-    text-align: center;
 }
 
 .productos__modal-inhabilitar-producto-info {
@@ -140,6 +129,8 @@ table {
     margin-top: 1rem;
     width: 20%;
 }
+
+/*-------------------------Estilos del modal de agregar productos----------------------------------*/
 
 
 

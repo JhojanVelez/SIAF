@@ -526,8 +526,8 @@ usuarios, clientes, proveedores */
   background-color: var(--color-background-modal);
   display: flex;
   align-items: center;
-  visibility: hidden;
-  opacity: 0;
+  /* visibility: hidden;
+  opacity: 0; */
   transition: opacity .5s;
 }
 
@@ -539,6 +539,26 @@ dialog {
   border: none;
   border-top: 5px solid var(--color-nav-background);
   color: var(--color-text);
+}
+
+.dialog-title {
+  font-size: 3rem;
+  margin-bottom: .8rem;
+  text-align: center;
+}
+
+.dialog-text {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.dialog-main-content {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2,minmax(200px,400px));
+  grid-gap: 1rem 3rem;
 }
 
 
