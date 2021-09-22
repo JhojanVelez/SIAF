@@ -78,15 +78,6 @@ input:focus, select:focus {
 
 
 
-dialog {
-  margin: auto;
-  padding: 2rem;  
-  border-radius: var(--border-card-radius);
-  border: none;
-  border-top: 5px solid var(--color-nav-background);
-}
-
-
 .boton {
   width: 100%;
   padding: 12px 12px;
@@ -522,3 +513,32 @@ usuarios, clientes, proveedores */
 .boton-cerrar-sesion-container__boton:hover .sign-out-container {
   transform: translateY(-50px);
 }
+
+
+/*--------------Estilos para los modales----------------------*/
+
+.transparent-container-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-background-modal);
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+
+dialog {
+  margin: auto;
+  padding: 2rem;  
+  border-radius: var(--border-card-radius);
+  border: none;
+  border-top: 5px solid var(--color-nav-background);
+  color: var(--color-text);
+}
+
+

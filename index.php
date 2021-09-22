@@ -45,7 +45,7 @@
 
 
 
-        <div class="restablecer-contrasenia">
+        <div class="restablecer-contrasenia transparent-container-modal">
             <dialog class="restablecer-contrasenia__dialog restablecer-contrasenia__dialog--1" open>
                 <span class="restablecer-contrasenia__dialog-cerrar">X</span>
                 <h2 class="restablecer-contrasenia__titulo">Ingresa Tu Correo Electronico</h2>
@@ -103,13 +103,6 @@
             </dialog>
         </div>
     </main>
-
-    <!-- PHP Config -->
-
-    <?php
-    header("Cache-Control: no-cache, must-revalidate");
-    header("Expires: Sat, 1 Jul 2000 05:00:00 GMT");
-    ?>
 
     <!-- SCRIPTS JS -->
 

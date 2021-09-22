@@ -89,20 +89,6 @@ table {
 
 /*-------------------------Estilos del modal de inhabilitar producto----------------------------------*/
 
-.productos__container-modal {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--color-background-modal);
-    display: flex;
-    align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity .5s;
-}
 
 .productos__modal-inhabilitar-producto {
     min-width: 800px;

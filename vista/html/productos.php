@@ -393,7 +393,7 @@
 
 
         
-        <section class="productos__container-modal">
+        <section class="productos__container-modal transparent-container-modal">
             <dialog class="productos__modal-inhabilitar-producto">
                 <h2 class="productos__modal-inhabilitar-producto-title">¡Ten cuidado!</h2>
                 <p class="productos__modal-inhabilitar-producto-text">
