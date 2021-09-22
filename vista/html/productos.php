@@ -396,7 +396,7 @@
         <section class="productos__container-modal transparent-container-modal">
 
             <!-- Estos son los modales para inhabilitar un producto -->
-            <dialog open="" class="productos__modal-inhabilitar-producto">
+            <dialog class="productos__modal-inhabilitar-producto">
                 <h2 class="productos__modal-inhabilitar-producto-title dialog-title">¡Ten cuidado!</h2>
                 <p class="productos__modal-inhabilitar-producto-text dialog-text">
                     ¿Estas seguro de inhabilitar este producto?<br>
@@ -468,7 +468,7 @@
                 <h2 class="productos__modal-agregar-producto-title dialog-title">Registra Nuevos Productos</h2>
 
                 <form class="productos__modal-agregar-producto-form dialog-main-content">
-                    <input type="text" placeholder="Codigo de barras del producto">
+                    <input type="text" placeholder="Codigo de barras del producto" id="codigoBarrasProducto">
                     <input type="text" placeholder="NIT del proveedor">
                     <input type="text" placeholder="Descripcion">
                     <select>
@@ -491,57 +491,57 @@
                 </div>
             </dialog>
 
-            <dialog class="productos__modal-agregar-producto">
-                <h2 class="productos__modal-agregar-producto-title dialog-title">Verifica los Datos</h2>
-                <p class="productos__modal-agregar-producto-text dialog-text">
+            <dialog class="productos__modal-agregar-producto-confirmacion">
+                <h2 class="productos__modal-agregar-producto-title-confirmacion dialog-title">Verifica los Datos</h2>
+                <p class="productos__modal-agregar-producto-text-confirmacion dialog-text">
                     ¿Estas seguro de registrar este producto?<br>
                     Recuerda revisar detenidamente la informacion del producto que estas registrando.
                 </p>
-                <div class="productos__modal-agregar-producto-info dialog-main-content">
-                    <section class="productos__modal-agregar-producto-info-item">
+                <div class="productos__modal-agregar-producto-info-confirmacion dialog-main-content">
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion">
                         <h3>CODIGO DE BARRAS</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item">
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion">
                         <h3>NIT DEL PROVEEDOR</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item">
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion">
                         <h3>DESCRIPCION</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item">
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion">
                         <h3>NOMBRE DEL PROVEEDOR</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item">
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion">
                         <h3>UBICACION FISICA</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item">
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion">
                         <h3>LABORATORIO</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item">
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion">
                         <h3>UNIDAD DE MEDIDA</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item">
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion">
                         <h3>PRECIO DE VENTA</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item">
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion">
                         <h3>PRESENTACION</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item">
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion">
                         <h3>REGISTRO SANITARIO INVIMA</h3>
                         <p>________________________________________________</p>
                     </section>
                 </div>
-                <div class="productos__modal-agregar-producto-btns-container dialog-container-bts">
-                    <button class="productos__modal-agregar-producto-btn-confirmar dialog-btn boton">Confirmar</button>
-                    <button class="productos__modal-agregar-producto-btn-cancelar dialog-btn boton">Cancelar</button>
+                <div class="productos__modal-agregar-producto-confirmacion-btns-container dialog-container-bts">
+                    <button class="productos__modal-agregar-producto-confirmacion-btn-confirmar dialog-btn boton">Confirmar</button>
+                    <button class="productos__modal-agregar-producto-confirmacion-btn-cancelar dialog-btn boton">Cancelar</button>
                 </div>
             </dialog>
 
@@ -558,6 +558,7 @@
             </dialog>
         </section>
     </main>
-    <script src="../js/agregar_productos.js"></script>
+    <script src="../js/modulo_productos_inhabilitar_productos.js"></script>
+    <script src="../js/modulo_productos_agregar_productos.js"></script>
 </body>
 </html>

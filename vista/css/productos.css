@@ -97,10 +97,13 @@ table {
 /*-------------------------Estilos del modal de agregar productos----------------------------------*/
 
 .productos__modal-agregar-producto {
-    min-width: 800px;
-    max-width: 900px;
+    min-width: 700px;
+    max-width: 800px;
 }
 
+.productos__modal-agregar-producto-title {
+    margin-bottom: 3rem;
+}
 
 
 
