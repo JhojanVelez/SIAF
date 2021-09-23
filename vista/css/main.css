@@ -218,7 +218,6 @@ thead td {
 }
 
 tbody td {
-  padding: 5px 10px;
   min-width: min-content;
   max-width: 300px;
   word-break: break-word;

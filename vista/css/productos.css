@@ -116,3 +116,8 @@ table {
 .productos__modal-editar-producto-title {
     margin-bottom: 3rem;
 }
+
+.productos__table tr.product-selected {
+    background-color: gray;
+    color: white;
+}

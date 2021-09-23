@@ -323,7 +323,7 @@
                         <td>item 10</td>
                     </tr>
                     <tr>
-                        <td>item 1</td>
+                        <td>1354648469231</td>
                         <td>item 2</td>
                         <td>item 3</td>
                         <td>item 4</td>
@@ -656,5 +656,6 @@
     <script src="../js/modulo_productos_inhabilitar_productos.js"></script>
     <script src="../js/modulo_productos_editar_productos.js"></script>
     <script src="../js/modulo_productos_agregar_productos.js"></script>
+    <script src="../js/modulo_productos_seleccion_de_producto.js"></script>
 </body>
 </html>
