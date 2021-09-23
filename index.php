@@ -47,7 +47,7 @@
 
         <div class="restablecer-contrasenia transparent-container-modal">
             <dialog class="restablecer-contrasenia__dialog restablecer-contrasenia__dialog--1" open>
-                <span class="restablecer-contrasenia__dialog-cerrar">X</span>
+                <span class="restablecer-contrasenia__dialog-cerrar dialog-btn-cerrar">X</span>
                 <h2 class="restablecer-contrasenia__titulo">Ingresa Tu Correo Electronico</h2>
                 <form class="restablecer-contrasenia__form-1">
                     <input placeholder="Correo Electronico" class="restablecer-contrasenia__input-email"
@@ -64,7 +64,7 @@
             <dialog class="restablecer-contrasenia__dialog restablecer-contrasenia__dialog--2" open>
                 <span
                     class="restablecer-contrasenia__dialog-atras restablecer-contrasenia__dialog-atras--dialog--2">&#8617</span>
-                <span class="restablecer-contrasenia__dialog-cerrar">X</span>
+                <span class="restablecer-contrasenia__dialog-cerrar dialog-btn-cerrar">X</span>
                 <h2 class="restablecer-contrasenia__titulo">Codigo de Verificación</h2>
                 <form class="restablecer-contrasenia__form-2">
                     <input autocomplete="off" maxlength="1" class="restablecer-contrasenia__input-valor"
@@ -89,7 +89,7 @@
             <dialog class="restablecer-contrasenia__dialog restablecer-contrasenia__dialog--3" open>
                 <span
                     class="restablecer-contrasenia__dialog-atras restablecer-contrasenia__dialog-atras--dialog--3">&#8617</span>
-                <span class="restablecer-contrasenia__dialog-cerrar">X</span>
+                <span class="restablecer-contrasenia__dialog-cerrar dialog-btn-cerrar">X</span>
                 <h2 class="restablecer-contrasenia__titulo">Ingresa Tu Nueva Contraseña</h2>
                 <form class="restablecer-contrasenia__form-3">
                     <input class="restablecer-contrasenia__input-contraseña" name="nuevaContraseña"

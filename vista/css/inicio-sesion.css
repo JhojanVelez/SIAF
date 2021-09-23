@@ -98,29 +98,6 @@ input, select {
   background-color: var(--color-button-background-hover);
 }
 
-.restablecer-contrasenia__dialog-cerrar {
-  font-size: 1.6rem;
-  font-weight: bolder;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  line-height: 30px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 1s, color 0.5s, transform 1s;
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  user-select: none;
-  color: var(--color-nav-background);
-}
-
-.restablecer-contrasenia__dialog-cerrar:hover {
-  color: var(--color-button-text);
-  background-color: var(--color-button-background);
-  transform: rotate(360deg);
-}
-
 .restablecer-contrasenia__boton-verificar {
   cursor: pointer;
 }

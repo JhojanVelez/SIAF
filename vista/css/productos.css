@@ -121,3 +121,23 @@ table {
     background-color: gray;
     color: white;
 }
+
+
+/*-------------------------Estilos del modal de productos inhabilitados----------------------------------*/
+
+.productos__modal-productos-inhabilitados {
+    min-width: 1300px;
+    max-width: 1800px;
+}
+
+.productos__modal-productos-inhabilitados-container-gen-repo {
+    margin-bottom: 3rem;
+}
+
+.productos__modal-productos-inhabilitados-title {
+    margin-bottom: 3rem;
+}
+
+.productos__modal-productos-inhabilitados-table-container {
+    height: 550px;
+}

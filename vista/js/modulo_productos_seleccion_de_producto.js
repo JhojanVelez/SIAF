@@ -2,7 +2,7 @@
     const d = document,
     btnInhabilitar = d.querySelector(".productos__boton-inhabilitar"),
     btnEditar = d.querySelector(".productos__boton-editar");
-let product = btnInhabilitar;
+let product = btnInhabilitar; /* Le asigno el btn, solo por usar un elemento HTML, es decir para que no nos de error en la linea 9*/
     d.addEventListener("click", e => {
 
         if(e.target.matches(".productos__table td")) {

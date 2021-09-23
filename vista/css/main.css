@@ -533,11 +533,10 @@ usuarios, clientes, proveedores */
   background-color: var(--color-background-modal);
   display: flex;
   align-items: center;
-  visibility: hidden;
-  opacity: 0;
+  /* visibility: hidden;
+  opacity: 0; */
   transition: opacity .5s;
 }
-
 
 dialog {
   margin: auto;
@@ -580,6 +579,29 @@ dialog {
   width: 40%;
 }
 
+.dialog-btn-cerrar {
+  font-size: 1.6rem;
+  font-weight: bolder;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 1s, color 0.5s, transform 1s;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  user-select: none;
+  color: var(--color-nav-background);
+}
+
+.dialog-btn-cerrar:hover {
+  color: var(--color-button-text);
+  background-color: var(--color-button-background);
+  transform: rotate(360deg);
+}
+
 .dialog-main-content section {
   word-break: break-all;
 }
@@ -590,6 +612,10 @@ dialog {
 .dialog-process-result__btn {
   margin-top: 1rem;
   width: 20%;
+}
+
+.dialog-products-enabled-gen-repo-img {
+  height: 5rem;
 }
 
 

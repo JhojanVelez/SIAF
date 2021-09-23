@@ -651,6 +651,342 @@
                 <p>Este producto no pudo ser registrado, porque posiblemente ya esta registrado en el sistema</p>
                 <button class="productos__modal-edicion-fallo-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
+
+
+            <!-- Este es el modal para editar un producto  -->
+
+            <dialog open class="productos__modal-productos-inhabilitados">
+                <span class="productos__modal-productos-inhabilitados-btn-cerrar dialog-btn-cerrar">X</span>
+                <h2 class="productos__modal-productos-inhabilitados-title dialog-title">Productos inhabilitados</h2>
+                <div class="productos__modal-productos-inhabilitados-container-gen-repo filtro-gen-repo">
+                    <div class="productos__modal-productos-inhabilitados-gen-repo-container-img dialog-products-enabled-gen-repo-img">
+                        <img src="../imagenes/reportes-icono.svg" alt="">
+                    </div>
+                    <div class="productos__modal-productos-inhabilitados-gen-repo-container-text">
+                        <a class="filtro-subtitulo-reporte" href="">Generar Reporte</a>
+                    </div>
+                </div>
+                <section class="productos__modal-productos-inhabilitados-table-container container-table">
+                    <table class="productos-inhabilitados__table tabla">
+                        <thead class="table-thead">
+                            <tr class="table-tr">
+                                <td class="table-td">ProCodBarr</td>
+                                <td class="table-td">Descripcion</td>
+                                <td class="table-td">UbicacionFisica</td>
+                                <td class="table-td">Presentacion</td>
+                                <td class="table-td">UnidadMedida</td>
+                                <td class="table-td">PrecioVenta</td>
+                                <td class="table-td">FechaVenc</td>
+                                <td class="table-td">Laboratorio</td>
+                                <td class="table-td">CodPro</td>
+                                <td class="table-td">CodInvt</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>item 1</td>
+                                <td>item 2</td>
+                                <td>item 3</td>
+                                <td>item 4</td>
+                                <td>item 5</td>
+                                <td>item 6</td>
+                                <td>item 7</td>
+                                <td>item 8</td>
+                                <td>item 9</td>
+                                <td>item 10</td>
+                            </tr>
+                            <tr>
+                                <td>item 1</td>
+                                <td>item 2</td>
+                                <td>item 3</td>
+                                <td>item 4</td>
+                                <td>item 5</td>
+                                <td>item 6</td>
+                                <td>item 7</td>
+                                <td>item 8</td>
+                                <td>item 9</td>
+                                <td>item 10</td>
+                            </tr>
+                            <tr>
+                                <td>item 1</td>
+                                <td>item 2</td>
+                                <td>item 3</td>
+                                <td>item 4</td>
+                                <td>item 5</td>
+                                <td>item 6</td>
+                                <td>item 7</td>
+                                <td>item 8</td>
+                                <td>item 9</td>
+                                <td>item 10</td>
+                            </tr>
+                            <tr>
+                                <td>item 1</td>
+                                <td>item 2</td>
+                                <td>item 3</td>
+                                <td>item 4</td>
+                                <td>item 5</td>
+                                <td>item 6</td>
+                                <td>item 7</td>
+                                <td>item 8</td>
+                                <td>item 9</td>
+                                <td>item 10</td>
+                            </tr>
+                            <tr>
+                                <td>item 1</td>
+                                <td>item 2</td>
+                                <td>item 3</td>
+                                <td>item 4</td>
+                                <td>item 5</td>
+                                <td>item 6</td>
+                                <td>item 7</td>
+                                <td>item 8</td>
+                                <td>item 9</td>
+                                <td>item 10</td>
+                            </tr>
+                            <tr>
+                                <td>item 1</td>
+                                <td>item 2</td>
+                                <td>item 3</td>
+                                <td>item 4</td>
+                                <td>item 5</td>
+                                <td>item 6</td>
+                                <td>item 7</td>
+                                <td>item 8</td>
+                                <td>item 9</td>
+                                <td>item 10</td>
+                            </tr>
+                            <tr>
+                                <td>item 1</td>
+                                <td>item 2</td>
+                                <td>item 3</td>
+                                <td>item 4</td>
+                                <td>item 5</td>
+                                <td>item 6</td>
+                                <td>item 7</td>
+                                <td>item 8</td>
+                                <td>item 9</td>
+                                <td>item 10</td>
+                            </tr>
+                            <tr>
+                                <td>item 1</td>
+                                <td>item 2</td>
+                                <td>item 3</td>
+                                <td>item 4</td>
+                                <td>item 5</td>
+                                <td>item 6</td>
+                                <td>item 7</td>
+                                <td>item 8</td>
+                                <td>item 9</td>
+                                <td>item 10</td>
+                            </tr>
+                            <tr>
+                                <td>item 1</td>
+                                <td>item 2</td>
+                                <td>item 3</td>
+                                <td>item 4</td>
+                                <td>item 5</td>
+                                <td>item 6</td>
+                                <td>item 7</td>
+                                <td>item 8</td>
+                                <td>item 9</td>
+                                <td>item 10</td>
+                            </tr>
+                            <tr>
+                                <td>item 1</td>
+                                <td>item 2</td>
+                                <td>item 3</td>
+                                <td>item 4</td>
+                                <td>item 5</td>
+                                <td>item 6</td>
+                                <td>item 7</td>
+                                <td>item 8</td>
+                                <td>item 9</td>
+                                <td>item 10</td>
+                            </tr>
+                            <tr>
+                                <td>item 1</td>
+                                <td>item 2</td>
+                                <td>item 3</td>
+                                <td>item 4</td>
+                                <td>item 5</td>
+                                <td>item 6</td>
+                                <td>item 7</td>
+                                <td>item 8</td>
+                                <td>item 9</td>
+                                <td>item 10</td>
+                            </tr>
+                            <tr>
+                                <td>item 1</td>
+                                <td>item 2</td>
+                                <td>item 3</td>
+                                <td>item 4</td>
+                                <td>item 5</td>
+                                <td>item 6</td>
+                                <td>item 7</td>
+                                <td>item 8</td>
+                                <td>item 9</td>
+                                <td>item 10</td>
+                            </tr>
+                            <tr>
+                                <td>item 1</td>
+                                <td>item 2</td>
+                                <td>item 3</td>
+                                <td>item 4</td>
+                                <td>item 5</td>
+                                <td>item 6</td>
+                                <td>item 7</td>
+                                <td>item 8</td>
+                                <td>item 9</td>
+                                <td>item 10</td>
+                            </tr>
+                            <tr>
+                                <td>item 1</td>
+                                <td>item 2</td>
+                                <td>item 3</td>
+                                <td>item 4</td>
+                                <td>item 5</td>
+                                <td>item 6</td>
+                                <td>item 7</td>
+                                <td>item 8</td>
+                                <td>item 9</td>
+                                <td>item 10</td>
+                            </tr>
+                            <tr>
+                                <td>item 1</td>
+                                <td>item 2</td>
+                                <td>item 3</td>
+                                <td>item 4</td>
+                                <td>item 5</td>
+                                <td>item 6</td>
+                                <td>item 7</td>
+                                <td>item 8</td>
+                                <td>item 9</td>
+                                <td>item 10</td>
+                            </tr>
+                            <tr>
+                                <td>item 1</td>
+                                <td>item 2</td>
+                                <td>item 3</td>
+                                <td>item 4</td>
+                                <td>item 5</td>
+                                <td>item 6</td>
+                                <td>item 7</td>
+                                <td>item 8</td>
+                                <td>item 9</td>
+                                <td>item 10</td>
+                            </tr>
+                            <tr>
+                                <td>item 1</td>
+                                <td>item 2</td>
+                                <td>item 3</td>
+                                <td>item 4</td>
+                                <td>item 5</td>
+                                <td>item 6</td>
+                                <td>item 7</td>
+                                <td>item 8</td>
+                                <td>item 9</td>
+                                <td>item 10</td>
+                            </tr>
+                            <tr>
+                                <td>item 1</td>
+                                <td>item 2</td>
+                                <td>item 3</td>
+                                <td>item 4</td>
+                                <td>item 5</td>
+                                <td>item 6</td>
+                                <td>item 7</td>
+                                <td>item 8</td>
+                                <td>item 9</td>
+                                <td>item 10</td>
+                            </tr>
+                            <tr>
+                                <td>item 1</td>
+                                <td>item 2</td>
+                                <td>item 3</td>
+                                <td>item 4</td>
+                                <td>item 5</td>
+                                <td>item 6</td>
+                                <td>item 7</td>
+                                <td>item 8</td>
+                                <td>item 9</td>
+                                <td>item 10</td>
+                            </tr>
+                            <tr>
+                                <td>item 1</td>
+                                <td>item 2</td>
+                                <td>item 3</td>
+                                <td>item 4</td>
+                                <td>item 5</td>
+                                <td>item 6</td>
+                                <td>item 7</td>
+                                <td>item 8</td>
+                                <td>item 9</td>
+                                <td>item 10</td>
+                            </tr>
+                            <tr>
+                                <td>item 1</td>
+                                <td>item 2</td>
+                                <td>item 3</td>
+                                <td>item 4</td>
+                                <td>item 5</td>
+                                <td>item 6</td>
+                                <td>item 7</td>
+                                <td>item 8</td>
+                                <td>item 9</td>
+                                <td>item 10</td>
+                            </tr>
+                            <tr>
+                                <td>item 1</td>
+                                <td>item 2</td>
+                                <td>item 3</td> 
+                                <td>item 4</td>
+                                <td>item 5</td>
+                                <td>item 6</td>
+                                <td>item 7</td>
+                                <td>item 8</td>
+                                <td>item 9</td>
+                                <td>item 10</td>
+                            </tr>
+                            <tr>
+                                <td>item 1</td>
+                                <td>item 2</td>
+                                <td>item 3</td>
+                                <td>item 4</td>
+                                <td>item 5</td>
+                                <td>item 6</td>
+                                <td>item 7</td>
+                                <td>item 8</td>
+                                <td>item 9</td>
+                                <td>item 10</td>
+                            </tr>
+                            <tr>
+                                <td>item 1</td>
+                                <td>item 2</td>
+                                <td>item 3</td>
+                                <td>item 4</td>
+                                <td>item 5</td>
+                                <td>item 6</td>
+                                <td>item 7</td>
+                                <td>item 8</td>
+                                <td>item 9</td>
+                                <td>item 10</td>
+                            </tr>
+                            <tr>
+                                <td>1354648469231</td>
+                                <td>item 2</td>
+                                <td>item 3</td>
+                                <td>item 4</td>
+                                <td>item 5</td>
+                                <td>item 6</td>
+                                <td>item 7</td>
+                                <td>item 8</td>
+                                <td>item 9</td>
+                                <td>item 10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </dialog>
         </section>
     </main>
     <script src="../js/modulo_productos_inhabilitar_productos.js"></script>
