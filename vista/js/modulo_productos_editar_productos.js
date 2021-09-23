@@ -8,8 +8,7 @@
     
     d.addEventListener("click", e => {
         if(e.target.matches(".productos__boton-editar")) {
-            $transparentBackgroundModal.style.visibility = "visible";
-            $transparentBackgroundModal.style.opacity = "1";
+            $transparentBackgroundModal.classList.toggle("visible");
             $modal_1.toggleAttribute("open");
         }
         if(e.target.matches(".productos__modal-editar-producto-btn-editar")) {
@@ -19,8 +18,7 @@
 
         if(e.target.matches(".productos__modal-editar-producto-btn-cancelar")){
             $modal_1.toggleAttribute("open");
-            $transparentBackgroundModal.style.visibility = "hidden";
-            $transparentBackgroundModal.style.opacity = "0";
+            $transparentBackgroundModal.classList.toggle("visible");
         }
 
         if(e.target.matches(".productos__modal-editar-producto-confirmacion-btn-confirmar")) {
@@ -29,13 +27,11 @@
         }
         if(e.target.matches(".productos__modal-editar-producto-confirmacion-btn-cancelar")) {
             $modal_2.toggleAttribute("open");
-            $transparentBackgroundModal.style.visibility = "hidden";
-            $transparentBackgroundModal.style.opacity = "0";
+            $transparentBackgroundModal.classList.toggle("visible");
         }
         if(e.target.matches(".productos__modal-edicion-exitosa-btn")) {
             $modal_3.toggleAttribute("open");
-            $transparentBackgroundModal.style.visibility = "hidden";
-            $transparentBackgroundModal.style.opacity = "0";
+            $transparentBackgroundModal.classList.toggle("visible");
         }
     })
 })();

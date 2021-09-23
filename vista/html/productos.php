@@ -655,7 +655,7 @@
 
             <!-- Este es el modal para editar un producto  -->
 
-            <dialog open class="productos__modal-productos-inhabilitados">
+            <dialog class="productos__modal-productos-inhabilitados">
                 <span class="productos__modal-productos-inhabilitados-btn-cerrar dialog-btn-cerrar">X</span>
                 <h2 class="productos__modal-productos-inhabilitados-title dialog-title">Productos inhabilitados</h2>
                 <div class="productos__modal-productos-inhabilitados-container-gen-repo filtro-gen-repo">
@@ -993,5 +993,6 @@
     <script src="../js/modulo_productos_editar_productos.js"></script>
     <script src="../js/modulo_productos_agregar_productos.js"></script>
     <script src="../js/modulo_productos_seleccion_de_producto.js"></script>
+    <script src="../js/modulo_productos_productos_inhabilitados.js"></script>
 </body>
 </html>

@@ -533,8 +533,8 @@ usuarios, clientes, proveedores */
   background-color: var(--color-background-modal);
   display: flex;
   align-items: center;
-  /* visibility: hidden;
-  opacity: 0; */
+  visibility: hidden;
+  opacity: 0;
   transition: opacity .5s;
 }
 
@@ -545,6 +545,11 @@ dialog {
   border: none;
   border-top: 5px solid var(--color-nav-background);
   color: var(--color-text);
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
 }
 
 .dialog-title {

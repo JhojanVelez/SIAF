@@ -7,8 +7,7 @@
     
     d.addEventListener("click", e => {
         if(e.target.matches(".productos__boton-inhabilitar")) {
-            $transparentBackgroundModal.style.visibility = "visible";
-            $transparentBackgroundModal.style.opacity = "1";
+            $transparentBackgroundModal.classList.toggle("visible");
             $modal_1.toggleAttribute("open");
         }
         if(e.target.matches(".productos__modal-inhabilitar-producto-btn-confirmar")) {
@@ -18,14 +17,12 @@
 
         if(e.target.matches(".productos__modal-inhabilitar-producto-btn-cancelar")){
             $modal_1.toggleAttribute("open");
-            $transparentBackgroundModal.style.visibility = "hidden";
-            $transparentBackgroundModal.style.opacity = "0";
+            $transparentBackgroundModal.classList.toggle("visible");
         }
 
         if(e.target.matches(".productos__modal-inhabilitacion-exitosa-btn")) {
             $modal_2.toggleAttribute("open");
-            $transparentBackgroundModal.style.visibility = "hidden";
-            $transparentBackgroundModal.style.opacity = "0";
+            $transparentBackgroundModal.classList.toggle("visible");
         }
     })
 })();
