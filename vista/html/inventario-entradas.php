@@ -224,6 +224,82 @@
                 </button>
             </section>
         </section>
+
+
+
+        <!-- Estos son los modals para agregar una entrada -->
+        <section class="entradas__container-modal transparent-container-modal">
+            <dialog class="entradas__modal-agregar-entrada">
+                <h2 class="entradas__modal-agregar-entrada-title dialog-title">Registra Nuevas Entradas</h2>
+
+                <form class="entradas__modal-agregar-entrada-form dialog-main-content">
+                    <input class="entradas__modal-agregar-entrada-form-item" type="text" placeholder="Codigo de barras del producto" id="codigoBarrasProducto">
+                    <select class="entradas__modal-agregar-entrada-form-item">
+                        <option value="">Producto</option>
+                    </select>
+                    <input class="entradas__modal-agregar-entrada-form-item" type="text" placeholder="Cantidad">
+                    <input class="entradas__modal-agregar-entrada-form-item" type="text" placeholder="Costo">
+                    <input class="entradas__modal-agregar-entrada-form-item" type="date">
+                    <textarea class="entradas__modal-agregar-entrada-form-item" cols="30" rows="10" placeholder="Ingresa un comentario..."></textarea>
+                </form>
+                <div class="entradas__modal-agregar-entrada-btns-container dialog-container-bts">
+                    <button class="entradas__modal-agregar-entrada-btn-añadir boton dialog-btn">A&ntilde;adir</button>
+                    <button class="entradas__modal-agregar-entrada-btn-cancelar boton dialog-btn">Cancelar</button>
+                </div>
+            </dialog>
+
+            <dialog class="entradas__modal-agregar-entrada-confirmacion">
+                <h2 class="entradas__modal-agregar-entrada-title-confirmacion dialog-title">Verifica los Datos</h2>
+                <p class="entradas__modal-agregar-entrada-text-confirmacion dialog-text">
+                    ¿Estas seguro de registrar este entrada?<br>
+                    Recuerda revisar detenidamente la informacion de la entrada que estas registrando.
+                </p>
+                <div class="entradas__modal-agregar-entrada-info-confirmacion dialog-main-content">
+                    <section class="entradas__modal-agregar-entrada-info-item-confirmacion">
+                        <h3>CODIGO DE BARRAS</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="entradas__modal-agregar-entrada-info-item-confirmacion">
+                        <h3>PRODUCTO</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="entradas__modal-agregar-entrada-info-item-confirmacion">
+                        <h3>CANTIDAD</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="entradas__modal-agregar-entrada-info-item-confirmacion">
+                        <h3>COSTO</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="entradas__modal-agregar-entrada-info-item-confirmacion">
+                        <h3>FECHA DE ENTRADA</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="entradas__modal-agregar-entrada-info-item-confirmacion">
+                        <h3>COMENTARIOS</h3>
+                        <p>________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</p>
+                    </section>
+                </div>
+                <div class="entradas__modal-agregar-entrada-confirmacion-btns-container dialog-container-bts">
+                    <button class="entradas__modal-agregar-entrada-confirmacion-btn-confirmar dialog-btn boton">Confirmar</button>
+                    <button class="entradas__modal-agregar-entrada-confirmacion-btn-cancelar dialog-btn boton">Cancelar</button>
+                </div>
+            </dialog>
+
+            <dialog class="entradas__modal-agregacion-exitosa dialog-process-result">
+                <h2>¡Exelente!</h2>
+                <p>Has registrado una nueva entrada exitosamente</p>
+                <button class="entradas__modal-agregacion-exitosa-btn dialog-process-result__btn boton" >Ok</button>
+            </dialog>
+            
+            <dialog class="entradas__modal-agregacion-fallo dialog-process-result">
+                <h2>¡Algo salio mal!</h2>
+                <p>Esta entrada no pudo ser registrada, porque posiblemente hubo un error interno</p>
+                <button class="entradas__modal-agregacion-fallo-btn dialog-process-result__btn boton" >Ok</button>
+            </dialog>
+        </section>
     </main>
+
+    <script src="../js/modulo_inventario_entradas_agregar_entradas.js"></script>
 </body>
 </html>
