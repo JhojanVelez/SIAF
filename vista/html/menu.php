@@ -4,24 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/menu.css">
     <title>Menu Pricipal</title>
-    <style>
-        .menu-nav-title {
-            color: var(--color-button-text);
-            font-size: 3rem;
-            letter-spacing: 1rem;
-            font-weight: bold;
-        }
-        .cards-flex-container { 
-            justify-content: center;
-            max-width: 1400px;
-        }
-        .card {
-            width: 300px;
-            max-height: 350px;
-        }
-    </style>
 </head>
 <body>
     <header class="nav-container">
@@ -106,11 +90,57 @@
                 <div class="card__img">
                     <img src="../imagenes/consultar-datos-icono.svg" alt="">
                 </div>
-                <button class="card__button boton">
-                    <a href="">Ingresar</a>
+                <button class="card__button card__button--consultar-info-perfil boton">
+                    <a href="#">Ingresar</a>
                 </button>
             </section>
         </article>
+
+        <section class="menu-info-usuario-container-modal transparent-container-modal">
+            <dialog class="menu-info-usuario-modal">
+                <span class="menu-info-usuario-modal__btn-cerrar dialog-btn-cerrar">X</span>
+                <h2 class="menu-info-usuario-modal__title dialog-title">Consulta Tus Datos</h2>
+                <div class="menu-info-usuario-modal__container-img">
+                    <img src="https://i.pinimg.com/736x/9d/0f/c9/9d0fc97fd6a11bb8fdcc9af217a0b38b.jpg" alt="">
+                </div>
+                <div class="menu-info-usuario-modal__container-info dialog-main-content">
+                    <section class="menu-info-usuario-modal__perfil-info-item">
+                        <h3>NUMERO DE DOCUMENTO</h3>
+                        <p>___________________________________</p>
+                    </section>
+                    <section class="menu-info-usuario-modal__perfil-info-item">
+                        <h3>TELEFONO</h3>
+                        <p>___________________________________</p>
+                    </section>
+                    <section class="menu-info-usuario-modal__perfil-info-item">
+                        <h3>EPS</h3>
+                        <p>___________________________________</p>
+                    </section>
+                    <section class="menu-info-usuario-modal__perfil-info-item">
+                        <h3>NOMBRES</h3>
+                        <p>___________________________________</p>
+                    </section>
+                    <section class="menu-info-usuario-modal__perfil-info-item">
+                        <h3>CORREO</h3>
+                        <p>___________________________________</p>
+                    </section>
+                    <section class="menu-info-usuario-modal__perfil-info-item">
+                        <h3>RH</h3>
+                        <p>___________________________________</p>
+                    </section>
+                    <section class="menu-info-usuario-modal__perfil-info-item">
+                        <h3>APELLIDOS</h3>
+                        <p>___________________________________</p>
+                    </section>
+                    <section class="menu-info-usuario-modal__perfil-info-item">
+                        <h3>DIRECCION</h3>
+                        <p>___________________________________</p>
+                    </section>
+                </div>
+            </dialog>
+        </section>
     </main>
+    
+    <script src="../js/modulo_menu_consultar_info_perfil.js"></script>
 </body>
 </html>

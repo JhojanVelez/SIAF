@@ -88,6 +88,7 @@ input:focus, select:focus {
   background-color: var(--color-button-background);
   color: var(--color-button-text);
   cursor: pointer;
+  transition: background-color .5s;
 }
 
 .boton:hover {
