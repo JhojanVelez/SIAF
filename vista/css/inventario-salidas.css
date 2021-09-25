@@ -97,3 +97,61 @@
 .salidas__boton-agregar{
     width: 400px;
 }
+
+/*---------------- Estos son los estilos para los modals de agregar salida ----------------*/
+
+.salidas__modal-agregar-salida-form,
+.salidas__modal-agregar-salida-info-confirmacion {
+    grid-template-columns: repeat(2,minmax(200px,380px));
+    grid-template-rows: repeat(5,max-content);
+    grid-template-areas:'cod com'
+                        'pro com'
+                        'can com'
+                        'cos com'
+                        'ent com';
+}
+
+.salidas__modal-agregar-salida-title {
+    margin-bottom: 3rem;
+}
+
+.salidas__modal-agregar-salida-form input[type="date"] {
+    position: relative;
+}
+
+.salidas__modal-agregar-salida-form input[type="date"]::after {
+    content: 'Fecha de salida';
+    position: absolute;
+    right: 20%;
+}
+
+.salidas__modal-agregar-salida-form-item:nth-child(1),
+.salidas__modal-agregar-salida-info-item-confirmacion:nth-child(1) {
+    grid-area: cod;
+}
+.salidas__modal-agregar-salida-form-item:nth-child(2),
+.salidas__modal-agregar-salida-info-item-confirmacion:nth-child(2) {
+    grid-area: pro;
+}
+.salidas__modal-agregar-salida-form-item:nth-child(3),
+.salidas__modal-agregar-salida-info-item-confirmacion:nth-child(3) {
+    grid-area: can;
+}
+.salidas__modal-agregar-salida-form-item:nth-child(4),
+.salidas__modal-agregar-salida-info-item-confirmacion:nth-child(4) {
+    grid-area: cos;
+}
+.salidas__modal-agregar-salida-form-item:nth-child(5),
+.salidas__modal-agregar-salida-info-item-confirmacion:nth-child(5) {
+    grid-area: ent;
+}
+.salidas__modal-agregar-salida-form-item:nth-child(6) {
+    grid-area: com;
+    resize: none;
+    border-radius: var(--border-card-radius);
+}
+
+.salidas__modal-agregar-salida-info-item-confirmacion:nth-child(6) {
+    grid-area: com;
+    align-self: center;
+}

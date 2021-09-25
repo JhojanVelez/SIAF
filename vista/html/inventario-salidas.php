@@ -301,6 +301,82 @@
                 </button>
             </section>
         </section>
+
+
+        <!-- Estos son los modals para agregar una salida -->
+        <section class="salidas__container-modal transparent-container-modal">
+            <dialog class="salidas__modal-agregar-salida">
+                <h2 class="salidas__modal-agregar-salida-title dialog-title">Registra Nuevas Salidas</h2>
+
+                <form class="salidas__modal-agregar-salida-form dialog-main-content">
+                    <input class="salidas__modal-agregar-salida-form-item" type="text" placeholder="Codigo de barras del producto" id="codigoBarrasProducto">
+                    <select class="salidas__modal-agregar-salida-form-item">
+                        <option value="">Producto</option>
+                    </select>
+                    <input class="salidas__modal-agregar-salida-form-item" type="text" placeholder="Cantidad">
+                    <select class="salidas__modal-agregar-salida-form-item">
+                        <option value="">Tipo de Salida</option>
+                    </select>
+                    <input class="salidas__modal-agregar-salida-form-item" type="date">
+                    <textarea class="salidas__modal-agregar-salida-form-item" cols="30" rows="10" placeholder="Ingresa un comentario..."></textarea>
+                </form>
+                <div class="salidas__modal-agregar-salida-btns-container dialog-container-bts">
+                    <button class="salidas__modal-agregar-salida-btn-añadir boton dialog-btn">A&ntilde;adir</button>
+                    <button class="salidas__modal-agregar-salida-btn-cancelar boton dialog-btn">Cancelar</button>
+                </div>
+            </dialog>
+
+            <dialog class="salidas__modal-agregar-salida-confirmacion">
+                <h2 class="salidas__modal-agregar-salida-title-confirmacion dialog-title">Verifica los Datos</h2>
+                <p class="salidas__modal-agregar-salida-text-confirmacion dialog-text">
+                    ¿Estas seguro de registrar este salida?<br>
+                    Recuerda revisar detenidamente la informacion de la salida que estas registrando.
+                </p>
+                <div class="salidas__modal-agregar-salida-info-confirmacion dialog-main-content">
+                    <section class="salidas__modal-agregar-salida-info-item-confirmacion">
+                        <h3>CODIGO DE BARRAS</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="salidas__modal-agregar-salida-info-item-confirmacion">
+                        <h3>PRODUCTO</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="salidas__modal-agregar-salida-info-item-confirmacion">
+                        <h3>CANTIDAD</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="salidas__modal-agregar-salida-info-item-confirmacion">
+                        <h3>TIPO DE SALIDA</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="salidas__modal-agregar-salida-info-item-confirmacion">
+                        <h3>FECHA DE SALIDA</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="salidas__modal-agregar-salida-info-item-confirmacion">
+                        <h3>COMENTARIOS</h3>
+                        <p>________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</p>
+                    </section>
+                </div>
+                <div class="salidas__modal-agregar-salida-confirmacion-btns-container dialog-container-bts">
+                    <button class="salidas__modal-agregar-salida-confirmacion-btn-confirmar dialog-btn boton">Confirmar</button>
+                    <button class="salidas__modal-agregar-salida-confirmacion-btn-cancelar dialog-btn boton">Cancelar</button>
+                </div>
+            </dialog>
+
+            <dialog class="salidas__modal-agregacion-exitosa dialog-process-result">
+                <h2>¡Exelente!</h2>
+                <p>Has registrado una nueva salida exitosamente</p>
+                <button class="salidas__modal-agregacion-exitosa-btn dialog-process-result__btn boton" >Ok</button>
+            </dialog>
+            
+            <dialog class="salidas__modal-agregacion-fallo dialog-process-result">
+                <h2>¡Algo salio mal!</h2>
+                <p>Esta salida no pudo ser registrada, porque posiblemente hubo un error interno</p>
+                <button class="salidas__modal-agregacion-fallo-btn dialog-process-result__btn boton" >Ok</button>
+            </dialog>
+        </section>
     </main>
+    <script src="../js/modulo_inventario_salidas_agregar_salidas.js"></script>
 </body>
 </html>
