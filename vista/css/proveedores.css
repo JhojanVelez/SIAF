@@ -34,3 +34,34 @@
 .proveedores__lista-proveedor-info.ciudad {
     grid-area: ciu;
 }
+
+/*-------------------------Estilos del modal de agregar proveedores----------------------------------*/
+
+
+.proveedores__modal-agregar-proveedor {
+    min-width: 700px;
+    max-width: 800px;
+}
+
+.proveedores__modal-agregar-proveedor-title {
+    margin-bottom: 3rem;
+}
+
+/*-------------------------Estilos del modal de proveedores inhabilitados----------------------------------*/
+
+.proveedores__modal-proveedores-inhabilitados {
+    min-width: 1300px;
+    max-width: 1400px;
+}
+
+.proveedores__modal-proveedores-inhabilitados-container-gen-repo {
+    margin-bottom: 3rem;
+}
+
+.proveedores__modal-proveedores-inhabilitados-title {
+    margin-bottom: 3rem;
+}
+
+.proveedores__modal-proveedores-inhabilitados-table-container {
+    height: 550px;
+}

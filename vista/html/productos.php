@@ -653,13 +653,13 @@
             </dialog>
 
 
-            <!-- Este es el modal para editar un producto  -->
+            <!-- Este es el modal para ver los productos inhabilitados -->
 
             <dialog class="productos__modal-productos-inhabilitados">
                 <span class="productos__modal-productos-inhabilitados-btn-cerrar dialog-btn-cerrar">X</span>
                 <h2 class="productos__modal-productos-inhabilitados-title dialog-title">Productos inhabilitados</h2>
                 <div class="productos__modal-productos-inhabilitados-container-gen-repo filtro-gen-repo">
-                    <div class="productos__modal-productos-inhabilitados-gen-repo-container-img dialog-products-enabled-gen-repo-img">
+                    <div class="productos__modal-productos-inhabilitados-gen-repo-container-img dialog-objects-enabled-gen-repo-img">
                         <img src="../imagenes/reportes-icono.svg" alt="">
                     </div>
                     <div class="productos__modal-productos-inhabilitados-gen-repo-container-text">
@@ -667,7 +667,7 @@
                     </div>
                 </div>
                 <section class="productos__modal-productos-inhabilitados-table-container container-table">
-                    <table class="productos-inhabilitados__table tabla">
+                    <table class="productos-inhabilitados__table table">
                         <thead class="table-thead">
                             <tr class="table-tr">
                                 <td class="table-td">ProCodBarr</td>
