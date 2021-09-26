@@ -35,7 +35,7 @@
     grid-area: ciu;
 }
 
-/*-------------------------Estilos del modal de agregar proveedores----------------------------------*/
+/*-------------------------Estilos de los modals de agregar proveedores----------------------------------*/
 
 
 .proveedores__modal-agregar-proveedor {
@@ -64,4 +64,16 @@
 
 .proveedores__modal-proveedores-inhabilitados-table-container {
     height: 550px;
+}
+
+/*-------------------------Estilos de los modals de edidar proveedores----------------------------------*/
+
+
+.proveedores__modal-edidar-proveedor {
+    min-width: 700px;
+    max-width: 800px;
+}
+
+.proveedores__modal-editar-proveedor-title {
+    margin-bottom: 3rem;
 }

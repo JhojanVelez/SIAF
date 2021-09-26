@@ -81,13 +81,13 @@
                         </section>
                     </div>
                     <div class="proveedores__lista-proveedor-botones contenedor-objetos__objeto-botones">
-                        <button class="proveedores__lista-proveedor-boton boton contenedor-objetos__objeto-boton">
+                        <button class="proveedores__lista-proveedor-boton proveedores__lista-proveedor-boton-editar boton contenedor-objetos__objeto-boton">
                             <div class="proveedores__lista-proveedor-boton-img">
                                 <img src="../imagenes/editar-icono.svg" alt="">
                             </div>
                             <span>Editar</span>
                         </button>
-                        <button class="proveedores__lista-proveedor-boton boton contenedor-objetos__objeto-boton">
+                        <button class="proveedores__lista-proveedor-boton proveedores__lista-proveedor-boton-inhabilitar boton contenedor-objetos__objeto-boton">
                             <div class="proveedores__lista-proveedor-boton-img">
                                 <img src="../imagenes/delete-icono.svg" alt="">
                             </div>
@@ -412,10 +412,80 @@
                     </table>
                 </section>
             </dialog>
+
+            <!-- Estos son los modals para editar un proveedor -->
+            <dialog class="proveedores__modal-editar-proveedor">
+                <h2 class="proveedores__modal-editar-proveedor-title dialog-title">Edita Tus Proveedores</h2>
+                <form class="proveedores__modal-editar-proveedor-form dialog-main-content">
+                    <input type="text" placeholder="Ingresa el NIT del proveedor">
+                    <input type="text" placeholder="Ingresa el nombre del proveedor">
+                    <input type="text" placeholder="Telefono">
+                    <input type="text" placeholder="Direcci&oacute;n">
+                    <input type="text" placeholder="Correo">
+                    <input type="text" placeholder="Ciudad">
+                </form>
+                <div class="proveedores__modal-editar-proveedor-btns-container dialog-container-bts">
+                    <button class="proveedores__modal-editar-proveedor-btn-añadir boton dialog-btn">Editar</button>
+                    <button class="proveedores__modal-editar-proveedor-btn-cancelar boton dialog-btn">Cancelar</button>
+                </div>
+            </dialog>
+
+            <dialog class="proveedores__modal-editar-proveedor-confirmacion">
+                <h2 class="proveedores__modal-editar-proveedor-title-confirmacion dialog-title">Verifica los Datos</h2>
+                <p class="proveedores__modal-editar-proveedor-text-confirmacion dialog-text">
+                    ¿Estas seguro de modificar este proveedor?<br>
+                    Recuerda revisar detenidamente la informacion del proveedor que estas modificando.
+                </p>
+                <div class="proveedores__modal-editar-proveedor-info-confirmacion dialog-main-content">
+                    <section class="proveedores__modal-editar-proveedor-info-item-confirmacion">
+                        <h3>NIT DEL PROVEEDOR</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="proveedores__modal-editar-proveedor-info-item-confirmacion">
+                        <h3>NOMBRE DEL PROVEEDOR</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="proveedores__modal-editar-proveedor-info-item-confirmacion">
+                        <h3>TELEFONO</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="proveedores__modal-editar-proveedor-info-item-confirmacion">
+                        <h3>DIRECCI&Oacute;N</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="proveedores__modal-editar-proveedor-info-item-confirmacion">
+                        <h3>CORREO</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="proveedores__modal-editar-proveedor-info-item-confirmacion">
+                        <h3>CIUDAD</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                </div>
+                <div class="proveedores__modal-editar-proveedor-confirmacion-btns-container dialog-container-bts">
+                    <button class="proveedores__modal-editar-proveedor-confirmacion-btn-confirmar dialog-btn boton">Confirmar</button>
+                    <button class="proveedores__modal-editar-proveedor-confirmacion-btn-cancelar dialog-btn boton">Cancelar</button>
+                </div>
+            </dialog>
+
+            <dialog class="proveedores__modal-modificacion-exitosa dialog-process-result">
+                <h2>¡Exelente!</h2>
+                <p>Has modificado un proveedor exitosamente</p>
+                <button class="proveedores__modal-modificacion-exitosa-btn dialog-process-result__btn boton" >Ok</button>
+            </dialog>
+            
+            <dialog class="proveedores__modal-modificacion-fallo dialog-process-result">
+                <h2>¡Algo salio mal!</h2>
+                <p>Este proveedor no pudo ser modificado, porque posiblemente hubo un problema interno</p>
+                <button class="proveedores__modal-modificacion-fallo-btn dialog-process-result__btn boton" >Ok</button>
+            </dialog>
+
+
         </section>
     </main>
 
     <script src="../js/modulo_proveedores_agregar_proveedor.js"></script>
     <script src="../js/modulo_proveedores_proveedores_inhabilitados.js"></script>
+    <script src="../js/modulo_proveedores_editar_proveedor.js"></script>
 </body>
 </html>
