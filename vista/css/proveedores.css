@@ -66,7 +66,7 @@
     height: 550px;
 }
 
-/*-------------------------Estilos de los modals de edidar proveedores----------------------------------*/
+/*-------------------------Estilos de los modals de editar proveedores----------------------------------*/
 
 
 .proveedores__modal-edidar-proveedor {
@@ -76,4 +76,11 @@
 
 .proveedores__modal-editar-proveedor-title {
     margin-bottom: 3rem;
+}
+
+/*-------------------------Estilos del modal de inhabilitar proveedor----------------------------------*/
+
+.proveedores__modal-inhabilitar-proveedor {
+    min-width: 800px;
+    max-width: 900px;
 }

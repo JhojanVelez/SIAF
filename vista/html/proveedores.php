@@ -481,11 +481,63 @@
             </dialog>
 
 
+            <!-- Estos son los modals para inhabilitar un proveedor -->
+
+            <dialog class="proveedores__modal-inhabilitar-proveedor">
+                <h2 class="proveedores__modal-inhabilitar-proveedor-title dialog-title">¡Ten cuidado!</h2>
+                <p class="proveedores__modal-inhabilitar-proveedor-text dialog-text">
+                    ¿Estas seguro de inhabilitar este proveedor?<br>
+                    Recuerda que una vez inhabilitado, no lo podras volver a habilitar.
+                </p>
+                <div class="proveedores__modal-inhabilitar-proveedor-info dialog-main-content">
+                    <section class="proveedores__modal-inhabilitar-proveedor-info-item">
+                        <h3>NIT DEL PROVEEDOR</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="proveedores__modal-inhabilitar-proveedor-info-item">
+                        <h3>NOMBRE DEL PROVEEDOR</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="proveedores__modal-inhabilitar-proveedor-info-item">
+                        <h3>TELEFONO</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="proveedores__modal-inhabilitar-proveedor-info-item">
+                        <h3>DIRECCI&Oacute;N</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="proveedores__modal-inhabilitar-proveedor-info-item">
+                        <h3>CORREO</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="proveedores__modal-inhabilitar-proveedor-info-item">
+                        <h3>CIUDAD</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                </div>
+                <div class="proveedores__modal-inhabilitar-proveedor-btns-container dialog-container-bts">
+                    <button class="proveedores__modal-inhabilitar-proveedor-btn-confirmar dialog-btn boton">Confirmar</button>
+                    <button class="proveedores__modal-inhabilitar-proveedor-btn-cancelar dialog-btn boton">Cancelar</button>
+                </div>
+            </dialog>
+
+            <dialog class="proveedores__modal-inhabilitacion-exitosa dialog-process-result">
+                <h2>¡Exelente!</h2>
+                <p>Has inhabilitado un proveedor exitosamente</p>
+                <button class="proveedores__modal-inhabilitacion-exitosa-btn dialog-process-result__btn boton" >Ok</button>
+            </dialog>
+            
+            <dialog class="proveedores__modal-inhabilitacion-fallo dialog-process-result">
+                <h2>¡Algo salio mal!</h2>
+                <p>Este proveedor no pudo ser inhabilitado, porque posiblemente hay registros de este en otras partes del sistema</p>
+                <button class="proveedores__modal-inhabilitacion-fallo-btn dialog-process-result__btn boton" >Ok</button>
+            </dialog>
         </section>
     </main>
 
     <script src="../js/modulo_proveedores_agregar_proveedor.js"></script>
     <script src="../js/modulo_proveedores_proveedores_inhabilitados.js"></script>
     <script src="../js/modulo_proveedores_editar_proveedor.js"></script>
+    <script src="../js/modulo_proveedores_inhabilitar_proveedores.js"></script>
 </body>
 </html>
