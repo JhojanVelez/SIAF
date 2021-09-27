@@ -127,6 +127,42 @@
                 </button>
             </section>
         </section>
+
+
+        <section class="usuarios__container-modal transparent-container-modal">
+            
+            <!-- Estos son los modals para agregar un usuario -->
+            <dialog open class="usuarios__modal-agregar-usuario">
+                <h2 class="usuarios__modal-agregar-usuario-title dialog-title">Registra Nuevos Usuarios</h2>
+                <form class="usuarios__modal-agregar-usuario-form dialog-main-content">
+                    <input class="usuarios__modal-agregar-usuario-form-item" type="text" placeholder="Documento de identidad">
+                    <input class="usuarios__modal-agregar-usuario-form-item" type="text" placeholder="Correo">
+                    <input class="usuarios__modal-agregar-usuario-form-item" type="text" placeholder="Nombres">
+                    <input class="usuarios__modal-agregar-usuario-form-item" type="text" placeholder="Direcci&oacute;n">
+                    <input class="usuarios__modal-agregar-usuario-form-item" type="text" placeholder="Apellidos">
+                    <input class="usuarios__modal-agregar-usuario-form-item" type="text" placeholder="Telefono">
+                    <input class="usuarios__modal-agregar-usuario-form-item" type="text" placeholder="EPS">
+                    <input class="usuarios__modal-agregar-usuario-form-item" type="text" placeholder="RH">
+                    <div class="usuarios__modal-agregar-usuario-form-item">
+                        <div class="usuarios-modal-agregar-usuario-form-img-container">
+                            <img class="usuarios-modal-agregar-usuario-form-img-container__img" src="https://cdn.forbes.com.mx/2019/04/blackrrock-invertir-1-640x360.jpg" alt="">
+                            <input class="usuarios-modal-agregar-usuario-form-img-container__file" type="file" title="Foto">
+                        </div>
+                    </div>
+                    <input class="usuarios__modal-agregar-usuario-form-item" type="text" placeholder="Contraseña">
+                    <select class="usuarios__modal-agregar-usuario-form-item">
+                        <option value="">Rol</option>
+                        <option value="">Gerente</option>
+                        <option value="">Almacenista</option>
+                        <option value="">Farmaceuta</option>
+                    </select>
+                    <div class="usuarios__modal-agregar-usuario-form-item" class="usuarios__modal-agregar-usuario-btns-container dialog-container-bts">
+                        <button class="usuarios__modal-agregar-usuario-btn-añadir boton dialog-btn">A&ntilde;adir</button>
+                        <button class="usuarios__modal-agregar-usuario-btn-cancelar boton dialog-btn">Cancelar</button>
+                    </div>
+                </form>
+            </dialog>
+        </section>
     </main>
 </body>
 </html>

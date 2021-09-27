@@ -534,8 +534,8 @@ usuarios, clientes, proveedores */
   background-color: var(--color-background-modal);
   display: flex;
   align-items: center;
-  visibility: hidden;
-  opacity: 0;
+  /* visibility: hidden;
+  opacity: 0; */
   transition: opacity .5s;
 }
 
