@@ -132,7 +132,7 @@
         <section class="usuarios__container-modal transparent-container-modal">
             
             <!-- Estos son los modals para agregar un usuario -->
-            <dialog open class="usuarios__modal-agregar-usuario">
+            <dialog class="usuarios__modal-agregar-usuario">
                 <h2 class="usuarios__modal-agregar-usuario-title dialog-title">Registra Nuevos Usuarios</h2>
                 <form class="usuarios__modal-agregar-usuario-form dialog-main-content">
                     <input class="usuarios__modal-agregar-usuario-form-item" type="text" placeholder="Documento de identidad">
@@ -157,12 +157,80 @@
                         <option value="">Farmaceuta</option>
                     </select>
                     <div class="usuarios__modal-agregar-usuario-form-item" class="usuarios__modal-agregar-usuario-btns-container dialog-container-bts">
-                        <button class="usuarios__modal-agregar-usuario-btn-añadir boton dialog-btn">A&ntilde;adir</button>
                         <button class="usuarios__modal-agregar-usuario-btn-cancelar boton dialog-btn">Cancelar</button>
+                        <button class="usuarios__modal-agregar-usuario-btn-añadir boton dialog-btn">A&ntilde;adir</button>
                     </div>
                 </form>
             </dialog>
+
+            <dialog class="usuarios__modal-agregar-usuario-confirmacion">
+                <h2 class="usuarios__modal-agregar-usuario-title-confirmacion dialog-title">Verifica los Datos</h2>
+                <p class="usuarios__modal-agregar-usuario-text-confirmacion dialog-text">
+                    ¿Estas seguro de registrar este usuario?<br>
+                    Recuerda revisar detenidamente la informacion del usuario que estas registrando.
+                </p>
+                <div class="usuarios__modal-agregar-usuario-info-confirmacion dialog-main-content">
+                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion">
+                        <h3>DOCUMENTO DE IDENTIDAD</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion">
+                        <h3>CORREO</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion">
+                        <h3>NOMBRES</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion">
+                        <h3>DIRECCI&Oacute;N</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion">
+                        <h3>APELLIDOS</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion">
+                        <h3>TELEFONO</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion">
+                        <h3>EPS</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion">
+                        <h3>RH</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion">
+                        <h3>CONTRASE&Ntilde;A</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion">
+                        <h3>ROL</h3>
+                        <p>________________________________________________</p>
+                    </section>
+                </div>
+                <div class="usuarios__modal-agregar-usuario-confirmacion-btns-container dialog-container-bts">
+                    <button class="usuarios__modal-agregar-usuario-confirmacion-btn-cancelar dialog-btn boton">Volver Atras</button>
+                    <button class="usuarios__modal-agregar-usuario-confirmacion-btn-confirmar dialog-btn boton">Confirmar</button>
+                </div>
+            </dialog>
+
+            <dialog class="usuarios__modal-agregacion-exitosa dialog-process-result">
+                <h2>¡Exelente!</h2>
+                <p>Has registrado un nuevo usuario exitosamente</p>
+                <button class="usuarios__modal-agregacion-exitosa-btn dialog-process-result__btn boton" >Ok</button>
+            </dialog>
+            
+            <dialog class="usuarios__modal-agregacion-fallo dialog-process-result">
+                <h2>¡Algo salio mal!</h2>
+                <p>Este usuario no pudo ser registrado, porque posiblemente ya esta registrado en el sistema</p>
+                <button class="usuarios__modal-agregacion-fallo-btn dialog-process-result__btn boton" >Ok</button>
+            </dialog>
         </section>
     </main>
+
+    <script src="../js/modulo_usuarios_agregar_usuario.js"></script>
 </body>
 </html>

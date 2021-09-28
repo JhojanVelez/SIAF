@@ -428,7 +428,7 @@ usuarios, clientes, proveedores */
 
 .nav-container {
   max-width: 100%;
-  min-width: 1400px;
+  min-width: 1500px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -526,6 +526,7 @@ usuarios, clientes, proveedores */
 /*--------------Estilos para los modales----------------------*/
 
 .transparent-container-modal {
+  min-width: 1500px;
   position: absolute;
   top: 0;
   left: 0;
@@ -534,8 +535,8 @@ usuarios, clientes, proveedores */
   background-color: var(--color-background-modal);
   display: flex;
   align-items: center;
-  /* visibility: hidden;
-  opacity: 0; */
+  visibility: hidden;
+  opacity: 0;
   transition: opacity .5s;
 }
 

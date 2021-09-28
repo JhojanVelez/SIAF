@@ -127,8 +127,8 @@
                     <input type="text" placeholder="Ciudad">
                 </form>
                 <div class="proveedores__modal-agregar-proveedor-btns-container dialog-container-bts">
-                    <button class="proveedores__modal-agregar-proveedor-btn-añadir boton dialog-btn">A&ntilde;adir</button>
                     <button class="proveedores__modal-agregar-proveedor-btn-cancelar boton dialog-btn">Cancelar</button>
+                    <button class="proveedores__modal-agregar-proveedor-btn-añadir boton dialog-btn">A&ntilde;adir</button>
                 </div>
             </dialog>
 
@@ -165,8 +165,8 @@
                     </section>
                 </div>
                 <div class="proveedores__modal-agregar-proveedor-confirmacion-btns-container dialog-container-bts">
+                    <button class="proveedores__modal-agregar-proveedor-confirmacion-btn-cancelar dialog-btn boton">Volver Atras</button>
                     <button class="proveedores__modal-agregar-proveedor-confirmacion-btn-confirmar dialog-btn boton">Confirmar</button>
-                    <button class="proveedores__modal-agregar-proveedor-confirmacion-btn-cancelar dialog-btn boton">Cancelar</button>
                 </div>
             </dialog>
 
@@ -425,8 +425,8 @@
                     <input type="text" placeholder="Ciudad">
                 </form>
                 <div class="proveedores__modal-editar-proveedor-btns-container dialog-container-bts">
-                    <button class="proveedores__modal-editar-proveedor-btn-añadir boton dialog-btn">Editar</button>
                     <button class="proveedores__modal-editar-proveedor-btn-cancelar boton dialog-btn">Cancelar</button>
+                    <button class="proveedores__modal-editar-proveedor-btn-añadir boton dialog-btn">Editar</button>
                 </div>
             </dialog>
 
@@ -463,8 +463,8 @@
                     </section>
                 </div>
                 <div class="proveedores__modal-editar-proveedor-confirmacion-btns-container dialog-container-bts">
+                    <button class="proveedores__modal-editar-proveedor-confirmacion-btn-cancelar dialog-btn boton">Volver Atras</button>
                     <button class="proveedores__modal-editar-proveedor-confirmacion-btn-confirmar dialog-btn boton">Confirmar</button>
-                    <button class="proveedores__modal-editar-proveedor-confirmacion-btn-cancelar dialog-btn boton">Cancelar</button>
                 </div>
             </dialog>
 

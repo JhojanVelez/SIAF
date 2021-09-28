@@ -20,14 +20,14 @@
             $modal_1.toggleAttribute("open");
             $transparentBackgroundModal.classList.toggle("visible");
         }
-
+        
         if(e.target.matches(".productos__modal-editar-producto-confirmacion-btn-confirmar")) {
             $modal_2.toggleAttribute("open");
             $modal_3.toggleAttribute("open");
         }
         if(e.target.matches(".productos__modal-editar-producto-confirmacion-btn-cancelar")) {
+            $modal_1.toggleAttribute("open");
             $modal_2.toggleAttribute("open");
-            $transparentBackgroundModal.classList.toggle("visible");
         }
         if(e.target.matches(".productos__modal-edicion-exitosa-btn")) {
             $modal_3.toggleAttribute("open");

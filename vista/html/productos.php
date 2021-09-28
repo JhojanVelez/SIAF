@@ -486,8 +486,8 @@
                     <input type="text" title="Hola" placeholder="Registro sanitario INVIMA">
                 </form>
                 <div class="productos__modal-agregar-producto-btns-container dialog-container-bts">
-                    <button class="productos__modal-agregar-producto-btn-añadir boton dialog-btn">A&ntilde;adir</button>
                     <button class="productos__modal-agregar-producto-btn-cancelar boton dialog-btn">Cancelar</button>
+                    <button class="productos__modal-agregar-producto-btn-añadir boton dialog-btn">A&ntilde;adir</button>
                 </div>
             </dialog>
 
@@ -540,8 +540,8 @@
                     </section>
                 </div>
                 <div class="productos__modal-agregar-producto-confirmacion-btns-container dialog-container-bts">
+                    <button class="productos__modal-agregar-producto-confirmacion-btn-cancelar dialog-btn boton">Volver Atras</button>
                     <button class="productos__modal-agregar-producto-confirmacion-btn-confirmar dialog-btn boton">Confirmar</button>
-                    <button class="productos__modal-agregar-producto-confirmacion-btn-cancelar dialog-btn boton">Cancelar</button>
                 </div>
             </dialog>
 
@@ -581,8 +581,8 @@
                     <input type="text" title="Hola" placeholder="Registro sanitario INVIMA">
                 </form>
                 <div class="productos__modal-editar-producto-btns-container dialog-container-bts">
-                    <button class="productos__modal-editar-producto-btn-editar boton dialog-btn">Editar</button>
                     <button class="productos__modal-editar-producto-btn-cancelar boton dialog-btn">Cancelar</button>
+                    <button class="productos__modal-editar-producto-btn-editar boton dialog-btn">Editar</button>
                 </div>
             </dialog>
 
@@ -635,8 +635,8 @@
                     </section>
                 </div>
                 <div class="productos__modal-editar-producto-confirmacion-btns-container dialog-container-bts">
+                    <button class="productos__modal-editar-producto-confirmacion-btn-cancelar dialog-btn boton">Volver Atras</button>
                     <button class="productos__modal-editar-producto-confirmacion-btn-confirmar dialog-btn boton">Confirmar</button>
-                    <button class="productos__modal-editar-producto-confirmacion-btn-cancelar dialog-btn boton">Cancelar</button>
                 </div>
             </dialog>
 

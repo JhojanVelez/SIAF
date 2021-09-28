@@ -127,8 +127,8 @@
                     <input type="text" placeholder="Telefono">
                 </form>
                 <div class="clientes__modal-agregar-cliente-btns-container dialog-container-bts">
-                    <button class="clientes__modal-agregar-cliente-btn-añadir boton dialog-btn">A&ntilde;adir</button>
                     <button class="clientes__modal-agregar-cliente-btn-cancelar boton dialog-btn">Cancelar</button>
+                    <button class="clientes__modal-agregar-cliente-btn-añadir boton dialog-btn">A&ntilde;adir</button>
                 </div>
             </dialog>
 
@@ -165,8 +165,8 @@
                     </section>
                 </div>
                 <div class="clientes__modal-agregar-cliente-confirmacion-btns-container dialog-container-bts">
+                    <button class="clientes__modal-agregar-cliente-confirmacion-btn-cancelar dialog-btn boton">Volver Atras</button>
                     <button class="clientes__modal-agregar-cliente-confirmacion-btn-confirmar dialog-btn boton">Confirmar</button>
-                    <button class="clientes__modal-agregar-cliente-confirmacion-btn-cancelar dialog-btn boton">Cancelar</button>
                 </div>
             </dialog>
 
@@ -425,8 +425,8 @@
                     <input type="text" placeholder="Telefono">
                 </form>
                 <div class="clientes__modal-editar-cliente-btns-container dialog-container-bts">
-                    <button class="clientes__modal-editar-cliente-btn-añadir boton dialog-btn">Editar</button>
                     <button class="clientes__modal-editar-cliente-btn-cancelar boton dialog-btn">Cancelar</button>
+                    <button class="clientes__modal-editar-cliente-btn-añadir boton dialog-btn">Editar</button>
                 </div>
             </dialog>
 
@@ -463,8 +463,8 @@
                     </section>
                 </div>
                 <div class="clientes__modal-editar-cliente-confirmacion-btns-container dialog-container-bts">
+                    <button class="clientes__modal-editar-cliente-confirmacion-btn-cancelar dialog-btn boton">Volver Atras</button>
                     <button class="clientes__modal-editar-cliente-confirmacion-btn-confirmar dialog-btn boton">Confirmar</button>
-                    <button class="clientes__modal-editar-cliente-confirmacion-btn-cancelar dialog-btn boton">Cancelar</button>
                 </div>
             </dialog>
 

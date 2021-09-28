@@ -243,8 +243,8 @@
                     <textarea class="entradas__modal-agregar-entrada-form-item" cols="30" rows="10" placeholder="Ingresa un comentario..."></textarea>
                 </form>
                 <div class="entradas__modal-agregar-entrada-btns-container dialog-container-bts">
-                    <button class="entradas__modal-agregar-entrada-btn-añadir boton dialog-btn">A&ntilde;adir</button>
                     <button class="entradas__modal-agregar-entrada-btn-cancelar boton dialog-btn">Cancelar</button>
+                    <button class="entradas__modal-agregar-entrada-btn-añadir boton dialog-btn">A&ntilde;adir</button>
                 </div>
             </dialog>
 
@@ -281,8 +281,8 @@
                     </section>
                 </div>
                 <div class="entradas__modal-agregar-entrada-confirmacion-btns-container dialog-container-bts">
+                    <button class="entradas__modal-agregar-entrada-confirmacion-btn-cancelar dialog-btn boton">Volver Atras</button>
                     <button class="entradas__modal-agregar-entrada-confirmacion-btn-confirmar dialog-btn boton">Confirmar</button>
-                    <button class="entradas__modal-agregar-entrada-confirmacion-btn-cancelar dialog-btn boton">Cancelar</button>
                 </div>
             </dialog>
 

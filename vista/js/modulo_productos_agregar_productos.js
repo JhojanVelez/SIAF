@@ -26,8 +26,8 @@
             $modal_3.toggleAttribute("open");
         }
         if(e.target.matches(".productos__modal-agregar-producto-confirmacion-btn-cancelar")) {
+            $modal_1.toggleAttribute("open");
             $modal_2.toggleAttribute("open");
-            $transparentBackgroundModal.classList.toggle("visible");
         }
         if(e.target.matches(".productos__modal-agregacion-exitosa-btn")) {
             $modal_3.toggleAttribute("open");

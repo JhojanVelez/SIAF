@@ -26,8 +26,8 @@
             $modal_3.toggleAttribute("open");
         }
         if(e.target.matches(".entradas__modal-agregar-entrada-confirmacion-btn-cancelar")) {
+            $modal_1.toggleAttribute("open");
             $modal_2.toggleAttribute("open");
-            $transparentBackgroundModal.classList.toggle("visible");
         }
         if(e.target.matches(".entradas__modal-agregacion-exitosa-btn")) {
             $modal_3.toggleAttribute("open");

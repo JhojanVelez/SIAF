@@ -25,8 +25,8 @@
             $modal_3.toggleAttribute("open");
         }
         if(e.target.matches(".clientes__modal-agregar-cliente-confirmacion-btn-cancelar")) {
+            $modal_1.toggleAttribute("open");
             $modal_2.toggleAttribute("open");
-            $transparentBackgroundModal.classList.toggle("visible");
         }
         if(e.target.matches(".clientes__modal-agregacion-exitosa-btn")) {
             $modal_3.toggleAttribute("open");
