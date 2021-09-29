@@ -288,5 +288,28 @@ display: flex;
     align-items: center;
 }
 
+/*-------------------------Estilos del modal de usuarios inhabilitados----------------------------------*/
+
+.usuarios__modal-usuarios-inhabilitados {
+    min-width: 1300px;
+    max-width: 1400px;
+}
+
+.usuarios__modal-usuarios-inhabilitados-container-gen-repo {
+    margin-bottom: 3rem;
+}
+
+.usuarios__modal-usuarios-inhabilitados-title {
+    margin-bottom: 3rem;
+}
+
+.usuarios__modal-usuarios-inhabilitados-table-container {
+    height: 550px;
+}
+
+.usuarios-inhabilitados__table {
+    min-width: 150%;
+}
+
 
 
