@@ -426,7 +426,7 @@
                 </form>
                 <div class="proveedores__modal-editar-proveedor-btns-container dialog-container-bts">
                     <button class="proveedores__modal-editar-proveedor-btn-cancelar boton dialog-btn">Cancelar</button>
-                    <button class="proveedores__modal-editar-proveedor-btn-añadir boton dialog-btn">Editar</button>
+                    <button class="proveedores__modal-editar-proveedor-btn-editar boton dialog-btn">Editar</button>
                 </div>
             </dialog>
 
@@ -516,8 +516,8 @@
                     </section>
                 </div>
                 <div class="proveedores__modal-inhabilitar-proveedor-btns-container dialog-container-bts">
-                    <button class="proveedores__modal-inhabilitar-proveedor-btn-confirmar dialog-btn boton">Confirmar</button>
                     <button class="proveedores__modal-inhabilitar-proveedor-btn-cancelar dialog-btn boton">Cancelar</button>
+                    <button class="proveedores__modal-inhabilitar-proveedor-btn-confirmar dialog-btn boton">Confirmar</button>
                 </div>
             </dialog>
 

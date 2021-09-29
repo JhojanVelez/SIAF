@@ -426,7 +426,7 @@
                 </form>
                 <div class="clientes__modal-editar-cliente-btns-container dialog-container-bts">
                     <button class="clientes__modal-editar-cliente-btn-cancelar boton dialog-btn">Cancelar</button>
-                    <button class="clientes__modal-editar-cliente-btn-añadir boton dialog-btn">Editar</button>
+                    <button class="clientes__modal-editar-cliente-btn-editar boton dialog-btn">Editar</button>
                 </div>
             </dialog>
 
@@ -516,8 +516,8 @@
                     </section>
                 </div>
                 <div class="clientes__modal-inhabilitar-cliente-btns-container dialog-container-bts">
-                    <button class="clientes__modal-inhabilitar-cliente-btn-confirmar dialog-btn boton">Confirmar</button>
                     <button class="clientes__modal-inhabilitar-cliente-btn-cancelar dialog-btn boton">Cancelar</button>
+                    <button class="clientes__modal-inhabilitar-cliente-btn-confirmar dialog-btn boton">Confirmar</button>
                 </div>
             </dialog>
 

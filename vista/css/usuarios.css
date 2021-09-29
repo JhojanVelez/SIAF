@@ -165,18 +165,128 @@ display: flex;
 }
 
 .usuarios__modal-agregar-usuario-form-item:nth-child(10) {
-grid-area:pas;
+    grid-area:pas;
 }
 .usuarios__modal-agregar-usuario-form-item:nth-child(11) {
-grid-area:rol;
+    grid-area:rol;
 }
 .usuarios__modal-agregar-usuario-form-item:nth-child(12) {
-grid-area:btn;
-display: flex;
-justify-content: space-evenly;
-align-items: center;
+    grid-area:btn;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
+/*-------------------------Estilos de los modals de editar usuarios----------------------------------*/
+
+
+.usuarios__modal-editar-usuario {
+    min-width: 1000px;
+    max-width: 1100px;
+}
+
+.usuarios__modal-editar-usuario-title {
+    margin-bottom: 3rem;
+}
+
+.usuarios__modal-editar-usuario-form {
+    grid-template-columns: repeat(3,minmax(200px,400px));
+    grid-template-rows: repeat(6,min-content);
+    grid-template-areas:'doc cor img'
+                        'nom dir img'
+                        'ape tel img'
+                        'eps rh  img'
+                        'btn btn pas'
+                        'btn btn rol';
+    grid-gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.usuarios__modal-editar-usuario-form-item:nth-child(1) {
+grid-area:doc;
+}
+.usuarios__modal-editar-usuario-form-item:nth-child(2) {
+grid-area:cor;
+}
+.usuarios__modal-editar-usuario-form-item:nth-child(3) {
+grid-area:nom;
+}
+.usuarios__modal-editar-usuario-form-item:nth-child(4) {
+grid-area:dir;
+}
+.usuarios__modal-editar-usuario-form-item:nth-child(5) {
+grid-area:ape;
+}
+.usuarios__modal-editar-usuario-form-item:nth-child(6) {
+grid-area:tel;
+}
+.usuarios__modal-editar-usuario-form-item:nth-child(7) {
+grid-area:eps;
+}
+.usuarios__modal-editar-usuario-form-item:nth-child(8) {
+grid-area:rh;
+}
+.usuarios__modal-editar-usuario-form-item:nth-child(9) {
+grid-area:img;
+display: flex;
+}
+
+.usuarios-modal-editar-usuario-form-img-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    text-align: center;
+}
+
+.usuarios-modal-editar-usuario-form-img-container__file {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -40px;
+    bottom: 0;
+    border-radius: 0;
+    border: none;
+    opacity: 0;
+    transition: opacity .5s, background-color .5s;
+    cursor: pointer;
+}
+
+.usuarios-modal-editar-usuario-form-img-container__file:hover {
+    background-color: var(--color-background-modal);
+    opacity: 1;
+}
+
+
+.usuarios-modal-editar-usuario-form-img-container__file::after {
+    content: '';
+    display: block;
+    background-image: url(../imagenes/editar-icono.svg);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40px;
+    bottom: 0;
+    filter: invert();
+}
+
+.usuarios__modal-editar-usuario-form-item:nth-child(10) {
+    grid-area:pas;
+}
+.usuarios__modal-editar-usuario-form-item:nth-child(11) {
+    grid-area:rol;
+}
+.usuarios__modal-editar-usuario-form-item:nth-child(12) {
+    grid-area:btn;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
 
 

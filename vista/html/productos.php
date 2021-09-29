@@ -445,8 +445,8 @@
                     </section>
                 </div>
                 <div class="productos__modal-inhabilitar-producto-btns-container dialog-container-bts">
-                    <button class="productos__modal-inhabilitar-producto-btn-confirmar dialog-btn boton">Confirmar</button>
                     <button class="productos__modal-inhabilitar-producto-btn-cancelar dialog-btn boton">Cancelar</button>
+                    <button class="productos__modal-inhabilitar-producto-btn-confirmar dialog-btn boton">Confirmar</button>
                 </div>
             </dialog>
 

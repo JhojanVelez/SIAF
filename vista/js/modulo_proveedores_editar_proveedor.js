@@ -13,7 +13,7 @@
             $modal_1.toggleAttribute("open");
             scroll(0,280);
         }
-        if(e.target.matches(".proveedores__modal-editar-proveedor-btn-añadir")) {
+        if(e.target.matches(".proveedores__modal-editar-proveedor-btn-editar")) {
             $modal_1.toggleAttribute("open");
             $modal_2.toggleAttribute("open");
         }
