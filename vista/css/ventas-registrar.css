@@ -175,6 +175,50 @@
 }
 
 
+/*-------------------------Estilos del modal para ver los productos registrados en sistema----------------------------------*/
+
+.registrar-ventas__modal-lista-filtro-productos {
+    min-width: 1600px;
+    max-width: 1900px;
+}
+
+
+.registrar-ventas__modal-lista-filtro-productos-title {
+    margin-bottom: 2rem;
+}
+
+.registrar-ventas__modal-lista-filtro-productos-table-container {
+    height: 550px;
+}
+
+.registrar-ventas__modal-lista-filtro-productos__table {
+    min-width: 150%;
+}
+
+.registrar-ventas__container-filter-lista-productos {
+    margin-bottom: 3rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.registrar-ventas__filtro-form {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.registrar-ventas__filtro-input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.registrar-ventas__filtro-titulo {
+    margin-bottom: 2rem;
+}
+
+.registrar-ventas__filtro-label {
+    margin-bottom: 1rem;
+}
+
 
 
 

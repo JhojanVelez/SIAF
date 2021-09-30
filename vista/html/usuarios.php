@@ -399,7 +399,7 @@
 
             <dialog class="usuarios__modal-usuarios-inhabilitados">
                 <span class="usuarios__modal-usuarios-inhabilitados-btn-cerrar dialog-btn-cerrar">X</span>
-                <h2 class="usuarios__modal-usuarios-inhabilitados-title dialog-title">usuarios Inhabilitados</h2>
+                <h2 class="usuarios__modal-usuarios-inhabilitados-title dialog-title">Usuarios Inhabilitados</h2>
                 <div class="usuarios__modal-usuarios-inhabilitados-container-gen-repo filtro-gen-repo">
                     <div class="usuarios__modal-usuarios-inhabilitados-gen-repo-container-img dialog-objects-enabled-gen-repo-img">
                         <img src="../imagenes/reportes-icono.svg" alt="">
