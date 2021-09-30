@@ -89,12 +89,12 @@
 
         <section class="registrar-ventas__container-botones container-botones box-shadow">
             <section class="registrar-ventas__container-boton">
-                <button class="registrar-ventas__boton-ver-inhabilitados boton" >
+                <button class="registrar-ventas__boton-cancelar-venta boton" >
                     Cancelar Venta
                 </button>
             </section>
             <section class="registrar-ventas__container-boton">
-                <button type="button" class="registrar-ventas__boton-inhabilitar boton" value="Vender">
+                <button type="button" class="registrar-ventas__boton-vender boton" value="Vender">
                     Vender
                 </button>
             </section>
@@ -459,9 +459,26 @@
                     </table>
                 </section>
             </dialog>
+
+            <!-- Este es el modal de cancelar una venta -->
+
+            <dialog class="registrar-ventas__modal-cancelar-venta">
+                <h2 class="registrar-ventas__modal-cancelar-venta-title dialog-title">¡Ten cuidado!</h2>
+                <p class="registrar-ventas__modal-cancelar-venta-text dialog-text">
+                    ¿Estas seguro de cancelar esta venta?<br>
+                    Recuerda que una vez cancelada, se borraran todos los productos a vender y toda la infomacion relacionada a esta venta.
+                </p>
+
+                </div>
+                <div class="registrar-ventas__modal-cancelar-venta-btns-container dialog-container-bts">
+                    <button class="registrar-ventas__modal-cancelar-venta-btn-cancelar dialog-btn boton">Cancelar</button>
+                    <button class="registrar-ventas__modal-cancelar-venta-btn-confirmar dialog-btn boton">Confirmar</button>
+                </div>
+            </dialog>
         </section>
     </main>
 
     <script src="../js/modulo_ventas_registrar_ver_modal_productos.js"></script>
+    <script src="../js/modulo_ventas_registrar_cancelar_venta.js"></script>
 </body>
 </html>
