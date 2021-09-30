@@ -70,7 +70,7 @@
             <div class="registrar-ventas__registro">
                 <form class="registrar-ventas__registro-form" action="">
                     <label class="registrar-ventas__registro-label" for="producto-id">Codigo de barras del producto</label>
-                    <input type="text" class="registrar-ventas_registro-id" id="producto-id">
+                    <input type="text" class="registrar-ventas_registro-id" id="producto-id" autofocus>
                     <label class="registrar-ventas__registro-label" for="producto-nombre">Nombre del producto</label>
                     <select class="registrar-ventas_registro-nombre" id="producto-nombre">
                         <option>Producto</option>
