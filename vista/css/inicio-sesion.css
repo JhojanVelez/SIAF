@@ -23,6 +23,10 @@ input, select {
   height: 600px;
 }
 
+.iniciar-sesion__img {
+  object-fit: contain;
+}
+
 .iniciar-sesion__flex-container {
   height: 100%;
   display: flex;
@@ -61,26 +65,10 @@ input, select {
 
 /* ------------------------------------ RESTABLECER CONTRASEÑA ----------------------------------------------- */
 
-.restablecer-contrasenia {
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s;
-  display: flex;
-  align-items: center;
-  color: var(--color-title-h1);
-}
-
 .restablecer-contrasenia__dialog {
   max-width: 40%;
   min-width: 500px;
   height: 60%;
-  margin: auto;
-  border-radius: 10px;
   opacity: 0;
   visibility: hidden;
   display: flex;
@@ -94,19 +82,11 @@ input, select {
   width: 90%;
   font-size: 3rem;
   text-align: center;
-  color: inherit;
 }
 
 .restablecer-contrasenia__form-1 {
   width: 50%;
 }
-
-/* .restablecer-contrasenia__input-email,
-.restablecer-contrasenia__boton-verificar {
-  outline: none;
-  font-size: 1rem;
-  width: 100%;
-} */
 
 .restablecer-contrasenia__boton-verificar {
   width: 50%;
@@ -116,28 +96,6 @@ input, select {
 
 .restablecer-contrasenia__boton-verificar:hover {
   background-color: var(--color-button-background-hover);
-}
-
-.restablecer-contrasenia__dialog-cerrar {
-  font-size: 1.6rem;
-  font-weight: bolder;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  line-height: 30px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 1s, color 0.5s, transform 1s;
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  user-select: none;
-}
-
-.restablecer-contrasenia__dialog-cerrar:hover {
-  color: var(--color-button-text);
-  background-color: var(--color-button-background);
-  transform: rotate(360deg);
 }
 
 .restablecer-contrasenia__boton-verificar {
@@ -157,6 +115,7 @@ input, select {
   left: 5px;
   top: 5px;
   user-select: none;
+  color: var(--color-nav-background);
 }
 
 .restablecer-contrasenia__dialog--2 {

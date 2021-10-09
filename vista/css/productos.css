@@ -1,5 +1,9 @@
 @import url(main.css);
 
+.nav__li:nth-child(2) {
+    border-bottom: 2px solid var(--color-button-text);
+}
+
 .grid-container-main {
     width: 90%;
     height: 100%;
@@ -79,8 +83,61 @@ table {
     align-items: center;
 }
 
-.boton:not(.boton-cerrar-sesion-container__boton) {
-    margin: 0;
+.productos__container-boton input[type="button"] {
     width: 80%;
 }
 
+/*-------------------------Estilos del modal de inhabilitar producto----------------------------------*/
+
+.productos__modal-inhabilitar-producto {
+    min-width: 800px;
+    max-width: 900px;
+}
+
+/*-------------------------Estilos del modal de agregar productos----------------------------------*/
+
+.productos__modal-agregar-producto {
+    min-width: 700px;
+    max-width: 800px;
+}
+
+.productos__modal-agregar-producto-title {
+    margin-bottom: 3rem;
+}
+
+/*-------------------------Estilos del modal de editar productos----------------------------------*/
+
+
+.productos__modal-editar-producto {
+    min-width: 700px;
+    max-width: 800px;
+}
+
+.productos__modal-editar-producto-title {
+    margin-bottom: 3rem;
+}
+
+.productos__table tr.product-selected {
+    background-color: gray;
+    color: white;
+}
+
+
+/*-------------------------Estilos del modal de productos inhabilitados----------------------------------*/
+
+.productos__modal-productos-inhabilitados {
+    min-width: 1300px;
+    max-width: 1800px;
+}
+
+.productos__modal-productos-inhabilitados-container-gen-repo {
+    margin-bottom: 3rem;
+}
+
+.productos__modal-productos-inhabilitados-title {
+    margin-bottom: 3rem;
+}
+
+.productos__modal-productos-inhabilitados-table-container {
+    height: 550px;
+}

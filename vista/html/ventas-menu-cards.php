@@ -7,6 +7,10 @@
     <title>Ventas</title>
     <link rel="stylesheet" href="../css/main.css">
     <style>
+        .nav__li:nth-child(4) {
+            border-bottom: 2px solid var(--color-button-text);
+        }
+
         .cards-flex-container {
             width: 70%;
         }

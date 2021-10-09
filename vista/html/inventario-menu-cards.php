@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inventario</title>
     <link rel="stylesheet" href="../css/main.css">
+    <style>
+        .nav__li:nth-child(3) {
+            border-bottom: 2px solid var(--color-button-text);
+        }
+    </style>
 </head>
 <body>
     <?php

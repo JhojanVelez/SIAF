@@ -24,6 +24,8 @@ respetando la metodologia "BEM".
 /*Este es el color del background que va en todas las interfaces*/
   --color-main-background: #6b63ff25;
 
+  --color-background-modal: #201f3a83;
+
   --color-title-h1: #020029;
   --color-text: #020029;
 
@@ -67,7 +69,7 @@ main {
 }
 
 
-input, select {
+input, select, textarea {
   border-radius: 50px;
   border: 0.2px solid #6b63ff5e;
   outline: none;
@@ -86,6 +88,7 @@ input:focus, select:focus {
 
 /*Estilos para todos los botones de la pagina*/
 
+
 .boton {
   width: 100%;
   padding: 12px 12px;
@@ -96,10 +99,19 @@ input:focus, select:focus {
   background-color: var(--color-button-background);
   color: var(--color-button-text);
   cursor: pointer;
+  transition: background-color .5s;
 }
 
 .boton:hover {
   background-color: var(--color-button-background-hover);
+}
+
+input:disabled {
+  background-color: #201f3a83;
+  cursor: help;
+}
+input:disabled:hover {
+  background-color: #201f3a83;
 }
 
 .box-shadow {
@@ -220,7 +232,6 @@ thead td {
 }
 
 tbody td {
-  padding: 5px 10px;
   min-width: min-content;
   max-width: 300px;
   word-break: break-word;
@@ -430,7 +441,7 @@ usuarios, clientes y proveedores */
 
 .nav-container {
   max-width: 100%;
-  min-width: 1400px;
+  min-width: 1500px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -447,7 +458,7 @@ usuarios, clientes y proveedores */
                       "usu";
   justify-items: center;
   align-items: center;
-  color: white;
+  color: var(--color-button-text);
 }
 
 .user-icon-container__img {
@@ -479,7 +490,7 @@ usuarios, clientes y proveedores */
   display: block;
   line-height: 40px;
   transition: color .3s;
-  color: white;
+  color: var(--color-button-text);
   font-weight: 500;
   width: 100%;
 }
@@ -523,3 +534,111 @@ usuarios, clientes y proveedores */
 .boton-cerrar-sesion-container__boton:hover .sign-out-container {
   transform: translateY(-50px);
 }
+
+
+/*--------------Estilos para los modales----------------------*/
+
+.transparent-container-modal {
+  min-width: 1500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-background-modal);
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+dialog {
+  margin: auto;
+  padding: 2rem;  
+  border-radius: var(--border-card-radius);
+  border: none;
+  border-top: 5px solid var(--color-nav-background);
+  color: var(--color-text);
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.dialog-title {
+  font-size: 3rem;
+  margin-bottom: .8rem;
+  text-align: center;
+}
+
+.dialog-text {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.dialog-main-content {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2,minmax(200px,400px));
+  grid-gap: 1rem 3rem;
+}
+
+.dialog-container-bts {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.dialog-btn {
+  width: 40%;
+}
+
+.dialog-btn-cerrar {
+  font-size: 1.6rem;
+  font-weight: bolder;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 1s, color 0.5s, transform 1s;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  user-select: none;
+  color: var(--color-nav-background);
+}
+
+.dialog-btn-cerrar:hover {
+  color: var(--color-button-text);
+  background-color: var(--color-button-background);
+  transform: rotate(360deg);
+}
+
+.dialog-main-content section {
+  word-break: break-all;
+}
+
+.dialog-process-result {
+  max-width: 500px;
+}
+.dialog-process-result__btn {
+  margin-top: 1rem;
+  width: 20%;
+}
+
+.dialog-objects-enabled-gen-repo-img {
+  height: 5rem;
+}
+
+
+
+
+

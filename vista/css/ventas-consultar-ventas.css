@@ -1,5 +1,9 @@
 @import url(main.css);
 
+.nav__li:nth-child(4) {
+    border-bottom: 2px solid var(--color-button-text);
+}
+
 .grid-container-main {
     grid-template-rows: 150px min-content 700px;
     grid-template-areas:"titulo"

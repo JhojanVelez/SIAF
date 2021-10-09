@@ -1,5 +1,9 @@
 @import url(main.css);
 
+.nav__li:nth-child(3) {
+    border-bottom: 2px solid var(--color-button-text);
+}
+
 .entradas__filtro {
     display: grid;
     grid-template-columns: 75% 1fr;
@@ -92,4 +96,62 @@
 
 .entradas__boton-agregar{
     width: 400px;
+}
+
+/*---------------- Estos son los estilos para los modals de agregar entrada ----------------*/
+
+.entradas__modal-agregar-entrada-form,
+.entradas__modal-agregar-entrada-info-confirmacion {
+    grid-template-columns: repeat(2,minmax(200px,380px));
+    grid-template-rows: repeat(5,max-content);
+    grid-template-areas:'cod com'
+                        'pro com'
+                        'can com'
+                        'cos com'
+                        'ent com';
+}
+
+.entradas__modal-agregar-entrada-title {
+    margin-bottom: 3rem;
+}
+
+.entradas__modal-agregar-entrada-form input[type="date"] {
+    position: relative;
+}
+
+.entradas__modal-agregar-entrada-form input[type="date"]::after {
+    content: 'Fecha de entrada';
+    position: absolute;
+    right: 20%;
+}
+
+.entradas__modal-agregar-entrada-form-item:nth-child(1),
+.entradas__modal-agregar-entrada-info-item-confirmacion:nth-child(1) {
+    grid-area: cod;
+}
+.entradas__modal-agregar-entrada-form-item:nth-child(2),
+.entradas__modal-agregar-entrada-info-item-confirmacion:nth-child(2) {
+    grid-area: pro;
+}
+.entradas__modal-agregar-entrada-form-item:nth-child(3),
+.entradas__modal-agregar-entrada-info-item-confirmacion:nth-child(3) {
+    grid-area: can;
+}
+.entradas__modal-agregar-entrada-form-item:nth-child(4),
+.entradas__modal-agregar-entrada-info-item-confirmacion:nth-child(4) {
+    grid-area: cos;
+}
+.entradas__modal-agregar-entrada-form-item:nth-child(5),
+.entradas__modal-agregar-entrada-info-item-confirmacion:nth-child(5) {
+    grid-area: ent;
+}
+.entradas__modal-agregar-entrada-form-item:nth-child(6) {
+    grid-area: com;
+    resize: none;
+    border-radius: var(--border-card-radius);
+}
+
+.entradas__modal-agregar-entrada-info-item-confirmacion:nth-child(6) {
+    grid-area: com;
+    align-self: center;
 }
