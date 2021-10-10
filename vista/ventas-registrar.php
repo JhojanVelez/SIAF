@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>registrar-ventas</title>
-    <link rel="stylesheet" href="../css/ventas-registrar.css">
+    <link rel="stylesheet" href="public/css/ventas-registrar.css">
 </head>
 <body>
     <?php
@@ -23,7 +23,7 @@
             <div class="registrar-ventas__lista-productos-contenido contenedor-objetos__contenido box-shadow">
                 <figure class="registrar-ventas__lista-producto contenedor-objetos__objeto box-shadow">
                     <div class="registrar-ventas__lista-producto-img contenedor-objetos__objeto-img">
-                        <img src="../imagenes/corazon-icono.svg" alt="">
+                        <img src="public/imagenes/corazon-icono.svg" alt="">
                     </div>
                     <div class="registrar-ventas__lista-producto-info">
                         <h4 class="registrar-ventas__lista-producto-info-title">CODIGO</h4>
@@ -45,10 +45,10 @@
                     </div>
                     <div class="registrar-ventas__lista-producto-botones contenedor-objetos__objeto-botones">
                         <section class="registrar-ventas__lista-producto-boton contenedor-objetos__objeto-boton">
-                            <img src="../imagenes/editar-icono.svg" alt="">
+                            <img src="public/imagenes/editar-icono.svg" alt="">
                         </section>
                         <section class="registrar-ventas__lista-producto-boton contenedor-objetos__objeto-boton">
-                            <img src="../imagenes/delete-icono.svg" alt="">
+                            <img src="public/imagenes/delete-icono.svg" alt="">
                         </section>
                     </div>
                 </figure>
@@ -586,8 +586,8 @@
         </section>
     </main>
 
-    <script src="../js/modulo_ventas_registrar_ver_modal_productos.js"></script>
-    <script src="../js/modulo_ventas_registrar_cancelar_venta.js"></script>
-    <script src="../js/modulo_ventas_confirmar_venta.js"></script>
+    <script src="public/js/modulo_ventas_registrar_ver_modal_productos.js"></script>
+    <script src="public/js/modulo_ventas_registrar_cancelar_venta.js"></script>
+    <script src="public/js/modulo_ventas_confirmar_venta.js"></script>
 </body>
 </html>
