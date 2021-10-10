@@ -15,7 +15,7 @@
         </div>
         <h2 class="menu-nav-title">SIAF</h2>
         <div class="boton-cerrar-sesion-container">
-            <a href="public/public/index">
+            <a href="login">
                 <button class="boton-cerrar-sesion-container__boton boton">
                     <div class="sign-out-container">
                         <section class="sign-out-container__img">
