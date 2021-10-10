@@ -55,7 +55,7 @@
                     <img src="public/imagenes/ventas-icono.svg" alt="">
                 </div>
                 <button class="card__button boton">
-                    <a href="ventas-menu-cards">Ingresar</a>
+                    <a href="ventasMenuCards">Ingresar</a>
                 </button>
             </section>
             <section class="card box-shadow">
