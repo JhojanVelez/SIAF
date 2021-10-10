@@ -5,21 +5,21 @@
     </div>
     <nav>
         <ul class="nav__ul">
-            <li class="nav__li" ><a class="nav__a" href="menu.php">Menu</a></li>
-            <li class="nav__li" ><a class="nav__a" href="productos.php">Productos</a></li>
-            <li class="nav__li" ><a class="nav__a" href="inventario-menu-cards.php">Inventario</a></li>
-            <li class="nav__li" ><a class="nav__a" href="ventas-menu-cards.php">Ventas</a></li>
-            <li class="nav__li" ><a class="nav__a" href="proveedores.php">Proveedores</a></li>
-            <li class="nav__li" ><a class="nav__a" href="clientes.php">Clientes</a></li>
-            <li class="nav__li" ><a class="nav__a" href="usuarios.php">Usuarios</a></li>
+            <li class="nav__li" ><a class="nav__a" href="menu">Menu</a></li>
+            <li class="nav__li" ><a class="nav__a" href="productos">Productos</a></li>
+            <li class="nav__li" ><a class="nav__a" href="inventarioMenuCards">Inventario</a></li>
+            <li class="nav__li" ><a class="nav__a" href="ventasMenuCards">Ventas</a></li>
+            <li class="nav__li" ><a class="nav__a" href="proveedores">Proveedores</a></li>
+            <li class="nav__li" ><a class="nav__a" href="clientes">Clientes</a></li>
+            <li class="nav__li" ><a class="nav__a" href="usuarios">Usuarios</a></li>
         </ul>
     </nav>
     <div class="boton-cerrar-sesion-container">
-        <a href="../../index.php">
+        <a href="login">
             <button class="boton-cerrar-sesion-container__boton boton">
                 <div class="sign-out-container">
                     <section class="sign-out-container__img">
-                        <img src="../imagenes/sign-out.png" alt="sign out">
+                        <img src="public/imagenes/sign-out.png" alt="sign out">
                     </section>
                     <section class="sign-out-container__text" >
                         CERRAR SESION

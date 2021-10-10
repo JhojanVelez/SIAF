@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ventas</title>
-    <link rel="stylesheet" href="../css/ventas-consultar-ventas.css">
+    <link rel="stylesheet" href="public/css/ventas-consultar-ventas.css">
 </head>
 <body>
     <?php
@@ -36,7 +36,7 @@
                 </form>
                 <div class="ventas__filtro-gen-repo filtro-gen-repo">
                     <div class="ventas__filtro-gen-repo-img filtro-gen-repo-img">
-                        <img src="../imagenes/informe.svg" alt="">
+                        <img src="public/imagenes/informe.svg" alt="">
                     </div>
                     <a class="ventas__filtro-subtitulo-reporte filtro-subtitulo-reporte" href="">Generar reporte</a>
                 </div>

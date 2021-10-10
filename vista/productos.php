@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
-    <link rel="stylesheet" href="../css/productos.css">
+    <link rel="stylesheet" href="public/css/productos.css">
 </head>
 <body>
     <?php
@@ -315,7 +315,7 @@
                 </form>
                 <div class="productos_filtro-gen-repo">
                     <div class="productos_filtro-gen-repo-img filtro-gen-repo-img">
-                        <img src="../imagenes/informe.svg" alt="">
+                        <img src="public/imagenes/informe.svg" alt="">
                     </div>
                     <a class="productos__filtro-subtitulo-reporte filtro-subtitulo-reporte" href="">Generar reporte</a>
                 </div>
@@ -608,7 +608,7 @@
                 <h2 class="productos__modal-productos-inhabilitados-title dialog-title">Productos inhabilitados</h2>
                 <div class="productos__modal-productos-inhabilitados-container-gen-repo filtro-gen-repo">
                     <div class="productos__modal-productos-inhabilitados-gen-repo-container-img dialog-objects-enabled-gen-repo-img">
-                        <img src="../imagenes/reportes-icono.svg" alt="">
+                        <img src="public/imagenes/reportes-icono.svg" alt="">
                     </div>
                     <div class="productos__modal-productos-inhabilitados-gen-repo-container-text">
                         <a class="filtro-subtitulo-reporte" href="">Generar Reporte</a>
@@ -937,10 +937,10 @@
             </dialog>
         </section>
     </main>
-    <script src="../js/modulo_productos_inhabilitar_productos.js"></script>
-    <script src="../js/modulo_productos_editar_productos.js"></script>
-    <script src="../js/modulo_productos_agregar_productos.js"></script>
-    <script src="../js/modulo_productos_seleccion_de_producto.js"></script>
-    <script src="../js/modulo_productos_productos_inhabilitados.js"></script>
+    <script src="public/js/modulo_productos_inhabilitar_productos.js"></script>
+    <script src="public/js/modulo_productos_editar_productos.js"></script>
+    <script src="public/js/modulo_productos_agregar_productos.js"></script>
+    <script src="public/js/modulo_productos_seleccion_de_producto.js"></script>
+    <script src="public/js/modulo_productos_productos_inhabilitados.js"></script>
 </body>
 </html>

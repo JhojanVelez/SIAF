@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="public/css/menu.css">
     <title>Menu Pricipal</title>
 </head>
 <body>
@@ -15,11 +15,11 @@
         </div>
         <h2 class="menu-nav-title">SIAF</h2>
         <div class="boton-cerrar-sesion-container">
-            <a href="../../index.php">
+            <a href="login">
                 <button class="boton-cerrar-sesion-container__boton boton">
                     <div class="sign-out-container">
                         <section class="sign-out-container__img">
-                            <img src="../imagenes/sign-out.png" alt="sign out">
+                            <img src="public/imagenes/sign-out.png" alt="sign out">
                         </section>
                         <section class="sign-out-container__text" >
                             CERRAR SESION
@@ -34,61 +34,61 @@
             <section class="card box-shadow">
                 <h2 class="card__title">PRODUCTOS</h2>
                 <div class="card__img">
-                    <img src="../imagenes/productos-icono.svg" alt="">
+                    <img src="public/imagenes/productos-icono.svg" alt="">
                 </div>
                 <button class="card__button boton">
-                    <a href="productos.php">Ingresar</a>
+                    <a href="productos">Ingresar</a>
                 </button>
             </section>
             <section class="card box-shadow">
                 <h2 class="card__title">INVENTARIO</h2>
                 <div class="card__img">
-                    <img src="../imagenes/inventario-icono.svg" />
+                    <img src="public/imagenes/inventario-icono.svg" />
                 </div>
                 <button class="card__button boton">
-                    <a href="inventario-menu-cards.php">Ingresar</a>
+                    <a href="inventarioMenuCards">Ingresar</a>
                 </button>
             </section>
             <section class="card box-shadow">
                 <h2 class="card__title">VENTAS</h2>
                 <div class="card__img">
-                    <img src="../imagenes/ventas-icono.svg" alt="">
+                    <img src="public/imagenes/ventas-icono.svg" alt="">
                 </div>
                 <button class="card__button boton">
-                    <a href="ventas-menu-cards.php">Ingresar</a>
+                    <a href="ventasMenuCards">Ingresar</a>
                 </button>
             </section>
             <section class="card box-shadow">
                 <h2 class="card__title">PROVEEDORES</h2>
                 <div class="card__img">
-                    <img src="../imagenes/proveedores-icono.svg" alt="">
+                    <img src="public/imagenes/proveedores-icono.svg" alt="">
                 </div>
                 <button class="card__button boton">
-                    <a href="proveedores.php">Ingresar</a>
+                    <a href="proveedores">Ingresar</a>
                 </button>
             </section>
             <section class="card box-shadow">
                 <h2 class="card__title">CLIENTES</h2>
                 <div class="card__img">
-                    <img src="../imagenes/clientes-icono.svg" alt="">
+                    <img src="public/imagenes/clientes-icono.svg" alt="">
                 </div>
                 <button class="card__button boton">
-                    <a href="clientes.php">Ingresar</a>
+                    <a href="clientes">Ingresar</a>
                 </button>
             </section>
             <section class="card box-shadow">
                 <h2 class="card__title">USUARIOS</h2>
                 <div class="card__img">
-                    <img src="../imagenes/gestion-usuarios-icono.svg" alt="">
+                    <img src="public/imagenes/gestion-usuarios-icono.svg" alt="">
                 </div>
                 <button class="card__button boton">
-                    <a href="usuarios.php">Ingresar</a>
+                    <a href="usuarios">Ingresar</a>
                 </button>
             </section>
             <section class="card box-shadow">
                 <h2 class="card__title">CONSULTAR TUS DATOS</h2>
                 <div class="card__img">
-                    <img src="../imagenes/consultar-datos-icono.svg" alt="">
+                    <img src="public/imagenes/consultar-datos-icono.svg" alt="">
                 </div>
                 <button class="card__button card__button--consultar-info-perfil boton">
                     <a href="#">Ingresar</a>
@@ -141,6 +141,6 @@
         </section>
     </main>
     
-    <script src="../js/modulo_menu_consultar_info_perfil.js"></script>
+    <script src="public/js/modulo_menu_consultar_info_perfil.js"></script>
 </body>
 </html>
