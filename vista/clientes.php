@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clientes</title>
-    <link rel="stylesheet" href="../css/clientes.css">
+    <link rel="stylesheet" href="public/css/clientes.css">
 </head>
 <body>
     <?php
@@ -37,7 +37,7 @@
                 </form>
                 <div class="clientes__filtro-gen-repo filtro-gen-repo">
                     <div class="clientes__filtro-gen-repo-img filtro-gen-repo-img">
-                        <img src="../imagenes/informe.svg" alt="">
+                        <img src="public/imagenes/informe.svg" alt="">
                     </div>
                     <a class="clientes__filtro-subtitulo-reporte filtro-subtitulo-reporte" href="">Generar reporte</a>
                 </div>
@@ -52,7 +52,7 @@
             <div class="clientes__lista-contenido contenedor-objetos__contenido box-shadow">
                 <figure class="clientes__lista-cliente contenedor-objetos__objeto box-shadow">
                     <div class="clientes__lista-cliente-img contenedor-objetos__objeto-img">
-                        <img src="../imagenes/cliente-icono.svg" alt="">
+                        <img src="public/imagenes/cliente-icono.svg" alt="">
                     </div>
                     <div class="clientes__lista-cliente-info-container">
                         <section class="clientes__lista-cliente-info documento">
@@ -83,13 +83,13 @@
                     <div class="clientes__lista-cliente-botones contenedor-objetos__objeto-botones">
                         <button class="clientes__lista-cliente-boton clientes__lista-cliente-boton-editar boton">
                             <div class="clientes__lista-cliente-boton-img">
-                                <img src="../imagenes/editar-icono.svg" alt="">
+                                <img src="public/imagenes/editar-icono.svg" alt="">
                             </div>
                             <span>Editar</span>
                         </button>
                         <button class="clientes__lista-cliente-boton clientes__lista-cliente-boton-inhabilitar boton">
                             <div class="clientes__lista-cliente-boton-img">
-                                <img src="../imagenes/delete-icono.svg" alt="">
+                                <img src="public/imagenes/delete-icono.svg" alt="">
                             </div>
                             <span>Inhabilitar</span>
                         </button>
@@ -189,7 +189,7 @@
                 <h2 class="clientes__modal-clientes-inhabilitados-title dialog-title">Clientes Inhabilitados</h2>
                 <div class="clientes__modal-clientes-inhabilitados-container-gen-repo filtro-gen-repo">
                     <div class="clientes__modal-clientes-inhabilitados-gen-repo-container-img dialog-objects-enabled-gen-repo-img">
-                        <img src="../imagenes/reportes-icono.svg" alt="">
+                        <img src="public/imagenes/reportes-icono.svg" alt="">
                     </div>
                     <div class="clientes__modal-clientes-inhabilitados-gen-repo-container-text">
                         <a class="filtro-subtitulo-reporte" href="">Generar Reporte</a>
@@ -535,9 +535,9 @@
         </section>
     </main>
 
-    <script src="../js/modulo_clientes_agregar_cliente.js"></script>
-    <script src="../js/modulo_clientes_clientes_inhabilitados.js"></script>
-    <script src="../js/modulo_clientes_editar_cliente.js"></script>
-    <script src="../js/modulo_clientes_inhabilitar_clientes.js"></script>
+    <script src="public/js/modulo_clientes_agregar_cliente.js"></script>
+    <script src="public/js/modulo_clientes_clientes_inhabilitados.js"></script>
+    <script src="public/js/modulo_clientes_editar_cliente.js"></script>
+    <script src="public/js/modulo_clientes_inhabilitar_clientes.js"></script>
 </body>
 </html>
