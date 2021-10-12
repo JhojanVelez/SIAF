@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="public/css/inicio-sesion.css" />
+    <link rel="stylesheet" href="<?php echo(URL_RAIZ); ?>public/css/inicio-sesion.css" />
     <title>Inicio Sesion</title>
 </head>
 
@@ -14,7 +14,7 @@
         <div class="iniciar-sesion">
 
             <section class="iniciar-sesion__container">
-                <img class="iniciar-sesion__img" src="public/imagenes/img-inicio-sesion.svg" alt="SIAF" />
+                <img class="iniciar-sesion__img" src="<?php echo(URL_RAIZ); ?>public/imagenes/img-inicio-sesion.svg" alt="SIAF" />
             </section>
 
             <section class="iniciar-sesion__container">
@@ -106,7 +106,7 @@
 
     <!-- SCRIPTS JS -->
 
-    <script src="public/js/main.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/main.js"></script>
 
 
 </body>

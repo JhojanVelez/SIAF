@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>usuarios</title>
-    <link rel="stylesheet" href="public/css/usuarios.css">
+    <link rel="stylesheet" href="<?php echo(URL_RAIZ); ?>public/css/usuarios.css">
 </head>
 <body>
     <?php
@@ -37,7 +37,7 @@
                 </form>
                 <div class="usuarios__filtro-gen-repo filtro-gen-repo">
                     <div class="usuarios__filtro-gen-repo-img filtro-gen-repo-img">
-                        <img src="public/imagenes/informe.svg" alt="">
+                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
                     </div>
                     <a class="usuarios__filtro-subtitulo-reporte filtro-subtitulo-reporte" href="">Generar reporte</a>
                 </div>
@@ -99,13 +99,13 @@
                     <div class="usuarios__lista-usuario-botones contenedor-objetos__objeto-botones">
                         <button class="usuarios__lista-usuario-boton usuarios__lista-usuario-boton-editar contenedor-objetos__objeto-boton boton">
                             <div class="usuarios__lista-usuario-boton-img">
-                                <img src="public/imagenes/editar-icono.svg" alt="">
+                                <img src="<?php echo(URL_RAIZ); ?>public/imagenes/editar-icono.svg" alt="">
                             </div>
                             <span>Editar</span>
                         </button>
                         <button class="usuarios__lista-usuario-boton usuarios__lista-usuario-boton-inhabilitar contenedor-objetos__objeto-boton boton">
                             <div class="usuarios__lista-usuario-boton-img">
-                                <img src="public/imagenes/delete-icono.svg" alt="">
+                                <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.svg" alt="">
                             </div>
                             <span>Inhabilitar</span>
                         </button>
@@ -402,7 +402,7 @@
                 <h2 class="usuarios__modal-usuarios-inhabilitados-title dialog-title">Usuarios Inhabilitados</h2>
                 <div class="usuarios__modal-usuarios-inhabilitados-container-gen-repo filtro-gen-repo">
                     <div class="usuarios__modal-usuarios-inhabilitados-gen-repo-container-img dialog-objects-enabled-gen-repo-img">
-                        <img src="public/imagenes/reportes-icono.svg" alt="">
+                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/reportes-icono.svg" alt="">
                     </div>
                     <div class="usuarios__modal-usuarios-inhabilitados-gen-repo-container-text">
                         <a class="filtro-subtitulo-reporte" href="">Generar Reporte</a>
@@ -648,9 +648,9 @@
         </section>
     </main>
 
-    <script src="public/js/modulo_usuarios_agregar_usuario.js"></script>
-    <script src="public/js/modulo_usuarios_editar_usuario.js"></script>
-    <script src="public/js/modulo_usuarios_inhabilitar_usuarios.js"></script>
-    <script src="public/js/modulo_usuarios_usuarios_inhabilitados.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_agregar_usuario.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_editar_usuario.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_inhabilitar_usuarios.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_usuarios_inhabilitados.js"></script>
 </body>
 </html>

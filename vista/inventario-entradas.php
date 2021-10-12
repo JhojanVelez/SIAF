@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion de Entradas</title>
-    <link rel="stylesheet" href="public/css/inventario-entradas.css">
+    <link rel="stylesheet" href="<?php echo(URL_RAIZ); ?>public/css/inventario-entradas.css">
 </head>
 <body>
     <?php
@@ -36,7 +36,7 @@
                 </form>
                 <div class="entradas__filtro-gen-repo filtro-gen-repo">
                     <div class="entradas__filtro-gen-repo-img filtro-gen-repo-img">
-                        <img src="public/imagenes/informe.svg" alt="">
+                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
                     </div>
                     <a class="entradas__filtro-subtitulo-reporte filtro-subtitulo-reporte" href="">Generar reporte</a>
                 </div>
@@ -240,7 +240,7 @@
                     <input class="entradas__modal-agregar-entrada-form-item" type="text" placeholder="Cantidad">
                     <input class="entradas__modal-agregar-entrada-form-item" type="text" placeholder="Costo">
                     <input class="entradas__modal-agregar-entrada-form-item" type="date">
-                    <textarea class="entradas__modal-agregar-entrada-form-item" cols="30" rows="10" placeholder="Ingresa un comentariopublic."></textarea>
+                    <textarea class="entradas__modal-agregar-entrada-form-item" cols="30" rows="10" placeholder="Ingresa un comentario<?php echo(URL_RAIZ); ?>public."></textarea>
                 </form>
                 <div class="entradas__modal-agregar-entrada-btns-container dialog-container-bts">
                     <button class="entradas__modal-agregar-entrada-btn-cancelar boton dialog-btn">Cancelar</button>
@@ -300,6 +300,6 @@
         </section>
     </main>
 
-    <script src="public/js/modulo_inventario_entradas_agregar_entradas.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_inventario_entradas_agregar_entradas.js"></script>
 </body>
 </html>

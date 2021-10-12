@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kardex</title>
-    <link rel="stylesheet" href="public/css/inventario-kardex.css">
+    <link rel="stylesheet" href="<?php echo(URL_RAIZ); ?>public/css/inventario-kardex.css">
 </head>
 <body>
     <?php
@@ -37,7 +37,7 @@
                 </form>
                 <div class="kardex__filtro-gen-repo filtro-gen-repo">
                     <div class="kardex__filtro-gen-repo-img filtro-gen-repo-img">
-                        <img src="public/imagenes/informe.svg" alt="">
+                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
                     </div>
                     <a class="kardex__filtro-subtitulo-reporte filtro-subtitulo-reporte" href="">Generar reporte</a>
                 </div>

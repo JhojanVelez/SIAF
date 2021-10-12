@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proveedores</title>
-    <link rel="stylesheet" href="public/css/proveedores.css">
+    <link rel="stylesheet" href="<?php echo(URL_RAIZ); ?>public/css/proveedores.css">
 </head>
 <body>
     <?php
@@ -37,7 +37,7 @@
                 </form>
                 <div class="proveedores__filtro-gen-repo filtro-gen-repo">
                     <div class="proveedores__filtro-gen-repo-img filtro-gen-repo-img">
-                        <img src="public/imagenes/informe.svg" alt="">
+                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
                     </div>
                     <a class="proveedores__filtro-subtitulo-reporte filtro-subtitulo-reporte" href="">Generar reporte</a>
                 </div>
@@ -52,7 +52,7 @@
             <div class="proveedores__lista-contenido contenedor-objetos__contenido box-shadow">
                 <figure class="proveedores__lista-proveedor contenedor-objetos__objeto box-shadow">
                     <div class="proveedores__lista-proveedor-img contenedor-objetos__objeto-img">
-                        <img src="public/imagenes/proveedor-icono.svg" alt="">
+                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/proveedor-icono.svg" alt="">
                     </div>
                     <div class="proveedores__lista-proveedor-info-container">
                         <section class="proveedores__lista-proveedor-info nit">
@@ -83,13 +83,13 @@
                     <div class="proveedores__lista-proveedor-botones contenedor-objetos__objeto-botones">
                         <button class="proveedores__lista-proveedor-boton proveedores__lista-proveedor-boton-editar boton contenedor-objetos__objeto-boton">
                             <div class="proveedores__lista-proveedor-boton-img">
-                                <img src="public/imagenes/editar-icono.svg" alt="">
+                                <img src="<?php echo(URL_RAIZ); ?>public/imagenes/editar-icono.svg" alt="">
                             </div>
                             <span>Editar</span>
                         </button>
                         <button class="proveedores__lista-proveedor-boton proveedores__lista-proveedor-boton-inhabilitar boton contenedor-objetos__objeto-boton">
                             <div class="proveedores__lista-proveedor-boton-img">
-                                <img src="public/imagenes/delete-icono.svg" alt="">
+                                <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.svg" alt="">
                             </div>
                             <span>Inhabilitar</span>
                         </button>
@@ -189,7 +189,7 @@
                 <h2 class="proveedores__modal-proveedores-inhabilitados-title dialog-title">Proveedores Inhabilitados</h2>
                 <div class="proveedores__modal-proveedores-inhabilitados-container-gen-repo filtro-gen-repo">
                     <div class="proveedores__modal-proveedores-inhabilitados-gen-repo-container-img dialog-objects-enabled-gen-repo-img">
-                        <img src="public/imagenes/reportes-icono.svg" alt="">
+                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/reportes-icono.svg" alt="">
                     </div>
                     <div class="proveedores__modal-proveedores-inhabilitados-gen-repo-container-text">
                         <a class="filtro-subtitulo-reporte" href="">Generar Reporte</a>
@@ -535,9 +535,9 @@
         </section>
     </main>
 
-    <script src="public/js/modulo_proveedores_agregar_proveedor.js"></script>
-    <script src="public/js/modulo_proveedores_proveedores_inhabilitados.js"></script>
-    <script src="public/js/modulo_proveedores_editar_proveedor.js"></script>
-    <script src="public/js/modulo_proveedores_inhabilitar_proveedores.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_proveedores_agregar_proveedor.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_proveedores_proveedores_inhabilitados.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_proveedores_editar_proveedor.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_proveedores_inhabilitar_proveedores.js"></script>
 </body>
 </html>

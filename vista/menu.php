@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/menu.css">
+    <link rel="stylesheet" href="<?php echo(URL_RAIZ) ?>public/css/menu.css">
     <title>Menu Pricipal</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
                 <button class="boton-cerrar-sesion-container__boton boton">
                     <div class="sign-out-container">
                         <section class="sign-out-container__img">
-                            <img src="public/imagenes/sign-out.png" alt="sign out">
+                            <img src="<?php echo(URL_RAIZ) ?>public/imagenes/sign-out.png" alt="sign out">
                         </section>
                         <section class="sign-out-container__text" >
                             CERRAR SESION
@@ -34,7 +34,7 @@
             <section class="card box-shadow">
                 <h2 class="card__title">PRODUCTOS</h2>
                 <div class="card__img">
-                    <img src="public/imagenes/productos-icono.svg" alt="">
+                    <img src="<?php echo(URL_RAIZ) ?>public/imagenes/productos-icono.svg" alt="">
                 </div>
                 <button class="card__button boton">
                     <a href="productos">Ingresar</a>
@@ -43,7 +43,7 @@
             <section class="card box-shadow">
                 <h2 class="card__title">INVENTARIO</h2>
                 <div class="card__img">
-                    <img src="public/imagenes/inventario-icono.svg" />
+                    <img src="<?php echo(URL_RAIZ) ?>public/imagenes/inventario-icono.svg" />
                 </div>
                 <button class="card__button boton">
                     <a href="inventarioMenuCards">Ingresar</a>
@@ -52,7 +52,7 @@
             <section class="card box-shadow">
                 <h2 class="card__title">VENTAS</h2>
                 <div class="card__img">
-                    <img src="public/imagenes/ventas-icono.svg" alt="">
+                    <img src="<?php echo(URL_RAIZ) ?>public/imagenes/ventas-icono.svg" alt="">
                 </div>
                 <button class="card__button boton">
                     <a href="ventasMenuCards">Ingresar</a>
@@ -61,7 +61,7 @@
             <section class="card box-shadow">
                 <h2 class="card__title">PROVEEDORES</h2>
                 <div class="card__img">
-                    <img src="public/imagenes/proveedores-icono.svg" alt="">
+                    <img src="<?php echo(URL_RAIZ) ?>public/imagenes/proveedores-icono.svg" alt="">
                 </div>
                 <button class="card__button boton">
                     <a href="proveedores">Ingresar</a>
@@ -70,7 +70,7 @@
             <section class="card box-shadow">
                 <h2 class="card__title">CLIENTES</h2>
                 <div class="card__img">
-                    <img src="public/imagenes/clientes-icono.svg" alt="">
+                    <img src="<?php echo(URL_RAIZ) ?>public/imagenes/clientes-icono.svg" alt="">
                 </div>
                 <button class="card__button boton">
                     <a href="clientes">Ingresar</a>
@@ -79,7 +79,7 @@
             <section class="card box-shadow">
                 <h2 class="card__title">USUARIOS</h2>
                 <div class="card__img">
-                    <img src="public/imagenes/gestion-usuarios-icono.svg" alt="">
+                    <img src="<?php echo(URL_RAIZ) ?>public/imagenes/gestion-usuarios-icono.svg" alt="">
                 </div>
                 <button class="card__button boton">
                     <a href="usuarios">Ingresar</a>
@@ -88,7 +88,7 @@
             <section class="card box-shadow">
                 <h2 class="card__title">CONSULTAR TUS DATOS</h2>
                 <div class="card__img">
-                    <img src="public/imagenes/consultar-datos-icono.svg" alt="">
+                    <img src="<?php echo(URL_RAIZ) ?>public/imagenes/consultar-datos-icono.svg" alt="">
                 </div>
                 <button class="card__button card__button--consultar-info-perfil boton">
                     <a href="#">Ingresar</a>
@@ -141,6 +141,6 @@
         </section>
     </main>
     
-    <script src="public/js/modulo_menu_consultar_info_perfil.js"></script>
+    <script src="<?php echo(URL_RAIZ) ?>public/js/modulo_menu_consultar_info_perfil.js"></script>
 </body>
 </html>

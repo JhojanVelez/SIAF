@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inventario</title>
-    <link rel="stylesheet" href="public/css/main.css">
+    <link rel="stylesheet" href="<?php echo(URL_RAIZ); ?>public/css/main.css">
     <style>
         .nav__li:nth-child(3) {
             border-bottom: 2px solid var(--color-button-text);
@@ -21,7 +21,7 @@
             <section class="card box-shadow">
                 <h2 class="card__title">GESTION DE SALIDAS</h2>
                 <div class="card__img">
-                    <img src="public/imagenes/inventario-salidas.svg" alt="">
+                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/inventario-salidas.svg" alt="">
                 </div>
                 <button class="card__button boton">
                     <a href="inventarioSalidas">Ingresar</a>
@@ -30,7 +30,7 @@
             <section class="card box-shadow">
                 <h2 class="card__title">GESTION DE ENTRADAS</h2>
                 <div class="card__img">
-                    <img src="public/imagenes/inventario-entradas.svg" />
+                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/inventario-entradas.svg" />
                 </div>
                 <button class="card__button boton">
                     <a href="inventarioEntradas">Ingresar</a>
@@ -39,7 +39,7 @@
             <section class="card box-shadow">
                 <h2 class="card__title">KARDEX</h2>
                 <div class="card__img">
-                    <img src="public/imagenes/inventario-kardex.svg" />
+                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/inventario-kardex.svg" />
                 </div>
                 <button class="card__button boton">
                     <a href="inventarioKardex">Ingresar</a>
