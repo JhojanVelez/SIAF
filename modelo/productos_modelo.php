@@ -2,11 +2,11 @@
 
 class ProductosModelo extends ConexionBD{
     function __construct () {
-        parent::__construct;
+        parent::__construct();
     }
 
-    public function listarProductos () {
-        
+    public function getAll () {
+        return $this->connection->query("SELECT * FROM TBL_PRODUCTOS")->fetchAll(PDO::FETCH_ASSOC);
     }
 }
 
