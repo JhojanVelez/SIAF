@@ -205,7 +205,6 @@ input:disabled:hover {
 
 .container-table {
   grid-area: contenido;
-  text-align: center;
   padding: 0 0 2rem;
   overflow: scroll;
 }
@@ -225,6 +224,8 @@ thead {
   top: 0;
   color: var(--color-button-text);
   background-color: var(--color-nav-background);
+  text-align: center;
+  font-weight: 600;
 }
 
 thead td {
@@ -235,6 +236,8 @@ tbody td {
   min-width: min-content;
   max-width: 300px;
   word-break: break-word;
+  padding-left: 1rem;
+  font-weight: 500;
 }
 
 .table-td--comentarios {

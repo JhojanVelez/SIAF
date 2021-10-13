@@ -6,7 +6,7 @@ class ProductosModelo extends ConexionBD{
     }
 
     public function getAll () {
-        return $this->connection->query("SELECT * FROM TBL_PRODUCTOS")->fetchAll(PDO::FETCH_ASSOC);
+        return $this->connection->query("SELECT * FROM TBL_PRODUCTOS ORDER BY ProDescripcion")->fetchAll(PDO::FETCH_ASSOC);
     }
 }
 
