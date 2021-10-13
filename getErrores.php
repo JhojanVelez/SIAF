@@ -1,9 +1,9 @@
 <?php
 
 class GetErrores {
-    public static $error_message;
+    public $error_message;
     function __construct ($error) {
-        $this->$error_message = $error;
+        $this->error_message = $error;
     }
 }
 

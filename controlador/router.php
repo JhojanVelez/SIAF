@@ -2,7 +2,7 @@
 
 class Router {
     function __construct() {
-        $url = $_GET['url'];
+        $url = (isset($_GET['url'])) ? $_GET['url'] : "menu/";
         $url = rtrim($url," /,.");
         $url = explode("/",$url);
 
@@ -14,10 +14,12 @@ class Router {
             $controller = new ($url[0].'Controlador')();
             if(file_exists($urlModel)) {
                 require_once($urlModel);
-                $model = new ($url[0].'Model');
+                $model = new ($url[0].'Modelo');
             }
+            echo($urlModel);
         } else {
-            echo("el archivo no existe");
+            $newError = new GetErrores("El controlador no existe");
+            echo($newError->error_message);
         }
 
     }
