@@ -186,10 +186,10 @@
                 <h2 class="productos__modal-agregar-producto-title dialog-title">Registra Nuevos Productos</h2>
 
                 <form class="productos__modal-agregar-producto-form dialog-main-content">
-                    <input type="text" placeholder="Codigo de barras del producto" id="codigoBarrasProducto">
-                    <input type="text" placeholder="NIT del proveedor">
-                    <input type="text" placeholder="Descripcion">
-                    <select>
+                    <input name="codigoBarras" type="text" placeholder="Codigo de barras del producto" id="codigoBarrasProducto" data-input>
+                    <input name="nitProveedor" type="text" placeholder="NIT del proveedor" data-input>
+                    <input name="descripcion" type="text" placeholder="Descripcion" data-input>
+                    <select name="proveedor" data-input>
                         <option value="">Elige el proveedor</option>
 
                         <?php foreach($this->data['infoProveedores'] as $key => $value): ?>
@@ -199,9 +199,9 @@
                         <?php endforeach; ?>
 
                     </select>
-                    <input type="text" placeholder="Ubicacion fisica">
-                    <input type="text" placeholder="Ingresa el laboratorio">
-                    <select>
+                    <input name="ubicacionFisica" type="text" placeholder="Ubicacion fisica" data-input>
+                    <input name="laboratorio" type="text" placeholder="Ingresa el laboratorio" data-input>
+                    <select name="unidadMedida" data-input>
                         <option value="">Unidad de medida</option>
                         <option value="KILOGRAMOS">(kg) kilogramos</option>
                         <option value="GRAMOS">(g) gramos</option>
@@ -211,7 +211,7 @@
                         <option value="MILILITROS">(ml) mililitros</option>
                         <option value="LITROS">(l) litros</option>
                     </select>
-                    <select>
+                    <select name="presentacion" data-input>
                         <option value="">Presentacion</option>
                         <option value="TABLETA">TABLETA</option>
                         <option value="JARABE">JARABE</option>
@@ -222,8 +222,8 @@
                         <option value="INHALADOR">INHALADOR</option>
                         <option value="BOTELLA">BOTELLA</option>
                     </select>
-                    <input type="text" placeholder="Precio de venta">
-                    <input type="text" title="Hola" placeholder="Registro sanitario INVIMA">
+                    <input name="precioVenta" type="text" placeholder="Precio de venta" data-input>
+                    <input name="invima" type="text" title="Hola" placeholder="Registro sanitario INVIMA" data-input>
                 </form>
                 <div class="productos__modal-agregar-producto-btns-container dialog-container-bts">
                     <button class="productos__modal-agregar-producto-btn-cancelar boton dialog-btn">Cancelar</button>
@@ -238,43 +238,43 @@
                     Recuerda revisar detenidamente la informacion del producto que estas registrando.
                 </p>
                 <div class="productos__modal-agregar-producto-info-confirmacion dialog-main-content">
-                    <section class="productos__modal-agregar-producto-info-item-confirmacion">
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-codigoBarras>
                         <h3>CODIGO DE BARRAS</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item-confirmacion">
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-nitProveedor>
                         <h3>NIT DEL PROVEEDOR</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item-confirmacion">
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-descripcion>
                         <h3>DESCRIPCION</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item-confirmacion">
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-proveedor>
                         <h3>NOMBRE DEL PROVEEDOR</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item-confirmacion">
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ubicacionFisica>
                         <h3>UBICACION FISICA</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item-confirmacion">
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-laboratorio>
                         <h3>LABORATORIO</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item-confirmacion">
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-unidadMedida>
                         <h3>UNIDAD DE MEDIDA</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item-confirmacion">
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-presentacion>
                         <h3>PRECIO DE VENTA</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item-confirmacion">
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-precioVenta>
                         <h3>PRESENTACION</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item-confirmacion">
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-invima>
                         <h3>REGISTRO SANITARIO INVIMA</h3>
                         <p>________________________________________________</p>
                     </section>

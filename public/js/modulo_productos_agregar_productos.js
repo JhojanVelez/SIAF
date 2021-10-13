@@ -1,5 +1,6 @@
 // import {agregar} from '../../ajax/agregar.js';
 (function(){
+    
     const d = document,
     $transparentBackgroundModal = d.querySelector(".productos__container-modal"),
     $modal_1 = $transparentBackgroundModal.querySelector(".productos__modal-agregar-producto"),
@@ -7,16 +8,37 @@
     $modal_3 = $transparentBackgroundModal.querySelector(".productos__modal-agregacion-exitosa"),
     $modal_4 = $transparentBackgroundModal.querySelector(".productos__modal-agregacion-fallo");
     
+    let $formulario = "",
+        $inputs = "";
+
+    const producto = {
+        codigoBarras: "",
+        nitProveedor: "",
+        descripcion: "",
+        proveedor: "",
+        ubicacionFisica: "",
+        laboratorio: "",
+        unidadMedida: "",
+        presentacion: "",
+        precioVenta: "",
+        invima: ""
+    }
+
     d.addEventListener("click", e => {
         if(e.target.matches(".productos__boton-agregar")) {
             $transparentBackgroundModal.classList.toggle("visible");
             $modal_1.toggleAttribute("open");
             $modal_1.querySelector("#codigoBarrasProducto").focus()
-        
         }
         if(e.target.matches(".productos__modal-agregar-producto-btn-añadir")) {
             $modal_1.toggleAttribute("open");
             $modal_2.toggleAttribute("open");
+            $formulario = $modal_1.querySelector("form");
+            $inputs = Object.values($formulario.querySelectorAll("[data-input]"));
+            Object.keys(producto).forEach((key)=>{
+                producto[key] = ($inputs.filter(value => value.getAttribute("name") == key))[0].value;
+            })
+            console.log(producto);
         }
         if(e.target.matches(".productos__modal-agregar-producto-btn-cancelar")) {
             $modal_1.toggleAttribute("open");
