@@ -106,11 +106,11 @@ input:focus, select:focus {
   background-color: var(--color-button-background-hover);
 }
 
-input:disabled {
+input[type="button"]:disabled {
   background-color: #201f3a83;
   cursor: help;
 }
-input:disabled:hover {
+input[type="button"]:disabled:hover {
   background-color: #201f3a83;
 }
 

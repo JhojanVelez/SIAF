@@ -30,10 +30,11 @@
                         <td class="table-td">Laboratorio</td>
                         <td class="table-td">Registro INVIMA</td>
                         <td class="table-td">NIT Proveedor</td>
+                        <td class="table-td">Proveedor</td>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach($this->data as $key => $value): ?>
+                    <?php foreach($this->data['infoProductos'] as $key => $value): ?>
                         <tr>
                             <td><?php echo $value["ProCodBarras"] ?></td>
                             <td><?php echo $value["ProDescripcion"] ?></td>
@@ -44,6 +45,7 @@
                             <td><?php echo $value["ProLaboratorio"] ?></td>
                             <td><?php echo $value["ProRegSanInvima"] ?></td>
                             <td><?php echo $value["tbl_proveedores_ProNIT"] ?></td>
+                            <td><?php echo $value["ProNombre"] ?></td>
                         </tr>
                     <?php endforeach;?>
                 </tbody>
@@ -185,6 +187,13 @@
                     <input type="text" placeholder="Descripcion">
                     <select>
                         <option value="">Elige el proveedor</option>
+
+                        <?php foreach($this->data['infoProveedores'] as $key => $value): ?>
+                        <option 
+                        value="<?php echo $value['ProNombre'] ?>" 
+                        data-proveedor-id="<?php echo $value['ProNIT'] ?>"><?php echo $value['ProNombre'] ?></option>
+                        <?php endforeach; ?>
+
                     </select>
                     <input type="text" placeholder="Ubicacion fisica">
                     <input type="text" placeholder="Ingresa el laboratorio">
@@ -253,7 +262,7 @@
                 </div>
                 <div class="productos__modal-agregar-producto-confirmacion-btns-container dialog-container-bts">
                     <button class="productos__modal-agregar-producto-confirmacion-btn-cancelar dialog-btn boton">Volver Atras</button>
-                    <button class="productos__modal-agregar-producto-confirmacion-btn-confirmar dialog-btn boton">Confirmar</button>
+                    <button class="productos__modal-agregar-producto-confirmacion-btn-confirmar dialog-btn boton" id="boton-agregar">Confirmar</button>
                 </div>
             </dialog>
 
@@ -703,7 +712,7 @@
     </main>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_inhabilitar_productos.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_editar_productos.js"></script>
-    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_agregar_productos.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_agregar_productos.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_seleccion_de_producto.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_productos_inhabilitados.js"></script>
 </body>

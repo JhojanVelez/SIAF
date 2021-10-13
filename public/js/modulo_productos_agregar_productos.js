@@ -1,3 +1,4 @@
+// import {agregar} from '../../ajax/agregar.js';
 (function(){
     const d = document,
     $transparentBackgroundModal = d.querySelector(".productos__container-modal"),
@@ -24,6 +25,7 @@
         if(e.target.matches(".productos__modal-agregar-producto-confirmacion-btn-confirmar")) {
             $modal_2.toggleAttribute("open");
             $modal_3.toggleAttribute("open");
+            // agregar($modal_1);
         }
         if(e.target.matches(".productos__modal-agregar-producto-confirmacion-btn-cancelar")) {
             $modal_1.toggleAttribute("open");

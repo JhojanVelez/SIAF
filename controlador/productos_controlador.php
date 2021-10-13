@@ -6,11 +6,6 @@ class ProductosControlador extends Controlador{
         parent::__construct();
         require_once("vista/productos.php");
     }
-
-
-
-
-    
 }
 
 ?>
