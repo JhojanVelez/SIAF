@@ -4,6 +4,10 @@
     border-bottom: 2px solid var(--color-button-text);
 }
 
+.nav-container,.transparent-container-modal {
+    min-width: 1700px;
+}
+
 .grid-container-main {
     width: 90%;
     height: 100%;

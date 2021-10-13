@@ -73,10 +73,14 @@
                     <br>
                     <select name="presentacion" class="productos_filtro-presentacion" id="product-presentacion">
                         <option value="null">Presentacion</option>
-                        <option value="Pre">Pre1</option>
-                        <option value="Pre">Pre2</option>
-                        <option value="Pre">Pre3</option>
-                        <option value="Pre">Pre4</option>
+                        <option value="TABLETA">TABLETA</option>
+                        <option value="JARABE">JARABE</option>
+                        <option value="CAPSULA">CAPSULA</option>
+                        <option value="COMPRIMIDO">COMPRIMIDO</option>
+                        <option value="GRAGEA O TABLETA RECUBIERTA">GRAGEA O TABLETA RECUBIERTA</option>
+                        <option value="PILDORA">PILDORA</option>
+                        <option value="INHALADOR">INHALADOR</option>
+                        <option value="BOTELLA">BOTELLA</option>
                     </select>
                 </form>
                 <div class="productos_filtro-gen-repo">
@@ -199,9 +203,24 @@
                     <input type="text" placeholder="Ingresa el laboratorio">
                     <select>
                         <option value="">Unidad de medida</option>
+                        <option value="KILOGRAMOS">(kg) kilogramos</option>
+                        <option value="GRAMOS">(g) gramos</option>
+                        <option value="MILIGRAMOS">(mg) miligramos</option>
+                        <option value="MICROGRAMOS">(mcg) microgramos</option>
+                        <option value="UNIDAD">(u) unidad</option>
+                        <option value="MILILITROS">(ml) mililitros</option>
+                        <option value="LITROS">(l) litros</option>
                     </select>
                     <select>
                         <option value="">Presentacion</option>
+                        <option value="TABLETA">TABLETA</option>
+                        <option value="JARABE">JARABE</option>
+                        <option value="CAPSULA">CAPSULA</option>
+                        <option value="COMPRIMIDO">COMPRIMIDO</option>
+                        <option value="GRAGEA O TABLETA RECUBIERTA">GRAGEA O TABLETA RECUBIERTA</option>
+                        <option value="PILDORA">PILDORA</option>
+                        <option value="INHALADOR">INHALADOR</option>
+                        <option value="BOTELLA">BOTELLA</option>
                     </select>
                     <input type="text" placeholder="Precio de venta">
                     <input type="text" title="Hola" placeholder="Registro sanitario INVIMA">
