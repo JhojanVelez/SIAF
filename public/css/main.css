@@ -627,6 +627,7 @@ dialog {
 
 .dialog-main-content section {
   word-break: break-all;
+  min-height: 50px;
 }
 
 .dialog-process-result {

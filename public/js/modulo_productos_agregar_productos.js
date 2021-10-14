@@ -7,9 +7,6 @@
     $modal_2 = $transparentBackgroundModal.querySelector(".productos__modal-agregar-producto-confirmacion"),
     $modal_3 = $transparentBackgroundModal.querySelector(".productos__modal-agregacion-exitosa"),
     $modal_4 = $transparentBackgroundModal.querySelector(".productos__modal-agregacion-fallo");
-    
-    let $formulario = "",
-        $inputs = "";
 
     const producto = {
         codigoBarras: "",
@@ -33,12 +30,26 @@
         if(e.target.matches(".productos__modal-agregar-producto-btn-añadir")) {
             $modal_1.toggleAttribute("open");
             $modal_2.toggleAttribute("open");
+            
+            let $formulario = "",
+                $inputs = "",
+                $itemsConfirmacion = "";
+
             $formulario = $modal_1.querySelector("form");
             $inputs = Object.values($formulario.querySelectorAll("[data-input]"));
             Object.keys(producto).forEach((key)=>{
-                producto[key] = ($inputs.filter(value => value.getAttribute("name") == key))[0].value;
+                producto[key] = ($inputs.filter(input => input.getAttribute("name") == key))[0].value.toUpperCase();
             })
-            console.log(producto);
+
+            $itemsConfirmacion = Object.values($modal_2.querySelectorAll(".productos__modal-agregar-producto-info-item-confirmacion"))
+            
+            Object.keys(producto).forEach((key)=>{
+                $itemsConfirmacion.forEach((item)=> {
+                    if(Object.keys(item.dataset)[0] == key.toLowerCase()){
+                        item.querySelector("P").innerHTML = producto[key];
+                    }
+                })
+            });
         }
         if(e.target.matches(".productos__modal-agregar-producto-btn-cancelar")) {
             $modal_1.toggleAttribute("open");
