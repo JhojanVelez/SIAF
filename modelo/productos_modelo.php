@@ -16,6 +16,12 @@ class ProductosModelo extends ConexionBD{
             echo("error en la busqueda");
         }
     }
+
+    public function getByID ($id) {
+        $PDOstmt = $this->connection->prepare("SELECT * FROM PRODUCTOS WHERE ProCodBarras = ?");
+        $PDOstmt->execute(array($id));
+        echo(json_encode($PDOstmt->fetchAll(PDO::FETCH_ASSOC)));
+    }
 }
 
 ?>

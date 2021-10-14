@@ -10,7 +10,7 @@ class Router {
 
         if(file_exists($urlController)) {
             require $urlController;
-            $controller = new ($url[0].'Controlador')($url[0]);
+            $controller = new ($url[0].'Controlador')($url);
         } else {
             $newError = new GetErrores("El controlador no existe");
             echo($newError->error_message);
