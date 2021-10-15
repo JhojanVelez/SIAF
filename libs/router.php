@@ -22,7 +22,6 @@ class Router {
                         }
                     } else {
                         $newError = new GetErrores("El metodo no existe");
-                        echo($newError->error_message);
                     }
                 } else {
                     $controller->obtenerTodosLosDatos();
@@ -30,8 +29,7 @@ class Router {
                 }
             }
         } else {
-            $newError = new GetErrores("El controlador no existe");
-            echo($newError->error_message);
+            $newError = new GetErrores("La pagina que deseas cargar no existe");
         }
 
     }
