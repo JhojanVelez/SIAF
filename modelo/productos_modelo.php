@@ -2,6 +2,9 @@
 
 class ProductosModelo extends ConexionBD{
 
+    function __construct () {
+        parent::__construct();
+    }
 
     public function obtenerTodosLosDatos () {
         try {
@@ -13,10 +16,10 @@ class ProductosModelo extends ConexionBD{
         }
     }
 
-    public function getByID ($id) {
+    public function obtenerPorID ($id) {
         $this->PDOStmt = $this->connection->prepare("SELECT * FROM PRODUCTOS WHERE ProCodBarras = ?");
         $this->PDOStmt->execute(array($id));
-        echo(json_encode($PDOstmt->fetchAll(PDO::FETCH_ASSOC)));
+        return json_encode($this->PDOStmt->fetchAll(PDO::FETCH_ASSOC));
     }
 }
 

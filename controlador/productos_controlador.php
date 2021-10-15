@@ -1,9 +1,10 @@
 <?php
 
 class ProductosControlador extends Controlador{
-    function __construct ($url) {
-        $this->url = $url;
-        parent::__construct();
+
+    public function obtenerPorID ($id) {
+        $this->data = $this->instanciaModelo->obtenerPorID($id);
+        echo($this->data);
     }
 }
 
