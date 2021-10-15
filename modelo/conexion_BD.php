@@ -10,6 +10,9 @@ class ConexionBD {
     private static $DB_CHARSET = DB_CHARSET;
     private static $DSN = DSN;
     protected $connection;
+    protected $query;
+    protected $PDOStmt;
+    protected $rows;
 
     function __construct() {
         try {
