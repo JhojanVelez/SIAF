@@ -2,6 +2,16 @@
 
 class ProductosModelo extends ConexionBD{
 
+    private $codigoBarras;
+    private $descripcion;
+    private $ubicacionFisica;
+    private $presentacion;
+    private $unidadMedida;
+    private $precioVenta;
+    private $laboratorio;
+    private $invima;
+    private $nitProveedor;
+
     function __construct () {
         parent::__construct();
     }
@@ -20,6 +30,90 @@ class ProductosModelo extends ConexionBD{
         $this->PDOStmt = $this->connection->prepare("SELECT * FROM PRODUCTOS WHERE ProCodBarras = ?");
         $this->PDOStmt->execute(array($id));
         return json_encode($this->PDOStmt->fetchAll(PDO::FETCH_ASSOC));
+    }
+
+    public function registrarProducto () {
+        try {
+            $this->sql ="INSERT INTO 
+                        TBL_PRODUCTOS 
+                        VALUES (
+                            :codigoBarras,
+                            :descripcion,
+                            :ubicacionFisica,
+                            :presentacion,
+                            :unidadMedida,
+                            :precioVenta,
+                            :laboratorio,
+                            :invima,
+                            :nitProveedor
+                        )";
+
+            $this->PDOStmt = $this->connection->prepare($this->sql);
+
+            $this->PDOStmt->bindValue(":codigoBarras",$this->codigoBarras);
+            $this->PDOStmt->bindValue(":descripcion",$this->descripcion);
+            $this->PDOStmt->bindValue(":ubicacionFisica",$this->ubicacionFisica);
+            $this->PDOStmt->bindValue(":presentacion",$this->presentacion);
+            $this->PDOStmt->bindValue(":unidadMedida",$this->unidadMedida);
+            $this->PDOStmt->bindValue(":precioVenta",$this->precioVenta);
+            $this->PDOStmt->bindValue(":laboratorio",$this->laboratorio);
+            $this->PDOStmt->bindValue(":invima",$this->invima);
+            $this->PDOStmt->bindValue(":nitProveedor",$this->nitProveedor);
+
+            $this->PDOStmt->execute();
+
+            $this->result["complete"] = true;
+            $this->result["afectedRows"] = $this->PDOStmt->rowCount();
+            return $this->result;
+
+        } catch (PDOException $e) {
+            $this->result["complete"] = false;
+            $this->result["afectedRows"] = $this->PDOStmt->rowCount();
+            $this->result["errorMessage"] = $e->errorInfo;
+            return $this->result;
+        }
+    }
+
+    /*Metodos getter*/
+
+    public function getCodigoBarras () {return $this->codigoBarras;}
+    public function getDescripcion () {return $this->descripcion;}
+    public function getUbicacionFisica () {return $this->ubicacionFisica;}
+    public function getPresentacion () {return $this->presentacion;}
+    public function getUnidadMedida () {return $this->unidadMedida;}
+    public function getPrecioVenta () {return $this->precioVenta;}
+    public function getLaboratorio  () {return $this->laboratorio;}
+    public function getInvima () {return $this->invima;}
+    public function getNitProveedor () {return $this->nitProveedor;}
+
+    /*Metodos setter*/
+
+    public function setCodigoBarras ($value) {
+        $this->codigoBarras = $value;
+    }
+    public function setDescripcion ($value) {
+        $this->descripcion = $value;
+    }
+    public function setUbicacionFisica ($value) {
+        $this->ubicacionFisica = $value;
+    }
+    public function setPresentacion ($value) {
+        $this->presentacion = $value;
+    }
+    public function setUnidadMedida ($value) {
+        $this->unidadMedida = $value;
+    }
+    public function setPrecioVenta ($value) {
+        $this->precioVenta = $value;
+    }
+    public function setLaboratorio ($value) {
+        $this->laboratorio = $value;
+    }
+    public function setInvima ($value) {
+        $this->invima = $value;
+    }
+    public function setNitProveedor ($value) {
+        $this->nitProveedor = $value;
     }
 }
 

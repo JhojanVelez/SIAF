@@ -4,6 +4,7 @@ class Controlador {
 
     protected $instanciaModelo;
     protected $data;
+    protected $result;
 
     function __construct () {
         
