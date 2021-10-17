@@ -189,8 +189,8 @@
                     <input name="codigoBarras" type="text" placeholder="Codigo de barras del producto" id="codigoBarrasProducto" data-input>
                     <input name="nitProveedor" type="text" placeholder="NIT del proveedor" data-input>
                     <input name="descripcion" type="text" placeholder="Descripcion" data-input>
-                    <select name="proveedor" data-input>
-                        <option value="">Elige el proveedor</option>
+                    <select name="proveedor" id="productos__modal-agregar-producto-select-proveedor" data-input>
+                        <option value="" data-proveedor-id>Elige el proveedor</option>
 
                         <?php foreach($this->data['infoProveedores'] as $key => $value): ?>
                         <option 
@@ -734,5 +734,8 @@
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_agregar_productos.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_seleccion_de_producto.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_productos_inhabilitados.js"></script>
+
+    /*Axios*/
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>

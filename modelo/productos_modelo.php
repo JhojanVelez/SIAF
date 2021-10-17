@@ -32,7 +32,7 @@ class ProductosModelo extends ConexionBD{
         return json_encode($this->PDOStmt->fetchAll(PDO::FETCH_ASSOC));
     }
 
-    public function registrarProducto () {
+    public function registrarProductos () {
         try {
             $this->sql ="INSERT INTO 
                         TBL_PRODUCTOS 
