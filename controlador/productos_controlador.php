@@ -2,9 +2,9 @@
 
 class ProductosControlador extends Controlador{
 
-    public function obtenerPorID ($id = null) {
-        $this->data = $this->instanciaModelo->obtenerPorID($id);
-        echo($this->data);
+    public function buscarPorId ($id = null) {
+        $this->data = $this->instanciaModelo->buscarPorId(htmlentities(addslashes($id)));
+        echo(json_encode($this->data));
     }
 
     public function registrarProductos () {
@@ -37,6 +37,13 @@ class ProductosControlador extends Controlador{
             $this->result["errorMessage"] = $e->getMessage();
             echo(json_encode($this->result));
         }
+    }
+
+    public function eliminarProducto($id = null) {
+        $this->instanciaModelo->setCodigoBarras(htmlentities(addslashes($id)));
+
+        $this->data = $this->instanciaModelo->eliminarProducto($id);
+        echo(json_encode($this->data));
     }
 }
 

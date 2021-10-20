@@ -16,7 +16,7 @@ class Router {
             if(file_exists($urlModel)) {
                 $instanciaModelo = $controller->cargarModelo($urlModel,$url[0]);
                 if(isset($url[1])) {
-                    if(method_exists($instanciaModelo,$url[1])) {
+                    if(method_exists($controller,$url[1])) {
                         if(isset($url[1]) && isset($url[2])){
                             $controller->{$url[1]}($url[2]);
                         } else {

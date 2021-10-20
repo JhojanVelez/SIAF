@@ -26,10 +26,10 @@ class ProductosModelo extends ConexionBD{
         }
     }
 
-    public function obtenerPorID ($id) {
+    public function buscarPorId ($id) {
         $this->PDOStmt = $this->connection->prepare("SELECT * FROM PRODUCTOS WHERE ProCodBarras = ?");
         $this->PDOStmt->execute(array($id));
-        return json_encode($this->PDOStmt->fetchAll(PDO::FETCH_ASSOC));
+        return $this->PDOStmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function registrarProductos () {
@@ -63,14 +63,39 @@ class ProductosModelo extends ConexionBD{
             $this->PDOStmt->execute();
 
             $this->result["complete"] = true;
-            $this->result["afectedRows"] = $this->PDOStmt->rowCount();
+            $this->result["affectedRows"] = $this->PDOStmt->rowCount();
             return $this->result;
 
         } catch (PDOException $e) {
             $this->result["complete"] = false;
-            $this->result["afectedRows"] = $this->PDOStmt->rowCount();
+            $this->result["affectedRows"] = $this->PDOStmt->rowCount();
             $this->result["errorPDOMessage"] = $e->errorInfo;
             $this->result["errorMessage"] = "El producto $this->codigoBarras no pudo ser registrado porque ya existe";
+            return $this->result;
+        }
+    }
+
+    public function eliminarProducto () {
+
+        try {
+            $this->sql = "DELETE FROM TBL_PRODUCTOS WHERE proCodBarras = ?";
+
+            $this->PDOStmt = $this->connection->prepare($this->sql);
+
+            $this->PDOStmt->execute(array($this->codigoBarras));
+
+            $this->result["complete"] = true;
+            $this->result["affectedRows"] = $this->PDOStmt->rowCount();
+            $this->result["resultMessage"] = $this->PDOStmt->rowCount() == 0 
+                                            ? "El producto $this->codigoBarras no se elimino porque no esta registrado en el sistema"
+                                            : "El producto $this->codigoBarras se elimino correctamente";
+            return $this->result;
+
+        }catch(PDOException $e) {
+            $this->result["complete"] = false;
+            $this->result["affectedRows"] = $this->PDOStmt->rowCount();
+            $this->result["errorPDOMessage"] = $e->errorInfo;
+            if($e->errorInfo[1] == 1451) $this->result["errorMessage"] = "El producto $this->codigoBarras no pudo ser eliminado porque la infomacion de este producto es fundamental para el funcionamiento de otras secciones del sistema";
             return $this->result;
         }
     }

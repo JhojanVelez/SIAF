@@ -1,3 +1,5 @@
+// import {inhabilitar} from 'http://localhost:8080/SIAF/ajax/inhabilitar.js';
+// import {buscarPorId} from 'http://localhost:8080/SIAF/ajax/inhabilitar.js';
 (function(){
     const d = document,
     $transparentBackgroundModal = d.querySelector(".proveedores__container-modal"),
@@ -9,6 +11,7 @@
         if(e.target.closest("button.proveedores__lista-proveedor-boton-inhabilitar")) {
             $transparentBackgroundModal.classList.toggle("visible");
             $modal_1.toggleAttribute("open");
+            buscarPorId(e.target.dataset);
             scroll(0,280);
         }
         if(e.target.matches(".proveedores__modal-inhabilitar-proveedor-btn-confirmar")) {
