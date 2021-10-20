@@ -39,28 +39,28 @@ import {agregar} from 'http://localhost:8080/SIAF/ajax/agregar.js';
 
             let validador = true;
 
-            $inputsValues.forEach(el => el.value = el.value.toUpperCase());
+            // $inputsValues.forEach(el => el.value = el.value.toUpperCase());
 
-            $inputs.forEach(input => {
-                if(input.value == "") {
-                    input.classList.add("input-invalido");
-                    validador = false;
-                } else {
-                    input.classList.remove("input-invalido");
-                }
-            });
+            // $inputs.forEach(input => {
+            //     if(input.value == "") {
+            //         input.classList.add("input-invalido");
+            //         validador = false;
+            //     } else {
+            //         input.classList.remove("input-invalido");
+            //     }
+            // });
 
-            let proveedorSeleccionado = $inputs[3].options[$inputs[3].options.selectedIndex]
-            if(proveedorSeleccionado.dataset.proveedorId !== $inputs[1].value) {
-                $inputs[1].classList.add("input-invalido");
-                $inputs[3].classList.add("input-invalido");
-                validador = false;
-            }
+            // let proveedorSeleccionado = $inputs[3].options[$inputs[3].options.selectedIndex]
+            // if(proveedorSeleccionado.dataset.proveedorId !== $inputs[1].value) {
+            //     $inputs[1].classList.add("input-invalido");
+            //     $inputs[3].classList.add("input-invalido");
+            //     validador = false;
+            // }
 
-            if(isNaN($inputs[8].value)){
-                $inputs[8].classList.add("input-invalido");
-                validador = false;
-            }
+            // if(isNaN($inputs[8].value)){
+            //     $inputs[8].classList.add("input-invalido");
+            //     validador = false;
+            // }
 
             if(validador) {
                 $modal_1.toggleAttribute("open");
