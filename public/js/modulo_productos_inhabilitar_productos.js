@@ -1,4 +1,5 @@
 import {obtenerPorId} from "http://localhost:8080/SIAF/ajax/buscarPorId.js";
+import { inhabilitar } from "../../ajax/inhabilitar.js";
 (function(){
     const d = document,
     $transparentBackgroundModal = d.querySelector(".productos__container-modal"),
@@ -7,13 +8,15 @@ import {obtenerPorId} from "http://localhost:8080/SIAF/ajax/buscarPorId.js";
     $modal_3 = $transparentBackgroundModal.querySelector(".productos__modal-inhabilitacion-fallo");
     
 
-    let $itemsConfirmacion = Object.values($modal_1.querySelectorAll(".productos__modal-inhabilitar-producto-info-item"));
+    let $itemsConfirmacion = Object.values($modal_1.querySelectorAll(".productos__modal-inhabilitar-producto-info-item")),
+        idProductoSeleccionado;
 
     d.addEventListener("click", e => {
         if(e.target.matches(".productos__boton-inhabilitar")) {
             $transparentBackgroundModal.classList.toggle("visible");
             $modal_1.toggleAttribute("open");
-            obtenerPorId(e.target.dataset.idProduct)
+            idProductoSeleccionado = e.target.dataset.idProduct
+            obtenerPorId(idProductoSeleccionado)
             .then((res)=> {
                 for(let key in res) {
                     $itemsConfirmacion.filter(el => {
@@ -26,7 +29,23 @@ import {obtenerPorId} from "http://localhost:8080/SIAF/ajax/buscarPorId.js";
         }
         if(e.target.matches(".productos__modal-inhabilitar-producto-btn-confirmar")) {
             $modal_1.toggleAttribute("open");
-            $modal_2.toggleAttribute("open");
+
+            inhabilitar(idProductoSeleccionado)
+            .then(res => {
+                if(res.affectedRows != 0) {
+                    $modal_2.toggleAttribute("open");
+                    $modal_2.querySelector("P").innerHTML = res.resultMessage;
+                    console.log(res);
+                } else {
+                    $modal_3.toggleAttribute("open");
+                    $modal_3.querySelector("H2").innerHTML = "!Por la seguridad de la informacion¡"
+                    $modal_3.querySelector("P").innerHTML = res.errorMessage;
+                }
+            }).catch((err)=> {
+                console.log(err);
+                $modal_3.toggleAttribute("open");
+                $modal_3.querySelector("P").innerHTML = err.errorMessage;
+            });
         }
 
         if(e.target.matches(".productos__modal-inhabilitar-producto-btn-cancelar")){
@@ -35,7 +54,10 @@ import {obtenerPorId} from "http://localhost:8080/SIAF/ajax/buscarPorId.js";
         }
 
         if(e.target.matches(".productos__modal-inhabilitacion-exitosa-btn")) {
-            $modal_2.toggleAttribute("open");
+            location.reload();
+        }
+        if(e.target.matches(".productos__modal-inhabilitacion-fallo-btn")) {
+            $modal_3.toggleAttribute("open");
             $transparentBackgroundModal.classList.toggle("visible");
         }
     })

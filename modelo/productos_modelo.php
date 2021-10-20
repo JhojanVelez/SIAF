@@ -86,16 +86,14 @@ class ProductosModelo extends ConexionBD{
 
             $this->result["complete"] = true;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
-            $this->result["resultMessage"] = $this->PDOStmt->rowCount() == 0 
-                                            ? "El producto $this->codigoBarras no se elimino porque no esta registrado en el sistema"
-                                            : "El producto $this->codigoBarras se elimino correctamente";
+            $this->result["resultMessage"] = "El producto $this->codigoBarras se inhabilito correctamente";
             return $this->result;
 
         }catch(PDOException $e) {
             $this->result["complete"] = false;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
             $this->result["errorPDOMessage"] = $e->errorInfo;
-            if($e->errorInfo[1] == 1451) $this->result["errorMessage"] = "El producto $this->codigoBarras no pudo ser eliminado porque la infomacion de este producto es fundamental para el funcionamiento de otras secciones del sistema";
+            if($e->errorInfo[1] == 1451) $this->result["errorMessage"] = "El producto $this->codigoBarras no pudo ser inhabilitado porque la infomacion de este producto es fundamental para el funcionamiento de otras secciones del sistema.";
             return $this->result;
         }
     }
