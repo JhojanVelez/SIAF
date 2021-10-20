@@ -121,43 +121,43 @@
                     Recuerda que una vez inhabilitado, no lo podras volver a habilitar.
                 </p>
                 <div class="productos__modal-inhabilitar-producto-info dialog-main-content">
-                    <section class="productos__modal-inhabilitar-producto-info-item">
+                    <section class="productos__modal-inhabilitar-producto-info-item" data-ProCodBarras>
                         <h3>CODIGO DE BARRAS</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-inhabilitar-producto-info-item">
+                    <section class="productos__modal-inhabilitar-producto-info-item" data-tbl_proveedores_ProNIT>
                         <h3>NIT DEL PROVEEDOR</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-inhabilitar-producto-info-item">
+                    <section class="productos__modal-inhabilitar-producto-info-item" data-ProDescripcion>
                         <h3>DESCRIPCION</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-inhabilitar-producto-info-item">
+                    <section class="productos__modal-inhabilitar-producto-info-item" data-ProNombre>
                         <h3>NOMBRE DEL PROVEEDOR</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-inhabilitar-producto-info-item">
+                    <section class="productos__modal-inhabilitar-producto-info-item" data-ProUbicacionFisica>
                         <h3>UBICACION FISICA</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-inhabilitar-producto-info-item">
+                    <section class="productos__modal-inhabilitar-producto-info-item" data-ProLaboratorio>
                         <h3>LABORATORIO</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-inhabilitar-producto-info-item">
+                    <section class="productos__modal-inhabilitar-producto-info-item" data-ProUnidadMedida>
                         <h3>UNIDAD DE MEDIDA</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-inhabilitar-producto-info-item">
+                    <section class="productos__modal-inhabilitar-producto-info-item" data-ProPresentacion>
                         <h3>PRESENTACION</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-inhabilitar-producto-info-item">
+                    <section class="productos__modal-inhabilitar-producto-info-item" data-ProPrecioVenta>
                         <h3>PRECIO DE VENTA</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-inhabilitar-producto-info-item">
+                    <section class="productos__modal-inhabilitar-producto-info-item" data-ProRegSanInvima>
                         <h3>REGISTRO SANITARIO INVIMA</h3>
                         <p>________________________________________________</p>
                     </section>
@@ -729,7 +729,7 @@
             </dialog>
         </section>
     </main>
-    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_inhabilitar_productos.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_inhabilitar_productos.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_editar_productos.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_agregar_productos.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_seleccion_de_producto.js"></script>

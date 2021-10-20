@@ -4,7 +4,7 @@ class ProductosControlador extends Controlador{
 
     public function buscarPorId ($id = null) {
         $this->data = $this->instanciaModelo->buscarPorId(htmlentities(addslashes($id)));
-        echo(json_encode($this->data));
+        echo(json_encode($this->data[0]));
     }
 
     public function registrarProductos () {
