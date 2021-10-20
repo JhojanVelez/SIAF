@@ -637,8 +637,13 @@ dialog {
 .dialog-process-result {
   max-width: 500px;
 }
+.dialog-process-result h2{
+  margin-bottom: 1rem;
+}
+.dialog-process-result p{
+  margin-bottom: 1rem;
+}
 .dialog-process-result__btn {
-  margin-top: 1rem;
   width: 20%;
 }
 

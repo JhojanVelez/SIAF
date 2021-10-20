@@ -19,15 +19,15 @@ class ProductosControlador extends Controlador{
             if(!isset($_POST["invima"]) || empty($_POST["invima"]))                      throw new Exception("El campo invima no puede estar vacio");
             if(!isset($_POST["nitProveedor"]) || empty($_POST["nitProveedor"]))          throw new Exception("El campo nitProveedor no puede estar vacio");
                 
-            $this->instanciaModelo->htmlentities(addslashes(setCodigoBarras($_POST["codigoBarras"])));
-            $this->instanciaModelo->htmlentities(addslashes(setDescripcion($_POST["descripcion"])));
-            $this->instanciaModelo->htmlentities(addslashes(setUbicacionFisica($_POST["ubicacionFisica"])));
-            $this->instanciaModelo->htmlentities(addslashes(setLaboratorio ($_POST["laboratorio"])));
-            $this->instanciaModelo->htmlentities(addslashes(setUnidadMedida($_POST["unidadMedida"])));
-            $this->instanciaModelo->htmlentities(addslashes(setPresentacion($_POST["presentacion"])));
-            $this->instanciaModelo->htmlentities(addslashes(setPrecioVenta($_POST["precioVenta"])));
-            $this->instanciaModelo->htmlentities(addslashes(setInvima($_POST["invima"])));
-            $this->instanciaModelo->htmlentities(addslashes(setNitProveedor($_POST["nitProveedor"])));
+            $this->instanciaModelo->setCodigoBarras(htmlentities(addslashes($_POST["codigoBarras"])));
+            $this->instanciaModelo->setDescripcion(htmlentities(addslashes($_POST["descripcion"])));
+            $this->instanciaModelo->setUbicacionFisica(htmlentities(addslashes($_POST["ubicacionFisica"])));
+            $this->instanciaModelo->setLaboratorio (htmlentities(addslashes($_POST["laboratorio"])));
+            $this->instanciaModelo->setUnidadMedida(htmlentities(addslashes($_POST["unidadMedida"])));
+            $this->instanciaModelo->setPresentacion(htmlentities(addslashes($_POST["presentacion"])));
+            $this->instanciaModelo->setPrecioVenta(htmlentities(addslashes($_POST["precioVenta"])));
+            $this->instanciaModelo->setInvima(htmlentities(addslashes($_POST["invima"])));
+            $this->instanciaModelo->setNitProveedor(htmlentities(addslashes($_POST["nitProveedor"])));
 
             $this->result = $this->instanciaModelo->registrarProductos();
             echo(json_encode($this->result));

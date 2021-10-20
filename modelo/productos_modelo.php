@@ -69,7 +69,8 @@ class ProductosModelo extends ConexionBD{
         } catch (PDOException $e) {
             $this->result["complete"] = false;
             $this->result["afectedRows"] = $this->PDOStmt->rowCount();
-            $this->result["errorMessage"] = $e->errorInfo;
+            $this->result["errorPDOMessage"] = $e->errorInfo;
+            $this->result["errorMessage"] = "El producto $this->codigoBarras no pudo ser registrado porque ya existe";
             return $this->result;
         }
     }

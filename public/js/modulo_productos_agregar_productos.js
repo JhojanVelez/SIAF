@@ -9,10 +9,8 @@ import {agregar} from 'http://localhost:8080/SIAF/ajax/agregar.js';
 
 
     let $formulario = $modal_1.querySelector("form"),
-        $inputs = $formulario.querySelectorAll("[data-input]"),
-        $inputsValues = Object.values($inputs),
-        $itemsConfirmacion = $modal_2.querySelectorAll(".productos__modal-agregar-producto-info-item-confirmacion"),
-        $itemsConfirmacionValues = Object.values($itemsConfirmacion);
+        $inputs = Object.values($formulario.querySelectorAll("[data-input]")),
+        $itemsConfirmacion = Object.values($modal_2.querySelectorAll(".productos__modal-agregar-producto-info-item-confirmacion"));
 
     const producto = {
         codigoBarras: "",
@@ -39,38 +37,38 @@ import {agregar} from 'http://localhost:8080/SIAF/ajax/agregar.js';
 
             let validador = true;
 
-            // $inputsValues.forEach(el => el.value = el.value.toUpperCase());
+            $inputs.forEach(el => el.value = el.value.toUpperCase());
 
-            // $inputs.forEach(input => {
-            //     if(input.value == "") {
-            //         input.classList.add("input-invalido");
-            //         validador = false;
-            //     } else {
-            //         input.classList.remove("input-invalido");
-            //     }
-            // });
+            $inputs.forEach(input => {
+                if(input.value == "") {
+                    input.classList.add("input-invalido");
+                    validador = false;
+                } else {
+                    input.classList.remove("input-invalido");
+                }
+            });
 
-            // let proveedorSeleccionado = $inputs[3].options[$inputs[3].options.selectedIndex]
-            // if(proveedorSeleccionado.dataset.proveedorId !== $inputs[1].value) {
-            //     $inputs[1].classList.add("input-invalido");
-            //     $inputs[3].classList.add("input-invalido");
-            //     validador = false;
-            // }
+            let proveedorSeleccionado = $inputs[3].options[$inputs[3].options.selectedIndex]
+            if(proveedorSeleccionado.dataset.proveedorId !== $inputs[1].value) {
+                $inputs[1].classList.add("input-invalido");
+                $inputs[3].classList.add("input-invalido");
+                validador = false;
+            }
 
-            // if(isNaN($inputs[8].value)){
-            //     $inputs[8].classList.add("input-invalido");
-            //     validador = false;
-            // }
+            if(isNaN($inputs[8].value)){
+                $inputs[8].classList.add("input-invalido");
+                validador = false;
+            }
 
             if(validador) {
                 $modal_1.toggleAttribute("open");
                 $modal_2.toggleAttribute("open");
                 for(let key in producto){
-                    producto[key] = ($inputsValues.filter(input => input.getAttribute("name") == key))[0].value;
+                    producto[key] = ($inputs.filter(input => input.getAttribute("name") == key))[0].value;
                 }
                 
                 for(let key in producto){
-                    $itemsConfirmacionValues.forEach((item)=> {
+                    $itemsConfirmacion.forEach((item)=> {
                         if(Object.keys(item.dataset)[0] == key.toLowerCase()){
                             item.querySelector("P").innerHTML = producto[key];
                         }
@@ -93,7 +91,12 @@ import {agregar} from 'http://localhost:8080/SIAF/ajax/agregar.js';
                     $modal_3.toggleAttribute("open");
                 } else {
                     $modal_4.toggleAttribute("open");
+                    $modal_4.querySelector("H2").innerHTML = "¡Uppss!";
+                    $modal_4.querySelector("P").innerHTML = res.errorMessage;
                 }
+            }).catch(err => {
+                $modal_4.toggleAttribute("open");
+                $modal_4.querySelector("P").innerHTML = err.errorMessage;
             });
         }
         if(e.target.matches(".productos__modal-agregar-producto-confirmacion-btn-cancelar")) {
