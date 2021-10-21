@@ -196,30 +196,34 @@
                     type="text" 
                     placeholder="Codigo de barras del producto" 
                     id="codigoBarrasProducto" 
-                    data-input 
                     title = "Debe tener una maxima logitud de 15 caracteres"
+                    data-input 
+                    data-ProCodBarras
                     >
 
                     <input 
                     name="nitProveedor" 
                     type="text" 
                     placeholder="NIT del proveedor" 
-                    data-input 
                     title="El valor se colocara automaticamente cuando selecciones un proveedor"
+                    data-input 
+                    data-tbl_proveedores_ProNIT
                     >
 
                     <input 
                     name="descripcion" 
                     type="text" 
                     placeholder="Descripcion" 
-                    data-input 
                     title="Ingresa el nombre comercial del producto"
+                    data-input 
+                    data-ProDescripcion
                     >
 
                     <select 
                     name="proveedor" 
                     id="productos__modal-agregar-producto-select-proveedor" 
                     data-input
+                    data-ProNombre
                     >
                         <option value="" data-proveedor-id>Elige el proveedor</option>
 
@@ -234,21 +238,24 @@
                     name="ubicacionFisica" 
                     type="text" 
                     placeholder="Ubicacion fisica" 
-                    data-input 
                     title="Ingresa el codigo de la ubicacion fisica real en donde se encuentra el producto"
+                    data-input 
+                    data-ProUbicacionFisica
                     >
 
                     <input 
                     name="laboratorio" 
                     type="text" 
                     placeholder="Ingresa el laboratorio" 
-                    data-input 
                     title="Nombre del laboratorio"
+                    data-input 
+                    data-ProLaboratorio
                     >
 
                     <select 
                     name="unidadMedida" 
                     data-input
+                    data-ProUnidadMedida
                     >
                         <option value="">Unidad de medida</option>
                         <option value="KILOGRAMOS">(kg) kilogramos</option>
@@ -263,6 +270,7 @@
                     <select 
                     name="presentacion" 
                     data-input
+                    data-ProPresentacion
                     >
                         <option value="">Presentacion</option>
                         <option value="TABLETA">TABLETA</option>
@@ -283,7 +291,9 @@
                     name="precioVenta" 
                     type="text" 
                     placeholder="Precio de venta" 
-                    data-input title="El precio de venta es el precio de venta al cliente por unidad"
+                    title="El precio de venta es el precio de venta al cliente por unidad"
+                    data-input 
+                    data-ProPrecioVenta
                     >
 
                     <input 
@@ -291,6 +301,7 @@
                     type="text" 
                     placeholder="Registro sanitario INVIMA" 
                     data-input
+                    data-ProRegSanInvima
                     >
 
                 </form>
@@ -307,43 +318,43 @@
                     Recuerda revisar detenidamente la informacion del producto que estas registrando.
                 </p>
                 <div class="productos__modal-agregar-producto-info-confirmacion dialog-main-content">
-                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-codigoBarras>
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ProCodBarras>
                         <h3>CODIGO DE BARRAS</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-nitProveedor>
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-tbl_proveedores_ProNIT>
                         <h3>NIT DEL PROVEEDOR</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-descripcion>
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ProDescripcion>
                         <h3>DESCRIPCION</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-proveedor>
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ProNombre>
                         <h3>NOMBRE DEL PROVEEDOR</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ubicacionFisica>
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ProUbicacionFisica>
                         <h3>UBICACION FISICA</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-laboratorio>
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ProLaboratorio>
                         <h3>LABORATORIO</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-unidadMedida>
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ProUnidadMedida>
                         <h3>UNIDAD DE MEDIDA</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-presentacion>
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ProPresentacion>
                         <h3>PRECIO DE VENTA</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-precioVenta>
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ProPrecioVenta>
                         <h3>PRESENTACION</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-invima>
+                    <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ProRegSanInvima>
                         <h3>REGISTRO SANITARIO INVIMA</h3>
                         <p>________________________________________________</p>
                     </section>

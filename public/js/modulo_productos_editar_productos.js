@@ -8,7 +8,8 @@ import { buscarPorId } from "../../ajax/buscarPorId.js"
     $modal_3 = $transparentBackgroundModal.querySelector(".productos__modal-edicion-exitosa"),
     $modal_4 = $transparentBackgroundModal.querySelector(".productos__modal-edicion-fallo");
     
-    let $inputs = Object.values($modal_1.querySelectorAll("[data-input]")),
+    let $formulario = $modal_1.querySelector("form"),
+        $inputs = Object.values($modal_1.querySelectorAll("[data-input]")),
         $itemsConfirmacion = Object.values($modal_2.querySelectorAll(".productos__modal-editar-producto-info-item-confirmacion")),
         idProductoSeleccionado;
 
@@ -101,7 +102,7 @@ import { buscarPorId } from "../../ajax/buscarPorId.js"
     })
 
     d.addEventListener("change", e => {
-        if(e.target.matches("#productos__modal-agregar-producto-select-proveedor")) {
+        if(e.target.matches("#productos__modal-editar-producto-select-proveedor")) {
             $formulario.nitProveedor.value = e.target.options[e.target.options.selectedIndex].dataset.proveedorId
         }
     });

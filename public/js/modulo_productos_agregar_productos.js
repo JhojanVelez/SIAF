@@ -12,18 +12,6 @@ import {agregar} from 'http://localhost:8080/SIAF/ajax/agregar.js';
         $inputs = Object.values($formulario.querySelectorAll("[data-input]")),
         $itemsConfirmacion = Object.values($modal_2.querySelectorAll(".productos__modal-agregar-producto-info-item-confirmacion"));
 
-    const producto = {
-        codigoBarras: "",
-        nitProveedor: "",
-        descripcion: "",
-        proveedor: "",
-        ubicacionFisica: "",
-        laboratorio: "",
-        unidadMedida: "",
-        presentacion: "",
-        precioVenta: "",
-        invima: ""
-    }
 
     d.addEventListener("click", e => {
         
@@ -68,17 +56,19 @@ import {agregar} from 'http://localhost:8080/SIAF/ajax/agregar.js';
             if(validador) {
                 $modal_1.toggleAttribute("open");
                 $modal_2.toggleAttribute("open");
-                for(let key in producto){
-                    producto[key] = ($inputs.filter(input => input.getAttribute("name") == key))[0].value;
-                }
-                
-                for(let key in producto){
-                    $itemsConfirmacion.forEach((item)=> {
-                        if(Object.keys(item.dataset)[0] == key.toLowerCase()){
-                            item.querySelector("P").innerHTML = producto[key];
+    
+                $inputs.forEach(input => {
+                    console.log(Object.keys(input.dataset)[1]);
+                    $itemsConfirmacion.forEach(item => {
+                        if(Object.keys(input.dataset)[1] == Object.keys(item.dataset)[0]) {
+                            item.querySelector("P").innerText = input.value;
                         }
                     })
-                }
+                })
+
+                $itemsConfirmacion.forEach(item => {
+                    console.log(Object.keys(item.dataset)[0]);
+                })
             }
 
         }
