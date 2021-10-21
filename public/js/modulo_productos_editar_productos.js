@@ -9,6 +9,7 @@ import { buscarPorId } from "../../ajax/buscarPorId.js"
     $modal_4 = $transparentBackgroundModal.querySelector(".productos__modal-edicion-fallo");
     
     let $inputs = Object.values($modal_1.querySelectorAll("[data-input]")),
+        $itemsConfirmacion = Object.values($modal_2.querySelectorAll(".productos__modal-editar-producto-info-item-confirmacion")),
         idProductoSeleccionado;
 
     d.addEventListener("click", e => {
@@ -60,6 +61,23 @@ import { buscarPorId } from "../../ajax/buscarPorId.js"
             if($inputs[8].value.length > 10){
                 $inputs[8].classList.add("input-invalido");
                 validador = false;
+            }
+
+            if(validador) {
+                $modal_1.toggleAttribute("open");
+                $modal_2.toggleAttribute("open");
+                $inputs.forEach(input => {
+                    console.log(Object.keys(input.dataset)[1]);
+                    $itemsConfirmacion.forEach(item => {
+                        if(Object.keys(input.dataset)[1] == Object.keys(item.dataset)[0]) {
+                            item.querySelector("P").innerText = input.value;
+                        }
+                    })
+                })
+
+                $itemsConfirmacion.forEach(item => {
+                    console.log(Object.keys(item.dataset)[0]);
+                })
             }
         }
 

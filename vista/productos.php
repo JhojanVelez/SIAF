@@ -500,43 +500,43 @@
                     Recuerda revisar detenidamente la informacion del producto que estas editando.
                 </p>
                 <div class="productos__modal-editar-producto-info-confirmacion dialog-main-content">
-                    <section class="productos__modal-editar-producto-info-item-confirmacion">
+                    <section class="productos__modal-editar-producto-info-item-confirmacion" data-ProCodBarras>
                         <h3>CODIGO DE BARRAS</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-editar-producto-info-item-confirmacion">
+                    <section class="productos__modal-editar-producto-info-item-confirmacion" data-tbl_proveedores_ProNIT>
                         <h3>NIT DEL PROVEEDOR</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-editar-producto-info-item-confirmacion">
+                    <section class="productos__modal-editar-producto-info-item-confirmacion" data-ProDescripcion>
                         <h3>DESCRIPCION</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-editar-producto-info-item-confirmacion">
+                    <section class="productos__modal-editar-producto-info-item-confirmacion" data-ProNombre>
                         <h3>NOMBRE DEL PROVEEDOR</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-editar-producto-info-item-confirmacion">
+                    <section class="productos__modal-editar-producto-info-item-confirmacion" data-ProUbicacionFisica>
                         <h3>UBICACION FISICA</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-editar-producto-info-item-confirmacion">
+                    <section class="productos__modal-editar-producto-info-item-confirmacion" data-ProLaboratorio>
                         <h3>LABORATORIO</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-editar-producto-info-item-confirmacion">
+                    <section class="productos__modal-editar-producto-info-item-confirmacion" data-ProUnidadMedida>
                         <h3>UNIDAD DE MEDIDA</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-editar-producto-info-item-confirmacion">
+                    <section class="productos__modal-editar-producto-info-item-confirmacion" data-ProPresentacion>
                         <h3>PRECIO DE VENTA</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-editar-producto-info-item-confirmacion">
+                    <section class="productos__modal-editar-producto-info-item-confirmacion" data-ProPrecioVenta>
                         <h3>PRESENTACION</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="productos__modal-editar-producto-info-item-confirmacion">
+                    <section class="productos__modal-editar-producto-info-item-confirmacion" data-ProRegSanInvima>
                         <h3>REGISTRO SANITARIO INVIMA</h3>
                         <p>________________________________________________</p>
                     </section>
