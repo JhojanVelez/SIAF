@@ -85,6 +85,7 @@
                         <option value="FRASCO X 300 ML DE SOLUCIÓN INYECTABLE">FRASCO X 300 ML DE SOLUCIÓN INYECTABLE</option>
                         <option value="GRANULOS">GRANULOS</option>
                         <option value="100 ML DE JARABE">100 ML DE JARABE</option>
+                        <option value="CREMA TOPICA">CREMA TOPICA</option>
                     </select>
                 </form>
                 <div class="productos_filtro-gen-repo">
@@ -285,6 +286,7 @@
                         <option value="FRASCO X 300 ML DE SOLUCIÓN INYECTABLE">FRASCO X 300 ML DE SOLUCIÓN INYECTABLE</option>
                         <option value="GRANULOS">GRANULOS</option>
                         <option value="100 ML DE JARABE">100 ML DE JARABE</option>
+                        <option value="CREMA TOPICA">CREMA TOPICA</option>
                     </select>
 
                     <input 
@@ -478,6 +480,7 @@
                         <option value="FRASCO X 300 ML DE SOLUCIÓN INYECTABLE">FRASCO X 300 ML DE SOLUCIÓN INYECTABLE</option>
                         <option value="GRANULOS">GRANULOS</option>
                         <option value="100 ML DE JARABE">100 ML DE JARABE</option>
+                        <option value="CREMA TOPICA">CREMA TOPICA</option>
                     </select>
 
                     <input 
