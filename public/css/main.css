@@ -148,6 +148,9 @@ input[type="button"]:disabled:hover {
   grid-area: titulo;
   text-align: center;
   font-size: 2.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 

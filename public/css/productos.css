@@ -9,7 +9,6 @@
 }
 
 .grid-container-main {
-    width: 90%;
     height: 100%;
     grid-template-columns: minmax(1000px, 70%) minmax(400px, 30%);
     grid-template-rows: 150px minmax(700px,75vh) 150px;
