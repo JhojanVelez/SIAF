@@ -1,4 +1,4 @@
-export function obtenerPorId (id) {
+export function buscarPorId (id) {
     return new Promise((resolve, reject)=> {
         const xhr = new XMLHttpRequest;
 

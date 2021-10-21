@@ -76,6 +76,51 @@ class ProductosModelo extends ConexionBD{
         }
     }
 
+    public function editarProductos () {
+        try {
+            $this->sql ="UPDATE 
+                        TBL_PRODUCTOS 
+                        SET
+                            ProCodBarras        = :codigoBarras,
+                            ProDescripcion      = :descripcion,
+                            ProUbicacionFisica  = :ubicacionFisica,
+                            ProPresentacion     = :presentacion,
+                            ProUnidadMedida     = :unidadMedida,
+                            ProPrecioVenta      = :precioVenta,
+                            ProLaboratorio      = :laboratorio,
+                            ProRegSanInvima     = :invima,
+                            tbl_proveedores_ProNIT  = :nitProveedor
+                        WHERE 
+                            ProCodBarras = :codigoBarras
+                        ";
+
+            $this->PDOStmt = $this->connection->prepare($this->sql);
+
+            $this->PDOStmt->bindValue(":codigoBarras",$this->codigoBarras);
+            $this->PDOStmt->bindValue(":descripcion",$this->descripcion);
+            $this->PDOStmt->bindValue(":ubicacionFisica",$this->ubicacionFisica);
+            $this->PDOStmt->bindValue(":presentacion",$this->presentacion);
+            $this->PDOStmt->bindValue(":unidadMedida",$this->unidadMedida);
+            $this->PDOStmt->bindValue(":precioVenta",$this->precioVenta);
+            $this->PDOStmt->bindValue(":laboratorio",$this->laboratorio);
+            $this->PDOStmt->bindValue(":invima",$this->invima);
+            $this->PDOStmt->bindValue(":nitProveedor",$this->nitProveedor);
+
+            $this->PDOStmt->execute();
+
+            $this->result["complete"] = true;
+            $this->result["affectedRows"] = $this->PDOStmt->rowCount();
+            return $this->result;
+
+        } catch (PDOException $e) {
+            $this->result["complete"] = false;
+            $this->result["affectedRows"] = $this->PDOStmt->rowCount();
+            $this->result["errorPDOMessage"] = $e->errorInfo;
+            $this->result["errorMessage"] = "El producto $this->codigoBarras no pudo ser editado porque ya existe";
+            return $this->result;
+        }
+    }
+
     public function eliminarProducto () {
 
         try {

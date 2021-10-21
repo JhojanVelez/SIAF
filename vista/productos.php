@@ -303,10 +303,42 @@
                 <h2 class="productos__modal-editar-producto-title dialog-title">Modifica Tus Productos</h2>
 
                 <form class="productos__modal-editar-producto-form dialog-main-content">
-                    <input name="codigoBarras" type="text" placeholder="Codigo de barras del producto" id="codigoBarrasProducto" data-input title = "Debe tener una maxima logitud de 15 caracteres">
-                    <input name="nitProveedor" type="text" placeholder="NIT del proveedor" data-input title="El valor se colocara automaticamente cuando selecciones un proveedor">
-                    <input name="descripcion" type="text" placeholder="Descripcion" data-input title="Ingresa el nombre comercial del producto">
-                    <select name="proveedor" id="productos__modal-editar-producto-select-proveedor" data-input>
+
+                    <input 
+                    name="codigoBarras" 
+                    type="text" 
+                    placeholder="Codigo de barras del producto" 
+                    title = "Debe tener una maxima logitud de 15 caracteres"
+                    data-input 
+                    data-ProCodBarras
+                    >
+
+                    <input 
+                    name="nitProveedor" 
+                    type="text" 
+                    placeholder="NIT del proveedor" 
+                    title="El valor se colocara automaticamente cuando selecciones un proveedor"
+                    data-input 
+                    data-tbl_proveedores_ProNIT
+                    >
+
+                    <input 
+                    name="descripcion" 
+                    type="text" 
+                    placeholder="Descripcion" 
+                    title="Ingresa el nombre comercial del producto"
+                    data-input 
+                    data-ProDescripcion
+                    >
+
+
+                    <select 
+                    name="proveedor" 
+                    id="productos__modal-editar-producto-select-proveedor" 
+                    data-input
+                    data-ProNombre
+                    >
+
                         <option value="" data-proveedor-id>Elige el proveedor</option>
 
                         <?php foreach($this->data['infoProveedores'] as $key => $value): ?>
@@ -314,12 +346,34 @@
                         value="<?php echo $value['ProNombre'] ?>" 
                         data-proveedor-id="<?php echo $value['ProNIT'] ?>"><?php echo $value['ProNombre'] ?></option>
                         <?php endforeach; ?>
-
                     </select>
-                    <input name="ubicacionFisica" type="text" placeholder="Ubicacion fisica" data-input title="Ingresa el codigo de la ubicacion fisica real en donde se encuentra el producto">
-                    <input name="laboratorio" type="text" placeholder="Ingresa el laboratorio" data-input title="Nombre del laboratorio">
-                    <select name="unidadMedida" data-input>
-                        <option value="">Unidad de medida</option>
+
+                    <input 
+                    name="ubicacionFisica" 
+                    type="text" 
+                    placeholder="Ubicacion fisica" 
+                    title="Ingresa el codigo de la ubicacion fisica real en donde se encuentra el producto"
+                    data-input 
+                    data-ProUbicacionFisica
+                    >
+
+                    
+                    <input 
+                    name="laboratorio" 
+                    type="text" 
+                    placeholder="Ingresa el laboratorio" 
+                    title="Nombre del laboratorio"
+                    data-input 
+                    data-ProLaboratorio
+                    >
+                    
+
+                    <select 
+                    name="unidadMedida" 
+                    data-input
+                    data-ProUnidadMedida
+                    >
+                    <option value="">Unidad de medida</option>
                         <option value="KILOGRAMOS">(kg) kilogramos</option>
                         <option value="GRAMOS">(g) gramos</option>
                         <option value="MILIGRAMOS">(mg) miligramos</option>
@@ -328,7 +382,12 @@
                         <option value="MILILITROS">(ml) mililitros</option>
                         <option value="LITROS">(l) litros</option>
                     </select>
-                    <select name="presentacion" data-input>
+
+                    <select 
+                    name="presentacion" 
+                    data-input
+                    data-ProPresentacion
+                    >
                         <option value="">Presentacion</option>
                         <option value="TABLETA">TABLETA</option>
                         <option value="JARABE">JARABE</option>
@@ -339,8 +398,24 @@
                         <option value="INHALADOR">INHALADOR</option>
                         <option value="BOTELLA">BOTELLA</option>
                     </select>
-                    <input name="precioVenta" type="text" placeholder="Precio de venta" data-input title="El precio de venta es el precio de venta al cliente por unidad">
-                    <input name="invima" type="text" placeholder="Registro sanitario INVIMA" data-input>
+
+                    <input 
+                    name="precioVenta" 
+                    type="text" 
+                    placeholder="Precio de venta" 
+                    title="El precio de venta es el precio de venta al cliente por unidad"
+                    data-input 
+                    data-ProPrecioVenta
+                    >
+
+                    <input 
+                    name="invima" 
+                    type="text" 
+                    placeholder="Registro sanitario INVIMA" 
+                    data-input
+                    data-ProRegSanInvima
+                    >
+
                 </form>
                 <div class="productos__modal-editar-producto-btns-container dialog-container-bts">
                     <button class="productos__modal-editar-producto-btn-cancelar boton dialog-btn">Cancelar</button>
@@ -467,7 +542,7 @@
         </section>
     </main>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_inhabilitar_productos.js" type="module"></script>
-    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_editar_productos.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_editar_productos.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_agregar_productos.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_seleccion_de_producto.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_productos_inhabilitados.js"></script>
