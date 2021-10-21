@@ -83,6 +83,8 @@
                         <option value="BOTELLA">BOTELLA</option>
                         <option value="TUBO COLAPSIBLE DE ALUMINIO">TUBO COLAPSIBLE DE ALUMINIO</option>
                         <option value="FRASCO X 300 ML DE SOLUCIÓN INYECTABLE">FRASCO X 300 ML DE SOLUCIÓN INYECTABLE</option>
+                        <option value="GRANULOS">GRANULOS</option>
+                        <option value="100 ML DE JARABE">100 ML DE JARABE</option>
                     </select>
                 </form>
                 <div class="productos_filtro-gen-repo">
@@ -273,6 +275,8 @@
                         <option value="BOTELLA">BOTELLA</option>
                         <option value="TUBO COLAPSIBLE DE ALUMINIO">TUBO COLAPSIBLE DE ALUMINIO</option>
                         <option value="FRASCO X 300 ML DE SOLUCIÓN INYECTABLE">FRASCO X 300 ML DE SOLUCIÓN INYECTABLE</option>
+                        <option value="GRANULOS">GRANULOS</option>
+                        <option value="100 ML DE JARABE">100 ML DE JARABE</option>
                     </select>
 
                     <input 
@@ -288,7 +292,7 @@
                     placeholder="Registro sanitario INVIMA" 
                     data-input
                     >
-                    
+
                 </form>
                 <div class="productos__modal-agregar-producto-btns-container dialog-container-bts">
                     <button class="productos__modal-agregar-producto-btn-cancelar boton dialog-btn">Cancelar</button>
@@ -397,14 +401,12 @@
                     data-ProDescripcion
                     >
 
-
                     <select 
                     name="proveedor" 
                     id="productos__modal-editar-producto-select-proveedor" 
                     data-input
                     data-ProNombre
                     >
-
                         <option value="" data-proveedor-id>Elige el proveedor</option>
 
                         <?php foreach($this->data['infoProveedores'] as $key => $value): ?>
@@ -422,7 +424,6 @@
                     data-input 
                     data-ProUbicacionFisica
                     >
-
                     
                     <input 
                     name="laboratorio" 
@@ -433,7 +434,6 @@
                     data-ProLaboratorio
                     >
                     
-
                     <select 
                     name="unidadMedida" 
                     data-input
@@ -465,6 +465,8 @@
                         <option value="BOTELLA">BOTELLA</option>
                         <option value="TUBO COLAPSIBLE DE ALUMINIO">TUBO COLAPSIBLE DE ALUMINIO</option>
                         <option value="FRASCO X 300 ML DE SOLUCIÓN INYECTABLE">FRASCO X 300 ML DE SOLUCIÓN INYECTABLE</option>
+                        <option value="GRANULOS">GRANULOS</option>
+                        <option value="100 ML DE JARABE">100 ML DE JARABE</option>
                     </select>
 
                     <input 
