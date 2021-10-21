@@ -81,6 +81,8 @@
                         <option value="PILDORA">PILDORA</option>
                         <option value="INHALADOR">INHALADOR</option>
                         <option value="BOTELLA">BOTELLA</option>
+                        <option value="TUBO COLAPSIBLE DE ALUMINIO">TUBO COLAPSIBLE DE ALUMINIO</option>
+                        <option value="FRASCO X 300 ML DE SOLUCIÓN INYECTABLE">FRASCO X 300 ML DE SOLUCIÓN INYECTABLE</option>
                     </select>
                 </form>
                 <div class="productos_filtro-gen-repo">
@@ -221,6 +223,8 @@
                         <option value="PILDORA">PILDORA</option>
                         <option value="INHALADOR">INHALADOR</option>
                         <option value="BOTELLA">BOTELLA</option>
+                        <option value="TUBO COLAPSIBLE DE ALUMINIO">TUBO COLAPSIBLE DE ALUMINIO</option>
+                        <option value="FRASCO X 300 ML DE SOLUCIÓN INYECTABLE">FRASCO X 300 ML DE SOLUCIÓN INYECTABLE</option>
                     </select>
                     <input name="precioVenta" type="text" placeholder="Precio de venta" data-input title="El precio de venta es el precio de venta al cliente por unidad">
                     <input name="invima" type="text" placeholder="Registro sanitario INVIMA" data-input>
@@ -309,7 +313,8 @@
                     type="text" 
                     placeholder="Codigo de barras del producto" 
                     title = "Debe tener una maxima logitud de 15 caracteres"
-                    data-input 
+                    id= "codigoBarrasProducto"
+                    data-input
                     data-ProCodBarras
                     >
 
@@ -397,6 +402,8 @@
                         <option value="PILDORA">PILDORA</option>
                         <option value="INHALADOR">INHALADOR</option>
                         <option value="BOTELLA">BOTELLA</option>
+                        <option value="TUBO COLAPSIBLE DE ALUMINIO">TUBO COLAPSIBLE DE ALUMINIO</option>
+                        <option value="FRASCO X 300 ML DE SOLUCIÓN INYECTABLE">FRASCO X 300 ML DE SOLUCIÓN INYECTABLE</option>
                     </select>
 
                     <input 

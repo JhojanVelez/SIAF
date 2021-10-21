@@ -15,6 +15,8 @@ import { buscarPorId } from "../../ajax/buscarPorId.js"
         if(e.target.matches(".productos__boton-editar")) {
             $transparentBackgroundModal.classList.toggle("visible");
             $modal_1.toggleAttribute("open");
+            $modal_1.querySelector("#codigoBarrasProducto").focus()
+            $inputs[1].disabled = true;
             idProductoSeleccionado = e.target.dataset.idProduct
             buscarPorId(idProductoSeleccionado)
             .then((res)=> {
@@ -28,8 +30,37 @@ import { buscarPorId } from "../../ajax/buscarPorId.js"
             });
         }
         if(e.target.matches(".productos__modal-editar-producto-btn-editar")) {
-            $modal_1.toggleAttribute("open");
-            $modal_2.toggleAttribute("open");
+            // $modal_1.toggleAttribute("open");
+            // $modal_2.toggleAttribute("open");
+            let validador = true;
+
+            $inputs.forEach(el => el.value = el.value.toUpperCase());
+
+            $inputs.forEach(input => {
+                if(input.value == "") {
+                    input.classList.add("input-invalido");
+                    validador = false;
+                } else {
+                    input.classList.remove("input-invalido");
+                }
+            });
+
+            let proveedorSeleccionado = $inputs[3].options[$inputs[3].options.selectedIndex]
+            if(proveedorSeleccionado.dataset.proveedorId !== $inputs[1].value) {
+                $inputs[1].classList.add("input-invalido");
+                $inputs[3].classList.add("input-invalido");
+                validador = false;
+            }
+
+            if(isNaN($inputs[8].value)){
+                $inputs[8].classList.add("input-invalido");
+                validador = false;
+            }
+
+            if($inputs[8].value.length > 10){
+                $inputs[8].classList.add("input-invalido");
+                validador = false;
+            }
         }
 
         if(e.target.matches(".productos__modal-editar-producto-btn-cancelar")){
@@ -50,4 +81,10 @@ import { buscarPorId } from "../../ajax/buscarPorId.js"
             $transparentBackgroundModal.classList.toggle("visible");
         }
     })
+
+    d.addEventListener("change", e => {
+        if(e.target.matches("#productos__modal-agregar-producto-select-proveedor")) {
+            $formulario.nitProveedor.value = e.target.options[e.target.options.selectedIndex].dataset.proveedorId
+        }
+    });
 })();
