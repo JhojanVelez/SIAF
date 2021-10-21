@@ -134,7 +134,7 @@ input[type="button"]:disabled:hover {
   margin: auto;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 150px min-content 700px  150px;
+  grid-template-rows: 150px min-content 75vh 150px;
   grid-template-areas:"titulo"
                       "filtro"
                       "contenido"
