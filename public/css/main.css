@@ -134,7 +134,7 @@ input[type="button"]:disabled:hover {
   margin: auto;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 150px min-content 75vh 150px;
+  grid-template-rows: 150px min-content minmax(700px,75vh) 150px;
   grid-template-areas:"titulo"
                       "filtro"
                       "contenido"
@@ -386,7 +386,7 @@ usuarios, clientes y proveedores */
 .clientes__lista-cliente-boton,
 .usuarios__lista-usuario-boton,
 .proveedores__lista-proveedor-boton {
-  width: 100%;
+  width: 110%;
   height: 45px;
   display: flex;
   justify-content: space-between;
