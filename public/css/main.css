@@ -326,6 +326,9 @@ usuarios, clientes y proveedores */
 .contenedor-objetos__title {
   font-size: 1.8rem;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contenedor-objetos__title > h2 {

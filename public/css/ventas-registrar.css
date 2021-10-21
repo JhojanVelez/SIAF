@@ -19,7 +19,7 @@
     width: 90%;
     height: 100%;
     grid-template-columns: minmax(500px, 40%) minmax(400px, 60%);
-    grid-template-rows: 150px max-content 150px;
+    grid-template-rows: 150px 1fr 150px;
     grid-template-areas:"titulo   lista"
                         "registro lista"
                         "registro botones";
@@ -32,7 +32,7 @@
 
 .registrar-ventas__container-registro {
     grid-area: registro;
-    height: 65vh;
+    height: 100%;
 }
 
 .registrar-ventas__registro {
@@ -105,12 +105,13 @@
 
 .registrar-ventas__container-lista-productos {
     grid-area: lista;
-    grid-template-rows: 1fr 73% 1fr;
+    grid-template-rows: min-content 1fr min-content;
     padding-bottom: 0;
+    gap: 2rem;
 }
 
 .registrar-ventas__lista-productos-contenido {
-    max-height: 450px;
+    min-height: 410px;
 }
 
 .registrar-ventas__lista-producto {
