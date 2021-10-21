@@ -186,9 +186,9 @@
                 <h2 class="productos__modal-agregar-producto-title dialog-title">Registra Nuevos Productos</h2>
 
                 <form class="productos__modal-agregar-producto-form dialog-main-content">
-                    <input name="codigoBarras" type="text" placeholder="Codigo de barras del producto" id="codigoBarrasProducto" data-input>
-                    <input name="nitProveedor" type="text" placeholder="NIT del proveedor" data-input>
-                    <input name="descripcion" type="text" placeholder="Descripcion" data-input>
+                    <input name="codigoBarras" type="text" placeholder="Codigo de barras del producto" id="codigoBarrasProducto" data-input title = "Debe tener una maxima logitud de 15 caracteres">
+                    <input name="nitProveedor" type="text" placeholder="NIT del proveedor" data-input title="El valor se colocara automaticamente cuando selecciones un proveedor">
+                    <input name="descripcion" type="text" placeholder="Descripcion" data-input title="Ingresa el nombre comercial del producto">
                     <select name="proveedor" id="productos__modal-agregar-producto-select-proveedor" data-input>
                         <option value="" data-proveedor-id>Elige el proveedor</option>
 
@@ -199,8 +199,8 @@
                         <?php endforeach; ?>
 
                     </select>
-                    <input name="ubicacionFisica" type="text" placeholder="Ubicacion fisica" data-input>
-                    <input name="laboratorio" type="text" placeholder="Ingresa el laboratorio" data-input>
+                    <input name="ubicacionFisica" type="text" placeholder="Ubicacion fisica" data-input title="Ingresa el codigo de la ubicacion fisica real en donde se encuentra el producto">
+                    <input name="laboratorio" type="text" placeholder="Ingresa el laboratorio" data-input title="Nombre del laboratorio">
                     <select name="unidadMedida" data-input>
                         <option value="">Unidad de medida</option>
                         <option value="KILOGRAMOS">(kg) kilogramos</option>
@@ -222,8 +222,8 @@
                         <option value="INHALADOR">INHALADOR</option>
                         <option value="BOTELLA">BOTELLA</option>
                     </select>
-                    <input name="precioVenta" type="text" placeholder="Precio de venta" data-input>
-                    <input name="invima" type="text" title="Hola" placeholder="Registro sanitario INVIMA" data-input>
+                    <input name="precioVenta" type="text" placeholder="Precio de venta" data-input title="El precio de venta es el precio de venta al cliente por unidad">
+                    <input name="invima" type="text" placeholder="Registro sanitario INVIMA" data-input>
                 </form>
                 <div class="productos__modal-agregar-producto-btns-container dialog-container-bts">
                     <button class="productos__modal-agregar-producto-btn-cancelar boton dialog-btn">Cancelar</button>
@@ -303,22 +303,44 @@
                 <h2 class="productos__modal-editar-producto-title dialog-title">Modifica Tus Productos</h2>
 
                 <form class="productos__modal-editar-producto-form dialog-main-content">
-                    <input type="text" placeholder="Codigo de barras del producto" id="codigoBarrasProducto">
-                    <input type="text" placeholder="NIT del proveedor">
-                    <input type="text" placeholder="Descripcion">
-                    <select>
-                        <option value="">Elige el proveedor</option>
+                    <input name="codigoBarras" type="text" placeholder="Codigo de barras del producto" id="codigoBarrasProducto" data-input title = "Debe tener una maxima logitud de 15 caracteres">
+                    <input name="nitProveedor" type="text" placeholder="NIT del proveedor" data-input title="El valor se colocara automaticamente cuando selecciones un proveedor">
+                    <input name="descripcion" type="text" placeholder="Descripcion" data-input title="Ingresa el nombre comercial del producto">
+                    <select name="proveedor" id="productos__modal-editar-producto-select-proveedor" data-input>
+                        <option value="" data-proveedor-id>Elige el proveedor</option>
+
+                        <?php foreach($this->data['infoProveedores'] as $key => $value): ?>
+                        <option 
+                        value="<?php echo $value['ProNombre'] ?>" 
+                        data-proveedor-id="<?php echo $value['ProNIT'] ?>"><?php echo $value['ProNombre'] ?></option>
+                        <?php endforeach; ?>
+
                     </select>
-                    <input type="text" placeholder="Ubicacion fisica">
-                    <input type="text" placeholder="Ingresa el laboratorio">
-                    <select>
+                    <input name="ubicacionFisica" type="text" placeholder="Ubicacion fisica" data-input title="Ingresa el codigo de la ubicacion fisica real en donde se encuentra el producto">
+                    <input name="laboratorio" type="text" placeholder="Ingresa el laboratorio" data-input title="Nombre del laboratorio">
+                    <select name="unidadMedida" data-input>
                         <option value="">Unidad de medida</option>
+                        <option value="KILOGRAMOS">(kg) kilogramos</option>
+                        <option value="GRAMOS">(g) gramos</option>
+                        <option value="MILIGRAMOS">(mg) miligramos</option>
+                        <option value="MICROGRAMOS">(mcg) microgramos</option>
+                        <option value="UNIDAD">(u) unidad</option>
+                        <option value="MILILITROS">(ml) mililitros</option>
+                        <option value="LITROS">(l) litros</option>
                     </select>
-                    <select>
+                    <select name="presentacion" data-input>
                         <option value="">Presentacion</option>
+                        <option value="TABLETA">TABLETA</option>
+                        <option value="JARABE">JARABE</option>
+                        <option value="CAPSULA">CAPSULA</option>
+                        <option value="COMPRIMIDO">COMPRIMIDO</option>
+                        <option value="GRAGEA O TABLETA RECUBIERTA">GRAGEA O TABLETA RECUBIERTA</option>
+                        <option value="PILDORA">PILDORA</option>
+                        <option value="INHALADOR">INHALADOR</option>
+                        <option value="BOTELLA">BOTELLA</option>
                     </select>
-                    <input type="text" placeholder="Precio de venta">
-                    <input type="text" title="Hola" placeholder="Registro sanitario INVIMA">
+                    <input name="precioVenta" type="text" placeholder="Precio de venta" data-input title="El precio de venta es el precio de venta al cliente por unidad">
+                    <input name="invima" type="text" placeholder="Registro sanitario INVIMA" data-input>
                 </form>
                 <div class="productos__modal-editar-producto-btns-container dialog-container-bts">
                     <button class="productos__modal-editar-producto-btn-cancelar boton dialog-btn">Cancelar</button>

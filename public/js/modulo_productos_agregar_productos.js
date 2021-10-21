@@ -60,6 +60,11 @@ import {agregar} from 'http://localhost:8080/SIAF/ajax/agregar.js';
                 validador = false;
             }
 
+            if($inputs[8].value.length > 10){
+                $inputs[8].classList.add("input-invalido");
+                validador = false;
+            }
+
             if(validador) {
                 $modal_1.toggleAttribute("open");
                 $modal_2.toggleAttribute("open");
