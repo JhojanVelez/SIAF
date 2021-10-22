@@ -76,7 +76,7 @@ class ProductosModelo extends ConexionBD{
         }
     }
 
-    public function editarProductos () {
+    public function editarProductos ($idProductoSeleccionado) {
         try {
             $this->sql ="UPDATE 
                         TBL_PRODUCTOS 
@@ -91,7 +91,7 @@ class ProductosModelo extends ConexionBD{
                             ProRegSanInvima     = :invima,
                             tbl_proveedores_ProNIT  = :nitProveedor
                         WHERE 
-                            ProCodBarras = :codigoBarras
+                            ProCodBarras = :codigoBarrasProductoSeleccionado
                         ";
 
             $this->PDOStmt = $this->connection->prepare($this->sql);
@@ -105,18 +105,22 @@ class ProductosModelo extends ConexionBD{
             $this->PDOStmt->bindValue(":laboratorio",$this->laboratorio);
             $this->PDOStmt->bindValue(":invima",$this->invima);
             $this->PDOStmt->bindValue(":nitProveedor",$this->nitProveedor);
+            $this->PDOStmt->bindValue(":codigoBarrasProductoSeleccionado",$idProductoSeleccionado);
 
             $this->PDOStmt->execute();
 
             $this->result["complete"] = true;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
+            $this->result["resultMessage"] = $this->PDOStmt->rowCount() != 0
+                                            ? "Producto editado correctamente"
+                                            : "El producto $idProductoSeleccionado no pudo ser editado porque no esta registrado en el sistema.";
             return $this->result;
 
         } catch (PDOException $e) {
             $this->result["complete"] = false;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
             $this->result["errorPDOMessage"] = $e->errorInfo;
-            $this->result["errorMessage"] = "El producto $this->codigoBarras no pudo ser editado porque ya existe";
+            $this->result["errorMessage"] = "El producto no pudo ser editado porque el codigo de barras $this->codigoBarras ya esta registrado en otro producto, por favor intenta modificar el valor con un codigo de barras distinto a los demas productos";
             return $this->result;
         }
     }

@@ -25,7 +25,7 @@ import {agregar} from 'http://localhost:8080/SIAF/ajax/agregar.js';
 
             let validador = true;
 
-            $inputs.forEach(el => el.value = el.value.toUpperCase());
+            $inputs.forEach(el => el.value = el.value.toUpperCase().trim());
 
             $inputs.forEach(input => {
                 if(input.value == "") {
@@ -49,6 +49,11 @@ import {agregar} from 'http://localhost:8080/SIAF/ajax/agregar.js';
             }
 
             if($inputs[8].value.length > 10){
+                $inputs[8].classList.add("input-invalido");
+                validador = false;
+            }
+
+            if($inputs[8].value[0] == 0){
                 $inputs[8].classList.add("input-invalido");
                 validador = false;
             }

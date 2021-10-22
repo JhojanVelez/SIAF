@@ -1,5 +1,5 @@
 import { buscarPorId } from "../../ajax/buscarPorId.js"
-
+import { editar } from "../../ajax/editar.js";
 (function(){
     const d = document,
     $transparentBackgroundModal = d.querySelector(".productos__container-modal"),
@@ -32,11 +32,9 @@ import { buscarPorId } from "../../ajax/buscarPorId.js"
             });
         }
         if(e.target.matches(".productos__modal-editar-producto-btn-editar")) {
-            // $modal_1.toggleAttribute("open");
-            // $modal_2.toggleAttribute("open");
             let validador = true;
 
-            $inputs.forEach(el => el.value = el.value.toUpperCase());
+            $inputs.forEach(el => el.value = el.value.toUpperCase().trim());
 
             $inputs.forEach(input => {
                 if(input.value == "") {
@@ -64,20 +62,20 @@ import { buscarPorId } from "../../ajax/buscarPorId.js"
                 validador = false;
             }
 
+            if($inputs[8].value[0] == 0){
+                $inputs[8].classList.add("input-invalido");
+                validador = false;
+            }
+
             if(validador) {
                 $modal_1.toggleAttribute("open");
                 $modal_2.toggleAttribute("open");
                 $inputs.forEach(input => {
-                    console.log(Object.keys(input.dataset)[1]);
                     $itemsConfirmacion.forEach(item => {
                         if(Object.keys(input.dataset)[1] == Object.keys(item.dataset)[0]) {
                             item.querySelector("P").innerText = input.value;
                         }
                     })
-                })
-
-                $itemsConfirmacion.forEach(item => {
-                    console.log(Object.keys(item.dataset)[0]);
                 })
             }
         }
@@ -89,14 +87,36 @@ import { buscarPorId } from "../../ajax/buscarPorId.js"
         
         if(e.target.matches(".productos__modal-editar-producto-confirmacion-btn-confirmar")) {
             $modal_2.toggleAttribute("open");
-            $modal_3.toggleAttribute("open");
+            $inputs[1].disabled = false;
+            editar($formulario,idProductoSeleccionado)
+            .then(res=>{
+                console.log(res);
+                if(res.complete && res.affectedRows != 0) {
+                    $modal_3.toggleAttribute("open");
+                    $modal_3.querySelector("P").innerHTML = res.resultMessage;
+                } else if(res.complete && res.affectedRows == 0){
+                    $modal_4.toggleAttribute("open");
+                    $modal_4.querySelector("H2").innerHTML = "¡Uppss!";
+                    $modal_4.querySelector("P").innerHTML = res.resultMessage;   
+                } else {
+                    $modal_4.toggleAttribute("open");
+                    $modal_4.querySelector("H2").innerHTML = "¡Uppss!";
+                    $modal_4.querySelector("P").innerHTML = res.errorMessage;
+                }
+            }).catch(err => {
+                $modal_4.toggleAttribute("open");
+                $modal_4.querySelector("P").innerHTML = err.errorMessage;
+            });
         }
         if(e.target.matches(".productos__modal-editar-producto-confirmacion-btn-cancelar")) {
             $modal_1.toggleAttribute("open");
             $modal_2.toggleAttribute("open");
         }
         if(e.target.matches(".productos__modal-edicion-exitosa-btn")) {
-            $modal_3.toggleAttribute("open");
+            location.reload();
+        }
+        if(e.target.matches(".productos__modal-edicion-fallo-btn")) {
+            $modal_4.toggleAttribute("open");
             $transparentBackgroundModal.classList.toggle("visible");
         }
     })

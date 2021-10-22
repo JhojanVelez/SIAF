@@ -195,6 +195,7 @@
                     <input 
                     name="codigoBarras" 
                     type="text" 
+                    maxlength="15"
                     placeholder="Codigo de barras del producto" 
                     id="codigoBarrasProducto" 
                     title = "Debe tener una maxima logitud de 15 caracteres"
@@ -292,6 +293,7 @@
                     <input 
                     name="precioVenta" 
                     type="text" 
+                    maxlength="10"
                     placeholder="Precio de venta" 
                     title="El precio de venta es el precio de venta al cliente por unidad"
                     data-input 
@@ -389,6 +391,7 @@
                     <input 
                     name="codigoBarras" 
                     type="text" 
+                    maxlength="15"
                     placeholder="Codigo de barras del producto" 
                     title = "Debe tener una maxima logitud de 15 caracteres"
                     id= "codigoBarrasProducto"
@@ -486,6 +489,7 @@
                     <input 
                     name="precioVenta" 
                     type="text" 
+                    maxlength="10"
                     placeholder="Precio de venta" 
                     title="El precio de venta es el precio de venta al cliente por unidad"
                     data-input 
@@ -563,7 +567,7 @@
 
             <dialog class="productos__modal-edicion-exitosa dialog-process-result">
                 <h2>¡Exelente!</h2>
-                <p>Has registrado un nuevo producto exitosamente</p>
+                <p>Has editado la informacion exitosamente</p>
                 <button class="productos__modal-edicion-exitosa-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
             
