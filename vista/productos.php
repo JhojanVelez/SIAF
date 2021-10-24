@@ -59,20 +59,43 @@
                 <form class="productos__filtro-form" action="">
                     <label class="productos__filtro-label" for="product-id">Por codigo de barras del producto</label>
                     <br>
-                    <input type="text" class="productos_filtro-id" id="product-id">
+                    <input 
+                    name="codigoBarras"
+                    type="text" 
+                    class="productos_filtro-id" 
+                    data-input
+                    autocomplete="off"
+                    >
                     <br>
                     <label class="productos__filtro-label" for="product-nombre">Por nombre del producto</label>
                     <br>
-                    <input type="text" class="productos_filtro-nombre" id="product-nombre">
+                    <input 
+                    name="descripcion"
+                    type="text" 
+                    class="productos_filtro-nombre"
+                    data-input
+                    autocomplete="off"
+                    >
                     <br>
                     <label class="productos__filtro-label" for="product-proveedor">Por nombre del proveedor</label>
                     <br>
-                    <input type="text" class="productos_filtro-proveedor" id="product-proveedor">
+                    <input 
+                    name="nomProveedor"
+                    type="text" 
+                    class="productos_filtro-proveedor"
+                    data-input
+                    autocomplete="off"
+                    >
                     <br>
                     <label class="productos__filtro-label" for="product-id">Por tipo de presentacion</label>
                     <br>
-                    <select name="presentacion" class="productos_filtro-presentacion" id="product-presentacion">
-                        <option value="null">Presentacion</option>
+                    <select 
+                    name="presentacion" 
+                    class="productos_filtro-presentacion" 
+                    data-input
+                    autocomplete="off"
+                    >
+                        <option value="">Presentacion</option>
                         <option value="TABLETA">TABLETA</option>
                         <option value="JARABE">JARABE</option>
                         <option value="CAPSULA">CAPSULA</option>
@@ -632,6 +655,7 @@
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_inhabilitar_productos.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_editar_productos.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_agregar_productos.js" type="module"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_buscar_por_atributos.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_seleccion_de_producto.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_productos_inhabilitados.js"></script>
 </body>

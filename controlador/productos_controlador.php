@@ -7,6 +7,43 @@ class ProductosControlador extends Controlador{
         echo(json_encode($this->data[0]));
     }
 
+    public function buscarPorAtributos () {
+
+        $_POST["codigoBarras"] = (!empty($_POST["codigoBarras"])) 
+            ? $_POST["codigoBarras"]."%" 
+            : "";
+        
+        $_POST["descripcion"] = (!empty($_POST["descripcion"])) 
+            ? $_POST["descripcion"]."%"
+            : "";
+        
+        $_POST["presentacion"] = (!empty($_POST["presentacion"]))
+            ? $_POST["presentacion"]."%"
+            : "";
+        
+        $_POST["nomProveedor"] = (!empty($_POST["nomProveedor"]))
+            ? $_POST["nomProveedor"]."%"
+            : "";
+        
+        if( empty($_POST["codigoBarras"]) && 
+            empty($_POST["descripcion"])  &&   
+            empty($_POST["presentacion"]) && 
+            empty($_POST["nomProveedor"])) 
+        {
+            $_POST["codigoBarras"] = "%";
+        }
+        
+        $this->instanciaModelo->setCodigoBarras(htmlentities(addslashes($_POST["codigoBarras"])));
+        $this->instanciaModelo->setDescripcion(htmlentities(addslashes($_POST["descripcion"])));
+        $this->instanciaModelo->setNomProveedor(htmlentities(addslashes($_POST["nomProveedor"])));
+        $this->instanciaModelo->setPresentacion(htmlentities(addslashes($_POST["presentacion"])));
+
+        $this->data = $this->instanciaModelo->buscarPorAtributos();
+
+        echo json_encode($this->data);
+        // print_r($_POST);
+    }
+
     public function registrarProductos () {
         try {
             if(!isset($_POST["codigoBarras"]) || empty($_POST["codigoBarras"]))          throw new Exception("El campo codigo de barras no puede estar vacio");

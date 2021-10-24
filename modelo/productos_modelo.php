@@ -11,6 +11,7 @@ class ProductosModelo extends ConexionBD{
     private $laboratorio;
     private $invima;
     private $nitProveedor;
+    private $nomProveedor;
 
     function __construct () {
         parent::__construct();
@@ -30,6 +31,28 @@ class ProductosModelo extends ConexionBD{
     public function buscarPorId ($id) {
         $this->PDOStmt = $this->connection->prepare("SELECT * FROM PRODUCTOS WHERE ProCodBarras = ?");
         $this->PDOStmt->execute(array($id));
+        return $this->PDOStmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function buscarPorAtributos () {
+        $this->sql ="SELECT * 
+                    FROM PRODUCTOS
+                    WHERE
+                    ProCodBarras    LIKE :codigoBarras  OR
+                    ProDescripcion  LIKE :descripcion   OR
+                    ProNombre       LIKE :proveedor     OR
+                    ProPresentacion LIKE :presentacion
+                    ORDER BY ProDescripcion";
+                    
+        $this->PDOStmt = $this->connection->prepare($this->sql);
+        
+        $this->PDOStmt->bindValue(":codigoBarras",$this->codigoBarras);
+        $this->PDOStmt->bindValue(":descripcion",$this->descripcion);
+        $this->PDOStmt->bindValue(":proveedor",$this->nomProveedor);
+        $this->PDOStmt->bindValue(":presentacion",$this->presentacion);
+
+        $this->PDOStmt->execute();
+
         return $this->PDOStmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
@@ -161,6 +184,7 @@ class ProductosModelo extends ConexionBD{
     public function getLaboratorio  () {return $this->laboratorio;}
     public function getInvima () {return $this->invima;}
     public function getNitProveedor () {return $this->nitProveedor;}
+    public function getNomProveedor () {return $this->nomProveedor;}
 
     /*Metodos setter*/
 
@@ -190,6 +214,9 @@ class ProductosModelo extends ConexionBD{
     }
     public function setNitProveedor ($value) {
         $this->nitProveedor = $value;
+    }
+    public function setNomProveedor ($value) {
+        $this->nomProveedor = $value;
     }
 }
 
