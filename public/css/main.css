@@ -203,12 +203,24 @@ input[type="button"]:disabled:hover {
 .filtro-subtitulo-reporte:hover {
   text-decoration: underline;
 }
+.filtro-subtitulo-reporte:focus {
+  border: none;
+  outline: none;
+}
+.filtro-subtitulo-reporte {
+  font-size: 1.6rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
 
 .filtro-label {
   font-weight: bold;
   font-size: 1.2rem;
 }
 
+/*Estilos para las tablas*/
 
 .container-table {
   grid-area: contenido;

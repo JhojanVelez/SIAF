@@ -12,7 +12,7 @@ class Router {
 
         if(file_exists($urlController)) {
             require $urlController;
-            $controller = new ($url[0].'Controlador')($url);
+            $controller = new ($url[0].'Controlador')();
             if(file_exists($urlModel)) {
                 $instanciaModelo = $controller->cargarModelo($urlModel,$url[0]);
                 if(isset($url[1])) {

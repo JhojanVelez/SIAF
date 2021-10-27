@@ -7,7 +7,7 @@ class ProductosControlador extends Controlador{
         echo(json_encode($this->data[0]));
     }
 
-    public function buscarPorAtributos () {
+    public function buscarPorAtributos ($ajax = true) {
 
         $_POST["codigoBarras"] = (!empty($_POST["codigoBarras"])) 
             ? $_POST["codigoBarras"]."%" 
@@ -40,8 +40,9 @@ class ProductosControlador extends Controlador{
 
         $this->data = $this->instanciaModelo->buscarPorAtributos();
 
-        echo json_encode($this->data);
-        // print_r($_POST);
+        if($ajax) {
+            echo json_encode($this->data);
+        }
     }
 
     public function registrarProductos () {

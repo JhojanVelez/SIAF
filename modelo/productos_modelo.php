@@ -173,6 +173,10 @@ class ProductosModelo extends ConexionBD{
         }
     }
 
+    function generarReporte() {
+        return $this->obtenerTodosLosDatos();
+    }
+
     /*Metodos getter*/
 
     public function getCodigoBarras () {return $this->codigoBarras;}

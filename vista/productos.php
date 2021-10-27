@@ -56,7 +56,7 @@
         <section class="productos__container-filter container-filter  box-shadow">
             <div class="productos__filtro">
                 <h2 class="productos__filtro-titulo">Busca un Producto</h2>
-                <form class="productos__filtro-form" action="">
+                <form id="productos__filtro-form" class="productos__filtro-form" action="<?php echo URL_RAIZ ?>productos/generarReporte" method="POST" target="_BLANK">
                     <label class="productos__filtro-label" for="product-id">Por codigo de barras del producto</label>
                     <br>
                     <input 
@@ -110,12 +110,13 @@
                         <option value="100 ML DE JARABE">100 ML DE JARABE</option>
                         <option value="CREMA TOPICA">CREMA TOPICA</option>
                     </select>
+                    
                 </form>
                 <div class="productos_filtro-gen-repo">
                     <div class="productos_filtro-gen-repo-img filtro-gen-repo-img">
                         <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
                     </div>
-                    <a class="productos__filtro-subtitulo-reporte filtro-subtitulo-reporte" href="">Generar reporte</a>
+                    <input class="productos__filtro-subtitulo-reporte filtro-subtitulo-reporte" type="submit" value="Generar Reporte" form="productos__filtro-form">
                 </div>
             </div>
         </section>
@@ -658,5 +659,6 @@
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_buscar_por_atributos.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_seleccion_de_producto.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_productos_inhabilitados.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/detectarFiltroParaReporte.js"></script>
 </body>
 </html>
