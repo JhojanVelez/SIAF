@@ -1,0 +1,86 @@
+@import url(main.css);
+
+.nav__li:nth-child(5) {
+    border-bottom: 2px solid var(--color-button-text);
+}
+
+.proveedores__lista-proveedor {
+    grid-template-columns: 15% 1fr 12%;
+}
+
+.proveedores__lista-proveedor-info-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:"nit tel dir"
+                        "nom cor ciu";
+    grid-row-gap: 10px;
+}
+
+.proveedores__lista-proveedor-info.nit {
+    grid-area: nit;
+}
+.proveedores__lista-proveedor-info.nombre {
+    grid-area: nom;
+}
+.proveedores__lista-proveedor-info.telefono {
+    grid-area: tel;
+}
+.proveedores__lista-proveedor-info.correo {
+    grid-area: cor;
+}
+.proveedores__lista-proveedor-info.direccion {
+    grid-area: dir;
+}
+.proveedores__lista-proveedor-info.ciudad {
+    grid-area: ciu;
+}
+
+/*-------------------------Estilos de los modals de agregar proveedores----------------------------------*/
+
+
+.proveedores__modal-agregar-proveedor {
+    min-width: 700px;
+    max-width: 800px;
+}
+
+.proveedores__modal-agregar-proveedor-title {
+    margin-bottom: 3rem;
+}
+
+/*-------------------------Estilos del modal de proveedores inhabilitados----------------------------------*/
+
+.proveedores__modal-proveedores-inhabilitados {
+    min-width: 1300px;
+    max-width: 1400px;
+}
+
+.proveedores__modal-proveedores-inhabilitados-container-gen-repo {
+    margin-bottom: 3rem;
+}
+
+.proveedores__modal-proveedores-inhabilitados-title {
+    margin-bottom: 3rem;
+}
+
+.proveedores__modal-proveedores-inhabilitados-table-container {
+    height: 550px;
+}
+
+/*-------------------------Estilos de los modals de editar proveedores----------------------------------*/
+
+
+.proveedores__modal-edidar-proveedor {
+    min-width: 700px;
+    max-width: 800px;
+}
+
+.proveedores__modal-editar-proveedor-title {
+    margin-bottom: 3rem;
+}
+
+/*-------------------------Estilos del modal de inhabilitar proveedor----------------------------------*/
+
+.proveedores__modal-inhabilitar-proveedor {
+    min-width: 800px;
+    max-width: 900px;
+}

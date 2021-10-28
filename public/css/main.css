@@ -1,0 +1,675 @@
+/*
+Este main.css tiene como objetivo crear clases CSS reutilizables, es decir, si un componente se repite en mas de 3 
+paginas diferentes, se creara un estilo general, el cual simplifique los estilos y simplemente solo colocando
+el nombre de la clase, use los estilos por defecto.
+
+Y si deseas crear estilos unicos que son irrepetibles, pudes ir a los estilos individuales y crear una clase 
+respetando la metodologia "BEM".
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  list-style: none; 
+  text-decoration: none;
+}
+
+:root {
+/*Este es el color del background que va en todas las interfaces*/
+  --color-main-background: #6b63ff25;
+
+  --color-background-modal: #201f3a83;
+
+  --color-title-h1: #020029;
+  --color-text: #020029;
+
+  --color-button-background: #6c63ff;
+  --color-button-background-hover: #5b52ffca;
+  --color-button-text: rgb(255, 255, 255);
+
+  --color-nav-background: #6c63ff;
+
+  --color-tr-background: #6b63ff48;
+
+/*Estos son los colores y estilos generales de cada card*/
+  --color-card-background: white;
+  --color-card-box-shadow: 0px 7px 20px -7px #6c63ff3d;
+  --border-card-radius: 10px;
+}
+
+h1,h2, label, input, select, a, h3 {
+  color: var(--color-text);
+} 
+
+img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-size: 16px;
+  position: relative;
+  background-color: var(--color-main-background);
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr;
+}
+
+main {
+  align-self: center;
+}
+
+
+input, select, textarea {
+  border-radius: 50px;
+  border: 0.2px solid #6b63ff5e;
+  outline: none;
+  font-size: 1rem;
+  padding: 5px 15px;
+  width: 100%;
+}
+
+select {
+  cursor: pointer;
+}
+
+input:focus, select:focus {
+  border: 1px solid var(--color-nav-background);
+}
+
+.input-invalido {
+  border-color: red;
+}
+
+/*Estilos para todos los botones de la pagina*/
+
+
+.boton {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 50px;
+  border: 0.2px solid rgba(32, 32, 32, 0.205);
+  outline: none;
+  font-size: 1rem;
+  background-color: var(--color-button-background);
+  color: var(--color-button-text);
+  cursor: pointer;
+  transition: background-color .5s;
+}
+
+.boton:hover {
+  background-color: var(--color-button-background-hover);
+}
+
+input[type="button"]:disabled {
+  background-color: #201f3a83;
+  cursor: help;
+}
+input[type="button"]:disabled:hover {
+  background-color: #201f3a83;
+}
+
+.box-shadow {
+    background-color: var(--color-card-background);
+    box-shadow: var(--color-card-box-shadow);
+    border-radius: var(--border-card-radius);
+    padding: 2rem;
+}
+
+/*Con estos estilos, dividimos nuestra pagina en 4 secciones el titulo, los filtros, el contenido principal y los botones*/
+
+.grid-container-main {
+  min-width: 1700px;
+  max-width: 90%;
+  height: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 150px min-content minmax(700px,75vh) 150px;
+  grid-template-areas:"titulo"
+                      "filtro"
+                      "contenido"
+                      "botones";
+  grid-gap: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.container-title {
+  grid-area: titulo;
+  text-align: center;
+  font-size: 2.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.container-filter {
+  grid-area: filtro;
+  width: 100%;
+  justify-self: center;
+  padding: 2rem;
+}
+
+
+
+.filtro {
+  display: grid;
+  grid-template-columns: 75% 1fr;
+  grid-template-rows: min-content min-content;
+  grid-template-areas:"filter-titulo filter-titulo"
+                      "filter-inputs filter-gen-repo";
+  grid-gap: 2rem;
+}
+
+.filtro-title {
+  font-size: 2.2rem;
+  grid-area: filter-titulo;
+}
+
+.filtro-form {
+  grid-area: filter-inputs;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  align-content: center;
+  grid-gap: 2rem;
+}
+
+.filtro-gen-repo {
+  grid-area: filter-gen-repo;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+.filtro-gen-repo-img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.filtro-subtitulo-reporte:hover {
+  text-decoration: underline;
+}
+.filtro-subtitulo-reporte:focus {
+  border: none;
+  outline: none;
+}
+.filtro-subtitulo-reporte {
+  font-size: 1.6rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.filtro-label {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/*Estilos para las tablas*/
+
+.container-table {
+  grid-area: contenido;
+  padding: 0 0 2rem;
+  overflow: scroll;
+}
+
+.container-botones {
+  grid-area: botones;
+}
+
+table {
+  min-width: 100%;
+  margin: auto;
+}
+
+thead {
+  font-size: 1.1rem;
+  position: sticky;
+  top: 0;
+  color: var(--color-button-text);
+  background-color: var(--color-nav-background);
+  text-align: center;
+  font-weight: 600;
+}
+
+thead td {
+  padding: .3rem;
+}
+
+tbody td {
+  min-width: min-content;
+  max-width: 300px;
+  word-break: break-word;
+  padding-left: 1rem;
+  font-weight: 500;
+}
+
+.table-td--comentarios {
+  text-align: justify;
+}
+
+tbody tr {
+  height: 50px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--color-tr-background);
+}
+
+tbody tr:hover {
+  background-color: var(--color-button-background);
+  color: var(--color-button-text);
+  cursor: pointer;
+}
+
+
+.cards-flex-container {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.card {
+  margin: 1rem;
+  width: 400px;
+  max-height: 500px;
+  display: grid;
+  grid-template-rows: 20% 60% 20%;
+  justify-items: center;
+  align-items: center;
+}
+
+.card__title {
+  color: var(--color-nav-background);
+}
+
+
+.card__img {
+  height: 60%;
+  transition: transform .2s;
+}
+
+.card:hover .card__img {
+  transform: scale(1.2);
+}
+.card__button {
+  width: 80%;
+  max-height: 80%;
+  min-height: 50px;
+  padding: 0;
+}
+
+.card__button a {
+  display: block;
+  height: 100%;
+  line-height: 50px;
+  color: var(--color-button-text);
+}
+
+
+/* Estos son los estilos para las cajas que tienen fondo morado y que guardan la lista de productos a vender,
+usuarios, clientes y proveedores */
+
+.contenedor-objetos {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 15% 1fr;
+  background-color: var(--color-nav-background);
+}
+
+.contenedor-objetos__title {
+  font-size: 1.8rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-objetos__title > h2 {
+  color: var(--color-button-text);
+}
+
+.contenedor-objetos__contenido {
+  padding: 0 1rem 1rem;
+  background-image:linear-gradient(var(--color-main-background),var(--color-main-background)), 
+                    linear-gradient(white,white);
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
+}
+
+.contenedor-objetos__objeto {
+  display: grid;
+  margin-top: 1rem;
+  padding: 2rem 0;
+  scroll-snap-align: center;
+  overflow-x: hidden;
+}
+
+.contenedor-objetos__objeto-img{
+  height: 80px;
+  align-self: center;
+  justify-self: center;
+}
+
+.contenedor-objetos__objeto-botones {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.contenedor-objetos__objeto-boton {
+  width: 30px;
+  height: 30px;
+}
+
+/*Estilos para los modulos de proveedores, clientes y usuarios, mas especificamente en la seccion del listado de cada uno*/
+
+.grid-container-main.proveedores,
+.grid-container-main.clientes,
+.grid-container-main.usuarios {
+  min-width: 1500px;
+  max-width: 90%;
+}
+
+.clientes__filtro-input-container,
+.usuarios__filtro-input-container,
+.proveedores__filtro-input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.clientes__lista-cliente-boton,
+.usuarios__lista-usuario-boton,
+.proveedores__lista-proveedor-boton {
+  width: 110%;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  transform: translateX(70%);
+  transition: .5s transform;
+}
+.clientes__lista-cliente-boton:hover,
+.usuarios__lista-usuario-boton:hover,
+.proveedores__lista-proveedor-boton:hover {
+  background-color: var(--color-button-background);
+  transform: translateX(0);
+}
+
+.clientes__lista-cliente-boton:active,
+.usuarios__lista-usuario-boton:active,
+.proveedores__lista-proveedor-boton:active {
+  background-color: var(--color-button-background-hover);
+}
+
+.clientes__lista-cliente-boton span,
+.usuarios__lista-usuario-boton span,
+.proveedores__lista-proveedor-boton span {
+  flex-grow: 1;
+}
+
+.clientes__lista-cliente-boton-img,
+.usuarios__lista-usuario-boton-img,
+.proveedores__lista-proveedor-boton-img {
+  height: 30px;
+  filter: invert();
+}
+
+.proveedores__container-botones,
+.usuarios__container-botones,
+.clientes__container-botones{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.proveedores__container-boton,
+.usuarios__container-boton,
+.clientes__container-boton {
+  width: 20%;
+  margin: 0 4rem;
+}
+
+
+
+
+
+/* ESTILOS DEL NAV */
+
+.nav-container {
+  max-width: 100%;
+  min-width: 1500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--color-nav-background);
+  padding: 10px;
+  height: 110px;
+}
+
+.user-icon-container {
+  display: grid;
+  grid-template-columns: repeat(1, max-content);
+  grid-template-rows: 60px 30px;
+  grid-template-areas: "img"
+                      "usu";
+  justify-items: center;
+  align-items: center;
+  color: var(--color-button-text);
+}
+
+.user-icon-container__img {
+  grid-area: img;
+  border-radius: 50%;
+}
+
+.user-icon-container__nombre-usu {
+  grid-area: usu;
+}
+
+.nav__ul {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(130px,max-content));
+  grid-template-rows: 40px;
+  text-align: center;
+  grid-gap: 20px;
+}
+.nav__li {
+  border-radius: 50px;
+  transition: background-color .5s;
+}
+
+.nav__li:hover {
+  background-color: white;
+}
+
+.nav__a {
+  display: block;
+  line-height: 40px;
+  transition: color .3s;
+  color: var(--color-button-text);
+  font-weight: 500;
+  width: 100%;
+}
+
+.nav__li:hover .nav__a {
+  color: var(--color-nav-background);
+  text-decoration: none;
+}
+
+.boton-cerrar-sesion-container__boton {
+  padding: 0 12px 0 12px;
+  background-color: white;
+  color: var(--color-nav-background);
+  font-weight: bolder;
+  cursor: pointer;
+  transition: color 1s, background-color 1s;
+  width: 160px;
+  height: 50px;
+  overflow-y: hidden;
+}
+
+.boton-cerrar-sesion-container__boton:hover {
+  background-color: white;
+  color: var(--color-nav-background);
+}
+
+
+.sign-out-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50px 50px;
+  align-items: center;
+  transition: transform .5s;
+}
+.sign-out-container__img {
+  width: 100%;
+  height: 30px;
+}
+
+.boton-cerrar-sesion-container__boton:hover .sign-out-container {
+  transform: translateY(-50px);
+}
+
+
+/*--------------Estilos para los modales----------------------*/
+
+.transparent-container-modal {
+  min-width: 1500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-background-modal);
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+dialog {
+  margin: auto;
+  padding: 2rem;  
+  border-radius: var(--border-card-radius);
+  border: none;
+  border-top: 5px solid var(--color-nav-background);
+  color: var(--color-text);
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.dialog-title {
+  font-size: 3rem;
+  margin-bottom: .8rem;
+  text-align: center;
+}
+
+.dialog-text {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.dialog-main-content {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2,minmax(200px,400px));
+  grid-gap: 1rem 3rem;
+}
+
+.dialog-container-bts {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.dialog-btn {
+  width: 40%;
+}
+
+.dialog-btn-cerrar {
+  font-size: 1.6rem;
+  font-weight: bolder;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 1s, color 0.5s, transform 1s;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  user-select: none;
+  color: var(--color-nav-background);
+}
+
+.dialog-btn-cerrar:hover {
+  color: var(--color-button-text);
+  background-color: var(--color-button-background);
+  transform: rotate(360deg);
+}
+
+.dialog-main-content section {
+  word-break: break-all;
+  min-height: 50px;
+}
+
+.dialog-process-result {
+  max-width: 500px;
+}
+.dialog-process-result h2{
+  margin-bottom: 1rem;
+}
+.dialog-process-result p{
+  margin-bottom: 1rem;
+}
+.dialog-process-result__btn {
+  width: 20%;
+}
+
+.dialog-objects-enabled-gen-repo-img {
+  height: 5rem;
+}
+
+
+
+
+

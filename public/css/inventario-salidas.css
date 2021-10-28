@@ -1,0 +1,157 @@
+@import url(main.css);
+
+.nav__li:nth-child(3) {
+    border-bottom: 2px solid var(--color-button-text);
+}
+
+.salidas__filtro {
+    color: var(--color-title-h1);
+    display: grid;
+    grid-template-columns: 75% 1fr;
+    grid-template-rows: min-content min-content;
+    grid-template-areas:"filter-titulo filter-titulo"
+                        "filter-inputs filter-gen-repo";
+    grid-gap: 2rem;
+}
+
+.salidas__filtro-titulo {
+    font-size: 2.2rem;
+    grid-area: filter-titulo;
+}
+
+.salidas__filtro-form {
+    grid-area: filter-inputs;
+    display: grid;
+    grid-template-columns: repeat(2, 25%) 1fr;
+    grid-template-areas:"inp-prod-id inp-prov-name date-des-has"
+                        "inp-prod-name sel-tipo-sal date-des-has";
+    grid-gap: 2rem;
+}
+
+.salidas__filtro-producto-id {
+    grid-area: inp-prod-id;
+}
+
+.salidas__filtro-producto-nombre {
+    grid-area: inp-prod-name;
+}
+
+.salidas__filtro-proveedor-nombre {
+    grid-area: inp-prov-name;
+}
+
+.salidas_filtro-tipo-salida {
+    grid-area: sel-tipo-sal;
+}
+
+.salidas_filtro-container-desde-hasta{
+    height: 100%;
+    grid-area: date-des-has;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.salidas_filtro-container-desde-hasta__title {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.salidas_filtro-container-desde-hasta__inputs {
+    display: flex;
+    justify-content: space-around;
+}
+
+.salidas_filtro-desde,
+.salidas_filtro-hasta {
+    width: 45%;
+    height: 41px;
+    position: relative;
+}
+.salidas_filtro-desde::before,
+.salidas_filtro-hasta::before {
+    content: '';
+    position: absolute;
+    right: 25%;
+}
+
+.salidas_filtro-desde::before{
+    content: 'Desde';
+}
+.salidas_filtro-hasta::before{
+    content: 'Hasta';
+}
+
+
+.salidas__filtro-gen-repo {
+    grid-area: filter-gen-repo;
+}
+
+
+.salidas__container-botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.salidas__boton-agregar{
+    width: 400px;
+}
+
+/*---------------- Estos son los estilos para los modals de agregar salida ----------------*/
+
+.salidas__modal-agregar-salida-form,
+.salidas__modal-agregar-salida-info-confirmacion {
+    grid-template-columns: repeat(2,minmax(200px,380px));
+    grid-template-rows: repeat(5,max-content);
+    grid-template-areas:'cod com'
+                        'pro com'
+                        'can com'
+                        'cos com'
+                        'ent com';
+}
+
+.salidas__modal-agregar-salida-title {
+    margin-bottom: 3rem;
+}
+
+.salidas__modal-agregar-salida-form input[type="date"] {
+    position: relative;
+}
+
+.salidas__modal-agregar-salida-form input[type="date"]::after {
+    content: 'Fecha de salida';
+    position: absolute;
+    right: 20%;
+}
+
+.salidas__modal-agregar-salida-form-item:nth-child(1),
+.salidas__modal-agregar-salida-info-item-confirmacion:nth-child(1) {
+    grid-area: cod;
+}
+.salidas__modal-agregar-salida-form-item:nth-child(2),
+.salidas__modal-agregar-salida-info-item-confirmacion:nth-child(2) {
+    grid-area: pro;
+}
+.salidas__modal-agregar-salida-form-item:nth-child(3),
+.salidas__modal-agregar-salida-info-item-confirmacion:nth-child(3) {
+    grid-area: can;
+}
+.salidas__modal-agregar-salida-form-item:nth-child(4),
+.salidas__modal-agregar-salida-info-item-confirmacion:nth-child(4) {
+    grid-area: cos;
+}
+.salidas__modal-agregar-salida-form-item:nth-child(5),
+.salidas__modal-agregar-salida-info-item-confirmacion:nth-child(5) {
+    grid-area: ent;
+}
+.salidas__modal-agregar-salida-form-item:nth-child(6) {
+    grid-area: com;
+    resize: none;
+    border-radius: var(--border-card-radius);
+}
+
+.salidas__modal-agregar-salida-info-item-confirmacion:nth-child(6) {
+    grid-area: com;
+    align-self: center;
+}

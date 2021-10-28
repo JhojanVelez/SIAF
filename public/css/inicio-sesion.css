@@ -1,0 +1,166 @@
+@import url(main.css);
+
+input, select {
+  margin-bottom: 1.2rem;
+  width: 100%;
+  padding: 12px 25px;
+  font-size: 1rem;
+}
+
+.iniciar-sesion {
+  width: 80%;
+  max-width: 1920px;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.iniciar-sesion__container {
+  max-width: 50%;
+  min-width: 500px;
+  height: 600px;
+}
+
+.iniciar-sesion__img {
+  object-fit: contain;
+}
+
+.iniciar-sesion__flex-container {
+  height: 100%;
+  display: flex;
+}
+
+.iniciar-sesion__titulo {
+  margin-bottom: 2rem;
+  font-size: 4.1rem;
+  font-weight: 500;
+}
+
+.iniciar-sesion__container-form {
+  text-align: center;
+  margin: auto;
+}
+
+.iniciar-sesion__form{
+  width: 90%;
+  margin: auto;
+}
+
+.iniciar-sesion__boton-ingresar {
+  width: 75%;
+  margin-bottom: 1.2rem;
+}
+
+.inicio-sesion__a-olvidaste-contrasenia {
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: inherit;
+}
+.inicio-sesion__a-olvidaste-contrasenia:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------------ RESTABLECER CONTRASEÑA ----------------------------------------------- */
+
+.restablecer-contrasenia__dialog {
+  max-width: 40%;
+  min-width: 500px;
+  height: 60%;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: inherit;
+}
+
+.restablecer-contrasenia__titulo {
+  width: 90%;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.restablecer-contrasenia__form-1 {
+  width: 50%;
+}
+
+.restablecer-contrasenia__boton-verificar {
+  width: 50%;
+  background-color: var(--color-button-background);
+  color: var(--color-button-text);
+}
+
+.restablecer-contrasenia__boton-verificar:hover {
+  background-color: var(--color-button-background-hover);
+}
+
+.restablecer-contrasenia__boton-verificar {
+  cursor: pointer;
+}
+
+.restablecer-contrasenia__dialog-atras {
+  font-size: 1.6rem;
+  font-weight: bolder;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  user-select: none;
+  color: var(--color-nav-background);
+}
+
+.restablecer-contrasenia__dialog--2 {
+  padding-bottom: 3rem;
+}
+
+.restablecer-contrasenia__dialog--2 .restablecer-contrasenia__parrafo {
+  width: 70%;
+  text-align: center;
+}
+
+.restablecer-contrasenia__form-2 {
+  max-width: 60%;
+  min-width: 438px;
+  text-align: center;
+}
+.restablecer-contrasenia__form-2 * {
+  width: 22%;
+  height: 100px;
+  border: none;
+  border-bottom: 3px solid black;
+  outline: none;
+  font-size: 4rem;
+  font-weight: bolder;
+  text-align: center;
+  margin: 0 5px 0 5px;
+  transition: background-color 0.5 s;
+}
+
+.restablecer-contrasenia__form-2 *:focus {
+  background-color: var(--color-main-background);
+}
+
+.restablecer-contrasenia__form-3 {
+  width: 50%;
+}
+
+.restablecer-contrasenia__form-3 * {
+  outline: none;
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.dialog-visible {
+  opacity: 1;
+  visibility: visible;
+}

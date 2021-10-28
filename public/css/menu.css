@@ -1,0 +1,44 @@
+@import url(main.css);
+
+
+.menu-nav-title {
+    color: var(--color-button-text);
+    font-size: 3rem;
+    letter-spacing: 1rem;
+    font-weight: bold;
+}
+.cards-flex-container { 
+    justify-content: center;
+    max-width: 1400px;
+}
+.card {
+    width: 300px;
+    max-height: 350px;
+}
+
+/*---------------Estilos para el modal de informacion del perfil de usuario------------*/
+
+.menu-info-usuario-modal {
+    max-width: 1000px;
+}
+
+.menu-info-usuario-modal__container-info {
+    grid-template-columns: repeat(3,minmax(200px,400px));
+}
+
+.menu-info-usuario-modal__title {
+    margin-bottom: 3rem;
+}
+
+.menu-info-usuario-modal__container-img {
+    width: 250px;
+    height: 300px;
+    margin: auto;
+    margin-bottom: 4rem;
+    border-radius: var(--border-card-radius);
+    overflow: hidden;
+}
+
+.menu-info-usuario-modal__container-img img{
+    width: 100%;
+}

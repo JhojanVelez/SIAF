@@ -1,0 +1,82 @@
+@import url(main.css);
+
+.nav__li:nth-child(3) {
+    border-bottom: 2px solid var(--color-button-text);
+}
+
+.grid-container-main {
+    grid-template-rows: 150px min-content 700px;
+    grid-template-areas:"titulo"
+                        "filtro"
+                        "contenido";
+}
+
+.kardex__filtro {
+    color: var(--color-title-h1);
+    display: grid;
+    grid-template-columns: 75% 1fr;
+    grid-template-rows: min-content min-content;
+    grid-template-areas:"filter-titulo filter-titulo"
+                        "filter-inputs filter-gen-repo";
+    grid-gap: 2rem;
+}
+
+.kardex__filtro-titulo {
+    font-size: 2.2rem;
+    grid-area: filter-titulo;
+}
+
+.kardex__filtro-form {
+    grid-area: filter-inputs;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-areas:"inp-prod-id   inp-prov-id   inp-lab-name"
+                        "inp-prod-name inp-prov-name sel-prod-presentacion";
+    grid-gap: 2rem;
+    justify-content: end;
+}
+
+.kardex__filtro-producto-id {
+    grid-area: inp-prod-id;
+}
+
+.kardex__filtro-producto-nombre {
+    grid-area: inp-prod-name;
+}
+
+.kardex__filtro-proveedor-id {
+    grid-area: inp-prov-id;
+}
+
+.kardex__filtro-proveedor-nombre {
+    grid-area: inp-prov-name;
+}
+
+.kardex__filtro-laboratorio{
+    grid-area: inp-lab-name;
+}
+
+.kardex_filtro-producto-presentacion {
+    grid-area: sel-prod-presentacion;
+}
+
+
+
+.kardex__filtro-gen-repo {
+    grid-area: filter-gen-repo;
+}
+
+tbody td {
+    min-width: 200px;
+}
+
+
+.kardex__container-botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kardex__boton-agregar{
+    width: 400px;
+}

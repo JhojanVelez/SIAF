@@ -1,0 +1,86 @@
+@import url(main.css);
+
+.nav__li:nth-child(6) {
+    border-bottom: 2px solid var(--color-button-text);
+}
+
+.clientes__lista-cliente {
+    grid-template-columns: 15% 1fr 12%;
+}
+
+.clientes__lista-cliente-info-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:"doc nom cor"
+                        "tel ape dir";
+    grid-row-gap: 10px;
+}
+
+.clientes__lista-cliente-info.documento {
+    grid-area: doc;
+}
+.clientes__lista-cliente-info.telefono {
+    grid-area: tel;
+}
+.clientes__lista-cliente-info.nombres {
+    grid-area: nom;
+}
+.clientes__lista-cliente-info.apellidos {
+    grid-area: ape;
+}
+.clientes__lista-cliente-info.correo {
+    grid-area: cor;
+}
+.clientes__lista-cliente-info.direccion {
+    grid-area: dir;
+}
+
+/*-------------------------Estilos de los modals de agregar clientes----------------------------------*/
+
+
+.clientes__modal-agregar-cliente {
+    min-width: 700px;
+    max-width: 800px;
+}
+
+.clientes__modal-agregar-cliente-title {
+    margin-bottom: 3rem;
+}
+
+/*-------------------------Estilos del modal de clientes inhabilitados----------------------------------*/
+
+.clientes__modal-clientes-inhabilitados {
+    min-width: 1300px;
+    max-width: 1400px;
+}
+
+.clientes__modal-clientes-inhabilitados-container-gen-repo {
+    margin-bottom: 3rem;
+}
+
+.clientes__modal-clientes-inhabilitados-title {
+    margin-bottom: 3rem;
+}
+
+.clientes__modal-clientes-inhabilitados-table-container {
+    height: 550px;
+}
+
+/*-------------------------Estilos de los modals de editar clientes----------------------------------*/
+
+
+.clientes__modal-edidar-cliente {
+    min-width: 700px;
+    max-width: 800px;
+}
+
+.clientes__modal-editar-cliente-title {
+    margin-bottom: 3rem;
+}
+
+/*-------------------------Estilos del modal de inhabilitar cliente----------------------------------*/
+
+.clientes__modal-inhabilitar-cliente {
+    min-width: 800px;
+    max-width: 900px;
+}

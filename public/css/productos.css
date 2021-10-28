@@ -1,0 +1,146 @@
+@import url(main.css);
+
+.nav__li:nth-child(2) {
+    border-bottom: 2px solid var(--color-button-text);
+}
+
+.nav-container,.transparent-container-modal {
+    min-width: 1700px;
+}
+
+.grid-container-main {
+    height: 100%;
+    grid-template-columns: minmax(1000px, 70%) minmax(400px, 30%);
+    grid-template-rows: 150px minmax(700px,75vh) 150px;
+    grid-template-areas:"titulo  titulo"
+                        "tabla   filtro"
+                        "botones botones";
+}
+
+.productos__container-title {
+    grid-area: titulo;
+}
+
+.productos__container-table {
+    grid-area: tabla;
+}
+
+.productos__container-filter {
+    grid-area: filtro;
+}
+
+.productos__filtro {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 60px;
+    color: var(--color-title-h1)
+}
+
+.productos__filtro-titulo {
+    font-size: 2.2rem;
+}
+
+.productos__filtro-form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.productos__filtro-label {
+    text-align: left;
+}
+
+.productos__filtro-form *:not(.productos__filtro-label) {
+    width: 70%;
+    align-self: center;
+    padding: 5px 15px;
+    margin: 0;
+}
+
+.productos_filtro-gen-repo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+}
+
+table {
+    min-width: 200%;
+}
+
+
+
+.productos__container-botones {
+    grid-area: botones;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
+
+.productos__container-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productos__container-boton input[type="button"] {
+    width: 80%;
+}
+
+/*-------------------------Estilos del modal de inhabilitar producto----------------------------------*/
+
+.productos__modal-inhabilitar-producto {
+    min-width: 800px;
+    max-width: 900px;
+}
+
+/*-------------------------Estilos del modal de agregar productos----------------------------------*/
+
+.productos__modal-agregar-producto {
+    min-width: 700px;
+    max-width: 800px;
+}
+
+.productos__modal-agregar-producto-title {
+    margin-bottom: 3rem;
+}
+
+/*-------------------------Estilos del modal de editar productos----------------------------------*/
+
+
+.productos__modal-editar-producto {
+    min-width: 700px;
+    max-width: 800px;
+}
+
+.productos__modal-editar-producto-title {
+    margin-bottom: 3rem;
+}
+
+.productos__table tr.product-selected {
+    background-color: gray;
+    color: white;
+}
+
+
+/*-------------------------Estilos del modal de productos inhabilitados----------------------------------*/
+
+.productos__modal-productos-inhabilitados {
+    min-width: 1300px;
+    max-width: 1800px;
+}
+
+.productos__modal-productos-inhabilitados-container-gen-repo {
+    margin-bottom: 3rem;
+}
+
+.productos__modal-productos-inhabilitados-title {
+    margin-bottom: 3rem;
+}
+
+.productos__modal-productos-inhabilitados-table-container {
+    height: 550px;
+}
