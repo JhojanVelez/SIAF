@@ -48,7 +48,6 @@ class Router {
                     } else {
                         $newError = new GetErrores("El metodo no existe");
                     }
-
                 } else {
                     $controller->obtenerTodosLosDatos();
                     $controller->cargarVista($urlView);

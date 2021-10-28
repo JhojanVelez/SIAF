@@ -88,7 +88,7 @@ import { editar } from "../../ajax/editar.js";
         if(e.target.matches(".productos__modal-editar-producto-confirmacion-btn-confirmar")) {
             $modal_2.toggleAttribute("open");
             $inputs[1].disabled = false;
-            editar($formulario,idProductoSeleccionado)
+            editar($formulario,idProductoSeleccionado,"Productos")
             .then(res=>{
                 console.log(res);
                 if(res.complete && res.affectedRows != 0) {

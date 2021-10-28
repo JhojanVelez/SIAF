@@ -1,4 +1,4 @@
-export function editar (formulario,idProductoSeleccionado) {
+export function editar (formulario,idProductoSeleccionado,modulo) {
     return new Promise((resolve, reject)=> {
         const xhr = new XMLHttpRequest,
             formData = new FormData(formulario);
@@ -23,7 +23,7 @@ export function editar (formulario,idProductoSeleccionado) {
                 resolve(JSON.parse(xhr.response));
             }
         }) 
-        xhr.open("POST", `http://localhost:8080/SIAF/productos/editarProductos/${idProductoSeleccionado}`);
+        xhr.open("POST", `http://localhost:8080/SIAF/${modulo}/editar${modulo}/${idProductoSeleccionado}`);
 
         xhr.send(formData);
     })

@@ -1,4 +1,4 @@
-export function inhabilitar (id) {
+export function inhabilitar (id,modulo) {
     return new Promise((resolve, reject)=> {
         const xhr = new XMLHttpRequest;
 
@@ -24,7 +24,7 @@ export function inhabilitar (id) {
             } 
         })
 
-        xhr.open("GET", `http://localhost:8080/SIAF/productos/eliminarProducto/${id}`);
+        xhr.open("GET", `http://localhost:8080/SIAF/${modulo}/eliminar/${id}`);
 
         xhr.send();
 

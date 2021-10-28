@@ -148,8 +148,8 @@ class ProductosModelo extends ConexionBD{
         }
     }
 
-    public function eliminarProducto () {
-
+    public function eliminar ($id = "") {
+        $this->setCodigoBarras(htmlentities(addslashes($id)));
         try {
             $this->sql = "DELETE FROM TBL_PRODUCTOS WHERE proCodBarras = ?";
 
@@ -171,10 +171,6 @@ class ProductosModelo extends ConexionBD{
             if($e->errorInfo[1] == 1451) $this->result["errorMessage"] = "El producto $this->codigoBarras no pudo ser inhabilitado porque la infomacion de este producto es fundamental para el funcionamiento de otras secciones del sistema.";
             return $this->result;
         }
-    }
-
-    function generarReporte() {
-        return $this->obtenerTodosLosDatos();
     }
 
     /*Metodos getter*/

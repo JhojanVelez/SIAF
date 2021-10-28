@@ -2,13 +2,13 @@
 
 class ProductosControlador extends Controlador{
 
-    public function buscarPorId ($id = null) {
-        $this->data = $this->instanciaModelo->buscarPorId(htmlentities(addslashes($id)));
-        echo(json_encode($this->data[0]));
-    }
-
     public function buscarPorAtributos ($ajax = true) {
-
+        /*
+        $ajax esta como parametro porque esta funcion va a ser reutilizada en dos casos
+        cuando sea una peticion asincrona $ajax = true, pero cuando no sea una peticion,
+        solo necesito poner los datos en Controlador::$data para luego usarlos en generar
+        reporte()
+        */
         $_POST["codigoBarras"] = (!empty($_POST["codigoBarras"])) 
             ? $_POST["codigoBarras"]."%" 
             : "";
@@ -30,6 +30,7 @@ class ProductosControlador extends Controlador{
             empty($_POST["presentacion"]) && 
             empty($_POST["nomProveedor"])) 
         {
+            //para que nos obtenga todos los datos
             $_POST["codigoBarras"] = "%";
         }
         
@@ -107,13 +108,6 @@ class ProductosControlador extends Controlador{
             $this->result["errorMessage"] = $e->getMessage();
             echo(json_encode($this->result));
         }
-    }
-
-    public function eliminarProducto($id = null) {
-        $this->instanciaModelo->setCodigoBarras(htmlentities(addslashes($id)));
-
-        $this->data = $this->instanciaModelo->eliminarProducto($id);
-        echo(json_encode($this->data));
     }
 }
 

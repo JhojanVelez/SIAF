@@ -1,4 +1,4 @@
-export function buscarPorAtributos (formulario) {
+export function buscarPorAtributos (formulario,modulo) {
     return new Promise ((resolve,reyect)=> {
         const xhr = new XMLHttpRequest,
             formData = new FormData(formulario);
@@ -9,7 +9,7 @@ export function buscarPorAtributos (formulario) {
                 resolve(JSON.parse(xhr.response));
             }
         }) 
-        xhr.open("POST", `http://localhost:8080/SIAF/productos/buscarPorAtributos/`);
+        xhr.open("POST", `http://localhost:8080/SIAF/${modulo}/buscarPorAtributos/`);
 
         xhr.send(formData);
     })

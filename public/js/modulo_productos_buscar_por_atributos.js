@@ -5,7 +5,7 @@ import { buscarPorAtributos } from "../../ajax/buscarPorAtributos.js";
         $tabla = d.querySelector(".productos__table");
 
     $formulario.addEventListener("keyup", e =>{
-        buscarPorAtributos($formulario)
+        buscarPorAtributos($formulario,"productos")
         .then(res=> {
             $tabla.querySelector("tbody").innerHTML = "";
             res.forEach(el => {
@@ -27,7 +27,7 @@ import { buscarPorAtributos } from "../../ajax/buscarPorAtributos.js";
         });
     });
     $formulario.addEventListener("change", e =>{
-        buscarPorAtributos($formulario)
+        buscarPorAtributos($formulario,"productos")
         .then(res=> {
             $tabla.querySelector("tbody").innerHTML = "";
             res.forEach(el => {
