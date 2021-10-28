@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo URL_RAIZ ?>/public/css/generar-reporte.css">
-    <title>Document</title>
+    <title><?php echo $this->controladorMetodoParametro[0]?></title>
 </head>
 <body>
     <table class="productos-inhabilitados__table table">
@@ -65,7 +65,7 @@ $dompdf->loadHtml($html);
 
 $dompdf->setPaper("A4", "landscape");
 $dompdf->render();
-$dompdf->stream("productos.pdf", array('Attachment' => false));
+$dompdf->stream($this->controladorMetodoParametro[0], array('Attachment' => false));
 
 ?>
 

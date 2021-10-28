@@ -2,6 +2,10 @@
 
 class ProductosControlador extends Controlador{
 
+    public function __construct ($url) {
+        $this->controladorMetodoParametro = $url;
+    }
+
     public function buscarPorAtributos ($ajax = true) {
         /*
         $ajax esta como parametro porque esta funcion va a ser reutilizada en dos casos

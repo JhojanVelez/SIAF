@@ -13,12 +13,11 @@ class Controlador {
     $this->result["errorMessage"] = $e->getMessage();
     */
     protected $result; 
-    protected $modelo;
+    protected $controladorMetodoParametro;
 
-    function cargarModelo($urlModelo,$modelo) {
-        $this->modelo = $modelo;
+    function cargarModelo($urlModelo) {
         require_once($urlModelo);
-        return $this->instanciaModelo = new ($modelo."Modelo");
+        return $this->instanciaModelo = new ($this->controladorMetodoParametro[0]."Modelo");
     }
 
     function cargarVista($urlVista) {
@@ -40,7 +39,7 @@ class Controlador {
     }
 
     public function generarReporte() {
-        $nombreClaseControlador = $this->modelo."Controlador";
+        $nombreClaseControlador = $this->controladorMetodoParametro[0]."Controlador";
         /*
         Ejecutamos el metodo de la clase que esta usando esta clase controlador
         y le ponemos false, diciendo que no va a ser una operacion asicrona, por 
@@ -48,7 +47,7 @@ class Controlador {
         en $this->data
         */
         $nombreClaseControlador::buscarPorAtributos(false);
-        $this->cargarVista("vista/generarReporte.php");
+        $this->cargarVista("vista/plantillaReporte.php");
     }
 }
 
