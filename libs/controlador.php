@@ -47,7 +47,7 @@ class Controlador {
         en $this->data
         */
         $nombreClaseControlador::buscarPorAtributos(false);
-        $this->cargarVista("vista/plantillaReporte.php");
+        $this->cargarVista("plantillasReportes/plantillaReporte.php");
     }
 }
 

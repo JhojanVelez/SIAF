@@ -3,18 +3,49 @@
     src: url("../../fuentes/OpenSans.ttf");
 }
 
-* {
+*, *::after, *::before {
     font-family: OpenSans;
+    margin: 0;
+    padding: 0;
 }
 
 
 body {
 background-color: rgb(255, 255, 255);
+margin-bottom: 10px;
 }
 
-.container-table {
-padding: 0 0 2rem;
-overflow: scroll;
+.platilla-reporte-main {
+    width: 90%;
+    margin: auto;
+}
+
+
+
+.platilla-reporte-nav {
+    background-color: #6c63ff;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.platilla-reporte-nav-container {
+    width: 90%;
+    margin: auto;
+}
+
+.platilla-reporte-nav-container__title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.platilla-reporte-main__content {
+    margin-bottom: 2rem;
+}
+
+.platilla-reporte-main__title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #020029;
 }
 
 table {
