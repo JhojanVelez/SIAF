@@ -84,7 +84,7 @@ import {agregar} from 'http://localhost:8080/SIAF/ajax/agregar.js';
         if(e.target.matches(".productos__modal-agregar-producto-confirmacion-btn-confirmar")) {
             $inputs[1].disabled = false;
             $modal_2.toggleAttribute("open");
-            agregar($formulario,"productos")
+            agregar($formulario,"inventarioSalidas")
             .then(res=>{
                 console.log(res);
                 if(res.complete) {
@@ -111,6 +111,10 @@ import {agregar} from 'http://localhost:8080/SIAF/ajax/agregar.js';
             $transparentBackgroundModal.classList.toggle("visible");
         }
     })
+
+    /*
+    Colocar el nit del proveedor en el campo, cuando el usuario seleccione un proveedor
+    */
 
     d.addEventListener("change", e => {
         if(e.target.matches("#productos__modal-agregar-producto-select-proveedor")) {

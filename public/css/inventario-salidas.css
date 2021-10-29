@@ -115,16 +115,6 @@
     margin-bottom: 3rem;
 }
 
-.salidas__modal-agregar-salida-form input[type="date"] {
-    position: relative;
-}
-
-.salidas__modal-agregar-salida-form input[type="date"]::after {
-    content: 'Fecha de salida';
-    position: absolute;
-    right: 20%;
-}
-
 .salidas__modal-agregar-salida-form-item:nth-child(1),
 .salidas__modal-agregar-salida-info-item-confirmacion:nth-child(1) {
     grid-area: cod;

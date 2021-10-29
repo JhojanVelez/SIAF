@@ -101,28 +101,30 @@
                     <input 
                     class="salidas__modal-agregar-salida-form-item"
                     id="codigoBarrasProducto"
-                    name= "codigoBarras"
+                    name= "codigoBarrasProducto"
                     type="text" 
                     maxlength="15"
                     placeholder="Codigo de barras del producto" 
                     title="Ingresa un codigo de barras de un producto registrado en sistema"
                     data-input
                     data-ProCodBarras
+                    autocomplete="off"
                     >
 
                     <select 
                     class="salidas__modal-agregar-salida-form-item"
+                    id="productos__modal-agregar-salida-select-proveedor"
                     name="descripcion" 
                     title="Elige un producto de la lista y el codigo de barras se pondra automaticamente"
                     data-input 
                     data-ProDescripcion
                     >
-                        <option value="">Elige el producto</option>
+                        <option value="" data-pro-cod-barras >Elige el producto</option>
 
                         <?php foreach($this->data['infoProductos'] as $key => $value): ?>
                         <option 
                         value="<?php echo $value['ProDescripcion'] ?>" 
-                        data-proveedor-id="<?php echo $value['ProCodBarras'] ?>"><?php echo $value['ProDescripcion'] ?></option>
+                        data-pro-cod-barras="<?php echo $value['ProCodBarras'] ?>"><?php echo $value['ProDescripcion'] ?></option>
                         <?php endforeach; ?>
 
                     </select>
@@ -153,15 +155,16 @@
 
                     <input 
                     class="salidas__modal-agregar-salida-form-item"
-                    name="descripcion" 
-                    type="date" 
-                    title="Ingresa la fecha de salida"
+                    name="fechaSalida" 
+                    type="datetime-local" 
+                    title="Ingresa la fecha y hora de salida"
                     data-input 
                     data-salFecha
                     >
                     <textarea 
                     cols="30" 
                     rows="10" 
+                    maxlength="255"
                     class="salidas__modal-agregar-salida-form-item" 
                     name="salidaCometario" 
                     placeholder="Ingresa un comentario."
@@ -227,6 +230,6 @@
             </dialog>
         </section>
     </main>
-    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_inventario_salidas_agregar_salidas.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_inventario_salidas_agregar_salidas.js" type="module"></script>
 </body>
 </html>
