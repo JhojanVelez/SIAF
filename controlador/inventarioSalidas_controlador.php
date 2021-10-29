@@ -1,8 +1,8 @@
 <?php
 
-class InventarioSalidasControlador {
-    function __construct () {
-        require_once("vista/inventario-salidas.php");
+class InventarioSalidasControlador extends Controlador {
+    function __construct ($url) {
+        $this->controladorMetodoParametro = $url;
     }
 }
 

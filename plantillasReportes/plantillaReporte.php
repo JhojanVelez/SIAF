@@ -16,7 +16,6 @@
         </div>
     </header>
     <main class="platilla-reporte-main">
-        
             <?php require_once("tabla".$this->controladorMetodoParametro[0].".php") ?>
     </main>
     <footer>
