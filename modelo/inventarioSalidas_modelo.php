@@ -8,8 +8,7 @@ class InventarioSalidasModelo extends ConexionBD {
     public function obtenerTodosLosDatos () {
         try {
             $this->rows['infoSalidas'] = $this->connection->query("SELECT * FROM SALIDAS ORDER BY SalFecha DESC")->fetchAll(PDO::FETCH_ASSOC);
-            $this->rows['infoProveedores'] = $this->connection->query("SELECT ProNIT,ProNombre FROM TBL_PROVEEDORES ORDER BY ProNombre")->fetchAll(PDO::FETCH_ASSOC);
-            $this->rows['infoProductosInhabilitados'] = $this->connection->query("SELECT * FROM TBL_PRODUCTOS_INHABILITADOS ORDER BY ProFechaInhabilitacion DESC")->fetchAll(PDO::FETCH_ASSOC);
+            $this->rows['infoProductos'] = $this->connection->query("SELECT ProCodBarras,ProDescripcion,tbl_proveedores_ProNIT,ProNombre FROM PRODUCTOS ORDER BY ProDescripcion")->fetchAll(PDO::FETCH_ASSOC);
             return $this->rows;
         } catch (PDOException $e) {
             return "Error al obtener todos los productos";

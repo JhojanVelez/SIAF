@@ -328,6 +328,7 @@
                     name="invima" 
                     type="text" 
                     placeholder="Registro sanitario INVIMA" 
+                    title="Ingresa el registro sanitario INVIMA"
                     data-input
                     data-ProRegSanInvima
                     >
@@ -659,6 +660,5 @@
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_buscar_por_atributos.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_seleccion_de_producto.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_productos_inhabilitados.js"></script>
-    <script src="<?php echo(URL_RAIZ); ?>public/js/detectarFiltroParaReporte.js"></script>
 </body>
 </html>

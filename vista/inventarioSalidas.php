@@ -27,10 +27,10 @@
                     <input type="text" class="salidas__filtro-proveedor-nombre" id="proveedor-nombre" placeholder="Nombre Proveedor">
                     <select name="presentacion" class="salidas_filtro-tipo-salida" id="salida-tipo-salida">
                         <option value="null">Por tipo de salida</option>
-                        <option value="Pre">Sal1</option>
-                        <option value="Pre">Sal2</option>
-                        <option value="Pre">Sal3</option>
-                        <option value="Pre">Sal4</option>
+                        <option value="VENTA">VENTA</option>
+                        <option value="PRODUCTO CADUCADO">PRODUCTO CADUCADO</option>
+                        <option value="EMPAQUE DAÑADO">EMPAQUE DAÑADO</option>
+                        <option value="DAÑO INTERNO">DAÑO INTERNO</option>
                     </select>
                     <article class="salidas_filtro-container-desde-hasta">
                         <h3 class="salidas_filtro-container-desde-hasta__title">Por periodo de tiempo</h3>
@@ -97,16 +97,78 @@
                 <h2 class="salidas__modal-agregar-salida-title dialog-title">Registra Nuevas Salidas</h2>
 
                 <form class="salidas__modal-agregar-salida-form dialog-main-content">
-                    <input class="salidas__modal-agregar-salida-form-item" type="text" placeholder="Codigo de barras del producto" id="codigoBarrasProducto">
-                    <select class="salidas__modal-agregar-salida-form-item">
-                        <option value="">Producto</option>
+
+                    <input 
+                    class="salidas__modal-agregar-salida-form-item"
+                    id="codigoBarrasProducto"
+                    name= "codigoBarras"
+                    type="text" 
+                    maxlength="15"
+                    placeholder="Codigo de barras del producto" 
+                    title="Ingresa un codigo de barras de un producto registrado en sistema"
+                    data-input
+                    data-ProCodBarras
+                    >
+
+                    <select 
+                    class="salidas__modal-agregar-salida-form-item"
+                    name="descripcion" 
+                    title="Elige un producto de la lista y el codigo de barras se pondra automaticamente"
+                    data-input 
+                    data-ProDescripcion
+                    >
+                        <option value="">Elige el producto</option>
+
+                        <?php foreach($this->data['infoProductos'] as $key => $value): ?>
+                        <option 
+                        value="<?php echo $value['ProDescripcion'] ?>" 
+                        data-proveedor-id="<?php echo $value['ProCodBarras'] ?>"><?php echo $value['ProDescripcion'] ?></option>
+                        <?php endforeach; ?>
+
                     </select>
-                    <input class="salidas__modal-agregar-salida-form-item" type="text" placeholder="Cantidad">
-                    <select class="salidas__modal-agregar-salida-form-item">
+
+                    <input 
+                    class="salidas__modal-agregar-salida-form-item"
+                    name="cantidadSalida"
+                    type="number" 
+                    placeholder="Cantidad"
+                    title="Ingresa la cantidad de producto que salio"
+                    data-input 
+                    data-cantidadSalida
+                    >
+
+                    <select 
+                    class="salidas__modal-agregar-salida-form-item"
+                    name="tipoSalida" 
+                    title="Ingresa el tipo de salida"
+                    data-input 
+                    data-salTipoSalida
+                    >
                         <option value="">Tipo de Salida</option>
+                        <option value="VENTA">VENTA</option>
+                        <option value="PRODUCTO CADUCADO">PRODUCTO CADUCADO</option>
+                        <option value="EMPAQUE DAÑADO">EMPAQUE DAÑADO</option>
+                        <option value="DAÑO INTERNO">DAÑO INTERNO</option>
                     </select>
-                    <input class="salidas__modal-agregar-salida-form-item" type="date">
-                    <textarea class="salidas__modal-agregar-salida-form-item" cols="30" rows="10" placeholder="Ingresa un comentario<?php echo(URL_RAIZ); ?>public."></textarea>
+
+                    <input 
+                    class="salidas__modal-agregar-salida-form-item"
+                    name="descripcion" 
+                    type="date" 
+                    title="Ingresa la fecha de salida"
+                    data-input 
+                    data-salFecha
+                    >
+                    <textarea 
+                    cols="30" 
+                    rows="10" 
+                    class="salidas__modal-agregar-salida-form-item" 
+                    name="salidaCometario" 
+                    placeholder="Ingresa un comentario."
+                    title="Comentarios opcionales acerca de la salida"
+                    data-input
+                    data-salComentario
+                    ></textarea>
                 </form>
                 <div class="salidas__modal-agregar-salida-btns-container dialog-container-bts">
                     <button class="salidas__modal-agregar-salida-btn-cancelar boton dialog-btn">Cancelar</button>
@@ -121,27 +183,27 @@
                     Recuerda revisar detenidamente la informacion de la salida que estas registrando.
                 </p>
                 <div class="salidas__modal-agregar-salida-info-confirmacion dialog-main-content">
-                    <section class="salidas__modal-agregar-salida-info-item-confirmacion">
+                    <section class="salidas__modal-agregar-salida-info-item-confirmacion" data-ProCodBarras>
                         <h3>CODIGO DE BARRAS</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="salidas__modal-agregar-salida-info-item-confirmacion">
+                    <section class="salidas__modal-agregar-salida-info-item-confirmacion" data-ProDescripcion>
                         <h3>PRODUCTO</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="salidas__modal-agregar-salida-info-item-confirmacion">
+                    <section class="salidas__modal-agregar-salida-info-item-confirmacion" data-cantidadSalida>
                         <h3>CANTIDAD</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="salidas__modal-agregar-salida-info-item-confirmacion">
+                    <section class="salidas__modal-agregar-salida-info-item-confirmacion" data-salTipoSalida>
                         <h3>TIPO DE SALIDA</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="salidas__modal-agregar-salida-info-item-confirmacion">
+                    <section class="salidas__modal-agregar-salida-info-item-confirmacion" data-salFecha>
                         <h3>FECHA DE SALIDA</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="salidas__modal-agregar-salida-info-item-confirmacion">
+                    <section class="salidas__modal-agregar-salida-info-item-confirmacion" data-salComentario>
                         <h3>COMENTARIOS</h3>
                         <p>________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</p>
                     </section>
