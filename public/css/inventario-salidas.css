@@ -7,7 +7,7 @@
 .salidas__filtro {
     color: var(--color-title-h1);
     display: grid;
-    grid-template-columns: 75% 1fr;
+    grid-template-columns: 85% 1fr;
     grid-template-rows: min-content min-content;
     grid-template-areas:"filter-titulo filter-titulo"
                         "filter-inputs filter-gen-repo";
@@ -22,7 +22,7 @@
 .salidas__filtro-form {
     grid-area: filter-inputs;
     display: grid;
-    grid-template-columns: repeat(2, 25%) 1fr;
+    grid-template-columns: repeat(2, 22%) 1fr;
     grid-template-areas:"inp-prod-id inp-prov-name date-des-has"
                         "inp-prod-name sel-tipo-sal date-des-has";
     grid-gap: 2rem;
@@ -72,7 +72,7 @@
 .salidas_filtro-hasta::before {
     content: '';
     position: absolute;
-    right: 25%;
+    right: 18%;
 }
 
 .salidas_filtro-desde::before{

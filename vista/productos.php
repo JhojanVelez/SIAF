@@ -56,15 +56,21 @@
         <section class="productos__container-filter container-filter  box-shadow">
             <div class="productos__filtro">
                 <h2 class="productos__filtro-titulo">Busca un Producto</h2>
-                <form id="productos__filtro-form" class="productos__filtro-form" action="<?php echo URL_RAIZ ?>productos/generarReporte" method="POST" target="_BLANK">
+                <form 
+                id="productos__filtro-form" 
+                class="productos__filtro-form" 
+                action="<?php echo URL_RAIZ ?>productos/generarReporte" 
+                method="POST" 
+                target="_BLANK"
+                >
                     <label class="productos__filtro-label" for="product-id">Por codigo de barras del producto</label>
                     <br>
                     <input 
                     name="codigoBarras"
                     type="text" 
                     class="productos_filtro-id" 
-                    data-input
                     autocomplete="off"
+                    data-input
                     >
                     <br>
                     <label class="productos__filtro-label" for="product-nombre">Por nombre del producto</label>
@@ -73,8 +79,8 @@
                     name="descripcion"
                     type="text" 
                     class="productos_filtro-nombre"
-                    data-input
                     autocomplete="off"
+                    data-input
                     >
                     <br>
                     <label class="productos__filtro-label" for="product-proveedor">Por nombre del proveedor</label>
@@ -83,8 +89,8 @@
                     name="nomProveedor"
                     type="text" 
                     class="productos_filtro-proveedor"
-                    data-input
                     autocomplete="off"
+                    data-input
                     >
                     <br>
                     <label class="productos__filtro-label" for="product-id">Por tipo de presentacion</label>
@@ -92,8 +98,8 @@
                     <select 
                     name="presentacion" 
                     class="productos_filtro-presentacion" 
-                    data-input
                     autocomplete="off"
+                    data-input
                     >
                         <option value="">Presentacion</option>
                         <option value="TABLETA">TABLETA</option>

@@ -21,12 +21,44 @@
         <section class="salidas__container-filter container-filter box-shadow">
             <div class="salidas__filtro">
                 <h2 class="salidas__filtro-titulo">Filtros de busqueda</h2>
-                <form class="salidas__filtro-form" action="">
-                    <input type="text" class="salidas__filtro-producto-id" id="producto-id" placeholder="Codigo de Barras">
-                    <input type="text" class="salidas__filtro-producto-nombre" id="producto-nombre" placeholder="Nombre Producto">
-                    <input type="text" class="salidas__filtro-proveedor-nombre" id="proveedor-nombre" placeholder="Nombre Proveedor">
-                    <select name="presentacion" class="salidas_filtro-tipo-salida" id="salida-tipo-salida">
-                        <option value="null">Por tipo de salida</option>
+                <form 
+                id="salidas__filtro-form" 
+                class="salidas__filtro-form" 
+                action="<?php echo URL_RAIZ ?>salidas/generarReporte" 
+                method="POST" 
+                target="_BLANK"
+                >
+                    <input 
+                    name="codigoBarrasProducto"
+                    type="text" 
+                    class="salidas__filtro-producto-id" 
+                    placeholder="Codigo de Barras"
+                    autocomplete="off"
+                    data-input
+                    >
+                    <input 
+                    name="descripcionProducto"
+                    type="text" 
+                    class="salidas__filtro-producto-nombre" 
+                    placeholder="Nombre Producto"
+                    autocomplete="off"
+                    data-input
+                    >
+                    <input 
+                    name="nombreProveedor"
+                    type="text" 
+                    class="salidas__filtro-proveedor-nombre" 
+                    placeholder="Nombre Proveedor"
+                    autocomplete="off"
+                    data-input
+                    >
+                    <select 
+                    name="tipoSalida" 
+                    class="salidas_filtro-tipo-salida" 
+                    autocomplete="off"
+                    data-input
+                    >
+                        <option value="">Por tipo de salida</option>
                         <option value="VENTA">VENTA</option>
                         <option value="PRODUCTO CADUCADO">PRODUCTO CADUCADO</option>
                         <option value="EMPAQUE DAÑADO">EMPAQUE DAÑADO</option>
@@ -35,8 +67,18 @@
                     <article class="salidas_filtro-container-desde-hasta">
                         <h3 class="salidas_filtro-container-desde-hasta__title">Por periodo de tiempo</h3>
                         <div class="salidas_filtro-container-desde-hasta__inputs">
-                            <input type="date" class="salidas_filtro-desde" id="salida-desde">
-                            <input type="date" class="salidas_filtro-hasta" id="salida-hasta">
+                            <input 
+                            name="fechaSalidaDesde"
+                            type="datetime-local" 
+                            class="salidas_filtro-desde"
+                            data-input 
+                            >
+                            <input 
+                            name="fechaSalidaHasta"
+                            type="datetime-local" 
+                            class="salidas_filtro-hasta" 
+                            data-input
+                            >
                         </div>
                     </article>
                 </form>
@@ -114,7 +156,7 @@
                     <select 
                     class="salidas__modal-agregar-salida-form-item"
                     id="productos__modal-agregar-salida-select-proveedor"
-                    name="descripcion" 
+                    name="descripcionProducto" 
                     title="Elige un producto de la lista y el codigo de barras se pondra automaticamente"
                     data-input 
                     data-ProDescripcion
@@ -231,5 +273,6 @@
         </section>
     </main>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_inventario_salidas_agregar_salidas.js" type="module"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_inventario_salidas_buscar_por_atributos.js" type="module"></script>
 </body>
 </html>

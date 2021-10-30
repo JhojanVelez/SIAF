@@ -7,6 +7,12 @@ class InventarioSalidasModelo extends ConexionBD {
     private $tipoSalida;
     private $fechaSalida;
     private $salidaCometario;
+    //Estos atributos son mas que todo para buscar por atributos
+    private $fechaSalidaDesde;
+    private $fechaSalidaHasta;
+    private $nombreProveedor;
+    private $descripcionProducto;
+    
 
     public function __construct () {
         parent::__construct();
@@ -22,16 +28,41 @@ class InventarioSalidasModelo extends ConexionBD {
         }
     }
 
+    public function buscarPorAtributos () {
+        $this->sql ="SELECT * 
+                    FROM salidas 
+                    WHERE 
+                    ProCodBarras LIKE :codigoBarrasProducto OR 
+                    ProDescripcion LIKE :descripcionProducto OR 
+                    ProNombre LIKE :nombreProveedor OR
+                    SalTipoSalida LIKE :tipoSalida OR
+                    SalFecha BETWEEN :fechaSalidaDesde AND :fechaSalidaHasta
+                    ORDER BY SalFecha DESC";
+                    
+        $this->PDOStmt = $this->connection->prepare($this->sql);
+        
+        $this->PDOStmt->bindValue(":codigoBarrasProducto",$this->codigoBarrasProducto);
+        $this->PDOStmt->bindValue(":descripcionProducto",$this->descripcionProducto);
+        $this->PDOStmt->bindValue(":nombreProveedor",$this->nombreProveedor);
+        $this->PDOStmt->bindValue(":tipoSalida",$this->tipoSalida);
+        $this->PDOStmt->bindValue(":fechaSalidaDesde",$this->fechaSalidaDesde);
+        $this->PDOStmt->bindValue(":fechaSalidaHasta",$this->fechaSalidaHasta);
+
+        $this->PDOStmt->execute();
+
+        return $this->PDOStmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public function registrarInventarioSalidas () {
         try {
             $this->sql ="INSERT INTO 
                         TBL_SALIDAS
                         (
-                            `SalFecha`,
-                            `SalCantidad`,
-                            `SalTipoSalida`,
-                            `SalComentarios`,
-                            `tbl_productos_ProCodBarras`
+                            SalFecha,
+                            SalCantidad,
+                            SalTipoSalida,
+                            SalComentarios,
+                            tbl_productos_ProCodBarras
                         ) 
                         VALUES (
                             :fechaSalida,
@@ -71,6 +102,10 @@ class InventarioSalidasModelo extends ConexionBD {
     public function getTipoSalida () {return $this->tipoSalida;}
     public function getFechaSalida () {return $this->fechaSalida;}
     public function getSalidaCometario () {return $this->salidaCometario;}
+    public function getFechaSalidaDesde () {return $this->fechaSalidaDesde;}
+    public function getFechaSalidaHasta () {return $this->fechaSalidaHasta;}
+    public function getNombreProveedor () {return $this->nombreProveedor;}
+    public function getDescripcionProducto () {return $this->descripcionProducto;}
 
     /* Metodos Setter */
 
@@ -88,6 +123,18 @@ class InventarioSalidasModelo extends ConexionBD {
     }
     public function setSalidaCometario ($value) {
         $this->salidaCometario = $value;
+    }
+    public function setFechaSalidaDesde ($value) {
+        $this->fechaSalidaDesde = $value;
+    }
+    public function setFechaSalidaHasta ($value) {
+        $this->fechaSalidaHasta = $value;
+    }
+    public function setNombreProveedor ($value) {
+        $this->nombreProveedor = $value;
+    }
+    public function setDescripcionProducto ($value) {
+        $this->descripcionProducto = $value;
     }
 }
 
