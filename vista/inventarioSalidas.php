@@ -24,7 +24,7 @@
                 <form 
                 id="salidas__filtro-form" 
                 class="salidas__filtro-form" 
-                action="<?php echo URL_RAIZ ?>salidas/generarReporte" 
+                action="<?php echo URL_RAIZ ?>InventarioSalidas/generarReporte" 
                 method="POST" 
                 target="_BLANK"
                 >
@@ -86,7 +86,11 @@
                     <div class="salidas__filtro-gen-repo-img filtro-gen-repo-img">
                         <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
                     </div>
-                    <a class="salidas__filtro-subtitulo-reporte filtro-subtitulo-reporte" href="">Generar reporte</a>
+                    <input 
+                    class="salidas__filtro-subtitulo-reporte filtro-subtitulo-reporte" 
+                    type="submit" 
+                    value="Generar Reporte" 
+                    form="salidas__filtro-form">
                 </div>
             </div>
         </section>

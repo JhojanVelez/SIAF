@@ -41,7 +41,7 @@ class Controlador {
     public function generarReporte() {
         $nombreClaseControlador = $this->controladorMetodoParametro[0]."Controlador";
         /*
-        Ejecutamos el metodo de la clase que esta usando esta clase controlador
+        Ejecutamos el metodo buscarPorAtributos de la clase que esta usando esta clase controlador
         y le ponemos false, diciendo que no va a ser una operacion asicrona, por 
         lo tanto no tiene que imprimir en pantalla los datos si no solo ingresarlos
         en $this->data

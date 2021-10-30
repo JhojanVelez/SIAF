@@ -122,7 +122,12 @@
                     <div class="productos_filtro-gen-repo-img filtro-gen-repo-img">
                         <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
                     </div>
-                    <input class="productos__filtro-subtitulo-reporte filtro-subtitulo-reporte" type="submit" value="Generar Reporte" form="productos__filtro-form">
+                    <input 
+                    class="productos__filtro-subtitulo-reporte filtro-subtitulo-reporte" 
+                    type="submit" 
+                    value="Generar Reporte" 
+                    form="productos__filtro-form"
+                    >
                 </div>
             </div>
         </section>
