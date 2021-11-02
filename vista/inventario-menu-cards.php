@@ -19,15 +19,6 @@
     <main>
         <article class="cards-flex-container">
             <section class="card box-shadow">
-                <h2 class="card__title">GESTION DE SALIDAS</h2>
-                <div class="card__img">
-                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/inventario-salidas.svg" alt="">
-                </div>
-                <button class="card__button boton">
-                    <a href="inventarioSalidas">Ingresar</a>
-                </button>
-            </section>
-            <section class="card box-shadow">
                 <h2 class="card__title">GESTION DE ENTRADAS</h2>
                 <div class="card__img">
                     <img src="<?php echo(URL_RAIZ); ?>public/imagenes/inventario-entradas.svg" />
@@ -43,6 +34,15 @@
                 </div>
                 <button class="card__button boton">
                     <a href="inventarioKardex">Ingresar</a>
+                </button>
+            </section>
+            <section class="card box-shadow">
+                <h2 class="card__title">GESTION DE SALIDAS</h2>
+                <div class="card__img">
+                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/inventario-salidas.svg" alt="">
+                </div>
+                <button class="card__button boton">
+                    <a href="inventarioSalidas">Ingresar</a>
                 </button>
             </section>
         </article>
