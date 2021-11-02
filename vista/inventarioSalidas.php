@@ -101,7 +101,7 @@
                 <thead class="table-thead">
                     <tr class="table-tr">
                         <td class="table-td">SalCodigo</td>
-                        <td class="table-td">ProCodBarr</td>
+                        <td class="table-td">ProCodBarras</td>
                         <td class="table-td">Descripcion</td>
                         <td class="table-td">Proveedor</td>
                         <td class="table-td">FechaSalida</td>
