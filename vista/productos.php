@@ -48,6 +48,25 @@
                             <td><?php echo $value["ProNombre"] ?></td>
                         </tr>
                     <?php endforeach;?>
+                    
+                    <!-- 
+                        Este template nos permite imprimir la informacion cuando estamos buscando por atributo
+                        pero en este caso lo hacemos con template para hacer uso de los fragmentos
+                    -->
+                    <template class="productos__table-template">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </template>
                 </tbody>
             </table>
         </section>
