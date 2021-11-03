@@ -8,8 +8,8 @@ class InventarioEntradasModelo extends ConexionBD {
     private $costoEntrada;
     private $entradaCometario;
     //Estos atributos son mas que todo para buscar por atributos
-    private $fechaSalidaDesde;
-    private $fechaSalidaHasta;
+    private $fechaEntradaDesde;
+    private $fechaEntradaHasta;
     private $nitProveedor;
     private $nombreProveedor;
     private $descripcionProducto;
@@ -22,6 +22,31 @@ class InventarioEntradasModelo extends ConexionBD {
         } catch (PDOException $e) {
             return "Error al obtener todos los productos";
         }
+    }
+
+    public function buscarPorAtributos () {
+        $this->sql ="SELECT * 
+                    FROM entradas 
+                    WHERE 
+                    tbl_productos_ProCodBarras LIKE :codigoBarrasProducto OR 
+                    ProDescripcion LIKE :descripcionProducto OR 
+                    tbl_proveedores_ProNIT LIKE :nitProveedor OR
+                    ProNombre LIKE :nombreProveedor OR
+                    EntFecha BETWEEN :fechaEntradaDesde AND :fechaEntradaHasta
+                    ORDER BY EntFecha DESC";
+                    
+        $this->PDOStmt = $this->connection->prepare($this->sql);
+        
+        $this->PDOStmt->bindValue(":codigoBarrasProducto",$this->codigoBarrasProducto);
+        $this->PDOStmt->bindValue(":descripcionProducto",$this->descripcionProducto);
+        $this->PDOStmt->bindValue(":nitProveedor",$this->nitProveedor);
+        $this->PDOStmt->bindValue(":nombreProveedor",$this->nombreProveedor);
+        $this->PDOStmt->bindValue(":fechaEntradaDesde",$this->fechaEntradaDesde);
+        $this->PDOStmt->bindValue(":fechaEntradaHasta",$this->fechaEntradaHasta);
+
+        $this->PDOStmt->execute();
+
+        return $this->PDOStmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function registrarInventarioEntradas () {
@@ -73,8 +98,8 @@ class InventarioEntradasModelo extends ConexionBD {
     public function getCostoEntrada () {return $this->costoEntrada;}
     public function getFechaEntrada () {return $this->fechaEntrada;}
     public function getEntradaCometario () {return $this->entradaCometario;}
-    public function getFechaSalidaDesde () {return $this->fechaSalidaDesde;}
-    public function getFechaSalidaHasta () {return $this->fechaSalidaHasta;}
+    public function getFechaEntradaDesde () {return $this->fechaEntradaDesde;}
+    public function getFechaEntradaHasta () {return $this->fechaEntradaHasta;}
     public function getNitProveedor () {return $this->nitProveedor;}
     public function getNombreProveedor () {return $this->nombreProveedor;}
     public function getDescripcionProducto () {return $this->descripcionProducto;}
@@ -96,11 +121,11 @@ class InventarioEntradasModelo extends ConexionBD {
     public function setEntradaCometario ($value) {
         $this->entradaCometario = $value;
     }
-    public function setFechaSalidaDesde ($value) {
-        $this->fechaSalidaDesde = $value;
+    public function setFechaEntradaDesde ($value) {
+        $this->fechaEntradaDesde = $value;
     }
-    public function setFechaSalidaHasta ($value) {
-        $this->fechaSalidaHasta = $value;
+    public function setFechaEntradaHasta ($value) {
+        $this->fechaEntradaHasta = $value;
     }
     public function setNitProveedor ($value) {
         $this->nitProveedor = $value;

@@ -129,7 +129,7 @@
                         Este template nos permite imprimir la informacion cuando estamos buscando por atributo
                         pero en este caso lo hacemos con template para hacer uso de los fragmentos
                     -->
-                    <template class="salidas__table-template">
+                    <template class="entradas__table-template">
                         <tr>
                             <td></td>
                             <td></td>
@@ -297,5 +297,6 @@
     </main>
 
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_inventario_entradas_agregar_entradas.js" type="module"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_inventario_entradas_buscar_por_atributos.js" type="module"></script>
 </body>
 </html>
