@@ -163,14 +163,81 @@
                 <h2 class="entradas__modal-agregar-entrada-title dialog-title">Registra Nuevas Entradas</h2>
 
                 <form class="entradas__modal-agregar-entrada-form dialog-main-content">
-                    <input class="entradas__modal-agregar-entrada-form-item" type="text" placeholder="Codigo de barras del producto" id="codigoBarrasProducto">
-                    <select class="entradas__modal-agregar-entrada-form-item">
-                        <option value="">Producto</option>
+
+                    <input 
+                    class="entradas__modal-agregar-entrada-form-item" 
+                    id="codigoBarrasProducto"
+                    name= "codigoBarrasProducto"
+                    type="text" 
+                    maxlength="15"
+                    placeholder="Codigo de barras del producto" 
+                    title="Ingresa un codigo de barras de un producto registrado en sistema"
+                    autocomplete="off" 
+                    data-input
+                    data-proCodBarras
+                    >
+                    
+                    <select 
+                    class="entradas__modal-agregar-entrada-form-item"
+                    id="productos__modal-agregar-entrada-select-proveedor"
+                    name="descripcionProducto" 
+                    title="Elige un producto de la lista y el codigo de barras se pondra automaticamente"
+                    data-input 
+                    data-proDescripcion
+                    >
+                        <option value="" data-pro-cod-barras >Elige el producto</option>
+
+                        <?php foreach($this->data['infoProductos'] as $key => $value): ?>
+                        <option 
+                        value="<?php echo $value['ProDescripcion'] ?>" 
+                        data-pro-cod-barras="<?php echo $value['ProCodBarras'] ?>"><?php echo $value['ProDescripcion'] ?></option>
+                        <?php endforeach; ?>
+
                     </select>
-                    <input class="entradas__modal-agregar-entrada-form-item" type="text" placeholder="Cantidad">
-                    <input class="entradas__modal-agregar-entrada-form-item" type="text" placeholder="Costo">
-                    <input class="entradas__modal-agregar-entrada-form-item" type="date">
-                    <textarea class="entradas__modal-agregar-entrada-form-item" cols="30" rows="10" placeholder="Ingresa un comentario<?php echo(URL_RAIZ); ?>public."></textarea>
+
+                    <input 
+                    class="entradas__modal-agregar-entrada-form-item" 
+                    type="text" 
+                    placeholder="Cantidad"
+                    name="cantidadEntrada"
+                    type="number" 
+                    placeholder="Cantidad"
+                    title="Ingresa la cantidad de producto que entro"
+                    data-input 
+                    data-entCantidad
+                    >
+                    
+                    <input 
+                    class="entradas__modal-agregar-entrada-form-item" 
+                    type="text" 
+                    placeholder="Costo"
+                    name="costoEntrada" 
+                    title="Ingresa el costo total de la entrada"
+                    data-input 
+                    data-entCostoProducto
+                    >
+                    
+                    <input 
+                    class="entradas__modal-agregar-entrada-form-item" 
+                    type="date"
+                    name="fechaSalida"
+                    title="Ingresa la fecha y hora de salida"
+                    data-input 
+                    data-entFecha
+                    >
+                    
+                    <textarea 
+                    cols="30" 
+                    rows="10" 
+                    maxlength="255"
+                    class="entradas__modal-agregar-entrada-form-item" 
+                    placeholder="Ingresa un comentario."
+                    name="entradaCometario"
+                    title="Comentarios opcionales acerca de la entrada"
+                    data-input
+                    data-entComentarios
+                    >
+                </textarea>
                 </form>
                 <div class="entradas__modal-agregar-entrada-btns-container dialog-container-bts">
                     <button class="entradas__modal-agregar-entrada-btn-cancelar boton dialog-btn">Cancelar</button>
@@ -185,27 +252,27 @@
                     Recuerda revisar detenidamente la informacion de la entrada que estas registrando.
                 </p>
                 <div class="entradas__modal-agregar-entrada-info-confirmacion dialog-main-content">
-                    <section class="entradas__modal-agregar-entrada-info-item-confirmacion">
+                    <section class="entradas__modal-agregar-entrada-info-item-confirmacion" data-proCodBarras>
                         <h3>CODIGO DE BARRAS</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="entradas__modal-agregar-entrada-info-item-confirmacion">
+                    <section class="entradas__modal-agregar-entrada-info-item-confirmacion" data-proDescripcion>
                         <h3>PRODUCTO</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="entradas__modal-agregar-entrada-info-item-confirmacion">
+                    <section class="entradas__modal-agregar-entrada-info-item-confirmacion" data-entCantidad>
                         <h3>CANTIDAD</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="entradas__modal-agregar-entrada-info-item-confirmacion">
+                    <section class="entradas__modal-agregar-entrada-info-item-confirmacion" data-entCostoProducto>
                         <h3>COSTO</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="entradas__modal-agregar-entrada-info-item-confirmacion">
+                    <section class="entradas__modal-agregar-entrada-info-item-confirmacion" data-entFecha>
                         <h3>FECHA DE ENTRADA</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="entradas__modal-agregar-entrada-info-item-confirmacion">
+                    <section class="entradas__modal-agregar-entrada-info-item-confirmacion" data-entComentarios>
                         <h3>COMENTARIOS</h3>
                         <p>________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</p>
                     </section>

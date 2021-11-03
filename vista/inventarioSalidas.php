@@ -139,7 +139,6 @@
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td></td>
                         </tr>
                     </template>
                 </tbody>
@@ -171,9 +170,9 @@
                     maxlength="15"
                     placeholder="Codigo de barras del producto" 
                     title="Ingresa un codigo de barras de un producto registrado en sistema"
+                    autocomplete="off"
                     data-input
                     data-ProCodBarras
-                    autocomplete="off"
                     >
 
                     <select 
@@ -201,7 +200,7 @@
                     placeholder="Cantidad"
                     title="Ingresa la cantidad de producto que salio"
                     data-input 
-                    data-cantidadSalida
+                    data-salCantidad
                     >
 
                     <select 
@@ -235,7 +234,7 @@
                     placeholder="Ingresa un comentario."
                     title="Comentarios opcionales acerca de la salida"
                     data-input
-                    data-salComentario
+                    data-salComentarios
                     ></textarea>
                 </form>
                 <div class="salidas__modal-agregar-salida-btns-container dialog-container-bts">
@@ -259,7 +258,7 @@
                         <h3>PRODUCTO</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="salidas__modal-agregar-salida-info-item-confirmacion" data-cantidadSalida>
+                    <section class="salidas__modal-agregar-salida-info-item-confirmacion" data-salCantidad>
                         <h3>CANTIDAD</h3>
                         <p>________________________________________________</p>
                     </section>
@@ -271,7 +270,7 @@
                         <h3>FECHA DE SALIDA</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="salidas__modal-agregar-salida-info-item-confirmacion" data-salComentario>
+                    <section class="salidas__modal-agregar-salida-info-item-confirmacion" data-salComentarios>
                         <h3>COMENTARIOS</h3>
                         <p>________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</p>
                     </section>
