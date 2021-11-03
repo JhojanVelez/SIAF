@@ -197,7 +197,7 @@
 
                     <input 
                     class="entradas__modal-agregar-entrada-form-item" 
-                    type="text" 
+                    type="number" 
                     placeholder="Cantidad"
                     name="cantidadEntrada"
                     type="number" 
@@ -209,7 +209,7 @@
                     
                     <input 
                     class="entradas__modal-agregar-entrada-form-item" 
-                    type="text" 
+                    type="number" 
                     placeholder="Costo"
                     name="costoEntrada" 
                     title="Ingresa el costo total de la entrada"
@@ -219,9 +219,9 @@
                     
                     <input 
                     class="entradas__modal-agregar-entrada-form-item" 
-                    type="date"
-                    name="fechaSalida"
-                    title="Ingresa la fecha y hora de salida"
+                    type="datetime-local"
+                    name="fechaEntrada"
+                    title="Ingresa la fecha y hora de entrada"
                     data-input 
                     data-entFecha
                     >
@@ -236,8 +236,7 @@
                     title="Comentarios opcionales acerca de la entrada"
                     data-input
                     data-entComentarios
-                    >
-                </textarea>
+                    ></textarea>
                 </form>
                 <div class="entradas__modal-agregar-entrada-btns-container dialog-container-bts">
                     <button class="entradas__modal-agregar-entrada-btn-cancelar boton dialog-btn">Cancelar</button>
@@ -297,6 +296,6 @@
         </section>
     </main>
 
-    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_inventario_entradas_agregar_entradas.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_inventario_entradas_agregar_entradas.js" type="module"></script>
 </body>
 </html>

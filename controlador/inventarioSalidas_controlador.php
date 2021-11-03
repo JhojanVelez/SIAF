@@ -85,7 +85,6 @@ class InventarioSalidasControlador extends Controlador {
         } catch (Exception $e) {
             $this->result["complete"] = false;
             $this->result["errorMessage"] = $e->getMessage();
-            $this->result["post"] = $_POST;
             echo(json_encode($this->result));
         }
     }

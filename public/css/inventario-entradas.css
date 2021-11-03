@@ -119,16 +119,6 @@
     margin-bottom: 3rem;
 }
 
-.entradas__modal-agregar-entrada-form input[type="date"] {
-    position: relative;
-}
-
-.entradas__modal-agregar-entrada-form input[type="date"]::after {
-    content: 'Fecha de entrada';
-    position: absolute;
-    right: 20%;
-}
-
 .entradas__modal-agregar-entrada-form-item:nth-child(1),
 .entradas__modal-agregar-entrada-info-item-confirmacion:nth-child(1) {
     grid-area: cod;

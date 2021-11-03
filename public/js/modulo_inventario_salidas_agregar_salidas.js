@@ -27,8 +27,12 @@ import {agregar} from 'http://localhost:8080/SIAF/ajax/agregar.js';
 
             $inputs.forEach(input => {
                 if(input.value == "") {
-                    input.classList.add("input-invalido");
-                    validador = false;
+                    if(Object.keys(input.dataset)[1] == "salcomentarios") {
+                        input.value = "SIN COMENTARIOS";
+                    }else {
+                        input.classList.add("input-invalido");
+                        validador = false;
+                    }
                 } else {
                     input.classList.remove("input-invalido");
                 }
@@ -56,10 +60,6 @@ import {agregar} from 'http://localhost:8080/SIAF/ajax/agregar.js';
                             item.querySelector("P").innerText = input.value;
                         }
                     })
-                })
-
-                $itemsConfirmacion.forEach(item => {
-                    Object.keys(item.dataset)[0];
                 })
             }
         }
