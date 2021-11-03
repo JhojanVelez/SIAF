@@ -81,7 +81,7 @@
                             >
                         </div>
                     </article>
-                </form>
+                </form> 
                 <div class="salidas__filtro-gen-repo filtro-gen-repo">
                     <div class="salidas__filtro-gen-repo-img filtro-gen-repo-img">
                         <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">

@@ -1,12 +1,16 @@
 @import url(main.css);
 
+.nav-container {
+    min-width: 1700px
+}
+
 .nav__li:nth-child(3) {
     border-bottom: 2px solid var(--color-button-text);
 }
 
 .entradas__filtro {
     display: grid;
-    grid-template-columns: 75% 1fr;
+    grid-template-columns: 83% 1fr;
     grid-template-rows: min-content min-content;
     grid-template-areas:"filter-titulo filter-titulo"
                         "filter-inputs filter-gen-repo";
@@ -21,7 +25,7 @@
 .entradas__filtro-form {
     grid-area: filter-inputs;
     display: grid;
-    grid-template-columns: repeat(2, 25%) 1fr;
+    grid-template-columns: repeat(2, 22%) 1fr;
     grid-template-areas:"inp-prod-id   inp-prov-id date-des-has"
                         "inp-prod-name inp-prov-name date-des-has";
     grid-gap: 2rem;
@@ -59,7 +63,7 @@
 
 .entradas_filtro-container-desde-hasta__inputs {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .entradas_filtro-desde,
@@ -72,7 +76,7 @@
 .entradas_filtro-hasta::before {
     content: '';
     position: absolute;
-    right: 25%;
+    right: 18%;
 }
 
 .entradas_filtro-desde::before{

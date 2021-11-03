@@ -1,5 +1,9 @@
 @import url(main.css);
 
+.nav-container {
+    min-width: 1700px
+}
+
 .nav__li:nth-child(3) {
     border-bottom: 2px solid var(--color-button-text);
 }
@@ -7,7 +11,7 @@
 .salidas__filtro {
     color: var(--color-title-h1);
     display: grid;
-    grid-template-columns: 85% 1fr;
+    grid-template-columns: 83% 1fr;
     grid-template-rows: min-content min-content;
     grid-template-areas:"filter-titulo filter-titulo"
                         "filter-inputs filter-gen-repo";
@@ -59,7 +63,7 @@
 
 .salidas_filtro-container-desde-hasta__inputs {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .salidas_filtro-desde,
