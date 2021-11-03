@@ -90,7 +90,8 @@
                     class="salidas__filtro-subtitulo-reporte filtro-subtitulo-reporte" 
                     type="submit" 
                     value="Generar Reporte" 
-                    form="salidas__filtro-form">
+                    form="salidas__filtro-form"
+                    >
                 </div>
             </div>
         </section>

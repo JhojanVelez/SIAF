@@ -21,16 +21,60 @@
         <section class="entradas__container-filter container-filter box-shadow">
             <div class="entradas__filtro">
                 <h2 class="entradas__filtro-titulo">Filtros de busqueda</h2>
-                <form class="entradas__filtro-form" action="">
-                    <input type="text" class="entradas__filtro-producto-id" id="producto-id" placeholder="Codigo de Barras">
-                    <input type="text" class="entradas__filtro-producto-nombre" id="producto-nombre" placeholder="Nombre Producto">
-                    <input type="text" class="entradas__filtro-proveedor-id" id="proveedor-id" placeholder="NIT Proveedor">
-                    <input type="text" class="entradas__filtro-proveedor-nombre" id="proveedor-nombre" placeholder="Nombre Proveedor">
+                <form 
+                id="entradas__filtro-form" 
+                class="entradas__filtro-form" 
+                action="<?php echo URL_RAIZ ?>InventarioEntradas/generarReporte" 
+                method="POST" 
+                target="_BLANK"
+                >
+                    <input 
+                    name="codigoBarrasProducto"
+                    type="text" 
+                    class="entradas__filtro-producto-id" 
+                    placeholder="Codigo de Barras"
+                    autocomplete="off"
+                    data-input
+                    >
+                    <input 
+                    name="descripcionProducto"
+                    type="text" 
+                    class="entradas__filtro-producto-nombre" 
+                    placeholder="Nombre Producto"
+                    autocomplete="off"
+                    data-input
+                    >
+                    <input 
+                    name="nitProveedor"
+                    type="text" 
+                    class="entradas__filtro-proveedor-id" 
+                    placeholder="NIT Proveedor"
+                    autocomplete="off"
+                    data-input
+                    >
+                    <input 
+                    name="nombreProveedor"
+                    type="text" 
+                    class="entradas__filtro-proveedor-nombre" 
+                    placeholder="Nombre Proveedor"
+                    autocomplete="off"
+                    data-input
+                    >
                     <article class="entradas_filtro-container-desde-hasta">
                         <h3 class="entradas_filtro-container-desde-hasta__title">Por periodo de tiempo</h3>
                         <div class="entradas_filtro-container-desde-hasta__inputs">
-                            <input type="date" class="entradas_filtro-desde" id="salida-desde">
-                            <input type="date" class="entradas_filtro-hasta" id="salida-hasta">
+                            <input 
+                            name="fechaEntradaDesde"
+                            type="datetime-local" 
+                            class="entradas_filtro-desde" 
+                            data-input 
+                            >
+                            <input 
+                            name="fechaEntradaHasta"
+                            type="datetime-local" 
+                            class="entradas_filtro-hasta" 
+                            data-input
+                            >
                         </div>
                     </article>
                 </form>
@@ -38,7 +82,12 @@
                     <div class="entradas__filtro-gen-repo-img filtro-gen-repo-img">
                         <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
                     </div>
-                    <a class="entradas__filtro-subtitulo-reporte filtro-subtitulo-reporte" href="">Generar reporte</a>
+                    <input 
+                    class="entradas__filtro-subtitulo-reporte filtro-subtitulo-reporte" 
+                    type="submit" 
+                    value="Generar Reporte" 
+                    form="entradas__filtro-form"
+                    >
                 </div>
             </div>
         </section>
