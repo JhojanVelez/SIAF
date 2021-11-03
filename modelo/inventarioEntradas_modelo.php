@@ -20,7 +20,7 @@ class InventarioEntradasModelo extends ConexionBD {
             $this->rows['infoProductos'] = $this->connection->query("SELECT ProCodBarras,ProDescripcion,tbl_proveedores_ProNIT,ProNombre FROM PRODUCTOS ORDER BY ProDescripcion")->fetchAll(PDO::FETCH_ASSOC);
             return $this->rows;
         } catch (PDOException $e) {
-            return "Error al obtener todos los productos";
+            return "Error al obtener todas las entradas";
         }
     }
 

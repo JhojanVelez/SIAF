@@ -21,7 +21,7 @@
             <table class="productos__table tabla">
                 <thead class="table-thead">
                     <tr class="table-tr">
-                        <td class="table-td">ProCodBarr</td>
+                        <td class="table-td">ProCodBarras</td>
                         <td class="table-td">Descripcion</td>
                         <td class="table-td">Ubicacion Fisica</td>
                         <td class="table-td">Presentacion</td>

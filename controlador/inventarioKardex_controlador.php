@@ -1,8 +1,8 @@
 <?php
 
-class InventarioKardexControlador {
-    function __construct () {
-        require_once("vista/inventario-kardex.php");
+class InventarioKardexControlador extends Controlador{
+    function __construct ($url) {
+        $this->controladorMetodoParametro = $url;
     }
 }
 
