@@ -21,25 +21,84 @@
         <section class="kardex__container-filter container-filter box-shadow">
             <div class="kardex__filtro">
                 <h2 class="kardex__filtro-titulo">Filtros de busqueda</h2>
-                <form class="kardex__filtro-form" action="">
-                    <input type="text" class="kardex__filtro-producto-id" id="producto-id" placeholder="Codigo de Barras">
-                    <input type="text" class="kardex__filtro-producto-nombre" id="producto-nombre" placeholder="Nombre Producto">
-                    <input type="text" class="kardex__filtro-proveedor-id" id="proveedor-id" placeholder="NIT Proveedor">
-                    <input type="text" class="kardex__filtro-proveedor-nombre" id="proveedor-nombre" placeholder="Nombre Proveedor">
-                    <input type="text" class="kardex__filtro-laboratorio" id="laboratorio-nombre" placeholder="Nombre Laboratorio">
-                    <select class="kardex_filtro-producto-presentacion" id="producto-presentacion">
-                        <option value="null">Presentacion</option>
-                        <option value="Pre">Pre1</option>
-                        <option value="Pre">Pre2</option>
-                        <option value="Pre">Pre3</option>
-                        <option value="Pre">Pre4</option>
+                <form 
+                id="kardex__filtro-form" 
+                class="kardex__filtro-form" 
+                action="<?php echo URL_RAIZ ?>inventarioKardex/generarReporte" 
+                method="POST" 
+                target="_BLANK"
+                >
+                    <input 
+                    name="codigoBarrasProducto"
+                    type="text" 
+                    class="kardex__filtro-producto-id" 
+                    placeholder="Codigo de Barras"
+                    autocomplete="off"
+                    data-input
+                    >
+                    <input 
+                    name="descripcionProducto"
+                    type="text" 
+                    class="kardex__filtro-producto-nombre" 
+                    placeholder="Nombre Producto"
+                    autocomplete="off"
+                    data-input
+                    >
+                    <input 
+                    name="nitProveedor"
+                    type="text" 
+                    class="kardex__filtro-proveedor-id" 
+                    placeholder="NIT Proveedor"
+                    autocomplete="off"
+                    data-input
+                    >
+                    <input 
+                    name="nombreProveedor"
+                    type="text" 
+                    class="kardex__filtro-proveedor-nombre" 
+                    placeholder="Nombre Proveedor"
+                    autocomplete="off"
+                    data-input
+                    >
+                    <input 
+                    name="laboratorioProducto"
+                    type="text" 
+                    class="kardex__filtro-laboratorio" 
+                    placeholder="Nombre Laboratorio"
+                    autocomplete="off"
+                    data-input
+                    >
+                    <select 
+                    name="presentacionProducto"
+                    class="kardex_filtro-producto-presentacion" 
+                    data-input 
+                    >
+                        <option value="">Presentacion</option>
+                        <option value="TABLETA">TABLETA</option>
+                        <option value="JARABE">JARABE</option>
+                        <option value="CAPSULA">CAPSULA</option>
+                        <option value="COMPRIMIDO">COMPRIMIDO</option>
+                        <option value="GRAGEA O TABLETA RECUBIERTA">GRAGEA O TABLETA RECUBIERTA</option>
+                        <option value="PILDORA">PILDORA</option>
+                        <option value="INHALADOR">INHALADOR</option>
+                        <option value="BOTELLA">BOTELLA</option>
+                        <option value="TUBO COLAPSIBLE DE ALUMINIO">TUBO COLAPSIBLE DE ALUMINIO</option>
+                        <option value="FRASCO X 300 ML DE SOLUCIÓN INYECTABLE">FRASCO X 300 ML DE SOLUCIÓN INYECTABLE</option>
+                        <option value="GRANULOS">GRANULOS</option>
+                        <option value="100 ML DE JARABE">100 ML DE JARABE</option>
+                        <option value="CREMA TOPICA">CREMA TOPICA</option>
                     </select>
                 </form>
                 <div class="kardex__filtro-gen-repo filtro-gen-repo">
                     <div class="kardex__filtro-gen-repo-img filtro-gen-repo-img">
                         <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
                     </div>
-                    <a class="kardex__filtro-subtitulo-reporte filtro-subtitulo-reporte" href="">Generar reporte</a>
+                    <input 
+                    class="kardex__filtro-subtitulo-reporte filtro-subtitulo-reporte" 
+                    type="submit" 
+                    value="Generar Reporte" 
+                    form="kardex__filtro-form"
+                    >
                 </div>
             </div>
         </section>
@@ -52,8 +111,8 @@
                         <td>codInvt</td>
                         <td>ProCodBarras</td>
                         <td>Producto</td>
-                        <td>TotalSalidas</td>
                         <td>TotalEntradas</td>
+                        <td>TotalSalidas</td>
                         <td>Stock</td>
                         <td>UbicacionFisica</td>
                         <td>CostoProducto</td>
@@ -70,14 +129,14 @@
                             <td><?php echo $value["InvCodigo"] ?></td>
                             <td><?php echo $value["ProCodBarras"] ?></td>
                             <td><?php echo $value["ProDescripcion"] ?></td>
-                            <td><?php echo $value["InvTotalSalidas"] ?></td>
                             <td><?php echo $value["InvTotalEntradas"] ?></td>
+                            <td><?php echo $value["InvTotalSalidas"] ?></td>
                             <td 
                             class="
                                 <?php
                                     if($value["InvStock"] <= 0) {
                                         echo("kardex__table-stock-red");
-                                    } else if ($value["InvStock"] > 0 && $value["InvStock"] < 10) {
+                                    } else if ($value["InvStock"] > 0 && $value["InvStock"] <= 10) {
                                         echo("kardex__table-stock-orange");
                                     } else {
                                         echo("kardex__table-stock-green");
@@ -101,7 +160,12 @@
                         pero en este caso lo hacemos con template para hacer uso de los fragmentos
                     -->
                     <template class="kardex__table-template">
-                        <tr>
+                        <tr class="kardex__table-tboby-tr">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -118,5 +182,7 @@
     </main>
 
     <script src="<?php echo URL_RAIZ?>public/js/modulo_inventario_kardex_pintar_red_orange_green.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_inventario_kardex_buscar_por_atributos.js" type="module"></script>
+
 </body>
 </html>

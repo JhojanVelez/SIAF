@@ -253,6 +253,7 @@
                     placeholder="Codigo de barras del producto" 
                     id="codigoBarrasProducto" 
                     title = "Debe tener una maxima logitud de 15 caracteres"
+                    autocomplete="off"
                     data-input 
                     data-ProCodBarras
                     >
@@ -262,6 +263,7 @@
                     type="text" 
                     placeholder="NIT del proveedor" 
                     title="El valor se colocara automaticamente cuando selecciones un proveedor"
+                    autocomplete="off"
                     data-input 
                     data-tbl_proveedores_ProNIT
                     >
@@ -271,6 +273,7 @@
                     type="text" 
                     placeholder="Descripcion" 
                     title="Ingresa el nombre comercial del producto"
+                    autocomplete="off"
                     data-input 
                     data-ProDescripcion
                     >
@@ -295,6 +298,7 @@
                     type="text" 
                     placeholder="Ubicacion fisica" 
                     title="Ingresa el codigo de la ubicacion fisica real en donde se encuentra el producto"
+                    autocomplete="off"
                     data-input 
                     data-ProUbicacionFisica
                     >
@@ -304,6 +308,7 @@
                     type="text" 
                     placeholder="Ingresa el laboratorio" 
                     title="Nombre del laboratorio"
+                    autocomplete="off"
                     data-input 
                     data-ProLaboratorio
                     >
@@ -325,6 +330,7 @@
 
                     <select 
                     name="presentacion" 
+                    autocomplete="off"
                     data-input
                     data-ProPresentacion
                     >
@@ -350,6 +356,7 @@
                     maxlength="10"
                     placeholder="Precio de venta" 
                     title="El precio de venta es el precio de venta al cliente por unidad"
+                    autocomplete="off"
                     data-input 
                     data-ProPrecioVenta
                     >
@@ -359,6 +366,7 @@
                     type="text" 
                     placeholder="Registro sanitario INVIMA" 
                     title="Ingresa el registro sanitario INVIMA"
+                    autocomplete="off"
                     data-input
                     data-ProRegSanInvima
                     >
@@ -447,9 +455,9 @@
                     name="codigoBarras" 
                     type="text" 
                     maxlength="15"
+                    id= "codigoBarrasProducto"
                     placeholder="Codigo de barras del producto" 
                     title = "Debe tener una maxima logitud de 15 caracteres"
-                    id= "codigoBarrasProducto"
                     data-input
                     data-ProCodBarras
                     >
@@ -459,6 +467,7 @@
                     type="text" 
                     placeholder="NIT del proveedor" 
                     title="El valor se colocara automaticamente cuando selecciones un proveedor"
+                    autocomplete="off"
                     data-input 
                     data-tbl_proveedores_ProNIT
                     >
@@ -468,6 +477,7 @@
                     type="text" 
                     placeholder="Descripcion" 
                     title="Ingresa el nombre comercial del producto"
+                    autocomplete="off"
                     data-input 
                     data-ProDescripcion
                     >
@@ -475,6 +485,7 @@
                     <select 
                     name="proveedor" 
                     id="productos__modal-editar-producto-select-proveedor" 
+                    autocomplete="off"
                     data-input
                     data-ProNombre
                     >
@@ -492,6 +503,7 @@
                     type="text" 
                     placeholder="Ubicacion fisica" 
                     title="Ingresa el codigo de la ubicacion fisica real en donde se encuentra el producto"
+                    autocomplete="off"
                     data-input 
                     data-ProUbicacionFisica
                     >
@@ -501,6 +513,7 @@
                     type="text" 
                     placeholder="Ingresa el laboratorio" 
                     title="Nombre del laboratorio"
+                    autocomplete="off"
                     data-input 
                     data-ProLaboratorio
                     >
@@ -547,6 +560,7 @@
                     maxlength="10"
                     placeholder="Precio de venta" 
                     title="El precio de venta es el precio de venta al cliente por unidad"
+                    autocomplete="off"
                     data-input 
                     data-ProPrecioVenta
                     >
@@ -555,6 +569,7 @@
                     name="invima" 
                     type="text" 
                     placeholder="Registro sanitario INVIMA" 
+                    autocomplete="off"
                     data-input
                     data-ProRegSanInvima
                     >

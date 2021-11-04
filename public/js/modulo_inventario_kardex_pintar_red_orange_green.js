@@ -15,7 +15,6 @@
 
     table.addEventListener("mouseout",e=> {
         if(e.target.parentElement.matches(".kardex__table-tboby-tr")){
-            console.log(e.target)
             let tr = e.target.parentElement,
                 td= tr.querySelector(".kardex__table-stock-red")    || 
                     tr.querySelector(".kardex__table-stock-orange") || 
