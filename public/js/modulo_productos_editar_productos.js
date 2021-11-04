@@ -91,13 +91,9 @@ import { editar } from "../../ajax/editar.js";
             editar($formulario,idProductoSeleccionado,"Productos")
             .then(res=>{
                 console.log(res);
-                if(res.complete && res.affectedRows != 0) {
+                if(res.complete) {
                     $modal_3.toggleAttribute("open");
-                    $modal_3.querySelector("P").innerHTML = res.resultMessage;
-                } else if(res.complete && res.affectedRows == 0){
-                    $modal_4.toggleAttribute("open");
-                    $modal_4.querySelector("H2").innerHTML = "¡Uppss!";
-                    $modal_4.querySelector("P").innerHTML = res.resultMessage;   
+                    $modal_3.querySelector("P").innerHTML = res.resultMessage; 
                 } else {
                     $modal_4.toggleAttribute("open");
                     $modal_4.querySelector("H2").innerHTML = "¡Uppss!";

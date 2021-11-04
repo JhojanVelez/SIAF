@@ -84,7 +84,7 @@ import {agregar} from 'http://localhost:8080/SIAF/ajax/agregar.js';
         if(e.target.matches(".productos__modal-agregar-producto-confirmacion-btn-confirmar")) {
             $inputs[1].disabled = false;
             $modal_2.toggleAttribute("open");
-            agregar($formulario,"inventarioSalidas")
+            agregar($formulario,"Productos")
             .then(res=>{
                 console.log(res);
                 if(res.complete) {

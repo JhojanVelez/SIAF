@@ -66,7 +66,7 @@
                 </thead>
                 <tbody>
                 <?php foreach($this->data['infoKardex'] as $key => $value): ?>
-                        <tr>
+                        <tr class="kardex__table-tboby-tr">
                             <td><?php echo $value["InvCodigo"] ?></td>
                             <td><?php echo $value["ProCodBarras"] ?></td>
                             <td><?php echo $value["ProDescripcion"] ?></td>
@@ -116,5 +116,7 @@
             </table>
         </section>
     </main>
+
+    <script src="<?php echo URL_RAIZ?>public/js/modulo_inventario_kardex_pintar_red_orange_green.js"></script>
 </body>
 </html>

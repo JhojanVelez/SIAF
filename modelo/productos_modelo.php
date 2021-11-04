@@ -134,9 +134,7 @@ class ProductosModelo extends ConexionBD{
 
             $this->result["complete"] = true;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
-            $this->result["resultMessage"] = $this->PDOStmt->rowCount() != 0
-                                            ? "Producto editado correctamente"
-                                            : "El producto $idProductoSeleccionado no pudo ser editado porque no esta registrado en el sistema.";
+            $this->result["resultMessage"] = "Producto editado correctamente";
             return $this->result;
 
         } catch (PDOException $e) {
