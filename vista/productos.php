@@ -665,12 +665,12 @@
                     <table class="productos-inhabilitados__table table">
                         <thead class="table-thead">
                             <tr class="table-tr">
-                                <td class="table-td">ProCodBarr</td>
+                                <td class="table-td">Codigo de Barras</td>
                                 <td class="table-td">Descripcion</td>
                                 <td class="table-td">Ubicacion Fisica</td>
                                 <td class="table-td">Presentacion</td>
-                                <td class="table-td">UnidadMedida</td>
-                                <td class="table-td">PrecioVenta</td>
+                                <td class="table-td">Unidad de Medida</td>
+                                <td class="table-td">Precio de Venta</td>
                                 <td class="table-td">Laboratorio</td>
                                 <td class="table-td">Registro INVIMA</td>
                                 <td class="table-td">NIT Proveedor</td>
