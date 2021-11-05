@@ -72,8 +72,6 @@ table {
     min-width: 200%;
 }
 
-
-
 .productos__container-botones {
     grid-area: botones;
     display: grid;

@@ -60,14 +60,16 @@
     grid-area: sel-prod-presentacion;
 }
 
-
+table {
+    min-width: 130%;
+}
 
 .kardex__filtro-gen-repo {
     grid-area: filter-gen-repo;
 }
 
 tbody td {
-    min-width: 200px;
+    min-width: 100px;
 }
 
 .kardex__table-tboby-tr:hover {
@@ -93,6 +95,7 @@ td.kardex__table-stock-orange {
     font-weight: bolder;
     font-size: 1.1rem;
     color: white;
+    padding: 0;
 }
 
 .kardex__table tr.kardex__table-stock-red td, 

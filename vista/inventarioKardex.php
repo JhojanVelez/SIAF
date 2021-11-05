@@ -108,19 +108,19 @@
             <table class="kardex__table">
                 <thead class="table-thead">
                     <tr class="table-tr">
-                        <td>codInvt</td>
-                        <td>ProCodBarras</td>
-                        <td>Producto</td>
-                        <td>TotalEntradas</td>
-                        <td>TotalSalidas</td>
+                        <td>Codigo</td>
+                        <td>Codigo de Barras Producto</td>
+                        <td>Nombre Producto</td>
+                        <td>Total Entradas</td>
+                        <td>Total Salidas</td>
                         <td>Stock</td>
-                        <td>UbicacionFisica</td>
-                        <td>CostoProducto</td>
-                        <td>PrecioVenta</td>
-                        <td>ProPresentacion</td>
-                        <td>Laboratorio</td>
-                        <td>NitProveedor</td>
-                        <td>Proveedor</td>
+                        <td>Ubicacion Fisica Producto</td>
+                        <td>Costo Producto</td>
+                        <td>Precio Venta Producto</td>
+                        <td>Presentacion Producto</td>
+                        <td>Laboratorio Producto</td>
+                        <td>Nit Proveedor</td>
+                        <td>Nombre Proveedor</td>
                     </tr>
                 </thead>
                 <tbody>
