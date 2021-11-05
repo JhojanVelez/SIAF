@@ -70,10 +70,6 @@ tbody td {
     min-width: 200px;
 }
 
-.kardex__table-tboby-tr:nth-child(even) {
-    background-color: var(--color-tr-background);
-}
-
 .kardex__table-tboby-tr:hover {
     background-color: initial;
     color: initial;

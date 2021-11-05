@@ -9,10 +9,13 @@
     padding: 0;
 }
 
+html {
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
 
 body {
-background-color: rgb(255, 255, 255);
-margin-bottom: 10px;
+    background-color: rgb(255, 255, 255);
 }
 
 .platilla-reporte-main__h3 {
@@ -23,8 +26,6 @@ margin-bottom: 10px;
     width: 90%;
     margin: auto;
 }
-
-
 
 .platilla-reporte-nav {
     background-color: #6c63ff;
@@ -39,7 +40,8 @@ margin-bottom: 10px;
 
 .platilla-reporte-nav-container__title {
     font-size: 3rem;
-    text-align: center;
+    text-align: center; 
+    margin: 0;
 }
 
 .platilla-reporte-main__content {
@@ -87,4 +89,39 @@ font-size: .8rem;
 
 tbody tr:nth-child(even) {
 background-color: #6b63ff48;
+}
+
+/*Estilos para el reporte de kardex*/
+
+.table-thead--kardex td {
+    font-size: .8rem;
+    text-align: center;
+    padding: .2rem;
+}
+
+.kardex__table-tboby-tr td {
+    font-size: .7rem;
+    padding-left: .5rem;
+}
+
+main table td.kardex__table-stock-red {
+    background-color: rgb(160, 0, 0);
+}
+main table td.kardex__table-stock-green {
+    background-color: rgb(0, 146, 0);
+}
+main table td.kardex__table-stock-orange {
+    background-color: rgb(204, 133, 0);
+}
+
+td.kardex__table-stock-red, 
+td.kardex__table-stock-green, 
+td.kardex__table-stock-orange {
+    text-align: center;
+    color: white;
+    padding-left: 0rem;
+}
+
+@page :first {
+    margin-top: 0px;
 }
