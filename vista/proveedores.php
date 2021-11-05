@@ -50,6 +50,7 @@
                 <h2>Proveedores Registrados</h2>
             </div>
             <div class="proveedores__lista-contenido contenedor-objetos__contenido box-shadow">
+                <?php foreach($this->data["infoProveedores"] as $key => $value): ?>
                 <figure class="proveedores__lista-proveedor contenedor-objetos__objeto box-shadow">
                     <div class="proveedores__lista-proveedor-img contenedor-objetos__objeto-img">
                         <img src="<?php echo(URL_RAIZ); ?>public/imagenes/proveedor-icono.svg" alt="">
@@ -57,27 +58,27 @@
                     <div class="proveedores__lista-proveedor-info-container">
                         <section class="proveedores__lista-proveedor-info nit">
                             <h4 class="proveedores__lista-proveedor-info-title">NIT</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
+                            <p class="proveedores__lista-proveedor-data"><?php echo $value["ProNIT"] ?></p>
                         </section>
                         <section class="proveedores__lista-proveedor-info nombre">
                             <h4 class="proveedores__lista-proveedor-info-title">NOMBRE</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
+                            <p class="proveedores__lista-proveedor-data"><?php echo $value["ProNombre"] ?></p>
                         </section>
                         <section class="proveedores__lista-proveedor-info telefono">
                             <h4 class="proveedores__lista-proveedor-info-title">TELEFONO</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
+                            <p class="proveedores__lista-proveedor-data"><?php echo $value["ProTelefono"] ?></p>
                         </section>
                         <section class="proveedores__lista-proveedor-info correo">
                             <h4 class="proveedores__lista-proveedor-info-title">CORREO</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
+                            <p class="proveedores__lista-proveedor-data"><?php echo $value["ProCorreo"] ?></p>
                         </section>
                         <section class="proveedores__lista-proveedor-info direccion">
                             <h4 class="proveedores__lista-proveedor-info-title">DIRECCION</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
+                            <p class="proveedores__lista-proveedor-data"><?php echo $value["ProDireccion"] ?></p>
                         </section>
                         <section class="proveedores__lista-proveedor-info ciudad">
                             <h4 class="proveedores__lista-proveedor-info-title">CIUDAD</h4>
-                            <p class="proveedores__lista-proveedor-data">____________________________________</p>
+                            <p class="proveedores__lista-proveedor-data"><?php echo $value["ProCiudad"] ?></p>
                         </section>
                     </div>
                     <div class="proveedores__lista-proveedor-botones contenedor-objetos__objeto-botones">
@@ -95,6 +96,7 @@
                         </button>
                     </div>
                 </figure>
+                <?php endforeach; ?>
             </div>
         </section>
 
