@@ -90,6 +90,10 @@ input:focus, select:focus {
   border-color: red;
 }
 
+.input-invalido:focus {
+  border-color: red;
+}
+
 /*Estilos para todos los botones de la pagina*/
 
 

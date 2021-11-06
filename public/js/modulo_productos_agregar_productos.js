@@ -70,10 +70,6 @@ import {agregar} from 'http://localhost:8080/SIAF/ajax/agregar.js';
                         }
                     })
                 })
-
-                $itemsConfirmacion.forEach(item => {
-                    console.log(Object.keys(item.dataset)[0]);
-                })
             }
 
         }
