@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo URL_RAIZ ?>/public/css/plantilla-reporte.css">
-    <title><?php echo $this->controladorMetodoParametro[0]?></title>
+    <title><?php echo $this->fileName?></title>
 </head>
 <body>
     <header class="platilla-reporte-nav">
@@ -16,7 +16,7 @@
         </div>
     </header>
     <main class="platilla-reporte-main">
-            <?php require_once("tabla".$this->controladorMetodoParametro[0].".php") ?>
+            <?php require_once("tabla".ucfirst($this->urlReporte).".php") ?>
     </main>
     <footer>
         
@@ -45,7 +45,7 @@ $dompdf->loadHtml($html);
 
 $dompdf->setPaper("A4", "landscape");
 $dompdf->render();
-$dompdf->stream($this->controladorMetodoParametro[0], array('Attachment' => false));
+$dompdf->stream($this->fileName, array('Attachment' => false));
 
 ?>
 

@@ -4,8 +4,8 @@
     <p>Cantidad Total de Registros: <?php echo(count($this->data)) ?> </p>
 </div>
 <div class="platilla-reporte__container-table">
-    <table class="platilla-reporte__table platilla-reporte__table--kardex table">
-        <thead class="table-thead table-thead--kardex">
+    <table class="platilla-reporte__table table">
+        <thead class="table-thead">
             <tr class="table-tr">
                 <td>codInvt</td>
                 <td>ProCodBarras</td>
@@ -24,7 +24,7 @@
         </thead>
         <tbody>
             <?php foreach($this->data as $key => $value): ?>
-                <tr class="kardex__table-tboby-tr">
+                <tr>
                     <td><?php echo $value["InvCodigo"] ?></td>
                     <td><?php echo $value["ProCodBarras"] ?></td>
                     <td><?php echo $value["ProDescripcion"] ?></td>

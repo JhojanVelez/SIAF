@@ -68,14 +68,17 @@ text-align: center;
 }
 
 thead td {
-padding: .3rem;
+    font-size: .8rem;
+    text-align: center;
+    padding: .2rem;
 }
 
 tbody td {
-min-width: min-content;
-max-width: 300px;
-word-break: break-word;
-padding-left: 1rem;
+    min-width: min-content;
+    max-width: 300px;
+    word-break: break-word;
+    font-size: .7rem;
+    padding-left: .5rem;
 }
 
 .table-td--comentarios {
@@ -92,17 +95,6 @@ background-color: #6b63ff48;
 }
 
 /*Estilos para el reporte de kardex*/
-
-.table-thead--kardex td {
-    font-size: .8rem;
-    text-align: center;
-    padding: .2rem;
-}
-
-.kardex__table-tboby-tr td {
-    font-size: .7rem;
-    padding-left: .5rem;
-}
 
 main table td.kardex__table-stock-red {
     background-color: rgb(160, 0, 0);

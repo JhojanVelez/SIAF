@@ -658,7 +658,13 @@
                         <img src="<?php echo(URL_RAIZ); ?>public/imagenes/reportes-icono.svg" alt="">
                     </div>
                     <div class="productos__modal-productos-inhabilitados-gen-repo-container-text">
-                        <a class="filtro-subtitulo-reporte" href="">Generar Reporte</a>
+                        <a 
+                        target="_BLACK"
+                        class="filtro-subtitulo-reporte" 
+                        href="<?php echo(URL_RAIZ); ?>productos/generarReporteInhabilitados"
+                        >
+                        Generar Reporte
+                        </a>
                     </div>
                 </div>
                 <section class="productos__modal-productos-inhabilitados-table-container container-table">
