@@ -18,9 +18,6 @@
     <main class="platilla-reporte-main">
             <?php require_once("tabla".ucfirst($this->urlReporte).".php") ?>
     </main>
-    <footer>
-        
-    </footer>
 </body>
 </html>
 

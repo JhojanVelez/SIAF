@@ -27,6 +27,8 @@ import {agregar} from 'http://localhost:8080/SIAF/ajax/agregar.js';
         if(e.target.matches(".proveedores__modal-agregar-proveedor-btn-añadir")) {
             validador = true;
 
+            validarCorreo();
+
             $inputs.forEach(el => el.value = el.value.toUpperCase().trim());
 
             $inputs.forEach(input => {
@@ -37,8 +39,6 @@ import {agregar} from 'http://localhost:8080/SIAF/ajax/agregar.js';
                     input.classList.remove("input-invalido");
                 }
             });
-
-            validarCorreo();
 
             if(validador) {
                 $modal_1.toggleAttribute("open");
@@ -60,14 +60,30 @@ import {agregar} from 'http://localhost:8080/SIAF/ajax/agregar.js';
         }
         if(e.target.matches(".proveedores__modal-agregar-proveedor-confirmacion-btn-confirmar")) {
             $modal_2.toggleAttribute("open");
-            $modal_3.toggleAttribute("open");
+            agregar($formulario,"Proveedores")
+            .then(res=>{
+                console.log(res);
+                if(res.complete) {
+                    $modal_3.toggleAttribute("open");
+                } else {
+                    $modal_4.toggleAttribute("open");
+                    $modal_4.querySelector("H2").innerHTML = "¡Uppss!";
+                    $modal_4.querySelector("P").innerHTML = res.errorMessage;
+                }
+            }).catch(err => {
+                $modal_4.toggleAttribute("open");
+                $modal_4.querySelector("P").innerHTML = err.errorMessage;
+            });
         }
         if(e.target.matches(".proveedores__modal-agregar-proveedor-confirmacion-btn-cancelar")) {
             $modal_1.toggleAttribute("open");
             $modal_2.toggleAttribute("open");
         }
         if(e.target.matches(".proveedores__modal-agregacion-exitosa-btn")) {
-            $modal_3.toggleAttribute("open");
+            location.reload();
+        }
+        if(e.target.matches(".proveedores__modal-agregacion-fallo-btn")) {
+            $modal_4.toggleAttribute("open");
             $transparentBackgroundModal.classList.toggle("visible");
         }
     })
