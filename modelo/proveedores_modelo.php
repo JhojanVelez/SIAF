@@ -4,10 +4,21 @@ class ProveedoresModelo extends ConexionBD {
 
     private $nit;
     private $nombre;
+    private $correo;
     private $telefono;
     private $direccion;
-    private $correo;
     private $ciudad;
+
+    public function buscarPorId ($id) {
+        try {
+            $this->PDOStmt = $this->connection->prepare("SELECT * FROM tbl_proveedores WHERE ProNIT = ?");
+            $this->PDOStmt->execute(array($id));
+            return $this->PDOStmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            $this->result["errorPDOMessage"] = $e->errorInfo;
+            return $this->result;
+        }
+    }
 
     public function obtenerTodosLosDatos () {
         try {
@@ -26,9 +37,9 @@ class ProveedoresModelo extends ConexionBD {
                         VALUES (
                             :nit,
                             :nombre,
+                            :correo,
                             :telefono,
                             :direccion,
-                            :correo,
                             :ciudad
                         )";
 
@@ -36,9 +47,9 @@ class ProveedoresModelo extends ConexionBD {
 
             $this->PDOStmt->bindValue(":nit",$this->nit);
             $this->PDOStmt->bindValue(":nombre",$this->nombre);
-            $this->PDOStmt->bindValue(":telefono",$this->telefono);
-            $this->PDOStmt->bindValue(":direccion",$this->direccion);
             $this->PDOStmt->bindValue(":correo",$this->correo);
+            $this->PDOStmt->bindValue(":direccion",$this->direccion);
+            $this->PDOStmt->bindValue(":telefono",$this->telefono);
             $this->PDOStmt->bindValue(":ciudad",$this->ciudad);
 
             $this->PDOStmt->execute();
@@ -52,6 +63,47 @@ class ProveedoresModelo extends ConexionBD {
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
             $this->result["errorPDOMessage"] = $e->errorInfo;
             $this->result["errorMessage"] = "El proveedor $this->nit no pudo ser registrado porque ya existe";
+            return $this->result;
+        }
+    }
+
+    public function editarProveedores ($idProveedorSeleccionado) {
+        try {
+            $this->sql ="UPDATE  
+                        TBL_PROVEEDORES 
+                        SET 
+                            ProNIT          = :nit,
+                            ProNombre       = :nombre,
+                            ProCorreo       = :correo,
+                            ProTelefono     = :telefono,
+                            ProDireccion    = :direccion,
+                            ProCiudad       = :ciudad
+                        WHERE 
+                            ProNIT = :idProveedorSeleccionado
+                        ";
+
+            $this->PDOStmt = $this->connection->prepare($this->sql);
+
+            $this->PDOStmt->bindValue(":nit",$this->nit);
+            $this->PDOStmt->bindValue(":nombre",$this->nombre);
+            $this->PDOStmt->bindValue(":correo",$this->correo);
+            $this->PDOStmt->bindValue(":direccion",$this->direccion);
+            $this->PDOStmt->bindValue(":telefono",$this->telefono);
+            $this->PDOStmt->bindValue(":ciudad",$this->ciudad);
+            $this->PDOStmt->bindValue(":idProveedorSeleccionado",$idProveedorSeleccionado);
+
+            $this->PDOStmt->execute();
+
+            $this->result["complete"] = true;
+            $this->result["affectedRows"] = $this->PDOStmt->rowCount();
+            $this->result["resultMessage"] = "Proveedor editado correctamente";
+            return $this->result;
+
+        } catch (PDOException $e) {
+            $this->result["complete"] = false;
+            $this->result["affectedRows"] = $this->PDOStmt->rowCount();
+            $this->result["errorPDOMessage"] = $e->errorInfo;
+            $this->result["errorMessage"] = "El proveedor no pudo ser modificado porque el NIT $this->nit ya esta registrado en otro proveedor, por favor intenta modificar el valor con un NIT distinto a los demas proveedores";
             return $this->result;
         }
     }

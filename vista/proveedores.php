@@ -82,13 +82,19 @@
                         </section>
                     </div>
                     <div class="proveedores__lista-proveedor-botones contenedor-objetos__objeto-botones">
-                        <button class="proveedores__lista-proveedor-boton proveedores__lista-proveedor-boton-editar boton contenedor-objetos__objeto-boton">
+                        <button 
+                        class="proveedores__lista-proveedor-boton proveedores__lista-proveedor-boton-editar boton contenedor-objetos__objeto-boton"
+                        data-nit-proveedor="<?php echo $value["ProNIT"]; ?>"
+                        >
                             <div class="proveedores__lista-proveedor-boton-img">
                                 <img src="<?php echo(URL_RAIZ); ?>public/imagenes/editar-icono.svg" alt="">
                             </div>
                             <span>Editar</span>
                         </button>
-                        <button class="proveedores__lista-proveedor-boton proveedores__lista-proveedor-boton-inhabilitar boton contenedor-objetos__objeto-boton">
+                        <button 
+                        class="proveedores__lista-proveedor-boton proveedores__lista-proveedor-boton-inhabilitar boton contenedor-objetos__objeto-boton"
+                        data-nit-proveedor="<?php echo $value["ProNIT"]; ?>"
+                        >
                             <div class="proveedores__lista-proveedor-boton-img">
                                 <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.svg" alt="">
                             </div>
@@ -177,18 +183,18 @@
                     data-input 
                     data-ProCiudad
                     >
-                        <option value="">Selecciona la Ciudad</option>
+                    <option value="">Selecciona la Ciudad</option>
                         <option value="ARAUCA">ARAUCA</option>
                         <option value="ARMENIA">ARMENIA</option>
                         <option value="BARRANQUILLA">BARRANQUILLA</option>
                         <option value="BELLO">BELLO</option>
-                        <option value="BOGOT&Atilde;">BOGOT&Aacute;</option>
+                        <option value="BOGOT&Aacute;">BOGOT&Aacute;</option>
                         <option value="BUCARAMANGA">BUCARAMANGA</option>
                         <option value="CALI">CALI</option>
                         <option value="CARTAGENA">CARTAGENA</option>
                         <option value="CUCUTA">CUCUTA</option>
                         <option value="FLORENCIA">FLORENCIA</option>
-                        <option value="IBAGU&EqualTilde;">IBAGU&Eacute;</option>
+                        <option value="IBAGU&Eacute;">IBAGU&Eacute;</option>
                         <option value="MANIZALES">MANIZALES</option>
                         <option value="MEDELL&Iacute;N">MEDELL&Iacute;N</option>
                         <option value="MONTER&Iacute;A">MONTER&Iacute;A</option>
@@ -373,13 +379,13 @@
                         <option value="ARMENIA">ARMENIA</option>
                         <option value="BARRANQUILLA">BARRANQUILLA</option>
                         <option value="BELLO">BELLO</option>
-                        <option value="BOGOT&Atilde;">BOGOT&Aacute;</option>
+                        <option value="BOGOT&Aacute;">BOGOT&Aacute;</option>
                         <option value="BUCARAMANGA">BUCARAMANGA</option>
                         <option value="CALI">CALI</option>
                         <option value="CARTAGENA">CARTAGENA</option>
                         <option value="CUCUTA">CUCUTA</option>
                         <option value="FLORENCIA">FLORENCIA</option>
-                        <option value="IBAGU&EqualTilde;">IBAGU&Eacute;</option>
+                        <option value="IBAGU&Eacute;">IBAGU&Eacute;</option>
                         <option value="MANIZALES">MANIZALES</option>
                         <option value="MEDELL&Iacute;N">MEDELL&Iacute;N</option>
                         <option value="MONTER&Iacute;A">MONTER&Iacute;A</option>
@@ -415,27 +421,27 @@
                     Recuerda revisar detenidamente la informacion del proveedor que estas modificando.
                 </p>
                 <div class="proveedores__modal-editar-proveedor-info-confirmacion dialog-main-content">
-                    <section class="proveedores__modal-editar-proveedor-info-item-confirmacion">
+                    <section class="proveedores__modal-editar-proveedor-info-item-confirmacion" data-ProNIT>
                         <h3>NIT DEL PROVEEDOR</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="proveedores__modal-editar-proveedor-info-item-confirmacion">
+                    <section class="proveedores__modal-editar-proveedor-info-item-confirmacion" data-ProNombre>
                         <h3>NOMBRE DEL PROVEEDOR</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="proveedores__modal-editar-proveedor-info-item-confirmacion">
+                    <section class="proveedores__modal-editar-proveedor-info-item-confirmacion" data-ProTelefono>
                         <h3>TELEFONO</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="proveedores__modal-editar-proveedor-info-item-confirmacion">
+                    <section class="proveedores__modal-editar-proveedor-info-item-confirmacion" data-ProDireccion>
                         <h3>DIRECCI&Oacute;N</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="proveedores__modal-editar-proveedor-info-item-confirmacion">
+                    <section class="proveedores__modal-editar-proveedor-info-item-confirmacion" data-ProCorreo>
                         <h3>CORREO</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="proveedores__modal-editar-proveedor-info-item-confirmacion">
+                    <section class="proveedores__modal-editar-proveedor-info-item-confirmacion" data-ProCiudad>
                         <h3>CIUDAD</h3>
                         <p>________________________________________________</p>
                     </section>
@@ -515,7 +521,7 @@
 
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_proveedores_agregar_proveedor.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_proveedores_proveedores_inhabilitados.js"></script>
-    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_proveedores_editar_proveedor.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_proveedores_editar_proveedor.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_proveedores_inhabilitar_proveedores.js"></script>
 </body>
 </html>

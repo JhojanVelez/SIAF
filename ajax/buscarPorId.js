@@ -1,4 +1,4 @@
-export function buscarPorId (id) {
+export function buscarPorId (id,modulo) {
     return new Promise((resolve, reject)=> {
         const xhr = new XMLHttpRequest;
 
@@ -24,7 +24,7 @@ export function buscarPorId (id) {
             } 
         })
 
-        xhr.open("GET", `http://localhost:8080/SIAF/productos/buscarPorId/${id}`);
+        xhr.open("GET", `http://localhost:8080/SIAF/${modulo}/buscarPorId/${id}`);
 
         xhr.send();
 

@@ -112,7 +112,7 @@ class ProductosControlador extends Controlador{
             $this->instanciaModelo->setInvima(htmlentities(addslashes($_POST["invima"])));
             $this->instanciaModelo->setNitProveedor(htmlentities(addslashes($_POST["nitProveedor"])));
 
-            $this->result = $this->instanciaModelo->editarProductos($idProductoSeleccionado);
+            $this->result = $this->instanciaModelo->editarProductos(htmlentities(addslashes($idProductoSeleccionado)));
             echo(json_encode($this->result));
 
         } catch (Exception $e) {

@@ -20,7 +20,7 @@ import { editar } from "../../ajax/editar.js";
             $modal_1.querySelector("#codigoBarrasProducto").focus()
             $inputs[1].disabled = true;
             idProductoSeleccionado = e.target.dataset.idProduct
-            buscarPorId(idProductoSeleccionado)
+            buscarPorId(idProductoSeleccionado,"Productos")
             .then((res)=> {
                 for(let key in res) {
                     $inputs.filter(el => {
