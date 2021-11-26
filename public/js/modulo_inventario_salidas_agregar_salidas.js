@@ -1,4 +1,4 @@
-import {agregar} from 'http://localhost:8080/SIAF/ajax/agregar.js';
+import {agregar} from '../../ajax/agregar.js';
 (function(){
     const d = document,
     $transparentBackgroundModal = d.querySelector(".salidas__container-modal"),

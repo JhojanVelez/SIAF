@@ -1,4 +1,4 @@
-import {buscarPorId} from "http://localhost:8080/SIAF/ajax/buscarPorId.js";
+import {buscarPorId} from "../../ajax/buscarPorId";
 import { inhabilitar } from "../../ajax/inhabilitar.js";
 (function(){
     const d = document,
