@@ -108,6 +108,31 @@ class ProveedoresModelo extends ConexionBD {
         }
     }
 
+    public function eliminar($id) {
+        $this->setNit(htmlentities(addslashes($id)));
+        try {
+            $this->sql="DELETE FROM tbl_proveedores WHERE proNIT = ?";
+
+            $this->PDOStmt = $this->connection->prepare($this->sql);
+
+            $this->PDOStmt->execute(array($this->nit));
+
+            $this->result["complete"] = true;
+            $this->result["affectedRows"] = $this->PDOStmt->rowCount();
+            $this->result["resultMessage"] = $this->PDOStmt->rowCount() != 0 
+                                            ? "El proveedor $this->nit se inhabilito correctamente"
+                                            : "No se encontro ningun proveedor, por lo tanto no se pudo realizar el proceso de inhabilitacion";
+            return $this->result;
+
+        } catch (PDOException $e) {
+            $this->result["complete"] = false;
+            $this->result["affectedRows"] = $this->PDOStmt->rowCount();
+            $this->result["errorPDOMessage"] = $e->errorInfo;
+            if($e->errorInfo[1] == 1451) $this->result["errorMessage"] = "El proveedor $this->nit no pudo ser inhabilitado porque la infomacion de este proveedor es fundamental para el funcionamiento de otras secciones del sistema.";
+            return $this->result;
+        }
+    }
+
     /* Metodos Getter */
 
     public function getNit () {return $this->nit;}
