@@ -474,27 +474,27 @@
                     Recuerda que una vez inhabilitado, no lo podras volver a habilitar.
                 </p>
                 <div class="proveedores__modal-inhabilitar-proveedor-info dialog-main-content">
-                    <section class="proveedores__modal-inhabilitar-proveedor-info-item">
+                    <section class="proveedores__modal-inhabilitar-proveedor-info-item" data-ProNIT>
                         <h3>NIT DEL PROVEEDOR</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="proveedores__modal-inhabilitar-proveedor-info-item">
+                    <section class="proveedores__modal-inhabilitar-proveedor-info-item" data-ProNombre>
                         <h3>NOMBRE DEL PROVEEDOR</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="proveedores__modal-inhabilitar-proveedor-info-item">
+                    <section class="proveedores__modal-inhabilitar-proveedor-info-item" data-ProTelefono>
                         <h3>TELEFONO</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="proveedores__modal-inhabilitar-proveedor-info-item">
+                    <section class="proveedores__modal-inhabilitar-proveedor-info-item" data-ProDireccion>
                         <h3>DIRECCI&Oacute;N</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="proveedores__modal-inhabilitar-proveedor-info-item">
+                    <section class="proveedores__modal-inhabilitar-proveedor-info-item" data-ProCorreo>
                         <h3>CORREO</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="proveedores__modal-inhabilitar-proveedor-info-item">
+                    <section class="proveedores__modal-inhabilitar-proveedor-info-item" data-ProCiudad>
                         <h3>CIUDAD</h3>
                         <p>________________________________________________</p>
                     </section>
@@ -522,6 +522,6 @@
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_proveedores_agregar_proveedor.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_proveedores_proveedores_inhabilitados.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_proveedores_editar_proveedor.js" type="module"></script>
-    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_proveedores_inhabilitar_proveedores.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_proveedores_inhabilitar_proveedores.js" type="module"></script>
 </body>
 </html>

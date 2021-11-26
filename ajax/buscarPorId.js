@@ -28,6 +28,5 @@ export function buscarPorId (id,modulo) {
 
         xhr.send();
 
-
     })
 }

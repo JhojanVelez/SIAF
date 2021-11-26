@@ -1,4 +1,4 @@
-import {buscarPorId} from "../../ajax/buscarPorId";
+import {buscarPorId} from "../../ajax/buscarPorId.js";
 import { inhabilitar } from "../../ajax/inhabilitar.js";
 (function(){
     const d = document,
