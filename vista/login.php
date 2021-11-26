@@ -14,7 +14,7 @@
         <div class="iniciar-sesion">
 
             <section class="iniciar-sesion__container">
-                <img class="iniciar-sesion__img" src="<?php echo(URL_RAIZ); ?>public/imagenes/img-inicio-sesion.svg" alt="SIAF" />
+                <img class="iniciar-sesion__img" src="<?php echo(URL_RAIZ); ?>public/imagenes/logo-SIAF.svg" alt="SIAF" />
             </section>
 
             <section class="iniciar-sesion__container">
