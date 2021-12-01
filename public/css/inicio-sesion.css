@@ -16,13 +16,6 @@ input, select {
   grid-template-columns: repeat(2,minmax(50%,1000px));
   justify-items: center;
   align-items: center;
-  /* width: 80%;
-  max-width: 1920px;
-  height: 100vh;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-around; */
 }
 
 .iniciar-sesion__container {
@@ -36,7 +29,6 @@ input, select {
   width: 100%;
   display: grid;
   grid-template-rows: 60% 20%;
-  /* grid-template-rows: 25% 20%; */
   align-content: center;
 }
 
@@ -166,10 +158,6 @@ input, select {
   100% {
     border: 6px solid var(--color-nav-background);
   }
-}
-
-.iniciar-sesion__img {
-  object-fit: contain;
 }
 
 .iniciar-sesion__flex-container {
