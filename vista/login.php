@@ -14,7 +14,20 @@
         <div class="iniciar-sesion">
 
             <section class="iniciar-sesion__container">
-                <img class="iniciar-sesion__img" src="<?php echo(URL_RAIZ); ?>public/imagenes/logo-SIAF.svg" alt="SIAF" />
+                <!-- <img class="iniciar-sesion__img" src="<?php echo(URL_RAIZ); ?>public/imagenes/logo-SIAF.svg" alt="SIAF" /> -->
+                <div class="iniciar-sesion__logo-container">
+                    <div class="iniciar-sesion__logo-letras-container">
+                        <div class="iniciar-sesion__logo-letras">
+                            <div class="iniciar-sesion__logo-letra">S</div>
+                            <div class="iniciar-sesion__logo-letra">I</div>
+                            <div class="iniciar-sesion__logo-letra">A</div>
+                            <div class="iniciar-sesion__logo-letra">F</div>
+                        </div>
+                    </div>
+                    <div class="iniciar-sesion__logo-titulo-container">
+                        <p class="iniciar-sesion__logo-titulo">Sistema de Inventario a Farmacias</p>
+                    </div>
+                </div>
             </section>
 
             <section class="iniciar-sesion__container">
