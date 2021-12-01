@@ -20,7 +20,7 @@
                 <button class="boton-cerrar-sesion-container__boton boton">
                     <div class="sign-out-container">
                         <section class="sign-out-container__img">
-                            <img src="<?php echo(URL_RAIZ) ?>public/imagenes/sign-out.png" alt="sign out">
+                            <img src="<?php echo(URL_RAIZ) ?>public/imagenes/sign-out.svg" alt="sign out">
                         </section>
                         <section class="sign-out-container__text" >
                             CERRAR SESION

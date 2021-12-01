@@ -24,6 +24,8 @@ input, select {
   text-align: center;
 }
 
+/*Codigo css para el logo*/
+
 .iniciar-sesion__logo-container {
   height: 100%;
   width: 100%;
@@ -109,7 +111,6 @@ input, select {
 
 .iniciar-sesion__logo-titulo-container,
 .iniciar-sesion__logo-letras-container {
-  transition: 1s all;
   opacity: 0;
   animation-name: logo-fade-animation;
   animation-duration: 1s;

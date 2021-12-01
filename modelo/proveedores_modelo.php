@@ -20,6 +20,26 @@ class ProveedoresModelo extends ConexionBD {
         }
     }
 
+    public function buscarPorAtributos () {
+        $this->sql ="SELECT * 
+                    FROM tbl_proveedores
+                    WHERE
+                    ProNIT      LIKE :nit    OR
+                    ProNombre   LIKE :nombre OR
+                    ProCiudad   LIKE :ciudad     
+                    ORDER BY ProNombre";
+                    
+        $this->PDOStmt = $this->connection->prepare($this->sql);
+        
+        $this->PDOStmt->bindValue(":nit",$this->nit);
+        $this->PDOStmt->bindValue(":nombre",$this->nombre);
+        $this->PDOStmt->bindValue(":ciudad",$this->ciudad);
+
+        $this->PDOStmt->execute();
+
+        return $this->PDOStmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public function obtenerTodosLosDatos () {
         try {
             $this->rows['infoProveedores'] = $this->connection->query("SELECT * FROM TBL_PROVEEDORES ORDER BY ProNombre")->fetchAll(PDO::FETCH_ASSOC);

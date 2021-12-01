@@ -22,18 +22,48 @@
         <section class="proveedores__container-filter container-filter box-shadow">
             <div class="proveedores__filtro filtro">
                 <h2 class="proveedores__filtro-titulo filtro-title">Filtros de busqueda</h2>
-                <form class="proveedores__filtro-form filtro-form" action="">
+                <form 
+                id="proveedores__filtro-form" 
+                class="proveedores__filtro-form filtro-form"
+                action="<?php echo URL_RAIZ ?>proveedores/generarReporte" 
+                method="POST" 
+                target="_BLANK"
+                >
                     <section class="proveedores__filtro-input-container">
                         <label class="proveedores__filtro-input-label filtro-label" for="proveedor-id">Por el NIT</label>
-                        <input type="text" class="proveedores__filtro-proveedor-id" id="proveedor-id" placeholder="NIT">
+                        <input 
+                        name="nit"
+                        type="text" 
+                        class="proveedores__filtro-proveedor-id" 
+                        id="proveedor-id" 
+                        placeholder="NIT"
+                        autocomplete="off"
+                        data-input
+                        >
                     </section>
                     <section class="proveedores__filtro-input-container">
                         <label class="proveedores__filtro-input-label filtro-label" for="proveedor-nombre">Por su nombre</label>
-                        <input type="text" class="proveedores__filtro-proveedor-nombre" id="proveedor-nombre" placeholder="Nombre">
+                        <input 
+                        name="nombre"
+                        type="text" 
+                        class="proveedores__filtro-proveedor-nombre" 
+                        id="proveedor-nombre" 
+                        placeholder="Nombre"
+                        autocomplete="off"
+                        data-input
+                        >
                     </section>
                         <section class="proveedores__filtro-input-container">
                         <label class="proveedores__filtro-input-label filtro-label" for="proveedor-ciudad">Por ciudad</label>
-                        <input type="text" class="proveedores__filtro-proveedor-nombre" id="proveedor-ciudad" placeholder="Ciudad">
+                        <input 
+                        name="ciudad"
+                        type="text" 
+                        class="proveedores__filtro-proveedor-nombre" 
+                        id="proveedor-ciudad" 
+                        placeholder="Ciudad"
+                        autocomplete="off"
+                        data-input
+                        >
                     </section>
                 </form>
                 <div class="proveedores__filtro-gen-repo filtro-gen-repo">
@@ -104,6 +134,64 @@
                     </div>
                 </figure>
                 <?php endforeach; ?>
+
+                <!-- 
+                    Este template nos permite imprimir la informacion cuando estamos buscando por atributo
+                    pero en este caso lo hacemos con template para hacer uso de los fragmentos
+                -->
+                <template class="proveedores__lista-proveedor-template">
+                    <figure class="proveedores__lista-proveedor contenedor-objetos__objeto box-shadow">
+                        <div class="proveedores__lista-proveedor-img contenedor-objetos__objeto-img">
+                            <img src="<?php echo(URL_RAIZ); ?>public/imagenes/proveedor-icono.svg" alt="">
+                        </div>
+                        <div class="proveedores__lista-proveedor-info-container">
+                            <section class="proveedores__lista-proveedor-info nit">
+                                <h4 class="proveedores__lista-proveedor-info-title">NIT</h4>
+                                <p class="proveedores__lista-proveedor-data"></p>
+                            </section>
+                            <section class="proveedores__lista-proveedor-info nombre">
+                                <h4 class="proveedores__lista-proveedor-info-title">NOMBRE</h4>
+                                <p class="proveedores__lista-proveedor-data"></p>
+                            </section>
+                            <section class="proveedores__lista-proveedor-info telefono">
+                                <h4 class="proveedores__lista-proveedor-info-title">TELEFONO</h4>
+                                <p class="proveedores__lista-proveedor-data"></p>
+                            </section>
+                            <section class="proveedores__lista-proveedor-info correo">
+                                <h4 class="proveedores__lista-proveedor-info-title">CORREO</h4>
+                                <p class="proveedores__lista-proveedor-data"></p>
+                            </section>
+                            <section class="proveedores__lista-proveedor-info direccion">
+                                <h4 class="proveedores__lista-proveedor-info-title">DIRECCION</h4>
+                                <p class="proveedores__lista-proveedor-data"></p>
+                            </section>
+                            <section class="proveedores__lista-proveedor-info ciudad">
+                                <h4 class="proveedores__lista-proveedor-info-title">CIUDAD</h4>
+                                <p class="proveedores__lista-proveedor-data"></p>
+                            </section>
+                        </div>
+                        <div class="proveedores__lista-proveedor-botones contenedor-objetos__objeto-botones">
+                            <button 
+                            class="proveedores__lista-proveedor-boton proveedores__lista-proveedor-boton-editar boton contenedor-objetos__objeto-boton"
+                            data-nit-proveedor=""
+                            >
+                                <div class="proveedores__lista-proveedor-boton-img">
+                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/editar-icono.svg" alt="">
+                                </div>
+                                <span>Editar</span>
+                            </button>
+                            <button 
+                            class="proveedores__lista-proveedor-boton proveedores__lista-proveedor-boton-inhabilitar boton contenedor-objetos__objeto-boton"
+                            data-nit-proveedor=""
+                            >
+                                <div class="proveedores__lista-proveedor-boton-img">
+                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.svg" alt="">
+                                </div>
+                                <span>Inhabilitar</span>
+                            </button>
+                        </div>
+                    </figure>
+                </template>
             </div>
         </section>
 
@@ -524,5 +612,6 @@
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_proveedores_proveedores_inhabilitados.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_proveedores_editar_proveedor.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_proveedores_inhabilitar_proveedores.js" type="module"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_proveedores_buscar_por_atributos.js" type="module"></script>
 </body>
 </html>
