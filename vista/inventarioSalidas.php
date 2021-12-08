@@ -147,13 +147,12 @@
         </section>
 
 
-        <section class="salidas__container-botones container-botones box-shadow">
-            <section class="salidas__container-boton">
-                <button class="salidas__boton-agregar boton">
-                    A&ntilde;adir
-                </button>
-            </section>
-        </section>
+        <div class="salidas__boton-agregar-container">
+            <button class="salidas__boton-agregar boton">
+                <span class="salidas__boton-agregar-simbol salidas__boton-agregar">+</span>
+                <span class="salidas__boton-agregar-txt">A&ntilde;adir</span>
+            </button>
+        </div>
 
 
         <!-- Estos son los modals para agregar una salida -->

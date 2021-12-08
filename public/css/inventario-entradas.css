@@ -98,13 +98,6 @@
     grid-area: filter-gen-repo;
 }
 
-
-.entradas__container-botones {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .entradas__boton-agregar-container {
     width: 60px;
     height: 60px;
@@ -127,7 +120,7 @@
     height: 100%;
     font-size: 3rem;
     line-height: 52px;
-    transition: 1s;
+    transition: transform 1s;
     border-radius: 50px;
     background-color: var(--color-nav-background);
     border: 2px solid var(--color-button-text);
@@ -149,7 +142,7 @@
     left: 10%;
     top: 15px;
     padding: 5px 15px;
-    transition: 1s;
+    transition: transform 1s, color 1s, width 1s;
     z-index: -1;
 }
 
