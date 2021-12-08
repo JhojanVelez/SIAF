@@ -148,13 +148,20 @@
         </section>
 
 
-        <section class="entradas__container-botones container-botones box-shadow">
+        <!-- <section class="entradas__container-botones container-botones box-shadow">
             <section class="entradas__container-boton">
                 <button class="entradas__boton-agregar boton">
                     A&ntilde;adir
                 </button>
             </section>
-        </section>
+        </section> -->
+
+        <div class="entradas__boton-agregar-container">
+            <button class="entradas__boton-agregar boton">
+                <span class="entradas__boton-agregar-simbol entradas__boton-agregar">+</span>
+                <span class="entradas__boton-agregar-txt">A&ntilde;adir</span>
+            </button>
+        </div>
 
 
 
