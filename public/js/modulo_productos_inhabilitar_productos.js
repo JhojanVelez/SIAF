@@ -1,4 +1,4 @@
-import {buscarPorId} from "http://localhost:8080/SIAF/ajax/buscarPorId.js";
+import {buscarPorId} from "../../ajax/buscarPorId.js";
 import { inhabilitar } from "../../ajax/inhabilitar.js";
 (function(){
     const d = document,
@@ -16,7 +16,7 @@ import { inhabilitar } from "../../ajax/inhabilitar.js";
             $transparentBackgroundModal.classList.toggle("visible");
             $modal_1.toggleAttribute("open");
             idProductoSeleccionado = e.target.dataset.idProduct
-            buscarPorId(idProductoSeleccionado)
+            buscarPorId(idProductoSeleccionado,"Productos")
             .then((res)=> {
                 for(let key in res) {
                     $itemsConfirmacion.filter(el => {

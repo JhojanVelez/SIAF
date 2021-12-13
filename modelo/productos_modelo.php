@@ -28,6 +28,14 @@ class ProductosModelo extends ConexionBD{
         }
     }
 
+    public function buscarInhabilitados () {
+        try {
+            return $this->connection->query("SELECT * FROM TBL_PRODUCTOS_INHABILITADOS ORDER BY ProFechaInhabilitacion DESC")->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            return "Error al obtener todos los productos inhabilitados";
+        }
+    }
+
     public function buscarPorId ($id) {
         $this->PDOStmt = $this->connection->prepare("SELECT * FROM PRODUCTOS WHERE ProCodBarras = ?");
         $this->PDOStmt->execute(array($id));
@@ -134,9 +142,7 @@ class ProductosModelo extends ConexionBD{
 
             $this->result["complete"] = true;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
-            $this->result["resultMessage"] = $this->PDOStmt->rowCount() != 0
-                                            ? "Producto editado correctamente"
-                                            : "El producto $idProductoSeleccionado no pudo ser editado porque no esta registrado en el sistema.";
+            $this->result["resultMessage"] = "Producto editado correctamente";
             return $this->result;
 
         } catch (PDOException $e) {

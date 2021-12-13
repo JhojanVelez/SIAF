@@ -8,28 +8,163 @@ input, select {
 }
 
 .iniciar-sesion {
-  width: 80%;
-  max-width: 1920px;
+  min-width: 1500px;
+  max-width: 80%;
   height: 100vh;
   margin: auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2,minmax(50%,1000px));
+  justify-items: center;
   align-items: center;
-  justify-content: space-around;
 }
 
 .iniciar-sesion__container {
-  max-width: 50%;
-  min-width: 500px;
+  width: 500px;
   height: 600px;
+  text-align: center;
 }
 
-.iniciar-sesion__img {
-  object-fit: contain;
+/*Codigo css para el logo*/
+
+.iniciar-sesion__logo-container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 60% 20%;
+  align-content: center;
+}
+
+.iniciar-sesion__logo-letras-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.iniciar-sesion__logo-letras {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3,100px);
+  grid-template-rows: repeat(3,100px);
+  grid-template-areas:"x I d"
+                      "S c A"
+                      "b F g";
+}
+
+.iniciar-sesion__logo-letras::before {
+  content: '';
+  display: block;
+  border-radius: 100%;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
+
+  animation-name: logo-circulo-animation;
+  animation-duration: .7s;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+
+.iniciar-sesion__logo-letra {
+  background-color: var(--color-nav-background);
+  border-radius: 15px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--color-card-background);
+  line-height: 100px;
+
+  animation-name: logo-union-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+.iniciar-sesion__logo-letra:nth-child(1) {
+  grid-area: S;
+  transform: translate(-100%,100%);
+}
+.iniciar-sesion__logo-letra:nth-child(2) {
+  grid-area: I;
+  transform: translate(-65%,200%);
+}
+.iniciar-sesion__logo-letra:nth-child(3) {
+  grid-area: A;
+  transform: translate(-35%,100%);
+}
+.iniciar-sesion__logo-letra:nth-child(4) {
+  grid-area: F;
+  transform: translate(200%,0);
+}
+
+.iniciar-sesion__logo-titulo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iniciar-sesion__logo-titulo {
+  font-size: 3rem;
+  color: var(--color-nav-background);
+}
+
+.iniciar-sesion__logo-titulo-container,
+.iniciar-sesion__logo-letras-container {
+  opacity: 0;
+  animation-name: logo-fade-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.iniciar-sesion__logo-letras-container {
+  transform: translateY(-100%);
+}
+
+.iniciar-sesion__logo-titulo-container {
+  transform: translateY(100%);
+}
+
+
+/* Animacion para el logo */
+
+@keyframes logo-fade-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes logo-union-animation {
+  to {
+    transform: translate(0,0);
+  }
+}
+
+@keyframes logo-circulo-animation {
+  0% {
+    border-left: 6px solid var(--color-nav-background);
+  }
+  25% {
+    border-top: 6px solid var(--color-nav-background);
+  }
+  50% {
+    border-right: 6px solid var(--color-nav-background);
+  }
+  75% {
+    border-bottom: 6px solid var(--color-nav-background);
+  }
+  100% {
+    border: 6px solid var(--color-nav-background);
+  }
 }
 
 .iniciar-sesion__flex-container {
   height: 100%;
   display: flex;
+  border-top: 4px solid var(--color-nav-background);
 }
 
 .iniciar-sesion__titulo {
