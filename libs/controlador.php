@@ -20,7 +20,8 @@ class Controlador {
 
     function cargarModelo($urlModelo) {
         require_once($urlModelo);
-        return $this->instanciaModelo = new ($this->controladorMetodoParametro[0]."Modelo");
+        $classModelName = $this->controladorMetodoParametro[0]."Modelo";
+        return $this->instanciaModelo = new $classModelName;
     }
 
     function cargarVista($urlVista) {
