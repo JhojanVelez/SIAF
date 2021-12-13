@@ -42,8 +42,8 @@ class ProveedoresModelo extends ConexionBD {
 
     public function obtenerTodosLosDatos () {
         try {
-            $this->rows['infoProveedores'] = $this->connection->query("SELECT * FROM TBL_PROVEEDORES ORDER BY ProNombre")->fetchAll(PDO::FETCH_ASSOC);
-            $this->rows['infoProveedoresInhabilitados'] = $this->connection->query("SELECT * FROM TBL_PROVEEDORES_INHABILITADOS ORDER BY ProFechaInhabilitacion DESC")->fetchAll(PDO::FETCH_ASSOC);
+            $this->rows['infoProveedores'] = $this->connection->query("SELECT * FROM tbl_proveedores ORDER BY ProNombre")->fetchAll(PDO::FETCH_ASSOC);
+            $this->rows['infoProveedoresInhabilitados'] = $this->connection->query("SELECT * FROM tbl_proveedores_inhabilitados ORDER BY ProFechaInhabilitacion DESC")->fetchAll(PDO::FETCH_ASSOC);
             return $this->rows;
         } catch (PDOException $e) {
             return "Error al obtener todos los proveedores";
@@ -53,7 +53,7 @@ class ProveedoresModelo extends ConexionBD {
     public function registrarProveedores () {
         try {
             $this->sql ="INSERT INTO 
-                        TBL_PROVEEDORES 
+                        tbl_proveedores
                         VALUES (
                             :nit,
                             :nombre,
@@ -90,7 +90,7 @@ class ProveedoresModelo extends ConexionBD {
     public function editarProveedores ($idProveedorSeleccionado) {
         try {
             $this->sql ="UPDATE  
-                        TBL_PROVEEDORES 
+                        tbl_proveedores
                         SET 
                             ProNIT          = :nit,
                             ProNombre       = :nombre,
