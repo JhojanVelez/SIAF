@@ -18,4 +18,3 @@ jobs:
         server: files.000webhost.com
         username: s-i-a-f
         password: ${{ secrets.ftp_password }}
-        
