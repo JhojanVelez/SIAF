@@ -23,7 +23,8 @@ class Router {
 
         if(file_exists($urlController)) {
             require $urlController;
-            $controller = new ($url[0].'Controlador')($url);
+            $classControllerName = $url[0].'Controlador';
+            $controller = new $classControllerName($url);
             /*
             Se realiza esta validacion, porque no todas las intefaces necesitan un modelo,
             por lo tanto si existe un modelo lo cargamos
