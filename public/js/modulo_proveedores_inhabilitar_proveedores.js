@@ -16,7 +16,7 @@ import { inhabilitar } from "../../ajax/inhabilitar.js";
             $modal_1.toggleAttribute("open");
             scroll(0,280);
             idProveedor = e.target.closest("button.proveedores__lista-proveedor-boton-inhabilitar").dataset.nitProveedor;
-            buscarPorId(idProveedor,"proveedores")
+            buscarPorId(idProveedor,"proveedores",URL_RAIZ)
             .then((res)=> {
                 console.log(res)
                 for(let key in res) {
@@ -31,7 +31,7 @@ import { inhabilitar } from "../../ajax/inhabilitar.js";
         if(e.target.matches(".proveedores__modal-inhabilitar-proveedor-btn-confirmar")) {
             $modal_1.toggleAttribute("open");
 
-            inhabilitar(idProveedor,"proveedores")
+            inhabilitar(idProveedor,"proveedores",URL_RAIZ)
             .then(res => {
                 if(res.affectedRows != 0) {
                     $modal_2.toggleAttribute("open");

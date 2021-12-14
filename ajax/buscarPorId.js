@@ -1,4 +1,4 @@
-export function buscarPorId (id,modulo) {
+export function buscarPorId (id,modulo,URL_RAIZ) {
     return new Promise((resolve, reject)=> {
         const xhr = new XMLHttpRequest;
 
@@ -24,7 +24,7 @@ export function buscarPorId (id,modulo) {
             } 
         })
 
-        xhr.open("GET", `https://s-i-a-f.000webhostapp.com/${modulo}/buscarPorId/${id}`);
+        xhr.open("GET", `${URL_RAIZ}`+`${modulo}/buscarPorId/${id}`);
 
         xhr.send();
 

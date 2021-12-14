@@ -27,7 +27,7 @@ import { editar } from "../../ajax/editar.js";
             $formulario.nit.focus();
             scroll(0,280);
             idProveedor = e.target.closest("button.proveedores__lista-proveedor-boton-editar").dataset.nitProveedor;
-            buscarPorId(idProveedor,"proveedores")
+            buscarPorId(idProveedor,"proveedores",URL_RAIZ)
             .then((res)=> {
                 console.log(res)
                 for(let key in res) {
@@ -76,7 +76,7 @@ import { editar } from "../../ajax/editar.js";
         }
         if(e.target.matches(".proveedores__modal-editar-proveedor-confirmacion-btn-confirmar")) {
             $modal_2.toggleAttribute("open");
-            editar($formulario,idProveedor,"proveedores")
+            editar($formulario,idProveedor,"proveedores",URL_RAIZ)
             .then(res=>{
                 if(res.complete) {
                     $modal_3.toggleAttribute("open");

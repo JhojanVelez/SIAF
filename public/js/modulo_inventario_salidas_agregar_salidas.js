@@ -69,7 +69,7 @@ import {agregar} from '../../ajax/agregar.js';
         }
         if(e.target.matches(".salidas__modal-agregar-salida-confirmacion-btn-confirmar")) {
             $modal_2.toggleAttribute("open");
-            agregar($formulario,"inventarioSalidas")
+            agregar($formulario,"inventarioSalidas",URL_RAIZ)
             .then(res=>{
                 console.log(res);
                 if(res.complete) {

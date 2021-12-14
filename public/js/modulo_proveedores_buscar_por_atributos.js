@@ -6,12 +6,9 @@ import { buscarPorAtributos } from "../../ajax/buscarPorAtributos.js";
         $templateTabla = $contenedorProveedores.querySelector(".proveedores__lista-proveedor-template").content,
         $fragmento = d.createDocumentFragment();
 
-        console.log()
-
     $formulario.addEventListener("keyup", e =>{
-        buscarPorAtributos($formulario,"proveedores")
+        buscarPorAtributos($formulario,"proveedores",URL_RAIZ)
         .then(res=> {
-            console.log(res)
             imprimirDatosEnTabla(res)
         });
     });

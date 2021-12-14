@@ -587,6 +587,11 @@
         </section>
     </main>
 
+    <script> 
+        /* Se puso var porque queremos que pueda usarse en todos los contextos, 
+        independientemente de si esta en una funcion anonima autoejecutable */
+        var URL_RAIZ = "<?php echo URL_RAIZ ?>"
+    </script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_ver_modal_productos.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_cancelar_venta.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_confirmar_venta.js"></script>

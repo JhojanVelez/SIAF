@@ -15,8 +15,8 @@ import { inhabilitar } from "../../ajax/inhabilitar.js";
         if(e.target.matches(".productos__boton-inhabilitar")) {
             $transparentBackgroundModal.classList.toggle("visible");
             $modal_1.toggleAttribute("open");
-            idProductoSeleccionado = e.target.dataset.idProduct
-            buscarPorId(idProductoSeleccionado,"productos")
+            idProductoSeleccionado = e.target.dataset.idProduct;
+            buscarPorId(idProductoSeleccionado,"productos",URL_RAIZ)
             .then((res)=> {
                 for(let key in res) {
                     $itemsConfirmacion.filter(el => {
@@ -30,7 +30,7 @@ import { inhabilitar } from "../../ajax/inhabilitar.js";
         if(e.target.matches(".productos__modal-inhabilitar-producto-btn-confirmar")) {
             $modal_1.toggleAttribute("open");
 
-            inhabilitar(idProductoSeleccionado,"productos")
+            inhabilitar(idProductoSeleccionado,"productos",URL_RAIZ)
             .then(res => {
                 if(res.affectedRows != 0) {
                     $modal_2.toggleAttribute("open");
@@ -39,7 +39,7 @@ import { inhabilitar } from "../../ajax/inhabilitar.js";
                 } else {
                     $modal_3.toggleAttribute("open");
                     $modal_3.querySelector("H2").innerHTML = "!Por la seguridad de la informacion¡"
-                    $modal_3.querySelector("P").innerHTML = res.resultMessage || "Selecciona un producto para poder inhabilitar";
+                    $modal_3.querySelector("P").innerHTML = res.resultMessage || res.errorMessage;
                 }
             }).catch((err)=> {
                 console.log(err);

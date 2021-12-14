@@ -1,4 +1,4 @@
-export function inhabilitar (id,modulo) {
+export function inhabilitar (id,modulo,URL_RAIZ) {
     return new Promise((resolve, reject)=> {
         const xhr = new XMLHttpRequest;
 
@@ -20,11 +20,12 @@ export function inhabilitar (id,modulo) {
 
             if(xhr.readyState == 4 && (xhr.status >= 200 && xhr.status < 300)) {
                 // resolve(xhr.response);
+                console.log(xhr.response);
                 resolve(JSON.parse(xhr.response));
             } 
         })
 
-        xhr.open("GET", `https://s-i-a-f.000webhostapp.com/${modulo}/eliminar/${id}`);
+        xhr.open("GET", `${URL_RAIZ}`+`${modulo}/eliminar/${id}`);
 
         xhr.send();
 

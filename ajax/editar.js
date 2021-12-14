@@ -1,4 +1,4 @@
-export function editar (formulario,idProductoSeleccionado,modulo) {
+export function editar (formulario,idProductoSeleccionado,modulo,URL_RAIZ) {
     return new Promise((resolve, reject)=> {
         const xhr = new XMLHttpRequest,
             formData = new FormData(formulario);
@@ -23,7 +23,7 @@ export function editar (formulario,idProductoSeleccionado,modulo) {
                 resolve(JSON.parse(xhr.response));
             }
         }) 
-        xhr.open("POST", `https://s-i-a-f.000webhostapp.com/${modulo}/editar/${idProductoSeleccionado}`);
+        xhr.open("POST", `${URL_RAIZ}`+`${modulo}/editar/${idProductoSeleccionado}`);
 
         xhr.send(formData);
     })

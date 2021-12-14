@@ -20,7 +20,7 @@ import { editar } from "../../ajax/editar.js";
             $modal_1.querySelector("#codigoBarrasProducto").focus()
             $inputs[1].disabled = true;
             idProductoSeleccionado = e.target.dataset.idProduct
-            buscarPorId(idProductoSeleccionado,"productos")
+            buscarPorId(idProductoSeleccionado,"productos",URL_RAIZ)
             .then((res)=> {
                 for(let key in res) {
                     $inputs.filter(el => {
@@ -88,7 +88,7 @@ import { editar } from "../../ajax/editar.js";
         if(e.target.matches(".productos__modal-editar-producto-confirmacion-btn-confirmar")) {
             $modal_2.toggleAttribute("open");
             $inputs[1].disabled = false;
-            editar($formulario,idProductoSeleccionado,"productos")
+            editar($formulario,idProductoSeleccionado,"productos",URL_RAIZ)
             .then(res=>{
                 console.log(res);
                 if(res.complete) {

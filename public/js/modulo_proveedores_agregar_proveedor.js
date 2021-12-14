@@ -60,7 +60,7 @@ import {agregar} from '../../ajax/agregar.js';
         }
         if(e.target.matches(".proveedores__modal-agregar-proveedor-confirmacion-btn-confirmar")) {
             $modal_2.toggleAttribute("open");
-            agregar($formulario,"proveedores")
+            agregar($formulario,"proveedores",URL_RAIZ)
             .then(res=>{
                 console.log(res);
                 if(res.complete) {

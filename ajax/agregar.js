@@ -1,4 +1,4 @@
-export function agregar (formulario,modulo) {
+export function agregar (formulario,modulo,URL_RAIZ) {
 
     return new Promise((resolve,reject)=> {
         const xhr = new XMLHttpRequest;
@@ -26,7 +26,7 @@ export function agregar (formulario,modulo) {
                 resolve(JSON.parse(xhr.response));
             } 
         })
-        xhr.open("POST", `https://s-i-a-f.000webhostapp.com/${modulo}/registrar`);
+        xhr.open("POST", `${URL_RAIZ}`+`${modulo}/registrar`);
         xhr.send(formData);
     });
 }

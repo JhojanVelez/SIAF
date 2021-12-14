@@ -294,6 +294,12 @@
             </dialog>
         </section>
     </main>
+
+    <script> 
+        /* Se puso var porque queremos que pueda usarse en todos los contextos, 
+        independientemente de si esta en una funcion anonima autoejecutable */
+        var URL_RAIZ = "<?php echo URL_RAIZ ?>"
+    </script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_inventario_salidas_agregar_salidas.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_inventario_salidas_buscar_por_atributos.js" type="module"></script>
 </body>
