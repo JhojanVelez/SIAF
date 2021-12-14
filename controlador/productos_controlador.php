@@ -6,6 +6,14 @@ class ProductosControlador extends Controlador{
         $this->controladorMetodoParametro = $url;
     }
 
+    public function buscarInhabilitados($ajax = true) {
+        $this->data = $this->instanciaModelo->buscarInhabilitados();
+
+        if($ajax) {
+            echo json_encode($this->data);
+        }
+    }
+
     public function buscarPorAtributos ($ajax = true) {
         /*
         $ajax esta como parametro porque esta funcion va a ser reutilizada en dos casos
@@ -104,7 +112,7 @@ class ProductosControlador extends Controlador{
             $this->instanciaModelo->setInvima(htmlentities(addslashes($_POST["invima"])));
             $this->instanciaModelo->setNitProveedor(htmlentities(addslashes($_POST["nitProveedor"])));
 
-            $this->result = $this->instanciaModelo->editarProductos($idProductoSeleccionado);
+            $this->result = $this->instanciaModelo->editarProductos(htmlentities(addslashes($idProductoSeleccionado)));
             echo(json_encode($this->result));
 
         } catch (Exception $e) {

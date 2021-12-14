@@ -60,16 +60,49 @@
     grid-area: sel-prod-presentacion;
 }
 
-
+table {
+    min-width: 130%;
+}
 
 .kardex__filtro-gen-repo {
     grid-area: filter-gen-repo;
 }
 
 tbody td {
-    min-width: 200px;
+    min-width: 100px;
 }
 
+.kardex__table-tboby-tr:hover {
+    background-color: initial;
+    color: initial;
+    cursor: pointer;
+}
+
+.kardex__table .kardex__table-stock-red {
+    background-color: rgb(160, 0, 0);
+}
+.kardex__table .kardex__table-stock-green {
+    background-color: rgb(0, 146, 0);
+}
+.kardex__table .kardex__table-stock-orange {
+    background-color: rgb(204, 133, 0);
+}
+
+td.kardex__table-stock-red, 
+td.kardex__table-stock-green, 
+td.kardex__table-stock-orange {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    color: white;
+    padding: 0;
+}
+
+.kardex__table tr.kardex__table-stock-red td, 
+.kardex__table tr.kardex__table-stock-green td, 
+.kardex__table tr.kardex__table-stock-orange td {
+    color: white;
+}
 
 .kardex__container-botones {
     display: flex;

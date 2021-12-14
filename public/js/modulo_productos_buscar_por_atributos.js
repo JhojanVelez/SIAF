@@ -2,50 +2,40 @@ import { buscarPorAtributos } from "../../ajax/buscarPorAtributos.js";
 (function () {
     const d = document,
         $formulario = d.querySelector(".productos__filtro-form"),
-        $tabla = d.querySelector(".productos__table");
+        $tabla = d.querySelector(".productos__table"),
+        $templateTabla = $tabla.querySelector(".productos__table-template").content,
+        $fragmento = d.createDocumentFragment();
 
     $formulario.addEventListener("keyup", e =>{
         buscarPorAtributos($formulario,"productos")
         .then(res=> {
-            $tabla.querySelector("tbody").innerHTML = "";
-            res.forEach(el => {
-                $tabla.querySelector("tbody").innerHTML += `
-                <tr>
-                    <td>${el.ProCodBarras}</td>
-                    <td>${el.ProDescripcion}</td>
-                    <td>${el.ProUbicacionFisica}</td>
-                    <td>${el.ProPresentacion}</td>
-                    <td>${el.ProUnidadMedida}</td>
-                    <td>${el.ProPrecioVenta}</td>
-                    <td>${el.ProLaboratorio}</td>
-                    <td>${el.ProRegSanInvima}</td>
-                    <td>${el.tbl_proveedores_ProNIT}</td>
-                    <td>${el.ProNombre}</td>
-                </tr>
-                `;
-            });
+            imprimirDatosEnTabla(res)
         });
     });
     $formulario.addEventListener("change", e =>{
         buscarPorAtributos($formulario,"productos")
         .then(res=> {
-            $tabla.querySelector("tbody").innerHTML = "";
-            res.forEach(el => {
-                $tabla.querySelector("tbody").innerHTML += `
-                <tr>
-                    <td>${el.ProCodBarras}</td>
-                    <td>${el.ProDescripcion}</td>
-                    <td>${el.ProUbicacionFisica}</td>
-                    <td>${el.ProPresentacion}</td>
-                    <td>${el.ProUnidadMedida}</td>
-                    <td>${el.ProPrecioVenta}</td>
-                    <td>${el.ProLaboratorio}</td>
-                    <td>${el.ProRegSanInvima}</td>
-                    <td>${el.tbl_proveedores_ProNIT}</td>
-                    <td>${el.ProNombre}</td>
-                </tr>
-                `;
-            });
+            imprimirDatosEnTabla(res)
         });
     });
+
+    function imprimirDatosEnTabla(res) {
+        $tabla.querySelector("tbody").innerHTML = "";
+        res.forEach(el => {
+            $templateTabla.querySelector("tr").children[0].innerHTML = el.ProCodBarras;
+            $templateTabla.querySelector("tr").children[1].innerHTML = el.ProDescripcion;
+            $templateTabla.querySelector("tr").children[2].innerHTML = el.ProUbicacionFisica;
+            $templateTabla.querySelector("tr").children[3].innerHTML = el.ProPresentacion;
+            $templateTabla.querySelector("tr").children[4].innerHTML = el.ProUnidadMedida;
+            $templateTabla.querySelector("tr").children[5].innerHTML = el.ProPrecioVenta;
+            $templateTabla.querySelector("tr").children[6].innerHTML = el.ProLaboratorio;
+            $templateTabla.querySelector("tr").children[7].innerHTML = el.ProRegSanInvima;
+            $templateTabla.querySelector("tr").children[8].innerHTML = el.tbl_proveedores_ProNIT;
+            $templateTabla.querySelector("tr").children[9].innerHTML = el.ProNombre;
+            
+            let clone = d.importNode($templateTabla,true);
+            $fragmento.append(clone);
+        });
+        $tabla.querySelector("tbody").append($fragmento);
+    }
 })();

@@ -90,6 +90,10 @@ input:focus, select:focus {
   border-color: red;
 }
 
+.input-invalido:focus {
+  border-color: red;
+}
+
 /*Estilos para todos los botones de la pagina*/
 
 
@@ -140,8 +144,7 @@ input[type="button"]:disabled:hover {
                       "contenido"
                       "botones";
   grid-gap: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-top: 1.5rem;
+  padding: 1.5rem;
 }
 
 .container-title {
@@ -235,6 +238,7 @@ input[type="button"]:disabled:hover {
 table {
   min-width: 100%;
   margin: auto;
+  border-radius: var(--border-card-radius);
 }
 
 thead {
@@ -256,6 +260,7 @@ tbody td {
   max-width: 300px;
   word-break: break-word;
   padding-left: 1rem;
+  padding-right: 1rem;
   font-weight: 500;
 }
 
@@ -351,7 +356,7 @@ usuarios, clientes y proveedores */
 }
 
 .contenedor-objetos__contenido {
-  padding: 0 1rem 1rem;
+  padding: 0 1rem 0;
   background-image:linear-gradient(var(--color-main-background),var(--color-main-background)), 
                     linear-gradient(white,white);
   overflow-y: scroll;
@@ -361,6 +366,7 @@ usuarios, clientes y proveedores */
 .contenedor-objetos__objeto {
   display: grid;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   padding: 2rem 0;
   scroll-snap-align: center;
   overflow-x: hidden;
@@ -375,8 +381,9 @@ usuarios, clientes y proveedores */
 .contenedor-objetos__objeto-botones {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-end;
+  gap: 10%;
 }
 
 .contenedor-objetos__objeto-boton {
@@ -389,8 +396,8 @@ usuarios, clientes y proveedores */
 .grid-container-main.proveedores,
 .grid-container-main.clientes,
 .grid-container-main.usuarios {
-  min-width: 1500px;
-  max-width: 90%;
+  min-width: 1400px;
+  max-width: 70%;
 }
 
 .clientes__filtro-input-container,
@@ -401,10 +408,18 @@ usuarios, clientes y proveedores */
   justify-content: space-around;
 }
 
+.proveedores__lista-proveedor-info-container,
+.clientes__lista-cliente-info-container,
+.usuarios__lista-usuario-info-container {
+  row-gap: 8px;
+  column-gap: 30px;
+  word-break: break-word;
+}
+
 .clientes__lista-cliente-boton,
 .usuarios__lista-usuario-boton,
 .proveedores__lista-proveedor-boton {
-  width: 110%;
+  width: 115%;
   height: 45px;
   display: flex;
   justify-content: space-between;
@@ -454,7 +469,7 @@ usuarios, clientes y proveedores */
 .proveedores__container-boton,
 .usuarios__container-boton,
 .clientes__container-boton {
-  width: 20%;
+  width: 25%;
   margin: 0 4rem;
 }
 
@@ -570,6 +585,7 @@ usuarios, clientes y proveedores */
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 1000;
   background-color: var(--color-background-modal);
   display: flex;
   align-items: center;

@@ -1,4 +1,4 @@
-import {agregar} from 'http://localhost:8080/SIAF/ajax/agregar.js';
+import {agregar} from '../../ajax/agregar.js';
 (function(){
     const d = document,
     $transparentBackgroundModal = d.querySelector(".productos__container-modal"),
@@ -70,10 +70,6 @@ import {agregar} from 'http://localhost:8080/SIAF/ajax/agregar.js';
                         }
                     })
                 })
-
-                $itemsConfirmacion.forEach(item => {
-                    console.log(Object.keys(item.dataset)[0]);
-                })
             }
 
         }
@@ -84,7 +80,7 @@ import {agregar} from 'http://localhost:8080/SIAF/ajax/agregar.js';
         if(e.target.matches(".productos__modal-agregar-producto-confirmacion-btn-confirmar")) {
             $inputs[1].disabled = false;
             $modal_2.toggleAttribute("open");
-            agregar($formulario,"productos")
+            agregar($formulario,"Productos")
             .then(res=>{
                 console.log(res);
                 if(res.complete) {
@@ -111,6 +107,10 @@ import {agregar} from 'http://localhost:8080/SIAF/ajax/agregar.js';
             $transparentBackgroundModal.classList.toggle("visible");
         }
     })
+
+    /*
+    Colocar el nit del proveedor en el campo, cuando el usuario seleccione un proveedor
+    */
 
     d.addEventListener("change", e => {
         if(e.target.matches("#productos__modal-agregar-producto-select-proveedor")) {

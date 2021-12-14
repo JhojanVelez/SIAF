@@ -19,24 +19,32 @@ class ProductosModelo extends ConexionBD{
 
     public function obtenerTodosLosDatos () {
         try {
-            $this->rows['infoProductos'] = $this->connection->query("SELECT * FROM PRODUCTOS ORDER BY ProDescripcion")->fetchAll(PDO::FETCH_ASSOC);
-            $this->rows['infoProveedores'] = $this->connection->query("SELECT ProNIT,ProNombre FROM TBL_PROVEEDORES ORDER BY ProNombre")->fetchAll(PDO::FETCH_ASSOC);
-            $this->rows['infoProductosInhabilitados'] = $this->connection->query("SELECT * FROM TBL_PRODUCTOS_INHABILITADOS ORDER BY ProFechaInhabilitacion DESC")->fetchAll(PDO::FETCH_ASSOC);
+            $this->rows['infoProductos'] = $this->connection->query("SELECT * FROM productos ORDER BY ProDescripcion")->fetchAll(PDO::FETCH_ASSOC);
+            $this->rows['infoProveedores'] = $this->connection->query("SELECT ProNIT,ProNombre FROM tbl_proveedores ORDER BY ProNombre")->fetchAll(PDO::FETCH_ASSOC);
+            $this->rows['infoProductosInhabilitados'] = $this->connection->query("SELECT * FROM tbl_productos_inhabilitados ORDER BY ProFechaInhabilitacion DESC")->fetchAll(PDO::FETCH_ASSOC);
             return $this->rows;
         } catch (PDOException $e) {
             return "Error al obtener todos los productos";
         }
     }
 
+    public function buscarInhabilitados () {
+        try {
+            return $this->connection->query("SELECT * FROM tbl_productos_inhabilitados ORDER BY ProFechaInhabilitacion DESC")->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            return "Error al obtener todos los productos inhabilitados";
+        }
+    }
+
     public function buscarPorId ($id) {
-        $this->PDOStmt = $this->connection->prepare("SELECT * FROM PRODUCTOS WHERE ProCodBarras = ?");
+        $this->PDOStmt = $this->connection->prepare("SELECT * FROM productos WHERE ProCodBarras = ?");
         $this->PDOStmt->execute(array($id));
         return $this->PDOStmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function buscarPorAtributos () {
         $this->sql ="SELECT * 
-                    FROM PRODUCTOS
+                    FROM productos
                     WHERE
                     ProCodBarras    LIKE :codigoBarras  OR
                     ProDescripcion  LIKE :descripcion   OR
@@ -59,7 +67,7 @@ class ProductosModelo extends ConexionBD{
     public function registrarProductos () {
         try {
             $this->sql ="INSERT INTO 
-                        TBL_PRODUCTOS 
+                        tbl_productos
                         VALUES (
                             :codigoBarras,
                             :descripcion,
@@ -102,7 +110,7 @@ class ProductosModelo extends ConexionBD{
     public function editarProductos ($idProductoSeleccionado) {
         try {
             $this->sql ="UPDATE 
-                        TBL_PRODUCTOS 
+                        tbl_productos
                         SET
                             ProCodBarras        = :codigoBarras,
                             ProDescripcion      = :descripcion,
@@ -134,9 +142,7 @@ class ProductosModelo extends ConexionBD{
 
             $this->result["complete"] = true;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
-            $this->result["resultMessage"] = $this->PDOStmt->rowCount() != 0
-                                            ? "Producto editado correctamente"
-                                            : "El producto $idProductoSeleccionado no pudo ser editado porque no esta registrado en el sistema.";
+            $this->result["resultMessage"] = "Producto editado correctamente";
             return $this->result;
 
         } catch (PDOException $e) {
@@ -151,7 +157,7 @@ class ProductosModelo extends ConexionBD{
     public function eliminar ($id = "") {
         $this->setCodigoBarras(htmlentities(addslashes($id)));
         try {
-            $this->sql = "DELETE FROM TBL_PRODUCTOS WHERE proCodBarras = ?";
+            $this->sql = "DELETE FROM tbl_productos WHERE proCodBarras = ?";
 
             $this->PDOStmt = $this->connection->prepare($this->sql);
 

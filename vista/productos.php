@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
     <link rel="stylesheet" href="<?php echo(URL_RAIZ); ?>public/css/productos.css">
+    <link rel="shortcut icon" href="<?php echo(URL_FAVICON); ?>" type="image/x-icon">
+    <title>Productos</title>
 </head>
 <body>
     <?php
@@ -21,12 +22,12 @@
             <table class="productos__table tabla">
                 <thead class="table-thead">
                     <tr class="table-tr">
-                        <td class="table-td">ProCodBarr</td>
+                        <td class="table-td">Codigo de Barras</td>
                         <td class="table-td">Descripcion</td>
                         <td class="table-td">Ubicacion Fisica</td>
                         <td class="table-td">Presentacion</td>
-                        <td class="table-td">UnidadMedida</td>
-                        <td class="table-td">PrecioVenta</td>
+                        <td class="table-td">Unidad de Medida</td>
+                        <td class="table-td">Precio de Venta</td>
                         <td class="table-td">Laboratorio</td>
                         <td class="table-td">Registro INVIMA</td>
                         <td class="table-td">NIT Proveedor</td>
@@ -48,6 +49,25 @@
                             <td><?php echo $value["ProNombre"] ?></td>
                         </tr>
                     <?php endforeach;?>
+                    
+                    <!-- 
+                        Este template nos permite imprimir la informacion cuando estamos buscando por atributo
+                        pero en este caso lo hacemos con template para hacer uso de los fragmentos
+                    -->
+                    <template class="productos__table-template">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </template>
                 </tbody>
             </table>
         </section>
@@ -56,15 +76,21 @@
         <section class="productos__container-filter container-filter  box-shadow">
             <div class="productos__filtro">
                 <h2 class="productos__filtro-titulo">Busca un Producto</h2>
-                <form id="productos__filtro-form" class="productos__filtro-form" action="<?php echo URL_RAIZ ?>productos/generarReporte" method="POST" target="_BLANK">
+                <form 
+                id="productos__filtro-form" 
+                class="productos__filtro-form" 
+                action="<?php echo URL_RAIZ ?>productos/generarReporte" 
+                method="POST" 
+                target="_BLANK"
+                >
                     <label class="productos__filtro-label" for="product-id">Por codigo de barras del producto</label>
                     <br>
                     <input 
                     name="codigoBarras"
                     type="text" 
                     class="productos_filtro-id" 
-                    data-input
                     autocomplete="off"
+                    data-input
                     >
                     <br>
                     <label class="productos__filtro-label" for="product-nombre">Por nombre del producto</label>
@@ -73,8 +99,8 @@
                     name="descripcion"
                     type="text" 
                     class="productos_filtro-nombre"
-                    data-input
                     autocomplete="off"
+                    data-input
                     >
                     <br>
                     <label class="productos__filtro-label" for="product-proveedor">Por nombre del proveedor</label>
@@ -83,8 +109,8 @@
                     name="nomProveedor"
                     type="text" 
                     class="productos_filtro-proveedor"
-                    data-input
                     autocomplete="off"
+                    data-input
                     >
                     <br>
                     <label class="productos__filtro-label" for="product-id">Por tipo de presentacion</label>
@@ -92,8 +118,8 @@
                     <select 
                     name="presentacion" 
                     class="productos_filtro-presentacion" 
-                    data-input
                     autocomplete="off"
+                    data-input
                     >
                         <option value="">Presentacion</option>
                         <option value="TABLETA">TABLETA</option>
@@ -116,7 +142,12 @@
                     <div class="productos_filtro-gen-repo-img filtro-gen-repo-img">
                         <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
                     </div>
-                    <input class="productos__filtro-subtitulo-reporte filtro-subtitulo-reporte" type="submit" value="Generar Reporte" form="productos__filtro-form">
+                    <input 
+                    class="productos__filtro-subtitulo-reporte filtro-subtitulo-reporte" 
+                    type="submit" 
+                    value="Generar Reporte" 
+                    form="productos__filtro-form"
+                    >
                 </div>
             </div>
         </section>
@@ -223,6 +254,7 @@
                     placeholder="Codigo de barras del producto" 
                     id="codigoBarrasProducto" 
                     title = "Debe tener una maxima logitud de 15 caracteres"
+                    autocomplete="off"
                     data-input 
                     data-ProCodBarras
                     >
@@ -232,6 +264,7 @@
                     type="text" 
                     placeholder="NIT del proveedor" 
                     title="El valor se colocara automaticamente cuando selecciones un proveedor"
+                    autocomplete="off"
                     data-input 
                     data-tbl_proveedores_ProNIT
                     >
@@ -241,6 +274,7 @@
                     type="text" 
                     placeholder="Descripcion" 
                     title="Ingresa el nombre comercial del producto"
+                    autocomplete="off"
                     data-input 
                     data-ProDescripcion
                     >
@@ -265,6 +299,7 @@
                     type="text" 
                     placeholder="Ubicacion fisica" 
                     title="Ingresa el codigo de la ubicacion fisica real en donde se encuentra el producto"
+                    autocomplete="off"
                     data-input 
                     data-ProUbicacionFisica
                     >
@@ -274,6 +309,7 @@
                     type="text" 
                     placeholder="Ingresa el laboratorio" 
                     title="Nombre del laboratorio"
+                    autocomplete="off"
                     data-input 
                     data-ProLaboratorio
                     >
@@ -295,6 +331,7 @@
 
                     <select 
                     name="presentacion" 
+                    autocomplete="off"
                     data-input
                     data-ProPresentacion
                     >
@@ -320,6 +357,7 @@
                     maxlength="10"
                     placeholder="Precio de venta" 
                     title="El precio de venta es el precio de venta al cliente por unidad"
+                    autocomplete="off"
                     data-input 
                     data-ProPrecioVenta
                     >
@@ -328,6 +366,8 @@
                     name="invima" 
                     type="text" 
                     placeholder="Registro sanitario INVIMA" 
+                    title="Ingresa el registro sanitario INVIMA"
+                    autocomplete="off"
                     data-input
                     data-ProRegSanInvima
                     >
@@ -416,9 +456,9 @@
                     name="codigoBarras" 
                     type="text" 
                     maxlength="15"
+                    id= "codigoBarrasProducto"
                     placeholder="Codigo de barras del producto" 
                     title = "Debe tener una maxima logitud de 15 caracteres"
-                    id= "codigoBarrasProducto"
                     data-input
                     data-ProCodBarras
                     >
@@ -428,6 +468,7 @@
                     type="text" 
                     placeholder="NIT del proveedor" 
                     title="El valor se colocara automaticamente cuando selecciones un proveedor"
+                    autocomplete="off"
                     data-input 
                     data-tbl_proveedores_ProNIT
                     >
@@ -437,6 +478,7 @@
                     type="text" 
                     placeholder="Descripcion" 
                     title="Ingresa el nombre comercial del producto"
+                    autocomplete="off"
                     data-input 
                     data-ProDescripcion
                     >
@@ -444,6 +486,7 @@
                     <select 
                     name="proveedor" 
                     id="productos__modal-editar-producto-select-proveedor" 
+                    autocomplete="off"
                     data-input
                     data-ProNombre
                     >
@@ -461,6 +504,7 @@
                     type="text" 
                     placeholder="Ubicacion fisica" 
                     title="Ingresa el codigo de la ubicacion fisica real en donde se encuentra el producto"
+                    autocomplete="off"
                     data-input 
                     data-ProUbicacionFisica
                     >
@@ -470,6 +514,7 @@
                     type="text" 
                     placeholder="Ingresa el laboratorio" 
                     title="Nombre del laboratorio"
+                    autocomplete="off"
                     data-input 
                     data-ProLaboratorio
                     >
@@ -516,6 +561,7 @@
                     maxlength="10"
                     placeholder="Precio de venta" 
                     title="El precio de venta es el precio de venta al cliente por unidad"
+                    autocomplete="off"
                     data-input 
                     data-ProPrecioVenta
                     >
@@ -524,6 +570,7 @@
                     name="invima" 
                     type="text" 
                     placeholder="Registro sanitario INVIMA" 
+                    autocomplete="off"
                     data-input
                     data-ProRegSanInvima
                     >
@@ -612,19 +659,25 @@
                         <img src="<?php echo(URL_RAIZ); ?>public/imagenes/reportes-icono.svg" alt="">
                     </div>
                     <div class="productos__modal-productos-inhabilitados-gen-repo-container-text">
-                        <a class="filtro-subtitulo-reporte" href="">Generar Reporte</a>
+                        <a 
+                        target="_BLACK"
+                        class="filtro-subtitulo-reporte" 
+                        href="<?php echo(URL_RAIZ); ?>productos/generarReporteInhabilitados"
+                        >
+                        Generar Reporte
+                        </a>
                     </div>
                 </div>
                 <section class="productos__modal-productos-inhabilitados-table-container container-table">
                     <table class="productos-inhabilitados__table table">
                         <thead class="table-thead">
                             <tr class="table-tr">
-                                <td class="table-td">ProCodBarr</td>
+                                <td class="table-td">Codigo de Barras</td>
                                 <td class="table-td">Descripcion</td>
                                 <td class="table-td">Ubicacion Fisica</td>
                                 <td class="table-td">Presentacion</td>
-                                <td class="table-td">UnidadMedida</td>
-                                <td class="table-td">PrecioVenta</td>
+                                <td class="table-td">Unidad de Medida</td>
+                                <td class="table-td">Precio de Venta</td>
                                 <td class="table-td">Laboratorio</td>
                                 <td class="table-td">Registro INVIMA</td>
                                 <td class="table-td">NIT Proveedor</td>
@@ -659,6 +712,5 @@
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_buscar_por_atributos.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_seleccion_de_producto.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_productos_inhabilitados.js"></script>
-    <script src="<?php echo(URL_RAIZ); ?>public/js/detectarFiltroParaReporte.js"></script>
 </body>
 </html>

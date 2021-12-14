@@ -72,8 +72,6 @@ table {
     min-width: 200%;
 }
 
-
-
 .productos__container-botones {
     grid-area: botones;
     display: grid;
@@ -130,7 +128,7 @@ table {
 
 .productos__modal-productos-inhabilitados {
     min-width: 1300px;
-    max-width: 1800px;
+    max-width: 80%;
 }
 
 .productos__modal-productos-inhabilitados-container-gen-repo {
@@ -143,4 +141,8 @@ table {
 
 .productos__modal-productos-inhabilitados-table-container {
     height: 550px;
+}
+
+.productos-inhabilitados__table {
+    min-width: 150%;
 }

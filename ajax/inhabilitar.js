@@ -24,7 +24,7 @@ export function inhabilitar (id,modulo) {
             } 
         })
 
-        xhr.open("GET", `http://localhost:8080/SIAF/${modulo}/eliminar/${id}`);
+        xhr.open("GET", `https://s-i-a-f.000webhostapp.com/${modulo}/eliminar/${id}`);
 
         xhr.send();
 

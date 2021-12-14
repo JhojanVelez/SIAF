@@ -1,16 +1,10 @@
-<?php ob_start(); ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?php echo URL_RAIZ ?>/public/css/generar-reporte.css">
-    <title><?php echo $this->controladorMetodoParametro[0]?></title>
-</head>
-<body>
-    <table class="productos-inhabilitados__table table">
+<div class="platilla-reporte-main__content">
+    <p class="platilla-reporte-main__title">Reporte de Productos</p>
+    <p class="platilla-reporte-main__h3">Informacion adicional</p>
+    <p>Cantidad Total de Productos: <?php echo(count($this->data)) ?> </p>
+</div>
+<div class="platilla-reporte__container-table">
+    <table class="platilla-reporte__table table">
         <thead class="table-thead">
             <tr class="table-tr">
                 <td class="table-td">ProCodBarr</td>
@@ -37,35 +31,7 @@
                     <td><?php echo $value['ProRegSanInvima'] ?></td>
                     <td><?php echo $value['tbl_proveedores_ProNIT'] ?></td>
                 </tr>
-                
             <?php endforeach; ?>
         </tbody>
     </table>
-</body>
-</html>
-
-<?php
-
-$html = ob_get_clean();
-// echo($html);
-
-require_once("libs/dompdf/autoload.inc.php");
-
-use Dompdf\Dompdf;
-
-$dompdf = new Dompdf();
-
-$options = $dompdf->getOptions();
-$options->setIsRemoteEnabled(true);
-// $options->setDefaultFont('Courier');
-$dompdf->setOptions($options);
-
-
-$dompdf->loadHtml($html);
-
-$dompdf->setPaper("A4", "landscape");
-$dompdf->render();
-$dompdf->stream($this->controladorMetodoParametro[0], array('Attachment' => false));
-
-?>
-
+</div>

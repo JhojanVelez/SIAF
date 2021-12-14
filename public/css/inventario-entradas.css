@@ -1,12 +1,23 @@
 @import url(main.css);
 
+.nav-container {
+    min-width: 1700px
+}
+
 .nav__li:nth-child(3) {
     border-bottom: 2px solid var(--color-button-text);
 }
 
+.grid-container-main {
+    grid-template-rows: 150px min-content minmax(700px,75vh);
+    grid-template-areas:"titulo"
+                        "filtro"
+                        "contenido";
+}
+
 .entradas__filtro {
     display: grid;
-    grid-template-columns: 75% 1fr;
+    grid-template-columns: 83% 1fr;
     grid-template-rows: min-content min-content;
     grid-template-areas:"filter-titulo filter-titulo"
                         "filter-inputs filter-gen-repo";
@@ -21,7 +32,7 @@
 .entradas__filtro-form {
     grid-area: filter-inputs;
     display: grid;
-    grid-template-columns: repeat(2, 25%) 1fr;
+    grid-template-columns: repeat(2, 22%) 1fr;
     grid-template-areas:"inp-prod-id   inp-prov-id date-des-has"
                         "inp-prod-name inp-prov-name date-des-has";
     grid-gap: 2rem;
@@ -59,7 +70,7 @@
 
 .entradas_filtro-container-desde-hasta__inputs {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .entradas_filtro-desde,
@@ -72,7 +83,7 @@
 .entradas_filtro-hasta::before {
     content: '';
     position: absolute;
-    right: 25%;
+    right: 18%;
 }
 
 .entradas_filtro-desde::before{
@@ -87,17 +98,59 @@
     grid-area: filter-gen-repo;
 }
 
-
-.entradas__container-botones {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.entradas__boton-agregar-container {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 1.5vw;
+    right: 3vh;
+    border-radius: 50px;
 }
 
-.entradas__boton-agregar{
-    width: 400px;
+.entradas__boton-agregar {
+    padding: 0;
+    width: 100%;
+    height: 100%;
 }
 
+
+.entradas__boton-agregar-simbol {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 3rem;
+    line-height: 52px;
+    transition: transform 1s;
+    border-radius: 50px;
+    background-color: var(--color-nav-background);
+    border: 2px solid var(--color-button-text);
+}
+
+.entradas__boton-agregar-simbol:hover {
+    transform: rotate(360deg);
+}
+
+
+.entradas__boton-agregar-txt {
+    text-align: left;
+    background-color: var(--color-nav-background);
+    border-radius: var(--border-card-radius);
+    display: block;
+    width: 50%;
+    color: transparent;
+    position: absolute;
+    left: 10%;
+    top: 15px;
+    padding: 5px 15px;
+    transition: transform 1s, color 1s, width 1s;
+    z-index: -1;
+}
+
+.entradas__boton-agregar-simbol:hover + .entradas__boton-agregar-txt {
+    transform: translateX(-80px);
+    color: inherit;
+    width: 150%;
+}
 /*---------------- Estos son los estilos para los modals de agregar entrada ----------------*/
 
 .entradas__modal-agregar-entrada-form,
@@ -113,16 +166,6 @@
 
 .entradas__modal-agregar-entrada-title {
     margin-bottom: 3rem;
-}
-
-.entradas__modal-agregar-entrada-form input[type="date"] {
-    position: relative;
-}
-
-.entradas__modal-agregar-entrada-form input[type="date"]::after {
-    content: 'Fecha de entrada';
-    position: absolute;
-    right: 20%;
 }
 
 .entradas__modal-agregar-entrada-form-item:nth-child(1),
