@@ -56,7 +56,7 @@ class InventarioSalidasModelo extends ConexionBD {
     public function registrar () {
         try {
             $this->sql ="INSERT INTO 
-                        TBL_SALIDAS
+                        tbl_salidas
                         (
                             SalFecha,
                             SalCantidad,
