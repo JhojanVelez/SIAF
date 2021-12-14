@@ -30,7 +30,7 @@ import { inhabilitar } from "../../ajax/inhabilitar.js";
         if(e.target.matches(".productos__modal-inhabilitar-producto-btn-confirmar")) {
             $modal_1.toggleAttribute("open");
 
-            inhabilitar(idProductoSeleccionado,"Productos")
+            inhabilitar(idProductoSeleccionado,"productos")
             .then(res => {
                 if(res.affectedRows != 0) {
                     $modal_2.toggleAttribute("open");

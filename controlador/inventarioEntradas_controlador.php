@@ -61,7 +61,7 @@ class InventarioEntradasControlador extends Controlador {
         }
     }
 
-    public function registrarInventarioEntradas () {
+    public function registrar () {
         try {
             if(!isset($_POST["codigoBarrasProducto"]) || empty($_POST["codigoBarrasProducto"]))     throw new Exception("El campo codigo de barras no puede estar vacio");
             if(!isset($_POST["cantidadEntrada"]) || empty($_POST["cantidadEntrada"]))                    throw new Exception("El campo cantidad no puede estar vacio");
@@ -77,7 +77,7 @@ class InventarioEntradasControlador extends Controlador {
             $this->instanciaModelo->setFechaEntrada(htmlentities(addslashes($_POST["fechaEntrada"])));
             $this->instanciaModelo->setEntradaCometario(htmlentities(addslashes($_POST["entradaCometario"])));
 
-            $this->result = $this->instanciaModelo->registrarInventarioEntradas();
+            $this->result = $this->instanciaModelo->registrar();
             echo(json_encode($this->result));
 
         } catch (Exception $e) {

@@ -76,7 +76,7 @@ import { editar } from "../../ajax/editar.js";
         }
         if(e.target.matches(".proveedores__modal-editar-proveedor-confirmacion-btn-confirmar")) {
             $modal_2.toggleAttribute("open");
-            editar($formulario,idProveedor,"Proveedores")
+            editar($formulario,idProveedor,"proveedores")
             .then(res=>{
                 if(res.complete) {
                     $modal_3.toggleAttribute("open");

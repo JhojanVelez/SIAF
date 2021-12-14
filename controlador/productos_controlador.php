@@ -58,7 +58,7 @@ class ProductosControlador extends Controlador{
         }
     }
 
-    public function registrarProductos () {
+    public function registrar () {
         try {
             if(!isset($_POST["codigoBarras"]) || empty($_POST["codigoBarras"]))          throw new Exception("El campo codigo de barras no puede estar vacio");
             if(!isset($_POST["descripcion"]) || empty($_POST["descripcion"]))            throw new Exception("El campo descripcion no puede estar vacio");
@@ -80,7 +80,7 @@ class ProductosControlador extends Controlador{
             $this->instanciaModelo->setInvima(htmlentities(addslashes($_POST["invima"])));
             $this->instanciaModelo->setNitProveedor(htmlentities(addslashes($_POST["nitProveedor"])));
 
-            $this->result = $this->instanciaModelo->registrarProductos();
+            $this->result = $this->instanciaModelo->registrar();
             echo(json_encode($this->result));
 
         } catch (Exception $e) {
@@ -90,7 +90,7 @@ class ProductosControlador extends Controlador{
         }
     }
 
-    public function editarProductos ($idProductoSeleccionado) {
+    public function editar ($idProductoSeleccionado) {
         try {
             if(!isset($_POST["codigoBarras"]) || empty($_POST["codigoBarras"]))          throw new Exception("El campo codigo de barras no puede estar vacio");
             if(!isset($_POST["descripcion"]) || empty($_POST["descripcion"]))            throw new Exception("El campo descripcion no puede estar vacio");
@@ -112,7 +112,7 @@ class ProductosControlador extends Controlador{
             $this->instanciaModelo->setInvima(htmlentities(addslashes($_POST["invima"])));
             $this->instanciaModelo->setNitProveedor(htmlentities(addslashes($_POST["nitProveedor"])));
 
-            $this->result = $this->instanciaModelo->editarProductos(htmlentities(addslashes($idProductoSeleccionado)));
+            $this->result = $this->instanciaModelo->editar(htmlentities(addslashes($idProductoSeleccionado)));
             echo(json_encode($this->result));
 
         } catch (Exception $e) {

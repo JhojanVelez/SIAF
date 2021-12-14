@@ -80,7 +80,7 @@ import {agregar} from '../../ajax/agregar.js';
         if(e.target.matches(".productos__modal-agregar-producto-confirmacion-btn-confirmar")) {
             $inputs[1].disabled = false;
             $modal_2.toggleAttribute("open");
-            agregar($formulario,"Productos")
+            agregar($formulario,"productos")
             .then(res=>{
                 console.log(res);
                 if(res.complete) {

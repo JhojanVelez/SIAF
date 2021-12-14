@@ -49,7 +49,7 @@ class InventarioEntradasModelo extends ConexionBD {
         return $this->PDOStmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function registrarInventarioEntradas () {
+    public function registrar () {
         try {
             $this->sql ="INSERT INTO 
                         tbl_entradas

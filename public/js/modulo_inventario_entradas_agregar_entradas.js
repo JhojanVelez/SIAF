@@ -82,7 +82,7 @@ import {agregar} from '../../ajax/agregar.js';
         }
         if(e.target.matches(".entradas__modal-agregar-entrada-confirmacion-btn-confirmar")) {
             $modal_2.toggleAttribute("open");
-            agregar($formulario,"InventarioEntradas")
+            agregar($formulario,"inventarioEntradas")
             .then(res=>{
                 console.log(res);
                 if(res.complete) {

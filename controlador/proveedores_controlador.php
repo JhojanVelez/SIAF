@@ -43,7 +43,7 @@ class ProveedoresControlador extends Controlador{
         }
     }
 
-    public function registrarProveedores () {
+    public function registrar () {
         try {
             if(!isset($_POST["nit"]) || empty($_POST["nit"]))          throw new Exception("El campo nit no puede estar vacio");
             if(!isset($_POST["nombre"]) || empty($_POST["nombre"]))            throw new Exception("El campo nombre no puede estar vacio");
@@ -59,7 +59,7 @@ class ProveedoresControlador extends Controlador{
             $this->instanciaModelo->setCorreo(htmlentities(addslashes($_POST["correo"])));
             $this->instanciaModelo->setCiudad(htmlentities(addslashes($_POST["ciudad"])));
 
-            $this->result = $this->instanciaModelo->registrarProveedores();
+            $this->result = $this->instanciaModelo->registrar();
             echo(json_encode($this->result));
 
         } catch (Exception $e) {
@@ -69,7 +69,7 @@ class ProveedoresControlador extends Controlador{
         }
     }
 
-    public function editarProveedores ($idProveedorSeleccionado) {
+    public function editar ($idProveedorSeleccionado) {
         try {
             if(!isset($_POST["nit"]) || empty($_POST["nit"]))               throw new Exception("El campo nit no puede estar vacio");
             if(!isset($_POST["nombre"]) || empty($_POST["nombre"]))         throw new Exception("El campo nombre no puede estar vacio");
@@ -85,7 +85,7 @@ class ProveedoresControlador extends Controlador{
             $this->instanciaModelo->setCorreo(htmlentities(addslashes($_POST["correo"])));
             $this->instanciaModelo->setCiudad(htmlentities(addslashes($_POST["ciudad"])));
 
-            $this->result = $this->instanciaModelo->editarProveedores(htmlentities(addslashes($idProveedorSeleccionado)));
+            $this->result = $this->instanciaModelo->editar(htmlentities(addslashes($idProveedorSeleccionado)));
             echo(json_encode($this->result));
 
         } catch (Exception $e) {

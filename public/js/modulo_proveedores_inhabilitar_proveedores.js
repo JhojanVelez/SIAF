@@ -31,7 +31,7 @@ import { inhabilitar } from "../../ajax/inhabilitar.js";
         if(e.target.matches(".proveedores__modal-inhabilitar-proveedor-btn-confirmar")) {
             $modal_1.toggleAttribute("open");
 
-            inhabilitar(idProveedor,"Proveedores")
+            inhabilitar(idProveedor,"proveedores")
             .then(res => {
                 if(res.affectedRows != 0) {
                     $modal_2.toggleAttribute("open");
