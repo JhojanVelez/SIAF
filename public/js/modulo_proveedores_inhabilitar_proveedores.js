@@ -16,7 +16,7 @@ import { inhabilitar } from "../../ajax/inhabilitar.js";
             $modal_1.toggleAttribute("open");
             scroll(0,280);
             idProveedor = e.target.closest("button.proveedores__lista-proveedor-boton-inhabilitar").dataset.nitProveedor;
-            buscarPorId(idProveedor,"Proveedores")
+            buscarPorId(idProveedor,"proveedores")
             .then((res)=> {
                 console.log(res)
                 for(let key in res) {

@@ -16,7 +16,7 @@ import { inhabilitar } from "../../ajax/inhabilitar.js";
             $transparentBackgroundModal.classList.toggle("visible");
             $modal_1.toggleAttribute("open");
             idProductoSeleccionado = e.target.dataset.idProduct
-            buscarPorId(idProductoSeleccionado,"Productos")
+            buscarPorId(idProductoSeleccionado,"productos")
             .then((res)=> {
                 for(let key in res) {
                     $itemsConfirmacion.filter(el => {

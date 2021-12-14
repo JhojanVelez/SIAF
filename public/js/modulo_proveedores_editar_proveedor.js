@@ -27,7 +27,7 @@ import { editar } from "../../ajax/editar.js";
             $formulario.nit.focus();
             scroll(0,280);
             idProveedor = e.target.closest("button.proveedores__lista-proveedor-boton-editar").dataset.nitProveedor;
-            buscarPorId(idProveedor,"Proveedores")
+            buscarPorId(idProveedor,"proveedores")
             .then((res)=> {
                 console.log(res)
                 for(let key in res) {
