@@ -277,24 +277,24 @@
                         <option value="ARMENIA">ARMENIA</option>
                         <option value="BARRANQUILLA">BARRANQUILLA</option>
                         <option value="BELLO">BELLO</option>
-                        <option value="BOGOTÁ">BOGOT&Aacute;</option>
+                        <option value="BOGOT&Aacute;">BOGOT&Aacute;</option>
                         <option value="BUCARAMANGA">BUCARAMANGA</option>
                         <option value="CALI">CALI</option>
                         <option value="CARTAGENA">CARTAGENA</option>
                         <option value="CUCUTA">CUCUTA</option>
                         <option value="FLORENCIA">FLORENCIA</option>
-                        <option value="IBAGUÉ">IBAGU&Eacute;</option>
+                        <option value="IBAGU&Eacute;">IBAGU&Eacute;</option>
                         <option value="MANIZALES">MANIZALES</option>
-                        <option value="MEDELLÍN">MEDELL&Iacute;N</option>
-                        <option value="MONTERIÁ">MONTER&Iacute;A</option>
+                        <option value="MEDELL&Iacute;N">MEDELL&Iacute;N</option>
+                        <option value="MONTER&Iacute;A">MONTER&Iacute;A</option>
                         <option value="NEIVA">NEIVA</option>
                         <option value="PASTO">PASTO</option>
                         <option value="PEREIRA">PEREIRA</option>
                         <option value="POPAYAN">POPAYAN</option>
-                        <option value="QUIBDÓ">QUIBD&Oacute;</option>
+                        <option value="QUIBD&Oacute;">QUIBD&Oacute;</option>
                         <option value="RIOACHA">RIOACHA</option>
-                        <option value="SAN ANDRÉS">SAN ANDR&Eacute;S</option>
-                        <option value="SAN JOSÉ DEL GUAVIARE">SAN JOS&Eacute; DEL GUAVIARE</option>
+                        <option value="SAN ANDR&Eacute;S">SAN ANDR&Eacute;S</option>
+                        <option value="SAN JOS&Eacute; DEL GUAVIARE">SAN JOS&Eacute; DEL GUAVIARE</option>
                         <option value="SANTA MARTA">SANTA MARTA</option>
                         <option value="SINCELEJO">SINCELEJO</option>
                         <option value="SOACHA">SOACHA</option>
@@ -303,7 +303,7 @@
                         <option value="VILLAVICENCIO">VILLAVICENCIO</option>
                         <option value="VALLEDUPAR">VALLEDUPAR</option>
                         <option value="YOPAL">YOPAL</option>
-                        <option value="ZIPAQUIRÁ">ZIPAQUIR&Aacute;</option>
+                        <option value="ZIPAQUIR&Aacute;">ZIPAQUIR&Aacute;</option>
                     </select>
                 </form>
                 <div class="proveedores__modal-agregar-proveedor-btns-container dialog-container-bts">
@@ -463,28 +463,29 @@
                     data-input 
                     data-ProCiudad
                     >
-                    <option value="ARAUCA">ARAUCA</option>
+                        <option value="">Selecciona la Ciudad</option>
+                        <option value="ARAUCA">ARAUCA</option>
                         <option value="ARMENIA">ARMENIA</option>
                         <option value="BARRANQUILLA">BARRANQUILLA</option>
                         <option value="BELLO">BELLO</option>
-                        <option value="BOGOTÁ">BOGOT&Aacute;</option>
+                        <option value="BOGOT&Aacute;">BOGOT&Aacute;</option>
                         <option value="BUCARAMANGA">BUCARAMANGA</option>
                         <option value="CALI">CALI</option>
                         <option value="CARTAGENA">CARTAGENA</option>
                         <option value="CUCUTA">CUCUTA</option>
                         <option value="FLORENCIA">FLORENCIA</option>
-                        <option value="IBAGUÉ">IBAGU&Eacute;</option>
+                        <option value="IBAGU&Eacute;">IBAGU&Eacute;</option>
                         <option value="MANIZALES">MANIZALES</option>
-                        <option value="MEDELLÍN">MEDELL&Iacute;N</option>
-                        <option value="MONTERIÁ">MONTER&Iacute;A</option>
+                        <option value="MEDELL&Iacute;N">MEDELL&Iacute;N</option>
+                        <option value="MONTER&Iacute;A">MONTER&Iacute;A</option>
                         <option value="NEIVA">NEIVA</option>
                         <option value="PASTO">PASTO</option>
                         <option value="PEREIRA">PEREIRA</option>
                         <option value="POPAYAN">POPAYAN</option>
-                        <option value="QUIBDÓ">QUIBD&Oacute;</option>
+                        <option value="QUIBD&Oacute;">QUIBD&Oacute;</option>
                         <option value="RIOACHA">RIOACHA</option>
-                        <option value="SAN ANDRÉS">SAN ANDR&Eacute;S</option>
-                        <option value="SAN JOSÉ DEL GUAVIARE">SAN JOS&Eacute; DEL GUAVIARE</option>
+                        <option value="SAN ANDR&Eacute;S">SAN ANDR&Eacute;S</option>
+                        <option value="SAN JOS&Eacute; DEL GUAVIARE">SAN JOS&Eacute; DEL GUAVIARE</option>
                         <option value="SANTA MARTA">SANTA MARTA</option>
                         <option value="SINCELEJO">SINCELEJO</option>
                         <option value="SOACHA">SOACHA</option>
@@ -493,7 +494,7 @@
                         <option value="VILLAVICENCIO">VILLAVICENCIO</option>
                         <option value="VALLEDUPAR">VALLEDUPAR</option>
                         <option value="YOPAL">YOPAL</option>
-                        <option value="ZIPAQUIRÁ">ZIPAQUIR&Aacute;</option>
+                        <option value="ZIPAQUIR&Aacute;">ZIPAQUIR&Aacute;</option>
                     </select>
                 </form>
                 <div class="proveedores__modal-editar-proveedor-btns-container dialog-container-bts">
