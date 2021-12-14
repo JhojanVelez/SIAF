@@ -57,7 +57,7 @@ class ProveedoresControlador extends Controlador{
             $this->instanciaModelo->setTelefono(htmlentities(addslashes($_POST["telefono"])));
             $this->instanciaModelo->setDireccion(htmlentities(addslashes($_POST["direccion"])));
             $this->instanciaModelo->setCorreo(htmlentities(addslashes($_POST["correo"])));
-            $this->instanciaModelo->setCiudad(htmlentities(addslashes($_POST["ciudad"])));
+            $this->instanciaModelo->setCiudad(addslashes($_POST["ciudad"]));
 
             $this->result = $this->instanciaModelo->registrar();
             echo(json_encode($this->result));
@@ -83,7 +83,7 @@ class ProveedoresControlador extends Controlador{
             $this->instanciaModelo->setTelefono(htmlentities(addslashes($_POST["telefono"])));
             $this->instanciaModelo->setDireccion(htmlentities(addslashes($_POST["direccion"])));
             $this->instanciaModelo->setCorreo(htmlentities(addslashes($_POST["correo"])));
-            $this->instanciaModelo->setCiudad(htmlentities(addslashes($_POST["ciudad"])));
+            $this->instanciaModelo->setCiudad(addslashes($_POST["ciudad"]));
 
             $this->result = $this->instanciaModelo->editar(htmlentities(addslashes($idProveedorSeleccionado)));
             echo(json_encode($this->result));
