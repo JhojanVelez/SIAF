@@ -142,6 +142,7 @@ class ProveedoresModelo extends ConexionBD {
             $this->result["resultMessage"] = $this->PDOStmt->rowCount() != 0 
                                             ? "El proveedor $this->nit se inhabilito correctamente"
                                             : "No se encontro ningun proveedor, por lo tanto no se pudo realizar el proceso de inhabilitacion";
+            if($this->PDOStmt->errorInfo()[1] == 1451) $this->result["resultMessage"] = "El proveedor $this->nit no pudo ser inhabilitado porque la infomacion de este proveedor es fundamental para el funcionamiento de otras secciones del sistema.";
             return $this->result;
 
         } catch (PDOException $e) {

@@ -168,6 +168,7 @@ class ProductosModelo extends ConexionBD{
             $this->result["resultMessage"] = $this->PDOStmt->rowCount() != 0 
                                             ? "El producto $this->codigoBarras se inhabilito correctamente"
                                             : "No se encontro ningun producto, por lo tanto no se pudo realizar el proceso de inhabilitacion";
+            if($this->PDOStmt->errorInfo()[1] == 1451) $this->result["resultMessage"] = "El producto $this->codigoBarras no pudo ser inhabilitado porque la infomacion de este producto es fundamental para el funcionamiento de otras secciones del sistema.";
             return $this->result;
 
         }catch(PDOException $e) {
