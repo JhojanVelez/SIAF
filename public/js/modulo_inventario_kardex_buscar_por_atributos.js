@@ -7,13 +7,13 @@ import { buscarPorAtributos } from "../../ajax/buscarPorAtributos.js";
         $fragmento = d.createDocumentFragment();
 
     $formulario.addEventListener("keyup", e =>{
-        buscarPorAtributos($formulario,"InventarioKardex")
+        buscarPorAtributos($formulario,"inventarioKardex")
         .then(res=> {
             imprimirDatosEnTabla(res);
         });
     });
     $formulario.addEventListener("change", e =>{
-        buscarPorAtributos($formulario,"InventarioKardex")
+        buscarPorAtributos($formulario,"inventarioKardex")
         .then(res=> {
             imprimirDatosEnTabla(res);
         });

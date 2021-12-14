@@ -9,7 +9,7 @@ import { buscarPorAtributos } from "../../ajax/buscarPorAtributos.js";
         console.log()
 
     $formulario.addEventListener("keyup", e =>{
-        buscarPorAtributos($formulario,"Proveedores")
+        buscarPorAtributos($formulario,"proveedores")
         .then(res=> {
             console.log(res)
             imprimirDatosEnTabla(res)
