@@ -23,7 +23,7 @@ export function editar (formulario,idProductoSeleccionado,modulo) {
                 resolve(JSON.parse(xhr.response));
             }
         }) 
-        xhr.open("POST", `https://s-i-a-f.000webhostapp.com/${modulo}/editar${modulo}/${idProductoSeleccionado}`);
+        xhr.open("POST", `https://s-i-a-f.000webhostapp.com/${modulo.toLowerCase()}/editar${modulo}/${idProductoSeleccionado}`);
 
         xhr.send(formData);
     })

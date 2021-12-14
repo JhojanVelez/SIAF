@@ -26,7 +26,7 @@ export function agregar (formulario,modulo) {
                 resolve(JSON.parse(xhr.response));
             } 
         })
-        xhr.open("POST", `https://s-i-a-f.000webhostapp.com/${modulo}/registrar${modulo}`);
+        xhr.open("POST", `https://s-i-a-f.000webhostapp.com/${modulo.toLowerCase()}/registrar${modulo}`);
         xhr.send(formData);
     });
 }

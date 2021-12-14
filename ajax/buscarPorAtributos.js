@@ -9,7 +9,7 @@ export function buscarPorAtributos (formulario,modulo) {
                 resolve(JSON.parse(xhr.response));
             }
         }) 
-        xhr.open("POST", `https://s-i-a-f.000webhostapp.com/${modulo}/buscarPorAtributos/`);
+        xhr.open("POST", `https://s-i-a-f.000webhostapp.com/${modulo.toLowerCase()}/buscarPorAtributos/`);
 
         xhr.send(formData);
     })

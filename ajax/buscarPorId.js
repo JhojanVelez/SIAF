@@ -24,7 +24,7 @@ export function buscarPorId (id,modulo) {
             } 
         })
 
-        xhr.open("GET", `https://s-i-a-f.000webhostapp.com/${modulo}/buscarPorId/${id}`);
+        xhr.open("GET", `https://s-i-a-f.000webhostapp.com/${modulo.toLowerCase()}/buscarPorId/${id}`);
 
         xhr.send();
 

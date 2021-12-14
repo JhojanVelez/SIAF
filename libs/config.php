@@ -22,6 +22,6 @@ define("DB_PASSWORD", 'Px&8f*\nLcTl5hn]');
 define("DB_CHARSET", "UTF8");
 define("DSN", SGBD.":host=".DB_HOST.";dbname=".DB_NAME.";charset=".DB_CHARSET);
 define("URL_RAIZ", $_SERVER["HTTP_X_FORWARDED_PROTO"]."://".$_SERVER["HTTP_HOST"]."/");
-define("URL_FAVICON", URL_RAIZ."/public/imagenes/logo-SIAF.svg");
+define("URL_FAVICON", URL_RAIZ."public/imagenes/logo-SIAF.svg");
 
 ?>
