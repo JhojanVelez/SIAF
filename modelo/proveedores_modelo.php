@@ -50,7 +50,7 @@ class ProveedoresModelo extends ConexionBD {
         }
     }
 
-    public function registrarProveedores () {
+    public function registrar () {
         try {
             $this->sql ="INSERT INTO 
                         tbl_proveedores
@@ -87,7 +87,7 @@ class ProveedoresModelo extends ConexionBD {
         }
     }
 
-    public function editarProveedores ($idProveedorSeleccionado) {
+    public function editar ($idProveedorSeleccionado) {
         try {
             $this->sql ="UPDATE  
                         tbl_proveedores

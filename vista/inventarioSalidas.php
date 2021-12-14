@@ -25,7 +25,7 @@
                 <form 
                 id="salidas__filtro-form" 
                 class="salidas__filtro-form" 
-                action="<?php echo URL_RAIZ ?>InventarioSalidas/generarReporte" 
+                action="<?php echo URL_RAIZ ?>inventarioSalidas/generarReporte" 
                 method="POST" 
                 target="_BLANK"
                 >

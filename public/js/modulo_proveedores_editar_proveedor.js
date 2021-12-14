@@ -64,7 +64,7 @@ import { editar } from "../../ajax/editar.js";
                 $inputs.forEach(input => {
                     $itemsConfirmacion.forEach(item => {
                         if(Object.keys(input.dataset)[1] == Object.keys(item.dataset)[0]) {
-                            item.querySelector("P").innerText = input.value;
+                            item.querySelector("P").innerHTML = input.value;
                         }
                     })
                 })

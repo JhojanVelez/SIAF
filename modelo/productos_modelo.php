@@ -64,7 +64,7 @@ class ProductosModelo extends ConexionBD{
         return $this->PDOStmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function registrarProductos () {
+    public function registrar () {
         try {
             $this->sql ="INSERT INTO 
                         tbl_productos
@@ -107,7 +107,7 @@ class ProductosModelo extends ConexionBD{
         }
     }
 
-    public function editarProductos ($idProductoSeleccionado) {
+    public function editar ($idProductoSeleccionado) {
         try {
             $this->sql ="UPDATE 
                         tbl_productos
