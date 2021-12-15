@@ -99,7 +99,7 @@ table {
 
 .productos__modal-agregar-producto {
     min-width: 700px;
-    max-width: 800px;
+    max-width: 900px;
 }
 
 .productos__modal-agregar-producto-title {
@@ -111,7 +111,7 @@ table {
 
 .productos__modal-editar-producto {
     min-width: 700px;
-    max-width: 800px;
+    max-width: 900px;
 }
 
 .productos__modal-editar-producto-title {

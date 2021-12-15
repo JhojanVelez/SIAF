@@ -182,43 +182,43 @@
                 </p>
                 <div class="productos__modal-inhabilitar-producto-info dialog-main-content">
                     <section class="productos__modal-inhabilitar-producto-info-item" data-ProCodBarras>
-                        <h3>CODIGO DE BARRAS</h3>
+                        <h3 class="dialog-main-content__label">Codigo de Barras del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-inhabilitar-producto-info-item" data-tbl_proveedores_ProNIT>
-                        <h3>NIT DEL PROVEEDOR</h3>
+                        <h3 class="dialog-main-content__label">Nit del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-inhabilitar-producto-info-item" data-ProDescripcion>
-                        <h3>DESCRIPCION</h3>
+                        <h3 class="dialog-main-content__label">Descripcion del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-inhabilitar-producto-info-item" data-ProNombre>
-                        <h3>NOMBRE DEL PROVEEDOR</h3>
+                        <h3 class="dialog-main-content__label">Nombre del proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-inhabilitar-producto-info-item" data-ProUbicacionFisica>
-                        <h3>UBICACION FISICA</h3>
+                        <h3 class="dialog-main-content__label">Ubicacion Fisica del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-inhabilitar-producto-info-item" data-ProLaboratorio>
-                        <h3>LABORATORIO</h3>
+                        <h3 class="dialog-main-content__label">Nombre del Laboratorio</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-inhabilitar-producto-info-item" data-ProUnidadMedida>
-                        <h3>UNIDAD DE MEDIDA</h3>
+                        <h3 class="dialog-main-content__label">Unidad de Medida del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-inhabilitar-producto-info-item" data-ProPresentacion>
-                        <h3>PRESENTACION</h3>
+                        <h3 class="dialog-main-content__label">Presentacion del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-inhabilitar-producto-info-item" data-ProPrecioVenta>
-                        <h3>PRECIO DE VENTA</h3>
+                        <h3 class="dialog-main-content__label">Precio de Venta del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-inhabilitar-producto-info-item" data-ProRegSanInvima>
-                        <h3>REGISTRO SANITARIO INVIMA</h3>
+                        <h3 class="dialog-main-content__label">Registro de Invima del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                 </div>
@@ -246,131 +246,155 @@
                 <h2 class="productos__modal-agregar-producto-title dialog-title">Registra Nuevos Productos</h2>
 
                 <form class="productos__modal-agregar-producto-form dialog-main-content">
+                    
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Codigo de Barras del Producto</label>
+                        <input 
+                        name="codigoBarras" 
+                        type="text" 
+                        maxlength="15"
+                        id="codigoBarrasProducto" 
+                        title = "Debe tener una maxima logitud de 15 caracteres"
+                        autocomplete="off"
+                        data-input 
+                        data-ProCodBarras
+                        >
+                    </section>
 
-                    <input 
-                    name="codigoBarras" 
-                    type="text" 
-                    maxlength="15"
-                    placeholder="Codigo de barras del producto" 
-                    id="codigoBarrasProducto" 
-                    title = "Debe tener una maxima logitud de 15 caracteres"
-                    autocomplete="off"
-                    data-input 
-                    data-ProCodBarras
-                    >
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Nit del Proveedor</label>
+                        <input 
+                        name="nitProveedor" 
+                        type="text" 
+                        title="El valor se colocara automaticamente cuando selecciones un proveedor"
+                        autocomplete="off"
+                        data-input 
+                        data-tbl_proveedores_ProNIT
+                        >
+                    </section>
 
-                    <input 
-                    name="nitProveedor" 
-                    type="text" 
-                    placeholder="NIT del proveedor" 
-                    title="El valor se colocara automaticamente cuando selecciones un proveedor"
-                    autocomplete="off"
-                    data-input 
-                    data-tbl_proveedores_ProNIT
-                    >
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Descripcion del Producto</label>
+                        <input 
+                        name="descripcion" 
+                        type="text" 
+                        title="Ingresa el nombre comercial del producto"
+                        autocomplete="off"
+                        data-input 
+                        data-ProDescripcion
+                        >
+                    </section>
 
-                    <input 
-                    name="descripcion" 
-                    type="text" 
-                    placeholder="Descripcion" 
-                    title="Ingresa el nombre comercial del producto"
-                    autocomplete="off"
-                    data-input 
-                    data-ProDescripcion
-                    >
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Nombre del proveedor</label>
+                        <select 
+                        name="proveedor" 
+                        id="productos__modal-agregar-producto-select-proveedor" 
+                        data-input
+                        data-ProNombre
+                        >
+                            <option value="" data-proveedor-id></option>
+                        
+                            <?php foreach($this->data['infoProveedores'] as $key => $value): ?>
+                            <option 
+                            value="<?php echo $value['ProNombre'] ?>" 
+                            data-proveedor-id="<?php echo $value['ProNIT'] ?>"><?php echo $value['ProNombre'] ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </section>
 
-                    <select 
-                    name="proveedor" 
-                    id="productos__modal-agregar-producto-select-proveedor" 
-                    data-input
-                    data-ProNombre
-                    >
-                        <option value="" data-proveedor-id>Elige el proveedor</option>
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Ubicacion Fisica del Producto</label>
+                        <input 
+                        name="ubicacionFisica" 
+                        type="text" 
+                        title="Ingresa el codigo de la ubicacion fisica real en donde se encuentra el producto"
+                        autocomplete="off"
+                        data-input 
+                        data-ProUbicacionFisica
+                        >
+                    </section>
 
-                        <?php foreach($this->data['infoProveedores'] as $key => $value): ?>
-                        <option 
-                        value="<?php echo $value['ProNombre'] ?>" 
-                        data-proveedor-id="<?php echo $value['ProNIT'] ?>"><?php echo $value['ProNombre'] ?></option>
-                        <?php endforeach; ?>
-                    </select>
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Nombre del Laboratorio</label>
+                        <input 
+                        name="laboratorio" 
+                        type="text" 
+                        title="Nombre del laboratorio"
+                        autocomplete="off"
+                        data-input 
+                        data-ProLaboratorio
+                        >
+                    </section>
 
-                    <input 
-                    name="ubicacionFisica" 
-                    type="text" 
-                    placeholder="Ubicacion fisica" 
-                    title="Ingresa el codigo de la ubicacion fisica real en donde se encuentra el producto"
-                    autocomplete="off"
-                    data-input 
-                    data-ProUbicacionFisica
-                    >
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Unidad de Medida del Producto</label>
+                        <select 
+                        name="unidadMedida" 
+                        data-input
+                        data-ProUnidadMedida
+                        >
+                            <option value=""></option>
+                            <option value="KILOGRAMOS">(KG) KILOGRAMOS</option>
+                            <option value="GRAMOS">(G) GRAMOS</option>
+                            <option value="MILIGRAMOS">(MG) MILIGRAMOS</option>
+                            <option value="MICROGRAMOS">(MCG) MICROGRAMOS</option>
+                            <option value="UNIDAD">(U) UNIDAD</option>
+                            <option value="MILILITROS">(ML) MILILITROS</option>
+                            <option value="LITROS">(L) LITROS</option>
+                        </select>
+                    </section>
 
-                    <input 
-                    name="laboratorio" 
-                    type="text" 
-                    placeholder="Ingresa el laboratorio" 
-                    title="Nombre del laboratorio"
-                    autocomplete="off"
-                    data-input 
-                    data-ProLaboratorio
-                    >
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Presentacion del Producto</label>
+                        <select 
+                        name="presentacion" 
+                        autocomplete="off"
+                        data-input
+                        data-ProPresentacion
+                        >
+                            <option value=""></option>
+                            <option value="TABLETA">TABLETA</option>
+                            <option value="JARABE">JARABE</option>
+                            <option value="CAPSULA">CAPSULA</option>
+                            <option value="COMPRIMIDO">COMPRIMIDO</option>
+                            <option value="GRAGEA O TABLETA RECUBIERTA">GRAGEA O TABLETA RECUBIERTA</option>
+                            <option value="PILDORA">PILDORA</option>
+                            <option value="INHALADOR">INHALADOR</option>
+                            <option value="BOTELLA">BOTELLA</option>
+                            <option value="TUBO COLAPSIBLE DE ALUMINIO">TUBO COLAPSIBLE DE ALUMINIO</option>
+                            <option value="FRASCO X 300 ML DE SOLUCIÓN INYECTABLE">FRASCO X 300 ML DE SOLUCIÓN INYECTABLE</option>
+                            <option value="GRANULOS">GRANULOS</option>
+                            <option value="100 ML DE JARABE">100 ML DE JARABE</option>
+                            <option value="CREMA TOPICA">CREMA TOPICA</option>
+                        </select>
+                    </section>
 
-                    <select 
-                    name="unidadMedida" 
-                    data-input
-                    data-ProUnidadMedida
-                    >
-                        <option value="">Unidad de medida</option>
-                        <option value="KILOGRAMOS">(kg) kilogramos</option>
-                        <option value="GRAMOS">(g) gramos</option>
-                        <option value="MILIGRAMOS">(mg) miligramos</option>
-                        <option value="MICROGRAMOS">(mcg) microgramos</option>
-                        <option value="UNIDAD">(u) unidad</option>
-                        <option value="MILILITROS">(ml) mililitros</option>
-                        <option value="LITROS">(l) litros</option>
-                    </select>
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Precio de Venta del Producto</label>
+                        <input 
+                        name="precioVenta" 
+                        type="text" 
+                        maxlength="10"
+                        title="El precio de venta es el precio de venta al cliente por unidad"
+                        autocomplete="off"
+                        data-input 
+                        data-ProPrecioVenta
+                        >
+                    </section>
 
-                    <select 
-                    name="presentacion" 
-                    autocomplete="off"
-                    data-input
-                    data-ProPresentacion
-                    >
-                        <option value="">Presentacion</option>
-                        <option value="TABLETA">TABLETA</option>
-                        <option value="JARABE">JARABE</option>
-                        <option value="CAPSULA">CAPSULA</option>
-                        <option value="COMPRIMIDO">COMPRIMIDO</option>
-                        <option value="GRAGEA O TABLETA RECUBIERTA">GRAGEA O TABLETA RECUBIERTA</option>
-                        <option value="PILDORA">PILDORA</option>
-                        <option value="INHALADOR">INHALADOR</option>
-                        <option value="BOTELLA">BOTELLA</option>
-                        <option value="TUBO COLAPSIBLE DE ALUMINIO">TUBO COLAPSIBLE DE ALUMINIO</option>
-                        <option value="FRASCO X 300 ML DE SOLUCIÓN INYECTABLE">FRASCO X 300 ML DE SOLUCIÓN INYECTABLE</option>
-                        <option value="GRANULOS">GRANULOS</option>
-                        <option value="100 ML DE JARABE">100 ML DE JARABE</option>
-                        <option value="CREMA TOPICA">CREMA TOPICA</option>
-                    </select>
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Registro de Invima del Producto</label>
+                        <input 
+                        name="invima" 
+                        type="text" 
+                        title="Ingresa el registro sanitario INVIMA"
+                        autocomplete="off"
+                        data-input
+                        data-ProRegSanInvima
+                        >
+                    </section>
 
-                    <input 
-                    name="precioVenta" 
-                    type="text" 
-                    maxlength="10"
-                    placeholder="Precio de venta" 
-                    title="El precio de venta es el precio de venta al cliente por unidad"
-                    autocomplete="off"
-                    data-input 
-                    data-ProPrecioVenta
-                    >
-
-                    <input 
-                    name="invima" 
-                    type="text" 
-                    placeholder="Registro sanitario INVIMA" 
-                    title="Ingresa el registro sanitario INVIMA"
-                    autocomplete="off"
-                    data-input
-                    data-ProRegSanInvima
-                    >
 
                 </form>
                 <div class="productos__modal-agregar-producto-btns-container dialog-container-bts">
@@ -387,43 +411,43 @@
                 </p>
                 <div class="productos__modal-agregar-producto-info-confirmacion dialog-main-content">
                     <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ProCodBarras>
-                        <h3>CODIGO DE BARRAS</h3>
+                        <h3 class="dialog-main-content__label">Codigo de Barras del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-agregar-producto-info-item-confirmacion" data-tbl_proveedores_ProNIT>
-                        <h3>NIT DEL PROVEEDOR</h3>
+                        <h3 class="dialog-main-content__label">Nit del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ProDescripcion>
-                        <h3>DESCRIPCION</h3>
+                        <h3 class="dialog-main-content__label">Descripcion del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ProNombre>
-                        <h3>NOMBRE DEL PROVEEDOR</h3>
+                        <h3 class="dialog-main-content__label">Nombre del proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ProUbicacionFisica>
-                        <h3>UBICACION FISICA</h3>
+                        <h3 class="dialog-main-content__label">Ubicacion Fisica del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ProLaboratorio>
-                        <h3>LABORATORIO</h3>
+                        <h3 class="dialog-main-content__label">Nombre del Laboratorio</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ProUnidadMedida>
-                        <h3>UNIDAD DE MEDIDA</h3>
+                        <h3 class="dialog-main-content__label">Unidad de Medida del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ProPresentacion>
-                        <h3>PRECIO DE VENTA</h3>
+                        <h3 class="dialog-main-content__label">Presentacion del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ProPrecioVenta>
-                        <h3>PRESENTACION</h3>
+                        <h3 class="dialog-main-content__label">Precio de Venta del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ProRegSanInvima>
-                        <h3>REGISTRO SANITARIO INVIMA</h3>
+                        <h3 class="dialog-main-content__label">Registro de Invima del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                 </div>
@@ -452,128 +476,153 @@
 
                 <form class="productos__modal-editar-producto-form dialog-main-content">
 
-                    <input 
-                    name="codigoBarras" 
-                    type="text" 
-                    maxlength="15"
-                    id= "codigoBarrasProducto"
-                    placeholder="Codigo de barras del producto" 
-                    title = "Debe tener una maxima logitud de 15 caracteres"
-                    data-input
-                    data-ProCodBarras
-                    >
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Codigo de Barras del Producto</label>
+                        <input 
+                        name="codigoBarras" 
+                        type="text" 
+                        maxlength="15"
+                        id="codigoBarrasProducto" 
+                        title = "Debe tener una maxima logitud de 15 caracteres"
+                        autocomplete="off"
+                        data-input 
+                        data-ProCodBarras
+                        >
+                    </section>
 
-                    <input 
-                    name="nitProveedor" 
-                    type="text" 
-                    placeholder="NIT del proveedor" 
-                    title="El valor se colocara automaticamente cuando selecciones un proveedor"
-                    autocomplete="off"
-                    data-input 
-                    data-tbl_proveedores_ProNIT
-                    >
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Nit del Proveedor</label>
+                        <input 
+                        name="nitProveedor" 
+                        type="text" 
+                        title="El valor se colocara automaticamente cuando selecciones un proveedor"
+                        autocomplete="off"
+                        data-input 
+                        data-tbl_proveedores_ProNIT
+                        >
+                    </section>
 
-                    <input 
-                    name="descripcion" 
-                    type="text" 
-                    placeholder="Descripcion" 
-                    title="Ingresa el nombre comercial del producto"
-                    autocomplete="off"
-                    data-input 
-                    data-ProDescripcion
-                    >
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Descripcion del Producto</label>
+                        <input 
+                        name="descripcion" 
+                        type="text" 
+                        title="Ingresa el nombre comercial del producto"
+                        autocomplete="off"
+                        data-input 
+                        data-ProDescripcion
+                        >
+                    </section>
 
-                    <select 
-                    name="proveedor" 
-                    id="productos__modal-editar-producto-select-proveedor" 
-                    autocomplete="off"
-                    data-input
-                    data-ProNombre
-                    >
-                        <option value="" data-proveedor-id>Elige el proveedor</option>
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Nombre del proveedor</label>
+                        <select 
+                        name="proveedor" 
+                        id="productos__modal-agregar-producto-select-proveedor" 
+                        data-input
+                        data-ProNombre
+                        >
+                            <option value="" data-proveedor-id></option>
+                        
+                            <?php foreach($this->data['infoProveedores'] as $key => $value): ?>
+                            <option 
+                            value="<?php echo $value['ProNombre'] ?>" 
+                            data-proveedor-id="<?php echo $value['ProNIT'] ?>"><?php echo $value['ProNombre'] ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </section>
 
-                        <?php foreach($this->data['infoProveedores'] as $key => $value): ?>
-                        <option 
-                        value="<?php echo $value['ProNombre'] ?>" 
-                        data-proveedor-id="<?php echo $value['ProNIT'] ?>"><?php echo $value['ProNombre'] ?></option>
-                        <?php endforeach; ?>
-                    </select>
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Ubicacion Fisica del Producto</label>
+                        <input 
+                        name="ubicacionFisica" 
+                        type="text" 
+                        title="Ingresa el codigo de la ubicacion fisica real en donde se encuentra el producto"
+                        autocomplete="off"
+                        data-input 
+                        data-ProUbicacionFisica
+                        >
+                    </section>
 
-                    <input 
-                    name="ubicacionFisica" 
-                    type="text" 
-                    placeholder="Ubicacion fisica" 
-                    title="Ingresa el codigo de la ubicacion fisica real en donde se encuentra el producto"
-                    autocomplete="off"
-                    data-input 
-                    data-ProUbicacionFisica
-                    >
-                    
-                    <input 
-                    name="laboratorio" 
-                    type="text" 
-                    placeholder="Ingresa el laboratorio" 
-                    title="Nombre del laboratorio"
-                    autocomplete="off"
-                    data-input 
-                    data-ProLaboratorio
-                    >
-                    
-                    <select 
-                    name="unidadMedida" 
-                    data-input
-                    data-ProUnidadMedida
-                    >
-                    <option value="">Unidad de medida</option>
-                        <option value="KILOGRAMOS">(kg) kilogramos</option>
-                        <option value="GRAMOS">(g) gramos</option>
-                        <option value="MILIGRAMOS">(mg) miligramos</option>
-                        <option value="MICROGRAMOS">(mcg) microgramos</option>
-                        <option value="UNIDAD">(u) unidad</option>
-                        <option value="MILILITROS">(ml) mililitros</option>
-                        <option value="LITROS">(l) litros</option>
-                    </select>
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Nombre del Laboratorio</label>
+                        <input 
+                        name="laboratorio" 
+                        type="text" 
+                        title="Nombre del laboratorio"
+                        autocomplete="off"
+                        data-input 
+                        data-ProLaboratorio
+                        >
+                    </section>
 
-                    <select 
-                    name="presentacion" 
-                    data-input
-                    data-ProPresentacion
-                    >
-                        <option value="">Presentacion</option>
-                        <option value="TABLETA">TABLETA</option>
-                        <option value="JARABE">JARABE</option>
-                        <option value="CAPSULA">CAPSULA</option>
-                        <option value="COMPRIMIDO">COMPRIMIDO</option>
-                        <option value="GRAGEA O TABLETA RECUBIERTA">GRAGEA O TABLETA RECUBIERTA</option>
-                        <option value="PILDORA">PILDORA</option>
-                        <option value="INHALADOR">INHALADOR</option>
-                        <option value="BOTELLA">BOTELLA</option>
-                        <option value="TUBO COLAPSIBLE DE ALUMINIO">TUBO COLAPSIBLE DE ALUMINIO</option>
-                        <option value="FRASCO X 300 ML DE SOLUCIÓN INYECTABLE">FRASCO X 300 ML DE SOLUCIÓN INYECTABLE</option>
-                        <option value="GRANULOS">GRANULOS</option>
-                        <option value="100 ML DE JARABE">100 ML DE JARABE</option>
-                        <option value="CREMA TOPICA">CREMA TOPICA</option>
-                    </select>
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Unidad de Medida del Producto</label>
+                        <select 
+                        name="unidadMedida" 
+                        data-input
+                        data-ProUnidadMedida
+                        >
+                            <option value=""></option>
+                            <option value="KILOGRAMOS">(KG) KILOGRAMOS</option>
+                            <option value="GRAMOS">(G) GRAMOS</option>
+                            <option value="MILIGRAMOS">(MG) MILIGRAMOS</option>
+                            <option value="MICROGRAMOS">(MCG) MICROGRAMOS</option>
+                            <option value="UNIDAD">(U) UNIDAD</option>
+                            <option value="MILILITROS">(ML) MILILITROS</option>
+                            <option value="LITROS">(L) LITROS</option>
+                        </select>
+                    </section>
 
-                    <input 
-                    name="precioVenta" 
-                    type="text" 
-                    maxlength="10"
-                    placeholder="Precio de venta" 
-                    title="El precio de venta es el precio de venta al cliente por unidad"
-                    autocomplete="off"
-                    data-input 
-                    data-ProPrecioVenta
-                    >
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Presentacion del Producto</label>
+                        <select 
+                        name="presentacion" 
+                        autocomplete="off"
+                        data-input
+                        data-ProPresentacion
+                        >
+                            <option value=""></option>
+                            <option value="TABLETA">TABLETA</option>
+                            <option value="JARABE">JARABE</option>
+                            <option value="CAPSULA">CAPSULA</option>
+                            <option value="COMPRIMIDO">COMPRIMIDO</option>
+                            <option value="GRAGEA O TABLETA RECUBIERTA">GRAGEA O TABLETA RECUBIERTA</option>
+                            <option value="PILDORA">PILDORA</option>
+                            <option value="INHALADOR">INHALADOR</option>
+                            <option value="BOTELLA">BOTELLA</option>
+                            <option value="TUBO COLAPSIBLE DE ALUMINIO">TUBO COLAPSIBLE DE ALUMINIO</option>
+                            <option value="FRASCO X 300 ML DE SOLUCIÓN INYECTABLE">FRASCO X 300 ML DE SOLUCIÓN INYECTABLE</option>
+                            <option value="GRANULOS">GRANULOS</option>
+                            <option value="100 ML DE JARABE">100 ML DE JARABE</option>
+                            <option value="CREMA TOPICA">CREMA TOPICA</option>
+                        </select>
+                    </section>
 
-                    <input 
-                    name="invima" 
-                    type="text" 
-                    placeholder="Registro sanitario INVIMA" 
-                    autocomplete="off"
-                    data-input
-                    data-ProRegSanInvima
-                    >
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Precio de Venta del Producto</label>
+                        <input 
+                        name="precioVenta" 
+                        type="text" 
+                        maxlength="10"
+                        title="El precio de venta es el precio de venta al cliente por unidad"
+                        autocomplete="off"
+                        data-input 
+                        data-ProPrecioVenta
+                        >
+                    </section>
+
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Registro de Invima del Producto</label>
+                        <input 
+                        name="invima" 
+                        type="text" 
+                        title="Ingresa el registro sanitario INVIMA"
+                        autocomplete="off"
+                        data-input
+                        data-ProRegSanInvima
+                        >
+                    </section>
 
                 </form>
                 <div class="productos__modal-editar-producto-btns-container dialog-container-bts">
@@ -590,43 +639,43 @@
                 </p>
                 <div class="productos__modal-editar-producto-info-confirmacion dialog-main-content">
                     <section class="productos__modal-editar-producto-info-item-confirmacion" data-ProCodBarras>
-                        <h3>CODIGO DE BARRAS</h3>
+                        <h3 class="dialog-main-content__label">Codigo de Barras del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-editar-producto-info-item-confirmacion" data-tbl_proveedores_ProNIT>
-                        <h3>NIT DEL PROVEEDOR</h3>
+                        <h3 class="dialog-main-content__label">Nit del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-editar-producto-info-item-confirmacion" data-ProDescripcion>
-                        <h3>DESCRIPCION</h3>
+                        <h3 class="dialog-main-content__label">Descripcion del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-editar-producto-info-item-confirmacion" data-ProNombre>
-                        <h3>NOMBRE DEL PROVEEDOR</h3>
+                        <h3 class="dialog-main-content__label">Nombre del proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-editar-producto-info-item-confirmacion" data-ProUbicacionFisica>
-                        <h3>UBICACION FISICA</h3>
+                        <h3 class="dialog-main-content__label">Ubicacion Fisica del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-editar-producto-info-item-confirmacion" data-ProLaboratorio>
-                        <h3>LABORATORIO</h3>
+                        <h3 class="dialog-main-content__label">Nombre del Laboratorio</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-editar-producto-info-item-confirmacion" data-ProUnidadMedida>
-                        <h3>UNIDAD DE MEDIDA</h3>
+                        <h3 class="dialog-main-content__label">Unidad de Medida del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-editar-producto-info-item-confirmacion" data-ProPresentacion>
-                        <h3>PRECIO DE VENTA</h3>
+                        <h3 class="dialog-main-content__label">Presentacion del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-editar-producto-info-item-confirmacion" data-ProPrecioVenta>
-                        <h3>PRESENTACION</h3>
+                        <h3 class="dialog-main-content__label">Precio de Venta del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-editar-producto-info-item-confirmacion" data-ProRegSanInvima>
-                        <h3>REGISTRO SANITARIO INVIMA</h3>
+                        <h3 class="dialog-main-content__label">Registro de Invima del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                 </div>
@@ -718,5 +767,6 @@
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_buscar_por_atributos.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_seleccion_de_producto.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_productos_productos_inhabilitados.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/cualquier_modulo_pintar_borde_derecho_input.js"></script>
 </body>
 </html>
