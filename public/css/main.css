@@ -43,10 +43,14 @@ respetando la metodologia "BEM".
   --border-card-radius: 10px;
 }
 
-h1,h2, label, input, select, a, h3, p {
+h1,h2, label, input, select, a, h3 {
   color: var(--color-text);
   word-break: normal;
 } 
+
+p {
+  word-break: normal;
+}
 
 img {
   max-width: 100%;
@@ -78,6 +82,12 @@ input, select, textarea {
   padding: 5px 15px;
   width: 100%;
 }
+
+textarea {
+  resize: none;
+  border-radius: var(--border-card-radius);
+}
+
 
 select {
   cursor: pointer;
