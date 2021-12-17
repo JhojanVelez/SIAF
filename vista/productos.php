@@ -250,6 +250,7 @@
                     <section class="dialog-main-content__input-container">
                         <label class="dialog-main-content__label">Codigo de Barras del Producto</label>
                         <input 
+                        tabindex="1"
                         name="codigoBarras" 
                         type="text" 
                         maxlength="15"
@@ -264,6 +265,7 @@
                     <section class="dialog-main-content__input-container">
                         <label class="dialog-main-content__label">Nit del Proveedor</label>
                         <input 
+                        tabindex="6"
                         name="nitProveedor" 
                         type="text" 
                         title="El valor se colocara automaticamente cuando selecciones un proveedor"
@@ -276,6 +278,7 @@
                     <section class="dialog-main-content__input-container">
                         <label class="dialog-main-content__label">Descripcion del Producto</label>
                         <input 
+                        tabindex="2"
                         name="descripcion" 
                         type="text" 
                         title="Ingresa el nombre comercial del producto"
@@ -288,6 +291,7 @@
                     <section class="dialog-main-content__input-container">
                         <label class="dialog-main-content__label">Nombre del proveedor</label>
                         <select 
+                        tabindex="7"
                         name="proveedor" 
                         id="productos__modal-agregar-producto-select-proveedor" 
                         data-input
@@ -306,6 +310,7 @@
                     <section class="dialog-main-content__input-container">
                         <label class="dialog-main-content__label">Ubicacion Fisica del Producto</label>
                         <input 
+                        tabindex="3"
                         name="ubicacionFisica" 
                         type="text" 
                         title="Ingresa el codigo de la ubicacion fisica real en donde se encuentra el producto"
@@ -318,6 +323,7 @@
                     <section class="dialog-main-content__input-container">
                         <label class="dialog-main-content__label">Nombre del Laboratorio</label>
                         <input 
+                        tabindex="8"
                         name="laboratorio" 
                         type="text" 
                         title="Nombre del laboratorio"
@@ -330,6 +336,7 @@
                     <section class="dialog-main-content__input-container">
                         <label class="dialog-main-content__label">Unidad de Medida del Producto</label>
                         <select 
+                        tabindex="4"
                         name="unidadMedida" 
                         data-input
                         data-ProUnidadMedida
@@ -348,6 +355,7 @@
                     <section class="dialog-main-content__input-container">
                         <label class="dialog-main-content__label">Presentacion del Producto</label>
                         <select 
+                        tabindex="9"
                         name="presentacion" 
                         autocomplete="off"
                         data-input
@@ -373,6 +381,7 @@
                     <section class="dialog-main-content__input-container">
                         <label class="dialog-main-content__label">Precio de Venta del Producto</label>
                         <input 
+                        tabindex="5"
                         name="precioVenta" 
                         type="text" 
                         maxlength="10"
@@ -386,6 +395,7 @@
                     <section class="dialog-main-content__input-container">
                         <label class="dialog-main-content__label">Registro de Invima del Producto</label>
                         <input 
+                        tabindex="10"
                         name="invima" 
                         type="text" 
                         title="Ingresa el registro sanitario INVIMA"
@@ -479,6 +489,7 @@
                     <section class="dialog-main-content__input-container">
                         <label class="dialog-main-content__label">Codigo de Barras del Producto</label>
                         <input 
+                        tabindex="1"
                         name="codigoBarras" 
                         type="text" 
                         maxlength="15"
@@ -493,6 +504,7 @@
                     <section class="dialog-main-content__input-container">
                         <label class="dialog-main-content__label">Nit del Proveedor</label>
                         <input 
+                        tabindex="6"
                         name="nitProveedor" 
                         type="text" 
                         title="El valor se colocara automaticamente cuando selecciones un proveedor"
@@ -505,6 +517,7 @@
                     <section class="dialog-main-content__input-container">
                         <label class="dialog-main-content__label">Descripcion del Producto</label>
                         <input 
+                        tabindex="2"
                         name="descripcion" 
                         type="text" 
                         title="Ingresa el nombre comercial del producto"
@@ -517,6 +530,7 @@
                     <section class="dialog-main-content__input-container">
                         <label class="dialog-main-content__label">Nombre del proveedor</label>
                         <select 
+                        tabindex="7"
                         name="proveedor" 
                         id="productos__modal-agregar-producto-select-proveedor" 
                         data-input
@@ -535,6 +549,7 @@
                     <section class="dialog-main-content__input-container">
                         <label class="dialog-main-content__label">Ubicacion Fisica del Producto</label>
                         <input 
+                        tabindex="3"
                         name="ubicacionFisica" 
                         type="text" 
                         title="Ingresa el codigo de la ubicacion fisica real en donde se encuentra el producto"
@@ -547,6 +562,7 @@
                     <section class="dialog-main-content__input-container">
                         <label class="dialog-main-content__label">Nombre del Laboratorio</label>
                         <input 
+                        tabindex="8"
                         name="laboratorio" 
                         type="text" 
                         title="Nombre del laboratorio"
@@ -559,6 +575,7 @@
                     <section class="dialog-main-content__input-container">
                         <label class="dialog-main-content__label">Unidad de Medida del Producto</label>
                         <select 
+                        tabindex="4"
                         name="unidadMedida" 
                         data-input
                         data-ProUnidadMedida
@@ -577,6 +594,7 @@
                     <section class="dialog-main-content__input-container">
                         <label class="dialog-main-content__label">Presentacion del Producto</label>
                         <select 
+                        tabindex="9"
                         name="presentacion" 
                         autocomplete="off"
                         data-input
@@ -602,6 +620,7 @@
                     <section class="dialog-main-content__input-container">
                         <label class="dialog-main-content__label">Precio de Venta del Producto</label>
                         <input 
+                        tabindex="5"
                         name="precioVenta" 
                         type="text" 
                         maxlength="10"
@@ -615,6 +634,7 @@
                     <section class="dialog-main-content__input-container">
                         <label class="dialog-main-content__label">Registro de Invima del Producto</label>
                         <input 
+                        tabindex="10"
                         name="invima" 
                         type="text" 
                         title="Ingresa el registro sanitario INVIMA"

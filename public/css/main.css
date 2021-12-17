@@ -631,12 +631,12 @@ dialog {
 }
 
 .dialog-main-content {
-  width: 90%;
+  width: 80%;
   margin: auto;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   display: grid;
   grid-template-columns: repeat(2,minmax(200px,400px));
-  grid-gap: 1rem 3rem;
+  grid-gap: 1rem 5rem;
 }
 
 .dialog-main-content__input-container--focus {
