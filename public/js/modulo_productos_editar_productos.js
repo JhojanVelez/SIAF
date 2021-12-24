@@ -19,6 +19,7 @@ import { editar } from "../../ajax/editar.js";
             $modal_1.toggleAttribute("open");
             $modal_1.querySelector("#codigoBarrasProducto").focus()
             $inputs[1].disabled = true;
+            scroll(0,150);
             idProductoSeleccionado = e.target.dataset.idProduct
             buscarPorId(idProductoSeleccionado,"productos",URL_RAIZ)
             .then((res)=> {

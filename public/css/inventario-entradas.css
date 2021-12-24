@@ -156,12 +156,11 @@
 .entradas__modal-agregar-entrada-form,
 .entradas__modal-agregar-entrada-info-confirmacion {
     grid-template-columns: repeat(2,minmax(200px,380px));
-    grid-template-rows: repeat(5,max-content);
+    grid-template-rows: repeat(4,max-content);
     grid-template-areas:'cod com'
                         'pro com'
                         'can com'
-                        'cos com'
-                        'ent com';
+                        'cos ent';
 }
 
 .entradas__modal-agregar-entrada-title {
@@ -190,8 +189,6 @@
 }
 .entradas__modal-agregar-entrada-form-item:nth-child(6) {
     grid-area: com;
-    resize: none;
-    border-radius: var(--border-card-radius);
 }
 
 .entradas__modal-agregar-entrada-info-item-confirmacion:nth-child(6) {

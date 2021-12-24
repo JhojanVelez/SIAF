@@ -163,8 +163,7 @@
     grid-template-areas:'cod com'
                         'pro com'
                         'can com'
-                        'cos com'
-                        'ent com';
+                        'cos ent';
 }
 
 .salidas__modal-agregar-salida-title {
@@ -193,8 +192,6 @@
 }
 .salidas__modal-agregar-salida-form-item:nth-child(6) {
     grid-area: com;
-    resize: none;
-    border-radius: var(--border-card-radius);
 }
 
 .salidas__modal-agregar-salida-info-item-confirmacion:nth-child(6) {

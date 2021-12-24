@@ -15,6 +15,7 @@ import { inhabilitar } from "../../ajax/inhabilitar.js";
         if(e.target.matches(".productos__boton-inhabilitar")) {
             $transparentBackgroundModal.classList.toggle("visible");
             $modal_1.toggleAttribute("open");
+            scroll(0,150);
             idProductoSeleccionado = e.target.dataset.idProduct;
             buscarPorId(idProductoSeleccionado,"productos",URL_RAIZ)
             .then((res)=> {

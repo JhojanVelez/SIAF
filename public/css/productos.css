@@ -92,14 +92,14 @@ table {
 
 .productos__modal-inhabilitar-producto {
     min-width: 800px;
-    max-width: 900px;
+    max-width: 1000px;
 }
 
 /*-------------------------Estilos del modal de agregar productos----------------------------------*/
 
 .productos__modal-agregar-producto {
     min-width: 700px;
-    max-width: 800px;
+    max-width: 1000px;
 }
 
 .productos__modal-agregar-producto-title {
@@ -111,7 +111,7 @@ table {
 
 .productos__modal-editar-producto {
     min-width: 700px;
-    max-width: 800px;
+    max-width: 1000px;
 }
 
 .productos__modal-editar-producto-title {
