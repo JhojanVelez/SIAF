@@ -162,80 +162,96 @@
 
                 <form class="salidas__modal-agregar-salida-form dialog-main-content">
 
-                    <input 
-                    class="salidas__modal-agregar-salida-form-item"
-                    id="codigoBarrasProducto"
-                    name= "codigoBarrasProducto"
-                    type="text" 
-                    maxlength="15"
-                    placeholder="Codigo de barras del producto" 
-                    title="Ingresa un codigo de barras de un producto registrado en sistema"
-                    autocomplete="off"
-                    data-input
-                    data-ProCodBarras
-                    >
+                    <section class="dialog-main-content__input-container salidas__modal-agregar-salida-form-item">
+                        <label class="dialog-main-content__label">Codigo de Barras del Producto</label>
+                        <input 
+                        class="salidas__modal-agregar-salida-form-item"
+                        id="codigoBarrasProducto"
+                        name= "codigoBarrasProducto"
+                        type="text" 
+                        maxlength="15"
+                        title="Ingresa un codigo de barras de un producto registrado en sistema"
+                        autocomplete="off"
+                        data-input
+                        data-ProCodBarras
+                        >
+                    </section>
+                    <section class="dialog-main-content__input-container salidas__modal-agregar-salida-form-item">
+                        <label class="dialog-main-content__label">Descripcion del Producto</label>
+                        <select 
+                        class="salidas__modal-agregar-salida-form-item"
+                        id="productos__modal-agregar-salida-select-proveedor"
+                        name="descripcionProducto" 
+                        title="Elige un producto de la lista y el codigo de barras se pondra automaticamente"
+                        data-input 
+                        data-ProDescripcion
+                        >
+                            <option value="" data-pro-cod-barras ></option>
 
-                    <select 
-                    class="salidas__modal-agregar-salida-form-item"
-                    id="productos__modal-agregar-salida-select-proveedor"
-                    name="descripcionProducto" 
-                    title="Elige un producto de la lista y el codigo de barras se pondra automaticamente"
-                    data-input 
-                    data-ProDescripcion
-                    >
-                        <option value="" data-pro-cod-barras >Elige el producto</option>
+                            <?php foreach($this->data['infoProductos'] as $key => $value): ?>
+                            <option 
+                            value="<?php echo $value['ProDescripcion'] ?>" 
+                            data-pro-cod-barras="<?php echo $value['ProCodBarras'] ?>"><?php echo $value['ProDescripcion'] ?></option>
+                            <?php endforeach; ?>
 
-                        <?php foreach($this->data['infoProductos'] as $key => $value): ?>
-                        <option 
-                        value="<?php echo $value['ProDescripcion'] ?>" 
-                        data-pro-cod-barras="<?php echo $value['ProCodBarras'] ?>"><?php echo $value['ProDescripcion'] ?></option>
-                        <?php endforeach; ?>
+                        </select>
+                    </section>
+                    
+                    <section class="dialog-main-content__input-container salidas__modal-agregar-salida-form-item">
+                        <label class="dialog-main-content__label">Cantidad de Producto</label>
+                        <input 
+                        class="salidas__modal-agregar-salida-form-item"
+                        name="cantidadSalida"
+                        type="number"
+                        title="Ingresa la cantidad de producto que salio"
+                        data-input 
+                        data-salCantidad
+                        >
+                    </section>
 
-                    </select>
+                    <section class="dialog-main-content__input-container salidas__modal-agregar-salida-form-item">
+                        <label class="dialog-main-content__label">Tipo de Salida</label>
+                        <select 
+                        class="salidas__modal-agregar-salida-form-item"
+                        name="tipoSalida" 
+                        title="Ingresa el tipo de salida"
+                        data-input 
+                        data-salTipoSalida
+                        >
+                            <option value=""></option>
+                            <option value="VENTA">VENTA</option>
+                            <option value="PRODUCTO CADUCADO">PRODUCTO CADUCADO</option>
+                            <option value="EMPAQUE DAÑADO">EMPAQUE DAÑADO</option>
+                            <option value="DAÑO INTERNO">DAÑO INTERNO</option>
+                        </select>
+                    </section>
 
-                    <input 
-                    class="salidas__modal-agregar-salida-form-item"
-                    name="cantidadSalida"
-                    type="number" 
-                    placeholder="Cantidad"
-                    title="Ingresa la cantidad de producto que salio"
-                    data-input 
-                    data-salCantidad
-                    >
+                    <section class="dialog-main-content__input-container salidas__modal-agregar-salida-form-item">
+                        <label class="dialog-main-content__label">Fecha de Salida</label>
+                        <input 
+                        class="salidas__modal-agregar-salida-form-item"
+                        name="fechaSalida" 
+                        type="datetime-local" 
+                        title="Ingresa la fecha y hora de salida"
+                        data-input 
+                        data-salFecha
+                        >
+                    </section>
 
-                    <select 
-                    class="salidas__modal-agregar-salida-form-item"
-                    name="tipoSalida" 
-                    title="Ingresa el tipo de salida"
-                    data-input 
-                    data-salTipoSalida
-                    >
-                        <option value="">Tipo de Salida</option>
-                        <option value="VENTA">VENTA</option>
-                        <option value="PRODUCTO CADUCADO">PRODUCTO CADUCADO</option>
-                        <option value="EMPAQUE DAÑADO">EMPAQUE DAÑADO</option>
-                        <option value="DAÑO INTERNO">DAÑO INTERNO</option>
-                    </select>
-
-                    <input 
-                    class="salidas__modal-agregar-salida-form-item"
-                    name="fechaSalida" 
-                    type="datetime-local" 
-                    title="Ingresa la fecha y hora de salida"
-                    data-input 
-                    data-salFecha
-                    >
-                    <textarea 
-                    cols="30" 
-                    rows="10" 
-                    maxlength="255"
-                    class="salidas__modal-agregar-salida-form-item" 
-                    name="salidaCometario" 
-                    placeholder="Ingresa un comentario."
-                    title="Comentarios opcionales acerca de la salida"
-                    data-input
-                    data-salComentarios
-                    ></textarea>
+                    <section class="dialog-main-content__input-container salidas__modal-agregar-salida-form-item">
+                        <label class="dialog-main-content__label">Comentarios (Opcional)</label>
+                        <textarea 
+                        cols="30" 
+                        rows="10" 
+                        maxlength="255"
+                        class="salidas__modal-agregar-salida-form-item" 
+                        name="salidaCometario"
+                        placeholder="Ingresa un comentario."
+                        title="Comentarios opcionales acerca de la salida"
+                        data-input
+                        data-salComentarios
+                        ></textarea>
+                    </section>
                 </form>
                 <div class="salidas__modal-agregar-salida-btns-container dialog-container-bts">
                     <button class="salidas__modal-agregar-salida-btn-cancelar boton dialog-btn">Cancelar</button>
@@ -251,27 +267,27 @@
                 </p>
                 <div class="salidas__modal-agregar-salida-info-confirmacion dialog-main-content">
                     <section class="salidas__modal-agregar-salida-info-item-confirmacion" data-ProCodBarras>
-                        <h3>CODIGO DE BARRAS</h3>
+                        <h3 class="dialog-main-content__label">Codigo de Barras del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="salidas__modal-agregar-salida-info-item-confirmacion" data-ProDescripcion>
-                        <h3>PRODUCTO</h3>
+                        <h3 class="dialog-main-content__label">Descripcion del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="salidas__modal-agregar-salida-info-item-confirmacion" data-salCantidad>
-                        <h3>CANTIDAD</h3>
+                        <h3 class="dialog-main-content__label">Cantidad de Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="salidas__modal-agregar-salida-info-item-confirmacion" data-salTipoSalida>
-                        <h3>TIPO DE SALIDA</h3>
+                        <h3 class="dialog-main-content__label">Tipo de Salida</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="salidas__modal-agregar-salida-info-item-confirmacion" data-salFecha>
-                        <h3>FECHA DE SALIDA</h3>
+                        <h3 class="dialog-main-content__label">Fecha de Salida</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="salidas__modal-agregar-salida-info-item-confirmacion" data-salComentarios>
-                        <h3>COMENTARIOS</h3>
+                        <h3 class="dialog-main-content__label">Comentarios (Opcional)</h3>
                         <p>________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</p>
                     </section>
                 </div>
@@ -302,5 +318,6 @@
     </script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_inventario_salidas_agregar_salidas.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_inventario_salidas_buscar_por_atributos.js" type="module"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/cualquier_modulo_pintar_borde_derecho_input.js" ></script>
 </body>
 </html>

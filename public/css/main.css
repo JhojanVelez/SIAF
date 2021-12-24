@@ -86,6 +86,7 @@ input, select, textarea {
 textarea {
   resize: none;
   border-radius: var(--border-card-radius);
+  word-break: break-word;
 }
 
 
