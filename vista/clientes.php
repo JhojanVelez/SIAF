@@ -120,12 +120,30 @@
             <dialog class="clientes__modal-agregar-cliente">
                 <h2 class="clientes__modal-agregar-cliente-title dialog-title">Registra Nuevos Clientes</h2>
                 <form class="clientes__modal-agregar-cliente-form dialog-main-content">
-                    <input type="text" placeholder="Numero de documento del cliente">
-                    <input type="text" placeholder="Correo">
-                    <input type="text" placeholder="Nombres">
-                    <input type="text" placeholder="Direcci&oacute;n">
-                    <input type="text" placeholder="Apellidos">
-                    <input type="text" placeholder="Telefono">
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Documento del Cliente</label>
+                        <input type="text">
+                    </section>
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Correo Electronico del Cliente</label>
+                        <input type="text">
+                    </section>
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Nombre/s del Cliente</label>
+                        <input type="text">
+                    </section>
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Direccion del Cliente</label>
+                        <input type="text">
+                    </section>
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Apellido/s del Cliente</label>
+                        <input type="text">
+                    </section>
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Telefono del Cliente</label>
+                        <input type="text">
+                    </section>
                 </form>
                 <div class="clientes__modal-agregar-cliente-btns-container dialog-container-bts">
                     <button class="clientes__modal-agregar-cliente-btn-cancelar boton dialog-btn">Cancelar</button>
@@ -141,27 +159,27 @@
                 </p>
                 <div class="clientes__modal-agregar-cliente-info-confirmacion dialog-main-content">
                     <section class="clientes__modal-agregar-cliente-info-item-confirmacion">
-                        <h3>DOCUMENTO DEL CLIENTE</h3>
+                        <h3 class="dialog-main-content__label">Documento del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-agregar-cliente-info-item-confirmacion">
-                        <h3>CORREO</h3>
+                        <h3 class="dialog-main-content__label">Correo Electronico del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-agregar-cliente-info-item-confirmacion">
-                        <h3>NOMBRE/S DEL CLIENTE</h3>
+                        <h3 class="dialog-main-content__label">Nombre/s del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-agregar-cliente-info-item-confirmacion">
-                        <h3>DIRECCI&Oacute;N</h3>
+                        <h3 class="dialog-main-content__label">Direccion del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-agregar-cliente-info-item-confirmacion">
-                        <h3>APELLIDO/S DEL CLIENTE</h3>
+                        <h3 class="dialog-main-content__label">Apellido/s del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-agregar-cliente-info-item-confirmacion">
-                        <h3>TELEFONO</h3>
+                        <h3 class="dialog-main-content__label">Telefono del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                 </div>
@@ -418,12 +436,30 @@
             <dialog class="clientes__modal-editar-cliente">
                 <h2 class="clientes__modal-editar-cliente-title dialog-title">Edita Tus Clientes</h2>
                 <form class="clientes__modal-editar-cliente-form dialog-main-content">
-                <input type="text" placeholder="Numero de documento del cliente">
-                    <input type="text" placeholder="Correo">
-                    <input type="text" placeholder="Nombres">
-                    <input type="text" placeholder="Direcci&oacute;n">
-                    <input type="text" placeholder="Apellidos">
-                    <input type="text" placeholder="Telefono">
+                <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Documento del Cliente</label>
+                        <input type="text">
+                    </section>
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Correo Electronico del Cliente</label>
+                        <input type="text">
+                    </section>
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Nombre/s del Cliente</label>
+                        <input type="text">
+                    </section>
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Direccion del Cliente</label>
+                        <input type="text">
+                    </section>
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Apellido/s del Cliente</label>
+                        <input type="text">
+                    </section>
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Telefono del Cliente</label>
+                        <input type="text">
+                    </section>
                 </form>
                 <div class="clientes__modal-editar-cliente-btns-container dialog-container-bts">
                     <button class="clientes__modal-editar-cliente-btn-cancelar boton dialog-btn">Cancelar</button>
@@ -439,27 +475,27 @@
                 </p>
                 <div class="clientes__modal-editar-cliente-info-confirmacion dialog-main-content">
                     <section class="clientes__modal-editar-cliente-info-item-confirmacion">
-                        <h3>DOCUMENTO DEL CLIENTE</h3>
+                        <h3 class="dialog-main-content__label">Documento del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-editar-cliente-info-item-confirmacion">
-                        <h3>CORREO</h3>
+                        <h3 class="dialog-main-content__label">Correo Electronico del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-editar-cliente-info-item-confirmacion">
-                        <h3>NOMBRE/S DEL CLIENTE</h3>
+                        <h3 class="dialog-main-content__label">Nombre/s del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-editar-cliente-info-item-confirmacion">
-                        <h3>DIRECCI&Oacute;N</h3>
+                        <h3 class="dialog-main-content__label">Direccion del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-editar-cliente-info-item-confirmacion">
-                        <h3>APELLIDO/S DEL CLIENTE</h3>
+                        <h3 class="dialog-main-content__label">Apellido/s del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-editar-cliente-info-item-confirmacion">
-                        <h3>TELEFONO</h3>
+                        <h3 class="dialog-main-content__label">Telefono del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                 </div>
@@ -491,28 +527,28 @@
                     Recuerda que una vez inhabilitado, no lo podras volver a habilitar.
                 </p>
                 <div class="clientes__modal-inhabilitar-cliente-info dialog-main-content">
-                <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion">
-                        <h3>DOCUMENTO DEL CLIENTE</h3>
+                    <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion">
+                        <h3 class="dialog-main-content__label">Documento del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion">
-                        <h3>CORREO</h3>
+                        <h3 class="dialog-main-content__label">Correo Electronico del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion">
-                        <h3>NOMBRE/S DEL CLIENTE</h3>
+                        <h3 class="dialog-main-content__label">Nombre/s del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion">
-                        <h3>DIRECCI&Oacute;N</h3>
+                        <h3 class="dialog-main-content__label">Direccion del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion">
-                        <h3>APELLIDO/S DEL CLIENTE</h3>
+                        <h3 class="dialog-main-content__label">Apellido/s del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion">
-                        <h3>TELEFONO</h3>
+                        <h3 class="dialog-main-content__label">Telefono del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                 </div>
@@ -545,5 +581,6 @@
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_clientes_clientes_inhabilitados.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_clientes_editar_cliente.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_clientes_inhabilitar_clientes.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/cualquier_modulo_pintar_borde_derecho_input.js" ></script>
 </body>
 </html>

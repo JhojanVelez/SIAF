@@ -40,7 +40,7 @@
 
 .clientes__modal-agregar-cliente {
     min-width: 700px;
-    max-width: 800px;
+    max-width: 1000px;
 }
 
 .clientes__modal-agregar-cliente-title {
@@ -71,7 +71,7 @@
 
 .clientes__modal-edidar-cliente {
     min-width: 700px;
-    max-width: 800px;
+    max-width: 1000px;
 }
 
 .clientes__modal-editar-cliente-title {
@@ -82,5 +82,5 @@
 
 .clientes__modal-inhabilitar-cliente {
     min-width: 800px;
-    max-width: 900px;
+    max-width: 1000px;
 }
