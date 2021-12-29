@@ -136,27 +136,57 @@
             <dialog class="usuarios__modal-agregar-usuario">
                 <h2 class="usuarios__modal-agregar-usuario-title dialog-title">Registra Nuevos Usuarios</h2>
                 <form class="usuarios__modal-agregar-usuario-form dialog-main-content">
-                    <input class="usuarios__modal-agregar-usuario-form-item" type="text" placeholder="Documento de identidad">
-                    <input class="usuarios__modal-agregar-usuario-form-item" type="text" placeholder="Correo">
-                    <input class="usuarios__modal-agregar-usuario-form-item" type="text" placeholder="Nombres">
-                    <input class="usuarios__modal-agregar-usuario-form-item" type="text" placeholder="Direcci&oacute;n">
-                    <input class="usuarios__modal-agregar-usuario-form-item" type="text" placeholder="Apellidos">
-                    <input class="usuarios__modal-agregar-usuario-form-item" type="text" placeholder="Telefono">
-                    <input class="usuarios__modal-agregar-usuario-form-item" type="text" placeholder="EPS">
-                    <input class="usuarios__modal-agregar-usuario-form-item" type="text" placeholder="RH">
+                    <section class="dialog-main-content__input-container usuarios__modal-agregar-usuario-form-item">
+                        <label class="dialog-main-content__label">Documento del Usuario</label>
+                        <input tabindex="1" data-input type="text">
+                    </section>
+                    <section class="dialog-main-content__input-container usuarios__modal-agregar-usuario-form-item">
+                        <label class="dialog-main-content__label">Correo Electronico del Usuario</label>
+                        <input tabindex="5" data-input type="text">
+                    </section>
+                    <section class="dialog-main-content__input-container usuarios__modal-agregar-usuario-form-item">
+                        <label class="dialog-main-content__label">Nombre/s del Usuario</label>
+                        <input tabindex="2" data-input type="text">
+                    </section>
+                    <section class="dialog-main-content__input-container usuarios__modal-agregar-usuario-form-item">
+                        <label class="dialog-main-content__label">Direccion del Usuario</label>
+                        <input tabindex="6" data-input type="text">
+                    </section>
+                    <section class="dialog-main-content__input-container usuarios__modal-agregar-usuario-form-item">
+                        <label class="dialog-main-content__label">Apellido/s del Usuario</label>
+                        <input tabindex="3" data-input type="text">
+                    </section>
+                    <section class="dialog-main-content__input-container usuarios__modal-agregar-usuario-form-item">
+                        <label class="dialog-main-content__label">Telefono del Usuario</label>
+                        <input tabindex="7" data-input type="text">
+                    </section>
+                    <section class="dialog-main-content__input-container usuarios__modal-agregar-usuario-form-item">
+                        <label class="dialog-main-content__label">EPS del Usuario</label>
+                        <input tabindex="4" data-input type="text">
+                    </section>
+                    <section class="dialog-main-content__input-container usuarios__modal-agregar-usuario-form-item">
+                        <label class="dialog-main-content__label">RH del Usuario</label>
+                        <input tabindex="8" data-input type="text">
+                    </section>
                     <div class="usuarios__modal-agregar-usuario-form-item">
                         <div class="usuarios-modal-agregar-usuario-form-img-container">
                             <img class="usuarios-modal-agregar-usuario-form-img-container__img" src="https://cdn.forbes.com.mx/2019/04/blackrrock-invertir-1-640x360.jpg" alt="">
-                            <input class="usuarios-modal-agregar-usuario-form-img-container__file" type="file" title="Foto">
+                            <input tabindex="" class="usuarios-modal-agregar-usuario-form-img-container__file" type="file" title="Foto">
                         </div>
                     </div>
-                    <input class="usuarios__modal-agregar-usuario-form-item" type="text" placeholder="Contraseña">
-                    <select class="usuarios__modal-agregar-usuario-form-item">
-                        <option value="">Rol</option>
-                        <option value="">Gerente</option>
-                        <option value="">Almacenista</option>
-                        <option value="">Farmaceuta</option>
-                    </select>
+                    <section class="dialog-main-content__input-container usuarios__modal-agregar-usuario-form-item">
+                        <label class="dialog-main-content__label">Contrase&ntilde;a del Usuario</label>
+                        <input tabindex="9" data-input type="text">
+                    </section>
+                    <section class="dialog-main-content__input-container usuarios__modal-agregar-usuario-form-item">
+                        <label class="dialog-main-content__label">Rol del Usuario</label>
+                        <select tabindex="10" data-input class="usuarios__modal-agregar-usuario-form-item">
+                            <option value=""></option>
+                            <option value="">Gerente</option>
+                            <option value="">Almacenista</option>
+                            <option value="">Farmaceuta</option>
+                        </select>
+                    </section>
                     <div class="usuarios__modal-agregar-usuario-form-item" class="usuarios__modal-agregar-usuario-btns-container dialog-container-bts">
                         <button class="usuarios__modal-agregar-usuario-btn-cancelar boton dialog-btn">Cancelar</button>
                         <button class="usuarios__modal-agregar-usuario-btn-añadir boton dialog-btn">A&ntilde;adir</button>
@@ -171,44 +201,44 @@
                     Recuerda revisar detenidamente la informacion del usuario que estas registrando.
                 </p>
                 <div class="usuarios__modal-agregar-usuario-info-confirmacion dialog-main-content">
-                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion">
-                        <h3>DOCUMENTO DE IDENTIDAD</h3>
+                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                        <h3 class="dialog-main-content__label">Documento del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion">
-                        <h3>CORREO</h3>
+                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                        <h3 class="dialog-main-content__label">Correo Electronico del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion">
-                        <h3>NOMBRES</h3>
+                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                        <h3 class="dialog-main-content__label">Nombre/s del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion">
-                        <h3>DIRECCI&Oacute;N</h3>
+                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                        <h3 class="dialog-main-content__label">Direccion del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion">
-                        <h3>APELLIDOS</h3>
+                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                        <h3 class="dialog-main-content__label">Apellido/s del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion">
-                        <h3>TELEFONO</h3>
+                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                        <h3 class="dialog-main-content__label">Telefono del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion">
-                        <h3>EPS</h3>
+                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                        <h3 class="dialog-main-content__label">EPS del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion">
-                        <h3>RH</h3>
+                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                        <h3 class="dialog-main-content__label">RH del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion">
-                        <h3>CONTRASE&Ntilde;A</h3>
+                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                        <h3 class="dialog-main-content__label">Contrase&ntilde;a del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion">
-                        <h3>ROL</h3>
+                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                        <h3 class="dialog-main-content__label">Rol del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                 </div>
@@ -234,27 +264,57 @@
             <dialog class="usuarios__modal-editar-usuario">
                 <h2 class="usuarios__modal-editar-usuario-title dialog-title">Edita Tus Usuarios</h2>
                 <form class="usuarios__modal-editar-usuario-form dialog-main-content">
-                    <input class="usuarios__modal-editar-usuario-form-item" type="text" placeholder="Documento de identidad">
-                    <input class="usuarios__modal-editar-usuario-form-item" type="text" placeholder="Correo">
-                    <input class="usuarios__modal-editar-usuario-form-item" type="text" placeholder="Nombres">
-                    <input class="usuarios__modal-editar-usuario-form-item" type="text" placeholder="Direcci&oacute;n">
-                    <input class="usuarios__modal-editar-usuario-form-item" type="text" placeholder="Apellidos">
-                    <input class="usuarios__modal-editar-usuario-form-item" type="text" placeholder="Telefono">
-                    <input class="usuarios__modal-editar-usuario-form-item" type="text" placeholder="EPS">
-                    <input class="usuarios__modal-editar-usuario-form-item" type="text" placeholder="RH">
+                    <section class="dialog-main-content__input-container usuarios__modal-editar-usuario-form-item">
+                        <label class="dialog-main-content__label">Documento del Usuario</label>
+                        <input tabindex="1" data-input type="text">
+                    </section>
+                    <section class="dialog-main-content__input-container usuarios__modal-editar-usuario-form-item">
+                        <label class="dialog-main-content__label">Correo Electronico del Usuario</label>
+                        <input tabindex="5" data-input type="text">
+                    </section>
+                    <section class="dialog-main-content__input-container usuarios__modal-editar-usuario-form-item">
+                        <label class="dialog-main-content__label">Nombre/s del Usuario</label>
+                        <input tabindex="2" data-input type="text">
+                    </section>
+                    <section class="dialog-main-content__input-container usuarios__modal-editar-usuario-form-item">
+                        <label class="dialog-main-content__label">Direccion del Usuario</label>
+                        <input tabindex="6" data-input type="text">
+                    </section>
+                    <section class="dialog-main-content__input-container usuarios__modal-editar-usuario-form-item">
+                        <label class="dialog-main-content__label">Apellido/s del Usuario</label>
+                        <input tabindex="3" data-input type="text">
+                    </section>
+                    <section class="dialog-main-content__input-container usuarios__modal-editar-usuario-form-item">
+                        <label class="dialog-main-content__label">Telefono del Usuario</label>
+                        <input tabindex="7" data-input type="text">
+                    </section>
+                    <section class="dialog-main-content__input-container usuarios__modal-editar-usuario-form-item">
+                        <label class="dialog-main-content__label">EPS del Usuario</label>
+                        <input tabindex="4" data-input type="text">
+                    </section>
+                    <section class="dialog-main-content__input-container usuarios__modal-editar-usuario-form-item">
+                        <label class="dialog-main-content__label">RH del Usuario</label>
+                        <input tabindex="8" data-input type="text">
+                    </section>
                     <div class="usuarios__modal-editar-usuario-form-item">
                         <div class="usuarios-modal-editar-usuario-form-img-container">
                             <img class="usuarios-modal-editar-usuario-form-img-container__img" src="https://cdn.forbes.com.mx/2019/04/blackrrock-invertir-1-640x360.jpg" alt="">
-                            <input class="usuarios-modal-editar-usuario-form-img-container__file" type="file" title="Foto">
+                            <input tabindex="" class="usuarios-modal-editar-usuario-form-img-container__file" type="file" title="Foto">
                         </div>
                     </div>
-                    <input class="usuarios__modal-editar-usuario-form-item" type="text" placeholder="Contraseña">
-                    <select class="usuarios__modal-editar-usuario-form-item">
-                        <option value="">Rol</option>
-                        <option value="">Gerente</option>
-                        <option value="">Almacenista</option>
-                        <option value="">Farmaceuta</option>
-                    </select>
+                    <section class="dialog-main-content__input-container usuarios__modal-editar-usuario-form-item">
+                        <label class="dialog-main-content__label">Contrase&ntilde;a del Usuario</label>
+                        <input tabindex="9" data-input type="text">
+                    </section>
+                    <section class="dialog-main-content__input-container usuarios__modal-editar-usuario-form-item">
+                        <label class="dialog-main-content__label">Rol del Usuario</label>
+                        <select tabindex="10" data-input class="usuarios__modal-editar-usuario-form-item">
+                            <option value=""></option>
+                            <option value="">Gerente</option>
+                            <option value="">Almacenista</option>
+                            <option value="">Farmaceuta</option>
+                        </select>
+                    </section>
                     <div class="usuarios__modal-editar-usuario-form-item" class="usuarios__modal-editar-usuario-btns-container dialog-container-bts">
                         <button class="usuarios__modal-editar-usuario-btn-cancelar boton dialog-btn">Cancelar</button>
                         <button class="usuarios__modal-editar-usuario-btn-editar boton dialog-btn">Editar</button>
@@ -270,43 +330,43 @@
                 </p>
                 <div class="usuarios__modal-editar-usuario-info-confirmacion dialog-main-content">
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
-                        <h3>DOCUMENTO DE IDENTIDAD</h3>
+                        <h3 class="dialog-main-content__label">Documento del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
-                        <h3>CORREO</h3>
+                        <h3 class="dialog-main-content__label">Correo Electronico del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
-                        <h3>NOMBRES</h3>
+                        <h3 class="dialog-main-content__label">Nombre/s del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
-                        <h3>DIRECCI&Oacute;N</h3>
+                        <h3 class="dialog-main-content__label">Direccion del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
-                        <h3>APELLIDOS</h3>
+                        <h3 class="dialog-main-content__label">Apellido/s del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
-                        <h3>TELEFONO</h3>
+                        <h3 class="dialog-main-content__label">Telefono del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
-                        <h3>EPS</h3>
+                        <h3 class="dialog-main-content__label">EPS del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
-                        <h3>RH</h3>
+                        <h3 class="dialog-main-content__label">RH del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
-                        <h3>CONTRASE&Ntilde;A</h3>
+                        <h3 class="dialog-main-content__label">Contrase&ntilde;a del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
-                        <h3>ROL</h3>
+                        <h3 class="dialog-main-content__label">Rol del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                 </div>
@@ -338,43 +398,43 @@
                 </p>
                 <div class="usuarios__modal-inhabilitar-usuario-info dialog-main-content">
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
-                        <h3>DOCUMENTO DE IDENTIDAD</h3>
+                        <h3 class="dialog-main-content__label">Documento del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
-                        <h3>CORREO</h3>
+                        <h3 class="dialog-main-content__label">Correo Electronico del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
-                        <h3>NOMBRES</h3>
+                        <h3 class="dialog-main-content__label">Nombre/s del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
-                        <h3>DIRECCI&Oacute;N</h3>
+                        <h3 class="dialog-main-content__label">Direccion del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
-                        <h3>APELLIDOS</h3>
+                        <h3 class="dialog-main-content__label">Apellido/s del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
-                        <h3>TELEFONO</h3>
+                        <h3 class="dialog-main-content__label">Telefono del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
-                        <h3>EPS</h3>
+                        <h3 class="dialog-main-content__label">EPS del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
-                        <h3>RH</h3>
+                        <h3 class="dialog-main-content__label">RH del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
-                        <h3>CONTRASE&Ntilde;A</h3>
+                        <h3 class="dialog-main-content__label">Contrase&ntilde;a del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
-                        <h3>ROL</h3>
+                        <h3 class="dialog-main-content__label">Rol del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                 </div>
@@ -658,5 +718,6 @@
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_editar_usuario.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_inhabilitar_usuarios.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_usuarios_inhabilitados.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/cualquier_modulo_pintar_borde_derecho_input.js" ></script>
 </body>
 </html>

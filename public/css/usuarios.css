@@ -62,12 +62,16 @@
     overflow: hidden;
 }
 
+.dialog-btn {
+    width: 30%;
+}
+
 /*-------------------------Estilos de los modals de agregar usuarios----------------------------------*/
 
 
 .usuarios__modal-agregar-usuario {
     min-width: 1000px;
-    max-width: 1100px;
+    max-width: 1300px;
 }
 
 .usuarios__modal-agregar-usuario-title {
@@ -75,16 +79,15 @@
 }
 
 .usuarios__modal-agregar-usuario-form {
-    grid-template-columns: repeat(3,minmax(200px,400px));
-    grid-template-rows: repeat(6,min-content);
+    grid-template-columns: repeat(3,minmax(300px,400px));
+    grid-template-rows: repeat(5,5rem);
     grid-template-areas:'doc cor img'
                         'nom dir img'
-                        'ape tel img'
-                        'eps rh  img'
-                        'btn btn pas'
-                        'btn btn rol';
-    grid-gap: 2rem;
-    margin-bottom: 3rem;
+                        'ape tel pas'
+                        'eps rh  rol'
+                        'btn btn btn';
+    gap: 2rem 2.5rem;
+    align-items: center;
 }
 
 .usuarios__modal-agregar-usuario-form-item:nth-child(1) {
@@ -117,8 +120,8 @@ display: flex;
 }
 
 .usuarios-modal-agregar-usuario-form-img-container {
-    width: 200px;
-    height: 200px;
+    width: 11rem;
+    height: 11rem;
     border-radius: 100px;
     overflow: hidden;
     margin: auto;
@@ -169,16 +172,18 @@ display: flex;
 .usuarios__modal-agregar-usuario-form-item:nth-child(12) {
     grid-area:btn;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: center;
+    gap: 4rem;
 }
+
+
 
 /*-------------------------Estilos de los modals de editar usuarios----------------------------------*/
 
 
 .usuarios__modal-editar-usuario {
     min-width: 1000px;
-    max-width: 1100px;
+    max-width: 1300px;
 }
 
 .usuarios__modal-editar-usuario-title {
@@ -186,16 +191,15 @@ display: flex;
 }
 
 .usuarios__modal-editar-usuario-form {
-    grid-template-columns: repeat(3,minmax(200px,400px));
-    grid-template-rows: repeat(6,min-content);
+    grid-template-columns: repeat(3,minmax(300px,400px));
+    grid-template-rows: repeat(5,5rem);
     grid-template-areas:'doc cor img'
                         'nom dir img'
-                        'ape tel img'
-                        'eps rh  img'
-                        'btn btn pas'
-                        'btn btn rol';
-    grid-gap: 2rem;
-    margin-bottom: 3rem;
+                        'ape tel pas'
+                        'eps rh  rol'
+                        'btn btn btn';
+    gap: 2rem 2.5rem;
+    align-items: center;
 }
 
 .usuarios__modal-editar-usuario-form-item:nth-child(1) {
@@ -228,8 +232,8 @@ display: flex;
 }
 
 .usuarios-modal-editar-usuario-form-img-container {
-    width: 200px;
-    height: 200px;
+    width: 11rem;
+    height: 11rem;
     border-radius: 100px;
     overflow: hidden;
     margin: auto;
@@ -280,8 +284,8 @@ display: flex;
 .usuarios__modal-editar-usuario-form-item:nth-child(12) {
     grid-area:btn;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: center;
+    gap: 4rem;
 }
 
 /*-------------------------Estilos del modal de usuarios inhabilitados----------------------------------*/
