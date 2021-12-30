@@ -40,7 +40,7 @@ import { inhabilitar } from "../../ajax/inhabilitar.js";
                 } else {
                     $modal_3.toggleAttribute("open");
                     $modal_3.querySelector("H2").innerHTML = "!Por la seguridad de la informacion¡"
-                    $modal_3.querySelector("P").innerHTML = res.resultMessage || "Selecciona un proveedor para poder inhabilitar";
+                    $modal_3.querySelector("P").innerHTML = res.resultMessage || res.errorMessage;
                 }
             }).catch((err)=> {
                 console.log(err);

@@ -729,7 +729,7 @@
                     </div>
                     <div class="productos__modal-productos-inhabilitados-gen-repo-container-text">
                         <a 
-                        target="_BLACK"
+                        target="_BLANCK"
                         class="filtro-subtitulo-reporte" 
                         href="<?php echo(URL_RAIZ); ?>productos/generarReporteInhabilitados"
                         >

@@ -70,7 +70,12 @@
                     <div class="proveedores__filtro-gen-repo-img filtro-gen-repo-img">
                         <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
                     </div>
-                    <a class="proveedores__filtro-subtitulo-reporte filtro-subtitulo-reporte" href="">Generar reporte</a>
+                    <input 
+                    class="proveedores__filtro-subtitulo-reporte filtro-subtitulo-reporte" 
+                    type="submit" 
+                    value="Generar Reporte" 
+                    form="proveedores__filtro-form"
+                    >
                 </div>
             </div>
         </section>
@@ -390,7 +395,13 @@
                         <img src="<?php echo(URL_RAIZ); ?>public/imagenes/reportes-icono.svg" alt="">
                     </div>
                     <div class="proveedores__modal-proveedores-inhabilitados-gen-repo-container-text">
-                        <a class="filtro-subtitulo-reporte" href="">Generar Reporte</a>
+                        <a 
+                        target="_BLANCK"
+                        class="filtro-subtitulo-reporte" 
+                        href="<?php echo(URL_RAIZ); ?>proveedores/generarReporteInhabilitados"
+                        >
+                        Generar Reporte
+                        </a>
                     </div>
                 </div>
                 <section class="proveedores__modal-proveedores-inhabilitados-table-container container-table">

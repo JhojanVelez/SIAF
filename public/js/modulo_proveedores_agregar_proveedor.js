@@ -27,8 +27,6 @@ import {agregar} from '../../ajax/agregar.js';
         if(e.target.matches(".proveedores__modal-agregar-proveedor-btn-añadir")) {
             validador = true;
 
-            validarCorreo();
-
             $inputs.forEach(el => el.value = el.value.toUpperCase().trim());
 
             $inputs.forEach(input => {
@@ -40,7 +38,7 @@ import {agregar} from '../../ajax/agregar.js';
                 }
             });
 
-            if(validador) {
+            if(validarCorreo() && validador) {
                 $modal_1.toggleAttribute("open");
                 $modal_2.toggleAttribute("open");
     
@@ -99,10 +97,10 @@ import {agregar} from '../../ajax/agregar.js';
 
         if(regex.test($inputs[4].value)) {
             $inputs[4].classList.remove("input-invalido");
-            validador = true;
+            return true;
         } else {
             $inputs[4].classList.add("input-invalido");
-            validador = false;
+            return false;
         }
     }
 })();

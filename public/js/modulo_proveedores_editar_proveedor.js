@@ -41,9 +41,7 @@ import { editar } from "../../ajax/editar.js";
         }
         if(e.target.matches(".proveedores__modal-editar-proveedor-btn-editar")) {
             validador = true;
-
-            validarCorreo();
-
+            
             $inputs.forEach(el => el.value = el.value.toUpperCase().trim());
 
             $inputs.forEach(input => {
@@ -55,9 +53,7 @@ import { editar } from "../../ajax/editar.js";
                 }
             });
 
-            validarCorreo();
-
-            if(validador) {
+            if(validarCorreo() && validador) {
                 $modal_1.toggleAttribute("open");
                 $modal_2.toggleAttribute("open");
 
@@ -115,10 +111,10 @@ import { editar } from "../../ajax/editar.js";
 
         if(regex.test($inputs[4].value)) {
             $inputs[4].classList.remove("input-invalido");
-            validador = true;
+            return true;
         } else {
             $inputs[4].classList.add("input-invalido");
-            validador = false;
+            return false;
         }
     }
 })();
