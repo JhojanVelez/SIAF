@@ -1,9 +1,11 @@
 <?php
 
-class ClientesControlador {
-    function __construct () {
-        require_once("vista/clientes.php");
+class ClientesControlador extends Controlador{
+    function __construct ($url) {
+        $this->controladorMetodoParametro = $url;
     }
+
+    
 }
 
 ?>
