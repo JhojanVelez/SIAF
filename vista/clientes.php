@@ -67,11 +67,11 @@
                                 <p class="clientes__lista-cliente-data"><?php echo $value["CliTelefono"]; ?></p>
                             </section>
                             <section class="clientes__lista-cliente-info nombres">
-                                <h4 class="clientes__lista-cliente-info-title">NOMBRES</h4>
+                                <h4 class="clientes__lista-cliente-info-title">NOMBRE/S</h4>
                                 <p class="clientes__lista-cliente-data"><?php echo $value["CliNombre"]; ?></p>
                             </section>
                             <section class="clientes__lista-cliente-info apellidos">
-                                <h4 class="clientes__lista-cliente-info-title">APELLIDOS</h4>
+                                <h4 class="clientes__lista-cliente-info-title">APELLIDO/S</h4>
                                 <p class="clientes__lista-cliente-data"><?php echo $value["CliApellido"]; ?></p>
                             </section>
                             <section class="clientes__lista-cliente-info correo">
@@ -222,215 +222,27 @@
                     <table class="clientes-inhabilitados__table table">
                         <thead class="table-thead">
                             <tr class="table-tr">
-                                <td class="table-td">Documento</td>
+                            <td class="table-td">Documento</td>
                                 <td class="table-td">Nombre/s</td>
                                 <td class="table-td">Apellido/s</td>
                                 <td class="table-td">Correo</td>
                                 <td class="table-td">Telefono</td>
                                 <td class="table-td">Direccion</td>
+                                <td class="table-td">Fecha/hora Inhabilitacion</td>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td> 
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>1354648469231</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
+                            <tbody>
+                            <?php foreach($this->data["infoClientesInhabilitados"] as $key => $value): ?>
+                                <tr>
+                                    <td><?php echo $value["CliDocIdentidad"]; ?></td>
+                                    <td><?php echo $value["CliNombre"]; ?></td>
+                                    <td><?php echo $value["CliApellido"]; ?></td>
+                                    <td><?php echo $value["CliCorreo"]; ?></td>
+                                    <td><?php echo $value["CliTelefono"]; ?></td>
+                                    <td><?php echo $value["CliDireccion"]; ?></td>
+                                    <td><?php echo $value["CliFechaInhabilitacion"]; ?></td>
+                                </tr>
+                            <?php endforeach;?>
                         </tbody>
                     </table>
                 </section>
