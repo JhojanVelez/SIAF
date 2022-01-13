@@ -84,13 +84,19 @@
                             </section>
                         </div>
                         <div class="clientes__lista-cliente-botones contenedor-objetos__objeto-botones">
-                            <button class="clientes__lista-cliente-boton clientes__lista-cliente-boton-editar boton">
+                            <button 
+                            class="clientes__lista-cliente-boton clientes__lista-cliente-boton-editar boton"
+                            data-doc-cliente="<?php echo $value["CliDocIdentidad"]; ?>"
+                            >
                                 <div class="clientes__lista-cliente-boton-img">
                                     <img src="<?php echo(URL_RAIZ); ?>public/imagenes/editar-icono.svg" alt="">
                                 </div>
                                 <span>Editar</span>
                             </button>
-                            <button class="clientes__lista-cliente-boton clientes__lista-cliente-boton-inhabilitar boton">
+                            <button 
+                            class="clientes__lista-cliente-boton clientes__lista-cliente-boton-inhabilitar boton"
+                            data-doc-cliente="<?php echo $value["CliDocIdentidad"]; ?>"
+                            >
                                 <div class="clientes__lista-cliente-boton-img">
                                     <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.svg" alt="">
                                 </div>
@@ -401,27 +407,27 @@
                     Recuerda que una vez inhabilitado, no lo podras volver a habilitar.
                 </p>
                 <div class="clientes__modal-inhabilitar-cliente-info dialog-main-content">
-                    <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion">
+                    <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion" data-CliDocIdentidad>
                         <h3 class="dialog-main-content__label">Documento del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion">
+                    <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion" data-CliCorreo>
                         <h3 class="dialog-main-content__label">Correo Electronico del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion">
+                    <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion" data-CliNombre>
                         <h3 class="dialog-main-content__label">Nombre/s del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion">
+                    <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion" data-CliDireccion>
                         <h3 class="dialog-main-content__label">Direccion del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion">
+                    <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion" data-CliApellido>
                         <h3 class="dialog-main-content__label">Apellido/s del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion">
+                    <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion" data-CliTelefono>
                         <h3 class="dialog-main-content__label">Telefono del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
@@ -454,7 +460,7 @@
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_clientes_agregar_cliente.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_clientes_clientes_inhabilitados.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_clientes_editar_cliente.js"></script>
-    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_clientes_inhabilitar_clientes.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_clientes_inhabilitar_clientes.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/cualquier_modulo_pintar_borde_derecho_input.js" ></script>
 </body>
 </html>

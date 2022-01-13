@@ -139,7 +139,7 @@ class ProveedoresModelo extends ConexionBD {
     public function eliminar($id) {
         $this->setNit(htmlentities(addslashes($id)));
         try {
-            $this->sql="DELETE FROM tbl_proveedores WHERE proNIT = ?";
+            $this->sql="DELETE FROM tbl_proveedores WHERE ProNIT = ?";
 
             $this->PDOStmt = $this->connection->prepare($this->sql);
 
