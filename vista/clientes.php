@@ -315,30 +315,87 @@
             <!-- Estos son los modals para editar un cliente -->
             <dialog class="clientes__modal-editar-cliente">
                 <h2 class="clientes__modal-editar-cliente-title dialog-title">Edita Tus Clientes</h2>
-                <form class="clientes__modal-editar-cliente-form dialog-main-content">
-                <section class="dialog-main-content__input-container">
+                <form 
+                class="clientes__modal-editar-cliente-form dialog-main-content"
+                >
+                    <section class="dialog-main-content__input-container">
                         <label class="dialog-main-content__label">Documento del Cliente</label>
-                        <input type="text">
+                        <input 
+                        name="documento"
+                        type="text"
+                        maxlength="15"
+                        id="docCliente"
+                        title = "Debe tener una maxima longitud de 15 caracteres"
+                        autocomplete="off"
+                        tabindex="1"
+                        data-input
+                        data-CliDocIdentidad
+                        >
                     </section>
+
                     <section class="dialog-main-content__input-container">
                         <label class="dialog-main-content__label">Correo Electronico del Cliente</label>
-                        <input type="text">
+                        <input
+                        name="correo" 
+                        type="text"
+                        title="Ingresa el correo electronico del cliente: ejemplo@gmail.com"
+                        autocomplete="off"
+                        tabindex="4"
+                        data-input
+                        data-CliCorreo
+                        >
                     </section>
+                    
                     <section class="dialog-main-content__input-container">
                         <label class="dialog-main-content__label">Nombre/s del Cliente</label>
-                        <input type="text">
+                        <input
+                        name="nombre" 
+                        type="text"
+                        title="Ingresa el nombre del cliente"
+                        autocomplete="off"
+                        tabindex="2"
+                        data-input
+                        data-CliNombre
+                        >
                     </section>
+                    
                     <section class="dialog-main-content__input-container">
                         <label class="dialog-main-content__label">Direccion del Cliente</label>
-                        <input type="text">
+                        <input
+                        name="direccion" 
+                        type="text"
+                        title="Ingresa la direccion del cliente"
+                        autocomplete="off"
+                        tabindex="5"
+                        data-input
+                        data-CliDireccion
+                        >
                     </section>
+                    
                     <section class="dialog-main-content__input-container">
                         <label class="dialog-main-content__label">Apellido/s del Cliente</label>
-                        <input type="text">
+                        <input
+                        name="apellido" 
+                        type="text"
+                        title="Ingresa el apellido del cliente"
+                        autocomplete="off"
+                        tabindex="3"
+                        data-input
+                        data-CliApellido
+                        >
                     </section>
+                    
                     <section class="dialog-main-content__input-container">
                         <label class="dialog-main-content__label">Telefono del Cliente</label>
-                        <input type="text">
+                        <input
+                        name="telefono"
+                        type="text"
+                        title="Ingresa el numero telefonico del cliente"
+                        autocomplete="off"
+                        tabindex="6"
+                        data-input
+                        data-CliTelefono
+                        >
                     </section>
                 </form>
                 <div class="clientes__modal-editar-cliente-btns-container dialog-container-bts">
@@ -354,27 +411,27 @@
                     Recuerda revisar detenidamente la informacion del cliente que estas modificando.
                 </p>
                 <div class="clientes__modal-editar-cliente-info-confirmacion dialog-main-content">
-                    <section class="clientes__modal-editar-cliente-info-item-confirmacion">
+                    <section class="clientes__modal-editar-cliente-info-item-confirmacion" data-CliDocIdentidad>
                         <h3 class="dialog-main-content__label">Documento del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="clientes__modal-editar-cliente-info-item-confirmacion">
+                    <section class="clientes__modal-editar-cliente-info-item-confirmacion" data-CliCorreo>
                         <h3 class="dialog-main-content__label">Correo Electronico del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="clientes__modal-editar-cliente-info-item-confirmacion">
+                    <section class="clientes__modal-editar-cliente-info-item-confirmacion" data-CliNombre>
                         <h3 class="dialog-main-content__label">Nombre/s del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="clientes__modal-editar-cliente-info-item-confirmacion">
+                    <section class="clientes__modal-editar-cliente-info-item-confirmacion" data-CliDireccion>
                         <h3 class="dialog-main-content__label">Direccion del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="clientes__modal-editar-cliente-info-item-confirmacion">
+                    <section class="clientes__modal-editar-cliente-info-item-confirmacion" data-CliApellido>
                         <h3 class="dialog-main-content__label">Apellido/s del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="clientes__modal-editar-cliente-info-item-confirmacion">
+                    <section class="clientes__modal-editar-cliente-info-item-confirmacion" data-CliTelefono>
                         <h3 class="dialog-main-content__label">Telefono del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
@@ -459,7 +516,7 @@
     </script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_clientes_agregar_cliente.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_clientes_clientes_inhabilitados.js"></script>
-    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_clientes_editar_cliente.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_clientes_editar_cliente.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_clientes_inhabilitar_clientes.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/cualquier_modulo_pintar_borde_derecho_input.js" ></script>
 </body>

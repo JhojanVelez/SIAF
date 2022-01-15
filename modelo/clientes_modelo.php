@@ -71,6 +71,47 @@ class ClientesModelo extends ConexionBD {
         }
     }
 
+    public function editar ($idClienteSeleccionado) {
+        try {
+            $this->sql ="UPDATE  
+                        tbl_clientes
+                        SET 
+                            CliDocIdentidad     = :documento,
+                            CliNombre           = :nombre,
+                            CliApellido         = :apellido,
+                            CliDireccion        = :direccion,
+                            CliCorreo           = :correo,
+                            CliTelefono         = :telefono
+                        WHERE 
+                            CliDocIdentidad = :idClienteSeleccionado
+                        ";
+
+            $this->PDOStmt = $this->connection->prepare($this->sql);
+
+            $this->PDOStmt->bindValue(":documento",$this->documento);
+            $this->PDOStmt->bindValue(":nombre",$this->nombre);
+            $this->PDOStmt->bindValue(":apellido",$this->apellido);
+            $this->PDOStmt->bindValue(":direccion",$this->direccion);
+            $this->PDOStmt->bindValue(":correo",$this->correo);
+            $this->PDOStmt->bindValue(":telefono",$this->telefono);
+            $this->PDOStmt->bindValue(":idClienteSeleccionado",$idClienteSeleccionado);
+
+            $this->PDOStmt->execute();
+
+            $this->result["complete"] = true;
+            $this->result["affectedRows"] = $this->PDOStmt->rowCount();
+            $this->result["resultMessage"] = "Cliente editado correctamente";
+            return $this->result;
+
+        } catch (PDOException $e) {
+            $this->result["complete"] = false;
+            $this->result["affectedRows"] = $this->PDOStmt->rowCount();
+            $this->result["errorPDOMessage"] = $e->errorInfo;
+            $this->result["errorMessage"] = "El cliente no pudo ser modificado porque el Numero de Documento $this->documento ya esta registrado en otro cliente, por favor intenta modificar el valor con un Numero de Documento distinto a los demas clientes";
+            return $this->result;
+        }
+    }
+
     public function eliminar($id) {
         $this->setDocumento(htmlentities(addslashes($id)));
         try {
