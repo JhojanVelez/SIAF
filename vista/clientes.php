@@ -70,7 +70,12 @@
                     <div class="clientes__filtro-gen-repo-img filtro-gen-repo-img">
                         <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
                     </div>
-                    <a class="clientes__filtro-subtitulo-reporte filtro-subtitulo-reporte" href="">Generar reporte</a>
+                    <input 
+                    class="clientes__filtro-subtitulo-reporte filtro-subtitulo-reporte" 
+                    type="submit" 
+                    value="Generar Reporte" 
+                    form="clientes__filtro-form"
+                    >
                 </div>
             </div>
         </section>
