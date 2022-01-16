@@ -24,6 +24,26 @@ class ClientesModelo extends ConexionBD {
         }
     }
 
+    public function buscarPorAtributos () {
+        $this->sql ="SELECT * 
+                    FROM tbl_clientes
+                    WHERE
+                    CliDocIdentidad     LIKE :documento OR
+                    CliNombre           LIKE :nombre    OR
+                    CliApellido         LIKE :apellido    
+                    ORDER BY CliNombre";
+                    
+        $this->PDOStmt = $this->connection->prepare($this->sql);
+        
+        $this->PDOStmt->bindValue(":documento",$this->documento);
+        $this->PDOStmt->bindValue(":nombre",$this->nombre);
+        $this->PDOStmt->bindValue(":apellido",$this->apellido);
+
+        $this->PDOStmt->execute();
+
+        return $this->PDOStmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public function obtenerTodosLosDatos () {
         try {
             $this->rows['infoClientes'] = $this->connection->query("SELECT * FROM tbl_clientes ORDER BY CliNombre")->fetchAll(PDO::FETCH_ASSOC);

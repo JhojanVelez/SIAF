@@ -5,6 +5,44 @@ class ClientesControlador extends Controlador{
         $this->controladorMetodoParametro = $url;
     }
 
+    public function buscarPorAtributos ($ajax = true) {
+        /*
+        $ajax esta como parametro porque esta funcion va a ser reutilizada en dos casos
+        cuando sea una peticion asincrona $ajax = true, pero cuando no sea una peticion,
+        solo necesito poner los datos en Controlador::$data para luego usarlos en generar
+        reporte()
+        */
+        $_POST["documento"] = (!empty($_POST["documento"])) 
+            ? $_POST["documento"]."%" 
+            : "";
+        
+        $_POST["nombre"] = (!empty($_POST["nombre"])) 
+            ? $_POST["nombre"]."%"
+            : "";
+        
+        $_POST["apellido"] = (!empty($_POST["apellido"]))
+            ? $_POST["apellido"]."%"
+            : "";
+        
+        if( empty($_POST["documento"])    && 
+            empty($_POST["nombre"]) &&   
+            empty($_POST["apellido"])) 
+        {
+            //para que nos obtenga todos los datos
+            $_POST["documento"] = "%";
+        }
+        
+        $this->instanciaModelo->setDocumento(htmlentities(addslashes($_POST["documento"])));
+        $this->instanciaModelo->setNombre(htmlentities(addslashes($_POST["nombre"])));
+        $this->instanciaModelo->setApellido(htmlentities(addslashes($_POST["apellido"])));
+
+        $this->data = $this->instanciaModelo->buscarPorAtributos();
+
+        if($ajax) {
+            echo json_encode($this->data);
+        }
+    }
+
     function registrar () {
         try {
             if(!isset($_POST["documento"]) || empty($_POST["documento"]))   throw new Exception("El campo documento no puede estar vacio");

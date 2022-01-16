@@ -22,18 +22,48 @@
         <section class="clientes__container-filter container-filter box-shadow">
             <div class="clientes__filtro filtro">
                 <h2 class="clientes__filtro-titulo filtro-title">Filtros de busqueda</h2>
-                <form class="clientes__filtro-form filtro-form" action="">
+                <form 
+                id="clientes__filtro-form" 
+                class="clientes__filtro-form filtro-form"
+                action="<?php echo URL_RAIZ ?>clientes/generarReporte"
+                method="POST"
+                target="_BLANK"
+                >
                     <section class="clientes__filtro-input-container">
                         <label class="clientes__filtro-input-label filtro-label" for="cliente-id">Por el documento de identidad</label>
-                        <input type="text" class="clientes__filtro-cliente-id" id="cliente-id" placeholder="Documento">
+                        <input 
+                        name="documento"
+                        type="text" 
+                        class="clientes__filtro-cliente-id" 
+                        id="cliente-id" 
+                        placeholder="Documento"
+                        autocomplete="off"
+                        data-input
+                        >
                     </section>
                     <section class="clientes__filtro-input-container">
                         <label class="clientes__filtro-input-label filtro-label" for="cliente-nombre">Por su nombre</label>
-                        <input type="text" class="clientes__filtro-cliente-nombre" id="cliente-nombre" placeholder="Nombre">
+                        <input 
+                        name="nombre"
+                        type="text" 
+                        class="clientes__filtro-cliente-nombre" 
+                        id="cliente-nombre" 
+                        placeholder="Nombre"
+                        autocomplete="off"
+                        data-input
+                        >
                     </section>
                         <section class="clientes__filtro-input-container">
                         <label class="clientes__filtro-input-label filtro-label" for="cliente-ciudad">Por su apellido</label>
-                        <input type="text" class="clientes__filtro-cliente-nombre" id="cliente-ciudad" placeholder="Apellido">
+                        <input 
+                        name="apellido"
+                        type="text" 
+                        class="clientes__filtro-cliente-nombre" 
+                        id="cliente-ciudad" 
+                        placeholder="Apellido"
+                        autocomplete="off"
+                        data-input
+                        >
                     </section>
                 </form>
                 <div class="clientes__filtro-gen-repo filtro-gen-repo">
@@ -106,6 +136,66 @@
                     </figure>
 
                 <?php endforeach; ?>
+
+
+                <!-- 
+                    Este template nos permite imprimir la informacion cuando estamos buscando por atributo
+                    pero en este caso lo hacemos con template para hacer uso de los fragmentos
+                -->
+
+                <template class="clientes__lista-cliente-template">
+                    <figure class="clientes__lista-cliente contenedor-objetos__objeto box-shadow">
+                        <div class="clientes__lista-cliente-img contenedor-objetos__objeto-img">
+                            <img src="<?php echo(URL_RAIZ); ?>public/imagenes/cliente-icono.svg" alt="">
+                        </div>
+                        <div class="clientes__lista-cliente-info-container">
+                            <section class="clientes__lista-cliente-info documento">
+                                <h4 class="clientes__lista-cliente-info-title">DOCUMENTO DE IDENTIDAD</h4>
+                                <p class="clientes__lista-cliente-data"></p>
+                            </section>
+                            <section class="clientes__lista-cliente-info telefono">
+                                <h4 class="clientes__lista-cliente-info-title">TELEFONO</h4>
+                                <p class="clientes__lista-cliente-data"></p>
+                            </section>
+                            <section class="clientes__lista-cliente-info nombres">
+                                <h4 class="clientes__lista-cliente-info-title">NOMBRE/S</h4>
+                                <p class="clientes__lista-cliente-data"></p>
+                            </section>
+                            <section class="clientes__lista-cliente-info apellidos">
+                                <h4 class="clientes__lista-cliente-info-title">APELLIDO/S</h4>
+                                <p class="clientes__lista-cliente-data"></p>
+                            </section>
+                            <section class="clientes__lista-cliente-info correo">
+                                <h4 class="clientes__lista-cliente-info-title">CORREO</h4>
+                                <p class="clientes__lista-cliente-data"></p>
+                            </section>
+                            <section class="clientes__lista-cliente-info direccion">
+                                <h4 class="clientes__lista-cliente-info-title">DIRECCION</h4>
+                                <p class="clientes__lista-cliente-data"></p>
+                            </section>
+                        </div>
+                        <div class="clientes__lista-cliente-botones contenedor-objetos__objeto-botones">
+                            <button 
+                            class="clientes__lista-cliente-boton clientes__lista-cliente-boton-editar boton"
+                            data-doc-cliente=""
+                            >
+                                <div class="clientes__lista-cliente-boton-img">
+                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/editar-icono.svg" alt="">
+                                </div>
+                                <span>Editar</span>
+                            </button>
+                            <button 
+                            class="clientes__lista-cliente-boton clientes__lista-cliente-boton-inhabilitar boton"
+                            data-doc-cliente=""
+                            >
+                                <div class="clientes__lista-cliente-boton-img">
+                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.svg" alt="">
+                                </div>
+                                <span>Inhabilitar</span>
+                            </button>
+                        </div>
+                    </figure>
+                </template>
             </div>
         </section>
 
@@ -518,6 +608,7 @@
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_clientes_clientes_inhabilitados.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_clientes_editar_cliente.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_clientes_inhabilitar_clientes.js" type="module"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_clientes_buscar_por_atributos.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/cualquier_modulo_pintar_borde_derecho_input.js" ></script>
 </body>
 </html>
