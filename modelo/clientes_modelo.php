@@ -24,6 +24,14 @@ class ClientesModelo extends ConexionBD {
         }
     }
 
+    public function buscarInhabilitados () {
+        try {
+            return $this->connection->query("SELECT * FROM tbl_clientes_inhabilitados ORDER BY CliFechaInhabilitacion DESC")->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            return "Error al obtener todos los clientes inhabilitados";
+        }
+    }
+
     public function buscarPorAtributos () {
         $this->sql ="SELECT * 
                     FROM tbl_clientes

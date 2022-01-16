@@ -24,7 +24,7 @@ class ProveedoresModelo extends ConexionBD {
         try {
             return $this->connection->query("SELECT * FROM tbl_proveedores_inhabilitados ORDER BY ProFechaInhabilitacion DESC")->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
-            return "Error al obtener todos los productos inhabilitados";
+            return "Error al obtener todos los proveedores inhabilitados";
         }
     }
 

@@ -396,7 +396,7 @@
                     </div>
                     <div class="proveedores__modal-proveedores-inhabilitados-gen-repo-container-text">
                         <a 
-                        target="_BLANCK"
+                        target="_BLANK"
                         class="filtro-subtitulo-reporte" 
                         href="<?php echo(URL_RAIZ); ?>proveedores/generarReporteInhabilitados"
                         >
