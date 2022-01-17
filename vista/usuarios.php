@@ -58,8 +58,8 @@
                             <img 
                             src="
                                     <?php 
-                                    echo (file_exists("fotosEmpleados/empleado_{$value['EmpDocIdentidad']}.jpg"))
-                                        ? "fotosEmpleados/empleado_{$value['EmpDocIdentidad']}.jpg" 
+                                    echo (file_exists("fotosEmpleados/empleado_{$value['EmpDocIdentidad']}.jpeg"))
+                                        ? "fotosEmpleados/empleado_{$value['EmpDocIdentidad']}.jpeg" 
                                         : "fotosEmpleados/default_1.jpg";
                                     ?>
                                 " 
@@ -155,53 +155,144 @@
                 <form class="usuarios__modal-agregar-usuario-form dialog-main-content">
                     <section class="dialog-main-content__input-container usuarios__modal-agregar-usuario-form-item">
                         <label class="dialog-main-content__label">Documento del Usuario</label>
-                        <input tabindex="1" data-input type="text">
+                        <input
+                        name="documento"
+                        type="text"
+                        maxlength="15"
+                        id="docUsuario"
+                        title="Debe tener una maxima logitud de 15 caracteres"
+                        autocomplete="off"
+                        tabindex="1" 
+                        data-input 
+                        data-EmpDocIdentidad
+                        >
                     </section>
                     <section class="dialog-main-content__input-container usuarios__modal-agregar-usuario-form-item">
                         <label class="dialog-main-content__label">Correo Electronico del Usuario</label>
-                        <input tabindex="5" data-input type="text">
+                        <input
+                        name="correo"
+                        type="text"
+                        title= "Ingresa el correo electronico del proveedor: ejemplo@gmail.com"
+                        autocomplete="off" 
+                        tabindex="5" 
+                        data-input
+                        data-EmpCorreo 
+                        >
                     </section>
                     <section class="dialog-main-content__input-container usuarios__modal-agregar-usuario-form-item">
                         <label class="dialog-main-content__label">Nombre/s del Usuario</label>
-                        <input tabindex="2" data-input type="text">
+                        <input
+                        name="nombre"
+                        type="text"
+                        title="Ingresa el nombre del usuario"
+                        autocomplete="off" 
+                        tabindex="2" 
+                        data-input 
+                        data-UsuNombre
+                        >
                     </section>
                     <section class="dialog-main-content__input-container usuarios__modal-agregar-usuario-form-item">
                         <label class="dialog-main-content__label">Direccion del Usuario</label>
-                        <input tabindex="6" data-input type="text">
+                        <input
+                        name="direccion"
+                        type="text"
+                        title="Ingresa la direccion del cliente"
+                        autocomplete="off" 
+                        tabindex="6" 
+                        data-input 
+                        data-EmpDireccion
+                        >
                     </section>
                     <section class="dialog-main-content__input-container usuarios__modal-agregar-usuario-form-item">
                         <label class="dialog-main-content__label">Apellido/s del Usuario</label>
-                        <input tabindex="3" data-input type="text">
+                        <input
+                        name="apellido"
+                        type="text"
+                        title="Ingresa el apellido del usuario"
+                        autocomplete="off" 
+                        tabindex="3" 
+                        data-input 
+                        data-EmpApellido
+                        >
                     </section>
                     <section class="dialog-main-content__input-container usuarios__modal-agregar-usuario-form-item">
                         <label class="dialog-main-content__label">Telefono del Usuario</label>
-                        <input tabindex="7" data-input type="text">
+                        <input
+                        name="telefono"
+                        type="text"
+                        title="Ingresa el numero telefonico del cliente"
+                        autocomplete="off" 
+                        tabindex="7" 
+                        data-input 
+                        data-EmpTelefono
+                        >
                     </section>
                     <section class="dialog-main-content__input-container usuarios__modal-agregar-usuario-form-item">
                         <label class="dialog-main-content__label">EPS del Usuario</label>
-                        <input tabindex="4" data-input type="text">
+                        <input
+                        name="eps"
+                        type="text"
+                        title="Ingresa la Entidad Promotora de Salud(EPS) del usuario"
+                        autocomplete="off" 
+                        tabindex="4" 
+                        data-input 
+                        data-EmpEps
+                        >
                     </section>
                     <section class="dialog-main-content__input-container usuarios__modal-agregar-usuario-form-item">
                         <label class="dialog-main-content__label">RH del Usuario</label>
-                        <input tabindex="8" data-input type="text">
+                        <input
+                        name="rh"
+                        type="text"
+                        title="Ingresa el RH del usuario"
+                        autocomplete="off" 
+                        tabindex="8" 
+                        data-input 
+                        data-EmpRH
+                        >
                     </section>
                     <div class="usuarios__modal-agregar-usuario-form-item">
                         <div class="usuarios-modal-agregar-usuario-form-img-container">
-                            <img class="usuarios-modal-agregar-usuario-form-img-container__img" src="https://cdn.forbes.com.mx/2019/04/blackrrock-invertir-1-640x360.jpg" alt="">
-                            <input tabindex="" class="usuarios-modal-agregar-usuario-form-img-container__file" type="file" title="Foto">
+                            <img class="usuarios-modal-agregar-usuario-form-img-container__img" src="fotosEmpleados/default_1.jpg" alt="">
+                            <input
+                            name="foto"
+                            type="file" 
+                            class="usuarios-modal-agregar-usuario-form-img-container__file" 
+                            title="Ingresa una foto de perfil de usuario"
+                            autocomplete="off"  
+                            accept="image/jpeg"
+                            data-input
+                            data-EmpIMG
+                            >
                         </div>
                     </div>
                     <section class="dialog-main-content__input-container usuarios__modal-agregar-usuario-form-item">
                         <label class="dialog-main-content__label">Contrase&ntilde;a del Usuario</label>
-                        <input tabindex="9" data-input type="text">
+                        <input
+                        name="password"
+                        type="text"
+                        title="Ingresa la contrase&ntilde;a de usuario"
+                        autocomplete="off" 
+                        tabindex="9" 
+                        data-input
+                        data-EmpPassword 
+                        >
                     </section>
                     <section class="dialog-main-content__input-container usuarios__modal-agregar-usuario-form-item">
                         <label class="dialog-main-content__label">Rol del Usuario</label>
-                        <select tabindex="10" data-input class="usuarios__modal-agregar-usuario-form-item">
+                        <select
+                        name="rol"
+                        title="Selecciona el rol de usuario"
+                        class="usuarios__modal-agregar-usuario-form-item"
+                        autocomplete="off" 
+                        tabindex="10" 
+                        data-input 
+                        data-EmpRol
+                        >
                             <option value=""></option>
-                            <option value="">Gerente</option>
-                            <option value="">Almacenista</option>
-                            <option value="">Farmaceuta</option>
+                            <option value="GERENTE">Gerente</option>
+                            <option value="ALMACENISTA">Almacenista</option>
+                            <option value="FARMACEUTA">Farmaceuta</option>
                         </select>
                     </section>
                     <div class="usuarios__modal-agregar-usuario-form-item" class="usuarios__modal-agregar-usuario-btns-container dialog-container-bts">
@@ -731,7 +822,7 @@
         independientemente de si esta en una funcion anonima autoejecutable */
         var URL_RAIZ = "<?php echo URL_RAIZ ?>"
     </script>
-    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_agregar_usuario.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_agregar_usuario.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_editar_usuario.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_inhabilitar_usuarios.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_usuarios_inhabilitados.js"></script>
