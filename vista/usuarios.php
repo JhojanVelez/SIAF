@@ -51,67 +51,84 @@
                 <h2>Usuarios Registrados</h2>
             </div>
             <div class="usuarios__lista-contenido contenedor-objetos__contenido box-shadow">
-                <figure class="usuarios__lista-usuario contenedor-objetos__objeto box-shadow">
-                    <div class="usuarios__lista-usuario-img contenedor-objetos__objeto-img">
-                        <img src="https://cdn.forbes.com.mx/2019/04/blackrrock-invertir-1-640x360.jpg" alt="">
-                    </div>
-                    <div class="usuarios__lista-usuario-info-container">
-                        <section class="usuarios__lista-usuario-info documento">
-                            <h4 class="usuarios__lista-usuario-info-title">DOCUMENTO DE IDENTIDAD</h4>
-                            <p class="usuarios__lista-usuario-data">____________________________________</p>
-                        </section>
-                        <section class="usuarios__lista-usuario-info nombres">
-                            <h4 class="usuarios__lista-usuario-info-title">NOMBRES</h4>
-                            <p class="usuarios__lista-usuario-data">____________________________________</p>
-                        </section>
-                        <section class="usuarios__lista-usuario-info apellidos">
-                            <h4 class="usuarios__lista-usuario-info-title">APELLIDOS</h4>
-                            <p class="usuarios__lista-usuario-data">____________________________________</p>
-                        </section>
-                        <section class="usuarios__lista-usuario-info eps">
-                            <h4 class="usuarios__lista-usuario-info-title">EPS</h4>
-                            <p class="usuarios__lista-usuario-data">____________________________________</p>
-                        </section>
-                        <section class="usuarios__lista-usuario-info telefono">
-                            <h4 class="usuarios__lista-usuario-info-title">TELEFONO</h4>
-                            <p class="usuarios__lista-usuario-data">____________________________________</p>
-                        </section>
-                        <section class="usuarios__lista-usuario-info correo">
-                            <h4 class="usuarios__lista-usuario-info-title">CORREO</h4>
-                            <p class="usuarios__lista-usuario-data">____________________________________</p>
-                        </section>
-                        <section class="usuarios__lista-usuario-info direccion">
-                            <h4 class="usuarios__lista-usuario-info-title">DIRECCION</h4>
-                            <p class="usuarios__lista-usuario-data">____________________________________</p>
-                        </section>
-                        <section class="usuarios__lista-usuario-info rh">
-                            <h4 class="usuarios__lista-usuario-info-title">RH</h4>
-                            <p class="usuarios__lista-usuario-data">____________________________________</p>
-                        </section>
-                        <section class="usuarios__lista-usuario-info rol">
-                            <h4 class="usuarios__lista-usuario-info-title">ROL</h4>
-                            <p class="usuarios__lista-usuario-data">____________________________________</p>
-                        </section>
-                        <section class="usuarios__lista-usuario-info password">
-                            <h4 class="usuarios__lista-usuario-info-title">CONTRASE&Ntilde;A</h4>
-                            <p class="usuarios__lista-usuario-data">____________________________________</p>
-                        </section>
-                    </div>
-                    <div class="usuarios__lista-usuario-botones contenedor-objetos__objeto-botones">
-                        <button class="usuarios__lista-usuario-boton usuarios__lista-usuario-boton-editar contenedor-objetos__objeto-boton boton">
-                            <div class="usuarios__lista-usuario-boton-img">
-                                <img src="<?php echo(URL_RAIZ); ?>public/imagenes/editar-icono.svg" alt="">
-                            </div>
-                            <span>Editar</span>
-                        </button>
-                        <button class="usuarios__lista-usuario-boton usuarios__lista-usuario-boton-inhabilitar contenedor-objetos__objeto-boton boton">
-                            <div class="usuarios__lista-usuario-boton-img">
-                                <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.svg" alt="">
-                            </div>
-                            <span>Inhabilitar</span>
-                        </button>
-                    </div>
-                </figure>
+                <?php foreach($this->data["infoEmpleados"] as $key => $value):?>
+
+                    <figure class="usuarios__lista-usuario contenedor-objetos__objeto box-shadow">
+                        <div class="usuarios__lista-usuario-img contenedor-objetos__objeto-img">
+                            <img 
+                            src="
+                                    <?php 
+                                    echo (file_exists("fotosEmpleados/empleado_{$value['EmpDocIdentidad']}.jpg"))
+                                        ? "fotosEmpleados/empleado_{$value['EmpDocIdentidad']}.jpg" 
+                                        : "fotosEmpleados/default_1.jpg";
+                                    ?>
+                                " 
+                            alt="">
+                        </div>
+                        <div class="usuarios__lista-usuario-info-container">
+                            <section class="usuarios__lista-usuario-info documento">
+                                <h4 class="usuarios__lista-usuario-info-title">DOCUMENTO DE IDENTIDAD</h4>
+                                <p class="usuarios__lista-usuario-data"><?php echo $value["EmpDocIdentidad"] ?></p>
+                            </section>
+                            <section class="usuarios__lista-usuario-info nombres">
+                                <h4 class="usuarios__lista-usuario-info-title">NOMBRES</h4>
+                                <p class="usuarios__lista-usuario-data"><?php echo $value["EmpNombre"] ?></p>
+                            </section>
+                            <section class="usuarios__lista-usuario-info apellidos">
+                                <h4 class="usuarios__lista-usuario-info-title">APELLIDOS</h4>
+                                <p class="usuarios__lista-usuario-data"><?php echo $value["EmpApellido"] ?></p>
+                            </section>
+                            <section class="usuarios__lista-usuario-info eps">
+                                <h4 class="usuarios__lista-usuario-info-title">EPS</h4>
+                                <p class="usuarios__lista-usuario-data"><?php echo $value["EmpEps"] ?></p>
+                            </section>
+                            <section class="usuarios__lista-usuario-info telefono">
+                                <h4 class="usuarios__lista-usuario-info-title">TELEFONO</h4>
+                                <p class="usuarios__lista-usuario-data"><?php echo $value["EmpTelefono"] ?></p>
+                            </section>
+                            <section class="usuarios__lista-usuario-info correo">
+                                <h4 class="usuarios__lista-usuario-info-title">CORREO</h4>
+                                <p class="usuarios__lista-usuario-data"><?php echo $value["EmpCorreo"] ?></p>
+                            </section>
+                            <section class="usuarios__lista-usuario-info direccion">
+                                <h4 class="usuarios__lista-usuario-info-title">DIRECCION</h4>
+                                <p class="usuarios__lista-usuario-data"><?php echo $value["EmpDireccion"] ?></p>
+                            </section>
+                            <section class="usuarios__lista-usuario-info rh">
+                                <h4 class="usuarios__lista-usuario-info-title">RH</h4>
+                                <p class="usuarios__lista-usuario-data"><?php echo $value["EmpRH"] ?></p>
+                            </section>
+                            <section class="usuarios__lista-usuario-info rol">
+                                <h4 class="usuarios__lista-usuario-info-title">ROL</h4>
+                                <p class="usuarios__lista-usuario-data"><?php echo $value["EmpRol"] ?></p>
+                            </section>
+                            <section class="usuarios__lista-usuario-info password">
+                                <h4 class="usuarios__lista-usuario-info-title">CONTRASE&Ntilde;A</h4>
+                                <p class="usuarios__lista-usuario-data"><?php echo $value["EmpPassword"] ?></p>
+                            </section>
+                        </div>
+                        <div class="usuarios__lista-usuario-botones contenedor-objetos__objeto-botones">
+                            <button 
+                            class="usuarios__lista-usuario-boton usuarios__lista-usuario-boton-editar contenedor-objetos__objeto-boton boton"
+                            data-doc-empleado = <?php echo $value["EmpDocIdentidad"] ?>
+                            >
+                                <div class="usuarios__lista-usuario-boton-img">
+                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/editar-icono.svg" alt="">
+                                </div>
+                                <span>Editar</span>
+                            </button>
+                            <button 
+                            class="usuarios__lista-usuario-boton usuarios__lista-usuario-boton-inhabilitar contenedor-objetos__objeto-boton boton"
+                            data-doc-empleado = <?php echo $value["EmpDocIdentidad"] ?>
+                            >
+                                <div class="usuarios__lista-usuario-boton-img">
+                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.svg" alt="">
+                                </div>
+                                <span>Inhabilitar</span>
+                            </button>
+                        </div>
+                    </figure>
+                <?php endforeach; ?>
             </div>
         </section>
 
