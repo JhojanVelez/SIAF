@@ -11,6 +11,16 @@ import {agregar} from '../../ajax/agregar.js'
     $inputs = Object.values($formulario.querySelectorAll("[data-input]")),
     $itemsConfirmacion = Object.values($modal_2.querySelectorAll(".usuarios__modal-agregar-usuario-info-item-confirmacion"));
 
+    let validador;
+
+    /* Patrones para validacion de Email */
+    let patronEstandardOfficial = "^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$";
+    let patronPersonal = "^([a-z]|[A-Z]|[0-9]|[!#$%&'*+\-\/=?^_`{|}~;])+@([a-z]|[A-Z]|[0-9])+\\.([a-z]|[A-Z]|[0-9])+(\\.|[[a-z]|[A-Z]|[0-9])*$";
+
+    /* Patron para validacion de Password */
+
+    let patronValidarPassword = "^(?=.*[0-9]+)(?=.*[A-Z]+)(?=.*[a-z]+)(?=.*[\!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\\[\\]\^\_\`\{\|\}\~]+).+$"
+
     d.addEventListener("click", e => {
         if(e.target.matches(".usuarios__boton-agregar")) {
             $transparentBackgroundModal.classList.toggle("visible");
@@ -19,14 +29,42 @@ import {agregar} from '../../ajax/agregar.js'
             scroll(0,280);
         }
         if(e.target.matches(".usuarios__modal-agregar-usuario-btn-añadir")) {
-            e.preventDefault()
-            agregar($formulario,"usuarios",URL_RAIZ)
-            .then(res=>{
-                console.log(res);
-            }).catch(err => {
-                $modal_4.toggleAttribute("open");
-                $modal_4.querySelector("P").innerHTML = err.errorMessage;
+            e.preventDefault();
+            
+            validador = true;
+
+            $inputs.forEach(el => {
+                if(Object.keys(el.dataset)[1] != "empimg") el.value = el.value.toUpperCase().trim();
             });
+
+            $inputs.forEach(input => {
+                if(Object.keys(input.dataset)[1] != "empimg") {
+                    if(input.value == "") {
+                        input.classList.add("input-invalido");
+                        validador = false;
+                    } else {
+                        input.classList.remove("input-invalido");
+                    }
+                }
+            });
+
+            console.log(validador);
+
+            if(validarCorreo() && validador) {
+                console.log("nel")
+                $modal_1.toggleAttribute("open");
+                
+                $inputs.forEach(input => {
+                    $itemsConfirmacion.forEach(item => {
+                        if(Object.keys(input.dataset)[1] == Object.keys(item.dataset)[0]) {
+                            (Object.keys(input.dataset)[1] == "empimg") 
+                                ? item.querySelector("img").src = input.previousElementSibling.src
+                                : item.querySelector("P").innerText = input.value;
+                        }
+                    })
+                })
+                $modal_2.toggleAttribute("open");
+            }
         }
         if(e.target.matches(".usuarios__modal-agregar-usuario-btn-cancelar")) {
             e.preventDefault()
@@ -35,17 +73,35 @@ import {agregar} from '../../ajax/agregar.js'
         }
         if(e.target.matches(".usuarios__modal-agregar-usuario-confirmacion-btn-confirmar")) {
             $modal_2.toggleAttribute("open");
-            $modal_3.toggleAttribute("open");
+            agregar($formulario, "usuarios",URL_RAIZ)
+            .then(res=>{
+                console.log(res);
+                if(res.complete) {
+                    $modal_3.toggleAttribute("open");
+                } else {
+                    $modal_4.toggleAttribute("open");
+                    $modal_4.querySelector("H2").innerHTML = "¡Uppss!";
+                    $modal_4.querySelector("P").innerHTML = res.errorMessage;
+                }
+            }).catch(err => {
+                $modal_4.toggleAttribute("open");
+                $modal_4.querySelector("P").innerHTML = err.errorMessage;
+            });
         }
         if(e.target.matches(".usuarios__modal-agregar-usuario-confirmacion-btn-cancelar")) {
             $modal_1.toggleAttribute("open");
             $modal_2.toggleAttribute("open");
         }
         if(e.target.matches(".usuarios__modal-agregacion-exitosa-btn")) {
-            $modal_3.toggleAttribute("open");
+            location.reload();
+        }
+        if(e.target.matches(".usuarios__modal-agregacion-fallo-btn")) {
+            $modal_4.toggleAttribute("open");
             $transparentBackgroundModal.classList.toggle("visible");
         }
     })
+
+    /* codigo para poder dar una vista previa de la imagen a subir */
 
     d.addEventListener("change", e => {
         if(e.target.matches(".usuarios-modal-agregar-usuario-form-img-container__file")) {
@@ -62,5 +118,54 @@ import {agregar} from '../../ajax/agregar.js'
 
             reader.readAsDataURL(e.target.files[0])
         }
+    })
+
+    /* codigo para poder validar el correo */
+
+    $formulario.addEventListener("keyup",e => {
+        if(e.target == $inputs[1]) {
+            validarCorreo();
+        }
+        if(e.target == $inputs[9]) {
+            validarPassword();
+        }
+    })
+
+    function validarCorreo () {
+        let regex = new RegExp(patronPersonal,"g");
+        if(regex.test($inputs[1].value)) {
+            $inputs[1].classList.remove("input-invalido");
+            return true;
+        } else {
+            $inputs[1].classList.add("input-invalido");
+            return false;
+        }
+    }
+
+    function validarPassword () {
+        let regex = new RegExp(patronValidarPassword,"g");
+        console.log($inputs[9].value);
+        if(regex.test($inputs[9].value)) {
+            $inputs[9].classList.remove("input-invalido");
+            $inputs[9].classList.add("input-valido");
+            $formulario.querySelector(".pass-correcto").classList.add("visible");
+            $formulario.querySelector(".pass-incorrecto").classList.remove("visible");
+            return true;
+        } else {
+            $inputs[9].classList.remove("input-valido");
+            $inputs[9].classList.add("input-invalido");
+            $formulario.querySelector(".pass-correcto").classList.remove("visible");
+            $formulario.querySelector(".pass-incorrecto").classList.add("visible");
+            return false;
+        }
+    }
+
+    /* eventos que aparecen y desaparecen el aviso de la contraseña */
+
+    $inputs[9].addEventListener("focus", e => {
+        e.target.nextElementSibling.classList.add("visible");
+    })
+    $inputs[9].addEventListener("blur", e => {
+        e.target.nextElementSibling.classList.remove("visible");
     })
 })();

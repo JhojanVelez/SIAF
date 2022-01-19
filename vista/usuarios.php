@@ -60,7 +60,7 @@
                                     <?php 
                                     echo (file_exists("fotosEmpleados/empleado_{$value['EmpDocIdentidad']}.jpeg"))
                                         ? "fotosEmpleados/empleado_{$value['EmpDocIdentidad']}.jpeg" 
-                                        : "fotosEmpleados/default_1.jpg";
+                                        : "fotosEmpleados/default_1.jpeg";
                                     ?>
                                 " 
                             alt="">
@@ -101,10 +101,6 @@
                             <section class="usuarios__lista-usuario-info rol">
                                 <h4 class="usuarios__lista-usuario-info-title">ROL</h4>
                                 <p class="usuarios__lista-usuario-data"><?php echo $value["EmpRol"] ?></p>
-                            </section>
-                            <section class="usuarios__lista-usuario-info password">
-                                <h4 class="usuarios__lista-usuario-info-title">CONTRASE&Ntilde;A</h4>
-                                <p class="usuarios__lista-usuario-data"><?php echo $value["EmpPassword"] ?></p>
                             </section>
                         </div>
                         <div class="usuarios__lista-usuario-botones contenedor-objetos__objeto-botones">
@@ -253,7 +249,7 @@
                     </section>
                     <div class="usuarios__modal-agregar-usuario-form-item">
                         <div class="usuarios-modal-agregar-usuario-form-img-container">
-                            <img class="usuarios-modal-agregar-usuario-form-img-container__img" src="fotosEmpleados/default_1.jpg" alt="">
+                            <img class="usuarios-modal-agregar-usuario-form-img-container__img" src="fotosEmpleados/default_1.jpeg" alt="">
                             <input
                             name="foto"
                             type="file" 
@@ -277,6 +273,19 @@
                         data-input
                         data-EmpPassword 
                         >
+                        <figure class="usuarios-alert-password-container">
+                            <div class="usuarios-alert-password-container__alert box-shadow">
+                                <h4 class="usuarios-alert-password-container__alert-title">Recuerda...</h4>
+                                <p class="usuarios-alert-password-container__alert-text">Una contraseña segura debe cumplir como minimo los siguientes parametros:</p>
+                                <ul class="usuarios-alert-password-container__alert-list-ul">
+                                    <li>Debe contener como minimo 8 caracteres.</li>
+                                    <li>Debe contener por lo menos 1 letra MAYUSCULA.</li>
+                                    <li>Debe contener por lo menos un caracter especial como por ejemplo(! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _` { | } ~ ).</li>
+                                </ul>
+                            </div>
+                        </figure>
+                        <span class="pass-correcto"></span>
+                        <span class="pass-incorrecto"></span>
                     </section>
                     <section class="dialog-main-content__input-container usuarios__modal-agregar-usuario-form-item">
                         <label class="dialog-main-content__label">Rol del Usuario</label>
@@ -295,7 +304,7 @@
                             <option value="FARMACEUTA">Farmaceuta</option>
                         </select>
                     </section>
-                    <div class="usuarios__modal-agregar-usuario-form-item" class="usuarios__modal-agregar-usuario-btns-container dialog-container-bts">
+                    <div class="usuarios__modal-agregar-usuario-form-item usuarios__modal-agregar-usuario-btns-container dialog-container-bts">
                         <button class="usuarios__modal-agregar-usuario-btn-cancelar boton dialog-btn">Cancelar</button>
                         <button class="usuarios__modal-agregar-usuario-btn-añadir boton dialog-btn">A&ntilde;adir</button>
                     </div>
@@ -309,50 +318,55 @@
                     Recuerda revisar detenidamente la informacion del usuario que estas registrando.
                 </p>
                 <div class="usuarios__modal-agregar-usuario-info-confirmacion dialog-main-content">
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion" data-EmpDocIdentidad>
                         <h3 class="dialog-main-content__label">Documento del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion" data-EmpCorreo >
                         <h3 class="dialog-main-content__label">Correo Electronico del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion" data-UsuNombre>
                         <h3 class="dialog-main-content__label">Nombre/s del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion" data-EmpDireccion>
                         <h3 class="dialog-main-content__label">Direccion del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion" data-EmpApellido>
                         <h3 class="dialog-main-content__label">Apellido/s del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion" data-EmpTelefono>
                         <h3 class="dialog-main-content__label">Telefono del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion" data-EmpEps>
                         <h3 class="dialog-main-content__label">EPS del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion" data-EmpRH>
                         <h3 class="dialog-main-content__label">RH del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion" data-EmpIMG>
+                        <div class="usuarios-modal-agregar-usuario-info-item-confirmacion__img-container">
+                            <img src="" alt="Foto Usuario">
+                        </div>
+                    </section>
+                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion" data-EmpPassword>
                         <h3 class="dialog-main-content__label">Contrase&ntilde;a del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion" data-EmpRol>
                         <h3 class="dialog-main-content__label">Rol del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                </div>
-                <div class="usuarios__modal-agregar-usuario-confirmacion-btns-container dialog-container-bts">
-                    <button class="usuarios__modal-agregar-usuario-confirmacion-btn-cancelar dialog-btn boton">Volver Atras</button>
-                    <button class="usuarios__modal-agregar-usuario-confirmacion-btn-confirmar dialog-btn boton">Confirmar</button>
+                    <div class="usuarios__modal-agregar-usuario-confirmacion-btns-container usuarios__modal-agregar-usuario-info-item-confirmacion dialog-container-bts">
+                        <button class="usuarios__modal-agregar-usuario-confirmacion-btn-cancelar dialog-btn boton">Volver Atras</button>
+                        <button class="usuarios__modal-agregar-usuario-confirmacion-btn-confirmar dialog-btn boton">Confirmar</button>
+                    </div>
                 </div>
             </dialog>
 

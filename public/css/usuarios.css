@@ -11,10 +11,9 @@
 .usuarios__lista-usuario-info-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:"doc tel rol"
-                        "nom cor rol"
-                        "ape dir pas"
-                        "eps rh  pas";
+    grid-template-areas:"doc tel eps"
+                        "nom cor rh"
+                        "ape dir rol";
 }
 
 .usuarios__lista-usuario-info.documento {
@@ -118,6 +117,92 @@ grid-area:rh;
 grid-area:img;
 display: flex;
 }
+.usuarios__modal-agregar-usuario-form-item:nth-child(10) {
+    grid-area:pas;
+    position: relative;
+}
+
+.pass-correcto,
+.pass-incorrecto {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    position: absolute;
+    top: 40px;
+    right: 8px;
+
+    visibility: hidden;
+    opacity: 0;
+}
+
+.pass-correcto {
+    background-image: url(../imagenes/correcto.png);
+}
+
+.pass-incorrecto {
+    background-image: url(../imagenes/incorrecto.png);
+}
+
+.usuarios-alert-password-container {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 105%;
+    transition: opacity .5s;
+}
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.usuarios-alert-password-container__alert {
+    min-width: 230px;
+    font-size: .8rem;
+    padding: 1rem 1.5rem;
+    background-color: var(--color-text);
+    color: var(--color-button-text);
+    position: relative;
+}
+
+.usuarios-alert-password-container__alert::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 33px;
+    left: -42px;
+    width: 45px;
+    height: 10px;
+    border: 17px solid var(--color-text);
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+
+}
+
+.usuarios-alert-password-container__alert-title {
+    font-size: 1.5rem;
+}
+
+.usuarios-alert-password-container__alert-list-ul {
+    padding-left: 10%;
+}
+
+.usuarios-alert-password-container__alert-list-ul li{
+    list-style: disc;
+}
+
+.usuarios__modal-agregar-usuario-form-item:nth-child(11) {
+    grid-area:rol;
+}
+.usuarios__modal-agregar-usuario-form-item:nth-child(12) {
+    grid-area:btn;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
 
 .usuarios-modal-agregar-usuario-form-img-container {
     width: 11rem;
@@ -163,19 +248,71 @@ display: flex;
     filter: invert();
 }
 
-.usuarios__modal-agregar-usuario-form-item:nth-child(10) {
+
+/*Estilos para el modal de confirmacion*/
+
+
+.usuarios__modal-agregar-usuario-info-confirmacion {
+    grid-template-columns: repeat(3,minmax(300px,400px));
+    grid-template-rows: repeat(4,5rem);
+    grid-template-areas:'doc cor img'
+                        'nom dir img'
+                        'ape tel pas'
+                        'eps rh  rol'
+                        'btn btn btn';
+    gap: 2rem 2.5rem;
+    align-items: center;
+}
+
+.usuarios__modal-agregar-usuario-info-item-confirmacion:nth-child(1) {
+grid-area:doc;
+}
+.usuarios__modal-agregar-usuario-info-item-confirmacion:nth-child(2) {
+grid-area:cor;
+}
+.usuarios__modal-agregar-usuario-info-item-confirmacion:nth-child(3) {
+grid-area:nom;
+}
+.usuarios__modal-agregar-usuario-info-item-confirmacion:nth-child(4) {
+grid-area:dir;
+}
+.usuarios__modal-agregar-usuario-info-item-confirmacion:nth-child(5) {
+grid-area:ape;
+}
+.usuarios__modal-agregar-usuario-info-item-confirmacion:nth-child(6) {
+grid-area:tel;
+}
+.usuarios__modal-agregar-usuario-info-item-confirmacion:nth-child(7) {
+grid-area:eps;
+}
+.usuarios__modal-agregar-usuario-info-item-confirmacion:nth-child(8) {
+grid-area:rh;
+}
+.usuarios__modal-agregar-usuario-info-item-confirmacion:nth-child(9) {
+grid-area:img;
+display: flex;
+}
+.usuarios__modal-agregar-usuario-info-item-confirmacion:nth-child(10) {
     grid-area:pas;
 }
-.usuarios__modal-agregar-usuario-form-item:nth-child(11) {
+.usuarios__modal-agregar-usuario-info-item-confirmacion:nth-child(11) {
     grid-area:rol;
 }
-.usuarios__modal-agregar-usuario-form-item:nth-child(12) {
+.usuarios__modal-agregar-usuario-info-item-confirmacion:nth-child(12) {
     grid-area:btn;
     display: flex;
     justify-content: center;
     gap: 4rem;
 }
 
+.usuarios-modal-agregar-usuario-info-item-confirmacion__img-container {
+    width: 11rem;
+    height: 11rem;
+    border-radius: 100px;
+    overflow: hidden;
+    margin: auto;
+    text-align: center;
+}
 
 
 /*-------------------------Estilos de los modals de editar usuarios----------------------------------*/

@@ -43,11 +43,13 @@ class UsuariosControlador extends Controlador{
 
         /* Las siguientes lineas de codigo se encargan de subir la imagen del directorio temporal al directorio fotosEmpleados */
 
-        $fileType = explode("/",$_FILES['foto']['type'])[1];
+        if(!empty($_FILES['foto']['error'] != 4)) {
+            $fileType = explode("/",$_FILES['foto']['type'])[1];
 
-        $newFileName = "empleado_{$_POST['documento']}.{$fileType}";
+            $newFileName = "empleado_{$_POST['documento']}.{$fileType}";
 
-        move_uploaded_file($_FILES['foto']['tmp_name'],"fotosEmpleados/$newFileName");
+            move_uploaded_file($_FILES['foto']['tmp_name'],"fotosEmpleados/$newFileName");
+        }
     }
 }
 

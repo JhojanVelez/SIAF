@@ -72,13 +72,13 @@ class UsuariosModelo extends ConexionBD {
     /* Metodos GETTER */
 
     public function getDocumento () {return $this->documento;}
-    public function getNombre () {return $this->correo;}
-    public function getApellido () {return $this->nombre;}
-    public function getEps () {return $this->direccion;}
-    public function getRH () {return $this->apellido;}
-    public function getDireccion () {return $this->telefono;}
-    public function getTelefono () {return $this->eps;}
-    public function getCorreo () {return $this->rh;}
+    public function getNombre () {return $this->nombre;}
+    public function getApellido () {return $this->apellido;}
+    public function getEps () {return $this->eps;}
+    public function getRH () {return $this->rh;}
+    public function getDireccion () {return $this->direccion;}
+    public function getTelefono () {return $this->telefono;}
+    public function getCorreo () {return $this->correo;}
     public function getPassword () {return $this->password;}
     public function getRol () {return $this->rol;}
 
@@ -87,26 +87,26 @@ class UsuariosModelo extends ConexionBD {
     public function setDocumento ($value) {
         $this->documento = $value;
     }
-    public function setApellido ($value) {
-        $this->correo = $value;
-    }
     public function setNombre ($value) {
         $this->nombre = $value;
     }
-    public function setEps ($value) {
-        $this->direccion = $value;
-    }
-    public function setRH ($value) {
+    public function setApellido ($value) {
         $this->apellido = $value;
     }
-    public function setDireccion ($value) {
-        $this->telefono = $value;
-    }
-    public function setTelefono ($value) {
+    public function setEps ($value) {
         $this->eps = $value;
     }
-    public function setCorreo ($value) {
+    public function setRH ($value) {
         $this->rh = $value;
+    }
+    public function setDireccion ($value) {
+        $this->direccion = $value;
+    }
+    public function setTelefono ($value) {
+        $this->telefono = $value;
+    }
+    public function setCorreo ($value) {
+        $this->correo = $value;
     }
     public function setPassword ($value) {
         $this->password = $value;
