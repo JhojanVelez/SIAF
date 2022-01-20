@@ -1,5 +1,9 @@
 @import url(main.css);
 
+.dialog-main-content {
+    grid-template-columns: repeat(2,minmax(200px,450px));
+}
+
 .nav__li:nth-child(5) {
     border-bottom: 2px solid var(--color-button-text);
 }
@@ -39,7 +43,7 @@
 
 .proveedores__modal-agregar-proveedor {
     min-width: 700px;
-    max-width: 800px;
+    max-width: 1000px;
 }
 
 .proveedores__modal-agregar-proveedor-title {
@@ -70,7 +74,7 @@
 
 .proveedores__modal-edidar-proveedor {
     min-width: 700px;
-    max-width: 800px;
+    max-width: 1000px;
 }
 
 .proveedores__modal-editar-proveedor-title {
@@ -81,5 +85,5 @@
 
 .proveedores__modal-inhabilitar-proveedor {
     min-width: 800px;
-    max-width: 900px;
+    max-width: 1000px;
 }

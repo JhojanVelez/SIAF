@@ -70,7 +70,12 @@
                     <div class="proveedores__filtro-gen-repo-img filtro-gen-repo-img">
                         <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
                     </div>
-                    <a class="proveedores__filtro-subtitulo-reporte filtro-subtitulo-reporte" href="">Generar reporte</a>
+                    <input 
+                    class="proveedores__filtro-subtitulo-reporte filtro-subtitulo-reporte" 
+                    type="submit" 
+                    value="Generar Reporte" 
+                    form="proveedores__filtro-form"
+                    >
                 </div>
             </div>
         </section>
@@ -218,93 +223,111 @@
                 <form 
                 class="proveedores__modal-agregar-proveedor-form dialog-main-content"
                 >
-                    <input 
-                    name="nit"
-                    type="text" 
-                    maxlength="15"
-                    placeholder="Ingresa el NIT del proveedor"
-                    id="nitProveedor" 
-                    title = "Debe tener una maxima logitud de 15 caracteres"
-                    autocomplete="off"
-                    data-input 
-                    data-ProNIT
-                    >
-                    <input 
-                    name="nombre"
-                    type="text" 
-                    placeholder="Ingresa el nombre del proveedor"
-                    title="Nombre completo del proveedor"
-                    autocomplete="off"
-                    data-input 
-                    data-ProNombre
-                    >
-                    <input 
-                    name="telefono"
-                    type="tel" 
-                    placeholder="Telefono"
-                    title="Ingresa el numero telefonico/celular de contacto"
-                    autocomplete="off"
-                    data-input 
-                    data-ProTelefono
-                    >
-                    <input 
-                    name="direccion"
-                    type="text" 
-                    placeholder="Direcci&oacute;n"
-                    title="Ingresa la direccion del proveedor"
-                    autocomplete="off"
-                    data-input 
-                    data-ProDireccion
-                    >
-                    <input 
-                    name="correo"
-                    type="email" 
-                    placeholder="Correo Electronico"
-                    title= "Ingresa el correo electronico del proveedor: ejemplo@gmail.com"
-                    autocomplete="off"
-                    data-input 
-                    data-ProCorreo
-                    >
-                    <select 
-                    name="ciudad"
-                    title= "Selecciona la ciudad del proveedor"
-                    autocomplete="off"
-                    data-input 
-                    data-ProCiudad
-                    >
-                    <option value="">Selecciona la Ciudad</option>
-                        <option value="ARAUCA">ARAUCA</option>
-                        <option value="ARMENIA">ARMENIA</option>
-                        <option value="BARRANQUILLA">BARRANQUILLA</option>
-                        <option value="BELLO">BELLO</option>
-                        <option value="BOGOT&Aacute;">BOGOT&Aacute;</option>
-                        <option value="BUCARAMANGA">BUCARAMANGA</option>
-                        <option value="CALI">CALI</option>
-                        <option value="CARTAGENA">CARTAGENA</option>
-                        <option value="CUCUTA">CUCUTA</option>
-                        <option value="FLORENCIA">FLORENCIA</option>
-                        <option value="IBAGU&Eacute;">IBAGU&Eacute;</option>
-                        <option value="MANIZALES">MANIZALES</option>
-                        <option value="MEDELL&Iacute;N">MEDELL&Iacute;N</option>
-                        <option value="MONTER&Iacute;A">MONTER&Iacute;A</option>
-                        <option value="NEIVA">NEIVA</option>
-                        <option value="PASTO">PASTO</option>
-                        <option value="PEREIRA">PEREIRA</option>
-                        <option value="POPAYAN">POPAYAN</option>
-                        <option value="QUIBD&Oacute;">QUIBD&Oacute;</option>
-                        <option value="RIOACHA">RIOACHA</option>
-                        <option value="SAN ANDR&Eacute;S">SAN ANDR&Eacute;S</option>
-                        <option value="SAN JOS&Eacute; DEL GUAVIARE">SAN JOS&Eacute; DEL GUAVIARE</option>
-                        <option value="SANTA MARTA">SANTA MARTA</option>
-                        <option value="SINCELEJO">SINCELEJO</option>
-                        <option value="SOACHA">SOACHA</option>
-                        <option value="SOLEDAD">SOLEDAD</option>
-                        <option value="TUNJA">TUNJA</option>
-                        <option value="VILLAVICENCIO">VILLAVICENCIO</option>
-                        <option value="VALLEDUPAR">VALLEDUPAR</option>
-                        <option value="YOPAL">YOPAL</option>
-                        <option value="ZIPAQUIR&Aacute;">ZIPAQUIR&Aacute;</option>
-                    </select>
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">NIT del Proveedor</label>
+                        <input 
+                        name="nit"
+                        type="text" 
+                        maxlength="15"
+                        id="nitProveedor" 
+                        title = "Debe tener una maxima logitud de 15 caracteres"
+                        autocomplete="off"
+                        data-input 
+                        data-ProNIT
+                        >
+                    </section>
+
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Nombre del Proveedor</label>
+                        <input 
+                        name="nombre"
+                        type="text"
+                        title="Nombre completo del proveedor"
+                        autocomplete="off"
+                        data-input 
+                        data-ProNombre
+                        >
+                    </section>
+
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Telefono del Proveedor</label>
+                        <input 
+                        name="telefono"
+                        type="tel"
+                        title="Ingresa el numero telefonico/celular de contacto"
+                        autocomplete="off"
+                        data-input 
+                        data-ProTelefono
+                        >
+                    </section>
+
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Direccion del Proveedor</label>
+                        <input 
+                        name="direccion"
+                        type="text"
+                        title="Ingresa la direccion del proveedor"
+                        autocomplete="off"
+                        data-input 
+                        data-ProDireccion
+                        >
+                    </section>
+
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Correo Electronico del Proveedor</label>
+                        <input 
+                        name="correo"
+                        type="email"
+                        title= "Ingresa el correo electronico del proveedor: ejemplo@gmail.com"
+                        autocomplete="off"
+                        data-input 
+                        data-ProCorreo
+                        >
+                    </section>
+
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Ciudad del Proveedor</label>
+                        <select 
+                        name="ciudad"
+                        title= "Selecciona la ciudad del proveedor"
+                        autocomplete="off"
+                        data-input 
+                        data-ProCiudad
+                        >
+                            <option value=""></option>
+                            <option value="ARAUCA">ARAUCA</option>
+                            <option value="ARMENIA">ARMENIA</option>
+                            <option value="BARRANQUILLA">BARRANQUILLA</option>
+                            <option value="BELLO">BELLO</option>
+                            <option value="BOGOT&Aacute;">BOGOT&Aacute;</option>
+                            <option value="BUCARAMANGA">BUCARAMANGA</option>
+                            <option value="CALI">CALI</option>
+                            <option value="CARTAGENA">CARTAGENA</option>
+                            <option value="CUCUTA">CUCUTA</option>
+                            <option value="FLORENCIA">FLORENCIA</option>
+                            <option value="IBAGU&Eacute;">IBAGU&Eacute;</option>
+                            <option value="MANIZALES">MANIZALES</option>
+                            <option value="MEDELL&Iacute;N">MEDELL&Iacute;N</option>
+                            <option value="MONTER&Iacute;A">MONTER&Iacute;A</option>
+                            <option value="NEIVA">NEIVA</option>
+                            <option value="PASTO">PASTO</option>
+                            <option value="PEREIRA">PEREIRA</option>
+                            <option value="POPAYAN">POPAYAN</option>
+                            <option value="QUIBD&Oacute;">QUIBD&Oacute;</option>
+                            <option value="RIOACHA">RIOACHA</option>
+                            <option value="SAN ANDR&Eacute;S">SAN ANDR&Eacute;S</option>
+                            <option value="SAN JOS&Eacute; DEL GUAVIARE">SAN JOS&Eacute; DEL GUAVIARE</option>
+                            <option value="SANTA MARTA">SANTA MARTA</option>
+                            <option value="SINCELEJO">SINCELEJO</option>
+                            <option value="SOACHA">SOACHA</option>
+                            <option value="SOLEDAD">SOLEDAD</option>
+                            <option value="TUNJA">TUNJA</option>
+                            <option value="VILLAVICENCIO">VILLAVICENCIO</option>
+                            <option value="VALLEDUPAR">VALLEDUPAR</option>
+                            <option value="YOPAL">YOPAL</option>
+                            <option value="ZIPAQUIR&Aacute;">ZIPAQUIR&Aacute;</option>
+                        </select>
+                    </section>
                 </form>
                 <div class="proveedores__modal-agregar-proveedor-btns-container dialog-container-bts">
                     <button class="proveedores__modal-agregar-proveedor-btn-cancelar boton dialog-btn">Cancelar</button>
@@ -320,27 +343,27 @@
                 </p>
                 <div class="proveedores__modal-agregar-proveedor-info-confirmacion dialog-main-content">
                     <section class="proveedores__modal-agregar-proveedor-info-item-confirmacion" data-ProNIT>
-                        <h3>NIT DEL PROVEEDOR</h3>
+                        <h3 class="dialog-main-content__label">NIT del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-agregar-proveedor-info-item-confirmacion" data-ProNombre>
-                        <h3>NOMBRE DEL PROVEEDOR</h3>
+                        <h3 class="dialog-main-content__label">Nombre del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-agregar-proveedor-info-item-confirmacion" data-ProTelefono>
-                        <h3>TELEFONO</h3>
+                        <h3 class="dialog-main-content__label">Telefono del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-agregar-proveedor-info-item-confirmacion" data-ProDireccion>
-                        <h3>DIRECCI&Oacute;N</h3>
+                        <h3 class="dialog-main-content__label">Direccion del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-agregar-proveedor-info-item-confirmacion" data-ProCorreo>
-                        <h3>CORREO</h3>
+                        <h3 class="dialog-main-content__label">Correo Electronico del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-agregar-proveedor-info-item-confirmacion" data-ProCiudad>
-                        <h3>CIUDAD</h3>
+                        <h3 class="dialog-main-content__label">Ciudad del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                 </div>
@@ -372,7 +395,13 @@
                         <img src="<?php echo(URL_RAIZ); ?>public/imagenes/reportes-icono.svg" alt="">
                     </div>
                     <div class="proveedores__modal-proveedores-inhabilitados-gen-repo-container-text">
-                        <a class="filtro-subtitulo-reporte" href="">Generar Reporte</a>
+                        <a 
+                        target="_BLANK"
+                        class="filtro-subtitulo-reporte" 
+                        href="<?php echo(URL_RAIZ); ?>proveedores/generarReporteInhabilitados"
+                        >
+                        Generar Reporte
+                        </a>
                     </div>
                 </div>
                 <section class="proveedores__modal-proveedores-inhabilitados-table-container container-table">
@@ -409,93 +438,112 @@
             <dialog class="proveedores__modal-editar-proveedor">
                 <h2 class="proveedores__modal-editar-proveedor-title dialog-title">Edita Tus Proveedores</h2>
                 <form class="proveedores__modal-editar-proveedor-form dialog-main-content">
-                    <input 
-                    name="nit"
-                    type="text" 
-                    maxlength="15"
-                    placeholder="Ingresa el NIT del proveedor"
-                    id="nitProveedor" 
-                    title = "Debe tener una maxima logitud de 15 caracteres"
-                    autocomplete="off"
-                    data-input 
-                    data-ProNIT
-                    >
-                    <input 
-                    name="nombre"
-                    type="text" 
-                    placeholder="Ingresa el nombre del proveedor"
-                    title="Nombre completo del proveedor"
-                    autocomplete="off"
-                    data-input 
-                    data-ProNombre
-                    >
-                    <input 
-                    name="telefono"
-                    type="tel" 
-                    placeholder="Telefono"
-                    title="Ingresa el numero telefonico/celular de contacto"
-                    autocomplete="off"
-                    data-input 
-                    data-ProTelefono
-                    >
-                    <input 
-                    name="direccion"
-                    type="text" 
-                    placeholder="Direcci&oacute;n"
-                    title="Ingresa la direccion del proveedor"
-                    autocomplete="off"
-                    data-input 
-                    data-ProDireccion
-                    >
-                    <input 
-                    name="correo"
-                    type="email" 
-                    placeholder="Correo Electronico"
-                    title= "Ingresa el correo electronico del proveedor: ejemplo@gmail.com"
-                    autocomplete="off"
-                    data-input 
-                    data-ProCorreo
-                    >
-                    <select 
-                    name="ciudad"
-                    title= "Selecciona la ciudad del proveedor"
-                    autocomplete="off"
-                    data-input 
-                    data-ProCiudad
-                    >
-                        <option value="">Selecciona la Ciudad</option>
-                        <option value="ARAUCA">ARAUCA</option>
-                        <option value="ARMENIA">ARMENIA</option>
-                        <option value="BARRANQUILLA">BARRANQUILLA</option>
-                        <option value="BELLO">BELLO</option>
-                        <option value="BOGOT&Aacute;">BOGOT&Aacute;</option>
-                        <option value="BUCARAMANGA">BUCARAMANGA</option>
-                        <option value="CALI">CALI</option>
-                        <option value="CARTAGENA">CARTAGENA</option>
-                        <option value="CUCUTA">CUCUTA</option>
-                        <option value="FLORENCIA">FLORENCIA</option>
-                        <option value="IBAGU&Eacute;">IBAGU&Eacute;</option>
-                        <option value="MANIZALES">MANIZALES</option>
-                        <option value="MEDELL&Iacute;N">MEDELL&Iacute;N</option>
-                        <option value="MONTER&Iacute;A">MONTER&Iacute;A</option>
-                        <option value="NEIVA">NEIVA</option>
-                        <option value="PASTO">PASTO</option>
-                        <option value="PEREIRA">PEREIRA</option>
-                        <option value="POPAYAN">POPAYAN</option>
-                        <option value="QUIBD&Oacute;">QUIBD&Oacute;</option>
-                        <option value="RIOACHA">RIOACHA</option>
-                        <option value="SAN ANDR&Eacute;S">SAN ANDR&Eacute;S</option>
-                        <option value="SAN JOS&Eacute; DEL GUAVIARE">SAN JOS&Eacute; DEL GUAVIARE</option>
-                        <option value="SANTA MARTA">SANTA MARTA</option>
-                        <option value="SINCELEJO">SINCELEJO</option>
-                        <option value="SOACHA">SOACHA</option>
-                        <option value="SOLEDAD">SOLEDAD</option>
-                        <option value="TUNJA">TUNJA</option>
-                        <option value="VILLAVICENCIO">VILLAVICENCIO</option>
-                        <option value="VALLEDUPAR">VALLEDUPAR</option>
-                        <option value="YOPAL">YOPAL</option>
-                        <option value="ZIPAQUIR&Aacute;">ZIPAQUIR&Aacute;</option>
-                    </select>
+                    
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">NIT del Proveedor</label>
+                        <input 
+                        name="nit"
+                        type="text" 
+                        maxlength="15"
+                        id="nitProveedor" 
+                        title = "Debe tener una maxima logitud de 15 caracteres"
+                        autocomplete="off"
+                        data-input 
+                        data-ProNIT
+                        >
+                    </section>
+
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Nombre del Proveedor</label>
+                        <input 
+                        name="nombre"
+                        type="text"
+                        title="Nombre completo del proveedor"
+                        autocomplete="off"
+                        data-input 
+                        data-ProNombre
+                        >
+                    </section>
+
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Telefono del Proveedor</label>
+                        <input 
+                        name="telefono"
+                        type="tel"
+                        title="Ingresa el numero telefonico/celular de contacto"
+                        autocomplete="off"
+                        data-input 
+                        data-ProTelefono
+                        >
+                    </section>
+
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Direccion del Proveedor</label>
+                        <input 
+                        name="direccion"
+                        type="text"
+                        title="Ingresa la direccion del proveedor"
+                        autocomplete="off"
+                        data-input 
+                        data-ProDireccion
+                        >
+                    </section>
+
+                    <section class="dialog-main-content__input-container ">
+                        <label class="dialog-main-content__label">Correo Electronico del Proveedor</label>
+                        <input 
+                        name="correo"
+                        type="email"
+                        title= "Ingresa el correo electronico del proveedor: ejemplo@gmail.com"
+                        autocomplete="off"
+                        data-input 
+                        data-ProCorreo
+                        >
+                    </section>
+
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Ciudad del Proveedor</label>
+                        <select 
+                        name="ciudad"
+                        title= "Selecciona la ciudad del proveedor"
+                        autocomplete="off"
+                        data-input 
+                        data-ProCiudad
+                        >
+                            <option value=""></option>
+                            <option value="ARAUCA">ARAUCA</option>
+                            <option value="ARMENIA">ARMENIA</option>
+                            <option value="BARRANQUILLA">BARRANQUILLA</option>
+                            <option value="BELLO">BELLO</option>
+                            <option value="BOGOT&Aacute;">BOGOT&Aacute;</option>
+                            <option value="BUCARAMANGA">BUCARAMANGA</option>
+                            <option value="CALI">CALI</option>
+                            <option value="CARTAGENA">CARTAGENA</option>
+                            <option value="CUCUTA">CUCUTA</option>
+                            <option value="FLORENCIA">FLORENCIA</option>
+                            <option value="IBAGU&Eacute;">IBAGU&Eacute;</option>
+                            <option value="MANIZALES">MANIZALES</option>
+                            <option value="MEDELL&Iacute;N">MEDELL&Iacute;N</option>
+                            <option value="MONTER&Iacute;A">MONTER&Iacute;A</option>
+                            <option value="NEIVA">NEIVA</option>
+                            <option value="PASTO">PASTO</option>
+                            <option value="PEREIRA">PEREIRA</option>
+                            <option value="POPAYAN">POPAYAN</option>
+                            <option value="QUIBD&Oacute;">QUIBD&Oacute;</option>
+                            <option value="RIOACHA">RIOACHA</option>
+                            <option value="SAN ANDR&Eacute;S">SAN ANDR&Eacute;S</option>
+                            <option value="SAN JOS&Eacute; DEL GUAVIARE">SAN JOS&Eacute; DEL GUAVIARE</option>
+                            <option value="SANTA MARTA">SANTA MARTA</option>
+                            <option value="SINCELEJO">SINCELEJO</option>
+                            <option value="SOACHA">SOACHA</option>
+                            <option value="SOLEDAD">SOLEDAD</option>
+                            <option value="TUNJA">TUNJA</option>
+                            <option value="VILLAVICENCIO">VILLAVICENCIO</option>
+                            <option value="VALLEDUPAR">VALLEDUPAR</option>
+                            <option value="YOPAL">YOPAL</option>
+                            <option value="ZIPAQUIR&Aacute;">ZIPAQUIR&Aacute;</option>
+                        </select>
+                    </section>
                 </form>
                 <div class="proveedores__modal-editar-proveedor-btns-container dialog-container-bts">
                     <button class="proveedores__modal-editar-proveedor-btn-cancelar boton dialog-btn">Cancelar</button>
@@ -511,27 +559,27 @@
                 </p>
                 <div class="proveedores__modal-editar-proveedor-info-confirmacion dialog-main-content">
                     <section class="proveedores__modal-editar-proveedor-info-item-confirmacion" data-ProNIT>
-                        <h3>NIT DEL PROVEEDOR</h3>
+                        <h3 class="dialog-main-content__label">NIT del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-editar-proveedor-info-item-confirmacion" data-ProNombre>
-                        <h3>NOMBRE DEL PROVEEDOR</h3>
+                        <h3 class="dialog-main-content__label">Nombre del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-editar-proveedor-info-item-confirmacion" data-ProTelefono>
-                        <h3>TELEFONO</h3>
+                        <h3 class="dialog-main-content__label">Telefono del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-editar-proveedor-info-item-confirmacion" data-ProDireccion>
-                        <h3>DIRECCI&Oacute;N</h3>
+                        <h3 class="dialog-main-content__label">Direccion del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-editar-proveedor-info-item-confirmacion" data-ProCorreo>
-                        <h3>CORREO</h3>
+                        <h3 class="dialog-main-content__label">Correo Electronico del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-editar-proveedor-info-item-confirmacion" data-ProCiudad>
-                        <h3>CIUDAD</h3>
+                        <h3 class="dialog-main-content__label">Ciudad del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                 </div>
@@ -564,27 +612,27 @@
                 </p>
                 <div class="proveedores__modal-inhabilitar-proveedor-info dialog-main-content">
                     <section class="proveedores__modal-inhabilitar-proveedor-info-item" data-ProNIT>
-                        <h3>NIT DEL PROVEEDOR</h3>
+                        <h3 class="dialog-main-content__label">NIT del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-inhabilitar-proveedor-info-item" data-ProNombre>
-                        <h3>NOMBRE DEL PROVEEDOR</h3>
+                        <h3 class="dialog-main-content__label">Nombre del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-inhabilitar-proveedor-info-item" data-ProTelefono>
-                        <h3>TELEFONO</h3>
+                        <h3 class="dialog-main-content__label">Telefono del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-inhabilitar-proveedor-info-item" data-ProDireccion>
-                        <h3>DIRECCI&Oacute;N</h3>
+                        <h3 class="dialog-main-content__label">Direccion del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-inhabilitar-proveedor-info-item" data-ProCorreo>
-                        <h3>CORREO</h3>
+                        <h3 class="dialog-main-content__label">Correo Electronico del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-inhabilitar-proveedor-info-item" data-ProCiudad>
-                        <h3>CIUDAD</h3>
+                        <h3 class="dialog-main-content__label">Ciudad del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                 </div>
@@ -618,5 +666,6 @@
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_proveedores_editar_proveedor.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_proveedores_inhabilitar_proveedores.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_proveedores_buscar_por_atributos.js" type="module"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/cualquier_modulo_pintar_borde_derecho_input.js" ></script>
 </body>
 </html>

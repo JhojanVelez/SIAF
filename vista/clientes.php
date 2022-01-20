@@ -22,25 +22,60 @@
         <section class="clientes__container-filter container-filter box-shadow">
             <div class="clientes__filtro filtro">
                 <h2 class="clientes__filtro-titulo filtro-title">Filtros de busqueda</h2>
-                <form class="clientes__filtro-form filtro-form" action="">
+                <form 
+                id="clientes__filtro-form" 
+                class="clientes__filtro-form filtro-form"
+                action="<?php echo URL_RAIZ ?>clientes/generarReporte"
+                method="POST"
+                target="_BLANK"
+                >
                     <section class="clientes__filtro-input-container">
                         <label class="clientes__filtro-input-label filtro-label" for="cliente-id">Por el documento de identidad</label>
-                        <input type="text" class="clientes__filtro-cliente-id" id="cliente-id" placeholder="Documento">
+                        <input 
+                        name="documento"
+                        type="text" 
+                        class="clientes__filtro-cliente-id" 
+                        id="cliente-id" 
+                        placeholder="Documento"
+                        autocomplete="off"
+                        data-input
+                        >
                     </section>
                     <section class="clientes__filtro-input-container">
                         <label class="clientes__filtro-input-label filtro-label" for="cliente-nombre">Por su nombre</label>
-                        <input type="text" class="clientes__filtro-cliente-nombre" id="cliente-nombre" placeholder="Nombre">
+                        <input 
+                        name="nombre"
+                        type="text" 
+                        class="clientes__filtro-cliente-nombre" 
+                        id="cliente-nombre" 
+                        placeholder="Nombre"
+                        autocomplete="off"
+                        data-input
+                        >
                     </section>
                         <section class="clientes__filtro-input-container">
                         <label class="clientes__filtro-input-label filtro-label" for="cliente-ciudad">Por su apellido</label>
-                        <input type="text" class="clientes__filtro-cliente-nombre" id="cliente-ciudad" placeholder="Apellido">
+                        <input 
+                        name="apellido"
+                        type="text" 
+                        class="clientes__filtro-cliente-nombre" 
+                        id="cliente-ciudad" 
+                        placeholder="Apellido"
+                        autocomplete="off"
+                        data-input
+                        >
                     </section>
                 </form>
                 <div class="clientes__filtro-gen-repo filtro-gen-repo">
                     <div class="clientes__filtro-gen-repo-img filtro-gen-repo-img">
                         <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
                     </div>
-                    <a class="clientes__filtro-subtitulo-reporte filtro-subtitulo-reporte" href="">Generar reporte</a>
+                    <input 
+                    class="clientes__filtro-subtitulo-reporte filtro-subtitulo-reporte" 
+                    type="submit" 
+                    value="Generar Reporte" 
+                    form="clientes__filtro-form"
+                    >
                 </div>
             </div>
         </section>
@@ -51,51 +86,121 @@
                 <h2>Clientes Registrados</h2>
             </div>
             <div class="clientes__lista-contenido contenedor-objetos__contenido box-shadow">
-                <figure class="clientes__lista-cliente contenedor-objetos__objeto box-shadow">
-                    <div class="clientes__lista-cliente-img contenedor-objetos__objeto-img">
-                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/cliente-icono.svg" alt="">
-                    </div>
-                    <div class="clientes__lista-cliente-info-container">
-                        <section class="clientes__lista-cliente-info documento">
-                            <h4 class="clientes__lista-cliente-info-title">DOCUMENTO DE IDENTIDAD</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info telefono">
-                            <h4 class="clientes__lista-cliente-info-title">TELEFONO</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info nombres">
-                            <h4 class="clientes__lista-cliente-info-title">NOMBRES</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info apellidos">
-                            <h4 class="clientes__lista-cliente-info-title">APELLIDOS</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info correo">
-                            <h4 class="clientes__lista-cliente-info-title">CORREO</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                        <section class="clientes__lista-cliente-info direccion">
-                            <h4 class="clientes__lista-cliente-info-title">DIRECCION</h4>
-                            <p class="clientes__lista-cliente-data">____________________________________</p>
-                        </section>
-                    </div>
-                    <div class="clientes__lista-cliente-botones contenedor-objetos__objeto-botones">
-                        <button class="clientes__lista-cliente-boton clientes__lista-cliente-boton-editar boton">
-                            <div class="clientes__lista-cliente-boton-img">
-                                <img src="<?php echo(URL_RAIZ); ?>public/imagenes/editar-icono.svg" alt="">
-                            </div>
-                            <span>Editar</span>
-                        </button>
-                        <button class="clientes__lista-cliente-boton clientes__lista-cliente-boton-inhabilitar boton">
-                            <div class="clientes__lista-cliente-boton-img">
-                                <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.svg" alt="">
-                            </div>
-                            <span>Inhabilitar</span>
-                        </button>
-                    </div>
-                </figure>
+                <?php foreach($this->data['infoClientes'] as $key => $value):?>
+
+                    <figure class="clientes__lista-cliente contenedor-objetos__objeto box-shadow">
+                        <div class="clientes__lista-cliente-img contenedor-objetos__objeto-img">
+                            <img src="<?php echo(URL_RAIZ); ?>public/imagenes/cliente-icono.svg" alt="">
+                        </div>
+                        <div class="clientes__lista-cliente-info-container">
+                            <section class="clientes__lista-cliente-info documento">
+                                <h4 class="clientes__lista-cliente-info-title">DOCUMENTO DE IDENTIDAD</h4>
+                                <p class="clientes__lista-cliente-data"><?php echo $value["CliDocIdentidad"]; ?></p>
+                            </section>
+                            <section class="clientes__lista-cliente-info telefono">
+                                <h4 class="clientes__lista-cliente-info-title">TELEFONO</h4>
+                                <p class="clientes__lista-cliente-data"><?php echo $value["CliTelefono"]; ?></p>
+                            </section>
+                            <section class="clientes__lista-cliente-info nombres">
+                                <h4 class="clientes__lista-cliente-info-title">NOMBRE/S</h4>
+                                <p class="clientes__lista-cliente-data"><?php echo $value["CliNombre"]; ?></p>
+                            </section>
+                            <section class="clientes__lista-cliente-info apellidos">
+                                <h4 class="clientes__lista-cliente-info-title">APELLIDO/S</h4>
+                                <p class="clientes__lista-cliente-data"><?php echo $value["CliApellido"]; ?></p>
+                            </section>
+                            <section class="clientes__lista-cliente-info correo">
+                                <h4 class="clientes__lista-cliente-info-title">CORREO</h4>
+                                <p class="clientes__lista-cliente-data"><?php echo $value["CliCorreo"]; ?></p>
+                            </section>
+                            <section class="clientes__lista-cliente-info direccion">
+                                <h4 class="clientes__lista-cliente-info-title">DIRECCION</h4>
+                                <p class="clientes__lista-cliente-data"><?php echo $value["CliDireccion"]; ?></p>
+                            </section>
+                        </div>
+                        <div class="clientes__lista-cliente-botones contenedor-objetos__objeto-botones">
+                            <button 
+                            class="clientes__lista-cliente-boton clientes__lista-cliente-boton-editar boton"
+                            data-doc-cliente="<?php echo $value["CliDocIdentidad"]; ?>"
+                            >
+                                <div class="clientes__lista-cliente-boton-img">
+                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/editar-icono.svg" alt="">
+                                </div>
+                                <span>Editar</span>
+                            </button>
+                            <button 
+                            class="clientes__lista-cliente-boton clientes__lista-cliente-boton-inhabilitar boton"
+                            data-doc-cliente="<?php echo $value["CliDocIdentidad"]; ?>"
+                            >
+                                <div class="clientes__lista-cliente-boton-img">
+                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.svg" alt="">
+                                </div>
+                                <span>Inhabilitar</span>
+                            </button>
+                        </div>
+                    </figure>
+
+                <?php endforeach; ?>
+
+
+                <!-- 
+                    Este template nos permite imprimir la informacion cuando estamos buscando por atributo
+                    pero en este caso lo hacemos con template para hacer uso de los fragmentos
+                -->
+
+                <template class="clientes__lista-cliente-template">
+                    <figure class="clientes__lista-cliente contenedor-objetos__objeto box-shadow">
+                        <div class="clientes__lista-cliente-img contenedor-objetos__objeto-img">
+                            <img src="<?php echo(URL_RAIZ); ?>public/imagenes/cliente-icono.svg" alt="">
+                        </div>
+                        <div class="clientes__lista-cliente-info-container">
+                            <section class="clientes__lista-cliente-info documento">
+                                <h4 class="clientes__lista-cliente-info-title">DOCUMENTO DE IDENTIDAD</h4>
+                                <p class="clientes__lista-cliente-data"></p>
+                            </section>
+                            <section class="clientes__lista-cliente-info telefono">
+                                <h4 class="clientes__lista-cliente-info-title">TELEFONO</h4>
+                                <p class="clientes__lista-cliente-data"></p>
+                            </section>
+                            <section class="clientes__lista-cliente-info nombres">
+                                <h4 class="clientes__lista-cliente-info-title">NOMBRE/S</h4>
+                                <p class="clientes__lista-cliente-data"></p>
+                            </section>
+                            <section class="clientes__lista-cliente-info apellidos">
+                                <h4 class="clientes__lista-cliente-info-title">APELLIDO/S</h4>
+                                <p class="clientes__lista-cliente-data"></p>
+                            </section>
+                            <section class="clientes__lista-cliente-info correo">
+                                <h4 class="clientes__lista-cliente-info-title">CORREO</h4>
+                                <p class="clientes__lista-cliente-data"></p>
+                            </section>
+                            <section class="clientes__lista-cliente-info direccion">
+                                <h4 class="clientes__lista-cliente-info-title">DIRECCION</h4>
+                                <p class="clientes__lista-cliente-data"></p>
+                            </section>
+                        </div>
+                        <div class="clientes__lista-cliente-botones contenedor-objetos__objeto-botones">
+                            <button 
+                            class="clientes__lista-cliente-boton clientes__lista-cliente-boton-editar boton"
+                            data-doc-cliente=""
+                            >
+                                <div class="clientes__lista-cliente-boton-img">
+                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/editar-icono.svg" alt="">
+                                </div>
+                                <span>Editar</span>
+                            </button>
+                            <button 
+                            class="clientes__lista-cliente-boton clientes__lista-cliente-boton-inhabilitar boton"
+                            data-doc-cliente=""
+                            >
+                                <div class="clientes__lista-cliente-boton-img">
+                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.svg" alt="">
+                                </div>
+                                <span>Inhabilitar</span>
+                            </button>
+                        </div>
+                    </figure>
+                </template>
             </div>
         </section>
 
@@ -119,13 +224,89 @@
             <!-- Estos son los modals para agregar un cliente -->
             <dialog class="clientes__modal-agregar-cliente">
                 <h2 class="clientes__modal-agregar-cliente-title dialog-title">Registra Nuevos Clientes</h2>
-                <form class="clientes__modal-agregar-cliente-form dialog-main-content">
-                    <input type="text" placeholder="Numero de documento del cliente">
-                    <input type="text" placeholder="Correo">
-                    <input type="text" placeholder="Nombres">
-                    <input type="text" placeholder="Direcci&oacute;n">
-                    <input type="text" placeholder="Apellidos">
-                    <input type="text" placeholder="Telefono">
+                <form 
+                class="clientes__modal-agregar-cliente-form dialog-main-content"
+                >
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Documento del Cliente</label>
+                        <input 
+                        name="documento"
+                        type="text"
+                        maxlength="15"
+                        id="docCliente"
+                        title = "Debe tener una maxima longitud de 15 caracteres"
+                        autocomplete="off"
+                        tabindex="1"
+                        data-input
+                        data-CliDocIdentidad
+                        >
+                    </section>
+
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Correo Electronico del Cliente</label>
+                        <input
+                        name="correo" 
+                        type="text"
+                        title="Ingresa el correo electronico del cliente: ejemplo@gmail.com"
+                        autocomplete="off"
+                        tabindex="4"
+                        data-input
+                        data-CliCorreo
+                        >
+                    </section>
+                    
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Nombre/s del Cliente</label>
+                        <input
+                        name="nombre" 
+                        type="text"
+                        title="Ingresa el nombre del cliente"
+                        autocomplete="off"
+                        tabindex="2"
+                        data-input
+                        data-CliNombre
+                        >
+                    </section>
+                    
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Direccion del Cliente</label>
+                        <input
+                        name="direccion" 
+                        type="text"
+                        title="Ingresa la direccion del cliente"
+                        autocomplete="off"
+                        tabindex="5"
+                        data-input
+                        data-CliDireccion
+                        >
+                    </section>
+                    
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Apellido/s del Cliente</label>
+                        <input
+                        name="apellido" 
+                        type="text"
+                        title="Ingresa el apellido del cliente"
+                        autocomplete="off"
+                        tabindex="3"
+                        data-input
+                        data-CliApellido
+                        >
+                    </section>
+                    
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Telefono del Cliente</label>
+                        <input
+                        name="telefono"
+                        type="text"
+                        title="Ingresa el numero telefonico del cliente"
+                        autocomplete="off"
+                        tabindex="6"
+                        data-input
+                        data-CliTelefono
+                        >
+                    </section>
+                    
                 </form>
                 <div class="clientes__modal-agregar-cliente-btns-container dialog-container-bts">
                     <button class="clientes__modal-agregar-cliente-btn-cancelar boton dialog-btn">Cancelar</button>
@@ -140,28 +321,28 @@
                     Recuerda revisar detenidamente la informacion del cliente que estas registrando.
                 </p>
                 <div class="clientes__modal-agregar-cliente-info-confirmacion dialog-main-content">
-                    <section class="clientes__modal-agregar-cliente-info-item-confirmacion">
-                        <h3>DOCUMENTO DEL CLIENTE</h3>
+                    <section class="clientes__modal-agregar-cliente-info-item-confirmacion" data-CliDocIdentidad>
+                        <h3 class="dialog-main-content__label">Documento del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="clientes__modal-agregar-cliente-info-item-confirmacion">
-                        <h3>CORREO</h3>
+                    <section class="clientes__modal-agregar-cliente-info-item-confirmacion" data-CliCorreo>
+                        <h3 class="dialog-main-content__label">Correo Electronico del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="clientes__modal-agregar-cliente-info-item-confirmacion">
-                        <h3>NOMBRE/S DEL CLIENTE</h3>
+                    <section class="clientes__modal-agregar-cliente-info-item-confirmacion" data-CliNombre>
+                        <h3 class="dialog-main-content__label">Nombre/s del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="clientes__modal-agregar-cliente-info-item-confirmacion">
-                        <h3>DIRECCI&Oacute;N</h3>
+                    <section class="clientes__modal-agregar-cliente-info-item-confirmacion" data-CliDireccion>
+                        <h3 class="dialog-main-content__label">Direccion del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="clientes__modal-agregar-cliente-info-item-confirmacion">
-                        <h3>APELLIDO/S DEL CLIENTE</h3>
+                    <section class="clientes__modal-agregar-cliente-info-item-confirmacion" data-CliApellido>
+                        <h3 class="dialog-main-content__label">Apellido/s del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="clientes__modal-agregar-cliente-info-item-confirmacion">
-                        <h3>TELEFONO</h3>
+                    <section class="clientes__modal-agregar-cliente-info-item-confirmacion" data-CliTelefono>
+                        <h3 class="dialog-main-content__label">Telefono del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                 </div>
@@ -193,222 +374,40 @@
                         <img src="<?php echo(URL_RAIZ); ?>public/imagenes/reportes-icono.svg" alt="">
                     </div>
                     <div class="clientes__modal-clientes-inhabilitados-gen-repo-container-text">
-                        <a class="filtro-subtitulo-reporte" href="">Generar Reporte</a>
+                        <a 
+                        target="_BLANK"
+                        class="filtro-subtitulo-reporte" 
+                        href="<?php echo(URL_RAIZ); ?>clientes/generarReporteInhabilitados"
+                        >
+                        Generar Reporte
+                        </a>
                     </div>
                 </div>
                 <section class="clientes__modal-clientes-inhabilitados-table-container container-table">
                     <table class="clientes-inhabilitados__table table">
                         <thead class="table-thead">
                             <tr class="table-tr">
-                                <td class="table-td">Documento</td>
+                            <td class="table-td">Documento</td>
                                 <td class="table-td">Nombre/s</td>
                                 <td class="table-td">Apellido/s</td>
                                 <td class="table-td">Correo</td>
                                 <td class="table-td">Telefono</td>
                                 <td class="table-td">Direccion</td>
+                                <td class="table-td">Fecha/hora Inhabilitacion</td>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td> 
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
-                            <tr>
-                                <td>1354648469231</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                            </tr>
+                            <tbody>
+                            <?php foreach($this->data["infoClientesInhabilitados"] as $key => $value): ?>
+                                <tr>
+                                    <td><?php echo $value["CliDocIdentidad"]; ?></td>
+                                    <td><?php echo $value["CliNombre"]; ?></td>
+                                    <td><?php echo $value["CliApellido"]; ?></td>
+                                    <td><?php echo $value["CliCorreo"]; ?></td>
+                                    <td><?php echo $value["CliTelefono"]; ?></td>
+                                    <td><?php echo $value["CliDireccion"]; ?></td>
+                                    <td><?php echo $value["CliFechaInhabilitacion"]; ?></td>
+                                </tr>
+                            <?php endforeach;?>
                         </tbody>
                     </table>
                 </section>
@@ -417,13 +416,88 @@
             <!-- Estos son los modals para editar un cliente -->
             <dialog class="clientes__modal-editar-cliente">
                 <h2 class="clientes__modal-editar-cliente-title dialog-title">Edita Tus Clientes</h2>
-                <form class="clientes__modal-editar-cliente-form dialog-main-content">
-                <input type="text" placeholder="Numero de documento del cliente">
-                    <input type="text" placeholder="Correo">
-                    <input type="text" placeholder="Nombres">
-                    <input type="text" placeholder="Direcci&oacute;n">
-                    <input type="text" placeholder="Apellidos">
-                    <input type="text" placeholder="Telefono">
+                <form 
+                class="clientes__modal-editar-cliente-form dialog-main-content"
+                >
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Documento del Cliente</label>
+                        <input 
+                        name="documento"
+                        type="text"
+                        maxlength="15"
+                        id="docCliente"
+                        title = "Debe tener una maxima longitud de 15 caracteres"
+                        autocomplete="off"
+                        tabindex="1"
+                        data-input
+                        data-CliDocIdentidad
+                        >
+                    </section>
+
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Correo Electronico del Cliente</label>
+                        <input
+                        name="correo" 
+                        type="text"
+                        title="Ingresa el correo electronico del cliente: ejemplo@gmail.com"
+                        autocomplete="off"
+                        tabindex="4"
+                        data-input
+                        data-CliCorreo
+                        >
+                    </section>
+                    
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Nombre/s del Cliente</label>
+                        <input
+                        name="nombre" 
+                        type="text"
+                        title="Ingresa el nombre del cliente"
+                        autocomplete="off"
+                        tabindex="2"
+                        data-input
+                        data-CliNombre
+                        >
+                    </section>
+                    
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Direccion del Cliente</label>
+                        <input
+                        name="direccion" 
+                        type="text"
+                        title="Ingresa la direccion del cliente"
+                        autocomplete="off"
+                        tabindex="5"
+                        data-input
+                        data-CliDireccion
+                        >
+                    </section>
+                    
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Apellido/s del Cliente</label>
+                        <input
+                        name="apellido" 
+                        type="text"
+                        title="Ingresa el apellido del cliente"
+                        autocomplete="off"
+                        tabindex="3"
+                        data-input
+                        data-CliApellido
+                        >
+                    </section>
+                    
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Telefono del Cliente</label>
+                        <input
+                        name="telefono"
+                        type="text"
+                        title="Ingresa el numero telefonico del cliente"
+                        autocomplete="off"
+                        tabindex="6"
+                        data-input
+                        data-CliTelefono
+                        >
+                    </section>
                 </form>
                 <div class="clientes__modal-editar-cliente-btns-container dialog-container-bts">
                     <button class="clientes__modal-editar-cliente-btn-cancelar boton dialog-btn">Cancelar</button>
@@ -438,28 +512,28 @@
                     Recuerda revisar detenidamente la informacion del cliente que estas modificando.
                 </p>
                 <div class="clientes__modal-editar-cliente-info-confirmacion dialog-main-content">
-                    <section class="clientes__modal-editar-cliente-info-item-confirmacion">
-                        <h3>DOCUMENTO DEL CLIENTE</h3>
+                    <section class="clientes__modal-editar-cliente-info-item-confirmacion" data-CliDocIdentidad>
+                        <h3 class="dialog-main-content__label">Documento del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="clientes__modal-editar-cliente-info-item-confirmacion">
-                        <h3>CORREO</h3>
+                    <section class="clientes__modal-editar-cliente-info-item-confirmacion" data-CliCorreo>
+                        <h3 class="dialog-main-content__label">Correo Electronico del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="clientes__modal-editar-cliente-info-item-confirmacion">
-                        <h3>NOMBRE/S DEL CLIENTE</h3>
+                    <section class="clientes__modal-editar-cliente-info-item-confirmacion" data-CliNombre>
+                        <h3 class="dialog-main-content__label">Nombre/s del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="clientes__modal-editar-cliente-info-item-confirmacion">
-                        <h3>DIRECCI&Oacute;N</h3>
+                    <section class="clientes__modal-editar-cliente-info-item-confirmacion" data-CliDireccion>
+                        <h3 class="dialog-main-content__label">Direccion del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="clientes__modal-editar-cliente-info-item-confirmacion">
-                        <h3>APELLIDO/S DEL CLIENTE</h3>
+                    <section class="clientes__modal-editar-cliente-info-item-confirmacion" data-CliApellido>
+                        <h3 class="dialog-main-content__label">Apellido/s del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="clientes__modal-editar-cliente-info-item-confirmacion">
-                        <h3>TELEFONO</h3>
+                    <section class="clientes__modal-editar-cliente-info-item-confirmacion" data-CliTelefono>
+                        <h3 class="dialog-main-content__label">Telefono del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                 </div>
@@ -491,28 +565,28 @@
                     Recuerda que una vez inhabilitado, no lo podras volver a habilitar.
                 </p>
                 <div class="clientes__modal-inhabilitar-cliente-info dialog-main-content">
-                <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion">
-                        <h3>DOCUMENTO DEL CLIENTE</h3>
+                    <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion" data-CliDocIdentidad>
+                        <h3 class="dialog-main-content__label">Documento del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion">
-                        <h3>CORREO</h3>
+                    <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion" data-CliCorreo>
+                        <h3 class="dialog-main-content__label">Correo Electronico del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion">
-                        <h3>NOMBRE/S DEL CLIENTE</h3>
+                    <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion" data-CliNombre>
+                        <h3 class="dialog-main-content__label">Nombre/s del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion">
-                        <h3>DIRECCI&Oacute;N</h3>
+                    <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion" data-CliDireccion>
+                        <h3 class="dialog-main-content__label">Direccion del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion">
-                        <h3>APELLIDO/S DEL CLIENTE</h3>
+                    <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion" data-CliApellido>
+                        <h3 class="dialog-main-content__label">Apellido/s del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion">
-                        <h3>TELEFONO</h3>
+                    <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion" data-CliTelefono>
+                        <h3 class="dialog-main-content__label">Telefono del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                 </div>
@@ -541,9 +615,11 @@
         independientemente de si esta en una funcion anonima autoejecutable */
         var URL_RAIZ = "<?php echo URL_RAIZ ?>"
     </script>
-    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_clientes_agregar_cliente.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_clientes_agregar_cliente.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_clientes_clientes_inhabilitados.js"></script>
-    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_clientes_editar_cliente.js"></script>
-    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_clientes_inhabilitar_clientes.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_clientes_editar_cliente.js" type="module"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_clientes_inhabilitar_clientes.js" type="module"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_clientes_buscar_por_atributos.js" type="module"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/cualquier_modulo_pintar_borde_derecho_input.js" ></script>
 </body>
 </html>

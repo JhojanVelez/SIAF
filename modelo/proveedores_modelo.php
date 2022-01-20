@@ -20,6 +20,14 @@ class ProveedoresModelo extends ConexionBD {
         }
     }
 
+    public function buscarInhabilitados () {
+        try {
+            return $this->connection->query("SELECT * FROM tbl_proveedores_inhabilitados ORDER BY ProFechaInhabilitacion DESC")->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            return "Error al obtener todos los proveedores inhabilitados";
+        }
+    }
+
     public function buscarPorAtributos () {
         $this->sql ="SELECT * 
                     FROM tbl_proveedores
@@ -131,7 +139,7 @@ class ProveedoresModelo extends ConexionBD {
     public function eliminar($id) {
         $this->setNit(htmlentities(addslashes($id)));
         try {
-            $this->sql="DELETE FROM tbl_proveedores WHERE proNIT = ?";
+            $this->sql="DELETE FROM tbl_proveedores WHERE ProNIT = ?";
 
             $this->PDOStmt = $this->connection->prepare($this->sql);
 

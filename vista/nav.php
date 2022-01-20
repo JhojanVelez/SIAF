@@ -1,6 +1,8 @@
 <header class="nav-container">
     <div class="user-icon-container">
-        <img class="user-icon-container__img" src="https://cdnb.20m.es/sites/112/2019/04/cara6-620x618.jpg" alt="usuario IMG">
+        <figure class="user-icon-container__img-usu-container" >
+            <img class="user-icon-container__img" src="fotosEmpleados/empleado_999999999999999.jpeg" alt="usuario IMG">
+        </figure>
         <p class="user-icon-container__nombre-usu" >Antonia Gomez</p>
     </div>
     <nav>
