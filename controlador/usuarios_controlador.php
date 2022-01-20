@@ -31,24 +31,26 @@ class UsuariosControlador extends Controlador{
             $this->instanciaModelo->setRol(addslashes($_POST["rol"]));
 
             $this->result = $this->instanciaModelo->registrar();
+            
+            /* Las siguientes lineas de codigo se encargan de subir la imagen del directorio temporal al directorio fotosEmpleados */
+            if($this->result["complete"]) {
+                if($_FILES['foto']['error'] != 4) {
+                    $fileType = explode("/",$_FILES['foto']['type'])[1];
+    
+                    $newFileName = "empleado_{$_POST['documento']}.{$fileType}";
+    
+                    move_uploaded_file($_FILES['foto']['tmp_name'],"fotosEmpleados/$newFileName");
+                }
+            }
+            
             echo(json_encode($this->result));
+
+
 
         } catch (Exception $e) {
             $this->result["complete"] = false;
             $this->result["errorMessage"] = $e->getMessage();
             echo(json_encode($this->result));
-        }
-
-
-
-        /* Las siguientes lineas de codigo se encargan de subir la imagen del directorio temporal al directorio fotosEmpleados */
-
-        if(!empty($_FILES['foto']['error'] != 4)) {
-            $fileType = explode("/",$_FILES['foto']['type'])[1];
-
-            $newFileName = "empleado_{$_POST['documento']}.{$fileType}";
-
-            move_uploaded_file($_FILES['foto']['tmp_name'],"fotosEmpleados/$newFileName");
         }
     }
 }

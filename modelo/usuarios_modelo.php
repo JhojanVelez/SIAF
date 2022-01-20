@@ -64,7 +64,7 @@ class UsuariosModelo extends ConexionBD {
             $this->result["complete"] = false;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
             $this->result["errorPDOMessage"] = $e->errorInfo;
-            $this->result["errorMessage"] = "El usuario $this->nit no pudo ser registrado porque ya existe";
+            $this->result["errorMessage"] = "El usuario $this->documento no pudo ser registrado porque ya existe";
             return $this->result;
         }
     }

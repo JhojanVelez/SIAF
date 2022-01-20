@@ -19,7 +19,7 @@ import {agregar} from '../../ajax/agregar.js'
 
     /* Patron para validacion de Password */
 
-    let patronValidarPassword = "^(?=.*[0-9]+)(?=.*[A-Z]+)(?=.*[a-z]+)(?=.*[\!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\\[\\]\^\_\`\{\|\}\~]+).+$"
+    let patronValidarPassword = "^(?=.*[0-9]+)(?=.*[A-Z]+)(?=.*[a-z]+)(?=.*[\!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\\[\\]\^\_\`\{\|\}\~]+).{8,}$"
 
     d.addEventListener("click", e => {
         if(e.target.matches(".usuarios__boton-agregar")) {
@@ -34,7 +34,7 @@ import {agregar} from '../../ajax/agregar.js'
             validador = true;
 
             $inputs.forEach(el => {
-                if(Object.keys(el.dataset)[1] != "empimg") el.value = el.value.toUpperCase().trim();
+                if(Object.keys(el.dataset)[1] != "empimg" && Object.keys(el.dataset)[1] != "emppassword") el.value = el.value.toUpperCase().trim();
             });
 
             $inputs.forEach(input => {
@@ -48,9 +48,7 @@ import {agregar} from '../../ajax/agregar.js'
                 }
             });
 
-            console.log(validador);
-
-            if(validarCorreo() && validador) {
+            if(validarCorreo() && validarPassword() && validador) {
                 console.log("nel")
                 $modal_1.toggleAttribute("open");
                 

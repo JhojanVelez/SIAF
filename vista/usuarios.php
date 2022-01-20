@@ -279,6 +279,7 @@
                                 <p class="usuarios-alert-password-container__alert-text">Una contraseña segura debe cumplir como minimo los siguientes parametros:</p>
                                 <ul class="usuarios-alert-password-container__alert-list-ul">
                                     <li>Debe contener como minimo 8 caracteres.</li>
+                                    <li>Debe contener por lo menos 1 letra minuscula.</li>
                                     <li>Debe contener por lo menos 1 letra MAYUSCULA.</li>
                                     <li>Debe contener por lo menos un caracter especial como por ejemplo(! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _` { | } ~ ).</li>
                                 </ul>
