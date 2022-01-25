@@ -12,6 +12,7 @@ class UsuariosModelo extends ConexionBD {
     private $correo;
     private $password;
     private $rol;
+    private $foto;
     
     public function buscarPorId ($id) {
         try {
@@ -73,6 +74,15 @@ class UsuariosModelo extends ConexionBD {
 
             $this->PDOStmt->execute();
 
+            /* Las siguientes lineas de codigo se encargan de subir la imagen del directorio temporal al directorio fotosEmpleados */
+            if($this->foto['error'] != 4) {
+                $fileType = explode("/",$this->foto['type'])[1];
+
+                $newFileName = "empleado_{$this->documento}.{$fileType}";
+
+                move_uploaded_file($this->foto['tmp_name'],"fotosEmpleados/$newFileName");
+            }
+
             $this->result["complete"] = true;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
             return $this->result;
@@ -120,6 +130,25 @@ class UsuariosModelo extends ConexionBD {
 
             $this->PDOStmt->execute();
 
+            /* Las siguientes lineas de codigo se encargan de subir la imagen del directorio temporal al directorio fotosEmpleados */
+            $fileType = ($this->foto['type'] == "")
+                        ?"jpeg"
+                        :explode("/",$this->foto['type'])[1];
+            $oldFileName = "empleado_{$idUsuarioSeleccionado}.jpeg";
+            $newFileName = "empleado_{$this->documento}.{$fileType}";
+
+            if(($this->foto['error'] != 4) && ($idUsuarioSeleccionado == $this->documento)) {
+                /* el usuario cambio la foto y el id no lo modifico */
+                move_uploaded_file($this->foto['tmp_name'],"fotosEmpleados/$newFileName");
+            } else if(($this->foto['error'] != 4) && ($idUsuarioSeleccionado != $this->documento)) {
+                /* el usuario cambio la foto y el id */
+                rename("fotosEmpleados/$oldFileName","fotosEmpleados/$newFileName");
+                move_uploaded_file($this->foto['tmp_name'],"fotosEmpleados/$newFileName");
+            }else if(($this->foto['error'] == 4) && ($idUsuarioSeleccionado != $this->documento)) {
+                /* el usuario NO cambio la foto pero si modifico el id */
+                rename("fotosEmpleados/$oldFileName","fotosEmpleados/$newFileName");
+            }
+
             $this->result["complete"] = true;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
             $this->result["resultMessage"] = "Usuario editado correctamente";
@@ -146,6 +175,7 @@ class UsuariosModelo extends ConexionBD {
     public function getCorreo () {return $this->correo;}
     public function getPassword () {return $this->password;}
     public function getRol () {return $this->rol;}
+    public function getFoto () {return $this->foto;}
 
     /* Metodos SETTER */
 
@@ -178,6 +208,9 @@ class UsuariosModelo extends ConexionBD {
     }
     public function setRol ($value) {
         $this->rol = $value;
+    }
+    public function setFoto ($value) {
+        $this->foto = $value;
     }
 
 

@@ -29,23 +29,11 @@ class UsuariosControlador extends Controlador{
             $this->instanciaModelo->setCorreo(htmlentities(addslashes($_POST["correo"])));
             $this->instanciaModelo->setPassword(addslashes($_POST["password"]));
             $this->instanciaModelo->setRol(addslashes($_POST["rol"]));
+            $this->instanciaModelo->setFoto($_FILES['foto']);
 
             $this->result = $this->instanciaModelo->registrar();
             
-            /* Las siguientes lineas de codigo se encargan de subir la imagen del directorio temporal al directorio fotosEmpleados */
-            if($this->result["complete"]) {
-                if($_FILES['foto']['error'] != 4) {
-                    $fileType = explode("/",$_FILES['foto']['type'])[1];
-    
-                    $newFileName = "empleado_{$_POST['documento']}.{$fileType}";
-    
-                    move_uploaded_file($_FILES['foto']['tmp_name'],"fotosEmpleados/$newFileName");
-                }
-            }
-            
             echo(json_encode($this->result));
-
-
 
         } catch (Exception $e) {
             $this->result["complete"] = false;
@@ -76,33 +64,11 @@ class UsuariosControlador extends Controlador{
             $this->instanciaModelo->setTelefono(addslashes($_POST["telefono"]));
             $this->instanciaModelo->setCorreo(htmlentities(addslashes($_POST["correo"])));
             $this->instanciaModelo->setRol(addslashes($_POST["rol"]));
+            $this->instanciaModelo->setFoto($_FILES['foto']);
 
             $this->result = $this->instanciaModelo->editar(htmlentities(addslashes($idUsuarioSeleccionado)));
             
-            /* Las siguientes lineas de codigo se encargan de subir la imagen del directorio temporal al directorio fotosEmpleados */
-            if($this->result["complete"]) {
-                $fileType = ($_FILES['foto']['type'] == "")
-                            ?"jpeg"
-                            :explode("/",$_FILES['foto']['type'])[1];
-                $oldFileName = "empleado_{$idUsuarioSeleccionado}.jpeg";
-                $newFileName = "empleado_{$this->instanciaModelo->getDocumento()}.{$fileType}";
-
-                if(($_FILES['foto']['error'] != 4) && ($idUsuarioSeleccionado == $this->instanciaModelo->getDocumento())) {
-                    /* el usuario cambio la foto y el id no lo modifico */
-                    move_uploaded_file($_FILES['foto']['tmp_name'],"fotosEmpleados/$newFileName");
-                } else if(($_FILES['foto']['error'] != 4) && ($idUsuarioSeleccionado != $this->instanciaModelo->getDocumento())) {
-                    /* el usuario cambio la foto y el id */
-                    rename("fotosEmpleados/$oldFileName","fotosEmpleados/$newFileName");
-                    move_uploaded_file($_FILES['foto']['tmp_name'],"fotosEmpleados/$newFileName");
-                }else if(($_FILES['foto']['error'] == 4) && ($idUsuarioSeleccionado != $this->instanciaModelo->getDocumento())) {
-                    /* el usuario NO cambio la foto pero si modifico el id */
-                    rename("fotosEmpleados/$oldFileName","fotosEmpleados/$newFileName");
-                }
-            }
-            
             echo(json_encode($this->result));
-
-
 
         } catch (Exception $e) {
             $this->result["complete"] = false;

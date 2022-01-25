@@ -20,7 +20,6 @@ export function inhabilitar (id,modulo,URL_RAIZ) {
 
             if(xhr.readyState == 4 && (xhr.status >= 200 && xhr.status < 300)) {
                 // resolve(xhr.response);
-                console.log(xhr.response);
                 resolve(JSON.parse(xhr.response));
             } 
         })
