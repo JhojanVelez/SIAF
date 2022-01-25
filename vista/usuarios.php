@@ -601,50 +601,51 @@
                     Recuerda que una vez inhabilitado, no lo podras volver a habilitar.
                 </p>
                 <div class="usuarios__modal-inhabilitar-usuario-info dialog-main-content">
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
-                        <h3 class="dialog-main-content__label">Documento del Usuario</h3>
-                        <p>________________________________________________</p>
+                    <section class="usuarios__modal-inhabilitar-usuario-info-item" data-EmpDocIdentidad>
+                    <h3 class="dialog-main-content__label">Documento del Usuario</h3>
+                    <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-inhabilitar-usuario-info-item" data-EmpCorreo>
                         <h3 class="dialog-main-content__label">Correo Electronico del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-inhabilitar-usuario-info-item" data-EmpNombre>
                         <h3 class="dialog-main-content__label">Nombre/s del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-inhabilitar-usuario-info-item" data-EmpDireccion>
                         <h3 class="dialog-main-content__label">Direccion del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-inhabilitar-usuario-info-item" data-EmpApellido>
                         <h3 class="dialog-main-content__label">Apellido/s del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-inhabilitar-usuario-info-item" data-EmpTelefono>
                         <h3 class="dialog-main-content__label">Telefono del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-inhabilitar-usuario-info-item" data-EmpEps>
                         <h3 class="dialog-main-content__label">EPS del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-inhabilitar-usuario-info-item" data-EmpRH>
                         <h3 class="dialog-main-content__label">RH del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
-                        <h3 class="dialog-main-content__label">Contrase&ntilde;a del Usuario</h3>
-                        <p>________________________________________________</p>
+                    <section class="usuarios__modal-inhabilitar-usuario-info-item" data-EmpIMG>
+                        <div class="usuarios-modal-inhabilitar-usuario-info-item__img-container">
+                            <img src="" alt="Foto Usuario">
+                        </div>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-inhabilitar-usuario-info-item" data-EmpRol>
                         <h3 class="dialog-main-content__label">Rol del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                </div>
-                <div class="usuarios__modal-inhabilitar-usuario-btns-container dialog-container-bts">
-                    <button class="usuarios__modal-inhabilitar-usuario-btn-cancelar dialog-btn boton">Cancelar</button>
-                    <button class="usuarios__modal-inhabilitar-usuario-btn-confirmar dialog-btn boton">Confirmar</button>
+                    <div class=" usuarios__modal-inhabilitar-usuario-info-item usuarios__modal-inhabilitar-usuario-btns-container dialog-container-bts">
+                        <button class="usuarios__modal-inhabilitar-usuario-btn-cancelar dialog-btn boton">Cancelar</button>
+                        <button class="usuarios__modal-inhabilitar-usuario-btn-confirmar dialog-btn boton">Confirmar</button>
+                    </div>
                 </div>
             </dialog>
 
@@ -920,7 +921,7 @@
     </script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_agregar_usuario.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_editar_usuario.js" type="module"></script>
-    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_inhabilitar_usuarios.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_inhabilitar_usuarios.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_usuarios_inhabilitados.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/cualquier_modulo_pintar_borde_derecho_input.js" ></script>
 </body>

@@ -163,6 +163,36 @@ class UsuariosModelo extends ConexionBD {
         }
     }
 
+    public function eliminar($id) {
+        $this->setDocumento(htmlentities(addslashes($id)));
+        try {
+            $this->sql="DELETE FROM tbl_empleados WHERE EmpDocIdentidad = ?";
+
+            $this->PDOStmt = $this->connection->prepare($this->sql);
+
+            $this->PDOStmt->execute(array($this->documento));
+
+            $this->result["complete"] = true;
+            $this->result["affectedRows"] = $this->PDOStmt->rowCount();
+            $this->result["resultMessage"] = $this->PDOStmt->rowCount() != 0 
+                                            ? "El usuario $this->documento se inhabilito correctamente"
+                                            : "No se encontro ningun usuario, por lo tanto no se pudo realizar el proceso de inhabilitacion";
+
+            if($this->PDOStmt->errorInfo()[1] == 1451) throw new PDOException();
+
+            unlink("fotosEmpleados/empleado_{$this->documento}.jpeg");
+
+            return $this->result;
+
+        } catch (PDOException $e) {
+            $this->result["complete"] = false;
+            $this->result["affectedRows"] = $this->PDOStmt->rowCount();
+            $this->result["errorPDOMessage"] = $e->errorInfo;
+            if($e->errorInfo[1] == 1451) $this->result["errorMessage"] = "El usuario $this->documento no pudo ser inhabilitado porque la infomacion de este usuario es fundamental para el funcionamiento de otras secciones del sistema.";
+            return $this->result;
+        }
+    }
+
     /* Metodos GETTER */
 
     public function getDocumento () {return $this->documento;}
