@@ -25,15 +25,39 @@
                 <form class="usuarios__filtro-form filtro-form" action="">
                     <section class="usuarios__filtro-input-container">
                         <label class="usuarios__filtro-input-label filtro-label" for="usuario-id">Por el documento de identidad</label>
-                        <input type="text" class="usuarios__filtro-usuario-id" id="usuario-id" placeholder="Documento">
+                        <input 
+                        name="documento"
+                        type="text" 
+                        class="usuarios__filtro-usuario-id" 
+                        id="usuario-id" 
+                        placeholder="Documento"
+                        autocomplete="off"
+                        data-input
+                        >
                     </section>
                     <section class="usuarios__filtro-input-container">
                         <label class="usuarios__filtro-input-label filtro-label" for="usuario-nombre">Por su nombre</label>
-                        <input type="text" class="usuarios__filtro-usuario-nombre" id="usuario-nombre" placeholder="Nombre">
+                        <input 
+                        name="nombre"
+                        type="text" 
+                        class="usuarios__filtro-usuario-nombre" 
+                        id="usuario-nombre" 
+                        placeholder="Nombre"
+                        autocomplete="off"
+                        data-input
+                        >
                     </section>
                     <section class="usuarios__filtro-input-container">
-                        <label class="usuarios__filtro-input-label filtro-label" for="usuario-ciudad">Por su apellido</label>
-                        <input type="text" class="usuarios__filtro-usuario-nombre" id="usuario-ciudad" placeholder="Apellido">
+                        <label class="usuarios__filtro-input-label filtro-label" for="usuario-apellido">Por su apellido</label>
+                        <input 
+                        name="apellido"
+                        type="text" 
+                        class="usuarios__filtro-usuario-apellido" 
+                        id="usuario-apellido" 
+                        placeholder="Apellido"
+                        autocomplete="off"
+                        data-input
+                        >
                     </section>
                 </form>
                 <div class="usuarios__filtro-gen-repo filtro-gen-repo">
@@ -125,6 +149,80 @@
                         </div>
                     </figure>
                 <?php endforeach; ?>
+
+
+                <!-- 
+                    Este template nos permite imprimir la informacion cuando estamos buscando por atributo
+                    pero en este caso lo hacemos con template para hacer uso de los fragmentos
+                -->
+
+                <template class="usuarios__lista-usuario-template">
+                    <figure class="usuarios__lista-usuario contenedor-objetos__objeto box-shadow">
+                        <div class="usuarios__lista-usuario-img contenedor-objetos__objeto-img">
+                            <img 
+                            src="" 
+                            alt="">
+                        </div>
+                        <div class="usuarios__lista-usuario-info-container">
+                            <section class="usuarios__lista-usuario-info documento">
+                                <h4 class="usuarios__lista-usuario-info-title">DOCUMENTO DE IDENTIDAD</h4>
+                                <p class="usuarios__lista-usuario-data"></p>
+                            </section>
+                            <section class="usuarios__lista-usuario-info nombres">
+                                <h4 class="usuarios__lista-usuario-info-title">NOMBRES</h4>
+                                <p class="usuarios__lista-usuario-data"></p>
+                            </section>
+                            <section class="usuarios__lista-usuario-info apellidos">
+                                <h4 class="usuarios__lista-usuario-info-title">APELLIDOS</h4>
+                                <p class="usuarios__lista-usuario-data"></p>
+                            </section>
+                            <section class="usuarios__lista-usuario-info eps">
+                                <h4 class="usuarios__lista-usuario-info-title">EPS</h4>
+                                <p class="usuarios__lista-usuario-data"></p>
+                            </section>
+                            <section class="usuarios__lista-usuario-info telefono">
+                                <h4 class="usuarios__lista-usuario-info-title">TELEFONO</h4>
+                                <p class="usuarios__lista-usuario-data"></p>
+                            </section>
+                            <section class="usuarios__lista-usuario-info correo">
+                                <h4 class="usuarios__lista-usuario-info-title">CORREO</h4>
+                                <p class="usuarios__lista-usuario-data"></p>
+                            </section>
+                            <section class="usuarios__lista-usuario-info direccion">
+                                <h4 class="usuarios__lista-usuario-info-title">DIRECCION</h4>
+                                <p class="usuarios__lista-usuario-data"></p>
+                            </section>
+                            <section class="usuarios__lista-usuario-info rh">
+                                <h4 class="usuarios__lista-usuario-info-title">RH</h4>
+                                <p class="usuarios__lista-usuario-data"></p>
+                            </section>
+                            <section class="usuarios__lista-usuario-info rol">
+                                <h4 class="usuarios__lista-usuario-info-title">ROL</h4>
+                                <p class="usuarios__lista-usuario-data"></p>
+                            </section>
+                        </div>
+                        <div class="usuarios__lista-usuario-botones contenedor-objetos__objeto-botones">
+                            <button 
+                            class="usuarios__lista-usuario-boton usuarios__lista-usuario-boton-editar contenedor-objetos__objeto-boton boton"
+                            data-doc-usuario
+                            >
+                                <div class="usuarios__lista-usuario-boton-img">
+                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/editar-icono.svg" alt="">
+                                </div>
+                                <span>Editar</span>
+                            </button>
+                            <button 
+                            class="usuarios__lista-usuario-boton usuarios__lista-usuario-boton-inhabilitar contenedor-objetos__objeto-boton boton"
+                            data-doc-usuario
+                            >
+                                <div class="usuarios__lista-usuario-boton-img">
+                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.svg" alt="">
+                                </div>
+                                <span>Inhabilitar</span>
+                            </button>
+                        </div>
+                    </figure>
+                </template>
             </div>
         </section>
 
@@ -720,6 +818,7 @@
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_agregar_usuario.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_editar_usuario.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_inhabilitar_usuarios.js" type="module"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_buscar_por_atributos.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_usuarios_inhabilitados.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/cualquier_modulo_pintar_borde_derecho_input.js" ></script>
 </body>

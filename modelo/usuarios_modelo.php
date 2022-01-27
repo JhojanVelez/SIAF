@@ -42,6 +42,35 @@ class UsuariosModelo extends ConexionBD {
     }
 
 
+    public function buscarPorAtributos () {
+        $this->sql ="SELECT * 
+                    FROM tbl_empleados
+                    WHERE
+                    EmpDocIdentidad     LIKE :documento   OR
+                    EmpNombre           LIKE :nombre      OR
+                    EmpApellido         LIKE :apellido     
+                    ORDER BY EmpNombre";
+                    
+        $this->PDOStmt = $this->connection->prepare($this->sql);
+        
+        $this->PDOStmt->bindValue(":documento",$this->documento);
+        $this->PDOStmt->bindValue(":nombre",$this->nombre);
+        $this->PDOStmt->bindValue(":apellido",$this->apellido);
+
+        $this->PDOStmt->execute();
+
+        $this->rows = $this->PDOStmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach($this->rows as $key => $value) {
+            $this->rows[$key]["EmpIMG"] = (file_exists("fotosEmpleados/empleado_{$this->rows[$key]['EmpDocIdentidad']}.jpeg"))
+                                            ?"fotosEmpleados/empleado_{$this->rows[$key]['EmpDocIdentidad']}.jpeg"
+                                            :"fotosEmpleados/default_1.jpeg";;
+        }
+
+        return $this->rows;
+    }
+
+
     public function registrar () {
         try {
             $this->sql ="INSERT INTO 
