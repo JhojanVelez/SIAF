@@ -37,7 +37,15 @@ class UsuariosModelo extends ConexionBD {
             $this->rows['infoEmpleadosInhabilitados'] = $this->connection->query("SELECT * FROM tbl_empleados_inhabilitados ORDER BY EmpFechaInhabilitacion DESC")->fetchAll(PDO::FETCH_ASSOC);
             return $this->rows;
         } catch (PDOException $e) {
-            return "Error al obtener todos los proveedores";
+            return "Error al obtener todos los usuarios";
+        }
+    }
+
+    public function buscarInhabilitados () {
+        try {
+            return $this->connection->query("SELECT * FROM tbl_empleados_inhabilitados ORDER BY EmpFechaInhabilitacion DESC")->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            return "Error al obtener todos los usuarios inhabilitados";
         }
     }
 

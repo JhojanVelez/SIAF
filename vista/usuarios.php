@@ -22,7 +22,13 @@
         <section class="usuarios__container-filter container-filter box-shadow">
             <div class="usuarios__filtro filtro">
                 <h2 class="usuarios__filtro-titulo filtro-title">Filtros de busqueda</h2>
-                <form class="usuarios__filtro-form filtro-form" action="">
+                <form 
+                id="usuarios__filtro-form"
+                class="usuarios__filtro-form filtro-form" 
+                action="<?php echo URL_RAIZ ?>usuarios/generarReporte" 
+                method="POST" 
+                target="_BLANK"
+                >
                     <section class="usuarios__filtro-input-container">
                         <label class="usuarios__filtro-input-label filtro-label" for="usuario-id">Por el documento de identidad</label>
                         <input 
@@ -64,7 +70,12 @@
                     <div class="usuarios__filtro-gen-repo-img filtro-gen-repo-img">
                         <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
                     </div>
-                    <a class="usuarios__filtro-subtitulo-reporte filtro-subtitulo-reporte" href="">Generar reporte</a>
+                    <input 
+                    class="usuarios__filtro-subtitulo-reporte filtro-subtitulo-reporte" 
+                    type="submit" 
+                    value="Generar Reporte" 
+                    form="usuarios__filtro-form"
+                    >
                 </div>
             </div>
         </section>
@@ -769,7 +780,13 @@
                         <img src="<?php echo(URL_RAIZ); ?>public/imagenes/reportes-icono.svg" alt="">
                     </div>
                     <div class="usuarios__modal-usuarios-inhabilitados-gen-repo-container-text">
-                        <a class="filtro-subtitulo-reporte" href="">Generar Reporte</a>
+                        <a 
+                        target="_BLANK"
+                        class="filtro-subtitulo-reporte" 
+                        href="<?php echo(URL_RAIZ); ?>usuarios/generarReporteInhabilitados"
+                        >
+                        Generar Reporte
+                    </a>
                     </div>
                 </div>
                 <section class="usuarios__modal-usuarios-inhabilitados-table-container container-table">
