@@ -1,8 +1,8 @@
 <?php
 
-class VentasRegistrarControlador {
-    function __construct () {
-        require_once("vista/ventas-registrar.php");
+class VentasRegistrarControlador extends Controlador{
+    function __construct ($url) {
+        $this->controladorMetodoParametro = $url;
     }
 }
 

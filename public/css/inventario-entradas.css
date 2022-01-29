@@ -132,6 +132,7 @@
 
 
 .entradas__boton-agregar-txt {
+    word-break: normal;
     text-align: left;
     background-color: var(--color-nav-background);
     border-radius: var(--border-card-radius);
