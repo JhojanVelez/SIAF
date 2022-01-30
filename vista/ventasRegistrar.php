@@ -170,34 +170,47 @@
                     </div>
                 </section>
 
-                <section class="registrar-ventas__modal-lista-filtro-productos-table-container container-table">
-                    <table class="registrar-ventas__modal-lista-filtro-productos__table table">
+                <section class="registrar-ventas__modal-lista-filtro-productos-table-container container-table box-shadow">
+                    <table class="registrar-ventas__modal-lista-filtro-productos__table registrar-ventas__table table">
                         <thead class="table-thead">
                             <tr class="table-tr">
                                 <td class="table-td">Codigo de Barras</td>
                                 <td class="table-td">Descripcion</td>
                                 <td class="table-td">Ubicacion Fisica</td>
+                                <td class="table-td">Stock</td>
                                 <td class="table-td">Presentacion</td>
                                 <td class="table-td">Unidad de Medida</td>
                                 <td class="table-td">Precio de Venta</td>
                                 <td class="table-td">Laboratorio</td>
-                                <td class="table-td">Registro INVIMA</td>
-                                <td class="table-td">NIT Proveedor</td>
                                 <td class="table-td">Proveedor</td>
                             </tr>
                         </thead>
                         <tbody>
                             <?php foreach($this->data['infoProductos'] as $key => $value): ?>
-                                <tr data-pro-cod-barras=<?php echo $value["ProCodBarras"] ?>>
+                                <tr 
+                                class="registrar-ventas__table-tboby-tr"
+                                data-pro-cod-barras=<?php echo $value["ProCodBarras"] ?>>
                                     <td><?php echo $value["ProCodBarras"] ?></td>
                                     <td><?php echo $value["ProDescripcion"] ?></td>
                                     <td><?php echo $value["ProUbicacionFisica"] ?></td>
+                                    <td 
+                                    class="
+                                        <?php
+                                            if($value["InvStock"] <= 0) {
+                                                echo("registrar-ventas__table-stock-red");
+                                            } else if ($value["InvStock"] > 0 && $value["InvStock"] <= 10) {
+                                                echo("registrar-ventas__table-stock-orange");
+                                            } else {
+                                                echo("registrar-ventas__table-stock-green");
+                                            }
+                                        ?>
+                                    ">
+                                    <?php echo $value["InvStock"] ?>
+                                    </td>
                                     <td><?php echo $value["ProPresentacion"] ?></td>
                                     <td><?php echo $value["ProUnidadMedida"] ?></td>
                                     <td><?php echo $value["ProPrecioVenta"] ?></td>
                                     <td><?php echo $value["ProLaboratorio"] ?></td>
-                                    <td><?php echo $value["ProRegSanInvima"] ?></td>
-                                    <td><?php echo $value["tbl_proveedores_ProNIT"] ?></td>
                                     <td><?php echo $value["ProNombre"] ?></td>
                                 </tr>
                             <?php endforeach;?>
@@ -341,5 +354,6 @@
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_ver_modal_productos.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_cancelar_venta.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_confirmar_venta.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_pintar_red_orange_green.js"></script>
 </body>
 </html>

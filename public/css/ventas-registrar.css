@@ -218,6 +218,38 @@
     margin-bottom: 1rem;
 }
 
+.registrar-ventas__table-tboby-tr:hover {
+    background-color: initial;
+    color: initial;
+    cursor: pointer;
+}
+
+.registrar-ventas__table .registrar-ventas__table-stock-red {
+    background-color: rgb(160, 0, 0);
+}
+.registrar-ventas__table .registrar-ventas__table-stock-green {
+    background-color: rgb(0, 146, 0);
+}
+.registrar-ventas__table .registrar-ventas__table-stock-orange {
+    background-color: rgb(204, 133, 0);
+}
+
+td.registrar-ventas__table-stock-red, 
+td.registrar-ventas__table-stock-green, 
+td.registrar-ventas__table-stock-orange {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    color: white;
+    padding: 0;
+}
+
+.registrar-ventas__table tr.registrar-ventas__table-stock-red td, 
+.registrar-ventas__table tr.registrar-ventas__table-stock-green td, 
+.registrar-ventas__table tr.registrar-ventas__table-stock-orange td {
+    color: white;
+}
+
 /*--------- Estos son los estilos para poder cancelar una venta ---------------*/
 
 .registrar-ventas__modal-cancelar-venta {
