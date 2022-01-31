@@ -39,11 +39,11 @@
                         <div class="registrar-ventas__lista-producto-precios">
                             <section class="registrar-ventas__lista-producto-precio">
                                 <h4>PRECIO UNIDAD</h4>
-                                <p> <strong>$0000</strong></p>
+                                <p> <strong class="registrar-ventas__lista-producto-data" >$0000</strong></p>
                             </section>
                             <section class="registrar-ventas__lista-producto-precio">
                                 <h4>PRECIO TOTAL</h4>
-                                <p><strong>$0000</strong></p>
+                                <p><strong class="registrar-ventas__lista-producto-data" >$0000</strong></p>
                             </section>
                         </div>
                         <div class="registrar-ventas__lista-producto-botones contenedor-objetos__objeto-botones">
@@ -57,11 +57,11 @@
             <div class="registrar-ventas__lista-productos-totales">
                 <section class="registrar-ventas__total">
                     <h3>Cantidad Total</h3>
-                    <p>58</p>
+                    <p class="registrar-ventas__lista-productos-totales-data" >0</p>
                 </section>
                 <section class="registrar-ventas__total">
                     <h3>Precio Total</h3>
-                    <p>$ 56000</p>
+                    <p class="registrar-ventas__lista-productos-totales-data" >$0</p>
                 </section>
             </div>
         </section>
@@ -241,17 +241,29 @@
                 <form class="registrar-ventas__modal-confirmar-venta-form dialog-main-content">
                     <div class="registrar-ventas__modal-confirmar-venta-form-info-venta">
                         <h3 class="registrar-ventas__modal-confirmar-venta-item-title">Numero de documento del cliente</h3>
-                        <input class="registrar-ventas__modal-confirmar-venta-item" type="text" placeholder="Documento">
+                        <input 
+                        name="docCliente" 
+                        class="registrar-ventas__modal-confirmar-venta-item" 
+                        type="text"
+                        >
                         <h3 class="registrar-ventas__modal-confirmar-venta-item-title">Forma de pago</h3>
-                        <select class="registrar-ventas__modal-confirmar-venta-item">
-                            <option value="">Forma de pago</option>
+                        <select 
+                        name="formaPago" 
+                        class="registrar-ventas__modal-confirmar-venta-item"
+                        >
+                            <option value="EFE">Efectivo</option>
+                            <option value="TAR">Tarjeta de crédito o débito</option>
                         </select>
                     </div>
                     <div class="registrar-ventas__modal-confirmar-venta-form-info-precios">
                         <h3 class="registrar-ventas__modal-confirmar-venta-item-title">Total a Pagar</h3>
                         <p class="registrar-ventas__modal-confirmar-venta-item registrar-ventas__modal-confirmar-venta-item--total">$ 56000 Pesos</p>
                         <h3 class="registrar-ventas__modal-confirmar-venta-item-title">Recibe</h3>
-                        <input class="registrar-ventas__modal-confirmar-venta-item" type="text" >
+                        <input 
+                        name="recibe" 
+                        class="registrar-ventas__modal-confirmar-venta-item" 
+                        type="number" 
+                        >
                         <h3 class="registrar-ventas__modal-confirmar-venta-item-title">Cambio</h3>
                         <p class="registrar-ventas__modal-confirmar-venta-item">$0 Pesos</p>
                     </div>
@@ -350,10 +362,10 @@
         independientemente de si esta en una funcion anonima autoejecutable */
         var URL_RAIZ = "<?php echo URL_RAIZ ?>"
     </script>
-    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_agregar_productos.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_agregar_productos.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_ver_modal_productos.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_cancelar_venta.js"></script>
-    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_confirmar_venta.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_confirmar_venta.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_pintar_red_orange_green.js"></script>
 </body>
 </html>
