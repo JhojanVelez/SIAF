@@ -1,9 +1,15 @@
 import {buscarPorId} from '../../ajax/buscarPorId.js'
 
-const infoProductos = {};
-
-let precioTotal = 0,
-    cantidadTotal = 0;
+const infoVenta = {
+    infoProductos : {},
+    docCliente : 0,
+    docVendedor : "",
+    cantidadTotal : 0,
+    precioTotal : 0,
+    recibe : 0,
+    cambio : 0,
+    formaPago : ""
+};
 
 (function(){
     const d = document,
@@ -15,7 +21,8 @@ let precioTotal = 0,
         $contenedorTotales = d.querySelector(".registrar-ventas__lista-productos-totales"),
         $fragmento = d.createDocumentFragment();
 
-        let idProductoSeleccionado;
+
+    let idProductoSeleccionado;
 
     d.addEventListener("submit", e => {
         $contenedorListaProductos.innerHTML = "";
@@ -23,13 +30,15 @@ let precioTotal = 0,
             e.preventDefault();
 
             idProductoSeleccionado = $formularioAgregar.codigoBarrasProducto.value;
-            precioTotal = 0;
-            cantidadTotal = 0;
+            
+            infoVenta.precioTotal = 0;
+            infoVenta.cantidadTotal = 0;
+        
 
             buscarPorId(idProductoSeleccionado,"ventasRegistrar",URL_RAIZ)
             .then((res)=> {
                 // console.log(res)
-                infoProductos[idProductoSeleccionado] = 
+                infoVenta.infoProductos[idProductoSeleccionado] = 
                 {
                     nombre : $formularioAgregar.nombreProducto.value,
                     cantidad : parseInt($formularioAgregar.cantidadProducto.value),
@@ -37,18 +46,18 @@ let precioTotal = 0,
                     precioTotal : 0
                 };
 
-                infoProductos[idProductoSeleccionado].precioTotal = infoProductos[idProductoSeleccionado].cantidad * infoProductos[idProductoSeleccionado].precioUnidad
+                infoVenta.infoProductos[idProductoSeleccionado].precioTotal = infoVenta.infoProductos[idProductoSeleccionado].cantidad * infoVenta.infoProductos[idProductoSeleccionado].precioUnidad
 
                 
-                for(let key in infoProductos) {
+                for(let key in infoVenta.infoProductos) {
                     $templateProducto.querySelectorAll(".registrar-ventas__lista-producto-data")[0].innerHTML = key
-                    $templateProducto.querySelectorAll(".registrar-ventas__lista-producto-data")[1].innerHTML = infoProductos[key]["nombre"]
-                    $templateProducto.querySelectorAll(".registrar-ventas__lista-producto-data")[2].innerHTML = infoProductos[key]["cantidad"]
-                    $templateProducto.querySelectorAll(".registrar-ventas__lista-producto-data")[3].innerHTML = "$"+infoProductos[key]["precioUnidad"]
-                    $templateProducto.querySelectorAll(".registrar-ventas__lista-producto-data")[4].innerHTML = "$"+infoProductos[key]["precioTotal"]
+                    $templateProducto.querySelectorAll(".registrar-ventas__lista-producto-data")[1].innerHTML = infoVenta.infoProductos[key]["nombre"]
+                    $templateProducto.querySelectorAll(".registrar-ventas__lista-producto-data")[2].innerHTML = infoVenta.infoProductos[key]["cantidad"]
+                    $templateProducto.querySelectorAll(".registrar-ventas__lista-producto-data")[3].innerHTML = "$"+infoVenta.infoProductos[key]["precioUnidad"]
+                    $templateProducto.querySelectorAll(".registrar-ventas__lista-producto-data")[4].innerHTML = "$"+infoVenta.infoProductos[key]["precioTotal"]
 
-                    precioTotal += infoProductos[key]["precioTotal"];
-                    cantidadTotal += infoProductos[key]["cantidad"];
+                    infoVenta.precioTotal += infoVenta.infoProductos[key]["precioTotal"];
+                    infoVenta.cantidadTotal += infoVenta.infoProductos[key]["cantidad"];
                     
                     let $cloneTemplateProducto =  d.importNode($templateProducto,true);
                     
@@ -57,8 +66,8 @@ let precioTotal = 0,
 
                 $contenedorListaProductos.append($fragmento);
                 
-                $contenedorTotales.querySelectorAll(".registrar-ventas__lista-productos-totales-data")[0].innerHTML = "$"+cantidadTotal
-                $contenedorTotales.querySelectorAll(".registrar-ventas__lista-productos-totales-data")[1].innerHTML = "$"+precioTotal
+                $contenedorTotales.querySelectorAll(".registrar-ventas__lista-productos-totales-data")[0].innerHTML = "$"+infoVenta.cantidadTotal
+                $contenedorTotales.querySelectorAll(".registrar-ventas__lista-productos-totales-data")[1].innerHTML = "$"+infoVenta.precioTotal
                 
             });
         }
@@ -109,4 +118,4 @@ let precioTotal = 0,
     })
 })();
 
-export {infoProductos,precioTotal,cantidadTotal};
+export {infoVenta};

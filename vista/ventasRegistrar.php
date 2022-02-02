@@ -251,8 +251,9 @@
                         name="formaPago" 
                         class="registrar-ventas__modal-confirmar-venta-item"
                         >
-                            <option value="EFE">Efectivo</option>
-                            <option value="TAR">Tarjeta de crédito o débito</option>
+                            <option value="EFECTIVO">Efectivo</option>
+                            <option value="TARJETA DEBITO">Tarjeta de crédito</option>
+                            <option value="TARJETA CREDITO">Tarjeta de débito</option>
                         </select>
                     </div>
                     <div class="registrar-ventas__modal-confirmar-venta-form-info-precios">
