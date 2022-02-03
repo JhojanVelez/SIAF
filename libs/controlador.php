@@ -34,7 +34,9 @@ class Controlador {
 
     public function buscarPorId ($id = null) {
         $this->data = $this->instanciaModelo->buscarPorId(htmlentities(addslashes($id)));
-        echo(json_encode($this->data[0]));
+        echo(isset($this->data[0])
+            ?json_encode($this->data[0])
+            :json_encode(array("records"=>0)));
     }
 
     public function eliminar($id = "") {

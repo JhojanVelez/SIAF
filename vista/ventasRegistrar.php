@@ -239,35 +239,57 @@
             <dialog class="registrar-ventas__modal-confirmar-venta">
                 <h2 class="registrar-ventas__modal-confirmar-venta-title dialog-title">Informaci&oacute;n adicional</h2>
                 <form class="registrar-ventas__modal-confirmar-venta-form dialog-main-content">
-                    <div class="registrar-ventas__modal-confirmar-venta-form-info-venta">
-                        <h3 class="registrar-ventas__modal-confirmar-venta-item-title">Numero de documento del cliente</h3>
-                        <input 
-                        name="docCliente" 
-                        class="registrar-ventas__modal-confirmar-venta-item" 
-                        type="text"
-                        >
-                        <h3 class="registrar-ventas__modal-confirmar-venta-item-title">Forma de pago</h3>
-                        <select 
-                        name="formaPago" 
-                        class="registrar-ventas__modal-confirmar-venta-item"
-                        >
-                            <option value="EFECTIVO">Efectivo</option>
-                            <option value="TARJETA DEBITO">Tarjeta de crédito</option>
-                            <option value="TARJETA CREDITO">Tarjeta de débito</option>
-                        </select>
-                    </div>
-                    <div class="registrar-ventas__modal-confirmar-venta-form-info-precios">
-                        <h3 class="registrar-ventas__modal-confirmar-venta-item-title">Total a Pagar</h3>
-                        <p class="registrar-ventas__modal-confirmar-venta-item registrar-ventas__modal-confirmar-venta-item--total">$ 56000 Pesos</p>
-                        <h3 class="registrar-ventas__modal-confirmar-venta-item-title">Recibe</h3>
-                        <input 
-                        name="recibe" 
-                        class="registrar-ventas__modal-confirmar-venta-item" 
-                        type="number" 
-                        >
-                        <h3 class="registrar-ventas__modal-confirmar-venta-item-title">Cambio</h3>
-                        <p class="registrar-ventas__modal-confirmar-venta-item">$0 Pesos</p>
-                    </div>
+                
+                        <section class="dialog-main-content__input-container">
+                            <label class="dialog-main-content__label">Documento del Cliente</label>
+                            <input 
+                            name="docCliente" 
+                            class="registrar-ventas__modal-confirmar-venta-item" 
+                            type="text"
+                            autocomplete="off"
+                            >
+                        </section>
+
+                        <section class="dialog-main-content__input-container modal-confirmar-venta-form-container-nombre-cliente box-shadow">
+                            <label class="dialog-main-content__label">Nombre del Cliente</label>
+                            <div class="modal-confirmar-venta-form-container-nombre-cliente__no-disponible">
+                                <p>Cliente NO registrado ¿Desea registrarlo o pasarlo como anonimo?</p>
+                                <button class="registrar-ventas__modal-confirmar-venta-form-btn-registrar-cliente dialog-process-result__btn boton">Registrar</button>
+                                <button class="registrar-ventas__modal-confirmar-venta-form-btn-registrar-anonimo dialog-process-result__btn boton">Anonimo</button>
+                            </div>
+                            <p class="modal-confirmar-venta-form-container-nombre-cliente__disponible">JHOJAN SMITH VELEZ GOMEZ</p>
+                        </section>
+                        
+                        <section class="dialog-main-content__input-container">
+                            <label class="dialog-main-content__label">Total a Pagar</label>
+                            <p class="registrar-ventas__modal-confirmar-venta-item registrar-ventas__modal-confirmar-venta-item--total">$ 56000 Pesos</p>
+                        </section>
+
+                        <section class="dialog-main-content__input-container">
+                            <label class="dialog-main-content__label">Forma de pago</label>
+                            <select 
+                            name="formaPago" 
+                            class="registrar-ventas__modal-confirmar-venta-item"
+                            >
+                                <option value="EFECTIVO">Efectivo</option>
+                                <option value="TARJETA DEBITO">Tarjeta de crédito</option>
+                                <option value="TARJETA CREDITO">Tarjeta de débito</option>
+                            </select>
+                        </section>
+
+                        <section class="dialog-main-content__input-container">
+                            <label class="dialog-main-content__label">Recibe</label>
+                            <input 
+                            name="recibe" 
+                            class="registrar-ventas__modal-confirmar-venta-item" 
+                            type="number" 
+                            >
+                        </section>
+
+                        <section class="dialog-main-content__input-container">
+                            <label class="dialog-main-content__label">Cambio</label>
+                            <p class="registrar-ventas__modal-confirmar-venta-item">$0 Pesos</p>
+                        </section>
                 </form>
                 <div class="registrar-ventas__modal-confirmar-venta-btns-container dialog-container-bts">
                     <button class="registrar-ventas__modal-confirmar-venta-btn-cancelar dialog-btn boton">Cancelar</button>

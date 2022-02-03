@@ -9,13 +9,13 @@ import {agregar} from '../../ajax/agregar.js'
     $modal_4 = $transparentBackgroundModal.querySelector(".registrar-ventas__modal-agregar-cliente-agregacion-fallo"),
     $modal_confirmar_venta = $transparentBackgroundModal.querySelector(".registrar-ventas__modal-confirmar-venta");
 
-    let inputDocCliente_modalConfirmarVenta = $modal_confirmar_venta.querySelector("form").docCliente;
+    let $formulario_modalConfirmarVenta = $modal_confirmar_venta.querySelector("form");
+    let $inputDocCliente_modalConfirmarVenta = $formulario_modalConfirmarVenta.docCliente;
 
     let $formulario = $modal_1.querySelector("form"),
     $inputs = Object.values($formulario.querySelectorAll("[data-input]")),
     $itemsConfirmacion = Object.values($modal_2.querySelectorAll(".registrar-ventas__modal-agregar-cliente-info-item-confirmacion"));
     
-
     let validador;
 
     /* Patrones para validacion de Email */
@@ -24,7 +24,7 @@ import {agregar} from '../../ajax/agregar.js'
     
     d.addEventListener("click", e => {
         if(e.target.matches(".registrar-ventas__modal-venta-fallo-por-cliente-btn-registrar")) {
-            $formulario.documento.value = inputDocCliente_modalConfirmarVenta.value;
+            $formulario.documento.value = $inputDocCliente_modalConfirmarVenta.value;
             $modal_fallo_por_cliente.toggleAttribute("open");
             $modal_1.toggleAttribute("open");
             $modal_1.querySelector("#nombreCliente").focus()
@@ -87,11 +87,13 @@ import {agregar} from '../../ajax/agregar.js'
         if(e.target.matches(".registrar-ventas__modal-agregar-cliente-agregacion-exitosa-btn")) {
             $modal_3.toggleAttribute("open");
             $modal_confirmar_venta.toggleAttribute("open");
+            $inputDocCliente_modalConfirmarVenta.focus();
         }
 
         if(e.target.matches(".registrar-ventas__modal-agregar-cliente-agregacion-fallo-btn")) {
             $modal_4.toggleAttribute("open");
             $modal_confirmar_venta.toggleAttribute("open");
+            $inputDocCliente_modalConfirmarVenta.focus();
         }
     })
 
@@ -103,7 +105,6 @@ import {agregar} from '../../ajax/agregar.js'
 
     function validarCorreo () {
         let regex = new RegExp(patronPersonal,"g");
-        console.log($inputs)
         if(regex.test($inputs[1].value)) {
             $inputs[1].classList.remove("input-invalido");
             return true;

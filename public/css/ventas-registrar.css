@@ -262,17 +262,87 @@ td.registrar-ventas__table-stock-orange {
 }
 /*--------- Estos son los estilos para de los modals para poder confimar una venta ---------------*/
 
+.registrar-ventas__modal-confirmar-venta-form {
+    grid-template-rows: repeat(4,minmax(min-content,max-content));
+    grid-gap: 1rem 3rem;
+    grid-template-areas:"doc pre"
+                        "nom for"
+                        "nom rec"
+                        "nom cam";
+}
+
 .registrar-ventas__modal-confirmar-venta-title {
     margin-bottom: 3rem;
 }
 
-.registrar-ventas__modal-confirmar-venta-form {
+.registrar-ventas__modal-confirmar-venta-form .dialog-main-content__input-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-bottom: 2rem;
 }
 .registrar-ventas__modal-confirmar-venta-item-title{
     margin-bottom: .5rem;
+}
+
+.registrar-ventas__modal-confirmar-venta-form .dialog-main-content__input-container:nth-child(1) {
+    grid-area: doc;
+}
+.registrar-ventas__modal-confirmar-venta-form .dialog-main-content__input-container:nth-child(2) {
+    grid-area: nom;
+}
+.registrar-ventas__modal-confirmar-venta-form .dialog-main-content__input-container:nth-child(2) {
+    background-color: var(--color-nav-background);
+    color: var(--color-button-text);
+    padding: 1rem;
+}
+.registrar-ventas__modal-confirmar-venta-form 
+    .dialog-main-content__input-container:nth-child(2) 
+        .dialog-main-content__label 
+{
+    color: var(--color-button-text);
+    font-size: 2rem;
+}
+
+.modal-confirmar-venta-form-container-nombre-cliente__no-disponible,
+.modal-confirmar-venta-form-container-nombre-cliente__disponible {
+    display: none;
+}
+
+.modal-confirmar-venta-form-container-nombre-cliente__no-disponible.open,
+.modal-confirmar-venta-form-container-nombre-cliente__disponible.open {
+    display: block;
+}
+
+.registrar-ventas__modal-confirmar-venta-form 
+    .modal-confirmar-venta-form-container-nombre-cliente__no-disponible 
+        p 
+{
+    margin-bottom: 1.5rem;
+}
+.registrar-ventas__modal-confirmar-venta-form 
+    .modal-confirmar-venta-form-container-nombre-cliente__no-disponible 
+        .boton
+{
+    width: max-content;
+}
+.registrar-ventas__modal-confirmar-venta-form 
+    .dialog-main-content__input-container:nth-child(2) 
+        .boton 
+{
+    background-color: var(--color-button-text);
+    color: var(--color-nav-background);
+}
+.registrar-ventas__modal-confirmar-venta-form .dialog-main-content__input-container:nth-child(3) {
+    grid-area: pre;
+}
+.registrar-ventas__modal-confirmar-venta-form .dialog-main-content__input-container:nth-child(4) {
+    grid-area: for;
+}
+.registrar-ventas__modal-confirmar-venta-form .dialog-main-content__input-container:nth-child(5) {
+    grid-area: rec;
+}
+.registrar-ventas__modal-confirmar-venta-form .dialog-main-content__input-container:nth-child(6) {
+    grid-area: cam;
 }
 
 .registrar-ventas__modal-confirmar-venta-item--total {
@@ -284,7 +354,7 @@ td.registrar-ventas__table-stock-orange {
 
 .registrar-ventas__modal-confirmar-venta {
     min-width: 800px;
-    max-width: 900px;
+    max-width: 1000px;
 }
 
 .registrar-ventas__modal-cancelar-venta-text {
