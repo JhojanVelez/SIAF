@@ -280,12 +280,18 @@
                 <p>Has registrado tu venta exitosamente</p>
                 <button class="registrar-ventas__modal-venta-exitosa-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
+
+            <dialog class="registrar-ventas__modal-venta-fallo dialog-process-result">
+                <h2>Algo salio mal</h2>
+                <p>No se pudo registrar la venta</p>
+                <button class="registrar-ventas__modal-venta-fallo-btn dialog-process-result__btn boton" >Ok</button>
+            </dialog>
             
             <dialog class="registrar-ventas__modal-venta-fallo-por-cliente dialog-process-result">
                 <h2>¡Cliente no registrado!</h2>
-                <p>Desea registrarlo o pasarlo como anonimo</p>
-                <button class="registrar-ventas__modal-venta-fallo-por-cliente-btn-registrar dialog-process-result__btn boton">Anonimo</button>
-                <button class="registrar-ventas__modal-venta-fallo-por-cliente-btn-anonimo dialog-process-result__btn boton">Registrar</button>
+                <p>¿Desea registrarlo o pasarlo como anonimo?</p>
+                <button class="registrar-ventas__modal-venta-fallo-por-cliente-btn-registrar dialog-process-result__btn boton">Registrar</button>
+                <button class="registrar-ventas__modal-venta-fallo-por-cliente-btn-anonimo dialog-process-result__btn boton">Anonimo</button>
             </dialog>
 
 
@@ -293,12 +299,85 @@
             <dialog class="registrar-ventas__modal-agregar-cliente">
                 <h2 class="registrar-ventas__modal-agregar-cliente-title dialog-title">Registra Nuevos Clientes</h2>
                 <form class="registrar-ventas__modal-agregar-cliente-form dialog-main-content">
-                    <input type="text" placeholder="Numero de documento del cliente">
-                    <input type="text" placeholder="Correo">
-                    <input type="text" placeholder="Nombres">
-                    <input type="text" placeholder="Direcci&oacute;n">
-                    <input type="text" placeholder="Apellidos">
-                    <input type="text" placeholder="Telefono">
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Documento del Cliente</label>
+                        <input 
+                        name="documento"
+                        type="text"
+                        maxlength="15"
+                        title = "Debe tener una maxima longitud de 15 caracteres"
+                        autocomplete="off"
+                        tabindex="1"
+                        data-input
+                        data-CliDocIdentidad
+                        >
+                    </section>
+
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Correo Electronico del Cliente</label>
+                        <input
+                        name="correo" 
+                        type="text"
+                        title="Ingresa el correo electronico del cliente: ejemplo@gmail.com"
+                        autocomplete="off"
+                        tabindex="4"
+                        data-input
+                        data-CliCorreo
+                        >
+                    </section>
+                    
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Nombre/s del Cliente</label>
+                        <input
+                        id="nombreCliente"
+                        name="nombre" 
+                        type="text"
+                        title="Ingresa el nombre del cliente"
+                        autocomplete="off"
+                        tabindex="2"
+                        data-input
+                        data-CliNombre
+                        >
+                    </section>
+                    
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Direccion del Cliente</label>
+                        <input
+                        name="direccion" 
+                        type="text"
+                        title="Ingresa la direccion del cliente"
+                        autocomplete="off"
+                        tabindex="5"
+                        data-input
+                        data-CliDireccion
+                        >
+                    </section>
+                    
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Apellido/s del Cliente</label>
+                        <input
+                        name="apellido" 
+                        type="text"
+                        title="Ingresa el apellido del cliente"
+                        autocomplete="off"
+                        tabindex="3"
+                        data-input
+                        data-CliApellido
+                        >
+                    </section>
+                    
+                    <section class="dialog-main-content__input-container">
+                        <label class="dialog-main-content__label">Telefono del Cliente</label>
+                        <input
+                        name="telefono"
+                        type="text"
+                        title="Ingresa el numero telefonico del cliente"
+                        autocomplete="off"
+                        tabindex="6"
+                        data-input
+                        data-CliTelefono
+                        >
+                    </section>
                 </form>
                 <div class="registrar-ventas__modal-agregar-cliente-btns-container dialog-container-bts">
                     <button class="registrar-ventas__modal-agregar-cliente-btn-cancelar boton dialog-btn">Cancelar</button>
@@ -313,28 +392,28 @@
                     Recuerda revisar detenidamente la informacion del cliente que estas registrando.
                 </p>
                 <div class="registrar-ventas__modal-agregar-cliente-info-confirmacion dialog-main-content">
-                    <section class="registrar-ventas__modal-agregar-cliente-info-item-confirmacion">
-                        <h3>DOCUMENTO DEL CLIENTE</h3>
+                    <section class="registrar-ventas__modal-agregar-cliente-info-item-confirmacion" data-CliDocIdentidad>
+                        <h3 class="dialog-main-content__label">Documento del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="registrar-ventas__modal-agregar-cliente-info-item-confirmacion">
-                        <h3>CORREO</h3>
+                    <section class="registrar-ventas__modal-agregar-cliente-info-item-confirmacion" data-CliCorreo>
+                        <h3 class="dialog-main-content__label">Correo Electronico del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="registrar-ventas__modal-agregar-cliente-info-item-confirmacion">
-                        <h3>NOMBRE/S DEL CLIENTE</h3>
+                    <section class="registrar-ventas__modal-agregar-cliente-info-item-confirmacion" data-CliNombre>
+                        <h3 class="dialog-main-content__label">Nombre/s del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="registrar-ventas__modal-agregar-cliente-info-item-confirmacion">
-                        <h3>DIRECCI&Oacute;N</h3>
+                    <section class="registrar-ventas__modal-agregar-cliente-info-item-confirmacion" data-CliDireccion>
+                        <h3 class="dialog-main-content__label">Direccion del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="registrar-ventas__modal-agregar-cliente-info-item-confirmacion">
-                        <h3>APELLIDO/S DEL CLIENTE</h3>
+                    <section class="registrar-ventas__modal-agregar-cliente-info-item-confirmacion" data-CliApellido>
+                        <h3 class="dialog-main-content__label">Apellido/s del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="registrar-ventas__modal-agregar-cliente-info-item-confirmacion">
-                        <h3>TELEFONO</h3>
+                    <section class="registrar-ventas__modal-agregar-cliente-info-item-confirmacion" data-CliTelefono>
+                        <h3 class="dialog-main-content__label">Telefono del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                 </div>
@@ -344,16 +423,16 @@
                 </div>
             </dialog>
 
-            <dialog class="registrar-ventas__modal-agregacion-exitosa dialog-process-result">
+            <dialog class="registrar-ventas__modal-agregar-cliente-agregacion-exitosa dialog-process-result">
                 <h2>¡Exelente!</h2>
                 <p>Has registrado un nuevo cliente exitosamente</p>
-                <button class="registrar-ventas__modal-agregacion-exitosa-btn dialog-process-result__btn boton" >Ok</button>
+                <button class="registrar-ventas__modal-agregar-cliente-agregacion-exitosa-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
             
-            <dialog class="registrar-ventas__modal-agregacion-fallo dialog-process-result">
+            <dialog class="registrar-ventas__modal-agregar-cliente-agregacion-fallo dialog-process-result">
                 <h2>¡Algo salio mal!</h2>
                 <p>Este cliente no pudo ser registrado, porque posiblemente ya esta registrado en el sistema</p>
-                <button class="registrar-ventas__modal-agregacion-fallo-btn dialog-process-result__btn boton" >Ok</button>
+                <button class="registrar-ventas__modal-agregar-cliente-agregacion-fallo-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
         </section>
     </main>
@@ -367,6 +446,8 @@
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_ver_modal_productos.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_cancelar_venta.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_confirmar_venta.js" type="module"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_agregar_cliente.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_pintar_red_orange_green.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/cualquier_modulo_pintar_borde_derecho_input.js"></script>
 </body>
 </html>

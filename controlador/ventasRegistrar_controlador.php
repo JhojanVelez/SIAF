@@ -24,7 +24,9 @@ class VentasRegistrarControlador extends Controlador{
         $this->instanciaModelo->setCambio($infoVenta["cambio"]);
         $this->instanciaModelo->setFormaPago($infoVenta["formaPago"]);
 
-        $this->instanciaModelo->registrar();
+        $this->result = $this->instanciaModelo->registrar();
+
+        print_r(json_encode($this->result));
     }
 }
 

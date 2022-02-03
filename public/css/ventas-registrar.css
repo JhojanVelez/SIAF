@@ -298,8 +298,10 @@ td.registrar-ventas__table-stock-orange {
 
 .registrar-ventas__modal-agregar-cliente {
     min-width: 700px;
-    max-width: 800px;
+    max-width: 1000px;
 }
+
+/* estilos al modal de agregar cliente */
 
 .registrar-ventas__modal-agregar-cliente-title {
     margin-bottom: 3rem;
