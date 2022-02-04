@@ -9,7 +9,11 @@ import {agregar} from '../../ajax/agregar.js'
     $modal_2 = $transparentBackgroundModal.querySelector(".registrar-ventas__modal-venta-exitosa"),
     $modal_3 = $transparentBackgroundModal.querySelector(".registrar-ventas__modal-venta-fallo"),
     $modal_4 = $transparentBackgroundModal.querySelector(".registrar-ventas__modal-venta-fallo-por-cliente"),
+    $modal_agregar_cliente = $transparentBackgroundModal.querySelector(".registrar-ventas__modal-agregar-cliente"),
     $itemsModal_1 = $modal_1.querySelectorAll(".registrar-ventas__modal-confirmar-venta-item");
+
+    const $formularioConfirmarVenta = $modal_1.querySelector("form"),
+            $formularioAgregarCliente = $modal_agregar_cliente.querySelector("form");
     
     console.log($itemsModal_1)
     /* Vamos a crear la funcionalidad de buscar por id el cliente e ir mostrando o ocultando la ventana morada */
@@ -69,6 +73,21 @@ import {agregar} from '../../ajax/agregar.js'
 
             $itemsModal_1[0].focus();
         }
+
+        if(e.target.matches(".registrar-ventas__modal-confirmar-venta-form-btn-registrar-cliente")) {
+            e.preventDefault();
+            $modal_1.toggleAttribute("open");
+            $formularioAgregarCliente.documento.value = $formularioConfirmarVenta.docCliente.value;
+            $modal_agregar_cliente.toggleAttribute("open");
+            $formularioAgregarCliente.nombre.focus();
+        }
+        
+        if(e.target.matches(".registrar-ventas__modal-confirmar-venta-form-btn-registrar-anonimo")) {
+            e.preventDefault();
+            $formularioConfirmarVenta.docCliente.value = "ANONIMO"
+            $formularioConfirmarVenta.docCliente.focus();
+        }
+
     })
 
     const buscarCliente = () => {
