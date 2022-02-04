@@ -191,7 +191,7 @@
 }
 
 .registrar-ventas__modal-lista-filtro-productos__table {
-    min-width: 150%;
+    min-width: 120%;
 }
 
 .registrar-ventas__container-filter-lista-productos {
@@ -218,6 +218,38 @@
     margin-bottom: 1rem;
 }
 
+.registrar-ventas__table-tboby-tr:hover {
+    background-color: initial;
+    color: initial;
+    cursor: pointer;
+}
+
+.registrar-ventas__table .registrar-ventas__table-stock-red {
+    background-color: rgb(160, 0, 0);
+}
+.registrar-ventas__table .registrar-ventas__table-stock-green {
+    background-color: rgb(0, 146, 0);
+}
+.registrar-ventas__table .registrar-ventas__table-stock-orange {
+    background-color: rgb(204, 133, 0);
+}
+
+td.registrar-ventas__table-stock-red, 
+td.registrar-ventas__table-stock-green, 
+td.registrar-ventas__table-stock-orange {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    color: white;
+    padding: 0;
+}
+
+.registrar-ventas__table tr.registrar-ventas__table-stock-red td, 
+.registrar-ventas__table tr.registrar-ventas__table-stock-green td, 
+.registrar-ventas__table tr.registrar-ventas__table-stock-orange td {
+    color: white;
+}
+
 /*--------- Estos son los estilos para poder cancelar una venta ---------------*/
 
 .registrar-ventas__modal-cancelar-venta {
@@ -230,17 +262,87 @@
 }
 /*--------- Estos son los estilos para de los modals para poder confimar una venta ---------------*/
 
+.registrar-ventas__modal-confirmar-venta-form {
+    grid-template-rows: repeat(4,minmax(min-content,max-content));
+    grid-gap: 1rem 3rem;
+    grid-template-areas:"doc pre"
+                        "nom for"
+                        "nom rec"
+                        "nom cam";
+}
+
 .registrar-ventas__modal-confirmar-venta-title {
     margin-bottom: 3rem;
 }
 
-.registrar-ventas__modal-confirmar-venta-form {
+.registrar-ventas__modal-confirmar-venta-form .dialog-main-content__input-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-bottom: 2rem;
 }
 .registrar-ventas__modal-confirmar-venta-item-title{
     margin-bottom: .5rem;
+}
+
+.registrar-ventas__modal-confirmar-venta-form .dialog-main-content__input-container:nth-child(1) {
+    grid-area: doc;
+}
+.registrar-ventas__modal-confirmar-venta-form .dialog-main-content__input-container:nth-child(2) {
+    grid-area: nom;
+}
+.registrar-ventas__modal-confirmar-venta-form .dialog-main-content__input-container:nth-child(2) {
+    background-color: var(--color-nav-background);
+    color: var(--color-button-text);
+    padding: 1rem;
+}
+.registrar-ventas__modal-confirmar-venta-form 
+    .dialog-main-content__input-container:nth-child(2) 
+        .dialog-main-content__label 
+{
+    color: var(--color-button-text);
+    font-size: 2rem;
+}
+
+.modal-confirmar-venta-form-container-nombre-cliente__no-disponible,
+.modal-confirmar-venta-form-container-nombre-cliente__disponible {
+    display: none;
+}
+
+.modal-confirmar-venta-form-container-nombre-cliente__no-disponible.open,
+.modal-confirmar-venta-form-container-nombre-cliente__disponible.open {
+    display: block;
+}
+
+.registrar-ventas__modal-confirmar-venta-form 
+    .modal-confirmar-venta-form-container-nombre-cliente__no-disponible 
+        p 
+{
+    margin-bottom: 1.5rem;
+}
+.registrar-ventas__modal-confirmar-venta-form 
+    .modal-confirmar-venta-form-container-nombre-cliente__no-disponible 
+        .boton
+{
+    width: max-content;
+}
+.registrar-ventas__modal-confirmar-venta-form 
+    .dialog-main-content__input-container:nth-child(2) 
+        .boton 
+{
+    background-color: var(--color-button-text);
+    color: var(--color-nav-background);
+}
+.registrar-ventas__modal-confirmar-venta-form .dialog-main-content__input-container:nth-child(3) {
+    grid-area: pre;
+}
+.registrar-ventas__modal-confirmar-venta-form .dialog-main-content__input-container:nth-child(4) {
+    grid-area: for;
+}
+.registrar-ventas__modal-confirmar-venta-form .dialog-main-content__input-container:nth-child(5) {
+    grid-area: rec;
+}
+.registrar-ventas__modal-confirmar-venta-form .dialog-main-content__input-container:nth-child(6) {
+    grid-area: cam;
 }
 
 .registrar-ventas__modal-confirmar-venta-item--total {
@@ -252,7 +354,7 @@
 
 .registrar-ventas__modal-confirmar-venta {
     min-width: 800px;
-    max-width: 900px;
+    max-width: 1000px;
 }
 
 .registrar-ventas__modal-cancelar-venta-text {
@@ -266,8 +368,10 @@
 
 .registrar-ventas__modal-agregar-cliente {
     min-width: 700px;
-    max-width: 800px;
+    max-width: 1000px;
 }
+
+/* estilos al modal de agregar cliente */
 
 .registrar-ventas__modal-agregar-cliente-title {
     margin-bottom: 3rem;

@@ -22,25 +22,60 @@
         <section class="usuarios__container-filter container-filter box-shadow">
             <div class="usuarios__filtro filtro">
                 <h2 class="usuarios__filtro-titulo filtro-title">Filtros de busqueda</h2>
-                <form class="usuarios__filtro-form filtro-form" action="">
+                <form 
+                id="usuarios__filtro-form"
+                class="usuarios__filtro-form filtro-form" 
+                action="<?php echo URL_RAIZ ?>usuarios/generarReporte" 
+                method="POST" 
+                target="_BLANK"
+                >
                     <section class="usuarios__filtro-input-container">
                         <label class="usuarios__filtro-input-label filtro-label" for="usuario-id">Por el documento de identidad</label>
-                        <input type="text" class="usuarios__filtro-usuario-id" id="usuario-id" placeholder="Documento">
+                        <input 
+                        name="documento"
+                        type="text" 
+                        class="usuarios__filtro-usuario-id" 
+                        id="usuario-id" 
+                        placeholder="Documento"
+                        autocomplete="off"
+                        data-input
+                        >
                     </section>
                     <section class="usuarios__filtro-input-container">
                         <label class="usuarios__filtro-input-label filtro-label" for="usuario-nombre">Por su nombre</label>
-                        <input type="text" class="usuarios__filtro-usuario-nombre" id="usuario-nombre" placeholder="Nombre">
+                        <input 
+                        name="nombre"
+                        type="text" 
+                        class="usuarios__filtro-usuario-nombre" 
+                        id="usuario-nombre" 
+                        placeholder="Nombre"
+                        autocomplete="off"
+                        data-input
+                        >
                     </section>
                     <section class="usuarios__filtro-input-container">
-                        <label class="usuarios__filtro-input-label filtro-label" for="usuario-ciudad">Por su apellido</label>
-                        <input type="text" class="usuarios__filtro-usuario-nombre" id="usuario-ciudad" placeholder="Apellido">
+                        <label class="usuarios__filtro-input-label filtro-label" for="usuario-apellido">Por su apellido</label>
+                        <input 
+                        name="apellido"
+                        type="text" 
+                        class="usuarios__filtro-usuario-apellido" 
+                        id="usuario-apellido" 
+                        placeholder="Apellido"
+                        autocomplete="off"
+                        data-input
+                        >
                     </section>
                 </form>
                 <div class="usuarios__filtro-gen-repo filtro-gen-repo">
                     <div class="usuarios__filtro-gen-repo-img filtro-gen-repo-img">
                         <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
                     </div>
-                    <a class="usuarios__filtro-subtitulo-reporte filtro-subtitulo-reporte" href="">Generar reporte</a>
+                    <input 
+                    class="usuarios__filtro-subtitulo-reporte filtro-subtitulo-reporte" 
+                    type="submit" 
+                    value="Generar Reporte" 
+                    form="usuarios__filtro-form"
+                    >
                 </div>
             </div>
         </section>
@@ -106,7 +141,7 @@
                         <div class="usuarios__lista-usuario-botones contenedor-objetos__objeto-botones">
                             <button 
                             class="usuarios__lista-usuario-boton usuarios__lista-usuario-boton-editar contenedor-objetos__objeto-boton boton"
-                            data-doc-empleado = <?php echo $value["EmpDocIdentidad"] ?>
+                            data-doc-usuario = <?php echo $value["EmpDocIdentidad"] ?>
                             >
                                 <div class="usuarios__lista-usuario-boton-img">
                                     <img src="<?php echo(URL_RAIZ); ?>public/imagenes/editar-icono.svg" alt="">
@@ -115,7 +150,7 @@
                             </button>
                             <button 
                             class="usuarios__lista-usuario-boton usuarios__lista-usuario-boton-inhabilitar contenedor-objetos__objeto-boton boton"
-                            data-doc-empleado = <?php echo $value["EmpDocIdentidad"] ?>
+                            data-doc-usuario = <?php echo $value["EmpDocIdentidad"] ?>
                             >
                                 <div class="usuarios__lista-usuario-boton-img">
                                     <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.svg" alt="">
@@ -125,6 +160,80 @@
                         </div>
                     </figure>
                 <?php endforeach; ?>
+
+
+                <!-- 
+                    Este template nos permite imprimir la informacion cuando estamos buscando por atributo
+                    pero en este caso lo hacemos con template para hacer uso de los fragmentos
+                -->
+
+                <template class="usuarios__lista-usuario-template">
+                    <figure class="usuarios__lista-usuario contenedor-objetos__objeto box-shadow">
+                        <div class="usuarios__lista-usuario-img contenedor-objetos__objeto-img">
+                            <img 
+                            src="" 
+                            alt="">
+                        </div>
+                        <div class="usuarios__lista-usuario-info-container">
+                            <section class="usuarios__lista-usuario-info documento">
+                                <h4 class="usuarios__lista-usuario-info-title">DOCUMENTO DE IDENTIDAD</h4>
+                                <p class="usuarios__lista-usuario-data"></p>
+                            </section>
+                            <section class="usuarios__lista-usuario-info nombres">
+                                <h4 class="usuarios__lista-usuario-info-title">NOMBRES</h4>
+                                <p class="usuarios__lista-usuario-data"></p>
+                            </section>
+                            <section class="usuarios__lista-usuario-info apellidos">
+                                <h4 class="usuarios__lista-usuario-info-title">APELLIDOS</h4>
+                                <p class="usuarios__lista-usuario-data"></p>
+                            </section>
+                            <section class="usuarios__lista-usuario-info eps">
+                                <h4 class="usuarios__lista-usuario-info-title">EPS</h4>
+                                <p class="usuarios__lista-usuario-data"></p>
+                            </section>
+                            <section class="usuarios__lista-usuario-info telefono">
+                                <h4 class="usuarios__lista-usuario-info-title">TELEFONO</h4>
+                                <p class="usuarios__lista-usuario-data"></p>
+                            </section>
+                            <section class="usuarios__lista-usuario-info correo">
+                                <h4 class="usuarios__lista-usuario-info-title">CORREO</h4>
+                                <p class="usuarios__lista-usuario-data"></p>
+                            </section>
+                            <section class="usuarios__lista-usuario-info direccion">
+                                <h4 class="usuarios__lista-usuario-info-title">DIRECCION</h4>
+                                <p class="usuarios__lista-usuario-data"></p>
+                            </section>
+                            <section class="usuarios__lista-usuario-info rh">
+                                <h4 class="usuarios__lista-usuario-info-title">RH</h4>
+                                <p class="usuarios__lista-usuario-data"></p>
+                            </section>
+                            <section class="usuarios__lista-usuario-info rol">
+                                <h4 class="usuarios__lista-usuario-info-title">ROL</h4>
+                                <p class="usuarios__lista-usuario-data"></p>
+                            </section>
+                        </div>
+                        <div class="usuarios__lista-usuario-botones contenedor-objetos__objeto-botones">
+                            <button 
+                            class="usuarios__lista-usuario-boton usuarios__lista-usuario-boton-editar contenedor-objetos__objeto-boton boton"
+                            data-doc-usuario
+                            >
+                                <div class="usuarios__lista-usuario-boton-img">
+                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/editar-icono.svg" alt="">
+                                </div>
+                                <span>Editar</span>
+                            </button>
+                            <button 
+                            class="usuarios__lista-usuario-boton usuarios__lista-usuario-boton-inhabilitar contenedor-objetos__objeto-boton boton"
+                            data-doc-usuario
+                            >
+                                <div class="usuarios__lista-usuario-boton-img">
+                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.svg" alt="">
+                                </div>
+                                <span>Inhabilitar</span>
+                            </button>
+                        </div>
+                    </figure>
+                </template>
             </div>
         </section>
 
@@ -184,7 +293,7 @@
                         autocomplete="off" 
                         tabindex="2" 
                         data-input 
-                        data-UsuNombre
+                        data-EmpNombre
                         >
                     </section>
                     <section class="dialog-main-content__input-container usuarios__modal-agregar-usuario-form-item">
@@ -281,6 +390,7 @@
                                     <li>Debe contener como minimo 8 caracteres.</li>
                                     <li>Debe contener por lo menos 1 letra minuscula.</li>
                                     <li>Debe contener por lo menos 1 letra MAYUSCULA.</li>
+                                    <li>Debe contener por lo menos 1 digito del 0 al 9.</li>
                                     <li>Debe contener por lo menos un caracter especial como por ejemplo(! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _` { | } ~ ).</li>
                                 </ul>
                             </div>
@@ -327,7 +437,7 @@
                         <h3 class="dialog-main-content__label">Correo Electronico del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion" data-UsuNombre>
+                    <section class="usuarios__modal-agregar-usuario-info-item-confirmacion" data-EmpNombre>
                         <h3 class="dialog-main-content__label">Nombre/s del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
@@ -389,56 +499,135 @@
                 <form class="usuarios__modal-editar-usuario-form dialog-main-content">
                     <section class="dialog-main-content__input-container usuarios__modal-editar-usuario-form-item">
                         <label class="dialog-main-content__label">Documento del Usuario</label>
-                        <input tabindex="1" data-input type="text">
+                        <input
+                        name="documento"
+                        type="text"
+                        maxlength="15"
+                        id="docUsuario"
+                        title="Debe tener una maxima logitud de 15 caracteres"
+                        autocomplete="off"
+                        tabindex="1" 
+                        data-input 
+                        data-EmpDocIdentidad
+                        >
                     </section>
                     <section class="dialog-main-content__input-container usuarios__modal-editar-usuario-form-item">
                         <label class="dialog-main-content__label">Correo Electronico del Usuario</label>
-                        <input tabindex="5" data-input type="text">
+                        <input
+                        name="correo"
+                        type="text"
+                        title= "Ingresa el correo electronico del proveedor: ejemplo@gmail.com"
+                        autocomplete="off" 
+                        tabindex="5" 
+                        data-input
+                        data-EmpCorreo 
+                        >
                     </section>
                     <section class="dialog-main-content__input-container usuarios__modal-editar-usuario-form-item">
                         <label class="dialog-main-content__label">Nombre/s del Usuario</label>
-                        <input tabindex="2" data-input type="text">
+                        <input
+                        name="nombre"
+                        type="text"
+                        title="Ingresa el nombre del usuario"
+                        autocomplete="off" 
+                        tabindex="2" 
+                        data-input 
+                        data-EmpNombre
+                        >
                     </section>
                     <section class="dialog-main-content__input-container usuarios__modal-editar-usuario-form-item">
                         <label class="dialog-main-content__label">Direccion del Usuario</label>
-                        <input tabindex="6" data-input type="text">
+                        <input
+                        name="direccion"
+                        type="text"
+                        title="Ingresa la direccion del cliente"
+                        autocomplete="off" 
+                        tabindex="6" 
+                        data-input 
+                        data-EmpDireccion
+                        >
                     </section>
                     <section class="dialog-main-content__input-container usuarios__modal-editar-usuario-form-item">
                         <label class="dialog-main-content__label">Apellido/s del Usuario</label>
-                        <input tabindex="3" data-input type="text">
+                        <input
+                        name="apellido"
+                        type="text"
+                        title="Ingresa el apellido del usuario"
+                        autocomplete="off" 
+                        tabindex="3" 
+                        data-input 
+                        data-EmpApellido
+                        >
                     </section>
                     <section class="dialog-main-content__input-container usuarios__modal-editar-usuario-form-item">
                         <label class="dialog-main-content__label">Telefono del Usuario</label>
-                        <input tabindex="7" data-input type="text">
+                        <input
+                        name="telefono"
+                        type="text"
+                        title="Ingresa el numero telefonico del cliente"
+                        autocomplete="off" 
+                        tabindex="7" 
+                        data-input 
+                        data-EmpTelefono
+                        >
                     </section>
                     <section class="dialog-main-content__input-container usuarios__modal-editar-usuario-form-item">
                         <label class="dialog-main-content__label">EPS del Usuario</label>
-                        <input tabindex="4" data-input type="text">
+                        <input
+                        name="eps"
+                        type="text"
+                        title="Ingresa la Entidad Promotora de Salud(EPS) del usuario"
+                        autocomplete="off" 
+                        tabindex="4" 
+                        data-input 
+                        data-EmpEps
+                        >
                     </section>
                     <section class="dialog-main-content__input-container usuarios__modal-editar-usuario-form-item">
                         <label class="dialog-main-content__label">RH del Usuario</label>
-                        <input tabindex="8" data-input type="text">
+                        <input
+                        name="rh"
+                        type="text"
+                        title="Ingresa el RH del usuario"
+                        autocomplete="off" 
+                        tabindex="8" 
+                        data-input 
+                        data-EmpRH
+                        >
                     </section>
                     <div class="usuarios__modal-editar-usuario-form-item">
                         <div class="usuarios-modal-editar-usuario-form-img-container">
-                            <img class="usuarios-modal-editar-usuario-form-img-container__img" src="https://cdn.forbes.com.mx/2019/04/blackrrock-invertir-1-640x360.jpg" alt="">
-                            <input tabindex="" class="usuarios-modal-editar-usuario-form-img-container__file" type="file" title="Foto">
+                            <img class="usuarios-modal-editar-usuario-form-img-container__img" src="fotosEmpleados/default_1.jpeg" alt="">
+                            <input
+                            name="foto"
+                            type="file" 
+                            class="usuarios-modal-editar-usuario-form-img-container__file" 
+                            title="Ingresa una foto de perfil de usuario"
+                            autocomplete="off"  
+                            accept="image/jpeg"
+                            data-input
+                            data-EmpIMG
+                            >
                         </div>
                     </div>
                     <section class="dialog-main-content__input-container usuarios__modal-editar-usuario-form-item">
-                        <label class="dialog-main-content__label">Contrase&ntilde;a del Usuario</label>
-                        <input tabindex="9" data-input type="text">
-                    </section>
-                    <section class="dialog-main-content__input-container usuarios__modal-editar-usuario-form-item">
                         <label class="dialog-main-content__label">Rol del Usuario</label>
-                        <select tabindex="10" data-input class="usuarios__modal-editar-usuario-form-item">
+                        <select
+                        name="rol"
+                        title="Selecciona el rol de usuario"
+                        class="usuarios__modal-editar-usuario-form-item"
+                        autocomplete="off" 
+                        tabindex="10" 
+                        data-input 
+                        data-EmpRol
+                        >
                             <option value=""></option>
-                            <option value="">Gerente</option>
-                            <option value="">Almacenista</option>
-                            <option value="">Farmaceuta</option>
+                            <option value="GERENTE">Gerente</option>
+                            <option value="ALMACENISTA">Almacenista</option>
+                            <option value="FARMACEUTA">Farmaceuta</option>
                         </select>
                     </section>
-                    <div class="usuarios__modal-editar-usuario-form-item" class="usuarios__modal-editar-usuario-btns-container dialog-container-bts">
+                    <div class="usuarios__modal-editar-usuario-form-item usuarios__modal-editar-usuario-btns-container dialog-container-bts">
                         <button class="usuarios__modal-editar-usuario-btn-cancelar boton dialog-btn">Cancelar</button>
                         <button class="usuarios__modal-editar-usuario-btn-editar boton dialog-btn">Editar</button>
                     </div>
@@ -452,50 +641,51 @@
                     Recuerda revisar detenidamente la informacion del usuario que estas modificando.
                 </p>
                 <div class="usuarios__modal-editar-usuario-info-confirmacion dialog-main-content">
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion" data-EmpDocIdentidad>
                         <h3 class="dialog-main-content__label">Documento del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion" data-EmpCorreo >
                         <h3 class="dialog-main-content__label">Correo Electronico del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion" data-EmpNombre>
                         <h3 class="dialog-main-content__label">Nombre/s del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion" data-EmpDireccion>
                         <h3 class="dialog-main-content__label">Direccion del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion" data-EmpApellido>
                         <h3 class="dialog-main-content__label">Apellido/s del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion" data-EmpTelefono>
                         <h3 class="dialog-main-content__label">Telefono del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion" data-EmpEps>
                         <h3 class="dialog-main-content__label">EPS del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion" data-EmpRH>
                         <h3 class="dialog-main-content__label">RH del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
-                        <h3 class="dialog-main-content__label">Contrase&ntilde;a del Usuario</h3>
-                        <p>________________________________________________</p>
+                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion" data-EmpIMG>
+                        <div class="usuarios-modal-editar-usuario-info-item-confirmacion__img-container">
+                            <img src="" alt="Foto Usuario">
+                        </div>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion" data-EmpRol>
                         <h3 class="dialog-main-content__label">Rol del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                </div>
-                <div class="usuarios__modal-editar-usuario-confirmacion-btns-container dialog-container-bts">
-                    <button class="usuarios__modal-editar-usuario-confirmacion-btn-cancelar dialog-btn boton">Volver Atras</button>
-                    <button class="usuarios__modal-editar-usuario-confirmacion-btn-confirmar dialog-btn boton">Confirmar</button>
+                    <div class="usuarios__modal-editar-usuario-confirmacion-btns-container usuarios__modal-editar-usuario-info-item-confirmacion dialog-container-bts">
+                        <button class="usuarios__modal-editar-usuario-confirmacion-btn-cancelar dialog-btn boton">Volver Atras</button>
+                        <button class="usuarios__modal-editar-usuario-confirmacion-btn-confirmar dialog-btn boton">Confirmar</button>
+                    </div>
                 </div>
             </dialog>
 
@@ -520,50 +710,51 @@
                     Recuerda que una vez inhabilitado, no lo podras volver a habilitar.
                 </p>
                 <div class="usuarios__modal-inhabilitar-usuario-info dialog-main-content">
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
-                        <h3 class="dialog-main-content__label">Documento del Usuario</h3>
-                        <p>________________________________________________</p>
+                    <section class="usuarios__modal-inhabilitar-usuario-info-item" data-EmpDocIdentidad>
+                    <h3 class="dialog-main-content__label">Documento del Usuario</h3>
+                    <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-inhabilitar-usuario-info-item" data-EmpCorreo>
                         <h3 class="dialog-main-content__label">Correo Electronico del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-inhabilitar-usuario-info-item" data-EmpNombre>
                         <h3 class="dialog-main-content__label">Nombre/s del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-inhabilitar-usuario-info-item" data-EmpDireccion>
                         <h3 class="dialog-main-content__label">Direccion del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-inhabilitar-usuario-info-item" data-EmpApellido>
                         <h3 class="dialog-main-content__label">Apellido/s del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-inhabilitar-usuario-info-item" data-EmpTelefono>
                         <h3 class="dialog-main-content__label">Telefono del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-inhabilitar-usuario-info-item" data-EmpEps>
                         <h3 class="dialog-main-content__label">EPS del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-inhabilitar-usuario-info-item" data-EmpRH>
                         <h3 class="dialog-main-content__label">RH del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
-                        <h3 class="dialog-main-content__label">Contrase&ntilde;a del Usuario</h3>
-                        <p>________________________________________________</p>
+                    <section class="usuarios__modal-inhabilitar-usuario-info-item" data-EmpIMG>
+                        <div class="usuarios-modal-inhabilitar-usuario-info-item__img-container">
+                            <img src="" alt="Foto Usuario">
+                        </div>
                     </section>
-                    <section class="usuarios__modal-editar-usuario-info-item-confirmacion">
+                    <section class="usuarios__modal-inhabilitar-usuario-info-item" data-EmpRol>
                         <h3 class="dialog-main-content__label">Rol del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
-                </div>
-                <div class="usuarios__modal-inhabilitar-usuario-btns-container dialog-container-bts">
-                    <button class="usuarios__modal-inhabilitar-usuario-btn-cancelar dialog-btn boton">Cancelar</button>
-                    <button class="usuarios__modal-inhabilitar-usuario-btn-confirmar dialog-btn boton">Confirmar</button>
+                    <div class=" usuarios__modal-inhabilitar-usuario-info-item usuarios__modal-inhabilitar-usuario-btns-container dialog-container-bts">
+                        <button class="usuarios__modal-inhabilitar-usuario-btn-cancelar dialog-btn boton">Cancelar</button>
+                        <button class="usuarios__modal-inhabilitar-usuario-btn-confirmar dialog-btn boton">Confirmar</button>
+                    </div>
                 </div>
             </dialog>
 
@@ -589,7 +780,13 @@
                         <img src="<?php echo(URL_RAIZ); ?>public/imagenes/reportes-icono.svg" alt="">
                     </div>
                     <div class="usuarios__modal-usuarios-inhabilitados-gen-repo-container-text">
-                        <a class="filtro-subtitulo-reporte" href="">Generar Reporte</a>
+                        <a 
+                        target="_BLANK"
+                        class="filtro-subtitulo-reporte" 
+                        href="<?php echo(URL_RAIZ); ?>usuarios/generarReporteInhabilitados"
+                        >
+                        Generar Reporte
+                    </a>
                     </div>
                 </div>
                 <section class="usuarios__modal-usuarios-inhabilitados-table-container container-table">
@@ -605,226 +802,24 @@
                                 <td class="table-td">EPS</td>
                                 <td class="table-td">RH</td>
                                 <td class="table-td">Rol</td>
-                                <td class="table-td">Contrase&ntilde;a</td>
+                                <td class="table-td">Fecha/hora Inhabilitacion</td>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                                <td>item 7</td>
-                                <td>item 8</td>
-                                <td>item 9</td>
-                                <td>item 10</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                                <td>item 7</td>
-                                <td>item 8</td>
-                                <td>item 9</td>
-                                <td>item 10</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                                <td>item 7</td>
-                                <td>item 8</td>
-                                <td>item 9</td>
-                                <td>item 10</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                                <td>item 7</td>
-                                <td>item 8</td>
-                                <td>item 9</td>
-                                <td>item 10</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                                <td>item 7</td>
-                                <td>item 8</td>
-                                <td>item 9</td>
-                                <td>item 10</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                                <td>item 7</td>
-                                <td>item 8</td>
-                                <td>item 9</td>
-                                <td>item 10</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                                <td>item 7</td>
-                                <td>item 8</td>
-                                <td>item 9</td>
-                                <td>item 10</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                                <td>item 7</td>
-                                <td>item 8</td>
-                                <td>item 9</td>
-                                <td>item 10</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                                <td>item 7</td>
-                                <td>item 8</td>
-                                <td>item 9</td>
-                                <td>item 10</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                                <td>item 7</td>
-                                <td>item 8</td>
-                                <td>item 9</td>
-                                <td>item 10</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                                <td>item 7</td>
-                                <td>item 8</td>
-                                <td>item 9</td>
-                                <td>item 10</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                                <td>item 7</td>
-                                <td>item 8</td>
-                                <td>item 9</td>
-                                <td>item 10</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                                <td>item 7</td>
-                                <td>item 8</td>
-                                <td>item 9</td>
-                                <td>item 10</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                                <td>item 7</td>
-                                <td>item 8</td>
-                                <td>item 9</td>
-                                <td>item 10</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                                <td>item 7</td>
-                                <td>item 8</td>
-                                <td>item 9</td>
-                                <td>item 10</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                                <td>item 7</td>
-                                <td>item 8</td>
-                                <td>item 9</td>
-                                <td>item 10</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                                <td>item 7</td>
-                                <td>item 8</td>
-                                <td>item 9</td>
-                                <td>item 10</td>
-                            </tr>
-                            <tr>
-                                <td>item 1</td>
-                                <td>item 2</td>
-                                <td>item 3</td>
-                                <td>item 4</td>
-                                <td>item 5</td>
-                                <td>item 6</td>
-                                <td>item 7</td>
-                                <td>item 8</td>
-                                <td>item 9</td>
-                                <td>item 10</td>
-                            </tr>
+                            <?php foreach($this->data['infoEmpleadosInhabilitados'] as $key => $value): ?>
+                                <tr>
+                                    <td><?php echo $value["EmpDocIdentidad"] ?></td>
+                                    <td><?php echo $value["EmpNombre"] ?></td>
+                                    <td><?php echo $value["EmpApellido"] ?></td>
+                                    <td><?php echo $value["EmpEps"] ?></td>
+                                    <td><?php echo $value["EmpTelefono"] ?></td>
+                                    <td><?php echo $value["EmpCorreo"] ?></td>
+                                    <td><?php echo $value["EmpDireccion"] ?></td>
+                                    <td><?php echo $value["EmpRH"] ?></td>
+                                    <td><?php echo $value["EmpRol"] ?></td>
+                                    <td><?php echo $value["EmpFechaInhabilitacion"] ?></td>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </section>
@@ -838,8 +833,9 @@
         var URL_RAIZ = "<?php echo URL_RAIZ ?>"
     </script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_agregar_usuario.js" type="module"></script>
-    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_editar_usuario.js"></script>
-    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_inhabilitar_usuarios.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_editar_usuario.js" type="module"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_inhabilitar_usuarios.js" type="module"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_buscar_por_atributos.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_usuarios_usuarios_inhabilitados.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/cualquier_modulo_pintar_borde_derecho_input.js" ></script>
 </body>

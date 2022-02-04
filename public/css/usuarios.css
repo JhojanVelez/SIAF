@@ -332,7 +332,7 @@ display: flex;
     grid-template-rows: repeat(5,5rem);
     grid-template-areas:'doc cor img'
                         'nom dir img'
-                        'ape tel pas'
+                        'ape tel img'
                         'eps rh  rol'
                         'btn btn btn';
     gap: 2rem 2.5rem;
@@ -369,8 +369,8 @@ display: flex;
 }
 
 .usuarios-modal-editar-usuario-form-img-container {
-    width: 11rem;
-    height: 11rem;
+    width: 13rem;
+    height: 13rem;
     border-radius: 100px;
     overflow: hidden;
     margin: auto;
@@ -413,16 +413,137 @@ display: flex;
 }
 
 .usuarios__modal-editar-usuario-form-item:nth-child(10) {
-    grid-area:pas;
-}
-.usuarios__modal-editar-usuario-form-item:nth-child(11) {
     grid-area:rol;
 }
-.usuarios__modal-editar-usuario-form-item:nth-child(12) {
+.usuarios__modal-editar-usuario-form-item:nth-child(11) {
     grid-area:btn;
     display: flex;
     justify-content: center;
     gap: 4rem;
+}
+
+/*Estilos para el modal de confirmacion*/
+
+
+.usuarios__modal-editar-usuario-info-confirmacion {
+    grid-template-columns: repeat(3,minmax(300px,400px));
+    grid-template-rows: repeat(4,5rem);
+    grid-template-areas:'doc cor img'
+                        'nom dir img'
+                        'ape tel img'
+                        'eps rh  rol'
+                        'btn btn btn';
+    gap: 2rem 2.5rem;
+    align-items: center;
+}
+
+.usuarios__modal-editar-usuario-info-item-confirmacion:nth-child(1) {
+grid-area:doc;
+}
+.usuarios__modal-editar-usuario-info-item-confirmacion:nth-child(2) {
+grid-area:cor;
+}
+.usuarios__modal-editar-usuario-info-item-confirmacion:nth-child(3) {
+grid-area:nom;
+}
+.usuarios__modal-editar-usuario-info-item-confirmacion:nth-child(4) {
+grid-area:dir;
+}
+.usuarios__modal-editar-usuario-info-item-confirmacion:nth-child(5) {
+grid-area:ape;
+}
+.usuarios__modal-editar-usuario-info-item-confirmacion:nth-child(6) {
+grid-area:tel;
+}
+.usuarios__modal-editar-usuario-info-item-confirmacion:nth-child(7) {
+grid-area:eps;
+}
+.usuarios__modal-editar-usuario-info-item-confirmacion:nth-child(8) {
+grid-area:rh;
+}
+.usuarios__modal-editar-usuario-info-item-confirmacion:nth-child(9) {
+grid-area:img;
+display: flex;
+}
+.usuarios__modal-editar-usuario-info-item-confirmacion:nth-child(10) {
+    grid-area:rol;
+}
+.usuarios__modal-editar-usuario-info-item-confirmacion:nth-child(11) {
+    grid-area:btn;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.usuarios-modal-editar-usuario-info-item-confirmacion__img-container {
+    width: 13rem;
+    height: 13rem;
+    border-radius: 100px;
+    overflow: hidden;
+    margin: auto;
+    text-align: center;
+}
+
+
+/*----------------------------------- Estilos del modal de inhabilitar usuario ----------------------------*/
+
+.usuarios__modal-inhabilitar-usuario-info {
+    grid-template-columns: repeat(3,minmax(300px,400px));
+    grid-template-rows: repeat(4,5rem);
+    grid-template-areas:'doc cor img'
+                        'nom dir img'
+                        'ape tel img'
+                        'eps rh  rol'
+                        'btn btn btn';
+    gap: 2rem 2.5rem;
+    align-items: center;
+}
+
+.usuarios__modal-inhabilitar-usuario-info-item:nth-child(1) {
+grid-area:doc;
+}
+.usuarios__modal-inhabilitar-usuario-info-item:nth-child(2) {
+grid-area:cor;
+}
+.usuarios__modal-inhabilitar-usuario-info-item:nth-child(3) {
+grid-area:nom;
+}
+.usuarios__modal-inhabilitar-usuario-info-item:nth-child(4) {
+grid-area:dir;
+}
+.usuarios__modal-inhabilitar-usuario-info-item:nth-child(5) {
+grid-area:ape;
+}
+.usuarios__modal-inhabilitar-usuario-info-item:nth-child(6) {
+grid-area:tel;
+}
+.usuarios__modal-inhabilitar-usuario-info-item:nth-child(7) {
+grid-area:eps;
+}
+.usuarios__modal-inhabilitar-usuario-info-item:nth-child(8) {
+grid-area:rh;
+}
+.usuarios__modal-inhabilitar-usuario-info-item:nth-child(9) {
+grid-area:img;
+display: flex;
+}
+.usuarios__modal-inhabilitar-usuario-info-item:nth-child(10) {
+    grid-area:rol;
+}
+.usuarios__modal-inhabilitar-usuario-info-item:nth-child(11) {
+    grid-area:btn;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.usuarios-modal-inhabilitar-usuario-info-item__img-container {
+    width: 13rem;
+    height: 13rem;
+    border-radius: 100px;
+    overflow: hidden;
+    margin: auto;
+    text-align: center;
 }
 
 /*-------------------------Estilos del modal de usuarios inhabilitados----------------------------------*/
@@ -447,6 +568,8 @@ display: flex;
 .usuarios-inhabilitados__table {
     min-width: 150%;
 }
+
+
 
 
 

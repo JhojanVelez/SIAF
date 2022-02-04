@@ -12,7 +12,7 @@
     <header class="nav-container">
         <div class="user-icon-container">
             <figure class="user-icon-container__img-usu-container" >
-                <img class="user-icon-container__img" src="fotosEmpleados/empleado_999999999999999.jpeg" alt="usuario IMG">
+                <img class="user-icon-container__img" src="fotosEmpleados/default_1.jpeg" alt="usuario IMG">
             </figure>
             <p class="user-icon-container__nombre-usu" >Antonia Gomez</p>
         </div>

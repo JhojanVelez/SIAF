@@ -64,7 +64,6 @@ import {agregar} from '../../ajax/agregar.js';
                 $modal_2.toggleAttribute("open");
     
                 $inputs.forEach(input => {
-                    console.log(Object.keys(input.dataset)[1]);
                     $itemsConfirmacion.forEach(item => {
                         if(Object.keys(input.dataset)[1] == Object.keys(item.dataset)[0]) {
                             item.querySelector("P").innerText = input.value;
@@ -92,6 +91,7 @@ import {agregar} from '../../ajax/agregar.js';
                     $modal_4.querySelector("P").innerHTML = res.errorMessage;
                 }
             }).catch(err => {
+                console.log(err)
                 $modal_4.toggleAttribute("open");
                 $modal_4.querySelector("P").innerHTML = err.errorMessage;
             });

@@ -1,12 +1,19 @@
-export function agregar (formulario,modulo,URL_RAIZ) {
-
+export function agregar (formulario = "",modulo,URL_RAIZ,infoAdicional = "") {
+    
+    
     return new Promise((resolve,reject)=> {
         const xhr = new XMLHttpRequest;
+        let formData;
 
-        const formData = new FormData(formulario)
-        
+        if(infoAdicional == "") {
+            formData = new FormData(formulario);
+        } else {
+            formData = new FormData();
+            formData.append("infoAdicional", JSON.stringify(infoAdicional));
+        }
+
         xhr.addEventListener("readystatechange", () => {
-
+            
             if(xhr.status >= 400 && xhr.status <= 499) {
                 reject({
                     complete: false,
