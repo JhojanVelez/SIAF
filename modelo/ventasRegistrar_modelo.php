@@ -88,6 +88,10 @@ class ventasRegistrarModelo extends ConexionBD {
                 
                 $this->PDOStmt->execute();
             }
+
+            if($this->PDOStmt->errorInfo()[1]) {
+                throw new PDOException();
+            }
             
             $this->result["complete"] = true;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
@@ -96,8 +100,8 @@ class ventasRegistrarModelo extends ConexionBD {
         } catch (PDOException $e) {
             $this->result["complete"] = false;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
-            $this->result["errorPDOMessage"] = $e->errorInfo;
-            $this->result["errorPDOMessageCode"] = $e->errorInfo[1];
+            $this->result["errorPDOMessage"] = $this->PDOStmt->errorInfo();
+            $this->result["errorPDOMessageCode"] = $this->PDOStmt->errorInfo()[1];
             return $this->result;
         }
     }
