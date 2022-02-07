@@ -2,7 +2,7 @@
 
 class ventasRegistrarModelo extends ConexionBD {
 
-    private $codFactura = "FAC0";
+    private $codFactura = "FAC";
     private $listaProductos;
     private $docCliente;
     private $docVendedor;

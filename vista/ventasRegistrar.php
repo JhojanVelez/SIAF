@@ -24,7 +24,7 @@
             <div class="registrar-ventas__lista-productos-contenido contenedor-objetos__contenido box-shadow">
                 <!-- Usaremos este template para pintar cada producto en la lista de productos para vender -->
                 <template class="registrar-ventas__lista-productos-template-producto">
-                    <figure class="registrar-ventas__lista-producto contenedor-objetos__objeto box-shadow">
+                    <figure class="registrar-ventas__lista-producto contenedor-objetos__objeto box-shadow" data-codigo-producto="">
                         <div class="registrar-ventas__lista-producto-img contenedor-objetos__objeto-img">
                             <img src="<?php echo(URL_RAIZ); ?>public/imagenes/corazon-icono.svg" alt="">
                         </div>
