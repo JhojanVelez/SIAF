@@ -77,6 +77,7 @@
                     class="registrar-ventas_registro-id" 
                     id="producto-id" 
                     autofocus
+                    data-input
                     >
                     
                     <label class="registrar-ventas__registro-label" for="producto-nombre">Nombre del producto</label>
@@ -84,6 +85,7 @@
                     name="nombreProducto" 
                     class="registrar-ventas_registro-nombre" 
                     id="producto-nombre"
+                    data-input
                     >
                         <option value="" data-pro-cod-barras ></option>
 
@@ -101,6 +103,7 @@
                     type="number" 
                     class="registrar-ventas_registro-cantidad" 
                     id="product-cantidad"
+                    data-input
                     >
                     </div>
                     <button class="registrar-ventas__registro-boton-buscar-producto boton">Ver Productos</button>

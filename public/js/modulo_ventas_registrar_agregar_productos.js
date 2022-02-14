@@ -21,34 +21,55 @@ const infoVenta = {
         $contenedorTotales = d.querySelector(".registrar-ventas__lista-productos-totales"),
         $fragmento = d.createDocumentFragment();
 
-
-        
+    const $inputsFormularioAgregar = Object.values($formularioAgregar.querySelectorAll("[data-input]"));
 
     let idProductoSeleccionado;
+
+    let validador;
 
     d.addEventListener("submit", e => {
 
         if(e.target == $formularioAgregar) {
             e.preventDefault();
 
-            idProductoSeleccionado = $formularioAgregar.codigoBarrasProducto.value;
+            validador = true;
 
-            buscarPorId(idProductoSeleccionado,"ventasRegistrar",URL_RAIZ)
-            .then((res)=> {
-                // console.log(res)
-                infoVenta.infoProductos[idProductoSeleccionado] = 
-                {
-                    nombre : $formularioAgregar.nombreProducto.value,
-                    cantidad : parseInt($formularioAgregar.cantidadProducto.value),
-                    precioUnidad : parseInt(res["ProPrecioVenta"]),
-                    precioTotal : 0
-                };
-
-                infoVenta.infoProductos[idProductoSeleccionado].precioTotal = infoVenta.infoProductos[idProductoSeleccionado].cantidad * infoVenta.infoProductos[idProductoSeleccionado].precioUnidad
-
-                pintarProductosAVender();
-                
+            $inputsFormularioAgregar.forEach(input => {
+                if(input.value == "") {
+                    input.classList.add("input-invalido");
+                    validador = false; 
+                } else {
+                    input.classList.remove("input-invalido");
+                }
             });
+
+            if($inputsFormularioAgregar[2].value <= 0) {
+                $inputsFormularioAgregar[2].classList.add("input-invalido");
+                validador = false; 
+            } else {
+                $inputsFormularioAgregar[2].classList.remove("input-invalido");
+            }
+
+            if(validador) {
+                idProductoSeleccionado = $formularioAgregar.codigoBarrasProducto.value;
+
+                buscarPorId(idProductoSeleccionado,"ventasRegistrar",URL_RAIZ)
+                .then((res)=> {
+                    // console.log(res)git
+                    infoVenta.infoProductos[idProductoSeleccionado] = 
+                    {
+                        nombre : $formularioAgregar.nombreProducto.value,
+                        cantidad : parseInt($formularioAgregar.cantidadProducto.value),
+                        precioUnidad : parseInt(res["ProPrecioVenta"]),
+                        precioTotal : 0
+                    };
+
+                    infoVenta.infoProductos[idProductoSeleccionado].precioTotal = infoVenta.infoProductos[idProductoSeleccionado].cantidad * infoVenta.infoProductos[idProductoSeleccionado].precioUnidad
+
+                    pintarProductosAVender();
+
+                });
+            }
         }
     })
     
