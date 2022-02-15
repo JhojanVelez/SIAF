@@ -21,6 +21,8 @@ const infoVenta = {
         $contenedorTotales = d.querySelector(".registrar-ventas__lista-productos-totales"),
         $fragmento = d.createDocumentFragment();
 
+    const $botonVender = d.querySelector(".registrar-ventas__boton-vender");
+
     const $inputsFormularioAgregar = Object.values($formularioAgregar.querySelectorAll("[data-input]"));
 
     let idProductoSeleccionado;
@@ -51,11 +53,15 @@ const infoVenta = {
             }
 
             if(validador) {
+
+                $botonVender.removeAttribute("disabled")
+                $botonVender.removeAttribute("title")
+
                 idProductoSeleccionado = $formularioAgregar.codigoBarrasProducto.value;
 
                 buscarPorId(idProductoSeleccionado,"ventasRegistrar",URL_RAIZ)
                 .then((res)=> {
-                    // console.log(res)git
+                    // console.log(res)
                     infoVenta.infoProductos[idProductoSeleccionado] = 
                     {
                         nombre : $formularioAgregar.nombreProducto.value,
@@ -63,12 +69,15 @@ const infoVenta = {
                         precioUnidad : parseInt(res["ProPrecioVenta"]),
                         precioTotal : 0
                     };
-
+                
                     infoVenta.infoProductos[idProductoSeleccionado].precioTotal = infoVenta.infoProductos[idProductoSeleccionado].cantidad * infoVenta.infoProductos[idProductoSeleccionado].precioUnidad
-
+                
                     pintarProductosAVender();
-
+                    
                 });
+            } else {
+                $botonVender.setAttribute("title", "Por favor agrega un producto a la lista de productos para vender, para poder continuar")
+                $botonVender.setAttribute("disabled", "")
             }
         }
     })
@@ -98,7 +107,16 @@ const infoVenta = {
             delete infoVenta.infoProductos[codigoProductoSeleccionado]
 
             pintarProductosAVender();
+
+            if (infoVenta.cantidadTotal == 0 || isNaN(infoVenta.cantidadTotal)) {
+                $botonVender.setAttribute("disabled","")
+                $botonVender.setAttribute("title", "Por favor agrega un producto a la lista de productos para vender, para poder continuar")
+            } else {
+                $botonVender.removeAttribute("disabled")
+                $botonVender.removeAttribute("title")
+            }
         }
+
     })
 
     /*

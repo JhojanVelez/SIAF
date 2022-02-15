@@ -14,16 +14,24 @@ import {agregar} from '../../ajax/agregar.js'
 
     const $formularioConfirmarVenta = $modal_1.querySelector("form"),
             $formularioAgregarCliente = $modal_agregar_cliente.querySelector("form");
+
+    const $botonVender = d.querySelector(".registrar-ventas__boton-vender");
     
-    console.log($itemsModal_1)
     /* Vamos a crear la funcionalidad de buscar por id el cliente e ir mostrando o ocultando la ventana morada */
     d.addEventListener("click", e => {
         if(e.target.matches(".registrar-ventas__boton-vender")) {
             e.preventDefault();
-            $transparentBackgroundModal.classList.toggle("visible")
-            $modal_1.toggleAttribute("open")
-            $itemsModal_1[0].focus();
-            $itemsModal_1[1].innerHTML = "$"+infoVenta.precioTotal+" Pesos"
+            
+            if (infoVenta.cantidadTotal == 0 || isNaN(infoVenta.cantidadTotal)) {
+                $botonVender.setAttribute("disabled","")
+            } else {
+                $transparentBackgroundModal.classList.toggle("visible")
+                $botonVender.removeAttribute("disabled")
+                $botonVender.removeAttribute("title")
+                $modal_1.toggleAttribute("open")
+                $itemsModal_1[0].focus();
+                $itemsModal_1[1].innerHTML = "$"+infoVenta.precioTotal+" Pesos"
+            }
         }
         if(e.target.matches(".registrar-ventas__modal-confirmar-venta-btn-confirmar")) {
 

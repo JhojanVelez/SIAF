@@ -120,9 +120,13 @@
                 </button>
             </section>
             <section class="registrar-ventas__container-boton">
-                <button type="button" class="registrar-ventas__boton-vender boton" value="Vender">
-                    Vender
-                </button>
+                <input 
+                disabled 
+                type="button" 
+                class="registrar-ventas__boton-vender boton" 
+                value="Vender"
+                title="Por favor agrega un producto a la lista de productos para vender, para poder continuar"
+                >
             </section>
         </section>
 
