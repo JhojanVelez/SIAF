@@ -16,6 +16,8 @@ import {agregar} from '../../ajax/agregar.js'
             $formularioAgregarCliente = $modal_agregar_cliente.querySelector("form");
 
     const $botonVender = d.querySelector(".registrar-ventas__boton-vender");
+
+    let validador;
     
     /* Vamos a crear la funcionalidad de buscar por id el cliente e ir mostrando o ocultando la ventana morada */
     d.addEventListener("click", e => {
@@ -35,33 +37,58 @@ import {agregar} from '../../ajax/agregar.js'
         }
         if(e.target.matches(".registrar-ventas__modal-confirmar-venta-btn-confirmar")) {
 
-            $modal_1.toggleAttribute("open");
+            validador = true;
+            const $inputsAValidar = [$itemsModal_1[0],$itemsModal_1[2],$itemsModal_1[3]]
 
-            infoVenta.docCliente = $itemsModal_1[0].value;
-            infoVenta.formaPago = $itemsModal_1[2].value;
-            infoVenta.recibe = $itemsModal_1[3].value;
-
-
-            agregar(undefined,"ventasRegistrar", URL_RAIZ, infoVenta)
-            .then(res=>{
-                console.log(res);
-                if(res.complete) {
-                    $modal_2.toggleAttribute("open");
+            $inputsAValidar.forEach(input => {
+                if(input.value == "") {
+                    input.classList.add("input-invalido");
+                    validador = false; 
                 } else {
-                    if(res.errorPDOMessageCode == 1452) {
-                        $modal_4.toggleAttribute("open");
-                    } else {
-                        $modal_3.toggleAttribute("open");
-                    }
+                    input.classList.remove("input-invalido");
                 }
-            }).catch(err => {
-                $modal_3.toggleAttribute("open");
-                $modal_3.querySelector("P").innerHTML = err.errorMessage;
             });
+
+            // Aqui trato de validar que el valor de forma de pago siempre sea otro diferente a los se que se pueden elegir
+            if ($itemsModal_1[2].value != "EFECTIVO" && $itemsModal_1[2].value != "TARJETA DEBITO" && $itemsModal_1[2].value != "TARJETA CREDITO") {
+                $itemsModal_1[2].classList.add("input-invalido");
+                validador = false;
+            } else {
+                $itemsModal_1[2].classList.remove("input-invalido");
+            }
+
+            if(validador) {
+                $modal_1.toggleAttribute("open");
+
+
+                infoVenta.docCliente = $itemsModal_1[0].value;
+                infoVenta.formaPago = $itemsModal_1[2].value;
+                infoVenta.recibe = $itemsModal_1[3].value;
+
+
+                agregar(undefined,"ventasRegistrar", URL_RAIZ, infoVenta)
+                .then(res=>{
+                    console.log(res);
+                    if(res.complete) {
+                        $modal_2.toggleAttribute("open");
+                    } else {
+                        if(res.errorPDOMessageCode == 1452) {
+                            $modal_4.toggleAttribute("open");
+                        } else {
+                            $modal_3.toggleAttribute("open");
+                        }
+                    }
+                }).catch(err => {
+                    $modal_3.toggleAttribute("open");
+                    $modal_3.querySelector("P").innerHTML = err.errorMessage;
+                });
+            }
         }
         if(e.target.matches(".registrar-ventas__modal-confirmar-venta-btn-cancelar")) {
             $transparentBackgroundModal.classList.toggle("visible")
             $modal_1.toggleAttribute("open")
+            $itemsModal_1[3].value = ""
+            $itemsModal_1[4].innerHTML = "$0 Pesos"
         }
         
         if(e.target.matches(".registrar-ventas__modal-venta-exitosa-btn")) {
