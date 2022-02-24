@@ -53,7 +53,7 @@
                         <td class="table-td">FechaVenta</td>
                         <td class="table-td">Vendedor</td>
                         <td class="table-td">Cliente</td>
-                        <td class="table-td ">DocCliente</td>
+                        <td class="table-td">DocCliente</td>
                         <td class="table-td">CantidadTotal</td>
                         <td class="table-td">PrecioTotal</td>
                         <td class="table-td">Factura</td>
@@ -72,7 +72,7 @@
                             <td><?php echo($value["FacTotal"]) ?></td>
                             <td class="ventas-table-td-factura">
                                 <div class="ventas-table-link-factura">
-                                    <a href="">
+                                    <a href="ventasConsultarVentas/generarFactura/<?php echo($value["FacCodigo"]) ?>" target="_BLANK">
                                         <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
                                     </a>
                                 </div>
