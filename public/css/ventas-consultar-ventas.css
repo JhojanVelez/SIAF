@@ -1,5 +1,9 @@
 @import url(main.css);
 
+tbody tr:hover {
+    cursor: initial;
+}
+
 .nav__li:nth-child(4) {
     border-bottom: 2px solid var(--color-button-text);
 }
@@ -92,4 +96,49 @@
 
 .ventas__filtro-gen-repo {
     grid-area: filter-gen-repo;
+}
+
+.ventas-table-link-factura {
+    min-width:30px;
+    max-width:10%;
+    margin: auto;
+}
+
+.ventas-table-link-factura img {
+    position: relative;
+    z-index: 2;
+}
+
+.ventas__table tr:hover .ventas-table-link-factura img {
+    filter: invert();
+}
+
+.ventas__table tr .ventas-table-link-factura:hover img {
+    filter: none;
+    cursor: pointer;
+}
+
+.ventas-table-link-factura {
+    position: relative;
+}
+
+.ventas-table-link-factura::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    bottom: -4px;
+    left: -4px;
+    right: -4px;
+    background-color: var(--color-button-text);
+    border-radius: 100px;
+    transform: scale(0);
+    transition: transform .3s;
+}
+
+.ventas-table-link-factura:hover::before {
+    transform: scale(1);
+}
+
+.ventas-table-td-factura {
+    width: 100px;
 }

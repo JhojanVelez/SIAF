@@ -14,7 +14,7 @@
     ?>
     <main class="registrar-ventas grid-container-main">
         <section class="registrar-ventas__container-title container-title box-shadow">
-            <h1 class="registrar-ventas__titulo">Registra tus Ventas</h1>
+            <h1 class="registrar-ventas__titulo">Registra Tus Ventas</h1>
         </section>
 
         <section class="registrar-ventas__container-lista-productos contenedor-objetos box-shadow">

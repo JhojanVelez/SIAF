@@ -1,8 +1,8 @@
 <?php
 
-class VentasConsultarVentasControlador { 
-    function __construct () {
-        require_once("vista/ventas-consultar-ventas.php");
+class VentasConsultarVentasControlador extends Controlador{ 
+    function __construct ($url) {
+        $this->controladorMetodoParametro = $url;
     }
 }
 
