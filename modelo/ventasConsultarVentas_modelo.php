@@ -19,7 +19,7 @@ class VentasConsultarVentasModelo extends ConexionBD{
             $this->sql = "SELECT * FROM ventas WHERE FacCodigo = ?";
             $this->PDOStmt = $this->connection->prepare($this->sql);
             $this->PDOStmt->execute(array($this->facCodigo));
-            $this->result["infoAdicional"] = $this->PDOStmt->fetchAll(PDO::FETCH_ASSOC);
+            $this->result["infoAdicional"] = $this->PDOStmt->fetchAll(PDO::FETCH_ASSOC)[0];
 
             $this->sql = "SELECT * FROM detalle_de_venta WHERE tbl_fact_venta_FacCodigo = ? ORDER BY ProDescripcion";   
             $this->PDOStmt = $this->connection->prepare($this->sql);
