@@ -518,7 +518,7 @@
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_agregar_productos.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_ver_modal_productos.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_cancelar_venta.js"></script>
-    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_confirmar_venta.js" type="module"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_confirmar_venta.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_agregar_cliente.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_pintar_red_orange_green.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/cualquier_modulo_pintar_borde_derecho_input.js"></script>

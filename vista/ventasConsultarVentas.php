@@ -23,15 +23,49 @@
             <div class="ventas__filtro">
                 <h2 class="ventas__filtro-titulo">Filtros de busqueda</h2>
                 <form class="ventas__filtro-form" action="">
-                    <input type="text" class="ventas__filtro-producto-id" id="producto-id" placeholder="Codigo de Barras">
-                    <input type="text" class="ventas__filtro-producto-nombre" id="producto-nombre" placeholder="Nombre Producto">
-                    <input type="text" class="ventas__filtro-cliente-id" id="cliente-id" placeholder="Documento del Cliente">
-                    <input type="text" class="ventas__filtro-cliente-nombre" id="cliente-nombre" placeholder="Nombre del Cliente">
+                    <input 
+                    name="documentoVendedor"
+                    type="text" 
+                    class="ventas__filtro-vendedor-id" 
+                    id="vendedor-id" 
+                    placeholder="Documento del Vendedor"
+                    >
+                    <input 
+                    name="nombreVendedor"
+                    type="text" 
+                    class="ventas__filtro-vendedor-nombre" 
+                    id="vendedor-nombre" 
+                    placeholder="Nombre del Vendedor"
+                    >
+                    <input 
+                    name="documentoCliente"
+                    type="text" 
+                    class="ventas__filtro-cliente-id" 
+                    id="cliente-id" 
+                    placeholder="Documento del Cliente"
+                    >
+                    <input 
+                    name="nombreCliente"
+                    type="text" 
+                    class="ventas__filtro-cliente-nombre" 
+                    id="cliente-nombre" 
+                    placeholder="Nombre del Cliente"
+                    >
                     <article class="ventas_filtro-container-desde-hasta">
                         <h3 class="ventas_filtro-container-desde-hasta__title">Por periodo de tiempo</h3>
                         <div class="ventas_filtro-container-desde-hasta__inputs">
-                            <input type="date" class="ventas_filtro-desde" id="salida-desde">
-                            <input type="date" class="ventas_filtro-hasta" id="salida-hasta">
+                            <input 
+                            name="fechaVentaDesde"
+                            type="datetime-local" 
+                            class="ventas_filtro-desde" 
+                            id="salida-desde"
+                            >
+                            <input 
+                            name="fechaVentaHasta"
+                            type="datetime-local" 
+                            class="ventas_filtro-hasta" 
+                            id="salida-hasta"
+                            >
                         </div>
                     </article>
                 </form>
@@ -81,8 +115,37 @@
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
+
+                <!-- 
+                    Este template nos permite imprimir la informacion cuando estamos buscando por atributo
+                    pero en este caso lo hacemos con template para hacer uso de los fragmentos
+                -->
+                <template class="ventas__table-template">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="ventas-table-td-factura">
+                            <div class="ventas-table-link-factura">
+                                <a href="ventasConsultarVentas/generarFactura/234" target="_BLANK">
+                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </template>
             </table>
         </section>
     </main>
+    <script> 
+        /* Se puso var porque queremos que pueda usarse en todos los contextos, 
+        independientemente de si esta en una funcion anonima autoejecutable */
+        var URL_RAIZ = "<?php echo URL_RAIZ ?>"
+    </script>
+    <script src="<?php echo(URL_RAIZ) ?>public/js/modulo_ventas_consultar_buscar_por_atributos.js" type="module"></script>
 </body>
 </html>
