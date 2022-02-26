@@ -11,7 +11,7 @@ class VentasConsultarVentasControlador extends Controlador{
         $this->cargarVista("plantillaFactura/plantillaFacturaVenta.php");
     }
 
-    public function buscarPorAtributos () {
+    public function buscarPorAtributos ($ajax = true) {
         /*
         $ajax esta como parametro porque esta funcion va a ser reutilizada en dos casos
         cuando sea una peticion asincrona $ajax = true, pero cuando no sea una peticion,
@@ -63,7 +63,9 @@ class VentasConsultarVentasControlador extends Controlador{
 
         $this->data = $this->instanciaModelo->buscarPorAtributos();
 
-        echo json_encode($this->data);
+        if($ajax) {
+            echo json_encode($this->data);
+        }
     }
 }
 

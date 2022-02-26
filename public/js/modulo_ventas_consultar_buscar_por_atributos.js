@@ -25,8 +25,8 @@ import { buscarPorAtributos } from "../../ajax/buscarPorAtributos.js";
         res.forEach(el => {
             $templateTabla.querySelector("tr").children[0].innerHTML = el.FacCodigo;
             $templateTabla.querySelector("tr").children[1].innerHTML = el.FacFecha;
-            $templateTabla.querySelector("tr").children[2].innerHTML = el.EmpNombre;
-            $templateTabla.querySelector("tr").children[3].innerHTML = el.CliNombre;
+            $templateTabla.querySelector("tr").children[2].innerHTML = `${el.EmpNombre} ${el.EmpApellido}`;
+            $templateTabla.querySelector("tr").children[3].innerHTML = `${el.CliNombre} ${el.CliApellido}`;
             $templateTabla.querySelector("tr").children[4].innerHTML = el.CliDocIdentidad;
             $templateTabla.querySelector("tr").children[5].innerHTML = el.FacCantidadTotal;
             $templateTabla.querySelector("tr").children[6].innerHTML = el.FacTotal;

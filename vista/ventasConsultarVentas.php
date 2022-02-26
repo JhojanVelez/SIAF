@@ -22,7 +22,13 @@
         <section class="ventas__container-filter container-filter box-shadow">
             <div class="ventas__filtro">
                 <h2 class="ventas__filtro-titulo">Filtros de busqueda</h2>
-                <form class="ventas__filtro-form" action="">
+                <form 
+                id="ventas__filtro-form" 
+                class="ventas__filtro-form"
+                action="<?php echo URL_RAIZ ?>ventasConsultarVentas/generarReporte"
+                method="POST"
+                target="_BLANK"
+                >
                     <input 
                     name="documentoVendedor"
                     type="text" 
@@ -73,7 +79,11 @@
                     <div class="ventas__filtro-gen-repo-img filtro-gen-repo-img">
                         <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
                     </div>
-                    <a class="ventas__filtro-subtitulo-reporte filtro-subtitulo-reporte" href="">Generar reporte</a>
+                    <input 
+                    class="ventas__filtro-subtitulo-reporte filtro-subtitulo-reporte" 
+                    form="ventas__filtro-form" 
+                    type="submit" 
+                    value="Generar reporte">
                 </div>
             </div>
         </section>
@@ -88,7 +98,7 @@
                         <td class="table-td">Vendedor</td>
                         <td class="table-td">Cliente</td>
                         <td class="table-td">DocCliente</td>
-                        <td class="table-td">CantidadTotal</td>
+                        <td class="table-td">ProductosVendidos</td>
                         <td class="table-td">PrecioTotal</td>
                         <td class="table-td">Factura</td>
                     </tr>
@@ -99,8 +109,8 @@
                         <tr>
                             <td><?php echo($value["FacCodigo"]) ?></td>
                             <td><?php echo($value["FacFecha"]) ?></td>
-                            <td><?php echo($value["EmpNombre"]) ?></td>
-                            <td><?php echo($value["CliNombre"]) ?></td>
+                            <td><?php echo($value["EmpNombre"]." ".$value["EmpApellido"]) ?></td>
+                            <td><?php echo($value["CliNombre"]." ".$value["CliApellido"]) ?></td>
                             <td><?php echo($value["CliDocIdentidad"]) ?></td>
                             <td><?php echo($value["FacCantidadTotal"]) ?></td>
                             <td><?php echo($value["FacTotal"]) ?></td>
