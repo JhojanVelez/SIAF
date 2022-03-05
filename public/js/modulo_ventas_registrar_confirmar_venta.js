@@ -57,6 +57,13 @@ import {agregar} from '../../ajax/agregar.js'
                 $itemsModal_1[2].classList.remove("input-invalido");
             }
 
+            if($itemsModal_1[3].value < infoVenta.precioTotal) {
+                $itemsModal_1[3].classList.add("input-invalido");
+                validador = false;
+            } else {
+                $itemsModal_1[3].classList.add("input-invalido");
+            }
+
             if(validador) {
                 $modal_1.toggleAttribute("open");
 

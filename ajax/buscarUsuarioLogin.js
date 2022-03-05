@@ -5,7 +5,7 @@ export function buscarUsuarioLogin (formulario,modulo,URL_RAIZ) {
 
         xhr.addEventListener("readystatechange", ()=> {
             if(xhr.readyState == 4 && (xhr.status >= 200 && xhr.status < 300)) {
-                // resolve(xhr.response);
+                // resolve(xhr.response); 
                 resolve(JSON.parse(xhr.response));
             }
         }) 

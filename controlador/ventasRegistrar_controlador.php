@@ -50,16 +50,13 @@ class VentasRegistrarControlador extends Controlador{
 
 
     function registrar() {
-        session_start();
-        /* sacar y dividir la informacion en setters futuros */
         
         $infoVenta = json_decode($_POST["infoAdicional"],true);
-        $infoVenta["docVendedor"] = $_SESSION["docUsuario"] = 1005458712;
 
-        // print_r($infoVenta);
+        $infoVenta["docVendedor"] = $_SESSION["usuario"]["documento"];
 
         $this->instanciaModelo->setListaProductos($infoVenta["infoProductos"]);
-        $this->instanciaModelo->setDocCliente($infoVenta["docCliente"]);
+        $this->instanciaModelo->setDocCliente($infoVenta["docCliente"]); 
         $this->instanciaModelo->setDocVendedor($infoVenta["docVendedor"]);
         $this->instanciaModelo->setCantidadTotal($infoVenta["cantidadTotal"]);
         $this->instanciaModelo->setPrecioTotal($infoVenta["precioTotal"]);

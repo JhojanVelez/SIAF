@@ -21,13 +21,14 @@ class Router {
         $this->url = rtrim($this->url," /,.");
         $this->url = explode("/",$this->url);
         
-        session_start();
         if(empty($_SESSION)) {
             $this->url[0] = "login";
-        } else if (!(empty($_SESSION)) && $this->url[0] == "login" && $this->url[1] == "cerrarSesion"){
-            $this->url[0] = "login";
-        } else if (!(empty($_SESSION)) && $this->url[0] == "login" && $this->url[1] == ""){
+        } else if (!(empty($_SESSION)) && $this->url[0] == "login" && !isset($this->url[1])){
+            //si tiene sesion abierta y si quiere volver entrar a login, no podra
             $this->url[0] = "menu";
+        } else if (!(empty($_SESSION)) && $this->url[0] == "login" && isset($this->url[1])){
+            //si tiene sesion abierta pero esta asi la url login/cerrarSesion, es decir si quiere cerrar sesion
+            $this->url[0] = "login";
         }
 
         //todos los controladores deben llamarse nombre_controlador.php

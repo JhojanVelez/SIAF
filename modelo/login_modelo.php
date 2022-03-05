@@ -27,7 +27,6 @@ class LoginModelo extends ConexionBD{
         $this->result["infoUsuario"] = $this->PDOStmt->fetchAll(PDO::FETCH_ASSOC);
 
         if(count($this->result["infoUsuario"]) != 0) {
-            session_start();
             $_SESSION["usuario"]["documento"] = $this->result["infoUsuario"][0]["EmpDocIdentidad"];
             $_SESSION["usuario"]["nombre"] = $this->result["infoUsuario"][0]["EmpNombre"];
             $_SESSION["usuario"]["apellido"] = $this->result["infoUsuario"][0]["EmpApellido"];
