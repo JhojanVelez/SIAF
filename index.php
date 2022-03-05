@@ -1,6 +1,6 @@
 <?php
-
-
+// error_reporting(E_ALL ^ E_NOTICE);
+error_reporting(E_ALL & ~(E_WARNING|E_NOTICE));
 require("libs/config.php");
 require("libs/getErrores.php");
 require("libs/conexion_BD.php");

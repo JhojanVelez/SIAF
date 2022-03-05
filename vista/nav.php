@@ -1,9 +1,26 @@
 <header class="nav-container">
     <div class="user-icon-container">
         <figure class="user-icon-container__img-usu-container" >
-            <img class="user-icon-container__img" src="fotosEmpleados/default_1.jpeg" alt="usuario IMG">
+            <img 
+            class="user-icon-container__img" 
+            alt="usuario IMG"
+            src=
+                "
+                    <?php 
+                        echo (file_exists("fotosEmpleados/empleado_{$_SESSION["usuario"]["documento"]}.jpeg"))
+                            ? URL_RAIZ."fotosEmpleados/empleado_{$_SESSION["usuario"]["documento"]}.jpeg" 
+                            : URL_RAIZ."fotosEmpleados/default_1.jpeg";
+                    ?>
+                " 
+            >
         </figure>
-        <p class="user-icon-container__nombre-usu" >Antonia Gomez</p>
+        <p class="user-icon-container__nombre-usu" >
+            <?php 
+                $primerNombre = explode(" ",$_SESSION["usuario"]["nombre"])[0];
+                $primerApellido = explode(" ",$_SESSION["usuario"]["apellido"])[0];
+                echo($primerNombre." ".$primerApellido);
+            ?>
+        </p>
     </div>
     <nav>
         <ul class="nav__ul">
@@ -17,7 +34,7 @@
         </ul>
     </nav>
     <div class="boton-cerrar-sesion-container">
-        <a href="login">
+        <a href="<?php echo(URL_RAIZ) ?>login/cerrarSesion">
             <button class="boton-cerrar-sesion-container__boton boton">
                 <div class="sign-out-container">
                     <section class="sign-out-container__img">
