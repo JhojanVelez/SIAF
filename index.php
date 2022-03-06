@@ -11,6 +11,7 @@ require("libs/getErrores.php");
 require("libs/conexion_BD.php");
 require("libs/controlador.php");
 require("libs/router.php");
+require("libs/autenticacionUsuario.php");
 
 /*
 A la hora de instanciar nuestro router, se ejecuta el constructor, este validara la url,

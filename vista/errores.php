@@ -13,9 +13,9 @@
         <article class="errores__descripcion-container">
             <h1 class="errores__h1">Error 404</h1>
             <h3 class="errores__h3">Page Not Found</h3>
-            <p class="errores__parrafo"><?php echo($this->error_message); ?></p>
+            <br>
             <button class="errores__boton-regresar boton">
-                <a class="errores__boton-regresar-link" href="<?php echo URL_RAIZ?>">Regresar al menu</a>
+                <a class="errores__boton-regresar-link" href="<?php echo URL_RAIZ?>">Regresar</a>
             </button>
         </article>
     </div>

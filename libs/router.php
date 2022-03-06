@@ -23,12 +23,22 @@ class Router {
         
         if(empty($_SESSION)) {
             $this->url[0] = "login";
-        } else if (!(empty($_SESSION)) && $this->url[0] == "login" && !isset($this->url[1])){
-            //si tiene sesion abierta y si quiere volver entrar a login, no podra
-            $this->url[0] = "menu";
-        } else if (!(empty($_SESSION)) && $this->url[0] == "login" && isset($this->url[1])){
-            //si tiene sesion abierta pero esta asi la url login/cerrarSesion, es decir si quiere cerrar sesion
-            $this->url[0] = "login";
+        } else if (isset($_SESSION["usuario"]["documento"])){
+            /*
+            Aqui siempre vamos a verificar que el documento del usuario que quiere entrar sea valido, si no es
+            valido siempre lo regresaremos al login para que cree una sesion con un documento valido registrado
+            en el sistema.
+
+            Hice esto porque cualquiera que tenga conocimientos de programacion, puede crear una sesion con las
+            mismas variables y entrar 
+            */
+            $autenticador = new AutenticacionUsuario();
+            $autenticador = $autenticador->autenticarUsuario($_SESSION["usuario"]["documento"]);
+            if(!$autenticador) {
+                $this->url[0] = "login";
+            } else if($autenticador && $this->url[0] == "login" && !isset($this->url[1])) {
+                $this->url[0] = "menu";
+            }
         }
 
         //todos los controladores deben llamarse nombre_controlador.php
