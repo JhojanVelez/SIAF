@@ -60,7 +60,7 @@ import {agregar} from '../../ajax/agregar.js'
         }
         if(e.target.matches(".registrar-ventas__modal-agregar-cliente-btn-cancelar")) {
             $modal_1.toggleAttribute("open");
-            $modal_fallo_por_cliente.toggleAttribute("open");
+            $modal_confirmar_venta.toggleAttribute("open");
         }
         if(e.target.matches(".registrar-ventas__modal-agregar-cliente-confirmacion-btn-confirmar")) {
             $modal_2.toggleAttribute("open");

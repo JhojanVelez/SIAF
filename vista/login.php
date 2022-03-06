@@ -34,21 +34,34 @@
                 <div class="iniciar-sesion__flex-container box-shadow">
                     <div class="iniciar-sesion__container-form">
                         <h1 class="iniciar-sesion__titulo">Inicia Sesion</h1>
-                        <form class="iniciar-sesion__form" action="menu" method="POST">
-                            <input placeholder="Documento de identidad" class="inicio-sesion__input-nombre-usuario"
-                                name="usuarioId" type="text" />
+                        <form 
+                        class="iniciar-sesion__form"
+                        >
+                            <input 
+                            name="documentoUsuario" 
+                            placeholder="Documento de identidad" 
+                            class="inicio-sesion__input-nombre-usuario"     
+                            type="text"
+                            >
                             <br />
-                            <input placeholder="Contraseña" class="inicio-sesion__input-contrasenia-usuario"
-                                name="contraseniaUsuario" type="password" />
+                            <input 
+                            name="passwordUsuario" 
+                            placeholder="Contrase&ntilde;a" 
+                            class="inicio-sesion__input-contrasenia-usuario" 
+                            type="password"
+                            >
                             <br />
-                            <select class="inicio-sesion__select-rol-usuario" name="rolUsuario">
-                                <option value="Rol">Rol</option>
-                                <option value="Ger">Gerente</option>
-                                <option value="Alm">Almacenista</option>
-                                <option value="Far">Farmaceuta</option>
+                            <select 
+                            name="rolUsuario"
+                            class="inicio-sesion__select-rol-usuario" 
+                            >
+                                <option value="">Rol</option>
+                                <option value="GERENTE">Gerente</option>
+                                <option value="ALMACENISTA">Almacenista</option>
+                                <option value="FARMACEUTA">Farmaceuta</option>
                             </select>
                             <br />
-                            <input class="iniciar-sesion__boton-ingresar boton" value="Iniciar Sesion" type="submit"/>
+                            <input class="iniciar-sesion__boton-ingresar boton" value="Iniciar Sesion" type="button">
                         </form>
                         <a class="inicio-sesion__a-olvidaste-contrasenia" href="#">¿Olvidaste tu contraseña?</a>
                     </div>
@@ -123,7 +136,8 @@
         independientemente de si esta en una funcion anonima autoejecutable */
         var URL_RAIZ = "<?php echo URL_RAIZ ?>"
     </script>
-    <script src="<?php echo(URL_RAIZ); ?>public/js/main.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_login_restablecer_password.js" type="module"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_login_iniciar_sesion.js" type="module"></script>
 
 
 </body>

@@ -2,7 +2,7 @@
 
 class ventasRegistrarModelo extends ConexionBD {
 
-    private $codFactura = "FAC0";
+    private $codFactura = "FAC";
     private $listaProductos;
     private $docCliente;
     private $docVendedor;
@@ -11,6 +11,14 @@ class ventasRegistrarModelo extends ConexionBD {
     private $recibe;
     private $cambio;
     private $formaPago;
+
+    //Atributos para cuando se este buscando por atributos en el filtro que aparece en el modal donde se muestran todos los 
+    //productos registrados
+
+    private $codigoBarrasProducto;
+    private $descripcionProducto;
+    private $nomProveedorProducto;
+    private $presentacionProducto;
 
     public function obtenerTodosLosDatos() {
         try {
@@ -30,6 +38,28 @@ class ventasRegistrarModelo extends ConexionBD {
             $this->result["errorPDOMessage"] = $e->errorInfo;
             return $this->result;
         }
+    }
+
+    public function buscarPorAtributos () {
+        $this->sql ="SELECT * 
+                    FROM lista_productos_modal_registrar_venta
+                    WHERE
+                    ProCodBarras    LIKE :codigoBarrasProducto  OR
+                    ProDescripcion  LIKE :descripcionProducto   OR
+                    ProNombre       LIKE :nomProveedorProducto  OR
+                    ProPresentacion LIKE :presentacionProducto
+                    ORDER BY ProDescripcion";
+                    
+        $this->PDOStmt = $this->connection->prepare($this->sql);
+        
+        $this->PDOStmt->bindValue(":codigoBarrasProducto",$this->codigoBarrasProducto);
+        $this->PDOStmt->bindValue(":descripcionProducto",$this->descripcionProducto);
+        $this->PDOStmt->bindValue(":nomProveedorProducto",$this->nomProveedorProducto);
+        $this->PDOStmt->bindValue(":presentacionProducto",$this->presentacionProducto);
+
+        $this->PDOStmt->execute();
+
+        return $this->PDOStmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function registrar () {
@@ -119,6 +149,11 @@ class ventasRegistrarModelo extends ConexionBD {
     function getRecibe () {return $this->recibe;}
     function getCambio () {return $this->cambio;}
     function getFormaPago () {return $this->formaPago;}
+
+    function getCodigoBarrasProducto(){return $this->$codigoBarrasProducto;}
+    function getDescripcionProducto(){return $this->$descripcionProducto;}
+    function getNomProveedorProducto(){return $this->$nomProveedorProducto;}
+    function getPresentacionProducto(){return $this->$presentacionProducto;}
     
     /* Metodos SETTER */
     
@@ -148,6 +183,19 @@ class ventasRegistrarModelo extends ConexionBD {
     }
     function setFormaPago($value) {
         $this->formaPago = $value;
+    }
+
+    function setCodigoBarrasProducto ($value) {
+        $this->codigoBarrasProducto = $value;
+    }
+    function setDescripcionProducto ($value) {
+        $this->descripcionProducto = $value;
+    }
+    function setNomProveedorProducto ($value) {
+        $this->nomProveedorProducto = $value;
+    }
+    function setPresentacionProducto ($value) {
+        $this->presentacionProducto = $value;
     }
 }
 

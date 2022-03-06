@@ -1,0 +1,54 @@
+
+*, *::after, *::before {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    word-break: break-all;
+}
+
+html {
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+.factura-container {
+    background-color: rgb(221, 221, 221);
+    padding: 20px;
+    margin: auto;
+    width: 40%;
+}
+
+.platilla-factura-venta-header {
+    text-align: center;
+}
+
+.platilla-factura-venta__razon-social {
+    font-size: 1.5rem;
+} 
+
+.text-align-left {
+    text-align: left;
+}
+.text-align-right {
+    text-align: right;
+}
+
+.platilla-factura-venta__table{
+    width: 100%;
+}
+
+.platilla-factura-venta__table thead{
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+.platilla-factura-venta__table tbody{
+    border-bottom: 1px solid;
+}
+
+.platilla-factura-venta__table-2 {
+    width: 100%;
+}
+
+.platilla-factura-venta-main h2{
+    text-align: center;
+}

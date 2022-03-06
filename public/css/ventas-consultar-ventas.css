@@ -1,5 +1,9 @@
 @import url(main.css);
 
+tbody tr:hover {
+    cursor: initial;
+}
+
 .nav__li:nth-child(4) {
     border-bottom: 2px solid var(--color-button-text);
 }
@@ -13,7 +17,7 @@
 
 .ventas__filtro {
     display: grid;
-    grid-template-columns: 75% 1fr;
+    grid-template-columns: 80% 1fr;
     grid-template-rows: min-content min-content;
     grid-template-areas:"filter-titulo filter-titulo"
                         "filter-inputs filter-gen-repo";
@@ -28,26 +32,26 @@
 .ventas__filtro-form {
     grid-area: filter-inputs;
     display: grid;
-    grid-template-columns: repeat(2, 25%) 1fr;
-    grid-template-areas:"inp-prod-id   inp-prov-id date-des-has"
-                        "inp-prod-name inp-prov-name date-des-has";
+    grid-template-columns: repeat(2, 20%) 1fr;
+    grid-template-areas:"inp-ven-id   inp-cli-id date-des-has"
+                        "inp-ven-name inp-cli-name date-des-has";
     grid-gap: 2rem;
 }
 
-.ventas__filtro-producto-id {
-    grid-area: inp-prod-id;
+.ventas__filtro-vendedor-id {
+    grid-area: inp-ven-id;
 }
 
-.ventas__filtro-producto-nombre {
-    grid-area: inp-prod-name;
+.ventas__filtro-vendedor-nombre {
+    grid-area: inp-ven-name;
 }
 
-.ventas__filtro-proveedor-id {
-    grid-area: inp-prov-id;
+.ventas__filtro-cliente-id {
+    grid-area: inp-cli-id;
 }
 
-.ventas__filtro-proveedor-nombre {
-    grid-area: inp-prov-name;
+.ventas__filtro-cliente-nombre {
+    grid-area: inp-cli-name;
 }
 
 
@@ -79,7 +83,7 @@
 .ventas_filtro-hasta::before {
     content: '';
     position: absolute;
-    right: 25%;
+    right: 17%;
 }
 
 .ventas_filtro-desde::before{
@@ -92,4 +96,49 @@
 
 .ventas__filtro-gen-repo {
     grid-area: filter-gen-repo;
+}
+
+.ventas-table-link-factura {
+    min-width:30px;
+    max-width:10%;
+    margin: auto;
+}
+
+.ventas-table-link-factura img {
+    position: relative;
+    z-index: 1;
+}
+
+.ventas__table tr:hover .ventas-table-link-factura img {
+    filter: invert();
+}
+
+.ventas__table tr .ventas-table-link-factura:hover img {
+    filter: none;
+    cursor: pointer;
+}
+
+.ventas-table-link-factura {
+    position: relative;
+}
+
+.ventas-table-link-factura::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    bottom: -4px;
+    left: -4px;
+    right: -4px;
+    background-color: var(--color-button-text);
+    border-radius: 100px;
+    transform: scale(0);
+    transition: transform .3s;
+}
+
+.ventas-table-link-factura:hover::before {
+    transform: scale(1);
+}
+
+.ventas-table-td-factura {
+    width: 100px;
 }

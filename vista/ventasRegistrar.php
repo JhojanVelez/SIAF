@@ -14,7 +14,7 @@
     ?>
     <main class="registrar-ventas grid-container-main">
         <section class="registrar-ventas__container-title container-title box-shadow">
-            <h1 class="registrar-ventas__titulo">Registra tus Ventas</h1>
+            <h1 class="registrar-ventas__titulo">Registra Tus Ventas</h1>
         </section>
 
         <section class="registrar-ventas__container-lista-productos contenedor-objetos box-shadow">
@@ -24,7 +24,7 @@
             <div class="registrar-ventas__lista-productos-contenido contenedor-objetos__contenido box-shadow">
                 <!-- Usaremos este template para pintar cada producto en la lista de productos para vender -->
                 <template class="registrar-ventas__lista-productos-template-producto">
-                    <figure class="registrar-ventas__lista-producto contenedor-objetos__objeto box-shadow">
+                    <figure class="registrar-ventas__lista-producto contenedor-objetos__objeto box-shadow" data-codigo-producto="">
                         <div class="registrar-ventas__lista-producto-img contenedor-objetos__objeto-img">
                             <img src="<?php echo(URL_RAIZ); ?>public/imagenes/corazon-icono.svg" alt="">
                         </div>
@@ -77,6 +77,7 @@
                     class="registrar-ventas_registro-id" 
                     id="producto-id" 
                     autofocus
+                    data-input
                     >
                     
                     <label class="registrar-ventas__registro-label" for="producto-nombre">Nombre del producto</label>
@@ -84,6 +85,7 @@
                     name="nombreProducto" 
                     class="registrar-ventas_registro-nombre" 
                     id="producto-nombre"
+                    data-input
                     >
                         <option value="" data-pro-cod-barras ></option>
 
@@ -101,6 +103,7 @@
                     type="number" 
                     class="registrar-ventas_registro-cantidad" 
                     id="product-cantidad"
+                    data-input
                     >
                     </div>
                     <button class="registrar-ventas__registro-boton-buscar-producto boton">Ver Productos</button>
@@ -117,9 +120,13 @@
                 </button>
             </section>
             <section class="registrar-ventas__container-boton">
-                <button type="button" class="registrar-ventas__boton-vender boton" value="Vender">
-                    Vender
-                </button>
+                <input 
+                disabled 
+                type="button" 
+                class="registrar-ventas__boton-vender boton" 
+                value="Vender"
+                title="Por favor agrega un producto a la lista de productos para vender, para poder continuar"
+                >
             </section>
         </section>
 
@@ -137,19 +144,42 @@
                         <form class="registrar-ventas__filtro-form filtro-form" action="">
                             <section class="registrar-ventas__filtro-input-container">
                                 <label class="registrar-ventas__filtro-label filtro-label" for="product-id">Por codigo de barras del producto</label>
-                                <input type="text" class="registrar-ventas_filtro-id" id="product-id">
+                                <input 
+                                name="codigoBarrasProducto"
+                                type="text" 
+                                class="registrar-ventas_filtro-id" 
+                                id="product-id"
+                                autocomplete="off"
+                                >
                             </section>
                             <section class="registrar-ventas__filtro-input-container">
                                 <label class="registrar-ventas__filtro-label filtro-label" for="product-nombre">Por nombre del producto</label>
-                                <input type="text" class="registrar-ventas_filtro-nombre" id="product-nombre">
+                                <input 
+                                name="descripcionProducto"
+                                type="text" 
+                                class="registrar-ventas_filtro-nombre" 
+                                id="product-nombre"
+                                autocomplete="off"
+                                >
                             </section>
                             <section class="registrar-ventas__filtro-input-container">
                                 <label class="registrar-ventas__filtro-label filtro-label" for="product-proveedor">Por nombre del proveedor</label>
-                                <input type="text" class="registrar-ventas_filtro-proveedor" id="product-proveedor">
+                                <input 
+                                name="nomProveedorProducto"
+                                type="text" 
+                                class="registrar-ventas_filtro-proveedor" 
+                                id="product-proveedor"
+                                autocomplete="off"
+                                >
                             </section>
                             <section class="registrar-ventas__filtro-input-container">
                                 <label class="registrar-ventas__filtro-label filtro-label" for="product-id">Por tipo de presentacion</label>
-                                <select name="presentacion" class="registrar-ventas_filtro-presentacion" id="product-presentacion">
+                                <select 
+                                name="presentacionProducto"
+                                class="registrar-ventas_filtro-presentacion" 
+                                id="product-presentacion"
+                                autocomplete="off"
+                                >
                                     <option value="">Presentacion</option>
                                     <option value="TABLETA">TABLETA</option>
                                     <option value="JARABE">JARABE</option>
@@ -215,6 +245,27 @@
                                 </tr>
                             <?php endforeach;?>
                         </tbody>
+
+                        <!-- 
+                        Este template nos permite imprimir la informacion cuando estamos buscando por atributo
+                        pero en este caso lo hacemos con template para hacer uso de los fragmentos
+                    -->
+                    <template class="registrar-ventas__table-template">
+                        <tr 
+                        class="registrar-ventas__table-tboby-tr"
+                        data-pro-cod-barras
+                        >
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </template>
                     </table>
                 </section>
             </dialog>
@@ -467,9 +518,10 @@
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_agregar_productos.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_ver_modal_productos.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_cancelar_venta.js"></script>
-    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_confirmar_venta.js" type="module"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_confirmar_venta.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_agregar_cliente.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_pintar_red_orange_green.js"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/cualquier_modulo_pintar_borde_derecho_input.js"></script>
+    <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_ventas_registrar_buscar_producto_por_atributos.js" type="module"></script>
 </body>
 </html>
