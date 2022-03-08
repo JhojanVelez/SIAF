@@ -374,7 +374,7 @@
             </dialog>
 
             <dialog class="proveedores__modal-agregacion-exitosa dialog-process-result">
-                <h2>¡Exelente!</h2>
+                <h2>¡Excelente!</h2>
                 <p>Has registrado un nuevo proveedor exitosamente</p>
                 <button class="proveedores__modal-agregacion-exitosa-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
@@ -590,7 +590,7 @@
             </dialog>
 
             <dialog class="proveedores__modal-modificacion-exitosa dialog-process-result">
-                <h2>¡Exelente!</h2>
+                <h2>¡Excelente!</h2>
                 <p>Has modificado un proveedor exitosamente</p>
                 <button class="proveedores__modal-modificacion-exitosa-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
@@ -643,7 +643,7 @@
             </dialog>
 
             <dialog class="proveedores__modal-inhabilitacion-exitosa dialog-process-result">
-                <h2>¡Exelente!</h2>
+                <h2>¡Excelente!</h2>
                 <p>Has inhabilitado un proveedor exitosamente</p>
                 <button class="proveedores__modal-inhabilitacion-exitosa-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>

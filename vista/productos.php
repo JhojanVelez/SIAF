@@ -229,7 +229,7 @@
             </dialog>
 
             <dialog class="productos__modal-inhabilitacion-exitosa dialog-process-result">
-                <h2>¡Exelente!</h2>
+                <h2>¡Excelente!</h2>
                 <p>Has inhabilitado un producto exitosamente</p>
                 <button class="productos__modal-inhabilitacion-exitosa-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
@@ -468,7 +468,7 @@
             </dialog>
 
             <dialog class="productos__modal-agregacion-exitosa dialog-process-result">
-                <h2>¡Exelente!</h2>
+                <h2>¡Excelente!</h2>
                 <p>Has registrado un nuevo producto exitosamente</p>
                 <button class="productos__modal-agregacion-exitosa-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
@@ -706,7 +706,7 @@
             </dialog>
 
             <dialog class="productos__modal-edicion-exitosa dialog-process-result">
-                <h2>¡Exelente!</h2>
+                <h2>¡Excelente!</h2>
                 <p>Has editado la informacion exitosamente</p>
                 <button class="productos__modal-edicion-exitosa-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>

@@ -349,7 +349,7 @@
             </dialog>
 
             <dialog class="registrar-ventas__modal-venta-exitosa dialog-process-result">
-                <h2>¡Exelente!</h2>
+                <h2>¡Excelente!</h2>
                 <p>Has registrado tu venta exitosamente</p>
                 <button class="registrar-ventas__modal-venta-exitosa-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
@@ -497,7 +497,7 @@
             </dialog>
 
             <dialog class="registrar-ventas__modal-agregar-cliente-agregacion-exitosa dialog-process-result">
-                <h2>¡Exelente!</h2>
+                <h2>¡Excelente!</h2>
                 <p>Has registrado un nuevo cliente exitosamente</p>
                 <button class="registrar-ventas__modal-agregar-cliente-agregacion-exitosa-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>

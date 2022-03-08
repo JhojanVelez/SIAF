@@ -298,7 +298,7 @@
             </dialog>
 
             <dialog class="salidas__modal-agregacion-exitosa dialog-process-result">
-                <h2>¡Exelente!</h2>
+                <h2>¡Excelente!</h2>
                 <p>Has registrado una nueva salida exitosamente</p>
                 <button class="salidas__modal-agregacion-exitosa-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>

@@ -606,7 +606,6 @@ usuarios, clientes y proveedores */
 /*--------------Estilos para los modales----------------------*/
 
 .transparent-container-modal {
-  min-width: 1500px;
   position: absolute;
   top: 0;
   left: 0;

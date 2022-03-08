@@ -1,5 +1,13 @@
 @import url(main.css);
 
+input[type="button"]:disabled {
+  background-color: #201f3a83;
+  cursor: progress;
+}
+input[type="button"]:disabled:hover {
+  background-color: #201f3a83;
+}
+
 input, select {
   margin-bottom: 1.2rem;
   width: 100%;
@@ -8,20 +16,24 @@ input, select {
 }
 
 .iniciar-sesion {
-  min-width: 1500px;
-  max-width: 80%;
-  height: 100vh;
+  min-height: 100vh;
+  max-width: 100%;
+  min-width: 100px;
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(2,minmax(50%,1000px));
-  justify-items: center;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 100px;
 }
 
 .iniciar-sesion__container {
-  width: 500px;
-  height: 600px;
+  min-height: 100vh;
+  max-height: 700px;
   text-align: center;
+  z-index: 1;
+  display: flex;
+  align-items: center;
 }
 
 /*Codigo css para el logo*/
@@ -30,8 +42,8 @@ input, select {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-rows: 60% 20%;
-  align-content: center;
+  grid-template-rows: 60% 40%;
+  align-content: space-around;
 }
 
 .iniciar-sesion__logo-letras-container {
@@ -123,6 +135,8 @@ input, select {
 
 .iniciar-sesion__logo-titulo-container {
   transform: translateY(100%);
+  max-width: 65%;
+  margin: auto;
 }
 
 
@@ -165,11 +179,13 @@ input, select {
   height: 100%;
   display: flex;
   border-top: 4px solid var(--color-nav-background);
+  padding: 5vh 3vw 10vh;
+  position: relative;
 }
 
 .iniciar-sesion__titulo {
   margin-bottom: 2rem;
-  font-size: 4.1rem;
+  font-size: 3.5rem;
   font-weight: 500;
 }
 
@@ -196,6 +212,30 @@ input, select {
 }
 .inicio-sesion__a-olvidaste-contrasenia:hover {
   text-decoration: underline;
+}
+
+/* -------------------------------- Estilos para el error de login ------------------------------------------- */
+
+.iniciar-sesion-error-container {
+  width: 50%;
+  position: absolute;
+  top: 0;
+  right: -50%;
+  z-index: -1;
+  transform: translateX(-120%);
+}
+
+.iniciar-sesion-error-container__text-container {
+  padding: 10px;
+  border-top: 4px solid var(--color-nav-background);
+  border-bottom: 4px solid var(--color-nav-background);
+  transform: translateX(10px);
+}
+
+@keyframes animacionErrorLogin {
+  to {
+    transform: translateX(0);
+  }
 }
 
 /* ------------------------------------ RESTABLECER CONTRASEÑA ----------------------------------------------- */
