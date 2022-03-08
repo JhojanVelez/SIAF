@@ -486,7 +486,7 @@
             </dialog>
 
             <dialog class="usuarios__modal-agregacion-exitosa dialog-process-result">
-                <h2>¡Exelente!</h2>
+                <h2>¡Excelente!</h2>
                 <p>Has registrado un nuevo usuario exitosamente</p>
                 <button class="usuarios__modal-agregacion-exitosa-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
@@ -694,7 +694,7 @@
             </dialog>
 
             <dialog class="usuarios__modal-modificacion-exitosa dialog-process-result">
-                <h2>¡Exelente!</h2>
+                <h2>¡Excelente!</h2>
                 <p>Has modificado un usuario exitosamente</p>
                 <button class="usuarios__modal-modificacion-exitosa-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
@@ -763,7 +763,7 @@
             </dialog>
 
             <dialog class="usuarios__modal-inhabilitacion-exitosa dialog-process-result">
-                <h2>¡Exelente!</h2>
+                <h2>¡Excelente!</h2>
                 <p>Has inhabilitado un usuario exitosamente</p>
                 <button class="usuarios__modal-inhabilitacion-exitosa-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>

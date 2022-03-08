@@ -42,6 +42,7 @@
                             placeholder="Documento de identidad" 
                             class="inicio-sesion__input-nombre-usuario"     
                             type="text"
+                            data-input
                             >
                             <br />
                             <input 
@@ -49,11 +50,13 @@
                             placeholder="Contrase&ntilde;a" 
                             class="inicio-sesion__input-contrasenia-usuario" 
                             type="password"
+                            data-input
                             >
                             <br />
                             <select 
                             name="rolUsuario"
                             class="inicio-sesion__select-rol-usuario" 
+                            data-input
                             >
                                 <option value="">Rol</option>
                                 <option value="GERENTE">Gerente</option>
@@ -64,6 +67,17 @@
                             <input class="iniciar-sesion__boton-ingresar boton" value="Iniciar Sesion" type="button">
                         </form>
                         <a class="inicio-sesion__a-olvidaste-contrasenia" href="#">¿Olvidaste tu contraseña?</a>
+                    </div>
+
+                    <div class="iniciar-sesion-error-container">
+                        <div class="iniciar-sesion-error-container__text-container box-shadow">
+                            <h2>Upps ...</h2>
+                            <p>No fue posible encontrarte en el sistema, por favor intentalo de nuevo</p>
+                        </div>
+                        <br>
+                        <figure class="iniciar-sesion-error-container__img">
+                            <img src="<?php echo(URL_RAIZ.'public/imagenes/doctor.svg') ?>" alt="">
+                        </figure>
                     </div>
                 </div>
             </section>

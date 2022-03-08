@@ -18,7 +18,6 @@ class LoginControlador extends Controlador{
     }
 
     public function cerrarSesion () {
-        session_start();
         session_unset();
         session_destroy();
         header("location:".URL_RAIZ."login");
