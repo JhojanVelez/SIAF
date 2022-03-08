@@ -5,8 +5,16 @@ php_value display_errors 1
 
 RewriteEngine On
 
+# RewriteCond son condiciones como el if, en este caso si se cumplen alguna de las condiciones
+# que se encuentran abajo, se ejecutara directamente el RewriteRule el cual redirecciona
+# siempre a index.php
 RewriteCond %{REQUEST_FILENAME} !-d
+# si el directorio no existe nos redirecciona a index.php
 RewriteCond %{REQUEST_FILENAME} !-f
+# si el archivo no existe nos redirecciona a index.php
 RewriteCond %{REQUEST_FILENAME} !-l
+# cualquier peticion interna que se haga, como por ejemplo un archivo
+# CSS en un html, no va a ser redirigida al index, si no nos va a permitir 
+# obtener tal archivo CSS
 
 RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
