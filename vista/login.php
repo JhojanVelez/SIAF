@@ -18,10 +18,18 @@
                 <div class="iniciar-sesion__logo-container">
                     <div class="iniciar-sesion__logo-letras-container">
                         <div class="iniciar-sesion__logo-letras">
-                            <div class="iniciar-sesion__logo-letra">S</div>
-                            <div class="iniciar-sesion__logo-letra">I</div>
-                            <div class="iniciar-sesion__logo-letra">A</div>
-                            <div class="iniciar-sesion__logo-letra">F</div>
+                            <div class="iniciar-sesion__logo-container-letra">
+                                <p class="iniciar-sesion__logo-letra">S</p>
+                            </div>
+                            <div class="iniciar-sesion__logo-container-letra">
+                                <p class="iniciar-sesion__logo-letra">I</p>
+                            </div>
+                            <div class="iniciar-sesion__logo-container-letra">
+                                <p class="iniciar-sesion__logo-letra">A</p>
+                            </div>
+                            <div class="iniciar-sesion__logo-container-letra">
+                                <p class="iniciar-sesion__logo-letra">F</p>
+                            </div>
                         </div>
                     </div>
                     <div class="iniciar-sesion__logo-titulo-container">
@@ -86,60 +94,118 @@
 
 
         <div class="restablecer-contrasenia transparent-container-modal">
-            <dialog class="restablecer-contrasenia__dialog restablecer-contrasenia__dialog--1" open>
+            <dialog class="restablecer-contrasenia__dialog restablecer-contrasenia__dialog--1">
                 <span class="restablecer-contrasenia__dialog-cerrar dialog-btn-cerrar">X</span>
-                <h2 class="restablecer-contrasenia__titulo">Ingresa Tu Correo Electronico</h2>
-                <form class="restablecer-contrasenia__form-1">
-                    <input placeholder="Correo Electronico" class="restablecer-contrasenia__input-email"
-                        name="emailRestablecerContrasenia" type="email">
+                <h2 class="restablecer-contrasenia__titulo dialog-title">Ingresa Algunos Datos ...</h2>
+                <form class="restablecer-contrasenia__form-1 restablecer-contrasenia__form">
+                    <input
+                    name="documentoUsuario"
+                    type="text" 
+                    placeholder="Numero de Documento"
+                    data-input
+                    >
+                    <input 
+                    name="correoUsuario"
+                    placeholder="Correo Electronico" 
+                    class="restablecer-contrasenia__input-email" 
+                    type="email"
+                    data-input
+                    >
                     <br>
                 </form>
-                <button class="restablecer-contrasenia__boton-verificar restablecer-contrasenia__boton-verificar--correo boton">Verificar</button>
-                <p class="restablecer-contrasenia__parrafo"><b>NOTA:</b> El correo debe estar registrado en el sistema
-                </p>
+                <br>
+                <div class="dialog-container-bts">
+                    <button class="restablecer-contrasenia__boton-verificar restablecer-contrasenia__boton-verificar--info boton">Verificar</button>
+                </div>
+                <br>
+                <p class="restablecer-contrasenia__parrafo"><b>NOTA:</b> La informacion ingresada debe estar registrada en el sistema.</p>
+            </dialog>
+
+            <dialog class="restablecer-contrasenia-dialog-1-result-fallo dialog-process-result">
+                <h2>Lo sentimos ...</h2>
+                <p>Los datos ingresados no existen</p>
+                <button class="restablecer-contrasenia-dialog-1-result-fallo__boton dialog-process-result__btn boton" >Volver</button>
+            </dialog>
+
+
+            <dialog class="restablecer-contrasenia__dialog restablecer-contrasenia__dialog--2">
+                <span class="restablecer-contrasenia__dialog-cerrar dialog-btn-cerrar">X</span>
+                <h2 class="restablecer-contrasenia__titulo dialog-title">Codigo de Verificación</h2>
+                <form class="restablecer-contrasenia__form-2 restablecer-contrasenia__form">
+                    <input 
+                    name="valor1RestablecerContrasenia" 
+                    autocomplete="off" 
+                    maxlength="1" 
+                    class="restablecer-contrasenia__input-valor"
+                    type="text" 
+                    autofocus
+                    >
+                    <input 
+                    name="valor2RestablecerContrasenia" 
+                    autocomplete="off" 
+                    maxlength="1" 
+                    class="restablecer-contrasenia__input-valor" 
+                    type="text"
+                    >
+                    <input 
+                    name="valor3RestablecerContrasenia" 
+                    autocomplete="off" 
+                    maxlength="1" 
+                    class="restablecer-contrasenia__input-valor"
+                    type="text"
+                    >
+                    <input 
+                    name="valor4RestablecerContrasenia" 
+                    autocomplete="off" 
+                    maxlength="1" 
+                    class="restablecer-contrasenia__input-valor"
+                    type="text"
+                    >
+                </form>
+                <br>
+                <br>
+                <p class="restablecer-contrasenia__parrafo">Se te ha enviado un código de verificación a tu correo, ingrésalo para poder restablecer tu contraseña de acceso</p>
+                <br>
+                <br>
+                <div class="dialog-container-bts">
+                    <button class="restablecer-contrasenia__boton-verificar restablecer-contrasenia__boton-verificar--codigo boton">Verificar</button>
+                </div>
             </dialog>
 
 
 
-            <dialog class="restablecer-contrasenia__dialog restablecer-contrasenia__dialog--2" open>
-                <span
-                    class="restablecer-contrasenia__dialog-atras restablecer-contrasenia__dialog-atras--dialog--2">&#8617</span>
+
+            <dialog class="restablecer-contrasenia__dialog restablecer-contrasenia__dialog--3">
                 <span class="restablecer-contrasenia__dialog-cerrar dialog-btn-cerrar">X</span>
-                <h2 class="restablecer-contrasenia__titulo">Codigo de Verificación</h2>
-                <form class="restablecer-contrasenia__form-2">
-                    <input autocomplete="off" maxlength="1" class="restablecer-contrasenia__input-valor"
-                        name="valor1RestablecerContrasenia" type="text" autofocus>
-                    <input autocomplete="off" maxlength="1" class="restablecer-contrasenia__input-valor"
-                        name="valor2RestablecerContrasenia" type="text">
-                    <input autocomplete="off" maxlength="1" class="restablecer-contrasenia__input-valor"
-                        name="valor3RestablecerContrasenia" type="text">
-                    <input autocomplete="off" maxlength="1" class="restablecer-contrasenia__input-valor"
-                        name="valor4RestablecerContrasenia" type="text">
-                    <br>
-                </form>
-                <p class="restablecer-contrasenia__parrafo">Se te ha enviado un código de verificación a
-                    tu correo, ingrésalo para poder restablecer tu contraseña de acceso</p>
-                <button
-                    class="restablecer-contrasenia__boton-verificar restablecer-contrasenia__boton-verificar--codigo boton">Verificar</button>
-            </dialog>
-
-
-
-
-            <dialog class="restablecer-contrasenia__dialog restablecer-contrasenia__dialog--3" open>
-                <span
-                    class="restablecer-contrasenia__dialog-atras restablecer-contrasenia__dialog-atras--dialog--3">&#8617</span>
-                <span class="restablecer-contrasenia__dialog-cerrar dialog-btn-cerrar">X</span>
-                <h2 class="restablecer-contrasenia__titulo">Ingresa Tu Nueva Contraseña</h2>
+                <h2 class="restablecer-contrasenia__titulo dialog-title">Ingresa Tu Nueva Contraseña</h2>
                 <form class="restablecer-contrasenia__form-3">
-                    <input class="restablecer-contrasenia__input-contraseña" name="nuevaContraseña"
-                        placeholder="Contraseña" type="password">
+                    <input 
+                    class="restablecer-contrasenia__input-contraseña" 
+                    name="passwordUsuario"
+                    placeholder="Contraseña" 
+                    type="password">
                     <br>
-                    <input class="restablecer-contrasenia__input-contraseña" name="confirmacionNuevaContraseña"
-                        placeholder="Confirmar Contraseña" type="password">
+                    <input 
+                    class="restablecer-contrasenia__input-contraseña" 
+                    name="confirmacionPasswordUsuario"
+                    placeholder="Confirmar Contraseña" 
+                    type="password"
+                    >
                 </form>
-                <button
-                    class="restablecer-contrasenia__boton-verificar restablecer-contrasenia__boton-verificar--restablecer-contraseña boton">Restablecer</button>
+                <br>
+                <div class="dialog-container-bts">
+                    <button class="restablecer-contrasenia__boton-verificar restablecer-contrasenia__boton-verificar--restablecer-contraseña boton">Restablecer</button>
+                </div>
+            </dialog>
+            <dialog class="restablecer-contrasenia-dialog-3-result-exito dialog-process-result">
+                <h2>¡Excelente!</h2>
+                <p>Has restablecido tu contrase&ntilde;a correctamente</p>
+                <button class="restablecer-contrasenia-dialog-3-result-exito__boton dialog-process-result__btn boton" >Ok</button>
+            </dialog>
+            <dialog class="restablecer-contrasenia-dialog-3-result-fallo dialog-process-result">
+                <h2>Intentalo de nuevo ...</h2>
+                <p>No se pudo realizar correctamente el restablecimiento de tu contrase&ntilde;a de acceso</p>
+                <button class="restablecer-contrasenia-dialog-3-result-fallo__boton dialog-process-result__btn boton" >Volver</button>
             </dialog>
         </div>
     </main>
@@ -152,7 +218,6 @@
     </script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_login_restablecer_password.js" type="module"></script>
     <script src="<?php echo(URL_RAIZ); ?>public/js/modulo_login_iniciar_sesion.js" type="module"></script>
-
 
 </body>
 

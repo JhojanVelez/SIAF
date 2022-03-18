@@ -30,7 +30,6 @@ input, select {
 .iniciar-sesion__container {
   min-height: 100vh;
   max-height: 700px;
-  text-align: center;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -39,8 +38,8 @@ input, select {
 /*Codigo css para el logo*/
 
 .iniciar-sesion__logo-container {
-  height: 100%;
-  width: 100%;
+  min-height: 500px;
+  text-align: center;
   display: grid;
   grid-template-rows: 60% 40%;
   align-content: space-around;
@@ -80,7 +79,7 @@ input, select {
   animation-delay: 2s;
 }
 
-.iniciar-sesion__logo-letra {
+.iniciar-sesion__logo-container-letra {
   background-color: var(--color-nav-background);
   border-radius: 15px;
   font-size: 3rem;
@@ -93,19 +92,19 @@ input, select {
   animation-fill-mode: forwards;
   animation-delay: 1s;
 }
-.iniciar-sesion__logo-letra:nth-child(1) {
+.iniciar-sesion__logo-container-letra:nth-child(1) {
   grid-area: S;
   transform: translate(-100%,100%);
 }
-.iniciar-sesion__logo-letra:nth-child(2) {
+.iniciar-sesion__logo-container-letra:nth-child(2) {
   grid-area: I;
   transform: translate(-65%,200%);
 }
-.iniciar-sesion__logo-letra:nth-child(3) {
+.iniciar-sesion__logo-container-letra:nth-child(3) {
   grid-area: A;
   transform: translate(-35%,100%);
 }
-.iniciar-sesion__logo-letra:nth-child(4) {
+.iniciar-sesion__logo-container-letra:nth-child(4) {
   grid-area: F;
   transform: translate(200%,0);
 }
@@ -117,7 +116,7 @@ input, select {
 }
 
 .iniciar-sesion__logo-titulo {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: var(--color-nav-background);
 }
 
@@ -240,33 +239,16 @@ input, select {
 
 /* ------------------------------------ RESTABLECER CONTRASEÑA ----------------------------------------------- */
 
-.restablecer-contrasenia__dialog {
-  max-width: 40%;
-  min-width: 500px;
-  height: 60%;
-  opacity: 0;
-  visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+ .restablecer-contrasenia__dialog {
+  max-width: 450px;
   color: inherit;
 }
 
 .restablecer-contrasenia__titulo {
-  width: 90%;
-  font-size: 3rem;
-  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.restablecer-contrasenia__form-1 {
-  width: 50%;
-}
-
-.restablecer-contrasenia__boton-verificar {
-  width: 50%;
-  background-color: var(--color-button-background);
-  color: var(--color-button-text);
+.restablecer-contrasenia__form {
 }
 
 .restablecer-contrasenia__boton-verificar:hover {
@@ -293,23 +275,15 @@ input, select {
   color: var(--color-nav-background);
 }
 
-.restablecer-contrasenia__dialog--2 {
-  padding-bottom: 3rem;
-}
-
 .restablecer-contrasenia__dialog--2 .restablecer-contrasenia__parrafo {
-  width: 70%;
   text-align: center;
 }
 
 .restablecer-contrasenia__form-2 {
-  max-width: 60%;
-  min-width: 438px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
-.restablecer-contrasenia__form-2 * {
-  width: 22%;
-  height: 100px;
+.restablecer-contrasenia__input-valor {
   border: none;
   border-bottom: 3px solid black;
   outline: none;
@@ -317,15 +291,12 @@ input, select {
   font-weight: bolder;
   text-align: center;
   margin: 0 5px 0 5px;
-  transition: background-color 0.5 s;
+  transition: background-color 0.5s;
+  padding: 5px 0;
 }
 
-.restablecer-contrasenia__form-2 *:focus {
+.restablecer-contrasenia__form-2 input:focus {
   background-color: var(--color-main-background);
-}
-
-.restablecer-contrasenia__form-3 {
-  width: 50%;
 }
 
 .restablecer-contrasenia__form-3 * {
@@ -333,9 +304,4 @@ input, select {
   font-size: 1rem;
   width: 100%;
   margin-bottom: 1rem;
-}
-
-.dialog-visible {
-  opacity: 1;
-  visibility: visible;
 }
