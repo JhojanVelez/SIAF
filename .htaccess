@@ -18,3 +18,8 @@ RewriteCond %{REQUEST_FILENAME} !-l
 # obtener tal archivo CSS
 
 RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
+#Independientemente de lo que se ponga en la url despues de http://localhost/SIAF/
+#siempre seremos redireccionados al index.php y todo lo que se ponga despues de 
+#http://localhost/SIAF/ se va a guardar en una variable GET que luego accederemos
+#con el $_GET["url"].
+

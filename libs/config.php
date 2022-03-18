@@ -1,5 +1,12 @@
 <?php
 
+/* Datos para enviar Correos Electronicos */
+
+define('SMTP_SERVER', "smtp.gmail.com");
+define('EMAIL', "somossiaf@gmail.com");
+define('PASSWORD_EMAIL', "somosSIAF1234");
+define('NOMBRE_EMAIL', "SIAF");
+
 /*Conexion local*/
 
 // define("SGBD", "mysql");

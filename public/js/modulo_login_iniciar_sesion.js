@@ -38,7 +38,7 @@ import { buscarUsuarioLogin } from "../../ajax/buscarUsuarioLogin.js";
                         })
                         //simplemente recargo la pagina porque si en la url esta con el login, lo 
                         //redireccionara a el menu puesto que ya hay una sesion iniciada
-                        location.reload();
+                        location.href = URL_RAIZ;
                     } else {
                         $containerDoctorError.style.animation = "animacionErrorLogin 1s forwards"
                     }

@@ -56,11 +56,11 @@ class Router {
             por lo tanto si existe un modelo lo cargamos
             */
             if(file_exists($this->urlModel)) {
-                $controller->cargarModelo($this->urlModel);
+                $model = $controller->cargarModelo($this->urlModel);
 
                 if(isset($this->url[1])) {//si hay metodo
 
-                    if(method_exists($controller,$this->url[1])) {//si existe el metodo en la clase
+                    if(method_exists($controller,$this->url[1]) && method_exists($model,$this->url[1])) {//si existe el metodo en la clase
 
                         if(isset($this->url[1]) && isset($this->url[2])){ //si el metodo tiene parametro
                             $controller->{$this->url[1]}($this->url[2]);

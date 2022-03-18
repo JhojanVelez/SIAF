@@ -1,4 +1,4 @@
-export function editar (formulario,idSeleccionado,modulo,URL_RAIZ) {
+export function restablecerPassword (formulario,idUsuario,modulo,URL_RAIZ) {
     return new Promise((resolve, reject)=> {
         const xhr = new XMLHttpRequest,
             formData = new FormData(formulario);
@@ -23,7 +23,7 @@ export function editar (formulario,idSeleccionado,modulo,URL_RAIZ) {
                 resolve(JSON.parse(xhr.response));
             }
         }) 
-        xhr.open("POST", `${URL_RAIZ}`+`${modulo}/editar/${idSeleccionado}`);
+        xhr.open("POST", `${URL_RAIZ}`+`${modulo}/restablecerPassword/${idUsuario}`);
 
         xhr.send(formData);
     })

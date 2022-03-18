@@ -73,7 +73,6 @@ class ClientesControlador extends Controlador{
         } catch (Exception $e) {
             $this->result["complete"] = false;
             $this->result["errorMessage"] = $e->getMessage();
-            $this->result["errorMessage"] = $_POST;
             echo(json_encode($this->result));
         }
     }
