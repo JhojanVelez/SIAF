@@ -24,6 +24,8 @@ class ConexionBD {
             new GetErrores("Error en la conexion a la base de datos");
         }
     }
+
+    public function generarReporte () {}
 }
 
 ?>

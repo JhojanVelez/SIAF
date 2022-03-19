@@ -74,7 +74,7 @@
                             <br />
                             <input class="iniciar-sesion__boton-ingresar boton" value="Iniciar Sesion" type="button">
                         </form>
-                        <a class="inicio-sesion__a-olvidaste-contrasenia" href="#">¿Olvidaste tu contraseña?</a>
+                        <a class="inicio-sesion__a-olvidaste-contrasenia">¿Olvidaste tu contraseña?</a>
                     </div>
 
                     <div class="iniciar-sesion-error-container">
@@ -179,11 +179,29 @@
                 <span class="restablecer-contrasenia__dialog-cerrar dialog-btn-cerrar">X</span>
                 <h2 class="restablecer-contrasenia__titulo dialog-title">Ingresa Tu Nueva Contraseña</h2>
                 <form class="restablecer-contrasenia__form-3">
-                    <input 
-                    class="restablecer-contrasenia__input-contraseña" 
-                    name="passwordUsuario"
-                    placeholder="Contraseña" 
-                    type="password">
+                    <section class="restablecer-contrasenia-form-3__input-1-container">
+                        <input 
+                        class="restablecer-contrasenia__input-contraseña" 
+                        name="passwordUsuario"
+                        placeholder="Contraseña" 
+                        type="password"
+                        >
+                        <figure class="restablecer-contrasenia-dialog-3-alert-password">
+                            <div class="restablecer-contrasenia-dialog-3-alert-password__alert box-shadow">
+                                <h4 class="restablecer-contrasenia-dialog-3-alert-password__alert-title">Recuerda...</h4>
+                                <p class="restablecer-contrasenia-dialog-3-alert-password__alert-text">Una contraseña segura debe cumplir como minimo los siguientes parametros:</p>
+                                <ul class="restablecer-contrasenia-dialog-3-alert-password__alert-list-ul">
+                                    <li>Debe contener como minimo 8 caracteres.</li>
+                                    <li>Debe contener por lo menos 1 letra minuscula.</li>
+                                    <li>Debe contener por lo menos 1 letra MAYUSCULA.</li>
+                                    <li>Debe contener por lo menos 1 digito del 0 al 9.</li>
+                                    <li>Debe contener por lo menos un caracter especial como por ejemplo(! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _` { | } ~ ).</li>
+                                </ul>
+                            </div>
+                        </figure>
+                        <span class="pass-correcto"></span>
+                        <span class="pass-incorrecto"></span>
+                    </section>
                     <br>
                     <input 
                     class="restablecer-contrasenia__input-contraseña" 
@@ -192,6 +210,7 @@
                     type="password"
                     >
                 </form>
+                <p class="restablecer-contrasenia-dialog-3_text-no-coincide">Las contrase&ntilde;as no coinciden</p>
                 <br>
                 <div class="dialog-container-bts">
                     <button class="restablecer-contrasenia__boton-verificar restablecer-contrasenia__boton-verificar--restablecer-contraseña boton">Restablecer</button>

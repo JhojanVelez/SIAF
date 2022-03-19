@@ -76,9 +76,9 @@ class LoginModelo extends ConexionBD{
 
         //Creando el correo electronico
         
-        require 'libs/phpMailer/PHPMailer/src/Exception.php';
-        require 'libs/phpMailer/PHPMailer/src/PHPMailer.php';
-        require 'libs/phpMailer/PHPMailer/src/SMTP.php';
+        require 'libs/phpMailer/phpmailer/src/Exception.php';
+        require 'libs/phpMailer/phpmailer/src/PHPMailer.php';
+        require 'libs/phpMailer/phpmailer/src/SMTP.php';
 
         $mail = new PHPMailer(true);
 
