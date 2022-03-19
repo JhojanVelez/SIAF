@@ -248,9 +248,6 @@ input, select {
   margin-bottom: 2rem;
 }
 
-.restablecer-contrasenia__form {
-}
-
 .restablecer-contrasenia__boton-verificar:hover {
   background-color: var(--color-button-background-hover);
 }
@@ -285,7 +282,7 @@ input, select {
 }
 .restablecer-contrasenia__input-valor {
   border: none;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid var(--color-nav-background);
   outline: none;
   font-size: 4rem;
   font-weight: bolder;
@@ -299,9 +296,91 @@ input, select {
   background-color: var(--color-main-background);
 }
 
-.restablecer-contrasenia__form-3 * {
+.restablecer-contrasenia__form-3 .restablecer-contrasenia__input-contraseña {
   outline: none;
   font-size: 1rem;
   width: 100%;
   margin-bottom: 1rem;
+}
+
+.restablecer-contrasenia-dialog-3_text-no-coincide{
+  display: none;
+  text-align: center;
+  color: red;
+}
+
+.restablecer-contrasenia-form-3__input-1-container {
+  position: relative;
+}
+
+.restablecer-contrasenia-dialog-3-alert-password {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -25px;
+  left: 105%;
+  transition: opacity .5s;
+}
+
+.pass-correcto,
+.pass-incorrecto {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    visibility: hidden;
+    opacity: 0;
+}
+
+.pass-correcto {
+    background-image: url(../imagenes/correcto.png);
+}
+
+.pass-incorrecto {
+    background-image: url(../imagenes/incorrecto.png);
+}
+
+.restablecer-contrasenia-dialog-3-alert-password__alert {
+  min-width: 230px;
+  font-size: .8rem;
+  padding: 1rem 1.5rem;
+  background-color: var(--color-text);
+  color: var(--color-button-text);
+  position: relative;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.restablecer-contrasenia-dialog-3-alert-password__alert::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 33px;
+  left: -42px;
+  width: 45px;
+  height: 10px;
+  border: 17px solid var(--color-text);
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+
+}
+
+.restablecer-contrasenia-dialog-3-alert-password__alert-title {
+  font-size: 1.5rem;
+}
+
+.restablecer-contrasenia-dialog-3-alert-password__alert-list-ul {
+  padding-left: 10%;
+}
+
+.restablecer-contrasenia-dialog-3-alert-password__alert-list-ul li{
+  list-style: disc;
 }

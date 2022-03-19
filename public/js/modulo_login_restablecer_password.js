@@ -20,7 +20,9 @@ import {restablecerPassword} from '../../ajax/restablecerPassword.js'
   
   let validadorFormulario;
 
-  let validadorPasos = 0;
+  /* Patron para validacion de Password */
+
+  let patronValidarPassword = "^(?=.*[0-9]+)(?=.*[A-Z]+)(?=.*[a-z]+)(?=.*[\!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\\[\\]\^\_\`\{\|\}\~]+).{8,}$"
 
   d.addEventListener("click", (e) => {
     if (e.target.matches(".inicio-sesion__a-olvidaste-contrasenia")) {
@@ -41,7 +43,6 @@ import {restablecerPassword} from '../../ajax/restablecerPassword.js'
             infoCodigoAleatorio = res;
             $modal_2.toggleAttribute("open");
             $form_2.valor1RestablecerContrasenia.focus();
-            validadorPasos = 1;
           });
         } else {
           $modal_1_error.toggleAttribute("open");
@@ -74,11 +75,11 @@ import {restablecerPassword} from '../../ajax/restablecerPassword.js'
       if(validadorFormulario) {
         $modal_2.toggleAttribute("open");
         $modal_3.toggleAttribute("open");
+        $form_3.passwordUsuario.focus();
         $form_2.querySelectorAll("input").forEach(el => {
           el.style.borderBottom = "3px solid rgb(146, 208, 80)";
           el.classList.add("input-valido");
         })
-        validadorPasos = 2;
       } else {
         $form_2.querySelectorAll("input").forEach(el => {
           el.style.borderBottom = "3px solid red";
@@ -88,18 +89,56 @@ import {restablecerPassword} from '../../ajax/restablecerPassword.js'
     }
 
     if (e.target.matches(".restablecer-contrasenia__boton-verificar--restablecer-contraseña")) {
-      restablecerPassword($form_3,infoUsuario[0].EmpDocIdentidad,"login",URL_RAIZ)
-      .then(res=> {
-        console.log(res);
-        if(res.complete) {
-          $modal_3.toggleAttribute("open");
-          $modal_3_exito.toggleAttribute("open");
-        } else {
-          $modal_3.toggleAttribute("open");
-          $modal_3_error.querySelector("p").innerHTML = res.PDOError;
-          $modal_3_error.toggleAttribute("open");
-        }
-      });
+      
+      validadorFormulario = true;
+
+      let passwordUsuario = $form_3.passwordUsuario.value,
+          confirmacionPasswordUsuario = $form_3.confirmacionPasswordUsuario.value;
+
+      if(passwordUsuario == "") {
+        $form_3.passwordUsuario.classList.add("input-invalido");
+        validadorFormulario = false
+      } else {
+        $form_3.passwordUsuario.classList.remove("input-invalido");
+      }
+      if(confirmacionPasswordUsuario == "") {
+        $form_3.confirmacionPasswordUsuario.classList.add("input-invalido");
+        validadorFormulario = false
+      } else {
+        $form_3.confirmacionPasswordUsuario.classList.remove("input-invalido");
+      }
+
+      if (!validadorFormulario) return;
+      
+      if(passwordUsuario != confirmacionPasswordUsuario) {
+        $form_3.passwordUsuario.classList.add("input-invalido");
+        $form_3.confirmacionPasswordUsuario.classList.add("input-invalido");
+        $modal_3.querySelector(".restablecer-contrasenia-dialog-3_text-no-coincide")
+          .style.display = "block";
+        validadorFormulario = false;
+      } else {
+        $modal_3.querySelector(".restablecer-contrasenia-dialog-3_text-no-coincide")
+          .style.display = "none";
+        $form_3.passwordUsuario.classList.remove("input-invalido");
+        $form_3.confirmacionPasswordUsuario.classList.remove("input-invalido");
+      }
+
+
+      
+      if(validarPassword() && validadorFormulario) {
+        restablecerPassword($form_3,infoUsuario[0].EmpDocIdentidad,"login",URL_RAIZ)
+        .then(res=> {
+          console.log(res);
+          if(res.complete) {
+            $modal_3.toggleAttribute("open");
+            $modal_3_exito.toggleAttribute("open");
+          } else {
+            $modal_3.toggleAttribute("open");
+            $modal_3_error.querySelector("p").innerHTML = res.PDOError;
+            $modal_3_error.toggleAttribute("open");
+          }
+        });
+      }
     }
 
     if(e.target.matches(".restablecer-contrasenia-dialog-3-result-exito__boton")) {
@@ -135,4 +174,37 @@ import {restablecerPassword} from '../../ajax/restablecerPassword.js'
       e.target.nextElementSibling.focus()
     }
   });
+
+  $form_3.addEventListener("keyup",e=> {
+    if(e.target == $form_3.passwordUsuario) {
+      validarPassword();
+    }
+  })
+
+  function validarPassword () {
+    let regex = new RegExp(patronValidarPassword,"g");
+    console.log($form_3.passwordUsuario.value);
+    if(regex.test($form_3.passwordUsuario.value)) {
+        $form_3.passwordUsuario.classList.remove("input-invalido");
+        $form_3.passwordUsuario.classList.add("input-valido");
+        $form_3.querySelector(".pass-correcto").classList.add("visible");
+        $form_3.querySelector(".pass-incorrecto").classList.remove("visible");
+        return true;
+    } else {
+        $form_3.passwordUsuario.classList.remove("input-valido");
+        $form_3.passwordUsuario.classList.add("input-invalido");
+        $form_3.querySelector(".pass-correcto").classList.remove("visible");
+        $form_3.querySelector(".pass-incorrecto").classList.add("visible");
+        return false;
+    }
+}
+
+  /* eventos que aparecen y desaparecen el aviso de la contraseña */
+
+  $form_3.passwordUsuario.addEventListener("focus", e => {
+    e.target.nextElementSibling.classList.add("visible");
+  })
+  $form_3.passwordUsuario.addEventListener("blur", e => {
+    e.target.nextElementSibling.classList.remove("visible");
+})
 })();
