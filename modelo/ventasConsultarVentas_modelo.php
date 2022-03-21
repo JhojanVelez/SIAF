@@ -24,7 +24,7 @@ class VentasConsultarVentasModelo extends ConexionBD{
         }
     }
 
-    public function obtenerDatosFacturaVenta () {
+    public function generarFactura () {
         try {
 
             $this->sql = "SELECT * FROM ventas WHERE FacCodigo = ?";
