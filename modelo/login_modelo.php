@@ -10,6 +10,7 @@ class LoginModelo extends ConexionBD{
     private $passwordUsuario;
     private $rolUsuario;
     private $correoUsuario;
+    private $validadorPassword;
     
     private $codigoAleatorio = Array();
     
@@ -49,19 +50,17 @@ class LoginModelo extends ConexionBD{
         $this->PDOStmt->execute();
 
         $this->result["infoUsuario"] = $this->PDOStmt->fetchAll(PDO::FETCH_ASSOC);
-
-        $validadorPassword;
         
         if(count($this->result["infoUsuario"]) != 0) {
             
-            $validadorPassword = password_verify($this->passwordUsuario,$this->result["infoUsuario"][0]["EmpPassword"]);
+            $this->validadorPassword = password_verify($this->passwordUsuario,$this->result["infoUsuario"][0]["EmpPassword"]);
             
-            if(!$validadorPassword) {
+            if(!$this->validadorPassword) {
                 $this->result["infoUsuario"] = [];
             }
         }
 
-        if($validadorPassword && count($this->result["infoUsuario"]) != 0) {
+        if($this->validadorPassword && count($this->result["infoUsuario"]) != 0) {
             $_SESSION["usuario"]["documento"] = $this->result["infoUsuario"][0]["EmpDocIdentidad"];
             $_SESSION["usuario"]["nombre"] = $this->result["infoUsuario"][0]["EmpNombre"];
             $_SESSION["usuario"]["apellido"] = $this->result["infoUsuario"][0]["EmpApellido"];
