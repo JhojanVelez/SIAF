@@ -169,6 +169,8 @@ import {restablecerPassword} from '../../ajax/restablecerPassword.js'
 
     if(e.target.matches(".restablecer-contrasenia-dialog-3-result-fallo__boton")) {
       $modal_3_error.toggleAttribute("open");
+      $form_3.passwordUsuario.classList.remove("input-valido");
+      $form_3.querySelector(".pass-correcto").classList.remove("visible");
       $form_3.reset();
       $modal_3.toggleAttribute("open");
     }

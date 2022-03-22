@@ -106,8 +106,11 @@ class UsuariosModelo extends ConexionBD {
             $this->PDOStmt->bindValue(":direccion",$this->direccion);
             $this->PDOStmt->bindValue(":telefono",$this->telefono);
             $this->PDOStmt->bindValue(":correo",$this->correo);
-            $this->PDOStmt->bindValue(":password",$this->password);
             $this->PDOStmt->bindValue(":rol",$this->rol);
+
+            $this->password = password_hash($this->password,PASSWORD_DEFAULT);
+            
+            $this->PDOStmt->bindValue(":password",$this->password);
 
             $this->PDOStmt->execute();
 

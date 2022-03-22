@@ -39,20 +39,29 @@ class LoginModelo extends ConexionBD{
                     FROM tbl_empleados
                     WHERE
                     EmpDocIdentidad = :documentoUsuario AND
-                    EmpPassword     = :passwordUsuario  AND
                     EmpRol          = :rolUsuario";
                     
         $this->PDOStmt = $this->connection->prepare($this->sql);
         
         $this->PDOStmt->bindValue(":documentoUsuario",$this->documentoUsuario);
-        $this->PDOStmt->bindValue(":passwordUsuario",$this->passwordUsuario);
         $this->PDOStmt->bindValue(":rolUsuario",$this->rolUsuario);
 
         $this->PDOStmt->execute();
 
         $this->result["infoUsuario"] = $this->PDOStmt->fetchAll(PDO::FETCH_ASSOC);
 
+        $validadorPassword;
+        
         if(count($this->result["infoUsuario"]) != 0) {
+            
+            $validadorPassword = password_verify($this->passwordUsuario,$this->result["infoUsuario"][0]["EmpPassword"]);
+            
+            if(!$validadorPassword) {
+                $this->result["infoUsuario"] = [];
+            }
+        }
+
+        if($validadorPassword && count($this->result["infoUsuario"]) != 0) {
             $_SESSION["usuario"]["documento"] = $this->result["infoUsuario"][0]["EmpDocIdentidad"];
             $_SESSION["usuario"]["nombre"] = $this->result["infoUsuario"][0]["EmpNombre"];
             $_SESSION["usuario"]["apellido"] = $this->result["infoUsuario"][0]["EmpApellido"];
@@ -143,10 +152,10 @@ class LoginModelo extends ConexionBD{
 
             $this->PDOStmt->execute();
 
-            $oldPassword = $this->PDOStmt->fetchAll(PDO::FETCH_ASSOC)[0]["EmpPassword"];
+            $oldPasswordHash = $this->PDOStmt->fetchAll(PDO::FETCH_ASSOC)[0]["EmpPassword"];
             $newPassword = $this->passwordUsuario;
 
-            if($oldPassword == $newPassword) {
+            if(password_verify($newPassword,$oldPasswordHash)) {
                 throw new PDOException("Por favor intenta con otra contraseña diferente a la actual");
             }
 
@@ -158,6 +167,9 @@ class LoginModelo extends ConexionBD{
             $this->PDOStmt = $this->connection->prepare($this->sql);
             
             $this->PDOStmt->bindValue(":documentoUsuario",$this->documentoUsuario);
+
+            $this->passwordUsuario = password_hash($this->passwordUsuario,PASSWORD_DEFAULT);
+
             $this->PDOStmt->bindValue(":passwordUsuario",$this->passwordUsuario);
 
             $this->PDOStmt->execute();
