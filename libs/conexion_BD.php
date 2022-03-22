@@ -26,6 +26,16 @@ class ConexionBD {
     }
 
     public function generarReporte () {}
+
+    //con tan solo estas lineas de codigo, estamos cerrando conexiones hechas como tambien 
+    //posibles variables que puedan consumir recursos
+    public function __destruct () {
+        $connection=null;
+        $sql=null;
+        $PDOStmt=null;
+        $rows=null;
+        $result = null;
+    }
 }
 
 ?>

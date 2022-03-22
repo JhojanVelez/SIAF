@@ -1,5 +1,5 @@
 <?php
-
+clearstatcache(URL_RAIZ);
 class UsuariosControlador extends Controlador{
     function __construct ($url) {
         $this->controladorMetodoParametro = $url;
@@ -114,6 +114,13 @@ class UsuariosControlador extends Controlador{
 
             $this->result = $this->instanciaModelo->editar(htmlentities(addslashes($idUsuarioSeleccionado)));
             
+            if($this->result["complete"]) {
+                $_SESSION["usuario"]["documento"] = $this->instanciaModelo->getDocumento();
+                $_SESSION["usuario"]["nombre"] = $this->instanciaModelo->getNombre();
+                $_SESSION["usuario"]["apellido"] = $this->instanciaModelo->getApellido();
+                $_SESSION["usuario"]["rol"] = $this->instanciaModelo->getRol();
+            }
+
             echo(json_encode($this->result));
 
         } catch (Exception $e) {
