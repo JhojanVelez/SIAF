@@ -7,7 +7,7 @@ class VentasConsultarVentasControlador extends Controlador{
 
     function generarFactura($codigoFactura) {
         $this->instanciaModelo->setFacCodigo(htmlentities(addslashes($codigoFactura)));
-        $this->data = $this->instanciaModelo->obtenerDatosFacturaVenta();
+        $this->data = $this->instanciaModelo->generarFactura();//en generar solo obtiene los datos de la venta
         $this->cargarVista("plantillaFactura/plantillaFacturaVenta.php");
     }
 

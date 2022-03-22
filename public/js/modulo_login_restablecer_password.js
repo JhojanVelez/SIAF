@@ -20,6 +20,10 @@ import {restablecerPassword} from '../../ajax/restablecerPassword.js'
   
   let validadorFormulario;
 
+  /* Patrones para validacion de Email */
+  let patronEstandardOfficial = "^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$";
+  let patronPersonal = "^([a-z]|[A-Z]|[0-9]|[!#$%&'*+\-\/=?^_`{|}~;])+@([a-z]|[A-Z]|[0-9])+\\.([a-z]|[A-Z]|[0-9])+(\\.|[a-z]|[A-Z]|[0-9])*$";
+
   /* Patron para validacion de Password */
 
   let patronValidarPassword = "^(?=.*[0-9]+)(?=.*[A-Z]+)(?=.*[a-z]+)(?=.*[\!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\\[\\]\^\_\`\{\|\}\~]+).{8,}$"
@@ -32,22 +36,40 @@ import {restablecerPassword} from '../../ajax/restablecerPassword.js'
 
     if (e.target.matches(".restablecer-contrasenia__boton-verificar--info")) {
 
-      $modal_1.toggleAttribute("open");
-      buscarPorAtributos($form_1,'login',URL_RAIZ)
-      .then(res => {
-        console.log(res)
-        if(res.infoUsuario.length != 0) {
-          infoUsuario = res.infoUsuario;
-          consultarCodigoVerificacion($form_1,"login",URL_RAIZ)
-          .then(res=> {
-            infoCodigoAleatorio = res;
-            $modal_2.toggleAttribute("open");
-            $form_2.valor1RestablecerContrasenia.focus();
-          });
-        } else {
-          $modal_1_error.toggleAttribute("open");
-        }
-      })
+      validadorFormulario = true;
+
+      if($form_1.documentoUsuario.value == "") {
+        $form_1.documentoUsuario.classList.add("input-invalido");
+        validadorFormulario = false;
+      } else {
+        $form_1.documentoUsuario.classList.remove("input-invalido");
+      }
+
+      if($form_1.correoUsuario.value == "") {
+        $form_1.correoUsuario.classList.add("input-invalido");
+        validadorFormulario = false;
+      } else {
+        $form_1.correoUsuario.classList.remove("input-invalido");
+      }
+
+      if(validarCorreo() && validadorFormulario) {
+        $modal_1.toggleAttribute("open");
+        buscarPorAtributos($form_1,'login',URL_RAIZ)
+        .then(res => {
+          console.log(res)
+          if(res.infoUsuario.length != 0) {
+            infoUsuario = res.infoUsuario;
+            consultarCodigoVerificacion($form_1,"login",URL_RAIZ)
+            .then(res=> {
+              infoCodigoAleatorio = res;
+              $modal_2.toggleAttribute("open");
+              $form_2.valor1RestablecerContrasenia.focus();
+            });
+          } else {
+            $modal_1_error.toggleAttribute("open");
+          }
+        })
+      }
     }
 
     if(e.target.matches(".restablecer-contrasenia-dialog-1-result-fallo__boton")) {
@@ -160,26 +182,12 @@ import {restablecerPassword} from '../../ajax/restablecerPassword.js'
       $form_2.reset();
       $form_3.reset();
       $form_2.querySelectorAll("input").forEach(el => {
-        el.style.borderBottom = "3px solid black";
+        el.style.borderBottom = "3px solid var(--color-nav-background)";
         el.classList.remove("input-invalido");
         el.classList.remove("input-valido");
       });
     }
   });
-
-  $form_2.addEventListener("keyup", (e) => {
-    if(e.target.nextElementSibling == null) {
-      $form_2.valor1RestablecerContrasenia.focus();
-    } else {
-      e.target.nextElementSibling.focus()
-    }
-  });
-
-  $form_3.addEventListener("keyup",e=> {
-    if(e.target == $form_3.passwordUsuario) {
-      validarPassword();
-    }
-  })
 
   function validarPassword () {
     let regex = new RegExp(patronValidarPassword,"g");
@@ -197,7 +205,39 @@ import {restablecerPassword} from '../../ajax/restablecerPassword.js'
         $form_3.querySelector(".pass-incorrecto").classList.add("visible");
         return false;
     }
-}
+  }
+
+  function validarCorreo () {
+    let regex = new RegExp(patronPersonal,"g");
+
+    if(regex.test($form_1.correoUsuario.value)) {
+      $form_1.correoUsuario.classList.remove("input-invalido");
+      return true;
+    } else {
+      $form_1.correoUsuario.classList.add("input-invalido");
+      return false;
+    }
+  }
+
+  $form_1.addEventListener("keyup",e=> {
+    if(e.target == $form_1.correoUsuario) {
+      validarCorreo();
+    }
+  })
+
+  $form_2.addEventListener("keyup", (e) => {
+    if(e.target.nextElementSibling == null) {
+      $form_2.valor1RestablecerContrasenia.focus();
+    } else {
+      e.target.nextElementSibling.focus()
+    }
+  });
+
+  $form_3.addEventListener("keyup",e=> {
+    if(e.target == $form_3.passwordUsuario) {
+      validarPassword();
+    }
+  })
 
   /* eventos que aparecen y desaparecen el aviso de la contraseña */
 
