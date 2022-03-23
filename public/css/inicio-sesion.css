@@ -30,7 +30,7 @@ input, select {
 
 .iniciar-sesion-modal-bienvenido {
   position: absolute;
-  top: -100%;
+  top: -100vh;
   bottom: 0;
   left: 0;
   right: 0;
@@ -52,20 +52,22 @@ input, select {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* animation: movimientoModalBienvenido_morado 4s forwards; */
 }
 .iniciar-sesion-modal-bienvenido__blanco {
+  /* animation: movimientoModalBienvenido_blanco 2.5s forwards; */
   background-color: var(--color-card-background);
 }
 
 @keyframes movimientoModalBienvenido_morado {
   50% {
-    transform: translateY(100%);
+    transform: translateY(100vh);
   }
   70% {
-    transform: translateY(100%);
+    transform: translateY(100vh);
   }
   100% {
-    transform: translateY(0%);
+    transform: translateY(0vh);
   }
 }
 

@@ -38,6 +38,7 @@ import { buscarUsuarioLogin } from "../../ajax/buscarUsuarioLogin.js";
                         $inputs.forEach(input => {
                             input.classList.add("input-valido");
                         })
+                        scroll(0,0);
                         $containerModalBienvenido_morado.style.animation = "movimientoModalBienvenido_morado 4s forwards";
                         $containerModalBienvenido_blanco.style.animation = "movimientoModalBienvenido_blanco 2.5s forwards";
                         //simplemente recargo la pagina porque si en la url esta con el login, lo 
