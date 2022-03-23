@@ -5,7 +5,9 @@ import { buscarUsuarioLogin } from "../../ajax/buscarUsuarioLogin.js";
         $formulario = d.querySelector(".iniciar-sesion__form"),
         $inputs = $formulario.querySelectorAll("[data-input]"),
         $botonIniciarSesion = $formulario.querySelector(".iniciar-sesion__boton-ingresar"),
-        $containerDoctorError = d.querySelector(".iniciar-sesion-error-container");
+        $containerDoctorError = d.querySelector(".iniciar-sesion-error-container"),
+        $containerModalBienvenido_morado = d.querySelector(".iniciar-sesion-modal-bienvenido__morado"),
+        $containerModalBienvenido_blanco = d.querySelector(".iniciar-sesion-modal-bienvenido__blanco");
 
     let validador;
 
@@ -36,9 +38,13 @@ import { buscarUsuarioLogin } from "../../ajax/buscarUsuarioLogin.js";
                         $inputs.forEach(input => {
                             input.classList.add("input-valido");
                         })
+                        $containerModalBienvenido_morado.style.animation = "movimientoModalBienvenido_morado 4s forwards";
+                        $containerModalBienvenido_blanco.style.animation = "movimientoModalBienvenido_blanco 2.5s forwards";
                         //simplemente recargo la pagina porque si en la url esta con el login, lo 
                         //redireccionara a el menu puesto que ya hay una sesion iniciada
-                        location.href = URL_RAIZ;
+                        setTimeout(() => {
+                            location.href = URL_RAIZ;
+                        },4000)
                     } else {
                         $containerDoctorError.style.animation = "animacionErrorLogin 1s forwards"
                     }
