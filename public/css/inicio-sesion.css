@@ -25,6 +25,62 @@ input, select {
   align-items: center;
   flex-wrap: wrap;
   gap: 100px;
+  position: relative;
+}
+
+.iniciar-sesion-modal-bienvenido {
+  position: absolute;
+  top: -100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 100vh;
+  z-index: 10000;
+}
+
+.iniciar-sesion-modal-bienvenido__morado,
+.iniciar-sesion-modal-bienvenido__blanco {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.iniciar-sesion-modal-bienvenido__morado {
+  background-color: var(--color-nav-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.iniciar-sesion-modal-bienvenido__blanco {
+  background-color: var(--color-card-background);
+}
+
+@keyframes movimientoModalBienvenido_morado {
+  50% {
+    transform: translateY(100%);
+  }
+  70% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes movimientoModalBienvenido_blanco {
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.iniciar-sesion-modal-bienvenido__text-container {
+  
+}
+.iniciar-sesion-modal-bienvenido__text {
+  color: var(--color-card-background);
+  font-size: 10vw;
 }
 
 .iniciar-sesion__container {

@@ -13,6 +13,15 @@
 <body>
     <main>
         <div class="iniciar-sesion">
+            
+            <div class="iniciar-sesion-modal-bienvenido">
+                <div class="iniciar-sesion-modal-bienvenido__blanco"></div>
+                <div class="iniciar-sesion-modal-bienvenido__morado">
+                    <figure class="iniciar-sesion-modal-bienvenido__text-container">
+                        <h2 class="iniciar-sesion-modal-bienvenido__text" >Bienvenido</h2>
+                    </figure>
+                </div>
+            </div>
 
             <section class="iniciar-sesion__container">
                 <div class="iniciar-sesion__logo-container">
