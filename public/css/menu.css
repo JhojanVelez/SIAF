@@ -19,11 +19,21 @@
 /*---------------Estilos para el modal de informacion del perfil de usuario------------*/
 
 .menu-info-usuario-modal {
-    max-width: 1000px;
+    max-width: 1200px;
 }
 
 .menu-info-usuario-modal__container-info {
-    grid-template-columns: repeat(3,minmax(200px,400px));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 100%;
+    gap: 0 3rem;
+}
+
+.menu-info-usuario-modal__flex-item {
+    /* border: 1px solid; */
+    min-width: 230px;
+    max-width: 300px;
 }
 
 .menu-info-usuario-modal__title {

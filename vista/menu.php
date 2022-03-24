@@ -129,42 +129,48 @@
                     >
                 </div>
                 <div class="menu-info-usuario-modal__container-info dialog-main-content">
-                    <section class="menu-info-usuario-modal__perfil-info-item">
-                        <h3>DOCUMENTO DE IDENTIDAD</h3>
-                        <p>___________________________________</p>
-                    </section>
-                    <section class="menu-info-usuario-modal__perfil-info-item">
-                        <h3>TELEFONO</h3>
-                        <p>___________________________________</p>
-                    </section>
-                    <section class="menu-info-usuario-modal__perfil-info-item">
-                        <h3>EPS</h3>
-                        <p>___________________________________</p>
-                    </section>
-                    <section class="menu-info-usuario-modal__perfil-info-item">
-                        <h3>NOMBRES</h3>
-                        <p>___________________________________</p>
-                    </section>
-                    <section class="menu-info-usuario-modal__perfil-info-item">
-                        <h3>CORREO</h3>
-                        <p>___________________________________</p>
-                    </section>
-                    <section class="menu-info-usuario-modal__perfil-info-item">
-                        <h3>RH</h3>
-                        <p>___________________________________</p>
-                    </section>
-                    <section class="menu-info-usuario-modal__perfil-info-item">
-                        <h3>APELLIDOS</h3>
-                        <p>___________________________________</p>
-                    </section>
-                    <section class="menu-info-usuario-modal__perfil-info-item">
-                        <h3>DIRECCION</h3>
-                        <p>___________________________________</p>
-                    </section>
-                    <section class="menu-info-usuario-modal__perfil-info-item">
-                        <h3>ROL</h3>
-                        <p>___________________________________</p>
-                    </section>
+                    <div class="menu-info-usuario-modal__flex-item">
+                        <section class="menu-info-usuario-modal__perfil-info-item">
+                            <h4>DOCUMENTO DE IDENTIDAD</h4>
+                            <p></p>
+                        </section>
+                        <section class="menu-info-usuario-modal__perfil-info-item">
+                            <h4>NOMBRES</h4>
+                            <p></p>
+                        </section>
+                        <section class="menu-info-usuario-modal__perfil-info-item">
+                            <h4>APELLIDOS</h4>
+                            <p></p>
+                        </section>
+                    </div>
+                    <div class="menu-info-usuario-modal__flex-item">
+                        <section class="menu-info-usuario-modal__perfil-info-item">
+                            <h4>EPS</h4>
+                            <p></p>
+                        </section>
+                        <section class="menu-info-usuario-modal__perfil-info-item">
+                            <h4>TELEFONO</h4>
+                            <p></p>
+                        </section>
+                        <section class="menu-info-usuario-modal__perfil-info-item">
+                            <h4>CORREO</h4>
+                            <p></p>
+                        </section>
+                    </div>
+                    <div class="menu-info-usuario-modal__flex-item">
+                        <section class="menu-info-usuario-modal__perfil-info-item">
+                            <h4>DIRECCION</h4>
+                            <p></p>
+                        </section>
+                        <section class="menu-info-usuario-modal__perfil-info-item">
+                            <h4>RH</h4>
+                            <p></p>
+                        </section>
+                        <section class="menu-info-usuario-modal__perfil-info-item">
+                            <h4>ROL</h4>
+                            <p></p>
+                        </section>
+                    </div>
                 </div>
             </dialog>
         </section>
