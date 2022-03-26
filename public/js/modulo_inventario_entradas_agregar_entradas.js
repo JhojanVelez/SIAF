@@ -48,6 +48,11 @@ import {agregar} from '../../ajax/agregar.js';
                 validador = false;
             }
 
+            if($inputs[2].value == 0){
+                $inputs[2].classList.add("input-invalido");
+                validador = false;
+            }
+
             if(isNaN($inputs[3].value)){
                 $inputs[3].classList.add("input-invalido");
                 validador = false;
@@ -103,6 +108,10 @@ import {agregar} from '../../ajax/agregar.js';
         }
         if(e.target.matches(".entradas__modal-agregacion-exitosa-btn")) {
             location.reload();
+        }
+        if(e.target.matches(".entradas__modal-agregacion-fallo-btn")) {
+            $modal_4.toggleAttribute("open");
+            $transparentBackgroundModal.classList.toggle("visible");
         }
     })
     
