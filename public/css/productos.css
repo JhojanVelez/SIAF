@@ -1,6 +1,6 @@
 @import url(main.css);
 
-.nav__li:nth-child(2) {
+.nav__li.productos {
     border-bottom: 2px solid var(--color-button-text);
 }
 

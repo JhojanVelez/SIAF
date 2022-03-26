@@ -6,7 +6,7 @@
 }
 
 
-.nav__li:nth-child(4) {
+.nav__li.ventasMenuCards {
     border-bottom: 2px solid var(--color-button-text);
 }
 

@@ -1,6 +1,6 @@
 @import url(main.css);
 
-.nav__li:nth-child(3) {
+.nav__li.inventarioMenuCards {
     border-bottom: 2px solid var(--color-button-text);
 }
 

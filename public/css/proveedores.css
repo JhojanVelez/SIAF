@@ -4,7 +4,7 @@
     grid-template-columns: repeat(2,minmax(200px,450px));
 }
 
-.nav__li:nth-child(5) {
+.nav__li.proveedores {
     border-bottom: 2px solid var(--color-button-text);
 }
 
