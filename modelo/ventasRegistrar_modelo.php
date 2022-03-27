@@ -125,13 +125,13 @@ class ventasRegistrarModelo extends ConexionBD {
             
             $this->result["complete"] = true;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
+            $this->result["PDOMessage"] = $this->PDOStmt->errorInfo();
             return $this->result;
 
         } catch (PDOException $e) {
             $this->result["complete"] = false;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
-            $this->result["errorPDOMessage"] = $this->PDOStmt->errorInfo();
-            $this->result["errorPDOMessageCode"] = $this->PDOStmt->errorInfo()[1];
+            $this->result["PDOMessage"] = $this->PDOStmt->errorInfo();
             return $this->result;
         }
     }
