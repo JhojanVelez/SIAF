@@ -9,15 +9,15 @@ define('NOMBRE_EMAIL', "SIAF");
 
 /*Conexion local*/
 
-    // define("SGBD", "mysql");
-    // define("DB_HOST", "localhost");
-    // define("DB_NAME", "siaf");
-    // define("DB_USER", "root");
-    // define("DB_PASSWORD", "");
-    // define("DB_CHARSET", "UTF8");
-    // define("DSN", SGBD.":host=".DB_HOST.";dbname=".DB_NAME.";charset=".DB_CHARSET);
-    // define("URL_RAIZ", "http://localhost/SIAF/");
-    // define("URL_FAVICON", "http://localhost/SIAF/public/imagenes/logo-SIAF.svg");
+// define("SGBD", "mysql");
+// define("DB_HOST", "localhost");
+// define("DB_NAME", "siaf");
+// define("DB_USER", "root");
+// define("DB_PASSWORD", "");
+// define("DB_CHARSET", "UTF8");
+// define("DSN", SGBD.":host=".DB_HOST.";dbname=".DB_NAME.";charset=".DB_CHARSET);
+// define("URL_RAIZ", "http://localhost/SIAF/");
+// define("URL_FAVICON", "http://localhost/SIAF/public/imagenes/logo-SIAF.svg");
 
 /* Conexion con el Hosting */
 

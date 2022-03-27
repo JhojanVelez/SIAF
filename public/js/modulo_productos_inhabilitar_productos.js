@@ -33,14 +33,13 @@ import { inhabilitar } from "../../ajax/inhabilitar.js";
 
             inhabilitar(idProductoSeleccionado,"productos",URL_RAIZ)
             .then(res => {
-                if(res.affectedRows != 0) {
+                console.log(res)
+                if(res.complete) {
                     $modal_2.toggleAttribute("open");
                     $modal_2.querySelector("P").innerHTML = res.resultMessage;
-                    console.log(res);
                 } else {
                     $modal_3.toggleAttribute("open");
-                    $modal_3.querySelector("H2").innerHTML = "!Por la seguridad de la informacion¡"
-                    $modal_3.querySelector("P").innerHTML = res.resultMessage || res.errorMessage;
+                    $modal_3.querySelector("P").innerHTML = res.errorMessage;
                 }
             }).catch((err)=> {
                 console.log(err);

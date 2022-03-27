@@ -65,10 +65,10 @@ import {agregar} from '../../ajax/agregar.js';
                     $modal_3.toggleAttribute("open");
                 } else {
                     $modal_4.toggleAttribute("open");
-                    $modal_4.querySelector("H2").innerHTML = "¡Uppss!";
                     $modal_4.querySelector("P").innerHTML = res.errorMessage;
                 }
             }).catch(err => {
+                console.log(err);
                 $modal_4.toggleAttribute("open");
                 $modal_4.querySelector("P").innerHTML = err.errorMessage;
             });

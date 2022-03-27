@@ -114,6 +114,8 @@ class UsuariosModelo extends ConexionBD {
 
             $this->PDOStmt->execute();
 
+            if($this->PDOStmt->errorInfo()[1] == 1062) throw new PDOException;
+            
             /* Las siguientes lineas de codigo se encargan de subir la imagen del directorio temporal al directorio fotosEmpleados */
             if($this->foto['error'] != 4) {
                 $fileType = explode("/",$this->foto['type'])[1];
@@ -131,7 +133,7 @@ class UsuariosModelo extends ConexionBD {
             $this->result["complete"] = false;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
             $this->result["errorPDOMessage"] = $e->errorInfo;
-            $this->result["errorMessage"] = "El usuario $this->documento no pudo ser registrado porque ya existe";
+            if($this->PDOStmt->errorInfo()[1] == 1062) $this->result["errorMessage"] = "El usuario $this->documento no pudo ser registrado porque ya existe";
             return $this->result;
         }
     }
@@ -170,6 +172,8 @@ class UsuariosModelo extends ConexionBD {
 
             $this->PDOStmt->execute();
 
+            if($this->PDOStmt->errorInfo()[1] == 1062) throw new PDOException;
+
             /* Las siguientes lineas de codigo se encargan de subir la imagen del directorio temporal al directorio fotosEmpleados */
             $fileType = ($this->foto['type'] == "")
                         ?"jpeg"
@@ -191,14 +195,12 @@ class UsuariosModelo extends ConexionBD {
 
             $this->result["complete"] = true;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
-            $this->result["resultMessage"] = "Usuario editado correctamente";
             return $this->result;
 
         } catch (PDOException $e) {
             $this->result["complete"] = false;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
-            $this->result["errorPDOMessage"] = $e->errorInfo;
-            $this->result["errorMessage"] = "El usuario no pudo ser modificado porque el Numero de Documento {$this->documento} ya esta registrado en otro usuario, por favor intenta modificar el valor con un Numero de Documento distinto a los demas usuarios";
+            if($this->PDOStmt->errorInfo()[1] == 1062) $this->result["errorMessage"] = "El usuario no pudo ser modificado porque el Numero de Documento {$this->documento} ya esta registrado en otro usuario, por favor intenta modificar el valor con un Numero de Documento distinto a los demas usuarios";
             return $this->result;
         }
     }
@@ -211,6 +213,8 @@ class UsuariosModelo extends ConexionBD {
             $this->PDOStmt = $this->connection->prepare($this->sql);
 
             $this->PDOStmt->execute(array($this->documento));
+            
+            if($this->PDOStmt->errorInfo()[1] == 1451) throw new PDOException();
 
             $this->result["complete"] = true;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
@@ -218,17 +222,16 @@ class UsuariosModelo extends ConexionBD {
                                             ? "El usuario $this->documento se inhabilito correctamente"
                                             : "No se encontro ningun usuario, por lo tanto no se pudo realizar el proceso de inhabilitacion";
 
-            if($this->PDOStmt->errorInfo()[1] == 1451) throw new PDOException();
-
-            unlink("fotosEmpleados/empleado_{$this->documento}.jpeg");
+            if(file_exists("fotosEmpleados/empleado_{$this->documento}.jpeg")){
+                unlink("fotosEmpleados/empleado_{$this->documento}.jpeg");
+            }
 
             return $this->result;
 
         } catch (PDOException $e) {
             $this->result["complete"] = false;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
-            $this->result["errorPDOMessage"] = $e->errorInfo;
-            if($e->errorInfo[1] == 1451) $this->result["errorMessage"] = "El usuario $this->documento no pudo ser inhabilitado porque la infomacion de este usuario es fundamental para el funcionamiento de otras secciones del sistema.";
+            if($this->PDOStmt->errorInfo()[1] == 1451) $this->result["errorMessage"] = "El usuario $this->documento no pudo ser inhabilitado porque la infomacion de este usuario es fundamental para el funcionamiento de otras secciones del sistema.";
             return $this->result;
         }
     }
