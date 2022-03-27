@@ -22,15 +22,13 @@
             ?>
         </p>
     </div>
-    <nav>
+    <nav class="nav">
         <ul class="nav__ul">
-            <li class="nav__li" ><a class="nav__a" href="<?php echo(URL_RAIZ); ?>menu">Menu</a></li>
-            <li class="nav__li" ><a class="nav__a" href="<?php echo(URL_RAIZ); ?>productos">Productos</a></li>
-            <li class="nav__li" ><a class="nav__a" href="<?php echo(URL_RAIZ); ?>inventarioMenuCards">Inventario</a></li>
-            <li class="nav__li" ><a class="nav__a" href="<?php echo(URL_RAIZ); ?>ventasMenuCards">Ventas</a></li>
-            <li class="nav__li" ><a class="nav__a" href="<?php echo(URL_RAIZ); ?>proveedores">Proveedores</a></li>
-            <li class="nav__li" ><a class="nav__a" href="<?php echo(URL_RAIZ); ?>clientes">Clientes</a></li>
-            <li class="nav__li" ><a class="nav__a" href="<?php echo(URL_RAIZ); ?>usuarios">Usuarios</a></li>
+            <?php
+            
+            require_once("./libs/mostrarOpcionesNav.php");
+            
+            ?>
         </ul>
     </nav>
     <div class="boton-cerrar-sesion-container">

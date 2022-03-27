@@ -51,69 +51,13 @@
     </header>
     <main>
         <article class="cards-flex-container">
-            <section class="card box-shadow">
-                <h2 class="card__title">PRODUCTOS</h2>
-                <div class="card__img">
-                    <img src="<?php echo(URL_RAIZ) ?>public/imagenes/productos-icono.svg" alt="">
-                </div>
-                <button class="card__button boton">
-                    <a href="productos">Ingresar</a>
-                </button>
-            </section>
-            <section class="card box-shadow">
-                <h2 class="card__title">INVENTARIO</h2>
-                <div class="card__img">
-                    <img src="<?php echo(URL_RAIZ) ?>public/imagenes/inventario-icono.svg" />
-                </div>
-                <button class="card__button boton">
-                    <a href="inventarioMenuCards">Ingresar</a>
-                </button>
-            </section>
-            <section class="card box-shadow">
-                <h2 class="card__title">VENTAS</h2>
-                <div class="card__img">
-                    <img src="<?php echo(URL_RAIZ) ?>public/imagenes/ventas-icono.svg" alt="">
-                </div>
-                <button class="card__button boton">
-                    <a href="ventasMenuCards">Ingresar</a>
-                </button>
-            </section>
-            <section class="card box-shadow">
-                <h2 class="card__title">PROVEEDORES</h2>
-                <div class="card__img">
-                    <img src="<?php echo(URL_RAIZ) ?>public/imagenes/proveedores-icono.svg" alt="">
-                </div>
-                <button class="card__button boton">
-                    <a href="proveedores">Ingresar</a>
-                </button>
-            </section>
-            <section class="card box-shadow">
-                <h2 class="card__title">CLIENTES</h2>
-                <div class="card__img">
-                    <img src="<?php echo(URL_RAIZ) ?>public/imagenes/clientes-icono.svg" alt="">
-                </div>
-                <button class="card__button boton">
-                    <a href="clientes">Ingresar</a>
-                </button>
-            </section>
-            <section class="card box-shadow">
-                <h2 class="card__title">USUARIOS</h2>
-                <div class="card__img">
-                    <img src="<?php echo(URL_RAIZ) ?>public/imagenes/gestion-usuarios-icono.svg" alt="">
-                </div>
-                <button class="card__button boton">
-                    <a href="usuarios">Ingresar</a>
-                </button>
-            </section>
-            <section class="card box-shadow">
-                <h2 class="card__title">CONSULTAR TUS DATOS</h2>
-                <div class="card__img">
-                    <img src="<?php echo(URL_RAIZ) ?>public/imagenes/consultar-datos-icono.svg" alt="">
-                </div>
-                <button class="card__button card__button--consultar-info-perfil boton">
-                    <a href="#">Ingresar</a>
-                </button>
-            </section>
+            
+            <?php
+            
+            require_once("./libs/mostrarOpcionesMenu.php");
+            
+            ?>
+            
         </article>
 
         <section class="menu-info-usuario-container-modal transparent-container-modal">
@@ -121,46 +65,67 @@
                 <span class="menu-info-usuario-modal__btn-cerrar dialog-btn-cerrar">X</span>
                 <h2 class="menu-info-usuario-modal__title dialog-title">Consulta Tus Datos</h2>
                 <div class="menu-info-usuario-modal__container-img">
-                    <img src="https://i.pinimg.com/736x/9d/0f/c9/9d0fc97fd6a11bb8fdcc9af217a0b38b.jpg" alt="">
+                    <img src="
+                        <?php 
+                            echo (file_exists("fotosEmpleados/empleado_{$_SESSION["usuario"]["documento"]}.jpeg"))
+                                ? URL_RAIZ."fotosEmpleados/empleado_{$_SESSION["usuario"]["documento"]}.jpeg" 
+                                : URL_RAIZ."fotosEmpleados/default_1.jpeg";
+                        ?>
+                        "
+                    >
                 </div>
                 <div class="menu-info-usuario-modal__container-info dialog-main-content">
-                    <section class="menu-info-usuario-modal__perfil-info-item">
-                        <h3>NUMERO DE DOCUMENTO</h3>
-                        <p>___________________________________</p>
-                    </section>
-                    <section class="menu-info-usuario-modal__perfil-info-item">
-                        <h3>TELEFONO</h3>
-                        <p>___________________________________</p>
-                    </section>
-                    <section class="menu-info-usuario-modal__perfil-info-item">
-                        <h3>EPS</h3>
-                        <p>___________________________________</p>
-                    </section>
-                    <section class="menu-info-usuario-modal__perfil-info-item">
-                        <h3>NOMBRES</h3>
-                        <p>___________________________________</p>
-                    </section>
-                    <section class="menu-info-usuario-modal__perfil-info-item">
-                        <h3>CORREO</h3>
-                        <p>___________________________________</p>
-                    </section>
-                    <section class="menu-info-usuario-modal__perfil-info-item">
-                        <h3>RH</h3>
-                        <p>___________________________________</p>
-                    </section>
-                    <section class="menu-info-usuario-modal__perfil-info-item">
-                        <h3>APELLIDOS</h3>
-                        <p>___________________________________</p>
-                    </section>
-                    <section class="menu-info-usuario-modal__perfil-info-item">
-                        <h3>DIRECCION</h3>
-                        <p>___________________________________</p>
-                    </section>
+                    <div class="menu-info-usuario-modal__flex-item">
+                        <section class="menu-info-usuario-modal__perfil-info-item">
+                            <h4>DOCUMENTO DE IDENTIDAD</h4>
+                            <p></p>
+                        </section>
+                        <section class="menu-info-usuario-modal__perfil-info-item">
+                            <h4>NOMBRES</h4>
+                            <p></p>
+                        </section>
+                        <section class="menu-info-usuario-modal__perfil-info-item">
+                            <h4>APELLIDOS</h4>
+                            <p></p>
+                        </section>
+                    </div>
+                    <div class="menu-info-usuario-modal__flex-item">
+                        <section class="menu-info-usuario-modal__perfil-info-item">
+                            <h4>EPS</h4>
+                            <p></p>
+                        </section>
+                        <section class="menu-info-usuario-modal__perfil-info-item">
+                            <h4>TELEFONO</h4>
+                            <p></p>
+                        </section>
+                        <section class="menu-info-usuario-modal__perfil-info-item">
+                            <h4>CORREO</h4>
+                            <p></p>
+                        </section>
+                    </div>
+                    <div class="menu-info-usuario-modal__flex-item">
+                        <section class="menu-info-usuario-modal__perfil-info-item">
+                            <h4>DIRECCION</h4>
+                            <p></p>
+                        </section>
+                        <section class="menu-info-usuario-modal__perfil-info-item">
+                            <h4>RH</h4>
+                            <p></p>
+                        </section>
+                        <section class="menu-info-usuario-modal__perfil-info-item">
+                            <h4>ROL</h4>
+                            <p></p>
+                        </section>
+                    </div>
                 </div>
             </dialog>
         </section>
     </main>
-    
-    <script src="<?php echo(URL_RAIZ) ?>public/js/modulo_menu_consultar_info_perfil.js"></script>
+    <script> 
+        /* Se puso var porque queremos que pueda usarse en todos los contextos, 
+        independientemente de si esta en una funcion anonima autoejecutable */
+        var URL_RAIZ = "<?php echo URL_RAIZ ?>"
+    </script>
+    <script src="<?php echo(URL_RAIZ) ?>public/js/modulo_menu_consultar_info_perfil.js" type="module"></script>
 </body>
 </html>

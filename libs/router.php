@@ -35,8 +35,16 @@ class Router {
             $autenticador = new AutenticacionUsuario();
             $autenticador = $autenticador->autenticarUsuario($_SESSION["usuario"]["documento"]);
             if(!$autenticador) {
+                $this->url = [];
                 $this->url[0] = "login";
             } else if($autenticador && $this->url[0] == "login" && !isset($this->url[1])) {
+                $this->url = [];
+                $this->url[0] = "menu";
+            }
+            //En esta funcion validamos que el rol sea el que le corresponda al modulo, 
+            //de lo contrario siempre sera redireccionado al menu
+            if(!$this->validarRol()) {
+                $this->url = [];
                 $this->url[0] = "menu";
             }
         }
@@ -84,6 +92,17 @@ class Router {
             new GetErrores("La pagina que deseas cargar no existe");
         }
 
+    }
+
+
+    public function validarRol() {
+        if($_SESSION["usuario"]["rol"] == "FARMACEUTA" && $this->url[0] == "usuarios")  return;
+
+        if($_SESSION["usuario"]["rol"] == "ALMACENISTA" && $this->url[0] == "usuarios") return;
+        if($_SESSION["usuario"]["rol"] == "ALMACENISTA" && $this->url[0] == "clientes") return;
+        if($_SESSION["usuario"]["rol"] == "ALMACENISTA" && $this->url[0] == "ventas")   return;
+
+        return 1;
     }
 }
 

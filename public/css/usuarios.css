@@ -1,6 +1,6 @@
 @import url(main.css);
 
-.nav__li:nth-child(7) {
+.nav__li.usuario {
     border-bottom: 2px solid var(--color-button-text);
 }
 
