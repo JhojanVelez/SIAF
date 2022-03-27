@@ -84,12 +84,14 @@ class InventarioSalidasModelo extends ConexionBD {
 
             $this->result["complete"] = true;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
+            $this->result["PDOMessage"] = $this->PDOStmt->errorInfo();
+            
             return $this->result;
 
         } catch (PDOException $e) {
             $this->result["complete"] = false;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
-            $this->result["errorPDOMessage"] = $e->errorInfo;
+            $this->result["PDOMessage"] = $this->PDOStmt->errorInfo();
             $this->result["errorMessage"] = "La salida no pudo ser registrada porque el producto $this->codigoBarrasProducto no existe";
             return $this->result;
         }

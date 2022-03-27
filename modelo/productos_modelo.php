@@ -98,14 +98,14 @@ class ProductosModelo extends ConexionBD{
 
             $this->result["complete"] = true;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
-            
+            $this->result["PDOMessage"] = $this->PDOStmt->errorInfo();
 
             return $this->result;
 
         } catch (PDOException $e) {
             $this->result["complete"] = false;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
-            $this->result["errorPDOMessage"] = $e->errorInfo;
+            $this->result["PDOMessage"] = $this->PDOStmt->errorInfo();
             if($this->PDOStmt->errorInfo()[1] == 1062) $this->result["errorMessage"] = "El producto $this->codigoBarras no pudo ser registrado porque ya existe";
             return $this->result;
         }
@@ -148,14 +148,14 @@ class ProductosModelo extends ConexionBD{
             
             $this->result["complete"] = true;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
-
+            $this->result["PDOMessage"] = $this->PDOStmt->errorInfo();
             
             return $this->result;
 
         } catch (PDOException $e) {
             $this->result["complete"] = false;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
-            $this->result["errorPDOMessage"] = $e->errorInfo;
+            $this->result["PDOMessage"] = $this->PDOStmt->errorInfo();
             if($this->PDOStmt->errorInfo()[1] == 1062) $this->result["errorMessage"] = "El producto no pudo ser editado porque el codigo de barras $this->codigoBarras ya esta registrado en otro producto, por favor intenta modificar el valor con un codigo de barras distinto a los demas productos.";
             return $this->result;
         }
@@ -174,6 +174,7 @@ class ProductosModelo extends ConexionBD{
 
             $this->result["complete"] = true;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
+            $this->result["PDOMessage"] = $this->PDOStmt->errorInfo();
             $this->result["resultMessage"] = $this->PDOStmt->rowCount() != 0 
                                             ? "El producto $this->codigoBarras se inhabilito correctamente"
                                             : "No se encontro ningun producto, por lo tanto no se pudo realizar el proceso de inhabilitacion";
@@ -182,6 +183,7 @@ class ProductosModelo extends ConexionBD{
         }catch(PDOException $e) {
             $this->result["complete"] = false;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
+            $this->result["PDOMessage"] = $this->PDOStmt->errorInfo();
             if($this->PDOStmt->errorInfo()[1] == 1451) $this->result["errorMessage"] = "El producto $this->codigoBarras no pudo ser inhabilitado porque la infomacion de este producto es fundamental para el funcionamiento de otras secciones del sistema.";
             return $this->result;
         }

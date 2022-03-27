@@ -127,12 +127,13 @@ class UsuariosModelo extends ConexionBD {
 
             $this->result["complete"] = true;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
+            $this->result["PDOMessage"] = $this->PDOStmt->errorInfo();
             return $this->result;
 
         } catch (PDOException $e) {
             $this->result["complete"] = false;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
-            $this->result["errorPDOMessage"] = $e->errorInfo;
+            $this->result["PDOMessage"] = $this->PDOStmt->errorInfo();
             if($this->PDOStmt->errorInfo()[1] == 1062) $this->result["errorMessage"] = "El usuario $this->documento no pudo ser registrado porque ya existe";
             return $this->result;
         }
@@ -195,11 +196,14 @@ class UsuariosModelo extends ConexionBD {
 
             $this->result["complete"] = true;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
+            $this->result["PDOMessage"] = $this->PDOStmt->errorInfo();
+
             return $this->result;
 
         } catch (PDOException $e) {
             $this->result["complete"] = false;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
+            $this->result["PDOMessage"] = $this->PDOStmt->errorInfo();
             if($this->PDOStmt->errorInfo()[1] == 1062) $this->result["errorMessage"] = "El usuario no pudo ser modificado porque el Numero de Documento {$this->documento} ya esta registrado en otro usuario, por favor intenta modificar el valor con un Numero de Documento distinto a los demas usuarios";
             return $this->result;
         }
@@ -218,6 +222,7 @@ class UsuariosModelo extends ConexionBD {
 
             $this->result["complete"] = true;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
+            $this->result["PDOMessage"] = $this->PDOStmt->errorInfo();
             $this->result["resultMessage"] = $this->PDOStmt->rowCount() != 0 
                                             ? "El usuario $this->documento se inhabilito correctamente"
                                             : "No se encontro ningun usuario, por lo tanto no se pudo realizar el proceso de inhabilitacion";
@@ -231,6 +236,7 @@ class UsuariosModelo extends ConexionBD {
         } catch (PDOException $e) {
             $this->result["complete"] = false;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
+            $this->result["PDOMessage"] = $this->PDOStmt->errorInfo();
             if($this->PDOStmt->errorInfo()[1] == 1451) $this->result["errorMessage"] = "El usuario $this->documento no pudo ser inhabilitado porque la infomacion de este usuario es fundamental para el funcionamiento de otras secciones del sistema.";
             return $this->result;
         }
