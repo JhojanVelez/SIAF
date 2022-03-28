@@ -83,6 +83,7 @@ class ProveedoresModelo extends ConexionBD {
             $this->PDOStmt->execute();
 
             if($this->PDOStmt->errorInfo()[1] == 1062) throw new PDOException;
+            if($this->PDOStmt->errorInfo()[1] == 1406) throw new PDOException;
 
             $this->result["complete"] = true;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
@@ -95,6 +96,7 @@ class ProveedoresModelo extends ConexionBD {
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
             $this->result["PDOMessage"] = $this->PDOStmt->errorInfo();
             if($this->PDOStmt->errorInfo()[1] == 1062) $this->result["errorMessage"] = "El proveedor $this->nit no pudo ser registrado porque ya existe";
+            if($this->PDOStmt->errorInfo()[1] == 1406) $this->result["errorMessage"] = "La informacion no pudo ser registrada porque algun campo excedio la cantidad maxima de caracteres permitidos";
             return $this->result;
         }
     }
@@ -127,6 +129,7 @@ class ProveedoresModelo extends ConexionBD {
             $this->PDOStmt->execute();
 
             if($this->PDOStmt->errorInfo()[1] == 1062) throw new PDOException;
+            if($this->PDOStmt->errorInfo()[1] == 1406) throw new PDOException;
             
             $this->result["complete"] = true;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
@@ -139,6 +142,7 @@ class ProveedoresModelo extends ConexionBD {
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
             $this->result["PDOMessage"] = $this->PDOStmt->errorInfo();
             if($this->PDOStmt->errorInfo()[1] == 1062) $this->result["errorMessage"] = "El proveedor no pudo ser modificado porque el NIT $this->nit ya esta registrado en otro proveedor, por favor intenta modificar el valor con un NIT distinto a los demas proveedores";
+            if($this->PDOStmt->errorInfo()[1] == 1406) $this->result["errorMessage"] = "La informacion no pudo ser registrada porque algun campo excedio la cantidad maxima de caracteres permitidos";
             return $this->result;
         }
     }
