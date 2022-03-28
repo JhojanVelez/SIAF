@@ -192,7 +192,7 @@ class UsuariosModelo extends ConexionBD {
                 move_uploaded_file($this->foto['tmp_name'],"fotosEmpleados/$newFileName");
             }else if(($this->foto['error'] == 4) && ($idUsuarioSeleccionado != $this->documento)) {
                 /* el usuario NO cambio la foto pero si modifico el id */
-                if(file_exists($oldFileName)) {
+                if(file_exists("fotosEmpleados/$oldFileName")) {
                     rename("fotosEmpleados/$oldFileName","fotosEmpleados/$newFileName");
                 }
             }
