@@ -185,7 +185,7 @@ class LoginModelo extends ConexionBD{
 
             $this->result["complete"] = false;
             $this->result["PDOMessage"] = $this->PDOStmt->errorInfo();
-            if($this->PDOStmt->errorInfo()[1] == 1406) $this->result["errorMessage"] = "La informacion no pudo ser registrada porque algun campo excedio la cantidad maxima de caracteres permitidos";
+            if($this->PDOStmt->errorInfo()[1] == 1406) $this->result["errorMessage"] = "Tu contrase&ntilde;a no pudo ser reestablecida porque excediste la cantidad maxima de caracteres permitidos";
 
             return $this->result;
         }
