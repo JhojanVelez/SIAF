@@ -173,15 +173,19 @@ class LoginModelo extends ConexionBD{
 
             $this->PDOStmt->execute();
 
+            if($this->PDOStmt->errorInfo()[1] == 1406) throw new PDOException;
+
             $this->result["complete"] = true;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
+            $this->result["PDOMessage"] = $this->PDOStmt->errorInfo();
             
             return $this->result;
 
         } catch (PDOException $e) {
 
             $this->result["complete"] = false;
-            $this->result["PDOError"] = $e->getMessage();
+            $this->result["PDOMessage"] = $this->PDOStmt->errorInfo();
+            if($this->PDOStmt->errorInfo()[1] == 1406) $this->result["errorMessage"] = "La informacion no pudo ser registrada porque algun campo excedio la cantidad maxima de caracteres permitidos";
 
             return $this->result;
         }

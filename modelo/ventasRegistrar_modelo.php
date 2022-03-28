@@ -101,6 +101,8 @@ class ventasRegistrarModelo extends ConexionBD {
 
             $this->PDOStmt->execute();
             
+            if($this->PDOStmt->errorInfo()[1] == 1406) throw new PDOException;
+            
             foreach($this->listaProductos as $key => $value) {
                 $this->sql="INSERT INTO 
                             tbl_rel_fact_venta_productos
@@ -132,6 +134,7 @@ class ventasRegistrarModelo extends ConexionBD {
             $this->result["complete"] = false;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
             $this->result["PDOMessage"] = $this->PDOStmt->errorInfo();
+            if($this->PDOStmt->errorInfo()[1] == 1406) $this->result["errorMessage"] = "La informacion no pudo ser registrada porque algun campo excedio la cantidad maxima de caracteres permitidos";
             return $this->result;
         }
     }

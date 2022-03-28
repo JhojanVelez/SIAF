@@ -78,6 +78,8 @@ class InventarioEntradasModelo extends ConexionBD {
 
             $this->PDOStmt->execute();
 
+            if($this->PDOStmt->errorInfo()[1] == 1406) throw new PDOException;
+
             $this->result["complete"] = true;
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
             $this->result["PDOMessage"] = $this->PDOStmt->errorInfo();
@@ -88,6 +90,7 @@ class InventarioEntradasModelo extends ConexionBD {
             $this->result["affectedRows"] = $this->PDOStmt->rowCount();
             $this->result["PDOMessage"] = $this->PDOStmt->errorInfo();
             $this->result["errorMessage"] = "La entrada no pudo ser registrada porque el producto $this->codigoBarrasProducto no existe";
+            if($this->PDOStmt->errorInfo()[1] == 1406) $this->result["errorMessage"] = "La informacion no pudo ser registrada porque algun campo excedio la cantidad maxima de caracteres permitidos";
             return $this->result;
         }
     }
