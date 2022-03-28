@@ -114,7 +114,7 @@ class UsuariosControlador extends Controlador{
             $this->result = $this->instanciaModelo->editar(htmlentities(addslashes($idUsuarioSeleccionado)));
             
             if($this->result["complete"]) {
-                if($_SESSION["usuario"]["documento"] == $this->instanciaModelo->getDocumento()) {
+                if($_SESSION["usuario"]["documento"] == $idUsuarioSeleccionado || $_SESSION["usuario"]["documento"] == $this->instanciaModelo->getDocumento()) {
                     $_SESSION["usuario"]["documento"] = $this->instanciaModelo->getDocumento();
                     $_SESSION["usuario"]["nombre"] = $this->instanciaModelo->getNombre();
                     $_SESSION["usuario"]["apellido"] = $this->instanciaModelo->getApellido();
