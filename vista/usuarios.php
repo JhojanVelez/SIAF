@@ -72,7 +72,7 @@
                 </form>
                 <div class="usuarios__filtro-gen-repo filtro-gen-repo">
                     <div class="usuarios__filtro-gen-repo-img filtro-gen-repo-img">
-                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
+                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.png" alt="">
                     </div>
                     <input 
                     class="usuarios__filtro-subtitulo-reporte filtro-subtitulo-reporte" 
@@ -148,7 +148,7 @@
                             data-doc-usuario = <?php echo $value["EmpDocIdentidad"] ?>
                             >
                                 <div class="usuarios__lista-usuario-boton-img">
-                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/editar-icono.svg" alt="">
+                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/editar-icono.png" alt="">
                                 </div>
                                 <span>Editar</span>
                             </button>
@@ -157,7 +157,7 @@
                             data-doc-usuario = <?php echo $value["EmpDocIdentidad"] ?>
                             >
                                 <div class="usuarios__lista-usuario-boton-img">
-                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.svg" alt="">
+                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.png" alt="">
                                 </div>
                                 <span>Inhabilitar</span>
                             </button>
@@ -222,7 +222,7 @@
                             data-doc-usuario
                             >
                                 <div class="usuarios__lista-usuario-boton-img">
-                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/editar-icono.svg" alt="">
+                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/editar-icono.png" alt="">
                                 </div>
                                 <span>Editar</span>
                             </button>
@@ -231,7 +231,7 @@
                             data-doc-usuario
                             >
                                 <div class="usuarios__lista-usuario-boton-img">
-                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.svg" alt="">
+                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.png" alt="">
                                 </div>
                                 <span>Inhabilitar</span>
                             </button>
@@ -781,7 +781,7 @@
                 <h2 class="usuarios__modal-usuarios-inhabilitados-title dialog-title">Usuarios Inhabilitados</h2>
                 <div class="usuarios__modal-usuarios-inhabilitados-container-gen-repo filtro-gen-repo">
                     <div class="usuarios__modal-usuarios-inhabilitados-gen-repo-container-img dialog-objects-enabled-gen-repo-img">
-                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/reportes-icono.svg" alt="">
+                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/reportes-icono.png" alt="">
                     </div>
                     <div class="usuarios__modal-usuarios-inhabilitados-gen-repo-container-text">
                         <a 

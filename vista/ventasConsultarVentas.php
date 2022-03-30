@@ -77,7 +77,7 @@
                 </form>
                 <div class="ventas__filtro-gen-repo filtro-gen-repo">
                     <div class="ventas__filtro-gen-repo-img filtro-gen-repo-img">
-                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
+                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.png" alt="">
                     </div>
                     <input 
                     class="ventas__filtro-subtitulo-reporte filtro-subtitulo-reporte" 
@@ -117,7 +117,7 @@
                             <td class="ventas-table-td-factura">
                                 <div class="ventas-table-link-factura">
                                     <a href="ventasConsultarVentas/generarFactura/<?php echo($value["FacCodigo"]) ?>" target="_BLANK">
-                                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
+                                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.png" alt="">
                                     </a>
                                 </div>
                             </td>
@@ -142,7 +142,7 @@
                         <td class="ventas-table-td-factura">
                             <div class="ventas-table-link-factura">
                                 <a href="ventasConsultarVentas/generarFactura/234" target="_BLANK">
-                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
+                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.png" alt="">
                                 </a>
                             </div>
                         </td>

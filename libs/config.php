@@ -17,7 +17,7 @@ define('NOMBRE_EMAIL', "SIAF");
 // define("DB_CHARSET", "UTF8");
 // define("DSN", SGBD.":host=".DB_HOST.";dbname=".DB_NAME.";charset=".DB_CHARSET);
 // define("URL_RAIZ", "http://localhost/SIAF/");
-// define("URL_FAVICON", "http://localhost/SIAF/public/imagenes/logo-SIAF.svg");
+// define("URL_FAVICON", "http://localhost/SIAF/public/imagenes/logo_azul.png");
 
 /* Conexion con el Hosting */
 
@@ -29,6 +29,6 @@ define("DB_PASSWORD", 'Px&8f*\nLcTl5hn]');
 define("DB_CHARSET", "UTF8");
 define("DSN", SGBD.":host=".DB_HOST.";dbname=".DB_NAME.";charset=".DB_CHARSET);
 define("URL_RAIZ", $_SERVER["HTTP_X_FORWARDED_PROTO"]."://".$_SERVER["HTTP_HOST"]."/");
-define("URL_FAVICON", URL_RAIZ."public/imagenes/logo-SIAF.svg");
+define("URL_FAVICON", URL_RAIZ."public/imagenes/logo_azul.png");
 
 ?>

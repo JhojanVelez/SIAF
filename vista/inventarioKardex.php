@@ -92,7 +92,7 @@
                 </form>
                 <div class="kardex__filtro-gen-repo filtro-gen-repo">
                     <div class="kardex__filtro-gen-repo-img filtro-gen-repo-img">
-                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
+                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.png" alt="">
                     </div>
                     <input 
                     class="kardex__filtro-subtitulo-reporte filtro-subtitulo-reporte" 
