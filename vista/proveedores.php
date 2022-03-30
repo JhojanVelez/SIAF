@@ -68,7 +68,7 @@
                 </form>
                 <div class="proveedores__filtro-gen-repo filtro-gen-repo">
                     <div class="proveedores__filtro-gen-repo-img filtro-gen-repo-img">
-                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
+                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.png" alt="">
                     </div>
                     <input 
                     class="proveedores__filtro-subtitulo-reporte filtro-subtitulo-reporte" 
@@ -89,7 +89,7 @@
                 <?php foreach($this->data["infoProveedores"] as $key => $value): ?>
                 <figure class="proveedores__lista-proveedor contenedor-objetos__objeto box-shadow">
                     <div class="proveedores__lista-proveedor-img contenedor-objetos__objeto-img">
-                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/proveedor-icono.svg" alt="">
+                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/proveedor-icono.png" alt="">
                     </div>
                     <div class="proveedores__lista-proveedor-info-container">
                         <section class="proveedores__lista-proveedor-info nit">
@@ -123,7 +123,7 @@
                         data-nit-proveedor="<?php echo $value["ProNIT"]; ?>"
                         >
                             <div class="proveedores__lista-proveedor-boton-img">
-                                <img src="<?php echo(URL_RAIZ); ?>public/imagenes/editar-icono.svg" alt="">
+                                <img src="<?php echo(URL_RAIZ); ?>public/imagenes/editar-icono.png" alt="">
                             </div>
                             <span>Editar</span>
                         </button>
@@ -132,7 +132,7 @@
                         data-nit-proveedor="<?php echo $value["ProNIT"]; ?>"
                         >
                             <div class="proveedores__lista-proveedor-boton-img">
-                                <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.svg" alt="">
+                                <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.png" alt="">
                             </div>
                             <span>Inhabilitar</span>
                         </button>
@@ -147,7 +147,7 @@
                 <template class="proveedores__lista-proveedor-template">
                     <figure class="proveedores__lista-proveedor contenedor-objetos__objeto box-shadow">
                         <div class="proveedores__lista-proveedor-img contenedor-objetos__objeto-img">
-                            <img src="<?php echo(URL_RAIZ); ?>public/imagenes/proveedor-icono.svg" alt="">
+                            <img src="<?php echo(URL_RAIZ); ?>public/imagenes/proveedor-icono.png" alt="">
                         </div>
                         <div class="proveedores__lista-proveedor-info-container">
                             <section class="proveedores__lista-proveedor-info nit">
@@ -181,7 +181,7 @@
                             data-nit-proveedor=""
                             >
                                 <div class="proveedores__lista-proveedor-boton-img">
-                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/editar-icono.svg" alt="">
+                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/editar-icono.png" alt="">
                                 </div>
                                 <span>Editar</span>
                             </button>
@@ -190,7 +190,7 @@
                             data-nit-proveedor=""
                             >
                                 <div class="proveedores__lista-proveedor-boton-img">
-                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.svg" alt="">
+                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.png" alt="">
                                 </div>
                                 <span>Inhabilitar</span>
                             </button>
@@ -392,7 +392,7 @@
                 <h2 class="proveedores__modal-proveedores-inhabilitados-title dialog-title">Proveedores Inhabilitados</h2>
                 <div class="proveedores__modal-proveedores-inhabilitados-container-gen-repo filtro-gen-repo">
                     <div class="proveedores__modal-proveedores-inhabilitados-gen-repo-container-img dialog-objects-enabled-gen-repo-img">
-                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/reportes-icono.svg" alt="">
+                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/reportes-icono.png" alt="">
                     </div>
                     <div class="proveedores__modal-proveedores-inhabilitados-gen-repo-container-text">
                         <a 

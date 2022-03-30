@@ -68,7 +68,7 @@
                 </form>
                 <div class="clientes__filtro-gen-repo filtro-gen-repo">
                     <div class="clientes__filtro-gen-repo-img filtro-gen-repo-img">
-                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
+                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.png" alt="">
                     </div>
                     <input 
                     class="clientes__filtro-subtitulo-reporte filtro-subtitulo-reporte" 
@@ -90,7 +90,7 @@
 
                     <figure class="clientes__lista-cliente contenedor-objetos__objeto box-shadow">
                         <div class="clientes__lista-cliente-img contenedor-objetos__objeto-img">
-                            <img src="<?php echo(URL_RAIZ); ?>public/imagenes/cliente-icono.svg" alt="">
+                            <img src="<?php echo(URL_RAIZ); ?>public/imagenes/cliente-icono.png" alt="">
                         </div>
                         <div class="clientes__lista-cliente-info-container">
                             <section class="clientes__lista-cliente-info documento">
@@ -124,7 +124,7 @@
                             data-doc-cliente="<?php echo $value["CliDocIdentidad"]; ?>"
                             >
                                 <div class="clientes__lista-cliente-boton-img">
-                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/editar-icono.svg" alt="">
+                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/editar-icono.png" alt="">
                                 </div>
                                 <span>Editar</span>
                             </button>
@@ -133,7 +133,7 @@
                             data-doc-cliente="<?php echo $value["CliDocIdentidad"]; ?>"
                             >
                                 <div class="clientes__lista-cliente-boton-img">
-                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.svg" alt="">
+                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.png" alt="">
                                 </div>
                                 <span>Inhabilitar</span>
                             </button>
@@ -151,7 +151,7 @@
                 <template class="clientes__lista-cliente-template">
                     <figure class="clientes__lista-cliente contenedor-objetos__objeto box-shadow">
                         <div class="clientes__lista-cliente-img contenedor-objetos__objeto-img">
-                            <img src="<?php echo(URL_RAIZ); ?>public/imagenes/cliente-icono.svg" alt="">
+                            <img src="<?php echo(URL_RAIZ); ?>public/imagenes/cliente-icono.png" alt="">
                         </div>
                         <div class="clientes__lista-cliente-info-container">
                             <section class="clientes__lista-cliente-info documento">
@@ -185,7 +185,7 @@
                             data-doc-cliente=""
                             >
                                 <div class="clientes__lista-cliente-boton-img">
-                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/editar-icono.svg" alt="">
+                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/editar-icono.png" alt="">
                                 </div>
                                 <span>Editar</span>
                             </button>
@@ -194,7 +194,7 @@
                             data-doc-cliente=""
                             >
                                 <div class="clientes__lista-cliente-boton-img">
-                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.svg" alt="">
+                                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.png" alt="">
                                 </div>
                                 <span>Inhabilitar</span>
                             </button>
@@ -371,7 +371,7 @@
                 <h2 class="clientes__modal-clientes-inhabilitados-title dialog-title">Clientes Inhabilitados</h2>
                 <div class="clientes__modal-clientes-inhabilitados-container-gen-repo filtro-gen-repo">
                     <div class="clientes__modal-clientes-inhabilitados-gen-repo-container-img dialog-objects-enabled-gen-repo-img">
-                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/reportes-icono.svg" alt="">
+                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/reportes-icono.png" alt="">
                     </div>
                     <div class="clientes__modal-clientes-inhabilitados-gen-repo-container-text">
                         <a 

@@ -2,7 +2,7 @@
 
 body {
     /* background-color: var(--color-button-background); */
-    background-image: linear-gradient(to top right, transparent -64%,var(--color-button-background)20%,var(--color-button-background)80%,transparent 130%);
+    background-image: linear-gradient(to top right, transparent -64%,var(--color-button-background) 20%,var(--color-button-background) 80%,transparent 130%);
 }
 
 .errores {

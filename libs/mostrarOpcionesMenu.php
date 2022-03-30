@@ -2,7 +2,7 @@
 <section class="card box-shadow">
     <h2 class="card__title">PRODUCTOS</h2>
     <div class="card__img">
-        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/productos-icono.svg" alt="">
+        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/productos-icono.png" alt="">
     </div>
     <button class="card__button boton">
         <a href="productos">Ingresar</a>
@@ -11,7 +11,7 @@
 <section class="card box-shadow">
     <h2 class="card__title">INVENTARIO</h2>
     <div class="card__img">
-        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/inventario-icono.svg" />
+        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/inventario-icono.png" />
     </div>
     <button class="card__button boton">
         <a href="inventarioMenuCards">Ingresar</a>
@@ -20,7 +20,7 @@
 <section class="card box-shadow">
     <h2 class="card__title">VENTAS</h2>
     <div class="card__img">
-        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/ventas-icono.svg" alt="">
+        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/ventas-icono.png" alt="">
     </div>
     <button class="card__button boton">
         <a href="ventasMenuCards">Ingresar</a>
@@ -29,7 +29,7 @@
 <section class="card box-shadow">
     <h2 class="card__title">PROVEEDORES</h2>
     <div class="card__img">
-        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/proveedores-icono.svg" alt="">
+        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/proveedores-icono.png" alt="">
     </div>
     <button class="card__button boton">
         <a href="proveedores">Ingresar</a>
@@ -38,7 +38,7 @@
 <section class="card box-shadow">
     <h2 class="card__title">CLIENTES</h2>
     <div class="card__img">
-        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/clientes-icono.svg" alt="">
+        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/clientes-icono.png" alt="">
     </div>
     <button class="card__button boton">
         <a href="clientes">Ingresar</a>
@@ -47,7 +47,7 @@
 <section class="card box-shadow">
     <h2 class="card__title">USUARIOS</h2>
     <div class="card__img">
-        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/gestion-usuarios-icono.svg" alt="">
+        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/gestion-usuarios-icono.png" alt="">
     </div>
     <button class="card__button boton">
         <a href="usuarios">Ingresar</a>
@@ -56,7 +56,7 @@
 <section class="card box-shadow">
     <h2 class="card__title">CONSULTAR TUS DATOS</h2>
     <div class="card__img">
-        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/consultar-datos-icono.svg" alt="">
+        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/consultar-datos-icono.png" alt="">
     </div>
     <button class="card__button card__button--consultar-info-perfil boton">Ver</button>
 </section>
@@ -70,7 +70,7 @@ $menuGerente = ob_get_clean();
 <section class="card box-shadow">
     <h2 class="card__title">PRODUCTOS</h2>
     <div class="card__img">
-        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/productos-icono.svg" alt="">
+        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/productos-icono.png" alt="">
     </div>
     <button class="card__button boton">
         <a href="productos">Ingresar</a>
@@ -79,7 +79,7 @@ $menuGerente = ob_get_clean();
 <section class="card box-shadow">
     <h2 class="card__title">INVENTARIO</h2>
     <div class="card__img">
-        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/inventario-icono.svg" />
+        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/inventario-icono.png" />
     </div>
     <button class="card__button boton">
         <a href="inventarioMenuCards">Ingresar</a>
@@ -88,7 +88,7 @@ $menuGerente = ob_get_clean();
 <section class="card box-shadow">
     <h2 class="card__title">VENTAS</h2>
     <div class="card__img">
-        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/ventas-icono.svg" alt="">
+        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/ventas-icono.png" alt="">
     </div>
     <button class="card__button boton">
         <a href="ventasMenuCards">Ingresar</a>
@@ -97,7 +97,7 @@ $menuGerente = ob_get_clean();
 <section class="card box-shadow">
     <h2 class="card__title">PROVEEDORES</h2>
     <div class="card__img">
-        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/proveedores-icono.svg" alt="">
+        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/proveedores-icono.png" alt="">
     </div>
     <button class="card__button boton">
         <a href="proveedores">Ingresar</a>
@@ -106,7 +106,7 @@ $menuGerente = ob_get_clean();
 <section class="card box-shadow">
     <h2 class="card__title">CLIENTES</h2>
     <div class="card__img">
-        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/clientes-icono.svg" alt="">
+        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/clientes-icono.png" alt="">
     </div>
     <button class="card__button boton">
         <a href="clientes">Ingresar</a>
@@ -115,7 +115,7 @@ $menuGerente = ob_get_clean();
 <section class="card box-shadow">
     <h2 class="card__title">CONSULTAR TUS DATOS</h2>
     <div class="card__img">
-        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/consultar-datos-icono.svg" alt="">
+        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/consultar-datos-icono.png" alt="">
     </div>
     <button class="card__button card__button--consultar-info-perfil boton">Ver</button>
 </section>
@@ -129,7 +129,7 @@ $menuFarmaceuta = ob_get_clean();
 <section class="card box-shadow">
     <h2 class="card__title">PRODUCTOS</h2>
     <div class="card__img">
-        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/productos-icono.svg" alt="">
+        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/productos-icono.png" alt="">
     </div>
     <button class="card__button boton">
         <a href="productos">Ingresar</a>
@@ -138,7 +138,7 @@ $menuFarmaceuta = ob_get_clean();
 <section class="card box-shadow">
     <h2 class="card__title">INVENTARIO</h2>
     <div class="card__img">
-        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/inventario-icono.svg" />
+        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/inventario-icono.png" />
     </div>
     <button class="card__button boton">
         <a href="inventarioMenuCards">Ingresar</a>
@@ -147,7 +147,7 @@ $menuFarmaceuta = ob_get_clean();
 <section class="card box-shadow">
     <h2 class="card__title">PROVEEDORES</h2>
     <div class="card__img">
-        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/proveedores-icono.svg" alt="">
+        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/proveedores-icono.png" alt="">
     </div>
     <button class="card__button boton">
         <a href="proveedores">Ingresar</a>
@@ -156,7 +156,7 @@ $menuFarmaceuta = ob_get_clean();
 <section class="card box-shadow">
     <h2 class="card__title">CONSULTAR TUS DATOS</h2>
     <div class="card__img">
-        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/consultar-datos-icono.svg" alt="">
+        <img src="<?php echo(URL_RAIZ) ?>public/imagenes/consultar-datos-icono.png" alt="">
     </div>
     <button class="card__button card__button--consultar-info-perfil boton">Ver</button>
 </section>

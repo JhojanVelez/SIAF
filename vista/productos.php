@@ -140,7 +140,7 @@
                 </form>
                 <div class="productos_filtro-gen-repo">
                     <div class="productos_filtro-gen-repo-img filtro-gen-repo-img">
-                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.svg" alt="">
+                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/informe.png" alt="">
                     </div>
                     <input 
                     class="productos__filtro-subtitulo-reporte filtro-subtitulo-reporte" 
@@ -725,7 +725,7 @@
                 <h2 class="productos__modal-productos-inhabilitados-title dialog-title">Productos inhabilitados</h2>
                 <div class="productos__modal-productos-inhabilitados-container-gen-repo filtro-gen-repo">
                     <div class="productos__modal-productos-inhabilitados-gen-repo-container-img dialog-objects-enabled-gen-repo-img">
-                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/reportes-icono.svg" alt="">
+                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/reportes-icono.png" alt="">
                     </div>
                     <div class="productos__modal-productos-inhabilitados-gen-repo-container-text">
                         <a 

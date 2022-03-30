@@ -26,7 +26,7 @@
                 <section class="card box-shadow">
                     <h2 class="card__title">REGISTRAR VENTAS</h2>
                     <div class="card__img">
-                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/ventas-registrar-ventas.svg" alt="">
+                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/ventas-registrar-ventas.png" alt="">
                     </div>
                     <button class="card__button boton">
                         <a href="ventasRegistrar">Ingresar</a>
@@ -35,7 +35,7 @@
                 <section class="card box-shadow">
                     <h2 class="card__title">CONSULTAR VENTAS</h2>
                     <div class="card__img">
-                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/ventas-consultar-ventas.svg" />
+                        <img src="<?php echo(URL_RAIZ); ?>public/imagenes/ventas-consultar-ventas.png" />
                     </div>
                     <button class="card__button boton">
                         <a href="ventasConsultarVentas">Ingresar</a>

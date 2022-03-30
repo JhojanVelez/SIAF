@@ -26,7 +26,7 @@
                 <template class="registrar-ventas__lista-productos-template-producto">
                     <figure class="registrar-ventas__lista-producto contenedor-objetos__objeto box-shadow" data-codigo-producto="">
                         <div class="registrar-ventas__lista-producto-img contenedor-objetos__objeto-img">
-                            <img src="<?php echo(URL_RAIZ); ?>public/imagenes/corazon-icono.svg" alt="">
+                            <img src="<?php echo(URL_RAIZ); ?>public/imagenes/corazon-icono.png" alt="">
                         </div>
                         <div class="registrar-ventas__lista-producto-info">
                             <h4 class="registrar-ventas__lista-producto-info-title">CODIGO</h4>
@@ -48,7 +48,7 @@
                         </div>
                         <div class="registrar-ventas__lista-producto-botones contenedor-objetos__objeto-botones">
                             <section class="registrar-ventas__lista-producto-boton contenedor-objetos__objeto-boton">
-                                <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.svg" alt="">
+                                <img src="<?php echo(URL_RAIZ); ?>public/imagenes/delete-icono.png" alt="">
                             </section>
                         </div>
                     </figure>

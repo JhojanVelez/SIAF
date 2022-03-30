@@ -22,7 +22,7 @@
             <section class="card box-shadow">
                 <h2 class="card__title">GESTION DE ENTRADAS</h2>
                 <div class="card__img">
-                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/inventario-entradas.svg" />
+                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/inventario-entradas.png" />
                 </div>
                 <button class="card__button boton">
                     <a href="inventarioEntradas">Ingresar</a>
@@ -31,7 +31,7 @@
             <section class="card box-shadow">
                 <h2 class="card__title">KARDEX</h2>
                 <div class="card__img">
-                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/inventario-kardex.svg" />
+                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/inventario-kardex.png" />
                 </div>
                 <button class="card__button boton">
                     <a href="inventarioKardex">Ingresar</a>
@@ -40,7 +40,7 @@
             <section class="card box-shadow">
                 <h2 class="card__title">GESTION DE SALIDAS</h2>
                 <div class="card__img">
-                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/inventario-salidas.svg" alt="">
+                    <img src="<?php echo(URL_RAIZ); ?>public/imagenes/inventario-salidas.png" alt="">
                 </div>
                 <button class="card__button boton">
                     <a href="inventarioSalidas">Ingresar</a>
