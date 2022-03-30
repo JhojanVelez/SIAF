@@ -169,7 +169,7 @@ const infoVenta = {
 
         $contenedorListaProductos.append($fragmento);
             
-        $contenedorTotales.querySelectorAll(".registrar-ventas__lista-productos-totales-data")[0].innerHTML = "$"+infoVenta.cantidadTotal
+        $contenedorTotales.querySelectorAll(".registrar-ventas__lista-productos-totales-data")[0].innerHTML = infoVenta.cantidadTotal
         $contenedorTotales.querySelectorAll(".registrar-ventas__lista-productos-totales-data")[1].innerHTML = "$"+infoVenta.precioTotal
     }
     

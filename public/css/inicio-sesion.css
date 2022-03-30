@@ -77,9 +77,6 @@ input, select {
   }
 }
 
-.iniciar-sesion-modal-bienvenido__text-container {
-  
-}
 .iniciar-sesion-modal-bienvenido__text {
   color: var(--color-card-background);
   font-size: 10vw;
@@ -115,9 +112,9 @@ input, select {
   display: grid;
   grid-template-columns: repeat(3,100px);
   grid-template-rows: repeat(3,100px);
-  grid-template-areas:"x I d"
-                      "S c A"
-                      "b F g";
+  grid-template-areas:"x S d"
+                      "F c I"
+                      "b A g";
 }
 
 .iniciar-sesion__logo-letras::before {
@@ -152,19 +149,19 @@ input, select {
 }
 .iniciar-sesion__logo-container-letra:nth-child(1) {
   grid-area: S;
-  transform: translate(-100%,100%);
+  transform: translate(-200%,200%);
 }
 .iniciar-sesion__logo-container-letra:nth-child(2) {
   grid-area: I;
-  transform: translate(-65%,200%);
+  transform: translate(-165%,100%);
 }
 .iniciar-sesion__logo-container-letra:nth-child(3) {
   grid-area: A;
-  transform: translate(-35%,100%);
+  transform: translate(65%,0);
 }
 .iniciar-sesion__logo-container-letra:nth-child(4) {
   grid-area: F;
-  transform: translate(200%,0);
+  transform: translate(300%,100%);
 }
 
 .iniciar-sesion__logo-titulo-container {
@@ -216,16 +213,16 @@ input, select {
 
 @keyframes logo-circulo-animation {
   0% {
-    border-left: 6px solid var(--color-nav-background);
-  }
-  25% {
     border-top: 6px solid var(--color-nav-background);
   }
-  50% {
+  25% {
     border-right: 6px solid var(--color-nav-background);
   }
-  75% {
+  50% {
     border-bottom: 6px solid var(--color-nav-background);
+  }
+  75% {
+    border-left: 6px solid var(--color-nav-background);
   }
   100% {
     border: 6px solid var(--color-nav-background);

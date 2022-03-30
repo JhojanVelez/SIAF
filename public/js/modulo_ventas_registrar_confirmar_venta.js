@@ -101,10 +101,13 @@ import {agregar} from '../../ajax/agregar.js'
         if(e.target.matches(".registrar-ventas__modal-venta-exitosa-btn")) {
             location.reload();
         }
+        if(e.target.matches(".registrar-ventas__modal-venta-fallo-btn")) {
+            location.reload();
+        }
 
         if(e.target.matches(".registrar-ventas__modal-agregacion-fallo-btn")) {
-            $modal_3.toggleAttribute("open");
-            $transparentBackgroundModal.classList.toggle("visible");
+            $modal_2.toggleAttribute("open");
+            $modal_1.toggleAttribute("open");
         }
 
         if(e.target.matches(".registrar-ventas__modal-venta-fallo-por-cliente-btn-anonimo")){
