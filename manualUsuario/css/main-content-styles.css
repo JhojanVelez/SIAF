@@ -1,0 +1,25 @@
+*,
+*::after,
+*::before {
+  list-style: initial; 
+  text-decoration: initial;
+}
+
+.grid-container-main {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100vh;
+  display: block;
+  padding: 4rem 5rem;
+  border: 1px solid;
+}
+
+.manual-main__title {
+    color: var(--color-nav-background);
+    font-size: 6rem;
+}
+
+
+.manual-main-content__detail {
+    background-color: var();
+}
