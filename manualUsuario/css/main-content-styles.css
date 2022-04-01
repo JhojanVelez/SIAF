@@ -5,21 +5,126 @@
   text-decoration: initial;
 }
 
+a {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+ol {
+    padding: .5rem 2rem;
+}
+ul {
+    padding: 0 2rem;
+}
+ol li{
+    list-style: decimal;
+}
+ul li{
+    list-style: circle;
+}
+
+ol li::marker {
+    font-size: 1.5rem;
+    color: var(--color-nav-background);
+}
+
+li h5 {
+    font-size: 1.5rem;
+}
+
 .grid-container-main {
   max-width: 100%;
   min-width: 100%;
   min-height: 100vh;
   display: block;
-  padding: 4rem 5rem;
+  padding: 4rem 0;
   border: 1px solid;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.manual-main__container-content {
+    width: 100%;
+
 }
 
 .manual-main__title {
+    text-align: center;
     color: var(--color-nav-background);
-    font-size: 6rem;
+    font-size: 7vw;
+    margin-bottom: 3rem;
 }
 
 
 .manual-main-content__detail {
-    background-color: var();
+    text-align: center;
 }
+
+summary {
+    background-color: var(--color-nav-background);
+    cursor: pointer;
+    color: var(--color-card-background);
+}
+
+.manual-main-content__detail-summary {
+    position: sticky;
+    top: 0;
+    font-size: 3vw;
+}
+.manual-main-content-detail-content {
+    text-align: left;
+    padding: 1.5rem;
+    margin: auto;
+    max-width: 70%;
+}
+
+.manual-main-content-detail-content__title {
+    font-size: 4vw;
+}
+
+.manual-main-content-detail-content__text {
+    margin-bottom: 1rem;
+}
+
+.manual-main-content-detail-content__detail {
+    margin-left: 1.1rem;
+}
+
+.manual-main-content-detail-content__summary {
+    padding: .5rem 1rem;
+    border: 2px solid var(--color-card-background);
+}
+
+.manual-content-paso-a-paso {
+    padding: 1rem;
+}
+
+.manual-content-paso-a-paso__title {
+    font-size: 3rem;
+}
+
+
+
+:root {
+    /*Este es el color del background que va en todas las interfaces*/
+      --color-main-background: #6459ff25;
+    
+      --color-background-modal: #201f3a83;
+    
+      --color-title-h1: #020029;
+      --color-text: #020029;
+    
+      --color-button-background: #6c63ff;
+      --color-button-background-hover: #5b52ffca;
+      --color-button-text: rgb(255, 255, 255);
+    
+      --color-nav-background: #6c63ff;
+    
+      --color-tr-background: #6b63ff48;
+    
+    /*Estos son los colores y estilos generales de cada card*/
+      --color-card-background: white;
+      --color-card-box-shadow: 0px 7px 20px -7px #6c63ff3d;
+      --border-card-radius: 10px;
+    }

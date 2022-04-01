@@ -93,7 +93,7 @@
                         </div>
                         <br>
                         <figure class="iniciar-sesion-error-container__img">
-                            <img src="<?php echo(URL_RAIZ.'public/imagenes/doctor.svg') ?>" alt="">
+                            <img src="<?php echo(URL_RAIZ.'public/imagenes/doctor.png') ?>" alt="">
                         </figure>
                     </div>
                 </div>
