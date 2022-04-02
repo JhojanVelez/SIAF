@@ -21,7 +21,7 @@
 
         <section class="ventas__container-filter container-filter box-shadow">
             <div class="ventas__filtro">
-                <h2 class="ventas__filtro-titulo">Filtros de busqueda</h2>
+                <h2 class="ventas__filtro-titulo">Filtros de B&uacute;squeda</h2>
                 <form 
                 id="ventas__filtro-form" 
                 class="ventas__filtro-form"
@@ -58,7 +58,7 @@
                     placeholder="Nombre del Cliente"
                     >
                     <article class="ventas_filtro-container-desde-hasta">
-                        <h3 class="ventas_filtro-container-desde-hasta__title">Por periodo de tiempo</h3>
+                        <h3 class="ventas_filtro-container-desde-hasta__title">Por Periodo de Tiempo</h3>
                         <div class="ventas_filtro-container-desde-hasta__inputs">
                             <input 
                             name="fechaVentaDesde"

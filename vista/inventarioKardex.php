@@ -21,7 +21,7 @@
 
         <section class="kardex__container-filter container-filter box-shadow">
             <div class="kardex__filtro">
-                <h2 class="kardex__filtro-titulo">Filtros de busqueda</h2>
+                <h2 class="kardex__filtro-titulo">Filtros de B&uacute;squeda</h2>
                 <form 
                 id="kardex__filtro-form" 
                 class="kardex__filtro-form" 
@@ -33,7 +33,7 @@
                     name="codigoBarrasProducto"
                     type="text" 
                     class="kardex__filtro-producto-id" 
-                    placeholder="Codigo de Barras"
+                    placeholder="C&oacute;digo de Barras"
                     autocomplete="off"
                     data-input
                     >
@@ -84,7 +84,7 @@
                         <option value="INHALADOR">INHALADOR</option>
                         <option value="BOTELLA">BOTELLA</option>
                         <option value="TUBO COLAPSIBLE DE ALUMINIO">TUBO COLAPSIBLE DE ALUMINIO</option>
-                        <option value="FRASCO X 300 ML DE SOLUCIÓN INYECTABLE">FRASCO X 300 ML DE SOLUCIÓN INYECTABLE</option>
+                        <option value="FRASCO X 300 ML DE SOLUCIÓN INYECTABLE">FRASCO X 300 ML DE SOLUCI&Oacute;N INYECTABLE</option>
                         <option value="GRANULOS">GRANULOS</option>
                         <option value="100 ML DE JARABE">100 ML DE JARABE</option>
                         <option value="CREMA TOPICA">CREMA TOPICA</option>
@@ -109,19 +109,19 @@
             <table class="kardex__table">
                 <thead class="table-thead">
                     <tr class="table-tr">
-                        <td>Codigo</td>
-                        <td>Codigo de Barras Producto</td>
-                        <td>Nombre Producto</td>
-                        <td>Total Entradas</td>
-                        <td>Total Salidas</td>
+                        <td>C&oacute;digo</td>
+                        <td>C&oacute;digoDeBarrasProducto</td>
+                        <td>NombreProducto</td>
+                        <td>TotalEntradas</td>
+                        <td>TotalSalidas</td>
                         <td>Stock</td>
-                        <td>Ubicacion Fisica Producto</td>
-                        <td>Costo Producto</td>
-                        <td>Precio Venta Producto</td>
-                        <td>Presentacion Producto</td>
-                        <td>Laboratorio Producto</td>
-                        <td>Nit Proveedor</td>
-                        <td>Nombre Proveedor</td>
+                        <td>Ubicaci&oacute;nF&iacute;sicaProducto</td>
+                        <td>CostoProducto</td>
+                        <td>PrecioVentaProducto</td>
+                        <td>Presentaci&oacute;nProducto</td>
+                        <td>LaboratorioProducto</td>
+                        <td>NitProveedor</td>
+                        <td>NombreProveedor</td>
                     </tr>
                 </thead>
                 <tbody>

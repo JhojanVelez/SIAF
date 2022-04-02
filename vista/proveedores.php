@@ -21,7 +21,7 @@
 
         <section class="proveedores__container-filter container-filter box-shadow">
             <div class="proveedores__filtro filtro">
-                <h2 class="proveedores__filtro-titulo filtro-title">Filtros de busqueda</h2>
+                <h2 class="proveedores__filtro-titulo filtro-title">Filtros de B&uacute;squeda</h2>
                 <form 
                 id="proveedores__filtro-form" 
                 class="proveedores__filtro-form filtro-form"
@@ -101,7 +101,7 @@
                             <p class="proveedores__lista-proveedor-data"><?php echo $value["ProNombre"] ?></p>
                         </section>
                         <section class="proveedores__lista-proveedor-info telefono">
-                            <h4 class="proveedores__lista-proveedor-info-title">TELEFONO</h4>
+                            <h4 class="proveedores__lista-proveedor-info-title">TEL&Eacute;FONO</h4>
                             <p class="proveedores__lista-proveedor-data"><?php echo $value["ProTelefono"] ?></p>
                         </section>
                         <section class="proveedores__lista-proveedor-info correo">
@@ -109,7 +109,7 @@
                             <p class="proveedores__lista-proveedor-data"><?php echo $value["ProCorreo"] ?></p>
                         </section>
                         <section class="proveedores__lista-proveedor-info direccion">
-                            <h4 class="proveedores__lista-proveedor-info-title">DIRECCION</h4>
+                            <h4 class="proveedores__lista-proveedor-info-title">DIRECCI&Oacute;N</h4>
                             <p class="proveedores__lista-proveedor-data"><?php echo $value["ProDireccion"] ?></p>
                         </section>
                         <section class="proveedores__lista-proveedor-info ciudad">
@@ -159,7 +159,7 @@
                                 <p class="proveedores__lista-proveedor-data"></p>
                             </section>
                             <section class="proveedores__lista-proveedor-info telefono">
-                                <h4 class="proveedores__lista-proveedor-info-title">TELEFONO</h4>
+                                <h4 class="proveedores__lista-proveedor-info-title">TEL&Eacute;FONO</h4>
                                 <p class="proveedores__lista-proveedor-data"></p>
                             </section>
                             <section class="proveedores__lista-proveedor-info correo">
@@ -167,7 +167,7 @@
                                 <p class="proveedores__lista-proveedor-data"></p>
                             </section>
                             <section class="proveedores__lista-proveedor-info direccion">
-                                <h4 class="proveedores__lista-proveedor-info-title">DIRECCION</h4>
+                                <h4 class="proveedores__lista-proveedor-info-title">DIRECCI&Oacute;N</h4>
                                 <p class="proveedores__lista-proveedor-data"></p>
                             </section>
                             <section class="proveedores__lista-proveedor-info ciudad">
@@ -250,7 +250,7 @@
                     </section>
 
                     <section class="dialog-main-content__input-container">
-                        <label class="dialog-main-content__label">Telefono del Proveedor</label>
+                        <label class="dialog-main-content__label">Tel&eacute;fono del Proveedor</label>
                         <input 
                         name="telefono"
                         type="tel"
@@ -262,7 +262,7 @@
                     </section>
 
                     <section class="dialog-main-content__input-container">
-                        <label class="dialog-main-content__label">Direccion del Proveedor</label>
+                        <label class="dialog-main-content__label">Direcci&oacute;n del Proveedor</label>
                         <input 
                         name="direccion"
                         type="text"
@@ -274,7 +274,7 @@
                     </section>
 
                     <section class="dialog-main-content__input-container">
-                        <label class="dialog-main-content__label">Correo Electronico del Proveedor</label>
+                        <label class="dialog-main-content__label">Correo Electr&oacute;nico del Proveedor</label>
                         <input 
                         name="correo"
                         type="email"
@@ -338,8 +338,8 @@
             <dialog class="proveedores__modal-agregar-proveedor-confirmacion">
                 <h2 class="proveedores__modal-agregar-proveedor-title-confirmacion dialog-title">Verifica los Datos</h2>
                 <p class="proveedores__modal-agregar-proveedor-text-confirmacion dialog-text">
-                    ¿Estas seguro de registrar este proveedor?<br>
-                    Recuerda revisar detenidamente la informacion del proveedor que estas registrando.
+                    ¿Est&oacute;s seguro de registrar este proveedor?<br>
+                    Recuerda revisar detenidamente la informaci&oacute;n del proveedor que estas registrando.
                 </p>
                 <div class="proveedores__modal-agregar-proveedor-info-confirmacion dialog-main-content">
                     <section class="proveedores__modal-agregar-proveedor-info-item-confirmacion" data-ProNIT>
@@ -351,15 +351,15 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-agregar-proveedor-info-item-confirmacion" data-ProTelefono>
-                        <h3 class="dialog-main-content__label">Telefono del Proveedor</h3>
+                        <h3 class="dialog-main-content__label">Tel&eacute;fono del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-agregar-proveedor-info-item-confirmacion" data-ProDireccion>
-                        <h3 class="dialog-main-content__label">Direccion del Proveedor</h3>
+                        <h3 class="dialog-main-content__label">Direcci&oacute;n del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-agregar-proveedor-info-item-confirmacion" data-ProCorreo>
-                        <h3 class="dialog-main-content__label">Correo Electronico del Proveedor</h3>
+                        <h3 class="dialog-main-content__label">Correo Electr&oacute;nico del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-agregar-proveedor-info-item-confirmacion" data-ProCiudad>
@@ -380,7 +380,7 @@
             </dialog>
             
             <dialog class="proveedores__modal-agregacion-fallo dialog-process-result">
-                <h2>¡Algo salio mal!</h2>
+                <h2>¡Algo sali&oacute; mal!</h2>
                 <p>Este proveedor no pudo ser registrado, porque posiblemente ya esta registrado en el sistema</p>
                 <button class="proveedores__modal-agregacion-fallo-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
@@ -410,11 +410,11 @@
                             <tr class="table-tr">
                                 <td class="table-td">NIT</td>
                                 <td class="table-td">Nombre</td>
-                                <td class="table-td">Telefono</td>
-                                <td class="table-td">Dirección</td>
+                                <td class="table-td">Tel&eacute;fono</td>
+                                <td class="table-td">Direcci&oacute;n</td>
                                 <td class="table-td">Correo</td>
                                 <td class="table-td">Ciudad</td>
-                                <td class="table-td">Fecha/hora Inhabilitacion</td>
+                                <td class="table-td">Fecha/hora Inhabilitaci&oacute;n</td>
                             </tr>
                         </thead>
                         <tbody>
@@ -466,7 +466,7 @@
                     </section>
 
                     <section class="dialog-main-content__input-container">
-                        <label class="dialog-main-content__label">Telefono del Proveedor</label>
+                        <label class="dialog-main-content__label">Tel&eacute;fono del Proveedor</label>
                         <input 
                         name="telefono"
                         type="tel"
@@ -478,7 +478,7 @@
                     </section>
 
                     <section class="dialog-main-content__input-container">
-                        <label class="dialog-main-content__label">Direccion del Proveedor</label>
+                        <label class="dialog-main-content__label">Direcci&oacute;n del Proveedor</label>
                         <input 
                         name="direccion"
                         type="text"
@@ -490,7 +490,7 @@
                     </section>
 
                     <section class="dialog-main-content__input-container ">
-                        <label class="dialog-main-content__label">Correo Electronico del Proveedor</label>
+                        <label class="dialog-main-content__label">Correo Electr&oacute;nico del Proveedor</label>
                         <input 
                         name="correo"
                         type="email"
@@ -554,8 +554,8 @@
             <dialog class="proveedores__modal-editar-proveedor-confirmacion">
                 <h2 class="proveedores__modal-editar-proveedor-title-confirmacion dialog-title">Verifica los Datos</h2>
                 <p class="proveedores__modal-editar-proveedor-text-confirmacion dialog-text">
-                    ¿Estas seguro de modificar este proveedor?<br>
-                    Recuerda revisar detenidamente la informacion del proveedor que estas modificando.
+                    ¿Est&aacute;s seguro de modificar este proveedor?<br>
+                    Recuerda revisar detenidamente la informaci&oacute;n del proveedor que estas modificando.
                 </p>
                 <div class="proveedores__modal-editar-proveedor-info-confirmacion dialog-main-content">
                     <section class="proveedores__modal-editar-proveedor-info-item-confirmacion" data-ProNIT>
@@ -567,15 +567,15 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-editar-proveedor-info-item-confirmacion" data-ProTelefono>
-                        <h3 class="dialog-main-content__label">Telefono del Proveedor</h3>
+                        <h3 class="dialog-main-content__label">Tel&eacute;fono del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-editar-proveedor-info-item-confirmacion" data-ProDireccion>
-                        <h3 class="dialog-main-content__label">Direccion del Proveedor</h3>
+                        <h3 class="dialog-main-content__label">Direcci&oacute;n del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-editar-proveedor-info-item-confirmacion" data-ProCorreo>
-                        <h3 class="dialog-main-content__label">Correo Electronico del Proveedor</h3>
+                        <h3 class="dialog-main-content__label">Correo Electr&oacute;nico del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-editar-proveedor-info-item-confirmacion" data-ProCiudad>
@@ -596,7 +596,7 @@
             </dialog>
             
             <dialog class="proveedores__modal-modificacion-fallo dialog-process-result">
-                <h2>¡Algo salio mal!</h2>
+                <h2>¡Algo sali&oacute; mal!</h2>
                 <p>Este proveedor no pudo ser modificado, porque posiblemente hubo un problema interno</p>
                 <button class="proveedores__modal-modificacion-fallo-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
@@ -607,7 +607,7 @@
             <dialog class="proveedores__modal-inhabilitar-proveedor">
                 <h2 class="proveedores__modal-inhabilitar-proveedor-title dialog-title">¡Ten cuidado!</h2>
                 <p class="proveedores__modal-inhabilitar-proveedor-text dialog-text">
-                    ¿Estas seguro de inhabilitar este proveedor?<br>
+                    ¿Est&aacute;s seguro de inhabilitar este proveedor?<br>
                     Recuerda que una vez inhabilitado, no lo podras volver a habilitar.
                 </p>
                 <div class="proveedores__modal-inhabilitar-proveedor-info dialog-main-content">
@@ -620,15 +620,15 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-inhabilitar-proveedor-info-item" data-ProTelefono>
-                        <h3 class="dialog-main-content__label">Telefono del Proveedor</h3>
+                        <h3 class="dialog-main-content__label">Tel&eacute;fono del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-inhabilitar-proveedor-info-item" data-ProDireccion>
-                        <h3 class="dialog-main-content__label">Direccion del Proveedor</h3>
+                        <h3 class="dialog-main-content__label">Direcci&oacute;n del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-inhabilitar-proveedor-info-item" data-ProCorreo>
-                        <h3 class="dialog-main-content__label">Correo Electronico del Proveedor</h3>
+                        <h3 class="dialog-main-content__label">Correo Electr&oacute;nico del Proveedor</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="proveedores__modal-inhabilitar-proveedor-info-item" data-ProCiudad>

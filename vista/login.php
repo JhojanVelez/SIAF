@@ -81,7 +81,7 @@
                                 <option value="FARMACEUTA">Farmaceuta</option>
                             </select>
                             <br />
-                            <input class="iniciar-sesion__boton-ingresar boton" value="Iniciar Sesion" type="button">
+                            <input class="iniciar-sesion__boton-ingresar boton" value="Iniciar Sesi&oacute;n" type="button">
                         </form>
                         <a class="inicio-sesion__a-olvidaste-contrasenia">¿Olvidaste tu contraseña?</a>
                     </div>

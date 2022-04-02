@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo(URL_RAIZ) ?>public/css/menu.css">
     <link rel="shortcut icon" href="<?php echo(URL_FAVICON); ?>" type="image/x-icon">
-    <title>Menu Principal</title>
+    <title>Men&uacute; Principal</title>
 </head>
 <body>
     <header class="nav-container">
@@ -42,7 +42,7 @@
                             <img src="<?php echo(URL_RAIZ) ?>public/imagenes/sign-out.png" alt="sign out">
                         </section>
                         <section class="sign-out-container__text" >
-                            CERRAR SESION
+                            CERRAR SESI&Oacute;N
                         </section>
                     </div>
                 </button>
@@ -95,7 +95,7 @@
                             <p></p>
                         </section>
                         <section class="menu-info-usuario-modal__perfil-info-item">
-                            <h4>TELEFONO</h4>
+                            <h4>TEL&Eacute;FONO</h4>
                             <p></p>
                         </section>
                         <section class="menu-info-usuario-modal__perfil-info-item">
@@ -105,7 +105,7 @@
                     </div>
                     <div class="menu-info-usuario-modal__flex-item">
                         <section class="menu-info-usuario-modal__perfil-info-item">
-                            <h4>DIRECCION</h4>
+                            <h4>DIRECCI&Oacute;N</h4>
                             <p></p>
                         </section>
                         <section class="menu-info-usuario-modal__perfil-info-item">

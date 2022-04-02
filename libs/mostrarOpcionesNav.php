@@ -1,5 +1,4 @@
 <?php ob_start(); ?>
-<li class="nav__li menu" ><a class="nav__a" href="<?php echo(URL_RAIZ); ?>menu">Menu</a></li>
 <li class="nav__li productos" ><a class="nav__a" href="<?php echo(URL_RAIZ); ?>productos">Productos</a></li>
 <li class="nav__li inventarioMenuCards" ><a class="nav__a" href="<?php echo(URL_RAIZ); ?>inventarioMenuCards">Inventario</a></li>
 <li class="nav__li ventasMenuCards" ><a class="nav__a" href="<?php echo(URL_RAIZ); ?>ventasMenuCards">Ventas</a></li>
@@ -13,7 +12,6 @@ $navGerente = ob_get_clean();
 
 
 <?php ob_start(); ?>
-<li class="nav__li menu" ><a class="nav__a" href="<?php echo(URL_RAIZ); ?>menu">Menu</a></li>
 <li class="nav__li productos" ><a class="nav__a" href="<?php echo(URL_RAIZ); ?>productos">Productos</a></li>
 <li class="nav__li inventarioMenuCards" ><a class="nav__a" href="<?php echo(URL_RAIZ); ?>inventarioMenuCards">Inventario</a></li>
 <li class="nav__li ventasMenuCards" ><a class="nav__a" href="<?php echo(URL_RAIZ); ?>ventasMenuCards">Ventas</a></li>
@@ -26,7 +24,6 @@ $navFarmaceuta = ob_get_clean();
 
 
 <?php ob_start(); ?>
-<li class="nav__li menu" ><a class="nav__a" href="<?php echo(URL_RAIZ); ?>menu">Menu</a></li>
 <li class="nav__li productos" ><a class="nav__a" href="<?php echo(URL_RAIZ); ?>productos">Productos</a></li>
 <li class="nav__li inventarioMenuCards" ><a class="nav__a" href="<?php echo(URL_RAIZ); ?>inventarioMenuCards">Inventario</a></li>
 <li class="nav__li proveedores" ><a class="nav__a" href="<?php echo(URL_RAIZ); ?>proveedores">Proveedores</a></li>

@@ -25,7 +25,7 @@
 
         <section class="usuarios__container-filter container-filter box-shadow">
             <div class="usuarios__filtro filtro">
-                <h2 class="usuarios__filtro-titulo filtro-title">Filtros de busqueda</h2>
+                <h2 class="usuarios__filtro-titulo filtro-title">Filtros de B&uacute;squeda</h2>
                 <form 
                 id="usuarios__filtro-form"
                 class="usuarios__filtro-form filtro-form" 
@@ -122,7 +122,7 @@
                                 <p class="usuarios__lista-usuario-data"><?php echo $value["EmpEps"] ?></p>
                             </section>
                             <section class="usuarios__lista-usuario-info telefono">
-                                <h4 class="usuarios__lista-usuario-info-title">TELEFONO</h4>
+                                <h4 class="usuarios__lista-usuario-info-title">TEL&Eacute;FONO</h4>
                                 <p class="usuarios__lista-usuario-data"><?php echo $value["EmpTelefono"] ?></p>
                             </section>
                             <section class="usuarios__lista-usuario-info correo">
@@ -130,7 +130,7 @@
                                 <p class="usuarios__lista-usuario-data"><?php echo $value["EmpCorreo"] ?></p>
                             </section>
                             <section class="usuarios__lista-usuario-info direccion">
-                                <h4 class="usuarios__lista-usuario-info-title">DIRECCION</h4>
+                                <h4 class="usuarios__lista-usuario-info-title">DIRECCI&Oacute;N</h4>
                                 <p class="usuarios__lista-usuario-data"><?php echo $value["EmpDireccion"] ?></p>
                             </section>
                             <section class="usuarios__lista-usuario-info rh">
@@ -196,7 +196,7 @@
                                 <p class="usuarios__lista-usuario-data"></p>
                             </section>
                             <section class="usuarios__lista-usuario-info telefono">
-                                <h4 class="usuarios__lista-usuario-info-title">TELEFONO</h4>
+                                <h4 class="usuarios__lista-usuario-info-title">TEL&Eacute;FONO</h4>
                                 <p class="usuarios__lista-usuario-data"></p>
                             </section>
                             <section class="usuarios__lista-usuario-info correo">
@@ -204,7 +204,7 @@
                                 <p class="usuarios__lista-usuario-data"></p>
                             </section>
                             <section class="usuarios__lista-usuario-info direccion">
-                                <h4 class="usuarios__lista-usuario-info-title">DIRECCION</h4>
+                                <h4 class="usuarios__lista-usuario-info-title">DIRECCI&Oacute;N</h4>
                                 <p class="usuarios__lista-usuario-data"></p>
                             </section>
                             <section class="usuarios__lista-usuario-info rh">
@@ -277,7 +277,7 @@
                         >
                     </section>
                     <section class="dialog-main-content__input-container usuarios__modal-agregar-usuario-form-item">
-                        <label class="dialog-main-content__label">Correo Electronico del Usuario</label>
+                        <label class="dialog-main-content__label">Correo Electr&oacute;nico del Usuario</label>
                         <input
                         name="correo"
                         type="text"
@@ -301,7 +301,7 @@
                         >
                     </section>
                     <section class="dialog-main-content__input-container usuarios__modal-agregar-usuario-form-item">
-                        <label class="dialog-main-content__label">Direccion del Usuario</label>
+                        <label class="dialog-main-content__label">Direcci&oacute;n del Usuario</label>
                         <input
                         name="direccion"
                         type="text"
@@ -325,7 +325,7 @@
                         >
                     </section>
                     <section class="dialog-main-content__input-container usuarios__modal-agregar-usuario-form-item">
-                        <label class="dialog-main-content__label">Telefono del Usuario</label>
+                        <label class="dialog-main-content__label">Tel&eacute;fono del Usuario</label>
                         <input
                         name="telefono"
                         type="text"
@@ -389,13 +389,13 @@
                         <figure class="usuarios-alert-password-container">
                             <div class="usuarios-alert-password-container__alert box-shadow">
                                 <h4 class="usuarios-alert-password-container__alert-title">Recuerda...</h4>
-                                <p class="usuarios-alert-password-container__alert-text">Una contraseña segura debe cumplir como minimo los siguientes parametros:</p>
+                                <p class="usuarios-alert-password-container__alert-text">Una contraseña segura debe cumplir como m&iacute;nimo los siguientes parametros:</p>
                                 <ul class="usuarios-alert-password-container__alert-list-ul">
-                                    <li>Debe contener como minimo 8 caracteres.</li>
-                                    <li>Debe contener por lo menos 1 letra minuscula.</li>
-                                    <li>Debe contener por lo menos 1 letra MAYUSCULA.</li>
-                                    <li>Debe contener por lo menos 1 digito del 0 al 9.</li>
-                                    <li>Debe contener por lo menos un caracter especial como por ejemplo(! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _` { | } ~ ).</li>
+                                    <li>Debe contener como m&iacute;nimo 8 caracteres.</li>
+                                    <li>Debe contener por lo menos 1 letra min&uacute;scula.</li>
+                                    <li>Debe contener por lo menos 1 letra MAY&Uacute;SCULA.</li>
+                                    <li>Debe contener por lo menos 1 d&iacute;gito del 0 al 9.</li>
+                                    <li>Debe contener por lo menos un car&aacute;cter especial como por ejemplo(! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _` { | } ~ ).</li>
                                 </ul>
                             </div>
                         </figure>
@@ -429,8 +429,8 @@
             <dialog class="usuarios__modal-agregar-usuario-confirmacion">
                 <h2 class="usuarios__modal-agregar-usuario-title-confirmacion dialog-title">Verifica los Datos</h2>
                 <p class="usuarios__modal-agregar-usuario-text-confirmacion dialog-text">
-                    ¿Estas seguro de registrar este usuario?<br>
-                    Recuerda revisar detenidamente la informacion del usuario que estas registrando.
+                    ¿Est&aacute;s seguro de registrar este usuario?<br>
+                    Recuerda revisar detenidamente la informaci&oacute;n del usuario que estas registrando.
                 </p>
                 <div class="usuarios__modal-agregar-usuario-info-confirmacion dialog-main-content">
                     <section class="usuarios__modal-agregar-usuario-info-item-confirmacion" data-EmpDocIdentidad>
@@ -438,7 +438,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-agregar-usuario-info-item-confirmacion" data-EmpCorreo >
-                        <h3 class="dialog-main-content__label">Correo Electronico del Usuario</h3>
+                        <h3 class="dialog-main-content__label">Correo Electr&oacute;nico del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-agregar-usuario-info-item-confirmacion" data-EmpNombre>
@@ -446,7 +446,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-agregar-usuario-info-item-confirmacion" data-EmpDireccion>
-                        <h3 class="dialog-main-content__label">Direccion del Usuario</h3>
+                        <h3 class="dialog-main-content__label">Direcci&oacute;n del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-agregar-usuario-info-item-confirmacion" data-EmpApellido>
@@ -454,7 +454,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-agregar-usuario-info-item-confirmacion" data-EmpTelefono>
-                        <h3 class="dialog-main-content__label">Telefono del Usuario</h3>
+                        <h3 class="dialog-main-content__label">Tel&eacute;fono del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-agregar-usuario-info-item-confirmacion" data-EmpEps>
@@ -492,7 +492,7 @@
             </dialog>
             
             <dialog class="usuarios__modal-agregacion-fallo dialog-process-result">
-                <h2>¡Algo salio mal!</h2>
+                <h2>¡Algo sali&oacute; mal!</h2>
                 <p>Este usuario no pudo ser registrado, porque posiblemente ya esta registrado en el sistema</p>
                 <button class="usuarios__modal-agregacion-fallo-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
@@ -516,7 +516,7 @@
                         >
                     </section>
                     <section class="dialog-main-content__input-container usuarios__modal-editar-usuario-form-item">
-                        <label class="dialog-main-content__label">Correo Electronico del Usuario</label>
+                        <label class="dialog-main-content__label">Correo Electr&oacute;nico del Usuario</label>
                         <input
                         name="correo"
                         type="text"
@@ -540,7 +540,7 @@
                         >
                     </section>
                     <section class="dialog-main-content__input-container usuarios__modal-editar-usuario-form-item">
-                        <label class="dialog-main-content__label">Direccion del Usuario</label>
+                        <label class="dialog-main-content__label">Direcci&oacute;n del Usuario</label>
                         <input
                         name="direccion"
                         type="text"
@@ -564,7 +564,7 @@
                         >
                     </section>
                     <section class="dialog-main-content__input-container usuarios__modal-editar-usuario-form-item">
-                        <label class="dialog-main-content__label">Telefono del Usuario</label>
+                        <label class="dialog-main-content__label">Tel&eacute;fono del Usuario</label>
                         <input
                         name="telefono"
                         type="text"
@@ -641,8 +641,8 @@
             <dialog class="usuarios__modal-editar-usuario-confirmacion">
                 <h2 class="usuarios__modal-editar-usuario-title-confirmacion dialog-title">Verifica los Datos</h2>
                 <p class="usuarios__modal-editar-usuario-text-confirmacion dialog-text">
-                    ¿Estas seguro de modificar este usuario?<br>
-                    Recuerda revisar detenidamente la informacion del usuario que estas modificando.
+                    ¿Est&aacute;s seguro de modificar este usuario?<br>
+                    Recuerda revisar detenidamente la informaci&oacute;n del usuario que estas modificando.
                 </p>
                 <div class="usuarios__modal-editar-usuario-info-confirmacion dialog-main-content">
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion" data-EmpDocIdentidad>
@@ -650,7 +650,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion" data-EmpCorreo >
-                        <h3 class="dialog-main-content__label">Correo Electronico del Usuario</h3>
+                        <h3 class="dialog-main-content__label">Correo Electr&oacute;nico del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion" data-EmpNombre>
@@ -658,7 +658,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion" data-EmpDireccion>
-                        <h3 class="dialog-main-content__label">Direccion del Usuario</h3>
+                        <h3 class="dialog-main-content__label">Direcci&oacute;n del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion" data-EmpApellido>
@@ -666,7 +666,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion" data-EmpTelefono>
-                        <h3 class="dialog-main-content__label">Telefono del Usuario</h3>
+                        <h3 class="dialog-main-content__label">Tel&eacute;fono del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-editar-usuario-info-item-confirmacion" data-EmpEps>
@@ -700,7 +700,7 @@
             </dialog>
             
             <dialog class="usuarios__modal-modificacion-fallo dialog-process-result">
-                <h2>¡Algo salio mal!</h2>
+                <h2>¡Algo sali&oacute; mal!</h2>
                 <p>Este usuario no pudo ser modificado, porque posiblemente hubo un error interno</p>
                 <button class="usuarios__modal-modificacion-fallo-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
@@ -710,7 +710,7 @@
             <dialog class="usuarios__modal-inhabilitar-usuario">
                 <h2 class="usuarios__modal-inhabilitar-usuario-title dialog-title">¡Ten cuidado!</h2>
                 <p class="usuarios__modal-inhabilitar-usuario-text dialog-text">
-                    ¿Estas seguro de inhabilitar este usuario?<br>
+                    ¿Est&aacute;s seguro de inhabilitar este usuario?<br>
                     Recuerda que una vez inhabilitado, no lo podras volver a habilitar.
                 </p>
                 <div class="usuarios__modal-inhabilitar-usuario-info dialog-main-content">
@@ -719,7 +719,7 @@
                     <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-inhabilitar-usuario-info-item" data-EmpCorreo>
-                        <h3 class="dialog-main-content__label">Correo Electronico del Usuario</h3>
+                        <h3 class="dialog-main-content__label">Correo Electr&oacute;nico del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-inhabilitar-usuario-info-item" data-EmpNombre>
@@ -727,7 +727,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-inhabilitar-usuario-info-item" data-EmpDireccion>
-                        <h3 class="dialog-main-content__label">Direccion del Usuario</h3>
+                        <h3 class="dialog-main-content__label">Direcci&oacute;n del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-inhabilitar-usuario-info-item" data-EmpApellido>
@@ -735,7 +735,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-inhabilitar-usuario-info-item" data-EmpTelefono>
-                        <h3 class="dialog-main-content__label">Telefono del Usuario</h3>
+                        <h3 class="dialog-main-content__label">Tel&eacute;fono del Usuario</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="usuarios__modal-inhabilitar-usuario-info-item" data-EmpEps>
@@ -769,7 +769,7 @@
             </dialog>
             
             <dialog class="usuarios__modal-inhabilitacion-fallo dialog-process-result">
-                <h2>¡Algo salio mal!</h2>
+                <h2>¡Algo sali&oacute; mal!</h2>
                 <p>Este usuario no pudo ser inhabilitado, porque posiblemente hay registros de este en otras partes del sistema</p>
                 <button class="usuarios__modal-inhabilitacion-fallo-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
@@ -801,8 +801,8 @@
                                 <td class="table-td">Nombre/s</td>
                                 <td class="table-td">Apellido/s</td>
                                 <td class="table-td">Correo</td>
-                                <td class="table-td">Telefono</td>
-                                <td class="table-td">Direccion</td>
+                                <td class="table-td">Tel&eacute;fono</td>
+                                <td class="table-td">Direcci&oacute;n</td>
                                 <td class="table-td">EPS</td>
                                 <td class="table-td">RH</td>
                                 <td class="table-td">Rol</td>

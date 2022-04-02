@@ -29,21 +29,21 @@
                             <img src="<?php echo(URL_RAIZ); ?>public/imagenes/corazon-icono.png" alt="">
                         </div>
                         <div class="registrar-ventas__lista-producto-info">
-                            <h4 class="registrar-ventas__lista-producto-info-title">CODIGO</h4>
-                            <p class="registrar-ventas__lista-producto-data">5236548548</p>
+                            <h4 class="registrar-ventas__lista-producto-info-title">C&Oacute;DIGO</h4>
+                            <p class="registrar-ventas__lista-producto-data"></p>
                             <h4 class="registrar-ventas__lista-producto-info-title">NOMBRE DE PRODUCTO</h4>
-                            <p class="registrar-ventas__lista-producto-data">Acetaminofen del carmen</p>
+                            <p class="registrar-ventas__lista-producto-data"></p>
                             <h4 class="registrar-ventas__lista-producto-info-title">CANTIDAD</h4>
-                            <p class="registrar-ventas__lista-producto-data">56</p>
+                            <p class="registrar-ventas__lista-producto-data"></p>
                         </div>
                         <div class="registrar-ventas__lista-producto-precios">
                             <section class="registrar-ventas__lista-producto-precio">
                                 <h4>PRECIO UNIDAD</h4>
-                                <p> <strong class="registrar-ventas__lista-producto-data" >$0000</strong></p>
+                                <p> <strong class="registrar-ventas__lista-producto-data" >$</strong></p>
                             </section>
                             <section class="registrar-ventas__lista-producto-precio">
                                 <h4>PRECIO TOTAL</h4>
-                                <p><strong class="registrar-ventas__lista-producto-data" >$0000</strong></p>
+                                <p><strong class="registrar-ventas__lista-producto-data" >$</strong></p>
                             </section>
                         </div>
                         <div class="registrar-ventas__lista-producto-botones contenedor-objetos__objeto-botones">
@@ -70,7 +70,7 @@
         <section class="registrar-ventas__container-registro container-filter  box-shadow">
             <div class="registrar-ventas__registro">
                 <form class="registrar-ventas__registro-form" action="">
-                    <label class="registrar-ventas__registro-label" for="producto-id">Codigo de barras del producto</label>
+                    <label class="registrar-ventas__registro-label" for="producto-id">C&oacute;digo de barras del producto</label>
                     <input 
                     name="codigoBarrasProducto"
                     type="text" 
@@ -143,7 +143,7 @@
                         <h2 class="registrar-ventas__filtro-titulo filtro-title">Busca un Producto</h2>
                         <form class="registrar-ventas__filtro-form filtro-form" action="">
                             <section class="registrar-ventas__filtro-input-container">
-                                <label class="registrar-ventas__filtro-label filtro-label" for="product-id">Por codigo de barras del producto</label>
+                                <label class="registrar-ventas__filtro-label filtro-label" for="product-id">Por c&oacute;digo de barras del producto</label>
                                 <input 
                                 name="codigoBarrasProducto"
                                 type="text" 
@@ -173,14 +173,14 @@
                                 >
                             </section>
                             <section class="registrar-ventas__filtro-input-container">
-                                <label class="registrar-ventas__filtro-label filtro-label" for="product-id">Por tipo de presentacion</label>
+                                <label class="registrar-ventas__filtro-label filtro-label" for="product-id">Por tipo de presentaci&oacute;n</label>
                                 <select 
                                 name="presentacionProducto"
                                 class="registrar-ventas_filtro-presentacion" 
                                 id="product-presentacion"
                                 autocomplete="off"
                                 >
-                                    <option value="">Presentacion</option>
+                                    <option value="">Presentaci&oacute;n</option>
                                     <option value="TABLETA">TABLETA</option>
                                     <option value="JARABE">JARABE</option>
                                     <option value="CAPSULA">CAPSULA</option>
@@ -190,7 +190,7 @@
                                     <option value="INHALADOR">INHALADOR</option>
                                     <option value="BOTELLA">BOTELLA</option>
                                     <option value="TUBO COLAPSIBLE DE ALUMINIO">TUBO COLAPSIBLE DE ALUMINIO</option>
-                                    <option value="FRASCO X 300 ML DE SOLUCIÓN INYECTABLE">FRASCO X 300 ML DE SOLUCIÓN INYECTABLE</option>
+                                    <option value="FRASCO X 300 ML DE SOLUCIÓN INYECTABLE">FRASCO X 300 ML DE SOLUCI&Oacute;N INYECTABLE</option>
                                     <option value="GRANULOS">GRANULOS</option>
                                     <option value="100 ML DE JARABE">100 ML DE JARABE</option>
                                     <option value="CREMA TOPICA">CREMA TOPICA</option>
@@ -204,11 +204,11 @@
                     <table class="registrar-ventas__modal-lista-filtro-productos__table registrar-ventas__table table">
                         <thead class="table-thead">
                             <tr class="table-tr">
-                                <td class="table-td">Codigo de Barras</td>
-                                <td class="table-td">Descripcion</td>
-                                <td class="table-td">Ubicacion Fisica</td>
+                                <td class="table-td">C&oacute;digo de Barras</td>
+                                <td class="table-td">Descripci&oacute;n</td>
+                                <td class="table-td">Ubicaci&oacute;n F&iacute;sica</td>
                                 <td class="table-td">Stock</td>
-                                <td class="table-td">Presentacion</td>
+                                <td class="table-td">Presentaci&oacute;n</td>
                                 <td class="table-td">Unidad de Medida</td>
                                 <td class="table-td">Precio de Venta</td>
                                 <td class="table-td">Laboratorio</td>
@@ -276,7 +276,7 @@
                 <h2 class="registrar-ventas__modal-cancelar-venta-title dialog-title">¡Ten cuidado!</h2>
                 <p class="registrar-ventas__modal-cancelar-venta-text dialog-text">
                     ¿Estas seguro de cancelar esta venta?<br>
-                    Recuerda que una vez cancelada, se borraran todos los productos a vender y toda la infomacion relacionada a esta venta.
+                    Recuerda que una vez cancelada, se borraran todos los productos a vender y toda la infomaci&oacute;n relacionada con esta venta.
                 </p>
 
                 <div class="registrar-ventas__modal-cancelar-venta-btns-container dialog-container-bts">
@@ -304,7 +304,7 @@
                         <section class="dialog-main-content__input-container modal-confirmar-venta-form-container-nombre-cliente box-shadow">
                             <label class="dialog-main-content__label">Nombre del Cliente</label>
                             <div class="modal-confirmar-venta-form-container-nombre-cliente__no-disponible">
-                                <p>Cliente NO registrado ¿Desea registrarlo o pasarlo como anonimo?</p>
+                                <p>Cliente NO registrado ¿Desea registrarlo o pasarlo como an&oacute;nimo?</p>
                                 <button class="registrar-ventas__modal-confirmar-venta-form-btn-registrar-cliente dialog-process-result__btn boton">Registrar</button>
                                 <button class="registrar-ventas__modal-confirmar-venta-form-btn-registrar-anonimo dialog-process-result__btn boton">Anonimo</button>
                             </div>
@@ -313,7 +313,7 @@
                         
                         <section class="dialog-main-content__input-container">
                             <label class="dialog-main-content__label">Total a Pagar</label>
-                            <p class="registrar-ventas__modal-confirmar-venta-item registrar-ventas__modal-confirmar-venta-item--total">$ 56000 Pesos</p>
+                            <p class="registrar-ventas__modal-confirmar-venta-item registrar-ventas__modal-confirmar-venta-item--total">$</p>
                         </section>
 
                         <section class="dialog-main-content__input-container">
@@ -362,7 +362,7 @@
             
             <dialog class="registrar-ventas__modal-venta-fallo-por-cliente dialog-process-result">
                 <h2>¡Cliente no registrado!</h2>
-                <p>¿Desea registrarlo o pasarlo como anonimo?</p>
+                <p>¿Desea registrarlo o pasarlo como an&oacute;nimo?</p>
                 <button class="registrar-ventas__modal-venta-fallo-por-cliente-btn-registrar dialog-process-result__btn boton">Registrar</button>
                 <button class="registrar-ventas__modal-venta-fallo-por-cliente-btn-anonimo dialog-process-result__btn boton">Anonimo</button>
             </dialog>
@@ -387,7 +387,7 @@
                     </section>
 
                     <section class="dialog-main-content__input-container">
-                        <label class="dialog-main-content__label">Correo Electronico del Cliente</label>
+                        <label class="dialog-main-content__label">Correo Electr&oacute;nico del Cliente</label>
                         <input
                         name="correo" 
                         type="text"
@@ -414,7 +414,7 @@
                     </section>
                     
                     <section class="dialog-main-content__input-container">
-                        <label class="dialog-main-content__label">Direccion del Cliente</label>
+                        <label class="dialog-main-content__label">Direcci&oacute;n del Cliente</label>
                         <input
                         name="direccion" 
                         type="text"
@@ -440,7 +440,7 @@
                     </section>
                     
                     <section class="dialog-main-content__input-container">
-                        <label class="dialog-main-content__label">Telefono del Cliente</label>
+                        <label class="dialog-main-content__label">Tel&oacute;fono del Cliente</label>
                         <input
                         name="telefono"
                         type="text"
@@ -461,8 +461,8 @@
             <dialog  class="registrar-ventas__modal-agregar-cliente-confirmacion">
                 <h2 class="registrar-ventas__modal-agregar-cliente-title-confirmacion dialog-title">Verifica los Datos</h2>
                 <p class="registrar-ventas__modal-agregar-cliente-text-confirmacion dialog-text">
-                    ¿Estas seguro de registrar este cliente?<br>
-                    Recuerda revisar detenidamente la informacion del cliente que estas registrando.
+                    ¿Est&oacute;s seguro de registrar este cliente?<br>
+                    Recuerda revisar detenidamente la informaci&oacute;n del cliente que est&oacute;s registrando.
                 </p>
                 <div class="registrar-ventas__modal-agregar-cliente-info-confirmacion dialog-main-content">
                     <section class="registrar-ventas__modal-agregar-cliente-info-item-confirmacion" data-CliDocIdentidad>
@@ -470,7 +470,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="registrar-ventas__modal-agregar-cliente-info-item-confirmacion" data-CliCorreo>
-                        <h3 class="dialog-main-content__label">Correo Electronico del Cliente</h3>
+                        <h3 class="dialog-main-content__label">Correo Electr&oacute;nico del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="registrar-ventas__modal-agregar-cliente-info-item-confirmacion" data-CliNombre>
@@ -478,7 +478,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="registrar-ventas__modal-agregar-cliente-info-item-confirmacion" data-CliDireccion>
-                        <h3 class="dialog-main-content__label">Direccion del Cliente</h3>
+                        <h3 class="dialog-main-content__label">Direcci&oacute;n del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="registrar-ventas__modal-agregar-cliente-info-item-confirmacion" data-CliApellido>
@@ -486,7 +486,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="registrar-ventas__modal-agregar-cliente-info-item-confirmacion" data-CliTelefono>
-                        <h3 class="dialog-main-content__label">Telefono del Cliente</h3>
+                        <h3 class="dialog-main-content__label">Tel&eacute;fono del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                 </div>

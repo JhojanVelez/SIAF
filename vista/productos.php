@@ -722,7 +722,7 @@
 
             <dialog class="productos__modal-productos-inhabilitados">
                 <span class="productos__modal-productos-inhabilitados-btn-cerrar dialog-btn-cerrar">X</span>
-                <h2 class="productos__modal-productos-inhabilitados-title dialog-title">Productos inhabilitados</h2>
+                <h2 class="productos__modal-productos-inhabilitados-title dialog-title">Productos Inhabilitados</h2>
                 <div class="productos__modal-productos-inhabilitados-container-gen-repo filtro-gen-repo">
                     <div class="productos__modal-productos-inhabilitados-gen-repo-container-img dialog-objects-enabled-gen-repo-img">
                         <img src="<?php echo(URL_RAIZ); ?>public/imagenes/reportes-icono.png" alt="">
