@@ -1,6 +1,6 @@
 <div class="platilla-reporte-main__content">
     <p class="platilla-reporte-main__title">Reporte de Clientes Inhabilitados</p>
-    <p class="platilla-reporte-main__h3">Informacion adicional</p>
+    <p class="platilla-reporte-main__h3">Informaci&oacute;n adicional</p>
     <p>Cantidad Total de Clientes Inhabilitados: <?php echo(count($this->data)) ?> </p>
 </div>
 <div class="platilla-reporte__container-table">
@@ -10,10 +10,10 @@
                 <td class="table-td">Documento</td>
                 <td class="table-td">Nombre/s</td>
                 <td class="table-td">Apellido/s</td>
-                <td class="table-td">Direccion</td>
+                <td class="table-td">Direcci&oacute;n</td>
                 <td class="table-td">Correo</td>
-                <td class="table-td">Telefono</td>
-                <td class="table-td">Fecha/hora Inhabilitacion</td>
+                <td class="table-td">Tel&eacute;fono</td>
+                <td class="table-td">Fecha/hora Inhabilitaci&oacute;n</td>
             </tr>
         </thead>
         <tbody>
