@@ -22,15 +22,15 @@
             <table class="productos__table tabla">
                 <thead class="table-thead">
                     <tr class="table-tr">
-                        <td class="table-td">Codigo de Barras</td>
-                        <td class="table-td">Descripcion</td>
-                        <td class="table-td">Ubicacion Fisica</td>
-                        <td class="table-td">Presentacion</td>
-                        <td class="table-td">Unidad de Medida</td>
-                        <td class="table-td">Precio de Venta</td>
+                        <td class="table-td">C&oacute;digoDeBarras</td>
+                        <td class="table-td">Descripci&oacute;n</td>
+                        <td class="table-td">Ubicaci&oacute;n F&iacute;sica</td>
+                        <td class="table-td">Presentaci&oacute;n</td>
+                        <td class="table-td">UnidadDeMedida</td>
+                        <td class="table-td">PrecioDeVenta</td>
                         <td class="table-td">Laboratorio</td>
-                        <td class="table-td">Registro INVIMA</td>
-                        <td class="table-td">NIT Proveedor</td>
+                        <td class="table-td">RegistroINVIMA</td>
+                        <td class="table-td">NITProveedor</td>
                         <td class="table-td">Proveedor</td>
                     </tr>
                 </thead>
@@ -83,7 +83,7 @@
                 method="POST" 
                 target="_BLANK"
                 >
-                    <label class="productos__filtro-label" for="product-id">Por codigo de barras del producto</label>
+                    <label class="productos__filtro-label" for="product-id">Por c&oacute;digo de barras del producto</label>
                     <br>
                     <input 
                     name="codigoBarras"
@@ -113,7 +113,7 @@
                     data-input
                     >
                     <br>
-                    <label class="productos__filtro-label" for="product-id">Por tipo de presentacion</label>
+                    <label class="productos__filtro-label" for="product-id">Por tipo de presentaci&oacute;n</label>
                     <br>
                     <select 
                     name="presentacion" 
@@ -121,7 +121,7 @@
                     autocomplete="off"
                     data-input
                     >
-                        <option value="">Presentacion</option>
+                        <option value="">Presentaci&oacute;n</option>
                         <option value="TABLETA">TABLETA</option>
                         <option value="JARABE">JARABE</option>
                         <option value="CAPSULA">CAPSULA</option>
@@ -131,7 +131,7 @@
                         <option value="INHALADOR">INHALADOR</option>
                         <option value="BOTELLA">BOTELLA</option>
                         <option value="TUBO COLAPSIBLE DE ALUMINIO">TUBO COLAPSIBLE DE ALUMINIO</option>
-                        <option value="FRASCO X 300 ML DE SOLUCIÓN INYECTABLE">FRASCO X 300 ML DE SOLUCIÓN INYECTABLE</option>
+                        <option value="FRASCO X 300 ML DE SOLUCIÓN INYECTABLE">FRASCO X 300 ML DE SOLUCI&Oacute;N INYECTABLE</option>
                         <option value="GRANULOS">GRANULOS</option>
                         <option value="100 ML DE JARABE">100 ML DE JARABE</option>
                         <option value="CREMA TOPICA">CREMA TOPICA</option>
@@ -177,12 +177,12 @@
             <dialog class="productos__modal-inhabilitar-producto">
                 <h2 class="productos__modal-inhabilitar-producto-title dialog-title">¡Ten cuidado!</h2>
                 <p class="productos__modal-inhabilitar-producto-text dialog-text">
-                    ¿Estas seguro de inhabilitar este producto?<br>
+                    ¿Est&aacute;s seguro de inhabilitar este producto?<br>
                     Recuerda que una vez inhabilitado, no lo podras volver a habilitar.
                 </p>
                 <div class="productos__modal-inhabilitar-producto-info dialog-main-content">
                     <section class="productos__modal-inhabilitar-producto-info-item" data-ProCodBarras>
-                        <h3 class="dialog-main-content__label">Codigo de Barras del Producto</h3>
+                        <h3 class="dialog-main-content__label">C&oacute;digo de Barras del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-inhabilitar-producto-info-item" data-tbl_proveedores_ProNIT>
@@ -190,7 +190,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-inhabilitar-producto-info-item" data-ProDescripcion>
-                        <h3 class="dialog-main-content__label">Descripcion del Producto</h3>
+                        <h3 class="dialog-main-content__label">Descripci&oacute;n del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-inhabilitar-producto-info-item" data-ProNombre>
@@ -198,7 +198,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-inhabilitar-producto-info-item" data-ProUbicacionFisica>
-                        <h3 class="dialog-main-content__label">Ubicacion Fisica del Producto</h3>
+                        <h3 class="dialog-main-content__label">Ubicaci&oacute;n F&iacute;sica del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-inhabilitar-producto-info-item" data-ProLaboratorio>
@@ -210,7 +210,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-inhabilitar-producto-info-item" data-ProPresentacion>
-                        <h3 class="dialog-main-content__label">Presentacion del Producto</h3>
+                        <h3 class="dialog-main-content__label">Presentaci&oacute;n del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-inhabilitar-producto-info-item" data-ProPrecioVenta>
@@ -235,7 +235,7 @@
             </dialog>
             
             <dialog class="productos__modal-inhabilitacion-fallo dialog-process-result">
-                <h2>¡Algo salio mal!</h2>
+                <h2>¡Algo sali&oacute; mal!</h2>
                 <p>Este producto no pudo ser inhabilitado, porque posiblemente hay registros de este en otras partes del sistema</p>
                 <button class="productos__modal-inhabilitacion-fallo-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
@@ -248,7 +248,7 @@
                 <form class="productos__modal-agregar-producto-form dialog-main-content">
                     
                     <section class="dialog-main-content__input-container">
-                        <label class="dialog-main-content__label">Codigo de Barras del Producto</label>
+                        <label class="dialog-main-content__label">C&oacute;digo de Barras del Producto</label>
                         <input 
                         tabindex="1"
                         name="codigoBarras" 
@@ -276,7 +276,7 @@
                     </section>
 
                     <section class="dialog-main-content__input-container">
-                        <label class="dialog-main-content__label">Descripcion del Producto</label>
+                        <label class="dialog-main-content__label">Descripci&oacute;n del Producto</label>
                         <input 
                         tabindex="2"
                         name="descripcion" 
@@ -308,7 +308,7 @@
                     </section>
 
                     <section class="dialog-main-content__input-container">
-                        <label class="dialog-main-content__label">Ubicacion Fisica del Producto</label>
+                        <label class="dialog-main-content__label">Ubicaci&oacute;n F&iacute;sica del Producto</label>
                         <input 
                         tabindex="3"
                         name="ubicacionFisica" 
@@ -353,7 +353,7 @@
                     </section>
 
                     <section class="dialog-main-content__input-container">
-                        <label class="dialog-main-content__label">Presentacion del Producto</label>
+                        <label class="dialog-main-content__label">Presentaci&oacute;n del Producto</label>
                         <select 
                         tabindex="9"
                         name="presentacion" 
@@ -371,7 +371,7 @@
                             <option value="INHALADOR">INHALADOR</option>
                             <option value="BOTELLA">BOTELLA</option>
                             <option value="TUBO COLAPSIBLE DE ALUMINIO">TUBO COLAPSIBLE DE ALUMINIO</option>
-                            <option value="FRASCO X 300 ML DE SOLUCIÓN INYECTABLE">FRASCO X 300 ML DE SOLUCIÓN INYECTABLE</option>
+                            <option value="FRASCO X 300 ML DE SOLUCIÓN INYECTABLE">FRASCO X 300 ML DE SOLUCI&Oacute;N INYECTABLE</option>
                             <option value="GRANULOS">GRANULOS</option>
                             <option value="100 ML DE JARABE">100 ML DE JARABE</option>
                             <option value="CREMA TOPICA">CREMA TOPICA</option>
@@ -416,12 +416,12 @@
             <dialog class="productos__modal-agregar-producto-confirmacion">
                 <h2 class="productos__modal-agregar-producto-title-confirmacion dialog-title">Verifica los Datos</h2>
                 <p class="productos__modal-agregar-producto-text-confirmacion dialog-text">
-                    ¿Estas seguro de registrar este producto?<br>
-                    Recuerda revisar detenidamente la informacion del producto que estas registrando.
+                    ¿Est&aacute;s seguro de registrar este producto?<br>
+                    Recuerda revisar detenidamente la informaci&oacute;n del producto que est&aacute;s registrando.
                 </p>
                 <div class="productos__modal-agregar-producto-info-confirmacion dialog-main-content">
                     <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ProCodBarras>
-                        <h3 class="dialog-main-content__label">Codigo de Barras del Producto</h3>
+                        <h3 class="dialog-main-content__label">C&oacute;digo de Barras del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-agregar-producto-info-item-confirmacion" data-tbl_proveedores_ProNIT>
@@ -429,7 +429,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ProDescripcion>
-                        <h3 class="dialog-main-content__label">Descripcion del Producto</h3>
+                        <h3 class="dialog-main-content__label">Descripci&oacute;n del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ProNombre>
@@ -437,7 +437,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ProUbicacionFisica>
-                        <h3 class="dialog-main-content__label">Ubicacion Fisica del Producto</h3>
+                        <h3 class="dialog-main-content__label">Ubicaci&oacute;n F&iacute;sica del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ProLaboratorio>
@@ -449,7 +449,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ProPresentacion>
-                        <h3 class="dialog-main-content__label">Presentacion del Producto</h3>
+                        <h3 class="dialog-main-content__label">Presentaci&oacute;n del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-agregar-producto-info-item-confirmacion" data-ProPrecioVenta>
@@ -474,8 +474,8 @@
             </dialog>
             
             <dialog class="productos__modal-agregacion-fallo dialog-process-result">
-                <h2>¡Algo salio mal!</h2>
-                <p>Este producto no pudo ser registrado, porque posiblemente ya esta registrado en el sistema</p>
+                <h2>¡Algo sali&oacute; mal!</h2>
+                <p>Este producto no pudo ser registrado, porque posiblemente ya est&aacute; registrado en el sistema</p>
                 <button class="productos__modal-agregacion-fallo-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
 
@@ -487,7 +487,7 @@
                 <form class="productos__modal-editar-producto-form dialog-main-content">
 
                     <section class="dialog-main-content__input-container">
-                        <label class="dialog-main-content__label">Codigo de Barras del Producto</label>
+                        <label class="dialog-main-content__label">C&oacute;digo de Barras del Producto</label>
                         <input 
                         tabindex="1"
                         name="codigoBarras" 
@@ -515,7 +515,7 @@
                     </section>
 
                     <section class="dialog-main-content__input-container">
-                        <label class="dialog-main-content__label">Descripcion del Producto</label>
+                        <label class="dialog-main-content__label">Descripci&oacute;n del Producto</label>
                         <input 
                         tabindex="2"
                         name="descripcion" 
@@ -547,7 +547,7 @@
                     </section>
 
                     <section class="dialog-main-content__input-container">
-                        <label class="dialog-main-content__label">Ubicacion Fisica del Producto</label>
+                        <label class="dialog-main-content__label">Ubicaci&oacute;n F&iacute;sica del Producto</label>
                         <input 
                         tabindex="3"
                         name="ubicacionFisica" 
@@ -592,7 +592,7 @@
                     </section>
 
                     <section class="dialog-main-content__input-container">
-                        <label class="dialog-main-content__label">Presentacion del Producto</label>
+                        <label class="dialog-main-content__label">Presentaci&oacute;n del Producto</label>
                         <select 
                         tabindex="9"
                         name="presentacion" 
@@ -654,12 +654,12 @@
             <dialog class="productos__modal-editar-producto-confirmacion">
                 <h2 class="productos__modal-editar-producto-title-confirmacion dialog-title">Verifica los Datos</h2>
                 <p class="productos__modal-editar-producto-text-confirmacion dialog-text">
-                    ¿Estas seguro de editar la informacion este producto?<br>
-                    Recuerda revisar detenidamente la informacion del producto que estas editando.
+                    ¿Est&aacute;s seguro de editar la informaci&oacute;n este producto?<br>
+                    Recuerda revisar detenidamente la informaci&oacute;n del producto que est&aacute;s editando.
                 </p>
                 <div class="productos__modal-editar-producto-info-confirmacion dialog-main-content">
                     <section class="productos__modal-editar-producto-info-item-confirmacion" data-ProCodBarras>
-                        <h3 class="dialog-main-content__label">Codigo de Barras del Producto</h3>
+                        <h3 class="dialog-main-content__label">C&oacute;digo de Barras del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-editar-producto-info-item-confirmacion" data-tbl_proveedores_ProNIT>
@@ -667,7 +667,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-editar-producto-info-item-confirmacion" data-ProDescripcion>
-                        <h3 class="dialog-main-content__label">Descripcion del Producto</h3>
+                        <h3 class="dialog-main-content__label">Descripci&oacute;n del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-editar-producto-info-item-confirmacion" data-ProNombre>
@@ -675,7 +675,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-editar-producto-info-item-confirmacion" data-ProUbicacionFisica>
-                        <h3 class="dialog-main-content__label">Ubicacion Fisica del Producto</h3>
+                        <h3 class="dialog-main-content__label">Ubicaci&oacute;n F&iacute;sica del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-editar-producto-info-item-confirmacion" data-ProLaboratorio>
@@ -687,7 +687,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-editar-producto-info-item-confirmacion" data-ProPresentacion>
-                        <h3 class="dialog-main-content__label">Presentacion del Producto</h3>
+                        <h3 class="dialog-main-content__label">Presentaci&oacute;n del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="productos__modal-editar-producto-info-item-confirmacion" data-ProPrecioVenta>
@@ -707,13 +707,13 @@
 
             <dialog class="productos__modal-edicion-exitosa dialog-process-result">
                 <h2>¡Excelente!</h2>
-                <p>Has editado la informacion exitosamente</p>
+                <p>Has editado la informaci&oacute;n exitosamente</p>
                 <button class="productos__modal-edicion-exitosa-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
             
             <dialog class="productos__modal-edicion-fallo dialog-process-result">
-                <h2>¡Algo salio mal!</h2>
-                <p>Este producto no pudo ser registrado, porque posiblemente ya esta registrado en el sistema</p>
+                <h2>¡Algo sali&oacute; mal!</h2>
+                <p>Este producto no pudo ser registrado, porque posiblemente ya est&aacute;s registrado en el sistema</p>
                 <button class="productos__modal-edicion-fallo-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
 
@@ -741,10 +741,10 @@
                     <table class="productos-inhabilitados__table table">
                         <thead class="table-thead">
                             <tr class="table-tr">
-                                <td class="table-td">Codigo de Barras</td>
-                                <td class="table-td">Descripcion</td>
-                                <td class="table-td">Ubicacion Fisica</td>
-                                <td class="table-td">Presentacion</td>
+                                <td class="table-td">C&oacute;digo de Barras</td>
+                                <td class="table-td">Descripci&oacute;n</td>
+                                <td class="table-td">Ubicaci&oacute;n F&iacute;sica</td>
+                                <td class="table-td">Presentaci&oacute;n</td>
                                 <td class="table-td">Unidad de Medida</td>
                                 <td class="table-td">Precio de Venta</td>
                                 <td class="table-td">Laboratorio</td>

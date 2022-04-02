@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="<?php echo(URL_RAIZ); ?>public/css/inicio-sesion.css" />
-    <title>Inicio Sesion</title>
+    <title>Inicio Sesi&oacute;n</title>
     <link rel="shortcut icon" href="<?php echo(URL_FAVICON); ?>" type="image/x-icon">
 </head>
 
@@ -50,7 +50,7 @@
             <section class="iniciar-sesion__container">
                 <div class="iniciar-sesion__flex-container box-shadow">
                     <div class="iniciar-sesion__container-form">
-                        <h1 class="iniciar-sesion__titulo">Inicia Sesion</h1>
+                        <h1 class="iniciar-sesion__titulo">Inicia Sesi&oacute;n</h1>
                         <form 
                         class="iniciar-sesion__form"
                         >
@@ -89,7 +89,7 @@
                     <div class="iniciar-sesion-error-container">
                         <div class="iniciar-sesion-error-container__text-container box-shadow">
                             <h2>Upps ...</h2>
-                            <p>No fue posible encontrarte en el sistema, por favor intentalo de nuevo</p>
+                            <p>No fue posible encontrarte en el sistema, por favor int&eacute;ntalo de nuevo</p>
                         </div>
                         <br>
                         <figure class="iniciar-sesion-error-container__img">
@@ -127,7 +127,7 @@
                     <button class="restablecer-contrasenia__boton-verificar restablecer-contrasenia__boton-verificar--info boton">Verificar</button>
                 </div>
                 <br>
-                <p class="restablecer-contrasenia__parrafo"><b>NOTA:</b> La informacion ingresada debe estar registrada en el sistema.</p>
+                <p class="restablecer-contrasenia__parrafo"><b>NOTA:</b> La informaci&oacute;n ingresada debe estar registrada en el sistema.</p>
             </dialog>
 
             <dialog class="restablecer-contrasenia-dialog-1-result-fallo dialog-process-result">
@@ -139,7 +139,7 @@
 
             <dialog class="restablecer-contrasenia__dialog restablecer-contrasenia__dialog--2">
                 <span class="restablecer-contrasenia__dialog-cerrar dialog-btn-cerrar">X</span>
-                <h2 class="restablecer-contrasenia__titulo dialog-title">Codigo de Verificación</h2>
+                <h2 class="restablecer-contrasenia__titulo dialog-title">Codigo de Verificaci&oacute;n</h2>
                 <form class="restablecer-contrasenia__form-2 restablecer-contrasenia__form">
                     <input 
                     name="valor1RestablecerContrasenia" 
@@ -173,7 +173,7 @@
                 </form>
                 <br>
                 <br>
-                <p class="restablecer-contrasenia__parrafo">Se te ha enviado un código de verificación a tu correo, ingrésalo para poder restablecer tu contraseña de acceso</p>
+                <p class="restablecer-contrasenia__parrafo">Se te ha enviado un c&oacute;digo de verificaci&oacute;n a tu correo, ingr&eacute;salo para poder restablecer tu contraseña de acceso</p>
                 <br>
                 <br>
                 <div class="dialog-container-bts">
@@ -198,13 +198,13 @@
                         <figure class="restablecer-contrasenia-dialog-3-alert-password">
                             <div class="restablecer-contrasenia-dialog-3-alert-password__alert box-shadow">
                                 <h4 class="restablecer-contrasenia-dialog-3-alert-password__alert-title">Recuerda...</h4>
-                                <p class="restablecer-contrasenia-dialog-3-alert-password__alert-text">Una contraseña segura debe cumplir como minimo los siguientes parametros:</p>
+                                <p class="restablecer-contrasenia-dialog-3-alert-password__alert-text">Una contraseña segura debe cumplir como m&iacute;nimo los siguientes par&aacute;metros:</p>
                                 <ul class="restablecer-contrasenia-dialog-3-alert-password__alert-list-ul">
-                                    <li>Debe contener como minimo 8 caracteres.</li>
-                                    <li>Debe contener por lo menos 1 letra minuscula.</li>
-                                    <li>Debe contener por lo menos 1 letra MAYUSCULA.</li>
-                                    <li>Debe contener por lo menos 1 digito del 0 al 9.</li>
-                                    <li>Debe contener por lo menos un caracter especial como por ejemplo(! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _` { | } ~ ).</li>
+                                    <li>Debe contener como m&iacute;nimo 8 caracteres.</li>
+                                    <li>Debe contener por lo menos 1 letra min&uacute;scula.</li>
+                                    <li>Debe contener por lo menos 1 letra MAY&Uacute;SCULA.</li>
+                                    <li>Debe contener por lo menos 1 d&iacute;gito del 0 al 9.</li>
+                                    <li>Debe contener por lo menos un car&aacute;cter especial como por ejemplo(! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _` { | } ~ ).</li>
                                 </ul>
                             </div>
                         </figure>
