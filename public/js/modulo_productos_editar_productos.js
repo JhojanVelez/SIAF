@@ -16,13 +16,13 @@ import { editar } from "../../ajax/editar.js";
     d.addEventListener("click", e => {
         if(e.target.matches(".productos__boton-editar")) {
             $transparentBackgroundModal.classList.toggle("visible");
-            $modal_1.toggleAttribute("open");
-            $modal_1.querySelector("#codigoBarrasProducto").focus()
-            $inputs[1].disabled = true;
             scroll(0,150);
             idProductoSeleccionado = e.target.dataset.idProduct
             buscarPorId(idProductoSeleccionado,"productos",URL_RAIZ)
             .then((res)=> {
+                $modal_1.toggleAttribute("open");
+                $inputs[1].disabled = true;
+                $modal_1.querySelector("#codigoBarrasProducto").focus()
                 for(let key in res) {
                     $inputs.filter(el => {
                         if (Object.keys(el.dataset)[1] == key.toLowerCase()) {

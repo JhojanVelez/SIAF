@@ -14,11 +14,11 @@ import { inhabilitar } from "../../ajax/inhabilitar.js";
     d.addEventListener("click", e => {
         if(e.target.matches(".productos__boton-inhabilitar")) {
             $transparentBackgroundModal.classList.toggle("visible");
-            $modal_1.toggleAttribute("open");
             scroll(0,150);
             idProductoSeleccionado = e.target.dataset.idProduct;
             buscarPorId(idProductoSeleccionado,"productos",URL_RAIZ)
             .then((res)=> {
+                $modal_1.toggleAttribute("open");
                 for(let key in res) {
                     $itemsConfirmacion.filter(el => {
                         if (Object.keys(el.dataset)[0] == key.toLowerCase()) {
