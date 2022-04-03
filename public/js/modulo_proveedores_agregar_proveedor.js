@@ -38,6 +38,18 @@ import {agregar} from '../../ajax/agregar.js';
                 }
             });
 
+            if(isNaN($inputs[0].value)){
+                $inputs[0].classList.add("input-invalido");
+                validador = false;
+            }
+            
+            if(isNaN($inputs[2].value)){
+                $inputs[2].classList.add("input-invalido");
+                validador = false;
+            }
+
+            console.log($inputs)
+
             if(validarCorreo() && validador) {
                 $modal_1.toggleAttribute("open");
                 $modal_2.toggleAttribute("open");

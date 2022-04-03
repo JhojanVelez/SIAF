@@ -24,6 +24,7 @@
     </div>
     <nav class="nav">
         <ul class="nav__ul">
+            <li class="nav__li menu" ><a class="nav__a" href="<?php echo(URL_RAIZ); ?>menu">Men&uacute;</a></li>
             <?php
             
             require_once("./libs/mostrarOpcionesNav.php");
@@ -39,7 +40,7 @@
                         <img src="<?php echo(URL_RAIZ); ?>public/imagenes/sign-out.png" alt="sign out">
                     </section>
                     <section class="sign-out-container__text" >
-                        CERRAR SESION
+                        CERRAR SESI&Oacute;N
                     </section>
                 </div>
             </button>

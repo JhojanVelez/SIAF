@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo(URL_RAIZ); ?>public/css/inventario-entradas.css">
     <link rel="shortcut icon" href="<?php echo(URL_FAVICON); ?>" type="image/x-icon">
-    <title>Gestion de Entradas</title>
+    <title>Gesti&oacute;n de Entradas</title>
 </head>
 <body>
     <?php
@@ -21,7 +21,7 @@
 
         <section class="entradas__container-filter container-filter box-shadow">
             <div class="entradas__filtro">
-                <h2 class="entradas__filtro-titulo">Filtros de busqueda</h2>
+                <h2 class="entradas__filtro-titulo">Filtros De B&uacute;squeda</h2>
                 <form 
                 id="entradas__filtro-form" 
                 class="entradas__filtro-form" 
@@ -33,7 +33,7 @@
                     name="codigoBarrasProducto"
                     type="text" 
                     class="entradas__filtro-producto-id" 
-                    placeholder="Codigo de Barras"
+                    placeholder="C&oacute;digo de Barras"
                     autocomplete="off"
                     data-input
                     >
@@ -62,7 +62,7 @@
                     data-input
                     >
                     <article class="entradas_filtro-container-desde-hasta">
-                        <h3 class="entradas_filtro-container-desde-hasta__title">Por periodo de tiempo</h3>
+                        <h3 class="entradas_filtro-container-desde-hasta__title">Por Periodo De Tiempo</h3>
                         <div class="entradas_filtro-container-desde-hasta__inputs">
                             <input 
                             name="fechaEntradaDesde"
@@ -98,7 +98,7 @@
             <table class="entradas__table">
                 <thead class="table-thead">
                     <tr class="table-tr">
-                        <td class="table-td">EntCodigo</td>
+                        <td class="table-td">EntC&oacute;digo</td>
                         <td class="table-td">ProCodBarras</td>
                         <td class="table-td">Producto</td>
                         <td class="table-td">NitProveedor</td>
@@ -164,13 +164,13 @@
                 <form class="entradas__modal-agregar-entrada-form dialog-main-content">
 
                     <section class="dialog-main-content__input-container entradas__modal-agregar-entrada-form-item">
-                        <label class="dialog-main-content__label">Codigo de Barras del Producto</label>
+                        <label class="dialog-main-content__label">C&oacute;digo de Barras del Producto</label>
                         <input 
                         id="codigoBarrasProducto"
                         name= "codigoBarrasProducto"
                         type="text" 
                         maxlength="15"
-                        title="Ingresa un codigo de barras de un producto registrado en sistema"
+                        title="Ingresa un c&oacute;digo de barras de un producto registrado en sistema"
                         autocomplete="off" 
                         data-input
                         data-proCodBarras
@@ -178,11 +178,11 @@
                     </section>
                         
                     <section class="dialog-main-content__input-container entradas__modal-agregar-entrada-form-item">
-                        <label class="dialog-main-content__label">Descripcion del Producto</label>
+                        <label class="dialog-main-content__label">Descripci&oacute;n del Producto</label>
                         <select 
                         id="productos__modal-agregar-entrada-select-proveedor"
                         name="descripcionProducto" 
-                        title="Elige un producto de la lista y el codigo de barras se pondra automaticamente"
+                        title="Elige un producto de la lista y el c&oacute;digo de barras se pondr&aacute; autom&aacute;ticamente"
                         data-input 
                         data-proDescripcion
                         >
@@ -255,16 +255,16 @@
             <dialog class="entradas__modal-agregar-entrada-confirmacion">
                 <h2 class="entradas__modal-agregar-entrada-title-confirmacion dialog-title">Verifica los Datos</h2>
                 <p class="entradas__modal-agregar-entrada-text-confirmacion dialog-text">
-                    ¿Estas seguro de registrar este entrada?<br>
-                    Recuerda revisar detenidamente la informacion de la entrada que estas registrando.
+                    ¿Est&aacute;s seguro de registrar esta entrada?<br>
+                    Recuerda revisar detenidamente la informaci&oacute;n de la entrada que est&aacute;s registrando.
                 </p>
                 <div class="entradas__modal-agregar-entrada-info-confirmacion dialog-main-content">
                     <section class="entradas__modal-agregar-entrada-info-item-confirmacion" data-proCodBarras>
-                        <h3 class="dialog-main-content__label">Codigo de Barras del Producto</h3>
+                        <h3 class="dialog-main-content__label">C&oacute;digo de Barras del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="entradas__modal-agregar-entrada-info-item-confirmacion" data-proDescripcion>
-                        <h3 class="dialog-main-content__label">Descripcion del Producto</h3>
+                        <h3 class="dialog-main-content__label">Descripci&oacute;n del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="entradas__modal-agregar-entrada-info-item-confirmacion" data-entCantidad>
@@ -297,7 +297,7 @@
             </dialog>
             
             <dialog class="entradas__modal-agregacion-fallo dialog-process-result">
-                <h2>¡Algo salio mal!</h2>
+                <h2>¡Algo sali&oacute; mal!</h2>
                 <p>Esta entrada no pudo ser registrada, porque posiblemente hubo un error interno</p>
                 <button class="entradas__modal-agregacion-fallo-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>

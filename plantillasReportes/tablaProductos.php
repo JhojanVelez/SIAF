@@ -1,6 +1,6 @@
 <div class="platilla-reporte-main__content">
     <p class="platilla-reporte-main__title">Reporte de Productos</p>
-    <p class="platilla-reporte-main__h3">Informacion adicional</p>
+    <p class="platilla-reporte-main__h3">Informaci&oacute;n adicional</p>
     <p>Cantidad Total de Productos: <?php echo(count($this->data)) ?> </p>
 </div>
 <div class="platilla-reporte__container-table">
@@ -8,14 +8,14 @@
         <thead class="table-thead">
             <tr class="table-tr">
                 <td class="table-td">ProCodBarr</td>
-                <td class="table-td">Descripcion</td>
-                <td class="table-td">Ubicacion Fisica</td>
-                <td class="table-td">Presentacion</td>
+                <td class="table-td">Descripci&oacute;n</td>
+                <td class="table-td">Ubicaci&oacute;nF&iacute;sica</td>
+                <td class="table-td">Presentaci&oacute;n</td>
                 <td class="table-td">UnidadMedida</td>
                 <td class="table-td">PrecioVenta</td>
                 <td class="table-td">Laboratorio</td>
-                <td class="table-td">Registro INVIMA</td>
-                <td class="table-td">NIT Proveedor</td>
+                <td class="table-td">RegistroINVIMA</td>
+                <td class="table-td">NITProveedor</td>
             </tr>
         </thead>
         <tbody>

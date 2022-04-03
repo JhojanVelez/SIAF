@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo(URL_RAIZ); ?>public/css/inventario-salidas.css">
     <link rel="shortcut icon" href="<?php echo(URL_FAVICON); ?>" type="image/x-icon">
-    <title>Gestion de Salidas</title>
+    <title>Gesti&oacute;n de Salidas</title>
 </head>
 <body>
     <?php
@@ -21,7 +21,7 @@
 
         <section class="salidas__container-filter container-filter box-shadow">
             <div class="salidas__filtro">
-                <h2 class="salidas__filtro-titulo">Filtros de busqueda</h2>
+                <h2 class="salidas__filtro-titulo">Filtros De B&uacute;squeda</h2>
                 <form 
                 id="salidas__filtro-form" 
                 class="salidas__filtro-form" 
@@ -33,7 +33,7 @@
                     name="codigoBarrasProducto"
                     type="text" 
                     class="salidas__filtro-producto-id" 
-                    placeholder="Codigo de Barras"
+                    placeholder="C&oacute;digo de Barras"
                     autocomplete="off"
                     data-input
                     >
@@ -66,7 +66,7 @@
                         <option value="DAÑO INTERNO">DAÑO INTERNO</option>
                     </select>
                     <article class="salidas_filtro-container-desde-hasta">
-                        <h3 class="salidas_filtro-container-desde-hasta__title">Por periodo de tiempo</h3>
+                        <h3 class="salidas_filtro-container-desde-hasta__title">Por Periodo De Tiempo</h3>
                         <div class="salidas_filtro-container-desde-hasta__inputs">
                             <input 
                             name="fechaSalidaDesde"
@@ -102,7 +102,7 @@
             <table class="salidas__table">
                 <thead class="table-thead">
                     <tr class="table-tr">
-                        <td class="table-td">SalCodigo</td>
+                        <td class="table-td">SalC&oacute;digo</td>
                         <td class="table-td">ProCodBarras</td>
                         <td class="table-td">Descripcion</td>
                         <td class="table-td">Proveedor</td>
@@ -163,7 +163,7 @@
                 <form class="salidas__modal-agregar-salida-form dialog-main-content">
 
                     <section class="dialog-main-content__input-container salidas__modal-agregar-salida-form-item">
-                        <label class="dialog-main-content__label">Codigo de Barras del Producto</label>
+                        <label class="dialog-main-content__label">C&oacute;digo de Barras del Producto</label>
                         <input 
                         class="salidas__modal-agregar-salida-form-item"
                         id="codigoBarrasProducto"
@@ -177,7 +177,7 @@
                         >
                     </section>
                     <section class="dialog-main-content__input-container salidas__modal-agregar-salida-form-item">
-                        <label class="dialog-main-content__label">Descripcion del Producto</label>
+                        <label class="dialog-main-content__label">Descripci&oacute;n del Producto</label>
                         <select 
                         class="salidas__modal-agregar-salida-form-item"
                         id="productos__modal-agregar-salida-select-proveedor"
@@ -262,16 +262,16 @@
             <dialog class="salidas__modal-agregar-salida-confirmacion">
                 <h2 class="salidas__modal-agregar-salida-title-confirmacion dialog-title">Verifica los Datos</h2>
                 <p class="salidas__modal-agregar-salida-text-confirmacion dialog-text">
-                    ¿Estas seguro de registrar este salida?<br>
-                    Recuerda revisar detenidamente la informacion de la salida que estas registrando.
+                    ¿Est&aacute;s seguro de registrar este salida?<br>
+                    Recuerda revisar detenidamente la informaci&oacute;n de la salida que est&aacute;s registrando.
                 </p>
                 <div class="salidas__modal-agregar-salida-info-confirmacion dialog-main-content">
                     <section class="salidas__modal-agregar-salida-info-item-confirmacion" data-ProCodBarras>
-                        <h3 class="dialog-main-content__label">Codigo de Barras del Producto</h3>
+                        <h3 class="dialog-main-content__label">C&oacute;digo de Barras del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="salidas__modal-agregar-salida-info-item-confirmacion" data-ProDescripcion>
-                        <h3 class="dialog-main-content__label">Descripcion del Producto</h3>
+                        <h3 class="dialog-main-content__label">Descripci&oacute;n del Producto</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="salidas__modal-agregar-salida-info-item-confirmacion" data-salCantidad>
@@ -304,7 +304,7 @@
             </dialog>
             
             <dialog class="salidas__modal-agregacion-fallo dialog-process-result">
-                <h2>¡Algo salio mal!</h2>
+                <h2>¡Algo sali&oacute; mal!</h2>
                 <p>Esta salida no pudo ser registrada, porque posiblemente hubo un error interno</p>
                 <button class="salidas__modal-agregacion-fallo-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>

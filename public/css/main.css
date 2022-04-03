@@ -272,6 +272,7 @@ thead {
 
 thead td {
   padding: .3rem;
+  word-break: initial;
 }
 
 tbody td {

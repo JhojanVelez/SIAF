@@ -21,7 +21,7 @@
 
         <section class="clientes__container-filter container-filter box-shadow">
             <div class="clientes__filtro filtro">
-                <h2 class="clientes__filtro-titulo filtro-title">Filtros de busqueda</h2>
+                <h2 class="clientes__filtro-titulo filtro-title">Filtros de B&uacute;squeda</h2>
                 <form 
                 id="clientes__filtro-form" 
                 class="clientes__filtro-form filtro-form"
@@ -98,7 +98,7 @@
                                 <p class="clientes__lista-cliente-data"><?php echo $value["CliDocIdentidad"]; ?></p>
                             </section>
                             <section class="clientes__lista-cliente-info telefono">
-                                <h4 class="clientes__lista-cliente-info-title">TELEFONO</h4>
+                                <h4 class="clientes__lista-cliente-info-title">TEL&Eacute;FONO</h4>
                                 <p class="clientes__lista-cliente-data"><?php echo $value["CliTelefono"]; ?></p>
                             </section>
                             <section class="clientes__lista-cliente-info nombres">
@@ -114,7 +114,7 @@
                                 <p class="clientes__lista-cliente-data"><?php echo $value["CliCorreo"]; ?></p>
                             </section>
                             <section class="clientes__lista-cliente-info direccion">
-                                <h4 class="clientes__lista-cliente-info-title">DIRECCION</h4>
+                                <h4 class="clientes__lista-cliente-info-title">DIRECCI&Oacute;N</h4>
                                 <p class="clientes__lista-cliente-data"><?php echo $value["CliDireccion"]; ?></p>
                             </section>
                         </div>
@@ -159,7 +159,7 @@
                                 <p class="clientes__lista-cliente-data"></p>
                             </section>
                             <section class="clientes__lista-cliente-info telefono">
-                                <h4 class="clientes__lista-cliente-info-title">TELEFONO</h4>
+                                <h4 class="clientes__lista-cliente-info-title">TEL&Eacute;FONO</h4>
                                 <p class="clientes__lista-cliente-data"></p>
                             </section>
                             <section class="clientes__lista-cliente-info nombres">
@@ -175,7 +175,7 @@
                                 <p class="clientes__lista-cliente-data"></p>
                             </section>
                             <section class="clientes__lista-cliente-info direccion">
-                                <h4 class="clientes__lista-cliente-info-title">DIRECCION</h4>
+                                <h4 class="clientes__lista-cliente-info-title">DIRECCI&Oacute;N</h4>
                                 <p class="clientes__lista-cliente-data"></p>
                             </section>
                         </div>
@@ -243,7 +243,7 @@
                     </section>
 
                     <section class="dialog-main-content__input-container">
-                        <label class="dialog-main-content__label">Correo Electronico del Cliente</label>
+                        <label class="dialog-main-content__label">Correo Electr&oacute;nico del Cliente</label>
                         <input
                         name="correo" 
                         type="text"
@@ -269,7 +269,7 @@
                     </section>
                     
                     <section class="dialog-main-content__input-container">
-                        <label class="dialog-main-content__label">Direccion del Cliente</label>
+                        <label class="dialog-main-content__label">Direcci&oacute;n del Cliente</label>
                         <input
                         name="direccion" 
                         type="text"
@@ -295,7 +295,7 @@
                     </section>
                     
                     <section class="dialog-main-content__input-container">
-                        <label class="dialog-main-content__label">Telefono del Cliente</label>
+                        <label class="dialog-main-content__label">Tel&eacute;fono del Cliente</label>
                         <input
                         name="telefono"
                         type="text"
@@ -317,8 +317,8 @@
             <dialog class="clientes__modal-agregar-cliente-confirmacion">
                 <h2 class="clientes__modal-agregar-cliente-title-confirmacion dialog-title">Verifica los Datos</h2>
                 <p class="clientes__modal-agregar-cliente-text-confirmacion dialog-text">
-                    ¿Estas seguro de registrar este cliente?<br>
-                    Recuerda revisar detenidamente la informacion del cliente que estas registrando.
+                    ¿Est&aacute;s seguro de registrar este cliente?<br>
+                    Recuerda revisar detenidamente la informaci&oacute;n del cliente que estas registrando.
                 </p>
                 <div class="clientes__modal-agregar-cliente-info-confirmacion dialog-main-content">
                     <section class="clientes__modal-agregar-cliente-info-item-confirmacion" data-CliDocIdentidad>
@@ -326,7 +326,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-agregar-cliente-info-item-confirmacion" data-CliCorreo>
-                        <h3 class="dialog-main-content__label">Correo Electronico del Cliente</h3>
+                        <h3 class="dialog-main-content__label">Correo Electr&oacute;nico del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-agregar-cliente-info-item-confirmacion" data-CliNombre>
@@ -334,7 +334,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-agregar-cliente-info-item-confirmacion" data-CliDireccion>
-                        <h3 class="dialog-main-content__label">Direccion del Cliente</h3>
+                        <h3 class="dialog-main-content__label">Direcci&oacute;n del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-agregar-cliente-info-item-confirmacion" data-CliApellido>
@@ -342,7 +342,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-agregar-cliente-info-item-confirmacion" data-CliTelefono>
-                        <h3 class="dialog-main-content__label">Telefono del Cliente</h3>
+                        <h3 class="dialog-main-content__label">Tel&eacute;fono del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                 </div>
@@ -359,7 +359,7 @@
             </dialog>
             
             <dialog class="clientes__modal-agregacion-fallo dialog-process-result">
-                <h2>¡Algo salio mal!</h2>
+                <h2>¡Algo sali&oacute; mal!</h2>
                 <p>Este cliente no pudo ser registrado, porque posiblemente ya esta registrado en el sistema</p>
                 <button class="clientes__modal-agregacion-fallo-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
@@ -391,8 +391,8 @@
                                 <td class="table-td">Nombre/s</td>
                                 <td class="table-td">Apellido/s</td>
                                 <td class="table-td">Correo</td>
-                                <td class="table-td">Telefono</td>
-                                <td class="table-td">Direccion</td>
+                                <td class="table-td">Tel&eacute;fono</td>
+                                <td class="table-td">Direcci&oacute;n</td>
                                 <td class="table-td">Fecha/hora Inhabilitacion</td>
                             </tr>
                         </thead>
@@ -435,7 +435,7 @@
                     </section>
 
                     <section class="dialog-main-content__input-container">
-                        <label class="dialog-main-content__label">Correo Electronico del Cliente</label>
+                        <label class="dialog-main-content__label">Correo Electr&oacute;nico del Cliente</label>
                         <input
                         name="correo" 
                         type="text"
@@ -461,7 +461,7 @@
                     </section>
                     
                     <section class="dialog-main-content__input-container">
-                        <label class="dialog-main-content__label">Direccion del Cliente</label>
+                        <label class="dialog-main-content__label">Direcci&oacute;n del Cliente</label>
                         <input
                         name="direccion" 
                         type="text"
@@ -487,7 +487,7 @@
                     </section>
                     
                     <section class="dialog-main-content__input-container">
-                        <label class="dialog-main-content__label">Telefono del Cliente</label>
+                        <label class="dialog-main-content__label">Tel&eacute;fono del Cliente</label>
                         <input
                         name="telefono"
                         type="text"
@@ -508,8 +508,8 @@
             <dialog class="clientes__modal-editar-cliente-confirmacion">
                 <h2 class="clientes__modal-editar-cliente-title-confirmacion dialog-title">Verifica los Datos</h2>
                 <p class="clientes__modal-editar-cliente-text-confirmacion dialog-text">
-                    ¿Estas seguro de modificar este cliente?<br>
-                    Recuerda revisar detenidamente la informacion del cliente que estas modificando.
+                    ¿Est&aacute;s seguro de modificar este cliente?<br>
+                    Recuerda revisar detenidamente la informaci&oacute;n del cliente que estas modificando.
                 </p>
                 <div class="clientes__modal-editar-cliente-info-confirmacion dialog-main-content">
                     <section class="clientes__modal-editar-cliente-info-item-confirmacion" data-CliDocIdentidad>
@@ -517,7 +517,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-editar-cliente-info-item-confirmacion" data-CliCorreo>
-                        <h3 class="dialog-main-content__label">Correo Electronico del Cliente</h3>
+                        <h3 class="dialog-main-content__label">Correo Electr&oacute;nico del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-editar-cliente-info-item-confirmacion" data-CliNombre>
@@ -525,7 +525,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-editar-cliente-info-item-confirmacion" data-CliDireccion>
-                        <h3 class="dialog-main-content__label">Direccion del Cliente</h3>
+                        <h3 class="dialog-main-content__label">Direcci&oacute;n del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-editar-cliente-info-item-confirmacion" data-CliApellido>
@@ -533,7 +533,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-editar-cliente-info-item-confirmacion" data-CliTelefono>
-                        <h3 class="dialog-main-content__label">Telefono del Cliente</h3>
+                        <h3 class="dialog-main-content__label">Tel&eacute;fono del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                 </div>
@@ -550,7 +550,7 @@
             </dialog>
             
             <dialog class="clientes__modal-modificacion-fallo dialog-process-result">
-                <h2>¡Algo salio mal!</h2>
+                <h2>¡Algo sali&oacute; mal!</h2>
                 <p>Este cliente no pudo ser modificado, porque posiblemente hubo un problema interno</p>
                 <button class="clientes__modal-modificacion-fallo-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>
@@ -561,7 +561,7 @@
             <dialog class="clientes__modal-inhabilitar-cliente">
                 <h2 class="clientes__modal-inhabilitar-cliente-title dialog-title">¡Ten cuidado!</h2>
                 <p class="clientes__modal-inhabilitar-cliente-text dialog-text">
-                    ¿Estas seguro de inhabilitar este cliente?<br>
+                    ¿Est&oacute;s seguro de inhabilitar este cliente?<br>
                     Recuerda que una vez inhabilitado, no lo podras volver a habilitar.
                 </p>
                 <div class="clientes__modal-inhabilitar-cliente-info dialog-main-content">
@@ -570,7 +570,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion" data-CliCorreo>
-                        <h3 class="dialog-main-content__label">Correo Electronico del Cliente</h3>
+                        <h3 class="dialog-main-content__label">Correo Electr&oacute;nico del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion" data-CliNombre>
@@ -578,7 +578,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion" data-CliDireccion>
-                        <h3 class="dialog-main-content__label">Direccion del Cliente</h3>
+                        <h3 class="dialog-main-content__label">Direcci&oacute;n del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion" data-CliApellido>
@@ -586,7 +586,7 @@
                         <p>________________________________________________</p>
                     </section>
                     <section class="clientes__modal-inhabilitar-cliente-info-item-confirmacion" data-CliTelefono>
-                        <h3 class="dialog-main-content__label">Telefono del Cliente</h3>
+                        <h3 class="dialog-main-content__label">Tel&eacute;fono del Cliente</h3>
                         <p>________________________________________________</p>
                     </section>
                 </div>
@@ -603,7 +603,7 @@
             </dialog>
             
             <dialog class="clientes__modal-inhabilitacion-fallo dialog-process-result">
-                <h2>¡Algo salio mal!</h2>
+                <h2>¡Algo sali&oacute; mal!</h2>
                 <p>Este cliente no pudo ser inhabilitado, porque posiblemente hay registros de este en otras partes del sistema</p>
                 <button class="clientes__modal-inhabilitacion-fallo-btn dialog-process-result__btn boton" >Ok</button>
             </dialog>

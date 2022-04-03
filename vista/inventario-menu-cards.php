@@ -20,7 +20,7 @@
     <main>
         <article class="cards-flex-container">
             <section class="card box-shadow">
-                <h2 class="card__title">GESTION DE ENTRADAS</h2>
+                <h2 class="card__title">GESTI&Oacute;N DE ENTRADAS</h2>
                 <div class="card__img">
                     <img src="<?php echo(URL_RAIZ); ?>public/imagenes/inventario-entradas.png" />
                 </div>
@@ -38,7 +38,7 @@
                 </button>
             </section>
             <section class="card box-shadow">
-                <h2 class="card__title">GESTION DE SALIDAS</h2>
+                <h2 class="card__title">GESTI&Oacute;N DE SALIDAS</h2>
                 <div class="card__img">
                     <img src="<?php echo(URL_RAIZ); ?>public/imagenes/inventario-salidas.png" alt="">
                 </div>

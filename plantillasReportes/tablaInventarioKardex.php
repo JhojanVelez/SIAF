@@ -1,6 +1,6 @@
 <div class="platilla-reporte-main__content">
     <p class="platilla-reporte-main__title">Reporte de Kardex</p>
-    <p class="platilla-reporte-main__h3">Informacion adicional</p>
+    <p class="platilla-reporte-main__h3">Informaci&oacute;n adicional</p>
     <p>Cantidad Total de Registros: <?php echo(count($this->data)) ?> </p>
 </div>
 <div class="platilla-reporte__container-table">
@@ -10,13 +10,13 @@
                 <td>codInvt</td>
                 <td>ProCodBarras</td>
                 <td>Producto</td>
-                <td>Total Entradas</td>
-                <td>Total Salidas</td>
+                <td>TotalEntradas</td>
+                <td>TotalSalidas</td>
                 <td>Stock</td>
-                <td>Ubicacion Fisica</td>
-                <td>Costo Producto</td>
-                <td>Precio Venta</td>
-                <td>Producto Presentacion</td>
+                <td>Ubicaci&oacute;nF&iacute;sica</td>
+                <td>CostoProducto</td>
+                <td>PrecioVenta</td>
+                <td>ProductoPresentaci&oacute;n</td>
                 <td>Laboratorio</td>
                 <td>NitProveedor</td>
                 <td>Proveedor</td>

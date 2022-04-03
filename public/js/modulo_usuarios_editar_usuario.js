@@ -61,8 +61,17 @@ import { editar } from "../../ajax/editar.js";
                 }
             });
 
-            if(validarCorreo() && validador) {
-                console.log("nel")
+            if(isNaN($inputs[0].value)){
+                $inputs[0].classList.add("input-invalido");
+                validador = false;
+            }
+            
+            if(isNaN($inputs[5].value)){
+                $inputs[5].classList.add("input-invalido");
+                validador = false;
+            }
+
+            if(validarCorreo() && validarRH() && validador) {
                 $modal_1.toggleAttribute("open");
                 
                 $inputs.forEach(input => {
@@ -74,6 +83,7 @@ import { editar } from "../../ajax/editar.js";
                         }
                     })
                 })
+
                 $modal_2.toggleAttribute("open");
             }
         }
@@ -137,6 +147,10 @@ import { editar } from "../../ajax/editar.js";
         if(e.target == $inputs[1]) {
             validarCorreo();
         }
+
+        if(e.target == $inputs[7]) {
+            validarRH();
+        }
     })
 
     function validarCorreo () {
@@ -147,6 +161,29 @@ import { editar } from "../../ajax/editar.js";
         } else {
             $inputs[1].classList.add("input-invalido");
             return false;
+        }
+    }
+
+    function validarRH () {
+        const tiposSangre = ["A+","B+","O+","A-","B-","O-","AB-","AB+"];
+
+        $inputs[7].value = $inputs[7].value.toUpperCase()
+        
+        let validadorAuxiliar = 0;
+
+        for(let i = 0; i < tiposSangre.length; i++) {
+            if($inputs[7].value == tiposSangre[i]) {
+                validadorAuxiliar = 1;
+                break;
+            }
+        }
+
+        if(validadorAuxiliar != 1 || $inputs[7].value.length > 3) {
+            $inputs[7].classList.add("input-invalido");
+            return false;
+        } else {
+            $inputs[7].classList.remove("input-invalido");
+            return true;
         }
     }
 })();

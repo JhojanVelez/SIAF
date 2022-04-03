@@ -1,6 +1,6 @@
 <div class="platilla-reporte-main__content">
     <p class="platilla-reporte-main__title">Reporte de Ventas</p>
-    <p class="platilla-reporte-main__h3">Informacion adicional</p>
+    <p class="platilla-reporte-main__h3">Informaci&oacute;n adicional</p>
     <p>Cantidad Total de Ventas: <?php echo(count($this->data)) ?> </p>
 </div>
 <div class="platilla-reporte__container-table">

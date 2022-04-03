@@ -53,6 +53,11 @@ import { editar } from "../../ajax/editar.js";
                 validador = false;
             }
 
+            if(isNaN($inputs[0].value)){
+                $inputs[0].classList.add("input-invalido");
+                validador = false;
+            }
+            
             if(isNaN($inputs[8].value)){
                 $inputs[8].classList.add("input-invalido");
                 validador = false;

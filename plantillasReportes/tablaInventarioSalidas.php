@@ -1,6 +1,6 @@
 <div class="platilla-reporte-main__content">
     <p class="platilla-reporte-main__title">Reporte de Salidas</p>
-    <p class="platilla-reporte-main__h3">Informacion adicional</p>
+    <p class="platilla-reporte-main__h3">Informaci&oacute;n adicional</p>
     <p>Cantidad Total de Salidas: <?php echo(count($this->data)) ?> </p>
 </div>
 <div class="platilla-reporte__container-table">
@@ -9,7 +9,7 @@
             <tr class="table-tr">
                 <td class="table-td">SalCodigo</td>
                 <td class="table-td">ProCodBarr</td>
-                <td class="table-td">Descripcion</td>
+                <td class="table-td">Descripci&oacute;n</td>
                 <td class="table-td">Proveedor</td>
                 <td class="table-td">FechaSalida</td>
                 <td class="table-td">Cantidad</td>
