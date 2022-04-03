@@ -76,7 +76,7 @@ thead td {
 tbody td {
     min-width: min-content;
     max-width: 300px;
-    word-break: break-word;
+    word-wrap: break-word;
     font-size: .7rem;
     padding-left: .5rem;
 }

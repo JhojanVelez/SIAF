@@ -26,6 +26,7 @@ class ConexionBD {
     }
 
     public function generarReporte () {}
+    public function generarReporteInhabilitados () {}
 
     //con tan solo estas lineas de codigo, estamos cerrando conexiones hechas como tambien 
     //posibles variables que puedan consumir recursos
