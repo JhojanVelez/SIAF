@@ -236,7 +236,7 @@ display: flex;
 .usuarios-modal-agregar-usuario-form-img-container__file::after {
     content: '';
     display: block;
-    background-image: url(../imagenes/editar-icono.svg);
+    background-image: url(../imagenes/editar-icono.png);
     background-repeat: no-repeat;
     background-size: 40px;
     background-position: center;
@@ -400,7 +400,7 @@ display: flex;
 .usuarios-modal-editar-usuario-form-img-container__file::after {
     content: '';
     display: block;
-    background-image: url(../imagenes/editar-icono.svg);
+    background-image: url(../imagenes/editar-icono.png);
     background-repeat: no-repeat;
     background-size: 40px;
     background-position: center;

@@ -7,19 +7,19 @@
     <table class="platilla-reporte__table table">
         <thead class="table-thead">
             <tr class="table-tr">
-                <td>codInvt</td>
-                <td>ProCodBarras</td>
-                <td>Producto</td>
-                <td>TotalEntradas</td>
-                <td>TotalSalidas</td>
+                <td>C&oacute;digo</td>
+                <td>C&oacute;digo Barras Producto</td>
+                <td>NombreProducto</td>
+                <td>Total Entradas</td>
+                <td>Total Salidas</td>
                 <td>Stock</td>
-                <td>Ubicaci&oacute;nF&iacute;sica</td>
-                <td>CostoProducto</td>
-                <td>PrecioVenta</td>
-                <td>ProductoPresentaci&oacute;n</td>
-                <td>Laboratorio</td>
-                <td>NitProveedor</td>
-                <td>Proveedor</td>
+                <td>Ubicaci&oacute;n F&iacute;sica Producto</td>
+                <td>Costo Producto</td>
+                <td>Precio Venta Producto</td>
+                <td>Presentaci&oacute;n Producto</td>
+                <td>Laboratorio Producto</td>
+                <td>Nit Proveedor</td>
+                <td>Nombre Proveedor</td>
             </tr>
         </thead>
         <tbody>
