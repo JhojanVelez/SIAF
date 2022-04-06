@@ -68,8 +68,8 @@
                     <img src="
                         <?php 
                             echo (file_exists("fotosEmpleados/empleado_{$_SESSION["usuario"]["documento"]}.jpeg"))
-                                ? URL_RAIZ."fotosEmpleados/empleado_{$_SESSION["usuario"]["documento"]}.jpeg" 
-                                : URL_RAIZ."fotosEmpleados/default_1.jpeg";
+                                ? URL_RAIZ."fotosEmpleados/empleado_{$_SESSION["usuario"]["documento"]}.jpeg?=".random_int(1,1000) 
+                                : URL_RAIZ."fotosEmpleados/default_1.jpeg?=".random_int(1,1000);
                         ?>
                         "
                     >

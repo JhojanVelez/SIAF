@@ -22,7 +22,7 @@ import { inhabilitar } from "../../ajax/inhabilitar.js";
                     $itemsConfirmacion.filter(el => {
                         if (Object.keys(el.dataset)[0] == key.toLowerCase()) {
                             (Object.keys(el.dataset)[0] == "empimg")
-                            ? el.querySelector("img").src = res[key]
+                            ? el.querySelector("img").src = res[key]+"?="+Math.random()*1000
                             : el.querySelector("P").innerHTML = res[key];
                         }
                     })

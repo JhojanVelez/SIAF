@@ -98,8 +98,8 @@
                             src="
                                     <?php 
                                     echo (file_exists("fotosEmpleados/empleado_{$value['EmpDocIdentidad']}.jpeg"))
-                                        ? "fotosEmpleados/empleado_{$value['EmpDocIdentidad']}.jpeg" 
-                                        : "fotosEmpleados/default_1.jpeg";
+                                        ? "fotosEmpleados/empleado_{$value['EmpDocIdentidad']}.jpeg?=".random_int(1,1000)
+                                        : "fotosEmpleados/default_1.jpeg?=".random_int(1,1000);
                                     ?>
                                 " 
                             alt="">

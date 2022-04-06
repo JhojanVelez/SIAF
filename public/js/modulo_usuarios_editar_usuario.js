@@ -33,7 +33,7 @@ import { editar } from "../../ajax/editar.js";
                     $inputs.filter(el => {
                         if (Object.keys(el.dataset)[1] == key.toLowerCase()) {
                             (Object.keys(el.dataset)[1] == "empimg")
-                            ? el.previousElementSibling.src = res[key]
+                            ? el.previousElementSibling.src = res[key]+"?="+Math.random()*1000
                             : el.value = res[key];
                         }
                     })
