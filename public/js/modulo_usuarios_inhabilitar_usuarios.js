@@ -17,7 +17,6 @@ import { inhabilitar } from "../../ajax/inhabilitar.js";
             idUsuario = e.target.closest("button.usuarios__lista-usuario-boton-inhabilitar").dataset.docUsuario;
             buscarPorId(idUsuario,"usuarios",URL_RAIZ)
             .then((res)=> {
-                $modal_1.toggleAttribute("open");
                 for(let key in res) {
                     $itemsConfirmacion.filter(el => {
                         if (Object.keys(el.dataset)[0] == key.toLowerCase()) {
@@ -27,6 +26,7 @@ import { inhabilitar } from "../../ajax/inhabilitar.js";
                         }
                     })
                 }
+                $modal_1.toggleAttribute("open");
             });
         }
         if(e.target.matches(".usuarios__modal-inhabilitar-usuario-btn-confirmar")) {

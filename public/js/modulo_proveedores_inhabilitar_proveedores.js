@@ -13,7 +13,6 @@ import { inhabilitar } from "../../ajax/inhabilitar.js";
     d.addEventListener("click", e => {
         if(e.target.closest("button.proveedores__lista-proveedor-boton-inhabilitar")) {
             $transparentBackgroundModal.classList.toggle("visible");
-            $modal_1.toggleAttribute("open");
             scroll(0,280);
             idProveedor = e.target.closest("button.proveedores__lista-proveedor-boton-inhabilitar").dataset.nitProveedor;
             buscarPorId(idProveedor,"proveedores",URL_RAIZ)
@@ -26,6 +25,7 @@ import { inhabilitar } from "../../ajax/inhabilitar.js";
                         }
                     })
                 }
+                $modal_1.toggleAttribute("open");
             });
         }
         if(e.target.matches(".proveedores__modal-inhabilitar-proveedor-btn-confirmar")) {

@@ -23,8 +23,6 @@ import { editar } from "../../ajax/editar.js";
 
         if(e.target.closest("button.clientes__lista-cliente-boton-editar")) {
             $transparentBackgroundModal.classList.toggle("visible");
-            $modal_1.toggleAttribute("open");
-            $formulario.documento.focus();
             scroll(0,280);
             docCliente = e.target.closest("button.clientes__lista-cliente-boton-editar").dataset.docCliente;
             buscarPorId(docCliente,"clientes",URL_RAIZ)
@@ -37,6 +35,8 @@ import { editar } from "../../ajax/editar.js";
                         }
                     })
                 }
+                $modal_1.toggleAttribute("open");
+                $formulario.documento.focus();
             });
         }
         if(e.target.matches(".clientes__modal-editar-cliente-btn-editar")) {
