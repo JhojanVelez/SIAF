@@ -15,6 +15,8 @@ import { editar } from "../../ajax/editar.js";
 
     let validador;
 
+    console.log($inputs[8])
+
     /* Patrones para validacion de Email */
     let patronEstandardOfficial = "^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$";
     let patronPersonal = "^([a-z]|[A-Z]|[0-9]|[!#$%&'*+\-\/=?^_`{|}~;])+@([a-z]|[A-Z]|[0-9])+\\.([a-z]|[A-Z]|[0-9])+(\\.|[[a-z]|[A-Z]|[0-9])*$";
@@ -27,19 +29,18 @@ import { editar } from "../../ajax/editar.js";
             docUsuario = e.target.closest("button.usuarios__lista-usuario-boton-editar").dataset.docUsuario;
             buscarPorId(docUsuario,"usuarios",URL_RAIZ)
             .then((res)=> {
-                console.log(res)
                 for(let key in res) {
                     $inputs.filter(el => {
                         if (Object.keys(el.dataset)[1] == key.toLowerCase()) {
                             (Object.keys(el.dataset)[1] == "empimg")
-                            ? el.previousElementSibling.src = res[key]+"?="+Math.random()*1000
+                            ? el.previousElementSibling.src = res[key]+"?="+parseInt(Math.random()*50)
                             : el.value = res[key];
                         }
                     })
                 }
-                $modal_1.toggleAttribute("open");
-                $formulario.documento.focus();
             });
+            $modal_1.toggleAttribute("open");
+            $formulario.documento.focus();
         }
         if(e.target.matches(".usuarios__modal-editar-usuario-btn-editar")) {
             e.preventDefault();
@@ -89,6 +90,7 @@ import { editar } from "../../ajax/editar.js";
         }
         if(e.target.matches(".usuarios__modal-editar-usuario-btn-cancelar")) {
             e.preventDefault();
+            $inputs[8].previousElementSibling.src = "";
             $modal_1.toggleAttribute("open");
             $transparentBackgroundModal.classList.toggle("visible");
         }

@@ -21,7 +21,7 @@ import { inhabilitar } from "../../ajax/inhabilitar.js";
                     $itemsConfirmacion.filter(el => {
                         if (Object.keys(el.dataset)[0] == key.toLowerCase()) {
                             (Object.keys(el.dataset)[0] == "empimg")
-                            ? el.querySelector("img").src = res[key]+"?="+Math.random()*1000
+                            ? el.querySelector("img").src = res[key]+"?="+parseInt(Math.random()*50)
                             : el.querySelector("P").innerHTML = res[key];
                         }
                     })
@@ -50,6 +50,7 @@ import { inhabilitar } from "../../ajax/inhabilitar.js";
         }
 
         if(e.target.matches(".usuarios__modal-inhabilitar-usuario-btn-cancelar")){
+            $itemsConfirmacion.src = ""
             $modal_1.toggleAttribute("open");
             $transparentBackgroundModal.classList.toggle("visible");
         }
