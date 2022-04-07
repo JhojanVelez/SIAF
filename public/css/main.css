@@ -151,7 +151,7 @@ input[type="button"]:disabled:hover {
 /*Con estos estilos, dividimos nuestra pagina en 4 secciones el titulo, los filtros, el contenido principal y los botones*/
 
 .grid-container-main {
-  min-width: 1700px;
+  min-width: 1500px;
   max-width: 90%;
   height: 100%;
   margin: auto;
@@ -304,7 +304,8 @@ tbody tr:hover {
 
 
 .cards-flex-container {
-  width: 90%;
+  min-width: 1500px;
+  max-width: 90%;
   height: 100%;
   margin: auto;
   display: flex;
@@ -412,13 +413,6 @@ usuarios, clientes y proveedores */
 }
 
 /*Estilos para los modulos de proveedores, clientes y usuarios, mas especificamente en la seccion del listado de cada uno*/
-
-.grid-container-main.proveedores,
-.grid-container-main.clientes,
-.grid-container-main.usuarios {
-  min-width: 1400px;
-  max-width: 70%;
-}
 
 .clientes__filtro-input-container,
 .usuarios__filtro-input-container,
@@ -609,6 +603,7 @@ usuarios, clientes y proveedores */
 /*--------------Estilos para los modales----------------------*/
 
 .transparent-container-modal {
+  min-width: 1500px;
   position: absolute;
   top: 0;
   left: 0;

@@ -1,9 +1,5 @@
 @import url(main.css);
 
-.nav-container {
-    min-width: 100vw;
-}
-
 .menu-nav-title {
     color: var(--color-button-text);
     font-size: 3rem;
