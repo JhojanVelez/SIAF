@@ -18,7 +18,6 @@ import { inhabilitar } from "../../ajax/inhabilitar.js";
             idProductoSeleccionado = e.target.dataset.idProduct;
             buscarPorId(idProductoSeleccionado,"productos",URL_RAIZ)
             .then((res)=> {
-                $modal_1.toggleAttribute("open");
                 for(let key in res) {
                     $itemsConfirmacion.filter(el => {
                         if (Object.keys(el.dataset)[0] == key.toLowerCase()) {
@@ -26,6 +25,7 @@ import { inhabilitar } from "../../ajax/inhabilitar.js";
                         }
                     })
                 }
+                $modal_1.toggleAttribute("open");
             });
         }
         if(e.target.matches(".productos__modal-inhabilitar-producto-btn-confirmar")) {

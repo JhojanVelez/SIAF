@@ -23,8 +23,6 @@ import { editar } from "../../ajax/editar.js";
 
         if(e.target.closest("button.proveedores__lista-proveedor-boton-editar")) {
             $transparentBackgroundModal.classList.toggle("visible");
-            $modal_1.toggleAttribute("open");
-            $formulario.nit.focus();
             scroll(0,280);
             idProveedor = e.target.closest("button.proveedores__lista-proveedor-boton-editar").dataset.nitProveedor;
             buscarPorId(idProveedor,"proveedores",URL_RAIZ)
@@ -37,6 +35,8 @@ import { editar } from "../../ajax/editar.js";
                         }
                     })
                 }
+                $modal_1.toggleAttribute("open");
+                $formulario.nit.focus();
             });
         }
         if(e.target.matches(".proveedores__modal-editar-proveedor-btn-editar")) {

@@ -23,7 +23,6 @@ import { editar } from "../../ajax/editar.js";
 
         if(e.target.closest("button.usuarios__lista-usuario-boton-editar")) {
             $transparentBackgroundModal.classList.toggle("visible");
-            $formulario.documento.focus();
             scroll(0,280);
             docUsuario = e.target.closest("button.usuarios__lista-usuario-boton-editar").dataset.docUsuario;
             buscarPorId(docUsuario,"usuarios",URL_RAIZ)
@@ -39,6 +38,7 @@ import { editar } from "../../ajax/editar.js";
                     })
                 }
                 $modal_1.toggleAttribute("open");
+                $formulario.documento.focus();
             });
         }
         if(e.target.matches(".usuarios__modal-editar-usuario-btn-editar")) {

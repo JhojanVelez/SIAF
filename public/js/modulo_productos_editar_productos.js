@@ -20,9 +20,6 @@ import { editar } from "../../ajax/editar.js";
             idProductoSeleccionado = e.target.dataset.idProduct
             buscarPorId(idProductoSeleccionado,"productos",URL_RAIZ)
             .then((res)=> {
-                $modal_1.toggleAttribute("open");
-                $inputs[1].disabled = true;
-                $modal_1.querySelector("#codigoBarrasProducto").focus()
                 for(let key in res) {
                     $inputs.filter(el => {
                         if (Object.keys(el.dataset)[1] == key.toLowerCase()) {
@@ -30,6 +27,9 @@ import { editar } from "../../ajax/editar.js";
                         }
                     })
                 }
+                $modal_1.toggleAttribute("open");
+                $inputs[1].disabled = true;
+                $modal_1.querySelector("#codigoBarrasProducto").focus()
             });
         }
         if(e.target.matches(".productos__modal-editar-producto-btn-editar")) {
