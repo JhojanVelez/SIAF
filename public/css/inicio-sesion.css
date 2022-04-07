@@ -1,5 +1,9 @@
 @import url(main.css);
 
+.transparent-container-modal {
+  min-width: 100vw;
+}
+
 input[type="button"]:disabled {
   background-color: #201f3a83;
   cursor: progress;
