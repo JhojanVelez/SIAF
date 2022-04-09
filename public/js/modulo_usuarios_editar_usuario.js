@@ -15,7 +15,7 @@ import { editar } from "../../ajax/editar.js";
 
     let validador;
 
-    console.log($inputs[8])
+    console.log($inputs)
 
     /* Patrones para validacion de Email */
     let patronEstandardOfficial = "^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$";
@@ -66,9 +66,28 @@ import { editar } from "../../ajax/editar.js";
                 $inputs[0].classList.add("input-invalido");
                 validador = false;
             }
+
+            //Validando el campo nombre y apellido
+            
+            const regex = /^[a-zA-Z\s]+$/
+            
+            if(!regex.test($inputs[2].value)) {
+                $inputs[2].classList.add("input-invalido");
+                validador = false;
+            }
+
+            if(!regex.test($inputs[4].value)) {
+                $inputs[4].classList.add("input-invalido");
+                validador = false;
+            }
             
             if(isNaN($inputs[5].value)){
                 $inputs[5].classList.add("input-invalido");
+                validador = false;
+            }
+
+            if($inputs[9].value != "GERENTE" && $inputs[9].value != "FARMACEUTA" && $inputs[9].value != "ALMACENISTA"){
+                $inputs[9].classList.add("input-invalido");
                 validador = false;
             }
 

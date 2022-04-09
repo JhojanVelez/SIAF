@@ -58,6 +58,20 @@ import { editar } from "../../ajax/editar.js";
                 validador = false;
             }
             
+            //Validando el campo nombre y apellido
+            
+            const regex = /^[a-zA-Z\s]+$/
+            
+            if(!regex.test($inputs[2].value)) {
+                $inputs[2].classList.add("input-invalido");
+                validador = false;
+            }
+
+            if(!regex.test($inputs[4].value)) {
+                $inputs[4].classList.add("input-invalido");
+                validador = false;
+            }
+            
             if(isNaN($inputs[5].value)){
                 $inputs[5].classList.add("input-invalido");
                 validador = false;

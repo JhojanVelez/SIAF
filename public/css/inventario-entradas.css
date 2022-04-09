@@ -1,9 +1,5 @@
 @import url(main.css);
 
-.nav-container {
-    min-width: 1700px
-}
-
 .nav__li.inventarioMenuCards {
     border-bottom: 2px solid var(--color-button-text);
 }

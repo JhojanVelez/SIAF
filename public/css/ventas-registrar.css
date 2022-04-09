@@ -1,11 +1,5 @@
 @import url(main.css);
 
-.transparent-container-modal,
-.nav-container {
-    min-width: 1700px;
-}
-
-
 .nav__li.ventasMenuCards {
     border-bottom: 2px solid var(--color-button-text);
 }
@@ -22,7 +16,6 @@
     grid-template-areas:"titulo   lista"
                         "registro lista"
                         "registro botones";
-    
 }
 
 .registrar-ventas__container-title {
