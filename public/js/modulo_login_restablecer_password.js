@@ -156,7 +156,7 @@ import {restablecerPassword} from '../../ajax/restablecerPassword.js'
             $modal_3_exito.toggleAttribute("open");
           } else {
             $modal_3.toggleAttribute("open");
-            $modal_3_error.querySelector("p").innerHTML = res.PDOError;
+            $modal_3_error.querySelector("p").innerHTML = res.errorMessage;
             $modal_3_error.toggleAttribute("open");
           }
         });
