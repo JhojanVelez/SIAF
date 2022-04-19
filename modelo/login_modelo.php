@@ -182,9 +182,9 @@ class LoginModelo extends ConexionBD{
             return $this->result;
 
         } catch (PDOException $e) {
-
             $this->result["complete"] = false;
             $this->result["PDOMessage"] = $this->PDOStmt->errorInfo();
+            $this->result["errorMessage"] = $e->getMessage();
             if($this->PDOStmt->errorInfo()[1] == 1406) $this->result["errorMessage"] = "Tu contrase&ntilde;a no pudo ser reestablecida porque excediste la cantidad maxima de caracteres permitidos";
 
             return $this->result;
