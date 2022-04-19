@@ -409,7 +409,6 @@ usuarios, clientes y proveedores */
 
 .contenedor-objetos__objeto-boton {
   width: 30px;
-  height: 30px;
 }
 
 /*Estilos para los modulos de proveedores, clientes y usuarios, mas especificamente en la seccion del listado de cada uno*/
@@ -723,7 +722,29 @@ dialog {
   height: 5rem;
 }
 
+/*Estilos para el icono de manual de usuario*/
 
+.manual-usuario-figure {
+  position: fixed;
+  bottom: 1vw;
+  left: 1.7vh;
+  z-index: 30000;
+}
 
+.manual-usuario-figure__container {
+  width: 30px;
+  height: 30px;
+  background-color: var(--color-nav-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+}
 
-
+.manual-usuario-figure__link {
+  color: var(--color-card-background);
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 30px;
+}

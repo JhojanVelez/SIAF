@@ -43,6 +43,11 @@
                 </section>
         </article>
     </main>
-    
+    <figure class="manual-usuario-figure">
+        <div class="manual-usuario-figure__container">
+            <a class="manual-usuario-figure__link" href="<?php echo URL_RAIZ ?>manualUsuario" title="Manual de Usuario" target="BLANK">?</a>
+
+        </div>
+    </figure>
 </body>
 </html>
