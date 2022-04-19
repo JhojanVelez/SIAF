@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="<?php echo(URL_FAVICON); ?>" type="image/x-icon">
+    <title>Manual de Usuario</title>
 </head>
 <body>
     <header class="manual-header manual-header__flex-container">
@@ -53,28 +54,48 @@
                             <summary class="manual-main-content-detail-content__summary">Elige un Modulo</summary>
                             <details class="manual-main-content-detail-content__detail">
                                 <summary class="manual-main-content-detail-content__summary">Modulo Inicio de Sesi&oacute;n</summary>
+                                <p class="manual-main-content-detail-content__summary-text">
+                                Para poder entrar al módulo de Inicio de Sesión por favor Ingresar el siguiente link <a target="_black" href="<?php echo(URL_RAIZ);?>productos"><?php echo(URL_RAIZ);?></a> en la barra de búsquedas de tu navegador.
+                                </p>
+                                <?php require_once("html/inicioSesion.php") ?>
                             </details>
                             <details class="manual-main-content-detail-content__detail">
                                 <summary class="manual-main-content-detail-content__summary">Modulo Productos</summary>
+                                <p class="manual-main-content-detail-content__summary-text">
+                                    Para poder entrar al módulo de Productos por favor Ingresar el siguiente link <a target="_black" href="<?php echo(URL_RAIZ);?>productos"><?php echo(URL_RAIZ);?>productos</a> en la barra de búsquedas de tu navegador o directamente en el menú principal en la opción de Productos.
+                                </p>
                                 <?php require_once("html/productos.php") ?>
                             </details>
                             <details class="manual-main-content-detail-content__detail">
                                 <summary class="manual-main-content-detail-content__summary">Modulo Inventario</summary>
+                                <p class="manual-main-content-detail-content__summary-text">
+                                    Para poder entrar al módulo de Inventario por favor Ingresar el siguiente link <a target="_black" href="<?php echo(URL_RAIZ);?>inventarioMenuCards"><?php echo(URL_RAIZ);?>inventarioMenuCards</a> en la barra de búsquedas de tu navegador o directamente en el menú principal en la opción de Inventario.
+                                </p>
+                                <?php require_once("html/inventario.php") ?>
                             </details>
                             <details class="manual-main-content-detail-content__detail">
                                 <summary class="manual-main-content-detail-content__summary">Modulo Ventas</summary>
+                                <p class="manual-main-content-detail-content__summary-text">
+                                    Para poder entrar al módulo de Ventas por favor Ingresar el siguiente link <a target="_black" href="<?php echo(URL_RAIZ);?>ventasMenuCards"><?php echo(URL_RAIZ);?>ventasMenuCards</a> en la barra de búsquedas de tu navegador o directamente en el menú principal en la opción de Ventas.
+                                </p>
+                                <?php require_once("html/ventas.php") ?>
                             </details>
                             <details class="manual-main-content-detail-content__detail">
                                 <summary class="manual-main-content-detail-content__summary">Modulo Proveedores</summary>
+                                <p class="manual-main-content-detail-content__summary-text">
+                                    Para poder entrar al módulo de Proveedores por favor Ingresar el siguiente link <a target="_black" href="<?php echo(URL_RAIZ);?>proveedores"><?php echo(URL_RAIZ);?>proveedores</a> en la barra de búsquedas de tu navegador o directamente desde el menú principal en la opción de Proveedores
+                                </p>
+                                <?php require_once("html/proveedores.php") ?>
                             </details>
                             <details class="manual-main-content-detail-content__detail">
                                 <summary class="manual-main-content-detail-content__summary">Modulo Clientes</summary>
+                                <p class="manual-main-content-detail-content__summary-text">
+                                    Para poder entrar al módulo de clientes por favor Ingresar el siguiente link <a target="_black" href="<?php echo(URL_RAIZ);?>clientes"><?php echo(URL_RAIZ);?>clientes</a> en la barra de búsquedas de tu navegador o directamente desde el menú principal en la opción de Clientes.
+                                </p>
+                                <?php require_once("html/clientes.php") ?>
                             </details>
                             <details class="manual-main-content-detail-content__detail">
                                 <summary class="manual-main-content-detail-content__summary">Modulo Usuarios</summary>
-                            </details>
-                            <details class="manual-main-content-detail-content__detail">
-                                <summary class="manual-main-content-detail-content__summary">Modulo Productos</summary>
                             </details>
                         </details>
                     </div>
