@@ -13,6 +13,8 @@ import {agregar} from '../../ajax/agregar.js'
 
     let validador;
 
+    console.log($inputs)
+
     /* Patrones para validacion de Email */
     let patronEstandardOfficial = "^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$";
     let patronPersonal = "^([a-z]|[A-Z]|[0-9]|[!#$%&'*+\-\/=?^_`{|}~;])+@([a-z]|[A-Z]|[0-9])+\\.([a-z]|[A-Z]|[0-9])+(\\.|[[a-z]|[A-Z]|[0-9])*$";
@@ -40,6 +42,20 @@ import {agregar} from '../../ajax/agregar.js'
 
             if(isNaN($inputs[0].value)){
                 $inputs[0].classList.add("input-invalido");
+                validador = false;
+            }
+            
+            //Validando el campo nombre y apellido
+            
+            const regex = /^[a-zA-Z\s]+$/
+            
+            if(!regex.test($inputs[2].value)) {
+                $inputs[2].classList.add("input-invalido");
+                validador = false;
+            }
+
+            if(!regex.test($inputs[4].value)) {
+                $inputs[4].classList.add("input-invalido");
                 validador = false;
             }
             

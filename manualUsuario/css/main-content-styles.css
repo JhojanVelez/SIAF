@@ -32,13 +32,13 @@ li h5 {
     font-size: 1.5rem;
 }
 
+
 .grid-container-main {
   max-width: 100%;
   min-width: 100%;
   min-height: 100vh;
   display: block;
   padding: 4rem 0;
-  border: 1px solid;
   position: relative;
   display: flex;
   align-items: center;
@@ -76,7 +76,7 @@ summary {
     text-align: left;
     padding: 1.5rem;
     margin: auto;
-    max-width: 70%;
+    max-width: 1200px;
 }
 
 .manual-main-content-detail-content__title {
@@ -96,6 +96,10 @@ summary {
     border: 2px solid var(--color-card-background);
 }
 
+.manual-main-content-detail-content__summary-text {
+    margin: 1rem;
+}
+
 .manual-content-paso-a-paso {
     padding: 1rem;
 }
@@ -104,6 +108,18 @@ summary {
     font-size: 3rem;
 }
 
+.manual-content-paso-a-paso__container-img {
+    margin: 2rem 0;
+}
+
+.manual-content-paso-a-paso li li {
+    list-style-type: lower-latin;
+}
+
+.manual-content-paso-a-paso h5 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
 
 
 :root {

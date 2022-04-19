@@ -11,15 +11,15 @@ import {buscarUsuarioEnSession} from '../../ajax/buscarUsuarioEnSession.js';
             buscarUsuarioEnSession(URL_RAIZ)
             .then(res=> {
                 console.log(res);
-                console.log($modal_1_items[0]);
+                console.log($modal_1_items);
                 $modal_1_items[0].innerHTML = res.EmpDocIdentidad;
                 $modal_1_items[1].innerHTML = res.EmpNombre;
                 $modal_1_items[2].innerHTML = res.EmpApellido;
                 $modal_1_items[3].innerHTML = res.EmpEps;
-                $modal_1_items[4].innerHTML = res.EmpRH;
-                $modal_1_items[5].innerHTML = res.EmpDireccion;
-                $modal_1_items[6].innerHTML = res.EmpTelefono;
-                $modal_1_items[7].innerHTML = res.EmpCorreo;
+                $modal_1_items[4].innerHTML = res.EmpTelefono;
+                $modal_1_items[5].innerHTML = res.EmpCorreo;
+                $modal_1_items[6].innerHTML = res.EmpDireccion;
+                $modal_1_items[7].innerHTML = res.EmpRH;
                 $modal_1_items[8].innerHTML = res.EmpRol;
                 $modal_1.toggleAttribute("open")
             })
