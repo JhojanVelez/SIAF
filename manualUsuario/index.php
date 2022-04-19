@@ -37,7 +37,7 @@
         </div>
         <div class="manual-header__flex-item">
             <div class="manual-header__title-container">
-                <h1 class="manual-header__title">Manual de Usuario</h1>
+                <h1 class="manual-header__title">Manual De Usuario</h1>
             </div>
         </div>
     </header>
