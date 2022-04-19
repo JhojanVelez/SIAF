@@ -24,7 +24,7 @@ define('NOMBRE_EMAIL', "SIAF");
 define("SGBD", 'mysql');
 define("DB_HOST", 'localhost');
 define("DB_NAME", 'id18082009_siaf');
-define("DB_USER", 'id18082009_root');
+define("DB_USER", 'id18082009_root'); 
 define("DB_PASSWORD", 'Px&8f*\nLcTl5hn]');
 define("DB_CHARSET", "UTF8");
 define("DSN", SGBD.":host=".DB_HOST.";dbname=".DB_NAME.";charset=".DB_CHARSET);
