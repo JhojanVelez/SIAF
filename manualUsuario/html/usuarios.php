@@ -2,19 +2,29 @@
     <summary class="manual-main-content-detail-content__summary">¿Como registrar un nuevo usuario?</summary>
     <div class="manual-content-paso-a-paso">
         <h4 class="manual-content-paso-a-paso__title">Tutorial</h4>
-        <p>Para poder registrar nuevos usuarios en el sistema de información, el usuario deberá seguir ciertos pasos que son importantes, los cuales son:</p>
+        <p>Para poder registrar nuevos usuarios en el sistema de información, el usuario con el rol de gerente deberá seguir ciertos pasos que son importantes, los cuales son:</p>
         <ol>
-            <li>Situarse en la zona de botones que se encuentran debajo de la lista de usuarios Registrados</li>
+            <li>Situarse en la zona de botones que se encuentran debajo de la lista de Usuarios Registrados</li>
             <div class="manual-content-paso-a-paso__container-img">
                 <img loading="lazy" src="<?php echo(URL_RAIZ);?>/manualUsuario/Imagenes/ModuloUsuarios/Registrar/1.PNG" alt="">
             </div>
             <li>Posterior a esto dar click en el botón de “Añadir” que se encuentra en la parte inferior de toda la interfaz, siguiente a esto se abrirá la ventana de Registra Nuevos Usuarios.</li>
             <li>Llena cada uno de los campos que se encuentran en el formulario. Una vez tengas todos los campos diligenciados, debes dar click en “Añadir” para poder continuar con el proceso de registro.</li>
             <div class="manual-content-paso-a-paso__container-img">
-                <img loading="lazy" src="<?php echo(URL_RAIZ);?>/manualUsuario/Imagenes/ModuloUsuarios/Registrar/2.PNG" alt="">
+                <img loading="lazy" src="<?php echo(URL_RAIZ);?>/manualUsuario/Imagenes/ModuloUsuarios/Registrar/2.1.PNG" alt="">
             </div>
+            <ul>
+                <li>Recuerda que puedes establecer una foto de perfil de usuario, dando click encima del icono morado.</li>
+                <div class="manual-content-paso-a-paso__container-img">
+                    <img loading="lazy" src="<?php echo(URL_RAIZ);?>/manualUsuario/Imagenes/ModuloUsuarios/Registrar/2.2.PNG" alt="">
+                </div>
+                <li>También debes tener en cuenta las indicaciones para poder tener una contraseña segura.</li>
+                <div class="manual-content-paso-a-paso__container-img">
+                    <img loading="lazy" src="<?php echo(URL_RAIZ);?>/manualUsuario/Imagenes/ModuloUsuarios/Registrar/2.3.PNG" alt="">
+                </div>
+            </ul>
             <li>Luego se abrirá una ventana en donde puedes confirmar los datos que se van a registrar. Verificada la información, dar click en Confirmar para que se realice el proceso de registro de la información.</li>
-            <li>Luego se mostrará una ventana emérgete del resultado y culminaras el proceso de registro del usuario simplemente dando click en Ok.</li>
+            <li>Luego se mostrará una ventana emérgete del resultado y culminaras el proceso de registro del producto simplemente dando click en Ok.</li>
             <div class="manual-content-paso-a-paso__container-img">
                 <img loading="lazy" src="<?php echo(URL_RAIZ);?>/manualUsuario/Imagenes/ModuloUsuarios/Registrar/3.PNG" alt="">
             </div>
@@ -25,20 +35,26 @@
 
 
 <details class="manual-main-content-detail-content__detail">
-    <summary class="manual-main-content-detail-content__summary">¿Como modificar la informaci&oacute;n de un usuario?</summary>
+    <summary class="manual-main-content-detail-content__summary">¿Como modificar la informaci&oacute;n de los usuarios?</summary>
     <div class="manual-content-paso-a-paso">
         <h4 class="manual-content-paso-a-paso__title">Tutorial</h4>
         <p>Para poder modificar la información de un usuario, se hace necesario que sigas los pasos que se muestran a continuación:</p>
         <ol>
-            <li>Situarse en la lista de usuarios registrados y dar click en el botón que tiene el icono del lápiz en el usuario de preferencia.</li>
+            <li>Situarse en la lista de Usuarios registrados y dar click en el botón que tiene el icono del lápiz en el usuario de preferencia.</li>
             <div class="manual-content-paso-a-paso__container-img">
                 <img loading="lazy" src="<?php echo(URL_RAIZ);?>/manualUsuario/Imagenes/ModuloUsuarios/Modificar/1.PNG" alt="">
             </div>
             <li>Se abrirá una ventana la cual contiene un formulario con toda la información del usuario que queremos modificar.</li>
             <li>Una vez modifiquemos la información necesaria, procedemos a dar click en “Editar”.</li>
             <div class="manual-content-paso-a-paso__container-img">
-                <img loading="lazy" src="<?php echo(URL_RAIZ);?>/manualUsuario/Imagenes/ModuloUsuarios/Modificar/2.PNG" alt="">
+                <img loading="lazy" src="<?php echo(URL_RAIZ);?>/manualUsuario/Imagenes/ModuloUsuarios/Modificar/2.1.PNG" alt="">
             </div>
+            <ul>
+                <li>Recuerda que también puedes modificar la foto de perfil dando click encima de la imagen</li>
+                <div class="manual-content-paso-a-paso__container-img">
+                    <img loading="lazy" src="<?php echo(URL_RAIZ);?>/manualUsuario/Imagenes/ModuloUsuarios/Modificar/2.2.PNG" alt="">
+                </div>
+            </ul>
             <li>Continuaremos verificando la información y una vez tengamos la certeza de que la información registrada es la correcta, procedemos a dar click en “Confirmar”</li>
             <div class="manual-content-paso-a-paso__container-img">
                 <img loading="lazy" src="<?php echo(URL_RAIZ);?>/manualUsuario/Imagenes/ModuloUsuarios/Modificar/3.PNG" alt="">
@@ -61,7 +77,7 @@
         </div>
         <p>Este filtro tiene ciertas particularidades las cuales va a ser expuestas a continuación:</p>
         <ol>
-            <li>Si por ejemplo ingresas la palabra “car” en el campo “Por su nombre”, los resultados de buscaran automáticamente y se te mostraran Usuarios los cuales su nombre inicie por “car”.</li>
+            <li>Si por ejemplo ingresas la palabra “ju” en el campo “Por su nombre”, los resultados de buscaran automáticamente y se te mostraran Usuarios los cuales su nombre inicie por “ju”.</li>
             <div class="manual-content-paso-a-paso__container-img">
                 <img loading="lazy" src="<?php echo(URL_RAIZ);?>/manualUsuario/Imagenes/ModuloUsuarios/Buscar/2.PNG" alt="">
             </div>
@@ -110,7 +126,7 @@
         <h5>Generar reporte sin el filtro de búsqueda</h5>
         <ol>
             <li>En este caso tiene la misma lógica de cuando queremos “Consultar Usuarios” solo que en esta ocasión los resultados que aparezcan en el reporte serán los mismos que se están mostrando en pantalla.</li>
-            <li>Retomando el ejemplo, si ingresamos la palabra “car” en el campo “Por su nombre”, los resultados de buscaran automáticamente y se te mostraran Usuarios los cuales su nombre inicie por “car”.</li>
+            <li>Retomando el ejemplo, si ingresamos la palabra “ju” en el campo “Por su nombre”, los resultados de buscaran automáticamente y se te mostraran Usuarios los cuales su nombre inicie por “ju”.</li>
             <div class="manual-content-paso-a-paso__container-img">
                 <img loading="lazy" src="<?php echo(URL_RAIZ);?>/manualUsuario/Imagenes/ModuloUsuarios/Reporte/2.1.PNG" alt="">
             </div>

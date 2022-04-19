@@ -55,7 +55,7 @@
                             <details class="manual-main-content-detail-content__detail">
                                 <summary class="manual-main-content-detail-content__summary">Modulo Inicio de Sesi&oacute;n</summary>
                                 <p class="manual-main-content-detail-content__summary-text">
-                                Para poder entrar al módulo de Inicio de Sesión por favor Ingresar el siguiente link <a target="_black" href="<?php echo(URL_RAIZ);?>productos"><?php echo(URL_RAIZ);?></a> en la barra de búsquedas de tu navegador.
+                                Para poder entrar al módulo de Inicio de Sesión por favor Ingresar el siguiente link <a target="_black" href="<?php echo(URL_RAIZ);?>login"><?php echo(URL_RAIZ);?>login</a> en la barra de búsquedas de tu navegador.
                                 </p>
                                 <?php require_once("html/inicioSesion.php") ?>
                             </details>
@@ -96,6 +96,10 @@
                             </details>
                             <details class="manual-main-content-detail-content__detail">
                                 <summary class="manual-main-content-detail-content__summary">Modulo Usuarios</summary>
+                                <p class="manual-main-content-detail-content__summary-text">
+                                    Para poder entrar al módulo de usuarios por favor Ingresar el siguiente link <a target="_black" href="<?php echo(URL_RAIZ);?>usuarios"><?php echo(URL_RAIZ);?>usuarios</a> en la barra de búsquedas de tu navegador o directamente desde el menú principal en la opción de Usuarios (Solo si posees el rol de Gerente)
+                                </p>
+                                <?php require_once("html/usuarios.php") ?>
                             </details>
                         </details>
                     </div>

@@ -105,7 +105,7 @@
 
 .registrar-ventas__lista-producto {
     display: grid;
-    grid-template-columns: 20% 1fr 35% 10%;
+    grid-template-columns: 20% 1fr 40% 10%;
     padding-right: 2rem;
     padding-left: 0;
 }

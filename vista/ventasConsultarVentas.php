@@ -151,6 +151,12 @@
             </table>
         </section>
     </main>
+    <figure class="manual-usuario-figure">
+        <div class="manual-usuario-figure__container">
+            <a class="manual-usuario-figure__link" href="<?php echo URL_RAIZ ?>manualUsuario" title="Manual de Usuario" target="BLANK">?</a>
+
+        </div>
+    </figure>
     <script> 
         /* Se puso var porque queremos que pueda usarse en todos los contextos, 
         independientemente de si esta en una funcion anonima autoejecutable */

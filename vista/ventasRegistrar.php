@@ -103,6 +103,7 @@
                     type="number" 
                     class="registrar-ventas_registro-cantidad" 
                     id="product-cantidad"
+                    max="1000"
                     data-input
                     >
                     </div>

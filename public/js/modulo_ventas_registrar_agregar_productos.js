@@ -24,6 +24,7 @@ const infoVenta = {
     const $botonVender = d.querySelector(".registrar-ventas__boton-vender");
 
     const $inputsFormularioAgregar = Object.values($formularioAgregar.querySelectorAll("[data-input]"));
+    console.log($inputsFormularioAgregar)
 
     let idProductoSeleccionado;
 
@@ -45,12 +46,14 @@ const infoVenta = {
                 }
             });
 
-            if($inputsFormularioAgregar[2].value <= 0) {
+            if($inputsFormularioAgregar[2].value <= 0 || $inputsFormularioAgregar[2].value >= 1000) {
                 $inputsFormularioAgregar[2].classList.add("input-invalido");
                 validador = false; 
             } else {
                 $inputsFormularioAgregar[2].classList.remove("input-invalido");
             }
+
+            
 
             if(validador) {
 
