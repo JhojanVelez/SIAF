@@ -3,14 +3,11 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap;
     background-color: var(--color-nav-background);
 }
 
 .manual-header__flex-item {
-    min-width: 600px;
     max-width: 40%;
-    min-height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,7 +21,7 @@
 
 .manual-header__title {
     color: var(--color-card-background);
-    font-size: 8rem;
+    font-size: 7vw;
     transform: translateX(-120%);
     animation: aparecer-title 1s forwards 3s;
 }
@@ -38,11 +35,9 @@
 /*Codigo css para el logo*/
 
 .manual-header__logo-container {
-    width: 100%;
     min-height: 500px;
     text-align: center;
     display: grid;
-    grid-template-rows: 60% 40%;
     align-content: space-around;
 }
   
@@ -138,6 +133,34 @@
   transform: translateY(100%);
   max-width: 65%;
   margin: auto;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+  .manual-header__flex-item {
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .manual-header__flex-item:nth-child(2) {
+    padding-left: 0;
+    text-align: center;
+    border-left: initial;
+    /* border-top: 10px solid var(--color-card-background); */
+    overflow-x: hidden;
+  }
+
+  .manual-header {
+    flex-direction: column;
+  }
+
+  .manual-header__logo-titulo {
+    font-size: 2rem;
+    color: var(--color-card-background);
+  }
 }
 
 
