@@ -11,7 +11,7 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
     
-    - name: 📂 Sync files
+    - name: 📂 Sync files 
       uses: SamKirkland/FTP-Deploy-Action@4.2.0
       with:
         server-dir: /public_html/
