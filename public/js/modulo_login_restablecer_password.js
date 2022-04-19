@@ -148,14 +148,13 @@ import {restablecerPassword} from '../../ajax/restablecerPassword.js'
 
       
       if(validarPassword() && validadorFormulario) {
+        $modal_3.toggleAttribute("open");
         restablecerPassword($form_3,infoUsuario[0].EmpDocIdentidad,"login",URL_RAIZ)
         .then(res=> {
           console.log(res);
           if(res.complete) {
-            $modal_3.toggleAttribute("open");
             $modal_3_exito.toggleAttribute("open");
           } else {
-            $modal_3.toggleAttribute("open");
             $modal_3_error.querySelector("p").innerHTML = res.errorMessage;
             $modal_3_error.toggleAttribute("open");
           }
