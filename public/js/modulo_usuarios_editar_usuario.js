@@ -38,9 +38,9 @@ import { editar } from "../../ajax/editar.js";
                         }
                     })
                 }
+                $modal_1.toggleAttribute("open");
+                $formulario.documento.focus();
             });
-            $modal_1.toggleAttribute("open");
-            $formulario.documento.focus();
         }
         if(e.target.matches(".usuarios__modal-editar-usuario-btn-editar")) {
             e.preventDefault();
