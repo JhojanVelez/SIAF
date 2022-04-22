@@ -13,6 +13,8 @@ import {agregar} from '../../ajax/agregar.js'
 
     let validador;
 
+    console.log($inputs)
+
     /* Patrones para validacion de Email */
     let patronEstandardOfficial = "^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$";
     let patronPersonal = "^([a-z]|[A-Z]|[0-9]|[!#$%&'*+\-\/=?^_`{|}~;])+@([a-z]|[A-Z]|[0-9])+\\.([a-z]|[A-Z]|[0-9])+(\\.|[[a-z]|[A-Z]|[0-9])*$";
@@ -72,8 +74,8 @@ import {agregar} from '../../ajax/agregar.js'
                 validador = false;
             }
 
-            if($inputs[9].value != "GERENTE" && $inputs[9].value != "FARMACEUTA" && $inputs[9].value != "ALMACENISTA"){
-                $inputs[9].classList.add("input-invalido");
+            if($inputs[10].value != "GERENTE" && $inputs[10].value != "FARMACEUTA" && $inputs[10].value != "ALMACENISTA"){
+                $inputs[10].classList.add("input-invalido");
                 validador = false;
             }
 
