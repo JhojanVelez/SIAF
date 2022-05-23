@@ -29,6 +29,7 @@
                             <p class="manual-header__logo-letra">F</p>
                         </div>
                     </div>
+                    
                 </div>
                 <div class="manual-header__logo-titulo-container">
                     <p class="manual-header__logo-titulo">Sistema de Inventario a Farmacias</p>
